@@ -54,8 +54,9 @@ public final class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
-        configureWindow();
         setContentView(R.layout.activity_main);
+        // The decor view must exist before getInsetsController() is queried.
+        configureWindow();
 
         root = findViewById(R.id.root);
         webView = findViewById(R.id.webview);
@@ -177,9 +178,11 @@ public final class MainActivity extends Activity {
 
             @Override
             public void onPageFinished(WebView view, String url) {
+                if (url == null || !url.startsWith("https://" + WebContentStore.HOST + "/")) return;
                 loadFailed = false;
-                loading.setVisibility(View.GONE);
-                webView.setVisibility(View.VISIBLE);
+                // The WebView composites behind the opaque loading panel, so the
+                // first revealed frame already has the rendered recipe view.
+                revealWhenRendered(0);
             }
 
             @Override
@@ -204,17 +207,36 @@ public final class MainActivity extends Activity {
     private void loadStart() {
         loadFailed = false;
         loading.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.INVISIBLE);
         if (store != null) {
             Log.d(TAG, "Loading web content version " + store.getActiveVersion());
         }
         webView.loadUrl(START_URL);
     }
 
+    private void revealWhenRendered(int attempt) {
+        if (loadFailed || isFinishing() || isDestroyed() || webView == null) return;
+        webView.evaluateJavascript(
+                "(function(){var v=document.getElementById('view');"
+                        + "return !!(v && v.children.length > 0 && document.readyState !== 'loading');})()",
+                value -> {
+                    if ("true".equals(value)) {
+                        handler.postDelayed(this::revealContent, 120);
+                    } else if (attempt < 30) {
+                        handler.postDelayed(() -> revealWhenRendered(attempt + 1), 100);
+                    } else {
+                        revealContent();
+                    }
+                });
+    }
+
+    private void revealContent() {
+        if (loadFailed || isFinishing() || isDestroyed() || webView == null) return;
+        loading.setVisibility(View.GONE);
+    }
+
     private void showLoadError(String description) {
         loadFailed = true;
         loading.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.INVISIBLE);
         loadingHint.setText(R.string.load_error);
         Log.w(TAG, "Web content failed: " + description);
     }
