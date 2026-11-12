@@ -1,0 +1,21 @@
+# Web app tooling
+node_modules/
+.taste-skill/
+previews/
+
+# Android / Gradle
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/signing/upload-signing.properties
+android/signing/*.jks
+android/signing/*.keystore
+
+# Release outputs
+dist/
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+*.swp

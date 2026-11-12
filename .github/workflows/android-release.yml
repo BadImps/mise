@@ -1,0 +1,180 @@
+name: Publish Android release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "GitHub release tag, for example v1.0.0"
+        required: true
+        type: string
+      version_name:
+        description: "Android versionName, for example 1.0.0"
+        required: true
+        type: string
+      version_code:
+        description: "Android versionCode (must increase for a native update)"
+        required: true
+        type: string
+      web_version_code:
+        description: "Content version; leave empty to match version_code"
+        required: false
+        type: string
+        default: ""
+      ota_notes:
+        description: "Short plain-text notes shown in the in-app update dialog"
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: android-release-${{ inputs.tag }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ inputs.tag }}
+      VERSION_NAME: ${{ inputs.version_name }}
+      VERSION_CODE: ${{ inputs.version_code }}
+      WEB_VERSION_INPUT: ${{ inputs.web_version_code }}
+      OTA_NOTES: ${{ inputs.ota_notes }}
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Verify the web app
+        run: node tools/verify-web.mjs
+
+      - name: Validate release inputs
+        run: |
+          set -euo pipefail
+          if ! [[ "$TAG" =~ ^v?[A-Za-z0-9._-]+$ ]]; then
+            echo "Invalid tag: $TAG" >&2
+            exit 1
+          fi
+          if ! [[ "$VERSION_NAME" =~ ^[A-Za-z0-9._-]+$ ]]; then
+            echo "Invalid version name: $VERSION_NAME" >&2
+            exit 1
+          fi
+          if ! [[ "$VERSION_CODE" =~ ^[1-9][0-9]*$ ]]; then
+            echo "version_code must be a positive integer" >&2
+            exit 1
+          fi
+          if [ -n "$WEB_VERSION_INPUT" ]; then
+            WEB_VERSION="$WEB_VERSION_INPUT"
+          else
+            WEB_VERSION="$VERSION_CODE"
+          fi
+          if ! [[ "$WEB_VERSION" =~ ^[1-9][0-9]*$ ]]; then
+            echo "web_version_code must be a positive integer" >&2
+            exit 1
+          fi
+          echo "MISE_WEB_VERSION_CODE=$WEB_VERSION" >> "$GITHUB_ENV"
+          echo "Building Mise $VERSION_NAME ($VERSION_CODE), web version $WEB_VERSION, tag $TAG"
+
+      - name: Restore the release signing key
+        env:
+          KEYSTORE_BASE64: ${{ secrets.MISE_KEYSTORE_BASE64 }}
+          STORE_PASSWORD: ${{ secrets.MISE_STORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.MISE_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.MISE_KEY_PASSWORD }}
+        working-directory: android
+        run: |
+          set -euo pipefail
+          if [ -z "$KEYSTORE_BASE64" ] || [ -z "$STORE_PASSWORD" ] || [ -z "$KEY_ALIAS" ] || [ -z "$KEY_PASSWORD" ]; then
+            echo "Release signing secrets are not configured." >&2
+            exit 1
+          fi
+          mkdir -p signing
+          printf '%s' "$KEYSTORE_BASE64" | base64 --decode > signing/release.jks
+          {
+            echo "storeFile=signing/release.jks"
+            echo "storePassword=$STORE_PASSWORD"
+            echo "keyAlias=$KEY_ALIAS"
+            echo "keyPassword=$KEY_PASSWORD"
+          } > signing/upload-signing.properties
+
+      - name: Build the signed release APK
+        working-directory: android
+        env:
+          MISE_VERSION_CODE: ${{ inputs.version_code }}
+          MISE_VERSION_NAME: ${{ inputs.version_name }}
+        run: |
+          chmod +x gradlew
+          ./gradlew --no-daemon :app:assembleRelease
+
+      - name: Verify the APK signature
+        run: |
+          set -euo pipefail
+          APKSIGNER="$(find "$ANDROID_HOME/build-tools" -type f -name apksigner | sort -V | tail -n 1)"
+          if [ -z "$APKSIGNER" ]; then
+            echo "apksigner not found" >&2
+            exit 1
+          fi
+          "$APKSIGNER" verify --verbose "android/app/build/outputs/apk/release/app-release.apk"
+
+      - name: Generate release assets
+        env:
+          MISE_NOTES: ${{ inputs.ota_notes }}
+        run: |
+          node tools/make-release.mjs \
+            --tag "$TAG" \
+            --version-name "$VERSION_NAME" \
+            --version-code "$VERSION_CODE" \
+            --web-version-code "$MISE_WEB_VERSION_CODE"
+
+      - name: Write release notes
+        run: |
+          set -euo pipefail
+          {
+            echo "Mise $VERSION_NAME"
+            echo
+            if [ -n "$OTA_NOTES" ]; then
+              echo "$OTA_NOTES"
+              echo
+            fi
+            echo "### Release assets"
+            echo
+            echo "- \`mise-$VERSION_NAME.apk\` — signed Android package (versionCode $VERSION_CODE)"
+            echo "- \`mise-web-$MISE_WEB_VERSION_CODE.zip\` — web content for in-app OTA (web version $MISE_WEB_VERSION_CODE)"
+            echo "- \`mise-manifest.json\` — update channel manifest"
+            echo
+            echo "### Checksums"
+            echo
+            echo '```'
+            cat dist/SHA256SUMS.txt
+            echo '```'
+            echo
+            echo "The app reads the manifest from [releases/latest/download/mise-manifest.json](https://github.com/BadImps/mise/releases/latest/download/mise-manifest.json)."
+          } > release-notes.md
+
+      - name: Publish the GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist/* --clobber
+            gh release edit "$TAG" --title "Mise $VERSION_NAME" --notes-file release-notes.md
+          else
+            gh release create "$TAG" dist/* \
+              --title "Mise $VERSION_NAME" \
+              --notes-file release-notes.md \
+              --target "$GITHUB_SHA"
+          fi
+          echo "Published $TAG"

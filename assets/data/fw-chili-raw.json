@@ -1,0 +1,341 @@
+{
+ "@context": "http://schema.org",
+ "@type": [
+  "Recipe",
+  "NewsArticle"
+ ],
+ "headline": "Classic Beef Chili",
+ "datePublished": "2019-09-26T11:53:54-04:00",
+ "dateModified": "2025-04-03T08:00:00-04:00",
+ "author": [
+  {
+   "@type": "Person",
+   "name": "Robby Melvin",
+   "url": "https://www.foodandwine.com/author/robby-melvin"
+  }
+ ],
+ "description": "This easy, crowd-pleasing beef chili recipe boasts deep flavor from toasted ancho chile powder and cumin — and from simmering everything in beer. Add your favorite toppings and enjoy a perfect cold-weather nosh.",
+ "image": {
+  "@type": "ImageObject",
+  "url": "https://www.foodandwine.com/thmb/hpHQZXYsP77mR7OujeHBvJMKu2E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-beef-chili-recipe-FT-BLOG1019-34a65696ed73447caa2668df7a101060.jpg",
+  "contentUrl": "https://www.foodandwine.com/thmb/hpHQZXYsP77mR7OujeHBvJMKu2E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-beef-chili-recipe-FT-BLOG1019-34a65696ed73447caa2668df7a101060.jpg",
+  "creditText": "Caitlin Bensel",
+  "height": 1125,
+  "width": 1500
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Food & Wine",
+  "url": "https://www.foodandwine.com",
+  "logo": {
+   "@type": "ImageObject",
+   "contentUrl": "https://www.foodandwine.com/thmb/uV0O06O8WNrLepjgxkntdVuRpeE=/112x112/filters:no_upscale():max_bytes(150000):strip_icc()/brand_logo_schema-f3b2e548eb6f4243ad527798593483e0.png",
+   "creditText": "Food & Wine",
+   "width": 112,
+   "height": 112
+  },
+  "brand": "Food & Wine",
+  "publishingPrinciples": "https://www.foodandwine.com/about-us-6373913#toc-editorial-policies",
+  "sameAs": [
+   "https://www.facebook.com/foodandwine",
+   "https://www.instagram.com/foodandwine/?hl=en",
+   "https://www.pinterest.com/foodandwine/",
+   "https://flipboard.com/@foodandwine",
+   "https://www.youtube.com/channel/UCKH_4hkRSyUSHDIFMzlGCRA",
+   "https://en.wikipedia.org/wiki/Food_%26_Wine"
+  ]
+ },
+ "name": "Classic Beef Chili",
+ "aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": "4.3",
+  "ratingCount": "9"
+ },
+ "nutrition": {
+  "@type": "NutritionInformation",
+  "calories": "837 kcal",
+  "carbohydrateContent": "62 g",
+  "cholesterolContent": "151 mg",
+  "fiberContent": "17 g",
+  "proteinContent": "66 g",
+  "saturatedFatContent": "12 g",
+  "sodiumContent": "1277 mg",
+  "sugarContent": "14 g",
+  "fatContent": "36 g",
+  "unsaturatedFatContent": "0 g"
+ },
+ "recipeCategory": [
+  "Dinner",
+  "Lunch",
+  "Soup"
+ ],
+ "recipeCuisine": [
+  "American"
+ ],
+ "recipeIngredient": [
+  "2 tablespoons olive oil",
+  "2 cups chopped yellow onion (from 1 large onion)",
+  "1 cup chopped poblano chile (from 1 chile)",
+  "8 garlic cloves, minced",
+  "3 pounds 90/10 lean ground chuck",
+  "1 (6-ounce) can tomato paste",
+  "1/3 cup ancho chile powder",
+  "2 tablespoons ground cumin",
+  "1 tablespoon kosher salt",
+  "1 teaspoon black pepper",
+  "1 teaspoon fresh thyme leaves",
+  "1 teaspoon chopped fresh oregano",
+  "2 (15-ounce) cans dark red kidney beans, drained and rinsed",
+  "1 (15-ounce) can black beans, drained and rinsed",
+  "1 (28-ounce) can crushed tomatoes",
+  "2 cups lower-sodium chicken broth",
+  "1 (12-ounce) bottle of beer",
+  "Shredded cheddar cheese, sliced jalapeño chiles, sliced radishes, and sour cream, for serving",
+  "sliced jalapeño chiles",
+  "Radishes",
+  "Sour cream"
+ ],
+ "recipeInstructions": [
+  {
+   "@type": "HowToStep",
+   "image": [
+    {
+     "@type": "ImageObject",
+     "contentUrl": "https://www.foodandwine.com/thmb/W6LKdqrX-4L0OE8DuhF2_ROzzjA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-beef-chili-ingredients-FT-RECIPE1222-8f2a9b810db6412ba77eb973c0658c5d.jpg",
+     "creditText": "Molly Bolton"
+    }
+   ],
+   "text": "Gather the ingredients."
+  },
+  {
+   "@type": "HowToStep",
+   "image": [
+    {
+     "@type": "ImageObject",
+     "contentUrl": "https://www.foodandwine.com/thmb/8zJu_t4q0KFptPZnIRusEXdhFOM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-beef-chili-step-01-1-FT-RECIPE1222-5332cafa40a340329dc964105b72bcb5.jpg",
+     "creditText": "Molly Bolton"
+    }
+   ],
+   "text": "Heat oil in a large Dutch oven over medium-high. Add onion, poblano, and garlic and cook, stirring often, until tender, about 5 minutes."
+  },
+  {
+   "@type": "HowToStep",
+   "image": [
+    {
+     "@type": "ImageObject",
+     "contentUrl": "https://www.foodandwine.com/thmb/y5yn_T1hlsTida9Fw5mGmqj-uPU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-beef-chili-step-01-2-FT-RECIPE1222-bd092040fd804a4083f7180e9bbbd7c4.jpg",
+     "creditText": "Molly Bolton"
+    }
+   ],
+   "text": "Add ground chuck and cook, stirring occasionally, until beef crumbles and is no longer pink, 8 to 10 minutes."
+  },
+  {
+   "@type": "HowToStep",
+   "image": [
+    {
+     "@type": "ImageObject",
+     "contentUrl": "https://www.foodandwine.com/thmb/0Tg54vLPSOeqSpgHfHGWVOGQ1EY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-beef-chili-step-01-3-FT-RECIPE1222-cc61516d32ee4a178f003b772bc4ce59.jpg",
+     "creditText": "Molly Bolton"
+    }
+   ],
+   "text": "Drain beef mixture well and return to Dutch oven over medium-high."
+  },
+  {
+   "@type": "HowToStep",
+   "image": [
+    {
+     "@type": "ImageObject",
+     "contentUrl": "https://www.foodandwine.com/thmb/2_KQ2um0tFHdImmbvKTsIP_yFhg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-beef-chili-step-02-FT-RECIPE1222-f65bd3b2a1aa41e5ac69bace5963f606.jpg",
+     "creditText": "Molly Bolton"
+    }
+   ],
+   "text": "Add tomato paste, ancho chile powder, cumin, salt, pepper, thyme, and oregano, and cook, stirring often, 2 minutes."
+  },
+  {
+   "@type": "HowToStep",
+   "image": [
+    {
+     "@type": "ImageObject",
+     "contentUrl": "https://www.foodandwine.com/thmb/kg6kgG9LYrlYyjVWnM4zlkKh4xE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-beef-chili-step-03-1-FT-RECIPE1222-e798888f2508479f8fd40b7398406031.jpg",
+     "creditText": "Molly Bolton"
+    }
+   ],
+   "text": "Increase heat to high. Stir in beans, tomatoes, chicken broth, and beer, and bring to a boil. Reduce heat to medium-low and simmer, stirring occasionally, until heated through, about 30 minutes."
+  },
+  {
+   "@type": "HowToStep",
+   "image": [
+    {
+     "@type": "ImageObject",
+     "contentUrl": "https://www.foodandwine.com/thmb/9ePFD7xdhsalqXU8X89D47ClA9s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-beef-chili-hero-FT-RECIPE1222-ea6140c2da874fbdbdc2da86a037d882.jpg",
+     "creditText": "Molly Bolton"
+    }
+   ],
+   "text": "Serve chili with desired toppings."
+  }
+ ],
+ "recipeYield": "8",
+ "totalTime": "PT55M",
+ "review": [
+  {
+   "@type": "Review",
+   "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "CyanHummus3865"
+   },
+   "reviewBody": "I really do love reviewers who slam a recipe with 1 or 2 stars and complain about certain ingredients without even making it. Smh. Regardless, I did make this recipe for a neighborhood party and it was excellent; everyone loved it. The only change I made was I substituted pinto beans for the black beans (personal preference; though I’m sure the black beans would’ve been just as good). Definitely making it again."
+  },
+  {
+   "@type": "Review",
+   "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "1"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "UnderstandingTeapot8090"
+   },
+   "reviewBody": "Looks interesting, but it’s not chili. Beans don’t belong in chili. The meat used is never ground beef, the meat then disappears into, in this case, the gravy. Use chili grind, a very coarse grind or better yet stew meat cut in half to one inch cubes. Mix pork and beef for best flavor. Especially no beans, that’s called “chili beans” and served as a side with things like burgers or bbq. Also, radishes???",
+   "datePublished": "2024-06-03T16:13:35.909Z"
+  },
+  {
+   "@type": "Review",
+   "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Iris"
+   },
+   "reviewBody": "It’s was great we had with some corn chips and it was fantastic and delicious 🤤 save some for the next day for lunch 😋ty for the recipe I having done a chill in a while 😋🤤",
+   "datePublished": "2026-08-23T19:54:30.916Z"
+  },
+  {
+   "@type": "Review",
+   "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Dione"
+   },
+   "reviewBody": "This is pretty close to the recipe I usually make, and my family loves it. When poblanos are hard to find, I sub a sweet pepper and a seeded jalapeno. I have also subbed wine when out of beer (half cup or so) and really liked it. Like another reviewer, I add herbs and spices to the onion mix and toast in the pan before adding wet ingredients. It really brings out the flavour!",
+   "datePublished": "2026-02-24T17:55:10.750Z"
+  },
+  {
+   "@type": "Review",
+   "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "ModestMalt6015"
+   },
+   "reviewBody": "I’ve been making chilli con carne for years with much more complicated recipes. This is the best one EVER!! I just did a couple of things different. I let my spices, tomato paste and herbs fry off with the onion, chilli and garlic once softened. This really brings out the flavours of the spices you use. I used red wine instead of beer as that’s what I had and cooked it for about 1.1/2 hours. Adding the lime to serve just really makes it pop. Thanks for a fantastic recipe. Kids loved it! Even though I made it on the spicy side. EDIT: anyone who says beans don’t belong in chilli con carb are making a meat stew. That’s fine but it’s not chilli. Also it’s a healthy, hearty meal that is cheap and goes a long way. Really great when you have two male teenagers in the house. Lot’s of protein, very filling and can be stretched to accommodate more ppl (mainly more teenage males, i.e my kids friends)",
+   "datePublished": "2025-02-13T00:03:42.774Z"
+  },
+  {
+   "@type": "Review",
+   "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Kris Karlov"
+   },
+   "reviewBody": "I've never had chili before so I can't tell you if this is the best chili ever or anything like that, but it tastes great, good macros, etc. Lots of leftovers and it still tastes good after re heating. Cost me Cad$50 for all the ingredients but 8 servings is such an underestimate and half of the cost was the beef so I think it's still economical. Just buy cheaper ground beef than me. 5 stars",
+   "datePublished": "2024-03-04T22:00:36.030Z"
+  },
+  {
+   "@type": "Review",
+   "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Stacey"
+   },
+   "reviewBody": "Very good, classic chili recipe. The only modifications I made to the recipe were the additions of a pinch of sugar (I found my tomatoes to be too acidic) and one chopped chipotle pepper with a tablespoon of the adobo sauce. Definitely a \"crowd-pleaser.\"",
+   "datePublished": "2023-09-10T06:12:28.165Z"
+  },
+  {
+   "@type": "Review",
+   "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "3"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Hoosiermoker"
+   },
+   "reviewBody": "Ok as the recipe was offered but too much tomato and had beans. Family was ok with it. The next time I backed off on the garlic (wife has issues with garlic), omitted the beans and all tomato and made a paste from dried Ancho chilis then added a bottle of nut brown ale for a little more toasty flavor. Everyone at the game loved it but said it wasn't spicy enough but they ate the whole double batch and a lot of them asked for the recipe. Probably will try it with cut up chuck roast or sirloin next time. Maybe Superbowl Sunday",
+   "datePublished": "2023-01-27T12:29:09.625Z"
+  },
+  {
+   "@type": "Review",
+   "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "PositiveTongs8878"
+   },
+   "reviewBody": "Loved this! Best chili I've ever add!",
+   "datePublished": "2023-01-25T00:24:24.079Z"
+  }
+ ],
+ "mainEntityOfPage": {
+  "@type": [
+   "WebPage"
+  ],
+  "@id": "https://www.foodandwine.com/recipes/classic-beef-chili",
+  "name": "Classic Beef Chili",
+  "breadcrumb": {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "item": {
+      "@id": "https://www.foodandwine.com/recipes",
+      "name": "Recipes"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "item": {
+      "@id": "https://www.foodandwine.com/recipes/dinner",
+      "name": "Dinner"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "item": {
+      "@id": "https://www.foodandwine.com/comfort-food/stews",
+      "name": "Stews"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "item": {
+      "@id": "https://www.foodandwine.com/soup/chili",
+      "name": "Chili"
+     }
+    }
+   ]
+  }
+ }
+}

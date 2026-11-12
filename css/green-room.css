@@ -1,0 +1,346 @@
+/* Mise / service theme.
+   The Green Room palette redrawn without the green cast: warm charcoal
+   surfaces, ivory type, brass accents. */
+
+body {
+  background: #17191b;
+  color: #f2f3ee;
+  --ground: #17191b;
+  --surface: #1f2226;
+  --raised: #26292d;
+  --active: #2d3034;
+  --border: #33373b;
+  --rule: #2a2d31;
+  --control: #565a5f;
+  --text: #f2f3ee;
+  --muted: #b9bdb6;
+  --faint: #959a94;
+  --accent: #d6c28d;
+  --accent-soft: rgba(214, 194, 141, 0.14);
+  --accent-ink: #f1e6bf;
+  --primary: #d6c28d;
+  --primary-hover: #e2cf9c;
+  --primary-ink: #17191b;
+  --pill-neutral-bg: #26292d;
+  --pill-neutral-ink: #d8d9d3;
+}
+body .view { position: relative; isolation: isolate; background: #17191b; overflow: hidden; }
+body .view::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: url("../assets/img/chili.jpg") center 34% / cover no-repeat; opacity: 0.07;
+}
+body .page { position: relative; z-index: 1; }
+body .panel {
+  background: rgba(23, 25, 27, 0.88); border-color: #33373b;
+}
+body .cook-back, body .cook-context, body .cook-clock { color: #b9bdb6; }
+body .cook-back:hover { color: #f2f3ee; }
+body .cook-clock b { color: #f2f3ee; }
+body .cook-progress { background: #2a2d31; }
+body .cook-progress span { background: #d6c28d; }
+body .steprail .rail-label { color: #959a94; }
+body .sbtn { color: #959a94; }
+body .sbtn:hover { background: #26292d; color: #f2f3ee; }
+body .sbtn .sn { color: #71766f; }
+body .sbtn.done .i { color: #d6c28d; }
+body .sbtn[aria-current="step"] { background: rgba(214, 194, 141, 0.14); color: #f1e6bf; }
+body .sbtn[aria-current="step"] .sn { color: #f1e6bf; }
+body .cook-meta, body .cook-sub, body .step-note { color: #c9cdc4; }
+body .cook-main h1 { color: #f8f7f2; }
+body .cook-main h1 { max-width: 38ch; }
+body .cook-actions { border-top-color: #33373b; }
+body .btn { border-color: #565a5f; color: #f2f3ee; background: transparent; }
+body .btn:hover { background: #26292d; }
+body .btn.primary { background: #d6c28d; border-color: #d6c28d; color: #17191b; }
+body .btn.primary:hover { background: #e2cf9c; border-color: #e2cf9c; }
+body .timer-btn { background: rgba(214, 194, 141, 0.09); border-color: #565a5f; color: #f1e6bf; }
+body .timer-btn:hover { background: rgba(214, 194, 141, 0.16); }
+body .timer-btn .ticon { background: #17191b; color: #d6c28d; }
+body .timer-btn .tcopy span { color: #d8d9d3; }
+body .notice.quiet { background: #23262a; border-color: #33373b; color: #d8d9d3; }
+body .empty-inline { border-color: #565a5f; color: #abaca6; }
+body .keys { color: #959a94; }
+body .keys kbd { color: #d8d9d3; }
+body .up-next { background: rgba(23, 25, 27, 0.78); border-color: #383c40; }
+body .up-next-text { color: #c9cdc4; }
+body .check-box { background: #23262a; border-color: #565a5f; }
+body .check-box:hover { border-color: #d6c28d; }
+body .check-box:checked { background: #d6c28d; border-color: #d6c28d; }
+body .check-box:checked::after { border-color: #17191b; }
+body .check-name { color: #f2f3ee; }
+body .check-row:has(.check-box:checked) .check-name { color: #b9bdb6; text-decoration-color: #71766f; }
+body .timer-card .tdisplay { color: #f1e6bf; }
+body .timer-card .tlabel { color: #b9bdb6; }
+body .timer-dock { background: rgba(23, 25, 27, 0.94); border-color: #565a5f; }
+body .timer-dock .td-clock { color: #f8f7f2; }
+body .timer-dock .td-label { color: #d8d9d3; }
+body .timer-dock .td-state { color: #f1e6bf; }
+body .timer-dock .td-state .dot { background: #d6c28d; }
+body .timer-dock.done { background: rgba(214, 194, 141, 0.16); border-color: #d6c28d; }
+
+.chip { background: #26292d; color: #d8d9d3; border-color: #33373b; }
+.route-cook .chip b { color: #f2f3ee; }
+
+@media (max-width: 760px) {
+  body .cook-main { min-height: auto; padding: 30px 0 12px; }
+  body .cook-main h1 { font-size: clamp(24px, 6.2vw, 28px); line-height: 1.24; max-width: 38ch; }
+}
+
+/* Cook service: quiet charcoal stage, with the ingredient tray lifted above it. */
+body.route-cook .view { background: #191b1e; overflow: visible; }
+body.route-cook .view::before { background: none; }
+body.route-cook .cook-page { padding-top: 8px; }
+body.route-cook .cook-top { padding-bottom: 16px; border-bottom: 1px solid #34373a; margin-bottom: 14px; }
+body.route-cook .cook-back { color: #f2f3ee; font-weight: 650; }
+body.route-cook .cook-context { color: #aeb2ac; }
+body.route-cook .cook-progress { height: 4px; margin-bottom: 28px; }
+body.route-cook .cook-grid { gap: 26px; }
+body.route-cook .cook-grid { grid-template-columns: minmax(0, 1fr) 340px; }
+body.route-cook .steprail { padding-top: 12px; }
+body.route-cook .steprail .rail-label { margin-bottom: 14px; font-size: 12px; color: #b9bdb6; }
+body.route-cook .sbtn { min-height: 40px; }
+body.route-cook .sbtn .sl { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; line-height: 18px; }
+body.route-cook .sbtn[aria-current="step"] { box-shadow: inset 3px 0 #d6c28d; /* taste-skill-ignore: active step indicator */ }
+body.route-cook .cook-main { min-height: 0; padding: 12px 0 42px; display: block; }
+body.route-cook .cook-meta { color: #d6c28d; font-size: 14px; }
+body.route-cook .cook-main h1 { margin-top: 12px; font-family: var(--font-display); font-size: 28px; line-height: 1.25; letter-spacing: -0.02em; color: #f2f3ee; }
+body.route-cook .cook-sub { margin-top: 8px; color: #c9cdc4; font-size: 13px; }
+body.route-cook .cook-gap-note { margin-top: 18px; }
+body.route-cook .cook-steps { display: grid; gap: 12px; margin-top: 24px; }
+body.route-cook .cook-step-card { min-width: 0; padding: 15px 17px 17px; border: 1px solid #34383c; border-radius: 12px; background: #202327; scroll-margin-top: 20px; filter: blur(.45px); opacity: .82; transition: filter 220ms var(--ease-out), opacity 220ms var(--ease-out), border-color 220ms var(--ease-out), background-color 220ms var(--ease-out); }
+body.route-cook .cook-step-card.current,
+body.route-cook .cook-step-card:focus-within { border-color: #81795f; background: #25272a; filter: none; opacity: 1; }
+body.route-cook .cook-step-card:not(.current):hover { filter: blur(.12px); opacity: .96; }
+body.route-cook .cook-step-select { display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; align-items: center; gap: 10px; width: 100%; padding: 0; border: 0; background: transparent; color: #c9cdc4; text-align: left; }
+body.route-cook .cook-step-select:hover .cook-step-label { color: #f2f3ee; }
+body.route-cook .cook-step-select:focus-visible { outline: 2px solid #d6c28d; outline-offset: 4px; border-radius: 4px; }
+body.route-cook .cook-step-number { display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid #565a5f; border-radius: 50%; color: #d6c28d; font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
+body.route-cook .cook-step-number .i { width: 14px; height: 14px; }
+body.route-cook .cook-step-card.current .cook-step-number { border-color: #d6c28d; background: rgba(214,194,141,.12); }
+body.route-cook .cook-step-label { color: #f2f3ee; font-size: 14px; font-weight: 700; }
+body.route-cook .cook-step-label > span { color: #aeb2ac; font-weight: 500; }
+body.route-cook .cook-step-state { color: #aeb2ac; font-size: 11px; }
+body.route-cook .cook-step-card.current .cook-step-state { color: #e2cf9c; }
+body.route-cook .cook-step-text { max-width: 72ch; margin: 11px 0 0 40px; color: #ecece6; font-size: 16px; line-height: 1.65; overflow-wrap: anywhere; }
+body.route-cook .cook-step-card.done .cook-step-text { color: #c9cdc4; }
+body.route-cook .cook-step-card .cook-timers { margin: 15px 0 0 40px; }
+body.route-cook .cook-step-card .timer-btn { max-width: 100%; }
+body.route-cook .cook-actions { margin-top: 30px; }
+body.route-cook .cook-side { gap: 24px; padding-top: 12px; }
+body.route-cook .cook-side .panel { position: relative; background: #24272b; border: 1px solid #383c40; }
+body.route-cook .cook-side .mise,
+body.route-cook .cook-side .full-mise {
+  isolation: isolate;
+  border-color: #3b3e41;
+  border-radius: 14px;
+  background: #292c30;
+  transform: translateY(-4px);
+}
+body.route-cook .cook-side .mise::before,
+body.route-cook .cook-side .full-mise::before {
+  content: ""; position: absolute; inset: 7px 12px auto; height: 1px;
+  background: rgba(214,194,141,.22); pointer-events: none;
+}
+body.route-cook .cook-side .mise::after,
+body.route-cook .cook-side .full-mise::after {
+  content: ""; position: absolute; left: 8px; right: 8px; bottom: -7px; height: 7px;
+  background: #101214; border-radius: 0 0 10px 10px; z-index: -1; pointer-events: none;
+}
+body.route-cook .cook-side .mise { border-top: 2px solid #464440; }
+body.route-cook .cook-side .empty-inline { border-color: #383c40; }
+body.route-cook .cook-side .btn { border-color: #383c40; }
+body.route-cook .cook-side .panel-head h2 { font-size: 19px; line-height: 26px; }
+body.route-cook .cook-side .panel-head .meta { color: #d2d2c7; }
+body.route-cook .mise .panel-head,
+body.route-cook .full-mise .panel-head { margin-bottom: 14px; }
+body.route-cook .cook-side .mise {
+  padding: 20px 17px 18px 42px;
+  border: 1px solid #484b4e;
+  border-top: 2px solid #71664b;
+  border-radius: 6px;
+  background: #292c30;
+  color: #e6e4dc;
+}
+body.route-cook .cook-side .mise::before {
+  inset: 9px 12px auto 42px;
+  background: #46494b;
+}
+body.route-cook .cook-side .mise::after { background: #151719; border-radius: 0 0 4px 4px; }
+body.route-cook .binder-holes {
+  position: absolute;
+  top: 69px;
+  left: 13px;
+  display: grid;
+  gap: 31px;
+  pointer-events: none;
+}
+body.route-cook .binder-holes span {
+  width: 13px;
+  height: 13px;
+  border: 2px solid #77725f;
+  border-radius: 50%;
+  background: #191b1e;
+}
+body.route-cook .cook-side .mise .panel-head {
+  padding-bottom: 9px;
+  border-bottom: 1px solid #45484a;
+}
+body.route-cook .cook-side .mise .panel-head h2 {
+  color: #eee6cc;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.012em;
+}
+body.route-cook .cook-side .mise .panel-head .meta { color: #c5c2b8; }
+body.route-cook .check-list,
+body.route-cook .full-mise-list { gap: 7px; }
+body.route-cook .check-row,
+body.route-cook .full-row {
+  grid-template-columns: 20px 56px minmax(0, 1fr);
+  min-height: 43px; gap: 9px; padding: 8px 9px;
+  background: #303337; border: 1px solid #3e4246; border-radius: 7px;
+  transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+body.route-cook .check-row:hover,
+body.route-cook .full-row:hover { background: #383b3e; border-color: #837454; transform: translateY(-1px); }
+body.route-cook .check-row:focus-within,
+body.route-cook .full-row:focus-within { border-color: #d6c28d; }
+body.route-cook .check-row:has(.check-box:checked),
+body.route-cook .full-row:has(.check-box:checked) { background: #2b2d2e; }
+body.route-cook .check-box { width: 18px; height: 18px; }
+body.route-cook .check-amount { font-size: 12px; color: #d6c28d; }
+body.route-cook .check-name { min-width: 0; overflow: visible; white-space: normal; text-overflow: clip; text-transform: capitalize; line-height: 1.4; font-size: 13px; font-weight: 600; }
+body.route-cook .check-name .ing-note { text-transform: none; font-size: 11px; font-weight: 400; }
+body.route-cook .cook-side .check-list {
+  gap: 0;
+  margin-left: 3px;
+  padding-left: 10px;
+  border-left: 1px solid #74684b;
+}
+body.route-cook .cook-side .check-box {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+body.route-cook .cook-side .mise .check-row {
+  grid-template-columns: 52px minmax(0, 1fr);
+  min-height: 42px;
+  padding: 6px 2px;
+  border: 0;
+  border-bottom: 1px solid #414548;
+  border-radius: 0;
+  background: transparent;
+}
+body.route-cook .cook-side .mise .check-row:hover,
+body.route-cook .cook-side .mise .check-row:has(.check-box:checked) { background: transparent; transform: none; }
+body.route-cook .cook-side .mise .check-row:focus-within { outline: 1px solid #d6c28d; outline-offset: 1px; }
+body.route-cook .cook-side .mise .check-box { border-color: #8a887e; background: #202326; }
+body.route-cook .cook-side .mise .check-box:checked { border-color: #b09b65; background: #b09b65; }
+body.route-cook .cook-side .mise .check-amount {
+  color: #d1c59d;
+  font-family: "Caveat", cursive;
+  font-size: 15px;
+}
+body.route-cook .cook-side .mise .check-name {
+  color: #e6e4dc;
+  font-family: "Caveat", cursive;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+body.route-cook .cook-side .mise .check-row:has(.check-box:checked) .check-name {
+  color: #b4b0a4;
+  text-decoration: line-through;
+  text-decoration-color: #d0b879;
+  text-decoration-thickness: 1.5px;
+}
+body.route-cook .cook-side .mise .check-name .ing-note { color: #c2bdaf; font-size: 14px; }
+body.route-cook .cook-side .mise .meta.note { color: #c2bdaf; }
+body.route-cook .cook-side .full-row { grid-template-columns: 62px minmax(0, 1fr); }
+body.route-cook .cook-side .full-row:focus-within { outline: 1px solid #d6c28d; outline-offset: 1px; }
+body.route-cook .up-next .chip { text-transform: capitalize; }
+body.route-cook .timer-card { border-radius: 14px; container-type: inline-size; }
+body.route-cook .timer-card .tdisplay {
+  display: grid;
+  place-items: center;
+  min-height: 88px;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: 5px solid;
+  border-color: #090a0b #454649 #050607 #454649;
+  border-radius: 10px;
+  background: #151617;
+}
+body.route-cook .timer-digits {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: #e8e9e8;
+  font-family: var(--font);
+  font-size: clamp(34px, 16cqi, 54px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+body.route-cook .timer-digit {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: .78em;
+  height: 1.08em;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #626366 #111213 #0b0c0d #515255;
+  border-radius: 3px;
+  background: #353638;
+}
+body.route-cook .timer-digit::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: rgba(5,6,7,.78);
+  content: "";
+}
+body.route-cook .timer-colon {
+  display: inline-block;
+  padding: 0 1px;
+  color: #c5c7c7;
+  font-size: .72em;
+}
+body.route-cook .timer-display-value.done .timer-digit { color: #f3e3ae; }
+body.route-cook .timer-display-value.done .timer-colon { color: #f3e3ae; }
+body.route-cook .timer-card .tdisplay > .timer-digits {
+  width: 100%;
+}
+body.route-cook .timer-card .tlabel { margin-top: 10px; text-align: center; }
+
+@media (max-width: 1020px) {
+  body.route-cook .cook-main { min-height: 0; padding: 22px 0 32px; }
+  body.route-cook .cook-grid { grid-template-columns: minmax(0, 1fr); }
+  body.route-cook .cook-side { padding-top: 0; }
+}
+@media (max-width: 760px) {
+  body.route-cook .cook-grid { gap: 22px; }
+  body.route-cook .cook-side { grid-template-columns: minmax(0, 1fr); }
+  body.route-cook .cook-step-card { padding: 13px 12px 15px; }
+  body.route-cook .cook-step-select { grid-template-columns: 28px minmax(0, 1fr); gap: 9px; }
+  body.route-cook .cook-step-state { grid-column: 2; grid-row: 2; margin-top: -5px; }
+  body.route-cook .cook-step-text { margin-left: 0; font-size: 15px; line-height: 1.6; }
+  body.route-cook .cook-step-card .cook-timers { margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.route-cook .check-row, body.route-cook .full-row { transition: none; }
+  body.route-cook .cook-step-card { transition: none; }
+  body.route-cook .check-row:hover, body.route-cook .full-row:hover { transform: none; }
+}

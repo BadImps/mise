@@ -1,0 +1,360 @@
+package com.badimps.mise;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.DownloadManager;
+import android.content.ActivityNotFoundException;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.res.Configuration;
+import android.graphics.Color;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
+import android.view.WindowManager;
+import android.webkit.WebChromeClient;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.FrameLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.window.OnBackInvokedDispatcher;
+
+public final class MainActivity extends Activity {
+
+    private static final String TAG = "Mise";
+    private static final String START_URL = "https://" + WebContentStore.HOST + "/index.html";
+    private static final int CHARCOAL = Color.rgb(23, 25, 27);
+
+    private FrameLayout root;
+    private WebView webView;
+    private View loading;
+    private TextView loadingHint;
+    private WebContentStore store;
+    private UpdateManager updates;
+    private BroadcastReceiver downloadReceiver;
+    private final Handler handler = new Handler(Looper.getMainLooper());
+    private boolean loadFailed;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
+        super.onCreate(savedInstanceState);
+        configureWindow();
+        setContentView(R.layout.activity_main);
+
+        root = findViewById(R.id.root);
+        webView = findViewById(R.id.webview);
+        loading = findViewById(R.id.loading);
+        loadingHint = findViewById(R.id.loading_hint);
+
+        applyInsets();
+        store = new WebContentStore(this);
+        setupWebView();
+        registerBackCallback();
+
+        loading.setOnClickListener(view -> {
+            if (loadFailed) {
+                loadFailed = false;
+                loadingHint.setText(R.string.loading_hint);
+                loadStart();
+            }
+        });
+
+        if (savedInstanceState == null || webView.restoreState(savedInstanceState) == null) {
+            loadStart();
+        } else {
+            loading.setVisibility(View.GONE);
+            webView.setVisibility(View.VISIBLE);
+        }
+
+        updates = new UpdateManager(this, store);
+        registerDownloadReceiver();
+        handler.postDelayed(this::checkForUpdates, 1800);
+    }
+
+    private void configureWindow() {
+        Window window = getWindow();
+        window.setStatusBarColor(CHARCOAL);
+        window.setNavigationBarColor(CHARCOAL);
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            window.setNavigationBarContrastEnforced(false);
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.setDecorFitsSystemWindows(false);
+            WindowInsetsController controller = window.getInsetsController();
+            if (controller != null) {
+                controller.setSystemBarsAppearance(0,
+                        WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
+                                | WindowInsetsController.APPEARANCE_LIGHT_NAVIGATION_BARS);
+            }
+        }
+    }
+
+    private void applyInsets() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            root.setOnApplyWindowInsetsListener((view, insets) -> {
+                android.graphics.Insets bars = insets.getInsets(
+                        WindowInsets.Type.systemBars() | WindowInsets.Type.displayCutout());
+                android.graphics.Insets ime = insets.getInsets(WindowInsets.Type.ime());
+                view.setPadding(bars.left, bars.top, bars.right, Math.max(bars.bottom, ime.bottom));
+                return insets;
+            });
+            root.requestApplyInsets();
+        } else {
+            root.setFitsSystemWindows(true);
+        }
+    }
+
+    @SuppressLint("SetJavaScriptEnabled")
+    private void setupWebView() {
+        WebView.setWebContentsDebuggingEnabled(BuildConfig.DEBUG);
+        WebSettings settings = webView.getSettings();
+        settings.setJavaScriptEnabled(true);
+        settings.setDomStorageEnabled(true);
+        settings.setAllowFileAccess(false);
+        settings.setAllowContentAccess(false);
+        settings.setJavaScriptCanOpenWindowsAutomatically(false);
+        settings.setSupportMultipleWindows(false);
+        settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
+        settings.setMediaPlaybackRequiresUserGesture(true);
+        settings.setSupportZoom(false);
+        settings.setBuiltInZoomControls(false);
+        settings.setDisplayZoomControls(false);
+        settings.setUseWideViewPort(true);
+        settings.setLoadWithOverviewMode(false);
+        settings.setCacheMode(WebSettings.LOAD_DEFAULT);
+        settings.setUserAgentString(settings.getUserAgentString()
+                + " MiseAndroid/" + BuildConfig.VERSION_NAME);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            settings.setForceDark(WebSettings.FORCE_DARK_OFF);
+        }
+
+        webView.setBackgroundColor(CHARCOAL);
+        webView.setOverScrollMode(View.OVER_SCROLL_NEVER);
+        webView.setWebChromeClient(new WebChromeClient());
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
+                Uri url = request.getUrl();
+                if (url != null && WebContentStore.HOST.equals(url.getHost())
+                        && "GET".equalsIgnoreCase(request.getMethod())) {
+                    return store.open(url);
+                }
+                return super.shouldInterceptRequest(view, request);
+            }
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                Uri url = request.getUrl();
+                if (url != null && WebContentStore.HOST.equals(url.getHost())) return false;
+                openExternally(url);
+                return true;
+            }
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                Uri parsed = Uri.parse(url);
+                if (parsed.getHost() != null && WebContentStore.HOST.equals(parsed.getHost())) return false;
+                openExternally(parsed);
+                return true;
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                loadFailed = false;
+                loading.setVisibility(View.GONE);
+                webView.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
+                if (request.isForMainFrame()) {
+                    showLoadError(error == null ? "Unknown error" : String.valueOf(error.getDescription()));
+                }
+            }
+
+            @Override
+            @SuppressWarnings("deprecation")
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                if (failingUrl != null && failingUrl.startsWith("https://" + WebContentStore.HOST)) {
+                    showLoadError(description);
+                }
+            }
+        });
+
+        webView.loadUrl("about:blank");
+    }
+
+    private void loadStart() {
+        loadFailed = false;
+        loading.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.INVISIBLE);
+        if (store != null) {
+            Log.d(TAG, "Loading web content version " + store.getActiveVersion());
+        }
+        webView.loadUrl(START_URL);
+    }
+
+    private void showLoadError(String description) {
+        loadFailed = true;
+        loading.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.INVISIBLE);
+        loadingHint.setText(R.string.load_error);
+        Log.w(TAG, "Web content failed: " + description);
+    }
+
+    private void checkForUpdates() {
+        if (isFinishing() || isDestroyed() || updates == null) return;
+        updates.check(new UpdateManager.Listener() {
+            @Override
+            public void onResult(UpdateManager.Manifest manifest, boolean webUpdated) {
+                if (isFinishing() || isDestroyed()) return;
+                if (webUpdated) {
+                    String current = webView.getUrl();
+                    webView.clearCache(true);
+                    if (current != null && current.startsWith("https://" + WebContentStore.HOST + "/")) {
+                        webView.loadUrl(current);
+                    } else {
+                        loadStart();
+                    }
+                    Toast.makeText(MainActivity.this,
+                            "Mise content updated" + (manifest != null ? " to " + manifest.versionName : ""),
+                            Toast.LENGTH_SHORT).show();
+                }
+                if (updates.shouldOffer(manifest)) showUpdateDialog(manifest);
+            }
+
+            @Override
+            public void onError(String message) {
+                Log.d(TAG, "No update applied: " + message);
+            }
+        });
+    }
+
+    private void showUpdateDialog(UpdateManager.Manifest manifest) {
+        String message = (manifest.notes.isEmpty()
+                ? "A new version of Mise is ready."
+                : manifest.notes)
+                + "\n\nAndroid will download and verify the package before opening the installer. Your saved recipes stay on this device.";
+        new AlertDialog.Builder(this)
+                .setTitle("Mise " + manifest.versionName)
+                .setMessage(message)
+                .setPositiveButton("Download update", (dialog, which) -> updates.startApkDownload(this, manifest))
+                .setNegativeButton("Later", (dialog, which) -> updates.dismiss(manifest))
+                .show();
+    }
+
+    // The flags overload is only available on API 33+. DownloadManager is a
+    // system broadcast, and the receiver stays process-local.
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
+    private void registerDownloadReceiver() {
+        downloadReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(intent.getAction())) {
+                    long id = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1L);
+                    if (id >= 0L) updates.handleDownloadComplete(MainActivity.this, id);
+                }
+            }
+        };
+        IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            registerReceiver(downloadReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
+        } else {
+            registerReceiver(downloadReceiver, filter);
+        }
+    }
+
+    private void openExternally(Uri uri) {
+        if (uri == null) return;
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, uri));
+        } catch (ActivityNotFoundException error) {
+            Toast.makeText(this, "No app can open that link.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (webView != null) webView.onResume();
+        if (updates != null) updates.resumePendingInstall(this);
+    }
+
+    @Override
+    protected void onPause() {
+        if (webView != null) webView.onPause();
+        super.onPause();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (root != null) root.requestApplyInsets();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        if (webView != null) webView.saveState(outState);
+        super.onSaveInstanceState(outState);
+    }
+
+    private void registerBackCallback() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            getOnBackInvokedDispatcher().registerOnBackInvokedCallback(
+                    OnBackInvokedDispatcher.PRIORITY_DEFAULT, this::handleBack);
+        }
+    }
+
+    private void handleBack() {
+        if (webView != null && webView.canGoBack()) {
+            webView.goBack();
+            return;
+        }
+        finish();
+    }
+
+    // API 32 and below do not dispatch OnBackInvokedCallback.
+    @Override
+    @SuppressLint("GestureBackNavigation")
+    @SuppressWarnings("deprecation")
+    public void onBackPressed() {
+        handleBack();
+    }
+
+    @Override
+    protected void onDestroy() {
+        handler.removeCallbacksAndMessages(null);
+        if (downloadReceiver != null) {
+            try {
+                unregisterReceiver(downloadReceiver);
+            } catch (IllegalArgumentException ignored) {
+                /* already unregistered */
+            }
+            downloadReceiver = null;
+        }
+        if (webView != null) {
+            webView.stopLoading();
+            webView.loadUrl("about:blank");
+            webView.destroy();
+            webView = null;
+        }
+        super.onDestroy();
+    }
+}

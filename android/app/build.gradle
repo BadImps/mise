@@ -1,0 +1,115 @@
+plugins {
+    id "com.android.application"
+}
+
+def envCode = System.getenv("MISE_VERSION_CODE")
+def envName = System.getenv("MISE_VERSION_NAME")
+def appVersionCode = (envCode == null || envCode.trim().isEmpty()) ? 1 : envCode.trim().toInteger()
+def appVersionName = (envName == null || envName.trim().isEmpty()) ? "1.0.0" : envName.trim()
+
+def signingFile = rootProject.file("signing/upload-signing.properties")
+def signing = new Properties()
+def hasSigning = signingFile.exists()
+if (hasSigning) {
+    signingFile.withInputStream { signing.load(it) }
+    ["storeFile", "storePassword", "keyAlias", "keyPassword"].each { key ->
+        if (!signing.getProperty(key)) {
+            throw new GradleException("Release signing is missing '${key}' in ${signingFile}")
+        }
+    }
+}
+
+// The web app stays at the repository root. Copy it into generated Android
+// assets at build time so the APK and the OTA bundle always share one source.
+def webRoot = rootProject.projectDir.parentFile
+def generatedWeb = layout.buildDirectory.dir("generated/miseWeb")
+
+android {
+    namespace "com.badimps.mise"
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.badimps.mise"
+        minSdk 26
+        targetSdk 36
+        versionCode appVersionCode
+        versionName appVersionName
+        resConfigs "en"
+    }
+
+    signingConfigs {
+        release {
+            if (hasSigning) {
+                storeFile rootProject.file(signing.getProperty("storeFile"))
+                storePassword signing.getProperty("storePassword")
+                keyAlias signing.getProperty("keyAlias")
+                keyPassword signing.getProperty("keyPassword")
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            versionNameSuffix "-debug"
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+            signingConfig hasSigning ? signingConfigs.release : signingConfigs.debug
+        }
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    sourceSets {
+        main {
+            assets.srcDirs += generatedWeb
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        abortOnError true
+        checkReleaseBuilds true
+    }
+}
+
+tasks.register("syncWebAssets", Sync) {
+    from(webRoot) {
+        include "index.html"
+        include "css/**"
+        include "js/**"
+        include "assets/**"
+        exclude "assets/credits.md"
+    }
+    into generatedWeb
+}
+
+tasks.named("preBuild").configure {
+    dependsOn("syncWebAssets")
+}
+
+tasks.named("clean").configure {
+    delete layout.buildDirectory
+}
+
+// A release must never fall back to the debug signing key. Builds without a
+// configured keystore still work for debug, but stop before assembly if the
+// requested graph includes a release package.
+gradle.taskGraph.whenReady { graph ->
+    def releasePackaging = graph.allTasks.any {
+        it.name in ["packageRelease", "assembleRelease", "bundleRelease"]
+    }
+    if (releasePackaging && !hasSigning) {
+        throw new GradleException(
+                "Release signing is not configured. Create ${signingFile} " +
+                "or restore the CI signing secrets before building a release.")
+    }
+}
