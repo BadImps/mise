@@ -57,6 +57,8 @@ adb install -r android\app\build\outputs\apk\debug\app-debug.apk
 
 The manifest declares resizable activity, all screen sizes and densities, no required touchscreen, and unrestricted orientation. Layouts use the web app's responsive breakpoints, and the Android host applies system-bar and display-cutout insets before the WebView is shown. The same APK runs on a phone, a tablet, a foldable, and a Chromebook-class device.
 
+![Mise on an Android tablet emulator, showing the kitchen and web OTA delivery in the signed release](docs/screenshots/android-tablet-home.jpg)
+
 ## Releases and OTA updates
 
 Every GitHub release publishes three assets:
@@ -89,8 +91,8 @@ The full manifest contract and rollback behavior are documented in [docs/OTA.md]
 ### Publish a release
 
 1. Open **Actions → Publish Android release → Run workflow**.
-2. Enter the tag (`v1.0.0`), version name (`1.0.0`), and version code (`1`).
-3. Leave `web_version_code` empty for a normal app release, or set a higher value (for example `2`) for content-only OTA.
+2. Enter the tag (`v1.0.1`), version name (`1.0.1`), and version code (`2`).
+3. Leave `web_version_code` empty for a normal app release, or set a higher value (for example `3`) for content-only OTA.
 4. Add short plain-text OTA notes. They appear in the in-app update dialog.
 5. Run the workflow. It verifies the web app, builds and signs the APK, generates the web zip and manifest, verifies the signature, and creates the GitHub release.
 
