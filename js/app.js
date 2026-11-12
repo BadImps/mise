@@ -146,9 +146,13 @@
     return allRecipes().find((r) => r.id === id) || null;
   }
 
-  function lastRecipe() {
+  function storedLastRecipe() {
     const id = store.get(KEY.last, '');
-    return getRecipe(id) || getRecipe('chili') || allRecipes()[0] || null;
+    return id ? getRecipe(id) : null;
+  }
+
+  function lastRecipe() {
+    return storedLastRecipe() || getRecipe('chili') || allRecipes()[0] || null;
   }
 
   function sourceGroup(recipe) {
@@ -351,6 +355,8 @@
   function homeView() {
     const all = allRecipes();
     const featured = lastRecipe();
+    const recent = storedLastRecipe();
+    const recentlyOpened = !!featured && !!recent && recent.id === featured.id;
     const totalChecked = all.reduce((s, r) => s + r.stats.ingredients, 0);
     const totalNamed = all.reduce((s, r) => s + r.stats.named, 0);
     const gapRecipe = all.find((r) => r.stats.missing > 0);
@@ -371,7 +377,7 @@
 
       <div class="home-grid">
         <div class="home-main">
-          ${featured ? featuredHero(featured) : ''}
+          ${featured ? featuredHero(featured, recentlyOpened) : ''}
           ${kitchenPanel(all)}
         </div>
         <aside class="home-side">
@@ -382,13 +388,13 @@
     </div>`;
   }
 
-  function featuredHero(recipe) {
+  function featuredHero(recipe, recentlyOpened) {
     const c = coverStats(recipe);
     const total = recipe.totalMinutes;
     return `<section class="panel hero" aria-labelledby="hero-name">
       <div class="panel-head">
-        <h2 class="sr-only" id="hero-title">Latest recipe</h2>
-        <div class="meta-line">${icon('flame')}${recipe === lastRecipe() ? 'Last opened' : 'From your kitchen'}</div>
+        <h2 class="sr-only" id="hero-title">Featured recipe</h2>
+        <div class="meta-line">${icon('flame')}${recentlyOpened ? 'Last opened' : 'Start here'}</div>
         <a class="section-link" href="#/library">All recipes ${icon('arrow-right')}</a>
       </div>
       <div class="hero-body">
