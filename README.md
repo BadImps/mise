@@ -80,7 +80,7 @@ Both bundled and OTA content are served through the virtual origin `https://mise
 ### Versioning
 
 - `versionCode` and `versionName` identify the Android package.
-- `web.versionCode` identifies bundled web content. It defaults to `versionCode`.
+- `web.versionCode` identifies the bundled web content. It defaults to `versionCode`, and the APK records its bundled web version in `BuildConfig`, so a fresh install does not re-download bytes it already contains.
 - A content-only OTA release keeps the APK version unchanged and raises only the web version. For example, `versionCode=1` with `web_version_code=2`.
 - Never reuse a web version that is lower than or equal to the version already active on devices.
 

@@ -4,8 +4,13 @@ plugins {
 
 def envCode = System.getenv("MISE_VERSION_CODE")
 def envName = System.getenv("MISE_VERSION_NAME")
+def envWebVersionCode = System.getenv("MISE_WEB_VERSION_CODE")
 def appVersionCode = (envCode == null || envCode.trim().isEmpty()) ? 1 : envCode.trim().toInteger()
 def appVersionName = (envName == null || envName.trim().isEmpty()) ? "1.0.0" : envName.trim()
+def appWebVersionCode = (envWebVersionCode == null || envWebVersionCode.trim().isEmpty()) ? appVersionCode : envWebVersionCode.trim().toInteger()
+if (appWebVersionCode < appVersionCode) {
+    throw new GradleException("MISE_WEB_VERSION_CODE (${appWebVersionCode}) must be at least versionCode (${appVersionCode})")
+}
 
 def signingFile = rootProject.file("signing/upload-signing.properties")
 def signing = new Properties()
@@ -34,6 +39,7 @@ android {
         targetSdk 36
         versionCode appVersionCode
         versionName appVersionName
+        buildConfigField "int", "WEB_VERSION_CODE", String.valueOf(appWebVersionCode)
         resConfigs "en"
     }
 

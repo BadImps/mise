@@ -61,8 +61,9 @@ final class WebContentStore {
     }
 
     private void resolveActive() {
-        int stored = prefs.getInt(KEY_VERSION, BuildConfig.VERSION_CODE);
-        if (stored > BuildConfig.VERSION_CODE) {
+        int bundled = BuildConfig.WEB_VERSION_CODE;
+        int stored = prefs.getInt(KEY_VERSION, bundled);
+        if (stored > bundled) {
             File candidate = versionDir(stored);
             if (new File(candidate, "index.html").isFile()) {
                 activeVersion = stored;
@@ -70,7 +71,7 @@ final class WebContentStore {
                 return;
             }
         }
-        activeVersion = BuildConfig.VERSION_CODE;
+        activeVersion = bundled;
         activeDir = null;
         prefs.edit().putInt(KEY_VERSION, activeVersion).apply();
     }

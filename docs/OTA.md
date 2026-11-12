@@ -85,7 +85,7 @@ If any step fails, the previous content stays active. The next check retries aft
 
 `versionCode` is the Android package version. It must increase for every APK published to the same application ID.
 
-`web.versionCode` is an independent content counter. The app compares it with the active web version and only installs a strictly greater value.
+`web.versionCode` is an independent content counter. The app compares it with the active web version and only installs a strictly greater value. The APK records its bundled web version in `BuildConfig`, so a new installation starts with that version instead of re-downloading an equivalent bundle.
 
 - Normal app release: leave `web_version_code` empty. The workflow uses `versionCode`.
 - Content-only release: keep the APK version unchanged and set a higher `web_version_code`, such as `2` after `1`.
