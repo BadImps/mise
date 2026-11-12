@@ -282,8 +282,9 @@ public final class MainActivity extends Activity {
                 .show();
     }
 
-    // The flags overload is only available on API 33+. DownloadManager is a
-    // system broadcast, and the receiver stays process-local.
+    // On API 32 and below ContextCompat is not available in this project, so the
+    // no-flags overload is the supported path there. The exported receiver path is
+    // used on Android 13+, and the pending download is verified before use.
     @SuppressLint("UnspecifiedRegisterReceiverFlag")
     private void registerDownloadReceiver() {
         downloadReceiver = new BroadcastReceiver() {
@@ -297,7 +298,10 @@ public final class MainActivity extends Activity {
         };
         IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            registerReceiver(downloadReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
+            // Android 13+ only delivers this system broadcast to an exported receiver.
+            // The receiver matches the pending download id and verifies the SHA-256
+            // before doing anything with the file.
+            registerReceiver(downloadReceiver, filter, Context.RECEIVER_EXPORTED);
         } else {
             registerReceiver(downloadReceiver, filter);
         }
