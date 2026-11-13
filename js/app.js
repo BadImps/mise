@@ -1312,7 +1312,7 @@
       <div class="cook-top">
         <a class="cook-back" href="#/recipe/${esc(recipe.id)}">${icon('arrow-left')}<span>${esc(recipe.name)}</span></a>
         <span class="cook-context">${esc(recipe.source)}${recipe.author ? ' / ' + esc(recipe.author) : ''} / ${recipe.stats.steps} steps</span>
-         <span class="cook-clock">${icon('clock')}Time Elapsed <b data-elapsed>00:00</b></span>
+        <span class="cook-clock">${icon('clock')}<span class="cook-clock-label">Time Elapsed </span><b data-elapsed>00:00</b></span>
         <a class="btn sm" href="#/recipe/${esc(recipe.id)}">Exit</a>
       </div>
       <div class="cook-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${donePct}" aria-label="Steps marked done"><span style="width:${donePct}%"></span></div>

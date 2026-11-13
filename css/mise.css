@@ -565,11 +565,12 @@
   .live-row .btn { grid-column: 2; justify-self: start; margin-top: 2px; }
   .live-thumb { width: 48px; height: 48px; }
   .result-count { display: none; }
-  .cook-top { flex-wrap: wrap; gap: 8px 12px; }
-  .cook-back { order: 1; }
-  .cook-clock { order: 2; margin-left: auto; }
-  .cook-context { order: 3; flex-basis: 100%; }
-  .cook-top .btn { order: 4; }
+  .cook-top { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 8px 12px; }
+  .cook-back { grid-column: 1; grid-row: 1; }
+  .cook-top .btn { grid-column: 2; grid-row: 1; justify-self: end; }
+  .cook-context { grid-column: 1; grid-row: 2; }
+  .cook-clock { grid-column: 2; grid-row: 2; justify-self: end; }
+  .cook-clock-label { display: none; }
   .cook-actions .btn { flex: 1; min-width: 0; }
   .cook-actions .primary { flex: 2; }
   .timer-btn { width: 100%; }
