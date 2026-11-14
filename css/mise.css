@@ -545,14 +545,24 @@
 .tool-pop-close:hover, .tool-pop-close:focus-visible { background: var(--active); color: var(--text); }
 .tool-pop-close .i { width: 15px; height: 15px; }
 .tool-pop-art {
-  flex: none; width: 74px; height: 74px;
+  flex: none; width: 84px; height: 84px; position: relative; overflow: hidden;
   display: flex; align-items: center; justify-content: center;
   color: var(--accent-ink);
   background: var(--accent-soft);
   border: 1px solid var(--border);
   border-radius: 12px;
 }
-.tool-pop-art svg { width: 52px; height: 52px; }
+.tool-pop-art svg { width: 54px; height: 54px; }
+.tool-pop-art.no-photo .tool-pop-photo { display: none; }
+.tool-pop-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.tool-pop-credit { font-size: 10.5px; line-height: 14px; color: var(--faint); }
+.tool-pop-credit a { color: inherit; text-decoration: none; }
+.tool-pop-credit a:hover { text-decoration: underline; }
+.tool-pop-credit-source { display: block; color: var(--faint); opacity: 0.85; }
+.commands-panel .command-groups { margin-top: 14px; display: grid; gap: 12px; }
+.commands-panel .command-group dt { font-size: var(--fs-meta); font-weight: 600; color: var(--text); }
+.commands-panel .command-group dd { margin-top: 5px; color: var(--muted); font-size: var(--fs-meta); line-height: 22px; }
+.command-say { display: inline-block; padding: 1px 7px 2px; margin: 0 3px 2px 0; background: var(--raised); border-radius: 6px; font-size: 12.5px; line-height: 18px; color: var(--text); }
 .tool-pop-copy { display: grid; gap: 4px; padding-right: 18px; }
 .tool-pop-copy b { font-size: var(--fs-small); color: var(--text); }
 .tool-pop-copy span { color: var(--muted); }

@@ -24,6 +24,8 @@ pipe = KPipeline(lang_code="a")
 CLIPS = [(f"step-{n}.wav", f"Step {n}") for n in range(1, 41)]
 CLIPS.append(("no-previous-step.wav", "There is no previous step."))
 CLIPS.append(("cook-cancelled.wav", "Cook cancelled."))
+CLIPS.append(("are-you-there.wav", "Are you there?"))
+CLIPS.append(("cook-paused.wav", "Cook paused."))
 
 for filename, text in CLIPS:
     audio = None

@@ -2145,6 +2145,9 @@
   let webRecognizer = null;
   let guideStatusText = '';
   let guideHintText = '';
+  let guideAwaitTimer = null;
+  let guideAreYouThere = false;
+  let guidePaused = false;
 
   const synth = () => (typeof window.speechSynthesis !== 'undefined' ? window.speechSynthesis : null);
   const nativeSpeech = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.speechStart === 'function';
@@ -2162,6 +2165,8 @@
     }
     if (text === 'There is no previous step.') return STUDIO_CLIP_BASE + 'no-previous-step.wav';
     if (text === 'Cook cancelled.') return STUDIO_CLIP_BASE + 'cook-cancelled.wav';
+    if (text === 'Are you there?') return STUDIO_CLIP_BASE + 'are-you-there.wav';
+    if (text === 'Cook paused.') return STUDIO_CLIP_BASE + 'cook-paused.wav';
     return null;
   }
 
@@ -2214,7 +2219,11 @@
       }
     }
     const engine = synth();
-    if (!engine) { if (after) after(); return; }
+    if (!engine) {
+      guideSetStatus('Voice audio is unavailable on this device.', 'Steps stay on screen — the chips below drive the guide. Updating Mise to 1.4.0+ restores audio.');
+      if (after) after();
+      return;
+    }
     try {
       engine.cancel();
       const utterance = new SpeechSynthesisUtterance(clean);
@@ -2288,13 +2297,31 @@
     });
   }
 
-  function beginGuideListen() {
+  function clearGuideAwait() {
+    if (guideAwaitTimer) {
+      window.clearTimeout(guideAwaitTimer);
+      guideAwaitTimer = null;
+    }
+  }
+
+  function armGuideAwait(ms) {
+    if (guideAwaitTimer) return; // one deadline per read; re-armed listens never slide it
+    guideAwaitTimer = window.setTimeout(() => {
+      if (guideWant !== true) return;
+      askAreYouThere();
+    }, ms);
+  }
+
+  function beginGuideListen(mode) {
     if (guideWant !== true) return;
-    guideSetStatus('Listening…', 'Say “next”, “repeat”, “start over”, “repeat last step” or “cancel”.');
+    const yesNo = mode === 'yesno';
+    guideSetStatus(yesNo ? 'Are you there? — listening…' : 'Listening…',
+      yesNo ? 'Say “yes” to keep cooking, or say a command.' : 'Say “next”, “repeat”, “start over”, “repeat last step” or “cancel”.');
     if (nativeSpeech()) {
       guideListening = true;
       try {
         MiseNative.speechStart();
+        if (!yesNo) armGuideAwait(6000);
         return;
       } catch (err) { /* fall through to the buttons */ }
     }
@@ -2315,11 +2342,39 @@
         webRecognizer.onend = () => { if (guideWant === true && guideListening) rearmGuideListen(600); };
         webRecognizer.start();
         guideListening = true;
+        if (!yesNo) armGuideAwait(6000);
         return;
       } catch (err) { /* handled below */ }
     }
     guideListening = false;
     guideSetStatus('Voice unavailable', 'Speech recognition is not available on this device. The guide still reads each step; use the buttons below.');
+  }
+
+  function askAreYouThere() {
+    if (guideWant !== true) return;
+    guideAreYouThere = true;
+    guideSetStatus('Are you there?', 'Say “yes” to keep cooking.');
+    guideStopListening();
+    guideSay('Are you there?', () => {
+      if (guideWant !== true) return;
+      clearGuideAwait();
+      guideAwaitTimer = window.setTimeout(() => {
+        if (guideWant === true && guideAreYouThere) guidePauseCook();
+      }, 4000);
+      beginGuideListen('yesno');
+    });
+  }
+
+  function guidePauseCook() {
+    guideAreYouThere = false;
+    guideWant = false;
+    guidePaused = true;
+    guideStopListening();
+    stopGuideSpeak();
+    clearGuideAwait();
+    guideSetStatus('Cook paused.', 'Tap “Resume” to hear the current step again.');
+    announce('Cook paused.');
+    render();
   }
 
   function rearmGuideListen(delay) {
@@ -2330,6 +2385,7 @@
 
   function guideStopListening() {
     guideListening = false;
+    clearGuideAwait();
     if (nativeSpeech()) { try { MiseNative.speechStop(); } catch (err) { /* ignore */ } }
     if (webRecognizer) {
       try { webRecognizer.abort(); } catch (err) { /* ignore */ }
@@ -2345,22 +2401,53 @@
     { name: 'cancel', re: /^(cancel|cancel recipe|cancel cook|cancel cooking|stop|stop cooking|end cook|end cooking|quit|quit cooking)$/i },
   ];
 
-  function parseGuideCommand(text) {
-    const normalized = String(text || '').toLowerCase()
+  function normalizeVoice(text) {
+    return String(text || '').toLowerCase()
       .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
       .replace(/[^a-z0-9 ]+/g, ' ')
       .replace(/\s+/g, ' ')
       .trim();
+  }
+
+  function parseGuideCommand(text) {
+    const normalized = normalizeVoice(text);
     for (const cmd of GUIDE_COMMANDS) {
       if (cmd.re.test(normalized)) return cmd.name;
     }
     return null;
   }
 
+  function handleAreYouThere(heard, command) {
+    clearGuideAwait();
+    guideAreYouThere = false;
+    const normalized = normalizeVoice(heard);
+    const yes = /^(yes|yeah|yep|yup|sure|ok|okay|alright|all right|i am here|i m here|still here|present|here|ready|still with you|still with me)$/i.test(normalized);
+    if (yes || command) {
+      if (command === 'cancel') { cancelCurrentCook(); return; }
+      if (command === 'startOver') { guideStartOver(); return; }
+      if (command === 'repeat') { guideAnnounceStep(); return; }
+      if (command === 'repeatLast') { guideSpeakPrevious(); return; }
+      if (command === 'next') {
+        const recipe = session && getRecipe(session.recipeId);
+        if (recipe) cookNext(recipe);
+        return;
+      }
+      guideSetStatus('Good — cooking continues.', 'Say “next”, “repeat”, “start over” or “cancel”.');
+      beginGuideListen();
+      return;
+    }
+    guidePauseCook();
+  }
+
   function onGuideSpeechText(raw) {
     guideListening = false;
+    clearGuideAwait();
     const heard = String(raw || '').trim();
     const command = heard ? parseGuideCommand(heard) : null;
+    if (guideAreYouThere) {
+      handleAreYouThere(heard, command);
+      return;
+    }
     guideStreak = 0;
     switch (command) {
       case 'repeatLast': guideSpeakPrevious(); return;
@@ -2385,6 +2472,10 @@
 
   function onGuideSpeechError(code) {
     guideListening = false;
+    if (guideAreYouThere) {
+      // nothing to do — the four-second window governs the pause
+      return;
+    }
     if (code === 'denied') {
       guideSetStatus('Microphone is off.', 'Allow the microphone for Mise in system settings, or use the buttons below.');
       return;
@@ -2419,6 +2510,9 @@
     lastSpokenKey = '';
     guideStreak = 0;
     guideListening = false;
+    guideAreYouThere = false;
+    guidePaused = false;
+    clearGuideAwait();
     guideStopListening();
     stopGuideSpeak();
   }
@@ -2440,20 +2534,24 @@
   // window.__miseSpeechError({"code":"..."}) for each recognizer turn, and
   // window.__miseSpeechDone({}) when the system voice finishes speaking
   // (or fails — either way the guide moves on instead of wedging).
+  // The Android shell calls these with an inline object literal, so handle
+  // both an object and a JSON string from tests.
+  const parseSpeechPayload = (raw) => {
+    if (raw && typeof raw === 'object') return raw;
+    try { return JSON.parse(raw); } catch (err) { return null; }
+  };
   window.__miseSpeechDone = () => {
     const cb = ttsAfter;
     ttsAfter = null;
     if (cb) cb();
   };
-  window.__miseSpeechResult = (raw) => {
-    let payload = null;
-    try { payload = JSON.parse(raw); } catch (err) { payload = null; }
-    onGuideSpeechText(payload && payload.text ? payload.text : '');
+  window.__miseSpeechResult = (payload) => {
+    const parsed = parseSpeechPayload(payload);
+    onGuideSpeechText(parsed && parsed.text ? parsed.text : '');
   };
-  window.__miseSpeechError = (raw) => {
-    let payload = null;
-    try { payload = JSON.parse(raw); } catch (err) { payload = null; }
-    onGuideSpeechError(payload && payload.code ? payload.code : 'error');
+  window.__miseSpeechError = (payload) => {
+    const parsed = parseSpeechPayload(payload);
+    onGuideSpeechError(parsed && parsed.code ? parsed.code : 'error');
   };
 
   function getSession(recipe, stepParam) {
@@ -2495,15 +2593,15 @@
       guideStatusText = 'Voice guide on';
       guideHintText = 'Say “next”, “repeat”, “start over”, “repeat last step” or “cancel”.';
     }
-    const status = on ? guideStatusText : 'Voice guide is off';
-    const hint = on ? guideHintText : 'Tap “Voice guide” to have each step read out.';
+    const status = on ? guideStatusText : (guidePaused ? 'Cook paused.' : 'Voice guide is off');
+    const hint = on ? guideHintText : (guidePaused ? guideHintText : 'Tap “Voice guide” to have each step read out.');
     return `<div class="guide-bar${on ? ' is-on' : ''}" id="guide-bar" role="status" aria-live="polite">
       <span class="guide-dot" aria-hidden="true"></span>
       <div class="guide-copy">
         <b id="guide-status">${esc(status)}</b>
         <span class="guide-transcript" id="guide-transcript">${esc(hint)}</span>
       </div>
-      <button class="btn ghost guide-mute" type="button" data-action="toggle-guide">${icon('mic')}${on ? 'Mute voice' : 'Voice guide'}</button>
+      <button class="btn ghost guide-mute" type="button" data-action="toggle-guide">${icon('mic')}${on ? 'Mute voice' : (guidePaused ? 'Resume' : 'Voice guide')}</button>
     </div>
     <div class="guide-commands" ${on ? '' : 'hidden'}>
       <button class="chipbtn" type="button" data-action="guide-repeat">${icon('reset')}Repeat</button>
@@ -3403,6 +3501,32 @@
     </details>`;
   }
 
+  function voiceCommandsHtml() {
+    const groups = [
+      ['Move to the next step', ['next', 'next step', 'next instruction', 'continue', 'done', 'finished', 'complete', 'proceed', 'move on', 'on to the next', 'keep going']],
+      ['Hear this step again', ['repeat', 'say that again', 'say it again', 'again', 'come again', 'one more time', 'read that again', 'read it again']],
+      ['Hear the previous step', ['repeat last step', 'repeat the last step', 'repeat the previous step', 'repeat last instruction', 'repeat the last instruction', 'read previous step again', 'previous step']],
+      ['Start from the beginning', ['start over', 'start over recipe', 'restart', 'begin again', 'start again']],
+      ['End the cook', ['cancel', 'cancel recipe', 'cancel cook', 'cancel cooking', 'stop', 'stop cooking', 'end cook', 'end cooking', 'quit', 'quit cooking']],
+      ['Answer “Are you there?”', ['yes', 'yeah', 'yep', 'yup', 'sure', 'ok', 'okay', 'alright', 'all right', 'I am here', 'I’m here', 'still here', 'here', 'ready', 'present', 'still with you']],
+    ];
+    const lists = groups.map(([title, phrases]) => `<div class="command-group">
+        <dt>${esc(title)}</dt>
+        <dd>${phrases.map((p) => `<span class="command-say">${esc(p)}</span>`).join(' ')}</dd>
+      </div>`).join('');
+    return `<section class="panel commands-panel" aria-labelledby="settings-commands-title">
+      <div class="panel-head">
+        <div>
+          <h2 id="settings-commands-title">Voice commands</h2>
+          <p class="meta">Recognized by the automated voice guide — exactly these words, at the start or on their own.</p>
+        </div>
+      </div>
+      <p class="meta">Voice input uses this device’s speech service (Google Speech Services on Android, Web Speech on desktop browsers). Audio never reaches Mise’s code and nothing is recorded or uploaded — the recognizer returns only the words.</p>
+      <p class="meta">If nothing is said for 6 seconds after Mise finishes reading a step, it asks “Are you there?”. Answer “yes” (or any recognized command) and it keeps listening. Answer “no” — or say nothing for 4 seconds — and the cook pauses; tap <i>Resume</i> to hear the current step again.</p>
+      <dl class="command-groups">${lists}</dl>
+    </section>`;
+  }
+
   function settingsView() {
     const bridge = window.MiseNative || null;
     let build = null;
@@ -3431,6 +3555,7 @@
           <section class="panel sources-panel" id="settings-sources" aria-labelledby="settings-sources-title" tabindex="-1">
             ${sourcesListHtml()}
           </section>
+          ${voiceCommandsHtml()}
           <section class="panel research-panel" aria-labelledby="settings-research-title">
             <details class="settings-research" id="settings-research">
               <summary class="research-summary">
@@ -3583,9 +3708,13 @@
     pop.setAttribute('role', 'dialog');
     pop.setAttribute('aria-modal', 'true');
     pop.setAttribute('aria-label', 'Tool: ' + def.name);
+    const creditParts = def.imageCredit ? def.imageCredit.split(' — ') : null;
+    const creditHtml = creditParts && creditParts.length > 1
+      ? `<span class="tool-pop-credit"><a href="${esc(creditParts[creditParts.length - 1])}" target="_blank" rel="noopener noreferrer">${esc(creditParts.slice(0, -1).join(' — '))}</a><span class="tool-pop-credit-source">Wikimedia Commons</span></span>`
+      : def.imageCredit ? `<span class="tool-pop-credit">${esc(def.imageCredit)}</span>` : '';
     pop.innerHTML = `<button class="tool-pop-close" type="button" aria-label="Close"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6.5 6.5 11 11M17.5 6.5l-11 11"/></svg></button>
-      <div class="tool-pop-art">${def.art}</div>
-      <div class="tool-pop-copy"><b>${esc(def.name)}</b><span>${esc(def.use)}</span></div>`;
+      <div class="tool-pop-art">${def.art}${def.image ? `<img class="tool-pop-photo" src="${esc(def.image)}" alt="${esc(def.name)} — photograph" loading="lazy" onerror="this.closest('.tool-pop-art').classList.add('no-photo')">` : ''}</div>
+      <div class="tool-pop-copy"><b>${esc(def.name)}</b><span>${esc(def.use)}</span>${creditHtml}</div>`;
     document.body.appendChild(pop);
     const rect = anchor.getBoundingClientRect();
     pop.style.visibility = 'hidden';
@@ -3880,6 +4009,7 @@
       if (!recipe) return;
       if (guideWant === true) {
         guideWant = false;
+        guidePaused = false;
         guideStopListening();
         stopGuideSpeak();
         announce('Voice guide muted.');
@@ -3887,6 +4017,7 @@
         return;
       }
       guideWant = true;
+      guidePaused = false;
       lastSpokenKey = '';
       announce('Voice guide on.');
       render();

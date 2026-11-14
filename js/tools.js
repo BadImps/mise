@@ -114,11 +114,14 @@
   function defFor(key) {
     const tool = byKey[key];
     if (!tool) return null;
+    const photo = (typeof window !== 'undefined' && window.MISE_TOOL_IMAGES) ? window.MISE_TOOL_IMAGES[key] : null;
     return {
       key: tool.key,
       name: tool.name,
       use: tool.use,
       art: ART[tool.art || tool.key] || ART.pot,
+      image: photo ? photo.image : null,
+      imageCredit: photo ? photo.credit : null,
     };
   }
 
