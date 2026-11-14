@@ -495,6 +495,27 @@ public final class MainActivity extends Activity {
         }
 
         @JavascriptInterface
+        public void ttsSetEngine(String engineId) {
+            if (miseVoice != null) miseVoice.setEngine(engineId);
+        }
+
+        @JavascriptInterface
+        public String ttsEngines() {
+            org.json.JSONArray array = new org.json.JSONArray();
+            if (miseVoice != null) {
+                for (MiseVoice.EngineInfo info : miseVoice.installedEngines()) {
+                    org.json.JSONObject engine = new org.json.JSONObject();
+                    try {
+                        engine.put("id", info.id);
+                        engine.put("label", info.label);
+                    } catch (org.json.JSONException ignored) { }
+                    array.put(engine);
+                }
+            }
+            return array.toString();
+        }
+
+        @JavascriptInterface
         public void prepareSpeech() {
             handler.post(MainActivity.this::prepareSpeech);
         }

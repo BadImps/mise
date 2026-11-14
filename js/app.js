@@ -71,6 +71,7 @@
     recentCooks: 'mise.recent-cooks.v1',
     cookDismissed: 'mise.cook-dismissed.v1',
     voice: 'mise.voice.v1',
+    voiceEngine: 'mise.voice.engine.v1',
   };
 
   const store = {
@@ -2155,11 +2156,22 @@
   const nativeVoice = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.ttsSpeak === 'function';
   const nativeVoiceSet = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.ttsSetVoice === 'function';
   const nativePrepare = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.prepareSpeech === 'function';
+  const nativeEngineSet = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.ttsSetEngine === 'function';
+  const nativeEngineList = () => {
+    if (typeof window.MiseNative === 'undefined' || typeof MiseNative.ttsEngines !== 'function') return null;
+    try { const parsed = JSON.parse(MiseNative.ttsEngines()); return Array.isArray(parsed) ? parsed : null; }
+    catch (err) { return null; }
+  };
   const webSpeechCtor = () => window.SpeechRecognition || window.webkitSpeechRecognition || null;
   const STUDIO_CLIP_BASE = 'assets/voice/';
   let activeClip = null;
   let ttsAfter = null;
   let persona = store.get(KEY.voice, 'carol') === 'sean' ? 'sean' : 'carol';
+  let enginePref = store.get(KEY.voiceEngine, 'auto');
+  // "auto" binds Samsung when installed, else Google, else the system default.
+  if (typeof nativeEngineSet === 'function' && enginePref !== 'auto') {
+    try { MiseNative.ttsSetEngine(enginePref); } catch (err) { /* ignore */ }
+  }
   let webPersonaVoice = null;
   const clipBase = () => STUDIO_CLIP_BASE + persona + '/';
 
@@ -3587,6 +3599,16 @@
     </section>`;
   }
 
+  function engineChipsHtml() {
+    const engines = nativeEngineList();
+    if (!engines) return '';
+    const chip = (id, label) => `<button class="chipbtn" type="button" data-action="set-engine" data-engine="${esc(id)}" aria-pressed="${enginePref === id}">${esc(label)}</button>`;
+    const chips = [chip('auto', 'Auto'), ...engines.map((e) => chip(e.id, e.label))].join('');
+    return `<p class="hint" style="margin-top:14px">Engine</p>
+      <div class="engine-chips" role="radiogroup" aria-label="Speech engine">${chips}</div>
+      <p class="hint">Auto prefers Samsung TTS when installed and falls back to Google or your device’s configured default. Switching applies immediately.</p>`;
+  }
+
   function voicePersonaPanel() {
     const spokenVoice = persona === 'sean' ? 'Sean' : 'Carol';
     const card = (name, blurb, id) => `<button class="voice-card" type="button" data-action="set-voice" data-voice="${id}" aria-pressed="${persona === id}">
@@ -3606,7 +3628,8 @@
         ${card('Carol', 'Female neural voice. Default.', 'carol')}
         ${card('Sean', 'Male neural voice. On devices with no male voice Mise falls back to its best female voice.', 'sean')}
       </div>
-      <p class="hint">Voices come from this device’s own speech service — Google Speech Services on Android, system voices elsewhere — never the network. Mise never sends text anywhere to speak it. If a device has no speech engine at all, the guide falls back to recorded phrases for fixed lines and to buttons for the rest.</p>
+      ${engineChipsHtml()}
+      <p class="hint">Voices come from this device’s own speech service — Samsung TTS (on Samsung tablets), Google Speech Services, or the system default — never the network. Mise never sends text anywhere to speak it. If a device has no speech engine at all, the guide falls back to recorded phrases for fixed lines and to buttons for the rest.</p>
     </section>`;
   }
 
@@ -4072,6 +4095,16 @@
       const id = target.dataset.id || (route.parts[1] || '');
       const recipe = getRecipe(id);
       if (recipe) openStartCook(recipe);
+      return;
+    }
+    if (action === 'set-engine') {
+      enginePref = target.dataset.engine || 'auto';
+      store.set(KEY.voiceEngine, enginePref);
+      if (nativeEngineSet()) {
+        try { MiseNative.ttsSetEngine(enginePref); } catch (err) { /* ignore */ }
+      }
+      announce('Speech engine set.');
+      render();
       return;
     }
     if (action === 'set-voice') {

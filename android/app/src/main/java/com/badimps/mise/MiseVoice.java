@@ -1,6 +1,9 @@
 package com.badimps.mise;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
@@ -8,6 +11,8 @@ import android.speech.tts.UtteranceProgressListener;
 import android.speech.tts.Voice;
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
@@ -40,11 +45,28 @@ final class MiseVoice {
     private String pendingText;
     /** Which named persona the web layer asked for: "carol" (female) or "sean" (male). */
     private String persona = "carol";
+    /** Which engine to bind: "auto" | "samsung" | "google" | "system" (device default). */
+    private String engine = "auto";
+    /** Guards against an infinite fallback loop when a requested engine fails to boot. */
+    private boolean fallbackUsed;
 
     MiseVoice(Context context, Handler main, Reply reply) {
         this.context = context;
         this.main = main;
         this.reply = reply;
+    }
+
+    /** A TTS engine reported by the device (or "system" for the user's configured default). */
+    static final class EngineInfo {
+        final String id;
+        final String label;
+        final String packageName;
+
+        EngineInfo(String id, String label, String packageName) {
+            this.id = id;
+            this.label = label;
+            this.packageName = packageName;
+        }
     }
 
     /** Speak one utterance, flushing whatever is playing. Safe from any thread. */
@@ -65,6 +87,61 @@ final class MiseVoice {
         });
     }
 
+    /**
+     * Switch speech engine: "auto" (Samsung if installed, else Google, else the
+     * system default), "samsung", "google", or "system". Rebuilds the binding and
+     * re-picks the persona voice inside the new engine. Falls back to the system
+     * default if the requested engine fails to initialise.
+     */
+    void setEngine(String engineName) {
+        main.post(() -> {
+            String next = "auto".equals(engineName) || "samsung".equals(engineName)
+                    || "google".equals(engineName) ? engineName : "system";
+            if (next.equals(engine) && tts != null) return;
+            engine = next;
+            fallbackUsed = false;
+            rebuildEngine();
+        });
+    }
+
+    /** Engines installed on this device, plus the "system" pseudo-engine. */
+    List<EngineInfo> installedEngines() {
+        List<EngineInfo> engines = new ArrayList<>();
+        try {
+            Intent probe = new Intent(TextToSpeech.Engine.INTENT_ACTION_TTS_SERVICE);
+            List<ResolveInfo> infos = context.getPackageManager()
+                    .queryIntentServices(probe, PackageManager.GET_META_DATA);
+            if (infos != null) {
+                for (ResolveInfo info : infos) {
+                    String packageName = info.serviceInfo != null ? info.serviceInfo.packageName : null;
+                    if (packageName == null || packageName.isEmpty()) continue;
+                    String id = idForPackage(packageName);
+                    String label = String.valueOf(context.getPackageManager()
+                            .getApplicationLabel(applicationInfo(packageName))).trim();
+                    if (label.isEmpty()) label = packageName;
+                    engines.add(new EngineInfo(id, label, packageName));
+                }
+            }
+        } catch (Throwable ignored) { }
+        engines.add(new EngineInfo("system", "System default", null));
+        return engines;
+    }
+
+    private android.content.pm.ApplicationInfo applicationInfo(String packageName) {
+        try {
+            return context.getPackageManager().getApplicationInfo(packageName, 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            return new android.content.pm.ApplicationInfo();
+        }
+    }
+
+    private static String idForPackage(String packageName) {
+        String lower = packageName.toLowerCase(Locale.US);
+        if (lower.contains("samsung")) return "samsung";
+        if (lower.contains("google.android.tts") || lower.contains("google")) return "google";
+        return "custom:" + lower;
+    }
+
     /** Release the engine. Safe from any thread. */
     void shutdown() {
         main.post(() -> {
@@ -79,9 +156,64 @@ final class MiseVoice {
 
     private void ensureInit() {
         if (tts != null) return;
-        tts = new TextToSpeech(context, status -> {
+        String packageName = resolveEnginePackage();
+        fallbackUsed = false;
+        tts = (packageName != null)
+                ? new TextToSpeech(context, newEngineListener(), packageName)
+                : new TextToSpeech(context, newEngineListener());
+    }
+
+    /** Re-create the engine binding with the current preference (used by setEngine). */
+    private void rebuildEngine() {
+        stopInternal();
+        if (tts != null) {
+            try {
+                tts.shutdown();
+            } catch (Throwable ignored) { }
+            tts = null;
+            ready = false;
+        }
+        ensureInit();
+    }
+
+    /** Resolve the engine preference to a package, or null for the device default. */
+    private String resolveEnginePackage() {
+        List<EngineInfo> engines = installedEngines();
+        if ("system".equals(engine)) return null;
+        if ("auto".equals(engine)) {
+            // Samsung first when present, then Google, then the device default.
+            String samsung = findPackage(engines, "samsung");
+            if (samsung != null) return samsung;
+            String google = findPackage(engines, "google");
+            return google; // may be null -> system default
+        }
+        return findPackage(engines, engine);
+    }
+
+    private static String findPackage(List<EngineInfo> engines, String id) {
+        for (EngineInfo info : engines) {
+            if (id.equals(info.id)) return info.packageName;
+        }
+        return null;
+    }
+
+    private TextToSpeech.OnInitListener newEngineListener() {
+        return status -> {
             if (status != TextToSpeech.SUCCESS) {
-                Log.w(TAG, "TextToSpeech engine failed to initialise (status " + status + ")");
+                Log.w(TAG, "TextToSpeech engine (" + engine + ") failed to initialise (status " + status + ")");
+                if (!fallbackUsed && !"system".equals(engine)) {
+                    fallbackUsed = true;
+                    if (tts != null) {
+                        try {
+                            tts.shutdown();
+                        } catch (Throwable ignored) { }
+                        tts = null;
+                        ready = false;
+                    }
+                    engine = "system";
+                    tts = new TextToSpeech(context, newEngineListener());
+                    return;
+                }
                 reply.onError("init");
                 return;
             }
@@ -90,7 +222,7 @@ final class MiseVoice {
             String queued = pendingText;
             pendingText = null;
             if (queued != null) speakInternal(queued);
-        });
+        };
     }
 
     private void configure() {

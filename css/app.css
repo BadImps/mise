@@ -436,6 +436,7 @@ textarea.input { height: auto; min-height: 160px; padding: 10px 12px; resize: ve
 .voice-avatar { flex: none; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: var(--accent-soft); color: var(--accent-ink); font-family: var(--font-display); font-size: 21px; font-weight: 600; }
 .voice-card[aria-pressed="true"] .voice-avatar { background: var(--accent); color: var(--primary-ink); }
 .voice-check { flex: none; width: 20px; height: 20px; color: var(--accent-ink); }
+.engine-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
 @media (max-width: 520px) { .voice-cards { grid-template-columns: 1fr; } }
 
 /* ---------- phone: the rail becomes a bottom bar ---------- */
