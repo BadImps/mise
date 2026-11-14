@@ -67,6 +67,7 @@
     pantry: 'mise.pantry.v1',
     favorites: 'mise.favorites.v1',
     recentCooks: 'mise.recent-cooks.v1',
+    cookDismissed: 'mise.cook-dismissed.v1',
   };
 
   const store = {
@@ -436,7 +437,9 @@
         view.innerHTML = recipe ? detailView(recipe) : missingView('recipe');
         if (recipe) title = recipe.name + ' · Mise';
       } else if (route.parts[0] === 'cook') {
-        const recipe = getRecipe(route.parts[1] || '') || (route.parts.length === 1 ? lastRecipe() : null);
+        const dismissed = store.get(KEY.cookDismissed, false);
+        const recipe = getRecipe(route.parts[1] || '') || (route.parts.length === 1 && !dismissed ? lastRecipe() : null);
+        if (recipe) store.set(KEY.cookDismissed, false);
         if (recipe) {
           const stepParam = parseInt(route.params.get('step') || '', 10);
           view.innerHTML = cookView(recipe, stepParam);
@@ -2007,6 +2010,18 @@
     return s;
   }
 
+  function cancelCurrentCook() {
+    const recipe = session && session.recipeId ? getRecipe(session.recipeId) : null;
+    session = null;
+    store.set(KEY.session, null);
+    store.set(KEY.last, null);
+    store.set(KEY.cookDismissed, true);
+    timerState = null;
+    store.set(KEY.timer, null);
+    announce(recipe ? `Cook cancelled — ${recipe.name} discarded.` : 'Cook cleared.');
+    navigate('#/cook');
+  }
+
   function cookView(recipe, stepParam) {
     const s = getSession(recipe, stepParam);
     if (!recipe.steps.length) return `<div class="page"><div class="panel state-panel"><h2>No steps in this record</h2><p>${esc(recipe.source)} supplied ingredients but no method text, so there is nothing honest to cook from.</p><div class="actions"><a class="btn primary" href="#/recipe/${esc(recipe.id)}">Back to the recipe</a></div></div></div>`;
@@ -2060,6 +2075,7 @@
             <button class="btn ghost" type="button" data-action="cook-back" ${s.step === 1 ? 'disabled' : ''}>${icon('arrow-left')}Back</button>
              <button class="btn primary" type="button" data-action="cook-next">${last ? 'Finish Cooking' : 'Next Step'}${icon('arrow-right')}</button>
              <button class="btn ghost" type="button" data-action="start-over">Start Over</button>
+             <button class="btn danger" type="button" data-action="cancel-cook">${icon('x')}Cancel cook</button>
           </div>
           <p class="keys"><kbd>←</kbd> <kbd>→</kbd> move between steps. <kbd>T</kbd> starts the step's first timer. <kbd>Esc</kbd> leaves.</p>
         </main>
@@ -2246,13 +2262,23 @@
 
   /* ---------- missing route ---------- */
   function missingView(kind) {
+    if (kind === 'cook') {
+      return `<div class="page"><div class="panel state-panel">
+        <p class="eyebrow">Cook mode</p>
+        <h1>Nothing to cook yet</h1>
+        <p>There is no recipe queued on this screen. Pick one from the library or import one, and its steps come with you. If a cook is in flight and you want to abandon it, cancel it below.</p>
+        <div class="actions">
+          <a class="btn primary" href="#/library">${icon('library')}Open the library</a>
+          <button class="btn danger" type="button" data-action="cancel-cook">${icon('x')}Cancel cook</button>
+        </div>
+        <a class="link-action cook-empty-import" href="#/import">Import a recipe instead ${icon('arrow-right')}</a>
+      </div></div>`;
+    }
     const text = kind === 'recipe'
       ? 'That recipe is not in this browser. It may have been imported in another browser profile.'
-      : kind === 'cook'
-        ? 'There is no recipe to cook yet. Import one or choose a sample, then start cooking.'
-        : kind === 'done'
-          ? 'There is no finished cook for that recipe in this browser.'
-          : 'That address does not point to a screen in Mise.';
+      : kind === 'done'
+        ? 'There is no finished cook for that recipe in this browser.'
+        : 'That address does not point to a screen in Mise.';
     return `<div class="page"><div class="panel state-panel">
       <h1>${kind === 'page' ? 'That page is not here' : 'Nothing to open'}</h1>
       <p>${esc(text)}</p>
@@ -3203,6 +3229,10 @@
     }
     if (action === 'exit-cook') {
       if (recipe) navigate('#/recipe/' + recipe.id);
+      return;
+    }
+    if (action === 'cancel-cook') {
+      cancelCurrentCook();
       return;
     }
   });
