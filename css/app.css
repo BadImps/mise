@@ -403,7 +403,7 @@ textarea.input { height: auto; min-height: 160px; padding: 10px 12px; resize: ve
   .rail { display: none; }
   .view { padding: 18px 18px 92px; }
   .tabbar {
-    display: grid; grid-template-columns: repeat(7, 1fr);
+    display: grid; grid-template-columns: repeat(5, 1fr);
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 45;
     height: 64px; padding: 4px 4px calc(4px + env(safe-area-inset-bottom));
     background: var(--surface); border-top: 1px solid var(--border);

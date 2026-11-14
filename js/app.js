@@ -2411,11 +2411,9 @@
   function syncCookBadge() {
     const timer = store.get(KEY.timer, null);
     const cooking = store.get(KEY.session, null);
-    const active = Boolean(
-      (timer && timer.endsAt && timer.endsAt > Date.now())
-      || (cooking && cooking.step && !cooking.complete)
-    );
-    document.body.classList.toggle('cook-active', active);
+    const timerActive = !!(timer && !timer.done && ((timer.total || 0) > 0 || (timer.remaining || 0) > 0 || timer.running));
+    const sessionActive = !!(cooking && !cooking.complete && ((cooking.done && cooking.done.length > 0) || cooking.step > 1));
+    document.body.classList.toggle('cook-active', timerActive || sessionActive);
   }
 
   function syncCookClock() {
@@ -2436,6 +2434,7 @@
       if (timerState.running && rem <= 0) finishTimer();
     }
     syncCookClock();
+    syncCookBadge();
   }
   window.setInterval(tick, 250);
 
