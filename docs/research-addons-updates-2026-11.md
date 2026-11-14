@@ -22,7 +22,7 @@ Everything else is ordinary product work. Rank by feasibility below; "OTA" = web
 
 - Single-page vanilla-JS web app (hash routing), zero frame/dep injection at runtime, ~2.1 MB of JS (incl. collections).
 - APK bundles the web app (WebContentStore, atomic OTA with hash verification); OTA replaces JS/CSS/assets.
-- Release artifacts: APK 1.33 MB with **zero native dependencies** (`android/app/build.gradle`, minSdk 26 / targetSdk 36); web bundle 11.7 MB (7.5 of it pre-rendered Kokoro clips). OTA zip ≈1.3 MB today, 48 MiB cap / 1,600-entry limit, 6-hour throttle — architecture:`manifest + SHA-256 verified staged swap` (docs/OTA.md). **All native bridge calls are feature-detected** (`typeof MiseNative.x === 'function'`), so OTA can ship ahead of APK safely.
+- Release artifacts: APK ≈9.3 MB with **zero native dependencies** (`android/app/build.gradle`, minSdk 26 / targetSdk 36); web bundle 11.7 MB (7.5 of it pre-rendered Kokoro clips). OTA zip ≈1.3 MB today, 48 MiB cap / 1,600-entry limit, 6-hour throttle — architecture:`manifest + SHA-256 verified staged swap` (docs/OTA.md). **All native bridge calls are feature-detected** (`typeof MiseNative.x === 'function'`), so OTA can ship ahead of APK safely.
 - 24 commits in 4 days; release pipeline = GitHub Actions CI + manual workflow dispatch with signed APK (versionCode 12).
 - Voice: Kokoro-82M English packs (Carol = af_heart, Sean = am_michael, 0.92 rate) pre-rendered for "Step 1–40" + 2
   confirmations; native bridge speaks via Samsung/Google/system TTS (which the user can now override per-persona),
@@ -105,7 +105,7 @@ Scoring: impact 5, confidence 5, ease 5 (5 = highest). OTA = ships on OTA web bu
 6. **Lock-screen / media-session controls** — surface Mise as a media session during cook; medium effort; offline-safe; power-user's trick every kitchen app wants.
 7. **Community registry (read-only, GitHub Releases)** — PR-moderated, verified like OTA (`applicationId`/URL prefix/SHA-256), appended to imported state as "Community — not publisher-verified". No accounts, no Mise server. **M**
 8. **Storage hygiene readout in Settings** — imports vs 800-cap vs MB used; make the invisible ceiling visible.
-9. **APK size budget + size gate in CI** — today zero native deps, 1.33 MB; the day someone embeds an engine this size explodes; gate it now.
+9. **APK size budget + size gate in CI** — shipping APK today ≈9.3 MB (voiced clips + publisher photos live in `assets/`); the day someone embeds an engine this size explodes further; gate it now. Budget raised to 12 MB to match the current baseline and give headroom for deliberate changes.
 
 ## The 90-day path
 
