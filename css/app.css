@@ -317,6 +317,29 @@ textarea.input { height: auto; min-height: 160px; padding: 10px 12px; resize: ve
 .chipbtn[aria-pressed="true"] { border-color: var(--text); color: var(--text); box-shadow: inset 0 0 0 1px var(--text); /* taste-skill-ignore: selected state */ }
 .chipbtn .n { font-variant-numeric: tabular-nums; color: var(--faint); }
 .chipbtn[aria-pressed="true"] .n { color: var(--muted); }
+.chipbtn.good { color: var(--accent-ink); border-color: rgba(168, 132, 47, 0.45); background: var(--accent-soft); }
+.chipbtn.good:hover { border-color: var(--accent); color: var(--accent-ink); }
+
+/* ---------- voice override picker (Settings) ---------- */
+.voice-overrides { margin-top: 16px; border-top: 1px dashed var(--rule); padding-top: 12px; }
+.voice-overrides .voice-override { display: grid; gap: 4px; margin-top: 10px; }
+.voice-overrides .voice-override span { font-size: var(--fs-meta); color: var(--muted); }
+.voice-overrides select {
+  height: 40px; padding: 0 12px; border: 1px solid var(--border); border-radius: var(--radius-control);
+  background: var(--surface); color: var(--text); font-size: var(--fs-meta); max-width: 100%;
+}
+.voice-current { display: block; margin-top: 6px; color: var(--muted); }
+.voice-current b { color: var(--text); }
+
+/* ---------- cook in progress banner (homepage) ---------- */
+.resume-banner { margin: 0 0 14px; border-left: 3px solid var(--accent); }
+.resume-banner .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+
+/* ---------- timer snooze chips ---------- */
+.snooze-row { display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.snooze-label { font-size: var(--fs-meta); color: var(--muted); }
+.done-clock { color: var(--accent-ink); }
+.td-state.ready-dot { color: var(--accent-ink); }
 
 /* ---------- data marks ---------- */
 .pill {

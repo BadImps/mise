@@ -49,11 +49,15 @@ final class MiseVoice {
     private String engine = "auto";
     /** Guards against an infinite fallback loop when a requested engine fails to boot. */
     private boolean fallbackUsed;
+    /** Per-persona voice-name override, set by the user in Settings; null = auto pick. */
+    private String overrideCarol;
+    private String overrideSean;
 
     MiseVoice(Context context, Handler main, Reply reply) {
         this.context = context;
         this.main = main;
         this.reply = reply;
+        main.post(this::ensureInit); // bind at boot so Settings can list voices
     }
 
     /** A TTS engine reported by the device (or "system" for the user's configured default). */
@@ -85,6 +89,77 @@ final class MiseVoice {
             persona = "sean".equalsIgnoreCase(personaName) ? "sean" : "carol";
             if (ready) applyVoice();
         });
+    }
+
+    /**
+     * Pin one persona to an exact installed voice name (from listVoices()), or
+     * clear it back to auto picking by passing null/empty. Safe from any thread.
+     */
+    void setPersonaVoice(String personaName, String voiceName) {
+        main.post(() -> {
+            boolean sean = "sean".equalsIgnoreCase(personaName);
+            if (voiceName == null || voiceName.trim().isEmpty()) {
+                if (sean) overrideSean = null; else overrideCarol = null;
+            } else {
+                if (sean) overrideSean = voiceName.trim(); else overrideCarol = voiceName.trim();
+            }
+            if (ready) applyVoice();
+        });
+    }
+
+    /** Name of the voice currently carrying persona utterances, or "auto". */
+    String currentPersonaVoice() {
+        String active = (tts == null || !ready) ? null : voiceNameOf(tts);
+        if (active != null && !active.isEmpty()) return active;
+        String override = "sean".equals(persona) ? overrideSean : overrideCarol;
+        return override == null || override.isEmpty() ? "auto" : override;
+    }
+
+    private String voiceNameOf(TextToSpeech engine) {
+        try {
+            Voice voice = engine.getVoice();
+            return voice != null ? voice.getName() : null;
+        } catch (Throwable ignored) {
+            return null;
+        }
+    }
+
+    /** JSON list of the voices the bound engine exposes (English first, then the rest). */
+    String listVoicesJson() {
+        org.json.JSONArray array = new org.json.JSONArray();
+        try {
+            if (tts == null || !ready) ensureInit();
+            if (tts == null) return array.toString();
+            Set<Voice> voices = tts.getVoices();
+            if (voices == null) return array.toString();
+            List<Voice> ordered = new ArrayList<>(voices);
+            ordered.sort((a, b) -> {
+                boolean aEn = a != null && a.getLocale() != null && a.getLocale().getLanguage() != null
+                        && a.getLocale().getLanguage().toLowerCase(Locale.US).startsWith("en");
+                boolean bEn = b != null && b.getLocale() != null && b.getLocale().getLanguage() != null
+                        && b.getLocale().getLanguage().toLowerCase(Locale.US).startsWith("en");
+                return Boolean.compare(!aEn, !bEn);
+            });
+            for (Voice voice : ordered) {
+                if (voice == null) continue;
+                String name = voice.getName();
+                if (name == null) name = "";
+                String locale = voice.getLocale() == null ? "" : voice.getLocale().toString();
+                boolean female = voiceLooksFemale(name);
+                boolean male = voiceLooksMale(name);
+                String guess = female ? "f" : male ? "m" : null;
+                try {
+                    org.json.JSONObject item = new org.json.JSONObject();
+                    item.put("name", name);
+                    item.put("locale", locale);
+                    item.put("quality", voice.getQuality());
+                    item.put("local", !voice.isNetworkConnectionRequired());
+                    if (guess != null) item.put("guess", guess);
+                    array.put(item);
+                } catch (org.json.JSONException ignored) { }
+            }
+        } catch (Throwable ignored) { }
+        return array.toString();
     }
 
     /**
@@ -246,15 +321,30 @@ final class MiseVoice {
         });
     }
 
-    /** Pick and apply the persona's best installed English voice. */
+    /** Pick and apply the persona's voice: the user's override wins, else best match. */
     private void applyVoice() {
-        Voice best = pickBestVoice("carol".equals(persona));
+        String override = "sean".equals(persona) ? overrideSean : overrideCarol;
+        Voice best = (override != null && !override.isEmpty()) ? findVoiceByName(override) : null;
+        if (best == null) {
+            best = pickBestVoice("carol".equals(persona));
+        }
         if (best != null) {
             tts.setVoice(best);
             Log.i(TAG, "Voice selected: " + best.getName() + " for persona " + persona
                     + " (quality " + best.getQuality()
                     + (best.isNetworkConnectionRequired() ? ", network" : ", local") + ")");
         }
+    }
+
+    private Voice findVoiceByName(String name) {
+        try {
+            Set<Voice> voices = tts.getVoices();
+            if (voices == null) return null;
+            for (Voice voice : voices) {
+                if (voice != null && name.equalsIgnoreCase(voice.getName())) return voice;
+            }
+        } catch (Throwable ignored) { }
+        return null;
     }
 
     /**

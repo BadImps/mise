@@ -511,6 +511,38 @@ public final class MainActivity extends Activity {
         }
 
         @JavascriptInterface
+        public String ttsListVoices() {
+            if (miseVoice == null) return "[]";
+            return miseVoice.listVoicesJson();
+        }
+
+        @JavascriptInterface
+        public void ttsSetPersonaVoice(String persona, String voiceName) {
+            if (miseVoice != null) miseVoice.setPersonaVoice(persona, voiceName);
+        }
+
+        @JavascriptInterface
+        public void ttsClearPersonaVoice(String persona) {
+            if (miseVoice != null) miseVoice.setPersonaVoice(persona, null);
+        }
+
+        @JavascriptInterface
+        public String ttsCurrentVoice() {
+            if (miseVoice == null) return "auto";
+            return miseVoice.currentPersonaVoice();
+        }
+
+        @JavascriptInterface
+        public void setKeepScreenOn(boolean on) {
+            handler.post(() -> {
+                Window window = getWindow();
+                if (window == null) return;
+                if (on) window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                else window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+            });
+        }
+
+        @JavascriptInterface
         public String ttsEngines() {
             org.json.JSONArray array = new org.json.JSONArray();
             if (miseVoice != null) {

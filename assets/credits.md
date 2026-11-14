@@ -117,6 +117,14 @@ publisher's wording.
 - Manrope: SIL Open Font License 1.1. Latin subset bundled in `assets/manrope-latin.woff2`.
 - Caveat (handwritten ingredient labels) — SIL Open Font License 1.1; bundled in `assets/fonts/`.
 
+## Sounds
+
+- Timer expiry ringtones are synthesized in the browser with the Web Audio API
+  (`js/app.js`, `RINGTONE_DEFS`) — sine oscillators, no audio files ship in the app.
+- The voice guide's fixed phrases are pre-rendered Kokoro clips; everything else
+  goes through the device's own speech service (Samsung TTS on Samsung tablets,
+  Google Speech Services elsewhere, or the system default).
+
 ## Runtime data
 
 - Live search and live recipe records come from TheMealDB's public API (`themealdb.com/api`).

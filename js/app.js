@@ -72,6 +72,9 @@
     cookDismissed: 'mise.cook-dismissed.v1',
     voice: 'mise.voice.v1',
     voiceEngine: 'mise.voice.engine.v1',
+    voiceOverride: 'mise.voice.override.v1',
+    ringtone: 'mise.ringtone.v1',
+    voiceMode: 'mise.voice-mode.v1',
   };
 
   const store = {
@@ -566,6 +569,7 @@
     }
     syncCookClock();
     syncCookBadge();
+    syncCookingKeepAwake();
     syncCookNotification(activeSessionRecipe());
   }
 
@@ -576,6 +580,29 @@
     const dots = used.map((k) => `<span class="usage-dot" style="left:${pos(k - 1)}%"></span>`).join('');
     return `<span class="usage-track" aria-hidden="true">${ticks}${dots}</span>`;
   };
+
+  function resumeCookBanner() {
+    const s = activeSession();
+    if (!s || s.complete) return '';
+    const recipe = getRecipe(s.recipeId || '');
+    if (!recipe) return '';
+    const voice = store.get(KEY.voiceMode, false) === true;
+    const href = '#/cook/' + recipe.id + '?step=' + s.step + (voice ? '&voice=1' : '');
+    return `<section class="panel resume-banner" aria-labelledby="resume-cook-title">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Cooking in progress</p>
+          <h2 id="resume-cook-title">${esc(recipe.name)}</h2>
+          <p class="meta">Step ${s.step} of ${recipe.steps.length}${voice ? ' · voice guide' : ''}. This cook is waiting on you.</p>
+        </div>
+        <span class="pill soft">In progress</span>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="${href}">${icon('play')}Continue cooking</a>
+        <button class="btn danger" type="button" data-action="cancel-cook">${icon('x')}End cook</button>
+      </div>
+    </section>`;
+  }
 
   function homeView() {
     const all = allRecipes();
@@ -607,6 +634,7 @@
         </div>
       </div>
 
+      ${resumeCookBanner()}
       ${featured ? featuredHero(featured, recentlyOpened) : ''}
 
       <div class="home-lower">
@@ -2177,6 +2205,44 @@
     try { const parsed = JSON.parse(MiseNative.ttsEngines()); return Array.isArray(parsed) ? parsed : null; }
     catch (err) { return null; }
   };
+  const nativeVoiceList = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.ttsListVoices === 'function';
+  const nativeSetOverride = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.ttsSetPersonaVoice === 'function';
+  const nativeClearOverride = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.ttsClearPersonaVoice === 'function';
+  const nativeCurrentVoice = () => {
+    if (typeof window.MiseNative === 'undefined' || typeof MiseNative.ttsCurrentVoice !== 'function') return null;
+    try { return MiseNative.ttsCurrentVoice(); } catch (err) { return null; }
+  };
+  const nativeSetKeepScreenOn = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.setKeepScreenOn === 'function';
+
+  // explicit per-persona voice picks from the active engine's voice list:
+  // { carol: 'name' | null, sean: 'name' | null } — null means "auto"
+  let voiceOverride = store.get(KEY.voiceOverride, {}) || {};
+  function listEnglishVoices() {
+    if (!nativeVoiceList()) return [];
+    try {
+      const parsed = JSON.parse(MiseNative.ttsListVoices());
+      return Array.isArray(parsed) ? parsed.filter((v) => v && v.name) : [];
+    } catch (err) { return []; }
+  }
+  function applyVoiceOverride() {
+    if (!nativeSetOverride()) return;
+    for (const p of ['carol', 'sean']) {
+      const name = (voiceOverride && voiceOverride[p]) || '';
+      try {
+        if (name) MiseNative.ttsSetPersonaVoice(p, name);
+        else if (nativeClearOverride()) MiseNative.ttsClearPersonaVoice(p);
+      } catch (err) { /* ignore */ }
+    }
+  }
+  function setPersonaOverride(personaName, voiceName) {
+    voiceOverride = Object.assign({}, voiceOverride || {}, { [personaName]: voiceName || null });
+    store.set(KEY.voiceOverride, voiceOverride);
+    try {
+      if (voiceName && nativeSetOverride()) MiseNative.ttsSetPersonaVoice(personaName, voiceName);
+      else if (nativeClearOverride()) MiseNative.ttsClearPersonaVoice(personaName);
+    } catch (err) { /* ignore */ }
+  }
+  applyVoiceOverride();
   const webSpeechCtor = () => window.SpeechRecognition || window.webkitSpeechRecognition || null;
   const STUDIO_CLIP_BASE = 'assets/voice/';
   let activeClip = null;
@@ -2367,7 +2433,8 @@
   function offerStepTimer(ctx) {
     const timers = timersForStep(ctx);
     const recipe = ctx && ctx.recipe;
-    if (!timers.length || activeTimerForStep(recipe, ctx.step)) {
+    const existing = !!(recipe && timerState && timerState.recipeId === recipe.id && timerState.step === ctx.step);
+    if (!timers.length || existing) {
       beginGuideListen(true);
       return;
     }
@@ -2536,6 +2603,7 @@
   }
 
   const GUIDE_COMMANDS = [
+    { name: 'timerReady', re: /^(ready|timer ready|ready now|time is up|timer is up|timer done|timer finished)$/i },
     { name: 'repeatLast', re: /^(repeat (the )?(last|previous) (step|instruction)|read (previous )?step again|previous step|previous one|last one|go back|repeat last|read previous again|replay)$/i },
     { name: 'startOver', re: /^(start over|start over recipe|restart|restart recipe|begin again|start again|start again from the beginning|from the top|from the start|from the beginning)$/i },
     { name: 'repeat', re: /^(repeat|repeat it|repeat that|say (that|it) again|again|come again|one more time|read (that|it) again|say again|pardon|what|huh)$/i },
@@ -2624,6 +2692,8 @@
     }
     const recipe = session && getRecipe(session.recipeId);
     const cmd = command && command.name;
+    // the timer's “Ready?” resolution — or any other time the timer is waiting
+    if (cmd === 'timerReady') { timerReady(); return; }
     // while a timer holds the steps open, advancing waits on the timer
     if (guideWaitingTimer && (cmd === 'next' || cmd === 'gotoStep')) {
       guideSetStatus('Timer is running.', 'Mise will move on when it finishes. Say “repeat” to hear the step again, or “cancel”.');
@@ -2631,6 +2701,7 @@
       return;
     }
     switch (cmd) {
+      case 'timerReady': timerReady(); return;
       case 'repeatLast': guideSpeakPrevious(); return;
       case 'startOver': guideStartOver(); return;
       case 'repeat': guideAnnounceStep(); return;
@@ -2935,16 +3006,20 @@
         <div class="tlabel">No timer set · Start one from any step</div>
       </section>`;
     }
-    const state = t.done ? 'Finished' : t.running ? 'Running' : 'Paused';
+    const state = t.done ? 'Ready?' : t.running ? 'Running' : 'Paused';
+    const controls = t.done
+      ? `<button class="btn sm" type="button" data-action="timer-ready">${icon('check')}Ready — moves to next step</button>
+         <button class="btn sm ghost" type="button" data-action="timer-notready">${icon('clock')}Not ready</button>
+         <button class="btn sm ghost" type="button" data-action="timer-close">${icon('x')}Clear</button>
+         ${dockSnoozeOpen ? `<div class="snooze-row" role="group" aria-label="Extend the timer"><span class="snooze-label">Add</span>${[1, 2, 3, 5, 10].map((m) => `<button class="chipbtn" type="button" data-action="timer-snooze" data-min="${m}">${m} min</button>`).join('')}</div>` : ''}`
+      : `<button class="btn sm" type="button" data-action="${t.running ? 'timer-pause' : 'timer-resume'}">${icon(t.running ? 'pause' : 'play')}${t.running ? 'Pause' : 'Resume'}</button>
+         <button class="btn sm ghost" type="button" data-action="timer-reset">${icon('reset')}Reset</button>
+         <button class="btn sm ghost" type="button" data-action="timer-close">${icon('x')}Clear</button>`;
     return `<section class="panel timer-card" aria-labelledby="cook-timer-title">
       <div class="panel-head"><h2 id="cook-timer-title">Timer</h2><span class="pill ${t.done ? 'soft' : ''}">${state}</span></div>
       <div class="tdisplay" data-ui="timer-bezel"><span class="timer-display-value${t.done ? ' done' : ''}" data-timer-display>${timerDigits(clock(remainingMs(t)))}</span></div>
       <div class="tlabel" data-timer-label>${esc(t.sub)} / step ${t.step}</div>
-      <div class="tcontrols">
-        <button class="btn sm" type="button" data-action="${t.done || !t.running ? 'timer-resume' : 'timer-pause'}">${icon(t.done || !t.running ? 'play' : 'pause')}${t.done ? 'Again' : t.running ? 'Pause' : 'Resume'}</button>
-        <button class="btn sm ghost" type="button" data-action="timer-reset">${icon('reset')}Reset</button>
-        <button class="btn sm ghost" type="button" data-action="timer-close">${icon('x')}Clear</button>
-      </div>
+      <div class="tcontrols">${controls}</div>
     </section>`;
   }
 
@@ -3068,6 +3143,47 @@
   let timerCardObserver = null;
   let timerCardVisible = false;
   let timerAnnounced = false;
+  let dockSnoozeOpen = false;
+  let ringtoneCtx = null;
+  let ringtoneChoice = store.get(KEY.ringtone, 'chime');
+  // ringtones are synthesized in-app (Web Audio oscillators) — no audio files shipped
+  const RINGTONE_DEFS = {
+    chime: { label: 'Chime', notes: [[659.25, 0], [880, 0.14], [1318.5, 0.3]] },
+    bell: { label: 'Bell', notes: [[1567.98, 0], [1567.98, 0.38], [1567.98, 0.76]] },
+    digital: { label: 'Digital blips', wave: 'square', notes: [[1318.5, 0], [1318.5, 0.13], [1318.5, 0.26], [1318.5, 0.39], [1318.5, 0.52], [1318.5, 0.65]] },
+    alert: { label: 'Alert', notes: [[1108.7, 0], [880, 0.26], [1108.7, 0.54], [880, 0.82]] },
+    gentle: { label: 'Gentle chord', notes: [[523.25, 0], [659.25, 0], [783.99, 0]] },
+  };
+  const RINGTONE_IDS = Object.keys(RINGTONE_DEFS);
+
+  function playRingtone(kind) {
+    const key = RINGTONE_DEFS[kind] ? kind : (RINGTONE_DEFS[ringtoneChoice] ? ringtoneChoice : 'chime');
+    const def = RINGTONE_DEFS[key];
+    try {
+      const Ctx = window.AudioContext || window.webkitAudioContext;
+      if (!Ctx) return;
+      if (!ringtoneCtx) ringtoneCtx = new Ctx();
+      const ctx = ringtoneCtx;
+      if (ctx.state === 'suspended') ctx.resume();
+      const master = ctx.createGain();
+      master.gain.setValueAtTime(0.2, ctx.currentTime);
+      master.connect(ctx.destination);
+      const t0 = ctx.currentTime + 0.03;
+      for (const [freq, delay] of def.notes) {
+        const osc = ctx.createOscillator();
+        osc.type = def.wave || 'sine';
+        osc.frequency.setValueAtTime(freq, t0 + delay);
+        const g = ctx.createGain();
+        g.gain.setValueAtTime(0, t0 + delay);
+        g.gain.linearRampToValueAtTime(1, t0 + delay + 0.012);
+        g.gain.exponentialRampToValueAtTime(0.001, t0 + delay + 0.9);
+        osc.connect(g);
+        g.connect(master);
+        osc.start(t0 + delay);
+        osc.stop(t0 + delay + 0.95);
+      }
+    } catch (err) { /* audio unsupported — the dock still shows the time */ }
+  }
 
   function remainingMs(t) {
     if (!t) return 0;
@@ -3098,6 +3214,7 @@
       done: false,
     };
     timerAnnounced = false;
+    dockSnoozeOpen = false;
     saveTimer();
     renderTimerDock();
     render();
@@ -3140,12 +3257,63 @@
   }
 
   function closeTimer() {
+    const wasWaiting = guideWaitingTimer;
     timerState = null;
+    guideWaitingTimer = false;
+    dockSnoozeOpen = false;
     saveTimer();
     renderTimerDock();
     render();
     announce('Timer cleared.');
-    resumeStepsFromTimer();
+    // manual clear releases the paused flow too — not as an expiry, just a clear
+    if (wasWaiting && guideWant === true) {
+      const recipe = session && getRecipe(session.recipeId);
+      if (recipe) { guideSay('Moving on.', () => cookNext(recipe)); return; }
+    }
+  }
+
+  function snoozeTimer(min) {
+    if (!timerState) return;
+    const mins = Math.min(120, Math.max(1, Number(min) || 5));
+    timerState = {
+      id: timerState.id + ':snooze:' + Date.now(),
+      recipeId: timerState.recipeId,
+      recipeName: timerState.recipeName,
+      step: timerState.step,
+      index: timerState.index,
+      sub: mins + ' min',
+      total: mins * 60 * 1000,
+      remaining: mins * 60 * 1000,
+      endsAt: Date.now() + mins * 60 * 1000,
+      running: true,
+      done: false,
+    };
+    timerAnnounced = false;
+    dockSnoozeOpen = false;
+    saveTimer();
+    renderTimerDock();
+    render();
+    announce('Not ready — timer extended by ' + mins + ' minute' + (mins === 1 ? '' : 's') + '.');
+  }
+
+  function timerReady() {
+    dockSnoozeOpen = false;
+    timerState = null;
+    guideWaitingTimer = false;
+    saveTimer();
+    renderTimerDock();
+    const recipe = session && getRecipe(session.recipeId);
+    if (recipe) {
+      const wasVoice = guideWant === true;
+      if (wasVoice) {
+        guideSay('Moving on.', () => cookNext(recipe));
+        return;
+      }
+      announce('Moving on.');
+      cookNext(recipe);
+      return;
+    }
+    render();
   }
 
   function finishTimer() {
@@ -3159,20 +3327,16 @@
       timerAnnounced = true;
       announce('Timer finished. ' + timerState.sub + ', step ' + timerState.step + '.', true);
     }
+    dockSnoozeOpen = false;
+    playRingtone(ringtoneChoice);
+    // automated flow does NOT advance yet — the user picks Ready (steps resume)
+    // or Not ready (snooze 1–10 minutes) in the dock
+    if (guideWaitingTimer && guideWant === true) {
+      guideSay('Time is up. Say “ready” when you are, or tap Not ready for a few more minutes.', () => beginGuideListen(true));
+    }
     renderTimerDock();
+    render();
     updateTimerDigits(document.querySelector('[data-timer-display]'), '00:00');
-    resumeStepsFromTimer();
-  }
-
-  // End of a timer releases the paused automated flow: speak a beat, then
-  // advance to the next step and narrate it. No voice guide, no advance.
-  function resumeStepsFromTimer() {
-    if (!guideWaitingTimer) return;
-    guideWaitingTimer = false;
-    if (guideWant !== true) return;
-    const recipe = session && getRecipe(session.recipeId);
-    if (!recipe) return;
-    guideSay('Moving on.', () => cookNext(recipe));
   }
 
   function renderTimerDock() {
@@ -3184,20 +3348,41 @@
       return;
     }
     const t = timerState;
-    const state = t.done ? 'Finished' : t.running ? 'Running' : 'Paused';
+    const state = t.done ? 'Ready?' : t.running ? 'Running' : 'Paused';
     const hasTimerCard = document.body.classList.contains('route-cook') && $('#view .timer-card');
     dock.hidden = !!(hasTimerCard && timerCardVisible);
     dock.classList.toggle('done', !!t.done);
+    if (!t.done) {
+      dock.innerHTML = `
+        <span class="td-clock" data-timer-clock>${clock(remainingMs(t))}</span>
+        <span class="td-copy">
+          <span class="td-label">${esc(t.sub)} / ${esc(t.recipeName)} / step ${t.step}</span>
+          <span class="td-state"><span class="dot"></span>${state}</span>
+        </span>
+        <span class="td-actions">
+          <button class="btn icon" type="button" data-action="${t.running ? 'timer-pause' : 'timer-resume'}" aria-label="${t.running ? 'Pause timer' : 'Resume timer'}" title="${t.running ? 'Pause' : 'Resume'}">${icon(t.running ? 'pause' : 'play')}</button>
+          <button class="btn icon" type="button" data-action="timer-reset" aria-label="Reset timer" title="Reset">${icon('reset')}</button>
+          <button class="btn icon" type="button" data-action="timer-close" aria-label="Clear timer" title="Clear">${icon('x')}</button>
+        </span>`;
+      return;
+    }
+    // timer expired — ask “Ready?”; ready resumes the steps, not-ready snoozes
+    const snooze = dockSnoozeOpen
+      ? `<span class="snooze-row" role="group" aria-label="Extend the timer">
+           <span class="snooze-label">Add</span>
+           ${[1, 2, 3, 5, 10].map((m) => `<button class="chipbtn" type="button" data-action="timer-snooze" data-min="${m}">${m} min</button>`).join('')}
+           <button class="chipbtn good" type="button" data-action="timer-ready">Ready</button>
+         </span>`
+      : `<button class="btn ghost" type="button" data-action="timer-notready">Not ready</button>`;
     dock.innerHTML = `
-      <span class="td-clock" data-timer-clock>${clock(remainingMs(t))}</span>
+      <span class="td-clock done-clock" data-timer-clock>00:00</span>
       <span class="td-copy">
         <span class="td-label">${esc(t.sub)} / ${esc(t.recipeName)} / step ${t.step}</span>
-        <span class="td-state"><span class="dot ${t.done ? 'ok' : ''}"></span>${state}</span>
+        <span class="td-state ready-dot"><span class="dot ok"></span>Ready?</span>
       </span>
       <span class="td-actions">
-        <button class="btn icon" type="button" data-action="${t.done || !t.running ? 'timer-resume' : 'timer-pause'}" aria-label="${t.done || !t.running ? 'Resume timer' : 'Pause timer'}" title="${t.done || !t.running ? 'Resume' : 'Pause'}">${icon(t.done || !t.running ? 'play' : 'pause')}</button>
-        <button class="btn icon" type="button" data-action="timer-reset" aria-label="Reset timer" title="Reset">${icon('reset')}</button>
-        <button class="btn icon" type="button" data-action="timer-close" aria-label="Clear timer" title="Clear">${icon('x')}</button>
+        ${dockSnoozeOpen ? '' : `<button class="btn primary" type="button" data-action="timer-ready">Ready</button>`}
+        ${snooze}
       </span>`;
   }
 
@@ -3228,6 +3413,35 @@
     const sessionActive = !!(cooking && !cooking.complete && ((cooking.done && cooking.done.length > 0) || cooking.step > 1));
     document.body.classList.toggle('cook-active', timerActive || sessionActive);
   }
+
+  // keep the device awake for the whole cook — the cook page, the notification
+  // shade and the timer dock all hold the flag until the cook ends
+  let cookWakeLock = null;
+  let cookWakeLastSet = null;
+  async function syncCookingKeepAwake() {
+    const isCook = document.body.classList.contains('route-cook') || document.body.classList.contains('cook-active');
+    if (cookWakeLastSet === isCook) return;
+    cookWakeLastSet = isCook;
+    try {
+      if (nativeSetKeepScreenOn()) {
+        MiseNative.setKeepScreenOn(!!isCook);
+        return;
+      }
+    } catch (err) { /* fall through to the web wake lock */ }
+    try {
+      if (isCook) {
+        if (!cookWakeLock && 'wakeLock' in navigator && navigator.wakeLock && typeof navigator.wakeLock.request === 'function') {
+          try { cookWakeLock = await navigator.wakeLock.request('screen'); } catch (err) { cookWakeLock = null; }
+        }
+      } else if (cookWakeLock) {
+        try { await cookWakeLock.release(); } catch (err) { /* ignore */ }
+        cookWakeLock = null;
+      }
+    } catch (err) { /* wake lock unsupported — dimming is the device's business */ }
+  }
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') syncCookingKeepAwake();
+  });
 
   function syncCookClock() {
     const node = document.querySelector('[data-elapsed]');
@@ -3705,6 +3919,7 @@
       ['Hear the previous step, then the current one', ['repeat last step', 'repeat the last step', 'repeat the previous step', 'repeat last instruction', 'repeat the last instruction', 'read previous step again', 'previous step']],
       ['Start from the beginning', ['start over', 'start over recipe', 'restart', 'begin again', 'start again', 'from the top']],
       ['Answer a timer question', ['yes', 'yeah', 'sure', 'ok', 'okay', 'no', 'not yet', 'skip']],
+      ['Resume after a timer expires', ['ready', 'timer ready', 'time is up', 'timer finished']],
       ['End the cook', ['cancel', 'cancel recipe', 'cancel cook', 'cancel cooking', 'stop', 'stop cooking', 'end cook', 'end cooking', 'quit', 'quit cooking']],
     ];
     const lists = groups.map(([title, phrases]) => `<div class="command-group">
@@ -3723,7 +3938,7 @@
         <p class="meta">Recognized by the automated voice guide — natural phrasing is fine (“ok next”, “um repeat please”, “please start over”). Anything unrecognized comes back with the words Mise heard.</p>
         <p class="meta">Voice input uses this device’s speech service (Google Speech Services on Android, Web Speech on desktop browsers). Audio never reaches Mise’s code and nothing is recorded or uploaded — the recognizer returns only the words.</p>
         <p class="meta">The microphone pauses after 2 minutes of quiet; tap <i>Listen</i> to hear the current step again and resume. Say “cancel” — or tap the mic button to mute voice — to stop.</p>
-        <p class="meta">When a step carries a timer, Mise asks to start it after reading the step. Say “yes” and the timer runs — Mise waits for it instead of narrating ahead, then continues with the next step when the timer finishes or you clear it.</p>
+        <p class="meta">When a step carries a timer, Mise asks to start it after reading the step. Say “yes” and the timer runs — Mise waits for it instead of narrating ahead. When the timer reaches zero a ringtone of your choice plays from Settings, and Mise asks “Ready?”: say “ready” — or tap Ready — and the steps resume. Say “not ready” to snooze 1, 2, 3, 5 or 10 minutes.</p>
         <p class="meta">“repeat last step” reads the previous step, then the current step again after a two-second pause.</p>
         <dl class="command-groups">${lists}</dl>
       </div>
@@ -3747,20 +3962,60 @@
         <span class="choice-copy"><b>${esc(name)}</b><span>${esc(blurb)}</span></span>
         ${persona === id ? icon('check', 'voice-check') : ''}
       </button>`;
-    return `<section class="panel voice-panel" aria-labelledby="settings-voice-title">
+    const overrides = personaOverridePanel();
+    return `<details class="panel voice-panel source-all" id="voice-persona" open>
+      <summary class="source-all-summary" aria-label="Choose a Preferred Voice">
+        <span class="source-all-name">
+          <b>Choose a Preferred Voice</b>
+          <span class="meta">Every spoken line — the steps, the prompts, the confirmations — uses one voice.</span>
+        </span>
+        <span class="source-plus" aria-hidden="true">${icon('plus')}</span>
+      </summary>
+      <div class="source-all-body">
+        <div class="voice-cards">
+          ${card('Carol', 'Female neural voice. Default.', 'carol')}
+          ${card('Sean', 'Male neural voice. On devices with no male voice Mise falls back to its best female voice.', 'sean')}
+        </div>
+        ${overrides}
+        ${engineChipsHtml()}
+        <p class="hint"><span class="pill soft">${esc(spokenVoice)}</span></p>
+        <p class="hint">Voices come from this device’s own speech service — Samsung TTS (on Samsung tablets), Google Speech Services, or the system default — never the network. Mise never sends text anywhere to speak it. If a device has no speech engine at all, the guide falls back to recorded phrases for fixed lines and to buttons for the rest.</p>
+      </div>
+    </details>`;
+  }
+
+  function personaOverridePanel() {
+    if (!nativeVoiceList()) return '';
+    const voices = listEnglishVoices();
+    if (!voices.length) return '';
+    const guessLabel = (g) => g === 'f' ? ' · female' : g === 'm' ? ' · male' : '';
+    const selectFor = (p) => {
+      const label = p === 'sean' ? 'Sean' : 'Carol';
+      const chosen = (voiceOverride && voiceOverride[p]) || '';
+      const options = ['<option value="">Auto (best match)</option>']
+        .concat(voices.map((v) => `<option value="${esc(v.name)}"${v.name === chosen ? ' selected' : ''}>${esc(v.name)}${v.locale ? ' · ' + esc(v.locale) : ''}${v.local === false ? ' · network' : ''}${guessLabel(v.guess)}</option>`));
+      return `<label class="voice-override"><span>${esc(label)}’s voice</span>
+        <select data-voice-override="${p}" aria-label="${esc(label)}’s voice">${options.join('')}</select>
+      </label>`;
+    };
+    const current = nativeCurrentVoice();
+    return `<div class="voice-overrides">
+      <p class="hint" style="margin:12px 0 6px">Voice picker — the actual voices on this device.<span class="voice-current">Currently speaking with: <b>${esc(current || 'auto')}</b></span></p>
+      ${selectFor('carol')}
+      ${selectFor('sean')}
+    </div>`;
+  }
+
+  function ringtonePanel() {
+    const chips = RINGTONE_IDS.map((id) => `<button class="chipbtn" type="button" data-action="set-ringtone" data-ringtone="${id}" aria-pressed="${ringtoneChoice === id}">${esc(RINGTONE_DEFS[id].label)}</button>`).join('');
+    return `<section class="panel ringtone-panel" id="settings-timer-sound" aria-labelledby="settings-ringtone-title">
       <div class="panel-head">
         <div>
-          <h2 id="settings-voice-title">Choose a Preferred Voice</h2>
-          <p class="meta">Every spoken line — the steps, the prompts, the confirmations — uses the same voice. Pick it once.</p>
+          <h2 id="settings-ringtone-title">Timer sound</h2>
+          <p class="meta">The ringtone that plays when a timer reaches zero. Tap any chime to hear it and to set it.</p>
         </div>
-        <span class="pill soft">${esc(spokenVoice)}</span>
       </div>
-      <div class="voice-cards">
-        ${card('Carol', 'Female neural voice. Default.', 'carol')}
-        ${card('Sean', 'Male neural voice. On devices with no male voice Mise falls back to its best female voice.', 'sean')}
-      </div>
-      ${engineChipsHtml()}
-      <p class="hint">Voices come from this device’s own speech service — Samsung TTS (on Samsung tablets), Google Speech Services, or the system default — never the network. Mise never sends text anywhere to speak it. If a device has no speech engine at all, the guide falls back to recorded phrases for fixed lines and to buttons for the rest.</p>
+      <div class="engine-chips ringtone-chips" role="radiogroup" aria-label="Timer ringtone">${chips}</div>
     </section>`;
   }
 
@@ -3789,6 +4044,7 @@
         <div class="settings-main">
           ${importCard()}
           ${voicePersonaPanel()}
+          ${ringtonePanel()}
 
           <section class="panel sources-panel" id="settings-sources" aria-labelledby="settings-sources-title" tabindex="-1">
             ${sourcesListHtml()}
@@ -4196,6 +4452,17 @@
     if (action === 'timer-resume') { resumeTimer(); return; }
     if (action === 'timer-reset') { resetTimer(); return; }
     if (action === 'timer-close') { closeTimer(); return; }
+    if (action === 'timer-ready') { timerReady(); return; }
+    if (action === 'timer-notready') { dockSnoozeOpen = true; renderTimerDock(); render(); return; }
+    if (action === 'timer-snooze') { snoozeTimer(Number(target.dataset.min || 5)); return; }
+    if (action === 'set-ringtone') {
+      ringtoneChoice = RINGTONE_DEFS[target.dataset.ringtone] ? target.dataset.ringtone : 'chime';
+      store.set(KEY.ringtone, ringtoneChoice);
+      playRingtone(ringtoneChoice);
+      announce('Timer sound set to ' + RINGTONE_DEFS[ringtoneChoice].label + '.');
+      render();
+      return;
+    }
 
     if (action === 'cook-step') {
       if (recipe) cookStep(recipe, parseInt(target.dataset.step, 10));
@@ -4254,8 +4521,10 @@
         guideWant = true;
         lastSpokenKey = '';
         requestMicForCook();
+        store.set(KEY.voiceMode, true);
         navigate('#/cook/' + recipe.id + '?voice=1');
       } else {
+        store.set(KEY.voiceMode, false);
         navigate('#/cook/' + recipe.id);
       }
       return;
@@ -4303,6 +4572,14 @@
   });
 
   document.addEventListener('change', (event) => {
+    const voicePick = event.target.closest('[data-voice-override]');
+    if (voicePick) {
+      const p = voicePick.dataset.voiceOverride === 'sean' ? 'sean' : 'carol';
+      setPersonaOverride(p, voicePick.value);
+      announce(voicePick.value ? p + ' voice set.' : 'Voice set to auto.');
+      render();
+      return;
+    }
     const miseBox = event.target.closest('[data-action="check-mise"]');
     if (miseBox) {
       const route = parseRoute();
