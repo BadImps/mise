@@ -47,7 +47,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Pepperpot_%2816135006279%29.jpg/960px-Pepperpot_%2816135006279%29.jpg",
+    "imageCredit": "Simon Abrams from Brooklyn, USA (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-style-curry-chicken",
@@ -101,7 +103,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     ],
     "prepTime": "PT20M",
     "cookTime": "PT60M",
-    "totalTime": "PT80M"
+    "totalTime": "PT80M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Dhalpuri_roti%2C_curry_chicken%2C_aloo_and_channa_from_Hi-Way_Roti_Shop_Nelson_Rd%2C_Freeport_Trinidad.jpg/960px-Dhalpuri_roti%2C_curry_chicken%2C_aloo_and_channa_from_Hi-Way_Roti_Shop_Nelson_Rd%2C_Freeport_Trinidad.jpg",
+    "imageCredit": "AFRICAN TIGRESS (CC BY 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-cuba-ropa-vieja",
@@ -156,7 +160,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     ],
     "prepTime": "PT15M",
     "cookTime": "PT240M",
-    "totalTime": "PT255M"
+    "totalTime": "PT255M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Ropa_vieja_Canarian_style_in_Fataga%2C_Gran_Canaria%2C_the_Canary_Islands.JPG/960px-Ropa_vieja_Canarian_style_in_Fataga%2C_Gran_Canaria%2C_the_Canary_Islands.JPG",
+    "imageCredit": "Kpjas (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-puerto-rico-coquito",
@@ -196,7 +202,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     ],
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT130M"
+    "totalTime": "PT130M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Coquito_in_glass_with_spices_on_top.jpg/960px-Coquito_in_glass_with_spices_on_top.jpg",
+    "imageCredit": "Infrogmation (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-haiti-haitian-epis",
@@ -247,7 +255,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     ],
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Haitian_Epis.jpg/960px-Haitian_Epis.jpg",
+    "imageCredit": "LittleT889 (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-haiti-haitian-pikliz",
@@ -293,7 +303,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     ],
     "prepTime": "PT25M",
     "cookTime": null,
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Haitian_Pikliz.jpg/960px-Haitian_Pikliz.jpg",
+    "imageCredit": "Aliceba (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-the-bahamas-bahamian-conch-salad-recipe",
@@ -365,7 +377,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     ],
     "prepTime": "PT25M",
     "cookTime": null,
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Conch_Salad.jpg/960px-Conch_Salad.jpg",
+    "imageCredit": "Tjones242 (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-barbados-cornmeal-cou-cou-coo-coo",
@@ -431,7 +445,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     ],
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Cou_Cou_headquarters_%2820240228144258%29.jpg/960px-Cou_Cou_headquarters_%2820240228144258%29.jpg",
+    "imageCredit": "N509FZ (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-barbados-conkies-barbadian-bajan-style",
@@ -556,7 +572,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     ],
     "prepTime": "PT60M",
     "cookTime": "PT60M",
-    "totalTime": "PT120M"
+    "totalTime": "PT120M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Conky_Orange.png/960px-Conky_Orange.png",
+    "imageCredit": "Joelaugustine123 (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-dominican-republic-dominican-mangu-mashed-green-plantains",
@@ -643,7 +661,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     ],
     "prepTime": "PT20M",
     "cookTime": "PT30M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Dominican_Mangu.jpg/960px-Dominican_Mangu.jpg",
+    "imageCredit": "Ll1324 (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-saint-lucia-green-fig-salad-green-banana-salad-vegan",
@@ -717,7 +737,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     ],
     "prepTime": "PT20M",
     "cookTime": "PT30M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Jerk_Chicken%2C_Green_Fig_Salad%2C_Sauteed_Cassava.jpg/960px-Jerk_Chicken%2C_Green_Fig_Salad%2C_Sauteed_Cassava.jpg",
+    "imageCredit": "anaxmedia (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-grenada-nutmeg-chicken-grenadian-inspired",
@@ -793,7 +815,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     ],
     "prepTime": "PT15M",
     "cookTime": "PT25M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/-2020-02-24_Dijon_Chicken%2C_Cream_of_Mushroom%2C_Nutmeg%2C_Spinach_Sauce%2C_Bay_Scented_Smashed_Roast_Potatoes%2C_Trimingham.JPG/960px--2020-02-24_Dijon_Chicken%2C_Cream_of_Mushroom%2C_Nutmeg%2C_Spinach_Sauce%2C_Bay_Scented_Smashed_Roast_Potatoes%2C_Trimingham.JPG",
+    "imageCredit": "Kolforn (Kolforn) I'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wikimedia project scope. This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original.https://creativecommons.org/licenses/by-sa/4.0CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 truetrue (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaica-jamaican-ackee-and-saltfish-paleo-keto-gluten-free",
@@ -866,7 +890,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT30M",
     "cookTime": "PT20M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Jamaican_Ackee_and_Saltfish.jpg/960px-Jamaican_Ackee_and_Saltfish.jpg",
+    "imageCredit": "Sumit Surai (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaica-jamaican-oxtail-stew-with-butter-beans-slow-cooker",
@@ -1007,7 +1033,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT30M",
     "cookTime": "PT240M",
-    "totalTime": "PT270M"
+    "totalTime": "PT270M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Jamaican_Oxtail_and_Butter_Beans.jpg/960px-Jamaican_Oxtail_and_Butter_Beans.jpg",
+    "imageCredit": "Sumit Surai (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaica-jamaican-curry-goat",
@@ -1098,7 +1126,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT180M",
-    "totalTime": "PT200M"
+    "totalTime": "PT200M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Jamaican_curry_goat_%26_roti.jpg/960px-Jamaican_curry_goat_%26_roti.jpg",
+    "imageCredit": "Xaymacan (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaica-vegan-jamaican-rice-and-peas",
@@ -1181,7 +1211,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT25M",
     "cookTime": "PT105M",
-    "totalTime": "PT130M"
+    "totalTime": "PT130M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Jamaican_rice_and_peas_1.jpg/960px-Jamaican_rice_and_peas_1.jpg",
+    "imageCredit": "Xaymacan (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaica-jamaican-callaloo-recipe",
@@ -1267,7 +1299,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT35M",
     "cookTime": "PT10M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Jamaican_breakfast_ackee_saltfish_callaloo.jpg/960px-Jamaican_breakfast_ackee_saltfish_callaloo.jpg",
+    "imageCredit": "Karolyn (CC BY 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaica-saltfish-and-callaloo",
@@ -1326,7 +1360,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Jamaican_breakfast_ackee_saltfish_callaloo.jpg/960px-Jamaican_breakfast_ackee_saltfish_callaloo.jpg",
+    "imageCredit": "Karolyn (CC BY 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-macaroni-pie-vegan-gluten-free",
@@ -1525,7 +1561,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT40M",
     "cookTime": "PT90M",
-    "totalTime": "PT130M"
+    "totalTime": "PT130M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Jamaican_rum_cakes.jpg/960px-Jamaican_rum_cakes.jpg",
+    "imageCredit": "Xaymacan (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-cuba-instant-pot-picadillo-cuban",
@@ -1615,7 +1653,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT20M",
     "cookTime": "PT30M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Picadillo_%28Helm%29_07.jpg/960px-Picadillo_%28Helm%29_07.jpg",
+    "imageCredit": "Tamorlan (CC BY 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-cuba-yuca-con-mojo-cuban-style",
@@ -1680,7 +1720,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT35M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Tradicional_Carne_en_Vara_con_Yuca_y_Ensalada.JPG/960px-Tradicional_Carne_en_Vara_con_Yuca_y_Ensalada.JPG",
+    "imageCredit": "jonathan de Almeida (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-puerto-rico-vegan-mofongo-puerto-rican",
@@ -1813,7 +1855,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT45M",
     "cookTime": "PT60M",
-    "totalTime": "PT105M"
+    "totalTime": "PT105M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Pilon_para_mofongo_2011.jpg/960px-Pilon_para_mofongo_2011.jpg",
+    "imageCredit": "Ll1324 (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-grenada-oil-down",
@@ -1893,7 +1937,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT60M",
-    "totalTime": "PT70M"
+    "totalTime": "PT70M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Cooking_oil_down_01.jpg/960px-Cooking_oil_down_01.jpg",
+    "imageCredit": "St. Georges U. S. Embassy (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-suriname-pom",
@@ -1965,7 +2011,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT220M",
-    "totalTime": "PT240M"
+    "totalTime": "PT240M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Nieppe_%2826_avril_2009%29_Pom-pom_girls_nieppoises_026a.jpg/960px-Nieppe_%2826_avril_2009%29_Pom-pom_girls_nieppoises_026a.jpg",
+    "imageCredit": "Markus3 (Marc ROUSSEL) (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-belize-johnny-cake",
@@ -2010,7 +2058,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 20,
     "prepTime": "PT20M",
     "cookTime": "PT15M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Johnny_Cake_Festival_at_Kenyon%27s_Grist_Meal_Corn_Mea_Usquepaug%2C_Rhode_Island_Richmond.jpg/960px-Johnny_Cake_Festival_at_Kenyon%27s_Grist_Meal_Corn_Mea_Usquepaug%2C_Rhode_Island_Richmond.jpg",
+    "imageCredit": "Swampyank (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-barbados-salt-fish-cakes-and-marie-rose-sauce",
@@ -2086,7 +2136,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT20M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Fish_dried_in_salt_Animal_organic_remains_-_Museo_Egizio%2C_Turin_S_8354_p01.jpg/960px-Fish_dried_in_salt_Animal_organic_remains_-_Museo_Egizio%2C_Turin_S_8354_p01.jpg",
+    "imageCredit": "Museo Egizio (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-dominican-republic-locrio-de-pica-pica",
@@ -2197,7 +2249,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Medieval_coin%2C_Halfpenny_of_Henry_I_%28FindID_799081%29.jpg/960px-Medieval_coin%2C_Halfpenny_of_Henry_I_%28FindID_799081%29.jpg",
+    "imageCredit": "Salisbury and South Wiltshire Museum, Richard Henry, 2016-08-10 13:45:15 (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-puerto-rico-pernil-asado",
@@ -2304,7 +2358,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT60M",
     "cookTime": "PT300M",
-    "totalTime": "PT360M"
+    "totalTime": "PT360M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/%22Pernil%2C_formatges_i_fruits_secs%22%2C_gastronom%C3%ADa_popular_de_los_pueblos_de_la_mancomunidad_de_La_Plana_de_l%27Arc_%28Castell%C3%B3n%29.jpg/960px-%22Pernil%2C_formatges_i_fruits_secs%22%2C_gastronom%C3%ADa_popular_de_los_pueblos_de_la_mancomunidad_de_La_Plana_de_l%27Arc_%28Castell%C3%B3n%29.jpg",
+    "imageCredit": "Juan Emilio Prades Bel (CC BY 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-grenada-pelau",
@@ -2417,7 +2473,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT30M",
     "cookTime": "PT45M",
-    "totalTime": "PT75M"
+    "totalTime": "PT75M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/MISC_Pelau.jpg/960px-MISC_Pelau.jpg",
+    "imageCredit": "Grueslayer (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaica-jerk-chicken",
@@ -2451,7 +2509,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT50M",
-    "totalTime": "PT1H5M"
+    "totalTime": "PT1H5M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Jerk_chicken_plate.jpg/960px-Jerk_chicken_plate.jpg",
+    "imageCredit": "stu_spivack (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaica-rice-peas",
@@ -2481,7 +2541,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT20M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Parboiled_rice_with_chicken%2C_peppers%2C_cucurbita%2C_peas_and_tomato.jpg/960px-Parboiled_rice_with_chicken%2C_peppers%2C_cucurbita%2C_peas_and_tomato.jpg",
+    "imageCredit": "Petar Milošević (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-black-cake",
@@ -2582,7 +2644,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 3,
     "prepTime": "",
     "cookTime": "",
-    "totalTime": ""
+    "totalTime": "",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Trinidad_and_Tobago-style_black_cake.jpg/960px-Trinidad_and_Tobago-style_black_cake.jpg",
+    "imageCredit": "Guettarda (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-haiti-soup-joumou",
@@ -2707,7 +2771,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT30M",
     "cookTime": "PT75M",
-    "totalTime": "PT105M"
+    "totalTime": "PT105M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Soup_Joumou.jpg/960px-Soup_Joumou.jpg",
+    "imageCredit": "Aliceba (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaica-jamaican-patty",
@@ -2830,7 +2896,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT60M",
     "cookTime": "PT40M",
-    "totalTime": "PT100M"
+    "totalTime": "PT100M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/07192023_WMNYC_WikiWeds_Zoom_Call_Jamaican_Patty.jpg/960px-07192023_WMNYC_WikiWeds_Zoom_Call_Jamaican_Patty.jpg",
+    "imageCredit": "wil540 (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-amazing-10-min-instant-pot-dhal",
@@ -2891,7 +2959,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT5M",
     "cookTime": "PT15M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Jhapater_Dhal_railway_station_03.jpg/960px-Jhapater_Dhal_railway_station_03.jpg",
+    "imageCredit": "Pinakpani (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-15-min-beef-stir-fry",
@@ -2933,7 +3003,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT10M",
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Ginger_beef_stir_fry.jpg/960px-Ginger_beef_stir_fry.jpg",
+    "imageCredit": "jules (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-15-spice-curry-chicken",
@@ -3009,7 +3081,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT25M",
     "cookTime": "PT55M",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/CoCo_Ichibanya_Spice_Curry_THE_Chicken_Vegitable.jpg/960px-CoCo_Ichibanya_Spice_Curry_THE_Chicken_Vegitable.jpg",
+    "imageCredit": "Tokumeigakarinoaoshima (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-geera-chicken-cumin-chicken-20-mins",
@@ -3054,7 +3128,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Dhalpuri_with_Geera_Chicken_and_Pumpkin.jpg/960px-Dhalpuri_with_Geera_Chicken_and_Pumpkin.jpg",
+    "imageCredit": "anaxmedia (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-stew-goat",
@@ -3118,7 +3194,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Curry_Goat_and_Rice.jpg/960px-Curry_Goat_and_Rice.jpg",
+    "imageCredit": "Leon Brocard from London, UK (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-30-minute-boneless-curry-stew-chicken-with-potatoes",
@@ -3232,7 +3310,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT5M",
     "cookTime": "PT20M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Potatoes%2C_chickpeas%2C_and_onions_in_tomato_sauce_with_Indian_spices_-_Massachusetts.jpg/960px-Potatoes%2C_chickpeas%2C_and_onions_in_tomato_sauce_with_Indian_spices_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-rias-accra-codfish-fritters-html",
@@ -3290,7 +3370,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Stamp_and_go_%28Jamaican_saltfish_fritters%29.jpg/960px-Stamp_and_go_%28Jamaican_saltfish_fritters%29.jpg",
+    "imageCredit": "Xaymacan (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-ackee-saltfish-with-fried-dumplings",
@@ -3376,7 +3458,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Jamaican_breakfast_ackee_saltfish_callaloo.jpg/960px-Jamaican_breakfast_ackee_saltfish_callaloo.jpg",
+    "imageCredit": "Karolyn (CC BY 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-crispy-air-fryer-or-oven-wings-with-hot-honey-buffalo-sauce",
@@ -3470,7 +3554,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Potato_slices_in_toaster_oven_using_air_fryer_function_B.jpg/960px-Potato_slices_in_toaster_oven_using_air_fryer_function_B.jpg",
+    "imageCredit": "Infrogmation of New Orleans (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-aloo-choka-a-trini-vegan-breakfast-dish",
@@ -3509,7 +3595,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/La_%22choca%22_%28o_choka%2C_gallareta%2C_focha%29.jpg/960px-La_%22choca%22_%28o_choka%2C_gallareta%2C_focha%29.jpg",
+    "imageCredit": "Jail ibañez (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-aloo-potato-pie",
@@ -3583,7 +3671,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/FOOD_Aloo_Pie_6.jpg/960px-FOOD_Aloo_Pie_6.jpg",
+    "imageCredit": "Grueslayer (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-aloo-puri",
@@ -3670,7 +3760,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Aloo_puri_thali.jpg/960px-Aloo_puri_thali.jpg",
+    "imageCredit": "03Ani03 (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-aloo-roti-aloo-puri-aloo-paratha",
@@ -3771,7 +3863,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT45M",
     "cookTime": "PT20M",
-    "totalTime": "PT1H5M"
+    "totalTime": "PT1H5M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Tandoori_roti_with_aloo_ki_sabzi_Rayagada_Odisha_0005.jpg/960px-Tandoori_roti_with_aloo_ki_sabzi_Rayagada_Odisha_0005.jpg",
+    "imageCredit": "Lopanayak (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-amazing-corn-pie-recipe",
@@ -3825,7 +3919,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT10M",
     "cookTime": "PT40M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Amazing_corn.jpg/960px-Amazing_corn.jpg",
+    "imageCredit": "Ibn Pasiba (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-amazing-shrimp-wontons",
@@ -3879,7 +3975,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Local_Cauliflower_Risotto-Marek%27s_Amazing_Shrimp%2C_Fennel_Confit%2C_Truffle_%28%2418_33%29_%2815608850621%29.jpg/960px-Local_Cauliflower_Risotto-Marek%27s_Amazing_Shrimp%2C_Fennel_Confit%2C_Truffle_%28%2418_33%29_%2815608850621%29.jpg",
+    "imageCredit": "Lou Stejskal (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-angel-hair-with-tomatoes-and-asparagus",
@@ -3933,7 +4031,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT10M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Angel_hair_pasta%2C_anchovies%2C_pesto%2C_olive_oil%2C_black_pepper_-_Maasachusetts.jpg/960px-Angel_hair_pasta%2C_anchovies%2C_pesto%2C_olive_oil%2C_black_pepper_-_Maasachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-farmhouse-apple-cake",
@@ -3978,7 +4078,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Apple_cake_recipe_card_-_Michigan_circa_1950.jpg/960px-Apple_cake_recipe_card_-_Michigan_circa_1950.jpg",
+    "imageCredit": "SJW (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-aunty-iyas-shrimp-lo-mein",
@@ -4092,7 +4194,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT10M",
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Tomato_scrambled_eggs_noodles.jpg/960px-Tomato_scrambled_eggs_noodles.jpg",
+    "imageCredit": "Fumikas Sagisavas (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-avocado-choka",
@@ -4180,7 +4284,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Chilean_salad_ingredients_cilantro_tomatoes_avocado_slices_lemon_wedges_fruit_vegetables_%2828769134965%29.jpg/960px-Chilean_salad_ingredients_cilantro_tomatoes_avocado_slices_lemon_wedges_fruit_vegetables_%2828769134965%29.jpg",
+    "imageCredit": "Personal Creations (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-baigan-and-aloo-with-tomatoes",
@@ -4283,7 +4389,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT5M",
     "cookTime": "PT30M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Litti%2C_dal%2C_baigan_choka_and_saag.jpg/960px-Litti%2C_dal%2C_baigan_choka_and_saag.jpg",
+    "imageCredit": "FoodPlate (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-baiganee-eggplant-fritter",
@@ -4407,7 +4515,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Chocolate_Chip_Banana_Bread.jpg/960px-Chocolate_Chip_Banana_Bread.jpg",
+    "imageCredit": "Ajwren (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-bandhania-chutney",
@@ -4505,7 +4615,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 40,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Languta-e-Barfi_6827.jpg/960px-Languta-e-Barfi_6827.jpg",
+    "imageCredit": "Ja71Ku (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-grilled-bbq-chicken",
@@ -4554,7 +4666,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 16,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Mr._K_Native_Chicken_BBQ_Grill_in_P._Zamora_Street_%282025-04-18%29.jpg/960px-Mr._K_Native_Chicken_BBQ_Grill_in_P._Zamora_Street_%282025-04-18%29.jpg",
+    "imageCredit": "Wide Awake! (CC BY 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-bbq-lamb-oven-or-grill",
@@ -4603,7 +4717,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/BBQ_Lamb.jpg/960px-BBQ_Lamb.jpg",
+    "imageCredit": "Prosthetic Head (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-bbq-pork-belly-a-finger-licking-caribbean-delight",
@@ -4684,7 +4800,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 14,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Pork_Belly_Steamed_Buns_-_Duroc_pork_belly%2C_cilantro%2C_scallions%2C_radish%2C_boiled_egg%2C_Chinese_black_vinaigrette%2C_hoisin_BBQ_sauce.jpg/960px-Pork_Belly_Steamed_Buns_-_Duroc_pork_belly%2C_cilantro%2C_scallions%2C_radish%2C_boiled_egg%2C_Chinese_black_vinaigrette%2C_hoisin_BBQ_sauce.jpg",
+    "imageCredit": "City Foodsters (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-beef-broccoli-stir-fry",
@@ -4740,7 +4858,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Beef_and_broccoli_stir_fry.jpg/960px-Beef_and_broccoli_stir_fry.jpg",
+    "imageCredit": "Joy (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-best-fresh-berry-cobbler-recipe",
@@ -4790,7 +4910,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Berry_cobbler.jpg/960px-Berry_cobbler.jpg",
+    "imageCredit": "stu_spivack (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-best-potato-salad-ever",
@@ -4846,7 +4968,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 20,
     "prepTime": "PT30M",
     "cookTime": "PT20M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/US_Navy_100622-N-3705H-081_Machinist%27s_Mate_1st_Class_Audrey_McDaniel_seasons_potatoes_for_a_Caribbean_meal_aboard_the_aircraft_carrier_USS_Harry_S_Truman_%28CVN_75%29.jpg/960px-thumbnail.jpg",
+    "imageCredit": "U.S. Navy photo by Mass Communication Specialist 3rd Class Nina Hughes (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-my-mother-in-laws-grace-kurma-recipe",
@@ -4918,7 +5042,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 30,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Dasavataralu_-_Kurma_avatar_of_Lord_Vishnu_on_Sri_Venkateshwara_temple%2C_Guntur.jpg/960px-Dasavataralu_-_Kurma_avatar_of_Lord_Vishnu_on_Sri_Venkateshwara_temple%2C_Guntur.jpg",
+    "imageCredit": "iMahesh (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaica-jamaican-callaloo",
@@ -5095,7 +5221,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT20M",
     "cookTime": "PT2H",
-    "totalTime": "PT2H20M"
+    "totalTime": "PT2H20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Dhalpurie_Roti%2C_Channa_and_Potato%2C_Curry_Shrimp%2C_Trinidad_and_Tobago.JPG/960px-Dhalpurie_Roti%2C_Channa_and_Potato%2C_Curry_Shrimp%2C_Trinidad_and_Tobago.JPG",
+    "imageCredit": "Kalamazadkhan (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-boil-fry-cassava",
@@ -5146,7 +5274,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT25M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Boiled_cassava%2C.jpg/960px-Boiled_cassava%2C.jpg",
+    "imageCredit": "Nubelbariloe (CC BY 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-boil-and-fry-black-eyed-peas",
@@ -5228,7 +5358,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Boiled_tapioca_and_chutney.JPG/960px-Boiled_tapioca_and_chutney.JPG",
+    "imageCredit": "Shobha Elizabeth John (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-breadfruit-oil-down",
@@ -5344,7 +5476,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": null,
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Buljol_%28Salted_cod%2C_oil%2C_onions%2C_tomatoes%2C_pepper%2C_boiled_eggs%29.jpg/960px-Buljol_%28Salted_cod%2C_oil%2C_onions%2C_tomatoes%2C_pepper%2C_boiled_eggs%29.jpg",
+    "imageCredit": "Kalamazadkhan (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-daughters-favorite-butter-chicken",
@@ -5409,7 +5543,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Butter_Chicken%2C_rice%2C_pita%2C_cookie%2C_and_glass_of_water.jpg/960px-Butter_Chicken%2C_rice%2C_pita%2C_cookie%2C_and_glass_of_water.jpg",
+    "imageCredit": "TechnoKittyCat (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-buttermilk-biscuits",
@@ -5465,7 +5601,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Buttermilk_biscuits_%2832615978953%29.jpg/960px-Buttermilk_biscuits_%2832615978953%29.jpg",
+    "imageCredit": "terri_bateman (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-candied-yams",
@@ -5505,7 +5643,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/2019-11-28_14_34_38_A_bowl_of_candied_yams_laid_out_for_Thanksgiving_Dinner_in_the_Parkway_Village_section_of_Ewing_Township%2C_Mercer_County%2C_New_Jersey.jpg/960px-2019-11-28_14_34_38_A_bowl_of_candied_yams_laid_out_for_Thanksgiving_Dinner_in_the_Parkway_Village_section_of_Ewing_Township%2C_Mercer_County%2C_New_Jersey.jpg",
+    "imageCredit": "Famartin (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-canned-sardines-with-tomatoes-for-cold-winter-months",
@@ -5719,7 +5859,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT10M",
     "cookTime": "PT50M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Mirny%2C_Malibu_Caribbean_Rum_with_Coconut%2C_Psychedelic%2C_Crimea.jpg/960px-Mirny%2C_Malibu_Caribbean_Rum_with_Coconut%2C_Psychedelic%2C_Crimea.jpg",
+    "imageCredit": "Vyacheslav Argenberg (CC BY 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-coconut-curry-shrimp",
@@ -5787,7 +5929,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT10M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Mirny%2C_Malibu_Caribbean_Rum_with_Coconut%2C_Psychedelic%2C_Crimea.jpg/960px-Mirny%2C_Malibu_Caribbean_Rum_with_Coconut%2C_Psychedelic%2C_Crimea.jpg",
+    "imageCredit": "Vyacheslav Argenberg (CC BY 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-quick-tasty-corned-beef-tomatoes",
@@ -5888,7 +6032,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Escovitch_fish%2C_fried_plaintains%2C_and_vegetables_on_top_of_rice.jpg/960px-Escovitch_fish%2C_fried_plaintains%2C_and_vegetables_on_top_of_rice.jpg",
+    "imageCredit": "K6ka (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-caribbean-fried-shrimp-recipe-crispy-golden-flavorful",
@@ -5964,7 +6110,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Cleaner_Shrimp_-_Cura%C3%A7ao%2C_Caribbean_Sea.jpg/960px-Cleaner_Shrimp_-_Cura%C3%A7ao%2C_Caribbean_Sea.jpg",
+    "imageCredit": "prilfish from Vienna, Austria (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-caribbean-ginger-beer",
@@ -6129,7 +6277,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT5M",
     "cookTime": null,
-    "totalTime": "PT5M"
+    "totalTime": "PT5M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Hot_Sauce-Caribbean_Pepper_Sauce.jpg/960px-Hot_Sauce-Caribbean_Pepper_Sauce.jpg",
+    "imageCredit": "Uncredited (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-rias-caribbean-pepper-jerk-shrimp",
@@ -6200,7 +6350,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Caribbean_Red_Pepper.jpg/960px-Caribbean_Red_Pepper.jpg",
+    "imageCredit": "NewMexMike (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-caribbean-pumpkin-rice",
@@ -6434,7 +6586,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/US_Navy_100622-N-3705H-081_Machinist%27s_Mate_1st_Class_Audrey_McDaniel_seasons_potatoes_for_a_Caribbean_meal_aboard_the_aircraft_carrier_USS_Harry_S_Truman_%28CVN_75%29.jpg/960px-thumbnail.jpg",
+    "imageCredit": "U.S. Navy photo by Mass Communication Specialist 3rd Class Nina Hughes (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-caribbean-style-baked-fish-in-parchment-paper",
@@ -6498,7 +6652,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT20M",
     "cookTime": "PT25M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Diamond_Jubilee_Medal_Caribbean_Realms_Parchment_Certificate.jpg/960px-Diamond_Jubilee_Medal_Caribbean_Realms_Parchment_Certificate.jpg",
+    "imageCredit": "Albert Sydney (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-cassava-dumplings-2",
@@ -6541,7 +6697,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT5M",
     "cookTime": "PT20M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Dumplings_at_New_Dumpling.jpg/960px-Dumplings_at_New_Dumpling.jpg",
+    "imageCredit": "Mx. Granger (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-cassava-pone",
@@ -6590,7 +6748,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 24,
     "prepTime": "PT10M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H10M"
+    "totalTime": "PT1H10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Dish_of_pelau%2C_coleslaw%2C_cassava_pone%2C_and_a_mac_and_cheese_pie.jpg/960px-Dish_of_pelau%2C_coleslaw%2C_cassava_pone%2C_and_a_mac_and_cheese_pie.jpg",
+    "imageCredit": "K6ka (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-cassava-two-ways-mashed-cassava-and-cassava-pie",
@@ -6654,7 +6814,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT20M",
     "cookTime": "PT30M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Cassava_Ridges.jpg/960px-Cassava_Ridges.jpg",
+    "imageCredit": "Paul The Writer (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-rias-cauliflower-fritter",
@@ -6714,7 +6876,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Cauliflower_Coral.jpg/960px-Cauliflower_Coral.jpg",
+    "imageCredit": "Rubel Das (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-channa-puri-the-easiest-trinidad-style-filled-roti",
@@ -6759,7 +6923,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Channa_micropeltes_2012_G1.jpg/960px-Channa_micropeltes_2012_G1.jpg",
+    "imageCredit": "George Chernilevsky (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-cheesy-aloo-pie",
@@ -6809,7 +6975,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT20M",
     "cookTime": "PT10M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Cheesy_aloo_paratha.jpg/960px-Cheesy_aloo_paratha.jpg",
+    "imageCredit": "Bllakhani (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-chicken-and-broccoli-with-garlic-sauce",
@@ -6868,7 +7036,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT15M",
     "cookTime": "PT10M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/White_pizza_with_chicken%2C_broccoli%2C_and_roasted_garlic_%2815652092563%29.jpg/960px-White_pizza_with_chicken%2C_broccoli%2C_and_roasted_garlic_%2815652092563%29.jpg",
+    "imageCredit": "jeffreyw (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trini-style-chicken-cacciatore",
@@ -6933,7 +7103,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT40M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/2024-07-13_Chicken_Cacciatore_2.jpg/960px-2024-07-13_Chicken_Cacciatore_2.jpg",
+    "imageCredit": "Burkhard Mücke (CC BY 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-chicken-fried-rice",
@@ -6989,7 +7161,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT10M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Chicken_fried_rice_-_Stir_Fry_by_CK_2023-12-02.jpg/960px-Chicken_fried_rice_-_Stir_Fry_by_CK_2023-12-02.jpg",
+    "imageCredit": "Andy Li (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-chicken-lo-mein",
@@ -7095,7 +7269,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 30,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Potstickers_with_chicken%2C_carrot%2C_celery%2C_and_ginger_filling_-_Massachusetts.jpg/960px-Potstickers_with_chicken%2C_carrot%2C_celery%2C_and_ginger_filling_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-chickpeas-pilaf",
@@ -7141,7 +7317,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Chickpea_quinoa_pilaf_%2841367978140%29.jpg/960px-Chickpea_quinoa_pilaf_%2841367978140%29.jpg",
+    "imageCredit": "Joey Doll (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-chip-up-a-simple-spicy-onion-pickle",
@@ -7182,7 +7360,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/DSC_9842_Empty_seaside-style_cafeteria_with_rows_of_tables_covered_in_bright_blue_tablecloths_simple_wooden_chairs_hanging_pendant_lights_and_a_counter_displaying_menu_pictures_and_condiments.jpg/960px-thumbnail.jpg",
+    "imageCredit": "PattayaPatrol (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-chorai-bhaji-recipe-benefits",
@@ -7232,7 +7412,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Oh_ribeiras_chorai%21.jpg/960px-Oh_ribeiras_chorai%21.jpg",
+    "imageCredit": "Oliveirafjb (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-chunky-veggie-stir-fry",
@@ -7320,7 +7502,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT5M",
     "cookTime": null,
-    "totalTime": "PT5M"
+    "totalTime": "PT5M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Cucumber_salad_with_cilantro%2C_onion%2C_chili_dressing%2C_etc_-_Cambridge%2C_MA.jpg/960px-Cucumber_salad_with_cilantro%2C_onion%2C_chili_dressing%2C_etc_-_Cambridge%2C_MA.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-cilantro-coconut-rice",
@@ -7422,7 +7606,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT5M",
     "cookTime": "PT20M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Cilantro_Lime_Chicken_with_Rice.jpg/960px-Cilantro_Lime_Chicken_with_Rice.jpg",
+    "imageCredit": "Leo Paulo Imperial (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-clams-with-linguine-a-birthday-treat",
@@ -7477,7 +7663,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Baby_clams_with_spicy_sauce_on_linguine_-_Massachusetts.jpg/960px-Baby_clams_with_spicy_sauce_on_linguine_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-how-to-make-boiled-ground-provisions-a-caribbean-favorite",
@@ -7615,7 +7803,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/BROWNY_BUTTER.jpg/960px-BROWNY_BUTTER.jpg",
+    "imageCredit": "Artsajith (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-coconut-pot-bake",
@@ -7719,7 +7909,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT20M",
     "cookTime": "PT20M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Baked_coconut_meat_crispy_spicy_crispy_chicken.jpg/960px-Baked_coconut_meat_crispy_spicy_crispy_chicken.jpg",
+    "imageCredit": "Fumikas Sagisavas (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-colorful-healthy-beet-and-potato-salad",
@@ -7768,7 +7960,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT40M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Colorful_healthy_Chickpea_Salad.jpg/960px-Colorful_healthy_Chickpea_Salad.jpg",
+    "imageCredit": "FitTasteTic (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-coo-coo",
@@ -7822,7 +8016,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/ULJ_Personvagn_SRJ_Co%C3%B6_38_interi%C3%B6r_2025.jpg/960px-ULJ_Personvagn_SRJ_Co%C3%B6_38_interi%C3%B6r_2025.jpg",
+    "imageCredit": "Nils Öberg (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-cornmeal-dumplings",
@@ -8028,7 +8224,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Broseley_style_tailed_heel_pipe_c.1680-1730._%28FindID_969533-1071368%29.jpg/960px-Broseley_style_tailed_heel_pipe_c.1680-1730._%28FindID_969533-1071368%29.jpg",
+    "imageCredit": "National Museum Wales , Susie White, 2019-09-05 15:12:10 (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-creamy-crunchy-apple-cole-slaw",
@@ -8139,7 +8337,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT20M",
     "cookTime": "PT15M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Bonchon%27s_%22Bibimbowl_Creamy_Curry_Chicken_Ricebox%22.jpg/960px-Bonchon%27s_%22Bibimbowl_Creamy_Curry_Chicken_Ricebox%22.jpg",
+    "imageCredit": "RoyKabanlit (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-creamy-corn-salad-recipe",
@@ -8205,7 +8405,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/DFC_2256_Savory_grilled_chicken_smothered_in_brown_gravy_served_with_crinkle-cut_fries_a_fresh_corn-topped_salad_and_creamy_mashed_potatoes.jpg/960px-DFC_2256_Savory_grilled_chicken_smothered_in_brown_gravy_served_with_crinkle-cut_fries_a_fresh_corn-topped_salad_and_creamy_mashed_potatoes.jpg",
+    "imageCredit": "PattayaPatrol (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-creamy-garlic-chicken-pasta",
@@ -8263,7 +8465,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Creamy_Chicken_Mussroom.jpg/960px-Creamy_Chicken_Mussroom.jpg",
+    "imageCredit": "Justmen (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-creamy-garlic-mashed-potatoes",
@@ -8302,7 +8506,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT5M",
     "cookTime": "PT20M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Creamy_Chesse_Pasta_with_Hot_Garlic_Bread.jpg/960px-Creamy_Chesse_Pasta_with_Hot_Garlic_Bread.jpg",
+    "imageCredit": "Sanchayita Ghosh (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-crispy-chicken-s-r11358",
@@ -8383,7 +8589,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Crispy_chicken_tenders%2C_Ship_and_Shovell_Pub_%28September_2023%29.JPG/960px-Crispy_chicken_tenders%2C_Ship_and_Shovell_Pub_%28September_2023%29.JPG",
+    "imageCredit": "Benoît Prieur (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-crispy-fried-okra-trini-fried-ochro",
@@ -8418,7 +8626,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/HK_SKD_TKO_%E5%B0%87%E8%BB%8D%E6%BE%B3_Tseung_Kwan_O_PopCorn_mall_Pop_Deli_shop_%E7%A8%BB%E9%A6%99%E8%B6%85%E7%B4%9A%E6%BC%81%E6%B8%AF_Tao_Heung_Chinese_Restaurant_food_%E7%82%B8%E5%AD%90%E9%9B%9E_Crispy_fried_chicken_July_2024_R12S_07.jpg/960px-thumbnail.jpg",
+    "imageCredit": "RUATMVWOOP East Bpote STARZUIO (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-crispy-fried-ribs-with-asian-dipping-sauce",
@@ -8500,7 +8710,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/DFC_0308_Crispy_golden-brown_fried_rolls_filled_with_creamy_cheese_served_on_skewers_with_a_sweet_chili_dipping_sauce.jpg/960px-DFC_0308_Crispy_golden-brown_fried_rolls_filled_with_creamy_cheese_served_on_skewers_with_a_sweet_chili_dipping_sauce.jpg",
+    "imageCredit": "PattayaPatrol (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-crispy-bang-bang-shrimp-with-sauce",
@@ -8574,7 +8786,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT10M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/%E5%B9%B2%E7%82%B8%E5%B0%8F%E6%B2%B3%E8%99%BE_Crispy_Deep-fried_River_Shrimps.jpg/960px-%E5%B9%B2%E7%82%B8%E5%B0%8F%E6%B2%B3%E8%99%BE_Crispy_Deep-fried_River_Shrimps.jpg",
+    "imageCredit": "Cartonfox (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-crispy-tostones-with-a-spicy-onion-pickle",
@@ -8623,7 +8837,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT10M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Baked_coconut_meat_crispy_spicy_crispy_chicken.jpg/960px-Baked_coconut_meat_crispy_spicy_crispy_chicken.jpg",
+    "imageCredit": "Fumikas Sagisavas (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-cucumber-chutney",
@@ -8662,7 +8878,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT5M",
     "cookTime": null,
-    "totalTime": "PT5M"
+    "totalTime": "PT5M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Ripe_cucumber_chutney.jpg/960px-Ripe_cucumber_chutney.jpg",
+    "imageCredit": "Raseswari (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-canned-salmon",
@@ -8821,7 +9039,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/-ChefsforJamaica-_Warm_curried_veggies_for_evacuees_who_lost_their_homes.jpg/960px--ChefsforJamaica-_Warm_curried_veggies_for_evacuees_who_lost_their_homes.jpg",
+    "imageCredit": "World Central Kitchen (CC BY 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curried-shrimp-and-pigeon-peas",
@@ -8938,7 +9158,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Singapore_Mei_Fen_-_Light_curry-flavored_rice_vermicelli_with_shrimp%2C_BBQ_pork_and_onions_%40_Noodle_Asia_-_Venetian_Hotel_-_Las_Vegas%2C_Nevada.jpg/960px-Singapore_Mei_Fen_-_Light_curry-flavored_rice_vermicelli_with_shrimp%2C_BBQ_pork_and_onions_%40_Noodle_Asia_-_Venetian_Hotel_-_Las_Vegas%2C_Nevada.jpg",
+    "imageCredit": "Tomás Del Coro (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-baigan-and-aloo-with-shrimp",
@@ -9236,7 +9458,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Beef_curry_rice_003.jpg/960px-Beef_curry_rice_003.jpg",
+    "imageCredit": "Ocdp (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-bodi-and-aloo",
@@ -9344,7 +9568,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Lunch_platter-_plain_rice%2C_chana_dal%2C_mixed_vegetable_fry%2C_mashed_potato_fry%2C_brinjal_fried_in_besan_batter%2C_crispy_fish_fry%2C_Assamese-style_pork_curry%2C_cabbage_beetroot_salad%2C_and_green_chutney.jpg/960px-thumbnail.jpg",
+    "imageCredit": "AjayDas (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-delicious-curry-calamarisquid-cuttlefish-scuttle",
@@ -9405,7 +9631,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Calamari_on_salad_-_Massachusetts.jpg/960px-Calamari_on_salad_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curried-channa-and-aloo-chickpeas-with-potatoes",
@@ -9485,7 +9713,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Dhalpuri_roti%2C_curry_chicken%2C_aloo_and_channa_from_Hi-Way_Roti_Shop_Nelson_Rd%2C_Freeport_Trinidad.jpg/960px-Dhalpuri_roti%2C_curry_chicken%2C_aloo_and_channa_from_Hi-Way_Roti_Shop_Nelson_Rd%2C_Freeport_Trinidad.jpg",
+    "imageCredit": "AFRICAN TIGRESS (CC BY 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-chaitaigne-breadnut",
@@ -9532,7 +9762,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT5M",
     "cookTime": "PT1H30M",
-    "totalTime": "PT1H35M"
+    "totalTime": "PT1H35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/CHATAIGNE_D%C3%A9c.2025.jpg/960px-CHATAIGNE_D%C3%A9c.2025.jpg",
+    "imageCredit": "Verhody (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-chicken-with-eggplant-and-chickpeas",
@@ -9602,7 +9834,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Bora_made_of_chickpeas%2C_Eggplant_and_Rice_%28%E0%A6%9B%E0%A7%8B%E0%A6%B2%E0%A6%BE%E0%A6%B0_%E0%A6%A1%E0%A6%BE%E0%A6%B2%E0%A7%87%E0%A6%B0_%E0%A6%AC%E0%A6%A1%E0%A6%BC%E0%A6%BE_%E0%A6%86%E0%A6%B0_%E0%A6%AC%E0%A7%87%E0%A6%97%E0%A7%81%E0%A6%A8%E0%A7%87%E0%A6%B0_%E0%A6%B8%E0%A6%BE%E0%A6%A5%E0%A7%87_%E0%A6%B8%E0%A6%BE%E0%A6%A6%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%A4%29.jpg/960px-Bora_made_of_chickpeas%2C_Eggplant_and_Rice_%28%E0%A6%9B%E0%A7%8B%E0%A6%B2%E0%A6%BE%E0%A6%B0_%E0%A6%A1%E0%A6%BE%E0%A6%B2%E0%A7%87%E0%A6%B0_%E0%A6%AC%E0%A6%A1%E0%A6%BC%E0%A6%BE_%E0%A6%86%E0%A6%B0_%E0%A6%AC%E0%A7%87%E0%A6%97%E0%A7%81%E0%A6%A8%E0%A7%87%E0%A6%B0_%E0%A6%B8%E0%A6%BE%E0%A6%A5%E0%A7%87_%E0%A6%B8%E0%A6%BE%E0%A6%A6%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%A4%29.jpg",
+    "imageCredit": "HridoyKundu (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-chicken-with-potatoes",
@@ -9661,7 +9895,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Yellow_curry_with_coconut%2C_chicken%2C_fingerling_potatoes%2C_fried_shallots%2C_and_basil_-_San_Francisco%2C_CA.jpg/960px-Yellow_curry_with_coconut%2C_chicken%2C_fingerling_potatoes%2C_fried_shallots%2C_and_basil_-_San_Francisco%2C_CA.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-baigan-and-aloo-with-chickpeas-curry-eggplant-and-pota",
@@ -9711,7 +9947,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Bora_made_of_chickpeas%2C_Eggplant_and_Rice_%28%E0%A6%9B%E0%A7%8B%E0%A6%B2%E0%A6%BE%E0%A6%B0_%E0%A6%A1%E0%A6%BE%E0%A6%B2%E0%A7%87%E0%A6%B0_%E0%A6%AC%E0%A6%A1%E0%A6%BC%E0%A6%BE_%E0%A6%86%E0%A6%B0_%E0%A6%AC%E0%A7%87%E0%A6%97%E0%A7%81%E0%A6%A8%E0%A7%87%E0%A6%B0_%E0%A6%B8%E0%A6%BE%E0%A6%A5%E0%A7%87_%E0%A6%B8%E0%A6%BE%E0%A6%A6%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%A4%29.jpg/960px-Bora_made_of_chickpeas%2C_Eggplant_and_Rice_%28%E0%A6%9B%E0%A7%8B%E0%A6%B2%E0%A6%BE%E0%A6%B0_%E0%A6%A1%E0%A6%BE%E0%A6%B2%E0%A7%87%E0%A6%B0_%E0%A6%AC%E0%A6%A1%E0%A6%BC%E0%A6%BE_%E0%A6%86%E0%A6%B0_%E0%A6%AC%E0%A7%87%E0%A6%97%E0%A7%81%E0%A6%A8%E0%A7%87%E0%A6%B0_%E0%A6%B8%E0%A6%BE%E0%A6%A5%E0%A7%87_%E0%A6%B8%E0%A6%BE%E0%A6%A6%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%A4%29.jpg",
+    "imageCredit": "HridoyKundu (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-conchs",
@@ -9772,7 +10010,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT30M",
     "cookTime": "PT1H30M",
-    "totalTime": "PT2H"
+    "totalTime": "PT2H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/2021--2-3_January--Conch_Key%2C_Curry_Hammock_State_Park%2C_Long_Key_State_Park%2C_%26_Kayaking_to_Lignum_Vitae_State_Botanical_Park.jpg/960px-2021--2-3_January--Conch_Key%2C_Curry_Hammock_State_Park%2C_Long_Key_State_Park%2C_%26_Kayaking_to_Lignum_Vitae_State_Botanical_Park.jpg",
+    "imageCredit": "Phil Venditti (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-duck-with-pigeon-peas",
@@ -9871,7 +10111,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT20M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Pigeon_Curry_in_Guwahati%2C_Assam_2.JPG/960px-Pigeon_Curry_in_Guwahati%2C_Assam_2.JPG",
+    "imageCredit": "Prasadsovani (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-egg-and-aloo",
@@ -9934,7 +10176,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Egg_curry_with_cabbage_foogath%2C_saag_aloo_and_rice_%283680476855%29.jpg/960px-Egg_curry_with_cabbage_foogath%2C_saag_aloo_and_rice_%283680476855%29.jpg",
+    "imageCredit": "Gordon Joly from London, UK (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-how-to-make-curry-fish-with-mango-fried-method",
@@ -10014,7 +10258,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT30M",
     "cookTime": "PT25M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Cooked_basmati_rice%2C_absorption_method%2C_seasoned_with_curry_powder.jpg/960px-Cooked_basmati_rice%2C_absorption_method%2C_seasoned_with_curry_powder.jpg",
+    "imageCredit": "Veikko Mäkelä (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-gizzard",
@@ -10080,7 +10326,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Chicken_gizzard_slices.jpg/960px-Chicken_gizzard_slices.jpg",
+    "imageCredit": "Fumikas Sagisavas (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-goat",
@@ -10142,7 +10390,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT1H30M",
-    "totalTime": "PT1H45M"
+    "totalTime": "PT1H45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Ayesha_Curry_at_GOAT_Premiere_in_Los_Angeles.jpg/960px-Ayesha_Curry_at_GOAT_Premiere_in_Los_Angeles.jpg",
+    "imageCredit": "Llee52 (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-goat-with-potato",
@@ -10209,7 +10459,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT15M",
     "cookTime": "PT1H30M",
-    "totalTime": "PT1H45M"
+    "totalTime": "PT1H45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Dhalpurie_Roti%2C_Pumpkin%2C_Channa_and_Potato%2C_Curry_Goat%2C_Trinidad_and_Tobago.JPG/960px-Dhalpurie_Roti%2C_Pumpkin%2C_Channa_and_Potato%2C_Curry_Goat%2C_Trinidad_and_Tobago.JPG",
+    "imageCredit": "Kalamazadkhan (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-curry-lamb",
@@ -10280,7 +10532,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Lamb_Durban_Curry_Rice_and_Veg_2_Durban_Curry_Chow_Rolls_-_African_Chow.jpg/960px-Lamb_Durban_Curry_Rice_and_Veg_2_Durban_Curry_Chow_Rolls_-_African_Chow.jpg",
+    "imageCredit": "Andy Li (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-lauki-bottle-gourd-simple-caribbean-style-lauki-recipe",
@@ -10348,7 +10602,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Lauki_Kofta_Curry.JPG/960px-Lauki_Kofta_Curry.JPG",
+    "imageCredit": "Nithajay (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-lauki-with-shrimp-bottle-gourd-curry",
@@ -10424,7 +10680,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT20M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H5M"
+    "totalTime": "PT1H5M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Elephant_Foot_Yam_Curry_with_Shrimps-_Amorphophallus_paeoniifolius.jpg/960px-Elephant_Foot_Yam_Curry_with_Shrimps-_Amorphophallus_paeoniifolius.jpg",
+    "imageCredit": "Aseedtolife (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-mango",
@@ -10483,7 +10741,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 16,
     "prepTime": "PT45M",
     "cookTime": "PT15M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Fish_Mango_curry_IMG20260606220818.jpg/960px-Fish_Mango_curry_IMG20260606220818.jpg",
+    "imageCredit": "SijiR (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-peas-and-aloo",
@@ -10553,7 +10813,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Aloo_Paneer_curry.jpg/960px-Aloo_Paneer_curry.jpg",
+    "imageCredit": "Medhi jyoti (CC BY 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-short-ribs-with-zucchini",
@@ -10723,7 +10985,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Coconut_Curry_Chicken_Stew_at_Scout%27s_Place_%28Highly_recommended%29_%286550034153%29.jpg/960px-Coconut_Curry_Chicken_Stew_at_Scout%27s_Place_%28Highly_recommended%29_%286550034153%29.jpg",
+    "imageCredit": "Richie Diesterheft from Chicago, IL, USA (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trini-curry-stew-pork-with-peas",
@@ -10783,7 +11047,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT15M",
     "cookTime": "PT1H10M",
-    "totalTime": "PT1H25M"
+    "totalTime": "PT1H25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Curry_rice_with_stew.jpg/960px-Curry_rice_with_stew.jpg",
+    "imageCredit": "Uthman salma (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-stew-turkey",
@@ -10855,7 +11121,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Turkey_Christmassaman_Curry_-_Leon_2023-12-04.jpg/960px-Turkey_Christmassaman_Curry_-_Leon_2023-12-04.jpg",
+    "imageCredit": "Andy Li (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-dhal-dumpling-soup",
@@ -11104,7 +11372,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT30M",
     "cookTime": "PT20M",
-    "totalTime": "PT1H5M"
+    "totalTime": "PT1H5M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Swaminathan%2C_The_Swimming_Pool_in_Dosti_Acres.jpg/960px-Swaminathan%2C_The_Swimming_Pool_in_Dosti_Acres.jpg",
+    "imageCredit": "Swaminathan (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-crispy-chicken-s-r11361",
@@ -11146,7 +11416,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT5M",
     "cookTime": "PT5M",
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/%2820240728%29_Rotterdam_V11_Salmon_%26_Crab_Cakes_with_buffalo_sauce.jpg/960px-%2820240728%29_Rotterdam_V11_Salmon_%26_Crab_Cakes_with_buffalo_sauce.jpg",
+    "imageCredit": "Roy Zuo (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-caribbean-chicken-soup",
@@ -11214,7 +11486,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT30M",
     "cookTime": "PT1H30M",
-    "totalTime": "PT2H"
+    "totalTime": "PT2H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Caribbean_chicken_20200507.jpg/960px-Caribbean_chicken_20200507.jpg",
+    "imageCredit": "Rodhullandemu (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-easy-caribbean-curry-chicken-for-beginners-small-batch-recip",
@@ -11281,7 +11555,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Dhalpuri_roti%2C_curry_chicken%2C_aloo_and_channa_from_Hi-Way_Roti_Shop_Nelson_Rd%2C_Freeport_Trinidad.jpg/960px-Dhalpuri_roti%2C_curry_chicken%2C_aloo_and_channa_from_Hi-Way_Roti_Shop_Nelson_Rd%2C_Freeport_Trinidad.jpg",
+    "imageCredit": "AFRICAN TIGRESS (CC BY 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-easy-spicy-chow-mein-recipe",
@@ -11346,7 +11622,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 3,
     "prepTime": "PT10M",
     "cookTime": "PT10M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/King_prawns_chow_mein_with_spicy_sauce_-_Stir_Fry_by_CK_2025-08-26.jpg/960px-King_prawns_chow_mein_with_spicy_sauce_-_Stir_Fry_by_CK_2025-08-26.jpg",
+    "imageCredit": "Andy Li (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-simple-stewed-chicken-using-less-sugar",
@@ -11416,7 +11694,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Chicken_breast_with_olive_oil%2C_yuzu_kosho%2C_and_black_pepper%2C_on_stewed_tomato_and_wild_rice_-_Massachusetts.jpg/960px-Chicken_breast_with_olive_oil%2C_yuzu_kosho%2C_and_black_pepper%2C_on_stewed_tomato_and_wild_rice_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-mummys-easy-cheesy-caribbean-scalloped-potatoes",
@@ -11528,7 +11808,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/La_%22choca%22_%28o_choka%2C_gallareta%2C_focha%29.jpg/960px-La_%22choca%22_%28o_choka%2C_gallareta%2C_focha%29.jpg",
+    "imageCredit": "Jail ibañez (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-eggless-banana-bread",
@@ -11680,7 +11962,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 30,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Beef_Empanada_-_Malo_Argentinian_Empanadas%2C_Brighton_2023-11-25.jpg/960px-Beef_Empanada_-_Malo_Argentinian_Empanadas%2C_Brighton_2023-11-25.jpg",
+    "imageCredit": "Andy Li (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-festive-quinoa-salad",
@@ -11833,7 +12117,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Raw_and_freshly_cut_coconut_%2872932%29.jpg/960px-Raw_and_freshly_cut_coconut_%2872932%29.jpg",
+    "imageCredit": "Fredericknoronha (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-fried-plantains-caribbean-style",
@@ -11881,7 +12167,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT2M",
     "cookTime": "PT10M",
-    "totalTime": "PT12M"
+    "totalTime": "PT12M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Packaged_Fried_Plantain_Chips.jpg/960px-Packaged_Fried_Plantain_Chips.jpg",
+    "imageCredit": "Uthman salma (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-fried-sardine-fried-smelt-fried-fish",
@@ -11937,7 +12225,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT20M",
     "cookTime": "PT15M",
-    "totalTime": "PT2H35M"
+    "totalTime": "PT2H35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Sardins_fry_%287170367251%29.jpg/960px-Sardins_fry_%287170367251%29.jpg",
+    "imageCredit": "Joegoaukfishcurry2 (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-fry-bodi",
@@ -11993,7 +12283,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Portree_-_panoramio_-_M%C3%A1ty%C3%A1s_B%C3%B3di.jpg/960px-Portree_-_panoramio_-_M%C3%A1ty%C3%A1s_B%C3%B3di.jpg",
+    "imageCredit": "Mátyás Bódi (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-fry-bodi-and-aloo",
@@ -12043,7 +12335,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT5M",
     "cookTime": "PT25M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/DFC_2244_Juicy_grilled_steak_smothered_in_savory_brown_gravy_served_with_roasted_potatoes_saut%C3%A9ed_vegetables_and_a_crisp_mixed_salad.jpg/960px-DFC_2244_Juicy_grilled_steak_smothered_in_savory_brown_gravy_served_with_roasted_potatoes_saut%C3%A9ed_vegetables_and_a_crisp_mixed_salad.jpg",
+    "imageCredit": "PattayaPatrol (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-garlic-pork",
@@ -12097,7 +12391,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Roast_garlic_pork_with_slaw_%2818282837873%29.jpg/960px-Roast_garlic_pork_with_slaw_%2818282837873%29.jpg",
+    "imageCredit": "jeffreyw (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-geera-pork",
@@ -12145,7 +12441,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/FOOD_Geera_Pork.jpg/960px-FOOD_Geera_Pork.jpg",
+    "imageCredit": "Grueslayer (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-goat-pilaf-r10882",
@@ -12234,7 +12532,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT40M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Lamb_chops_pilaf_with_soup.jpg/960px-Lamb_chops_pilaf_with_soup.jpg",
+    "imageCredit": "Fumikas Sagisavas (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-gojiya-gujiya-goja-sweet-spiced-coconut-fried-dough",
@@ -12384,7 +12684,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H10M"
+    "totalTime": "PT1H10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Roasted_Greek_potatoes_%285177695285%29.jpg/960px-Roasted_Greek_potatoes_%285177695285%29.jpg",
+    "imageCredit": "Geoff Peters from Vancouver, BC, Canada (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-grilled-chicken-kabobs",
@@ -12434,7 +12736,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT25M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Beef_and_chicken_kebabs_from_Grill_Kabob_in_Tysons_Corner_Center.jpg/960px-Beef_and_chicken_kebabs_from_Grill_Kabob_in_Tysons_Corner_Center.jpg",
+    "imageCredit": "Ser Amantio di Nicolao (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-rias-healthy-grilled-chicken-legs",
@@ -12484,7 +12788,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT50M",
-    "totalTime": "PT1H5M"
+    "totalTime": "PT1H5M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Grilled_Lemongrass_Chicken_B%C3%A1nh_M%C3%AC_with_Sate_Sauce%2C_Viet_Sub%2C_Vancouver%2C_BC.jpg/960px-Grilled_Lemongrass_Chicken_B%C3%A1nh_M%C3%AC_with_Sate_Sauce%2C_Viet_Sub%2C_Vancouver%2C_BC.jpg",
+    "imageCredit": "StoppedTime (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-grilled-lamb-kabobs",
@@ -12533,7 +12839,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Beef_and_chicken_kebabs_from_Grill_Kabob_in_Tysons_Corner_Center.jpg/960px-Beef_and_chicken_kebabs_from_Grill_Kabob_in_Tysons_Corner_Center.jpg",
+    "imageCredit": "Ser Amantio di Nicolao (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-gulab-jamoon-recipe-trinidad-fat-kurma-recipe",
@@ -12594,7 +12902,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 30,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Gulab_Jamoon.jpg/960px-Gulab_Jamoon.jpg",
+    "imageCredit": "Padmanabhan Gopalakrishnan (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-gulgula-banana-fritters",
@@ -12817,7 +13127,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Hainanese_Chicken_Rice%2C_with_fried_egg_and_buttermilk_fried_chicken_skin.jpg/960px-Hainanese_Chicken_Rice%2C_with_fried_egg_and_buttermilk_fried_chicken_skin.jpg",
+    "imageCredit": "T.Tseng (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-garlic-herb-shrimp-pasta",
@@ -12871,7 +13183,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Shrimp_Garlic_Pasta.jpg/960px-Shrimp_Garlic_Pasta.jpg",
+    "imageCredit": "Ralff Nestor Nacor (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-herb-roasted-cornish-hens",
@@ -13030,7 +13344,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT20M",
     "cookTime": "PT2H",
-    "totalTime": "PT2H20M"
+    "totalTime": "PT2H20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Herb_Roasted_Lamb.jpg/960px-Herb_Roasted_Lamb.jpg",
+    "imageCredit": "TheCulinaryGeek (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-herb-roasted-rack-of-lamb",
@@ -13085,7 +13401,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 7,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Herb_Roasted_Lamb.jpg/960px-Herb_Roasted_Lamb.jpg",
+    "imageCredit": "TheCulinaryGeek (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-cwrs-garlic-bread",
@@ -13128,7 +13446,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT5M",
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Herbed_garlic_bread_sandwich_with_olives.jpg/960px-Herbed_garlic_bread_sandwich_with_olives.jpg",
+    "imageCredit": "jeffreyw (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-challah-bread",
@@ -13203,7 +13523,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 20,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Liat_Portal_for_Foodie_Disorder_-_Challa_bread.jpg/960px-Liat_Portal_for_Foodie_Disorder_-_Challa_bread.jpg",
+    "imageCredit": "HaJunkiyada (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-holiday-lasagna-for-a-party",
@@ -13347,7 +13669,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 16,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": "PT3H"
+    "totalTime": "PT3H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Home_made_sour_dough_bread.jpg/960px-Home_made_sour_dough_bread.jpg",
+    "imageCredit": "Tomascastelazo (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-homemade-cajun-seasoning",
@@ -13378,7 +13702,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Ragin%27_Cajun_Foods_-_Ragin%27_Cajun_Seasonings%2C_Ragin%27_Cajun_Fixin%27s_and_Cajun%27s_Choice_Premium_Blend_Seasonings.jpg/960px-Ragin%27_Cajun_Foods_-_Ragin%27_Cajun_Seasonings%2C_Ragin%27_Cajun_Fixin%27s_and_Cajun%27s_Choice_Premium_Blend_Seasonings.jpg",
+    "imageCredit": "Spatms (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-homemade-sazon",
@@ -13407,7 +13733,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Sazon_House.jpg/960px-Sazon_House.jpg",
+    "imageCredit": "CNEcija12345 (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-sazon-chicken",
@@ -13481,7 +13809,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT35M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Chicken_Egg_without_Eggshell_5859.jpg/960px-Chicken_Egg_without_Eggshell_5859.jpg",
+    "imageCredit": "Biswarup Ganguly (CC BY 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-teriyaki-chicken",
@@ -13606,7 +13936,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Donburi_Rice_bowl_of_Chicken_Teriyaki_with_Tomato.jpg/960px-Donburi_Rice_bowl_of_Chicken_Teriyaki_with_Tomato.jpg",
+    "imageCredit": "TechnoKittyCat (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-hot-cross-buns",
@@ -13746,7 +14078,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT3M",
     "cookTime": "PT7M",
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/B.C._Electric_Railway_Interurban_car_No._1219_after_collision_with_truck_carrying_canned_salmon.jpg/960px-B.C._Electric_Railway_Interurban_car_No._1219_after_collision_with_truck_carrying_canned_salmon.jpg",
+    "imageCredit": "Williams, Donn B.A. (1920-1999) (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-how-to-cook-the-perfect-basmati-rice-a-foolproof-recipe",
@@ -13934,7 +14268,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT30M",
     "cookTime": null,
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/A_man_makes_his_living_opening_and_selling_coconuts_on_the_street_%28Fordsburg%2C_2015%29.jpg/960px-A_man_makes_his_living_opening_and_selling_coconuts_on_the_street_%28Fordsburg%2C_2015%29.jpg",
+    "imageCredit": "Guinivere Pedro (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-moms-stewed-red-beans",
@@ -14282,7 +14618,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT40M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Punjabi_Kala_Channa_Curry.JPG/960px-Punjabi_Kala_Channa_Curry.JPG",
+    "imageCredit": "Miansari66 (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-instant-pot-curry-channa-and-aloo",
@@ -14354,7 +14692,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT30M",
     "cookTime": "PT1H5M",
-    "totalTime": "PT1H35M"
+    "totalTime": "PT1H35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Dhalpuri_roti%2C_curry_chicken%2C_aloo_and_channa_from_Hi-Way_Roti_Shop_Nelson_Rd%2C_Freeport_Trinidad.jpg/960px-Dhalpuri_roti%2C_curry_chicken%2C_aloo_and_channa_from_Hi-Way_Roti_Shop_Nelson_Rd%2C_Freeport_Trinidad.jpg",
+    "imageCredit": "AFRICAN TIGRESS (CC BY 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-instant-pot-curry-lima-beans",
@@ -14511,7 +14851,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT35M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Roti_Lunch_Special%2C_Goat_Masala%2C_Butter_Chicken%2C_Eggplant_Curry_-_Chilli_India_Express_-_AUD10.95_%283486009774%29.jpg/960px-Roti_Lunch_Special%2C_Goat_Masala%2C_Butter_Chicken%2C_Eggplant_Curry_-_Chilli_India_Express_-_AUD10.95_%283486009774%29.jpg",
+    "imageCredit": "Alpha from Melbourne, Australia (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-instant-pot-trinidad-callaloo",
@@ -14584,7 +14926,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT35M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/02.Trinidad_%2859%29.JPG/960px-02.Trinidad_%2859%29.JPG",
+    "imageCredit": "Elemaki (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-irresistible-shrimp-pies",
@@ -14936,7 +15280,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT5M",
     "cookTime": "PT10M",
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Jodhpuri_Kanda%28Pyaaz%29_Kachori_with_tamarind_chutney.jpg/960px-Jodhpuri_Kanda%28Pyaaz%29_Kachori_with_tamarind_chutney.jpg",
+    "imageCredit": "PabIoChocobar (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-lanis-favorite-pancakes",
@@ -14987,7 +15333,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Rybn%C3%ADk_Pan%C4%8D%C3%A1k_u_obce_Straky.jpg/960px-Rybn%C3%ADk_Pan%C4%8D%C3%A1k_u_obce_Straky.jpg",
+    "imageCredit": "Petr1888 (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-lazy-sunday-small-blender-sponge-cake",
@@ -15247,7 +15595,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT1H",
     "cookTime": "PT20M",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Bowl_of_lentil_soup_with_green_and_red_lentils.jpg/960px-Bowl_of_lentil_soup_with_green_and_red_lentils.jpg",
+    "imageCredit": "Whoisjohngalt (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-macaroni-pie",
@@ -15320,7 +15670,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 16,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Bajan_macaroni_pie.jpg/960px-Bajan_macaroni_pie.jpg",
+    "imageCredit": "Upjav (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-how-to-make-malida-trinidad-eid-dessert",
@@ -15501,7 +15853,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 16,
     "prepTime": "PT20M",
     "cookTime": "PT40M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/HK_food_%E6%9D%B1%E6%B5%B7%E5%A0%82_Arome_Bakery_chocolate_marble_cake_July_2026_N13P_08.jpg/960px-HK_food_%E6%9D%B1%E6%B5%B7%E5%A0%82_Arome_Bakery_chocolate_marble_cake_July_2026_N13P_08.jpg",
+    "imageCredit": "HSOMIOA IWK maoowndy MMAP (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-masala-chai",
@@ -15608,7 +15962,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT1H5M",
-    "totalTime": "PT1H35M"
+    "totalTime": "PT1H35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Meatloaf_close_up.jpg/960px-Meatloaf_close_up.jpg",
+    "imageCredit": "Roundhere44 (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-seim-and-peas",
@@ -15911,7 +16267,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Nathan%27s_grill_and_pappy%27s_fried_chicken_Aranguez_Trinidad.jpg/960px-Nathan%27s_grill_and_pappy%27s_fried_chicken_Aranguez_Trinidad.jpg",
+    "imageCredit": "999real (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-murtani",
@@ -16016,7 +16374,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/A_Mushrooms_and_Bell_peppers.jpg/960px-A_Mushrooms_and_Bell_peppers.jpg",
+    "imageCredit": "Peachyeung316 (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-new-england-clam-chowder-recipe",
@@ -16074,7 +16434,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/2019-02-07_23_58_09_Campbell%27s_Home_Style_New_England_Clam_Chowder_after_being_heated_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg/960px-2019-02-07_23_58_09_Campbell%27s_Home_Style_New_England_Clam_Chowder_after_being_heated_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg",
+    "imageCredit": "Famartin (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-nyc-halal-cart-rice-street-cart-style-yellow-rice",
@@ -16211,7 +16573,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT25M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Late_Night_Halal_Cart_Visit_%289166924397%29.jpg/960px-Late_Night_Halal_Cart_Visit_%289166924397%29.jpg",
+    "imageCredit": "City Foodsters (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-onion-fry-bake-using-an-electric-mixer",
@@ -16265,7 +16629,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 16,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Rice_with_fried_onion_oil_-_Teochew_Bak_Kut_Teh_%284590433472%29.jpg/960px-Rice_with_fried_onion_oil_-_Teochew_Bak_Kut_Teh_%284590433472%29.jpg",
+    "imageCredit": "Alpha from Melbourne, Australia (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-oven-baked-sweet-potato-fries",
@@ -16310,7 +16676,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT25M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Baked_Sweet_Potato_on_Salad.jpg/960px-Baked_Sweet_Potato_on_Salad.jpg",
+    "imageCredit": "FitTasteTic (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-oven-bbq-chicken-with-rias-homemade-bbq-sauce-recipes",
@@ -16388,7 +16756,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Grilled_Lemongrass_Chicken_B%C3%A1nh_M%C3%AC_with_Sate_Sauce%2C_Viet_Sub%2C_Vancouver%2C_BC.jpg/960px-Grilled_Lemongrass_Chicken_B%C3%A1nh_M%C3%AC_with_Sate_Sauce%2C_Viet_Sub%2C_Vancouver%2C_BC.jpg",
+    "imageCredit": "StoppedTime (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-roasted-asparagus",
@@ -16491,7 +16861,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Vegetarian_Moussaka_and_Roasted_Cauliflower_-_Foodilic_2025-10-13.jpg/960px-Vegetarian_Moussaka_and_Roasted_Cauliflower_-_Foodilic_2025-10-13.jpg",
+    "imageCredit": "Andy Li (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-oven-roasted-lamb-chops-bbq-option",
@@ -16550,7 +16922,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Roasted_chicken_oven.jpg/960px-Roasted_chicken_oven.jpg",
+    "imageCredit": "P1898 (CC BY 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-baked-pork",
@@ -16668,7 +17042,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 15,
     "prepTime": "PT30M",
     "cookTime": "PT4H",
-    "totalTime": "PT4H30M"
+    "totalTime": "PT4H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Pork_Shoulder_picnic_roast.jpg/960px-Pork_Shoulder_picnic_roast.jpg",
+    "imageCredit": "Mark Miller (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-paella-with-a-caribbean-twist",
@@ -16750,7 +17126,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT10M",
     "cookTime": "PT40M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Paella_de_fruit_de_mer.jpg/960px-Paella_de_fruit_de_mer.jpg",
+    "imageCredit": "Wilfredor (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-pan-coconut-bread",
@@ -16822,7 +17200,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Green-lipped_mussels_in_coconut_milk%2C_with_buttered_bread_-_Picton%2C_New_Zealand.jpg/960px-Green-lipped_mussels_in_coconut_milk%2C_with_buttered_bread_-_Picton%2C_New_Zealand.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-pan-roasted-brussel-sprouts-with-bacon-carrots",
@@ -16850,7 +17230,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Roasted_Brussel_Sprouts_%284070526401%29.jpg/960px-Roasted_Brussel_Sprouts_%284070526401%29.jpg",
+    "imageCredit": "Vegan Feast Catering (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-pasta-with-meat-sauce",
@@ -16901,7 +17283,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Pasta_with_meat_sauce.jpg/960px-Pasta_with_meat_sauce.jpg",
+    "imageCredit": "Geoffreyrabbit (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-patchoi-with-shrimp",
@@ -16983,7 +17367,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT5M",
     "cookTime": null,
-    "totalTime": "PT5M"
+    "totalTime": "PT5M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Fruit_and_peanut_butter_smoothie._1.jpg/960px-Fruit_and_peanut_butter_smoothie._1.jpg",
+    "imageCredit": "SharonDawn (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-peas-dhal-curry-peas-curry-pigeon-peas",
@@ -17035,7 +17421,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Pigeon_Curry_in_Guwahati%2C_Assam_2.JPG/960px-Pigeon_Curry_in_Guwahati%2C_Assam_2.JPG",
+    "imageCredit": "Prasadsovani (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-peas-puri-pigeon-peas-roti-peas-paratha",
@@ -17114,7 +17502,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Decorated_one-humped_Camel%2C_Camelus_dromedarius%2C_at_Puri_Sea_Beach%2C_Odisha%2C_India.jpg/960px-Decorated_one-humped_Camel%2C_Camelus_dromedarius%2C_at_Puri_Sea_Beach%2C_Odisha%2C_India.jpg",
+    "imageCredit": "Joydeep Chakraborty (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-the-perfect-caribbean-roast-chicken-recipe",
@@ -17170,7 +17560,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT1H10M",
-    "totalTime": "PT1H25M"
+    "totalTime": "PT1H25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/HK_%E6%9D%B1%E6%B6%8C_Tung_Chung_%E5%81%A5%E6%9D%B1%E8%B7%AF_Kin_Tung_Road_%E6%98%A0%E7%81%A3%E5%9C%92_Caribbean_Coast_Square_%E6%98%A0%E7%81%A3%E8%96%88_shopping_mall_March_2022_Px3_21_Perfect_Cut_barber_shop.jpg/960px-HK_%E6%9D%B1%E6%B6%8C_Tung_Chung_%E5%81%A5%E6%9D%B1%E8%B7%AF_Kin_Tung_Road_%E6%98%A0%E7%81%A3%E5%9C%92_Caribbean_Coast_Square_%E6%98%A0%E7%81%A3%E8%96%88_shopping_mall_March_2022_Px3_21_Perfect_Cut_barber_shop.jpg",
+    "imageCredit": "Harguaobimgwo TAMGIU (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-roast-turkey",
@@ -17247,7 +17639,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 20,
     "prepTime": "PT15M",
     "cookTime": "PT3H30M",
-    "totalTime": "PT3H45M"
+    "totalTime": "PT3H45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/HK_%E6%9D%B1%E6%B6%8C_Tung_Chung_%E5%81%A5%E6%9D%B1%E8%B7%AF_Kin_Tung_Road_%E6%98%A0%E7%81%A3%E5%9C%92_Caribbean_Coast_Square_%E6%98%A0%E7%81%A3%E8%96%88_shopping_mall_March_2022_Px3_21_Perfect_Cut_barber_shop.jpg/960px-HK_%E6%9D%B1%E6%B6%8C_Tung_Chung_%E5%81%A5%E6%9D%B1%E8%B7%AF_Kin_Tung_Road_%E6%98%A0%E7%81%A3%E5%9C%92_Caribbean_Coast_Square_%E6%98%A0%E7%81%A3%E8%96%88_shopping_mall_March_2022_Px3_21_Perfect_Cut_barber_shop.jpg",
+    "imageCredit": "Harguaobimgwo TAMGIU (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-jerk-turkey-cook-in-oven-grill-or-smoker",
@@ -17321,7 +17715,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 25,
     "prepTime": "PT30M",
     "cookTime": "PT3H",
-    "totalTime": "PT3H30M"
+    "totalTime": "PT3H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Camouflage_-_Smoke_Screens_-_Hiding_troop_movements_by_smoke_screens._American_infantrymen_are_perfecting_a_scheme_for_throwing_smoke_before_their_advance%2C_thus_baffling_the_enemy_in_his_attempt_to_determine_wher%28...%29_-_NARA_-_20809106.jpg/960px-thumbnail.jpg",
+    "imageCredit": "Unknown authorUnknown author or not provided (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-how-to-cook-white-rice-perfect-every-time",
@@ -17430,7 +17826,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT20M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/White_the_perfect_colour.jpg/960px-White_the_perfect_colour.jpg",
+    "imageCredit": "Baishali Joardar (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-peruvian-roasted-chicken-with-green-sauce",
@@ -17568,7 +17966,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT1M",
     "cookTime": "PT15M",
-    "totalTime": "PT16M"
+    "totalTime": "PT16M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Trinidad_iftar_plate_date%2C_pholourie%2C_channa.jpg/960px-Trinidad_iftar_plate_date%2C_pholourie%2C_channa.jpg",
+    "imageCredit": "999real (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-quick-tasty-zucchini-carrot-fritter-low-carb",
@@ -17611,7 +18011,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 1,
     "prepTime": "PT5M",
     "cookTime": "PT5M",
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Zucchini_%26_feta_fritters_%287804257920%29.jpg/960px-Zucchini_%26_feta_fritters_%287804257920%29.jpg",
+    "imageCredit": "Nicole Bratt from Seattle, WA, USA (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-instant-pot-stewed-oxtail",
@@ -17727,7 +18129,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Salad_of_iceberg_lettuce%2C_carrots%2C_turkey%2C_bacon%2C_and_egg_with_creamy_dressing_-_Massachusetts.jpg/960px-Salad_of_iceberg_lettuce%2C_carrots%2C_turkey%2C_bacon%2C_and_egg_with_creamy_dressing_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-quick-and-easy-carrot-rice-recipe",
@@ -17772,7 +18176,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT10M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/A_plate_Rice_with_Shredded_Carrots_green_pepper_and_Stew.jpg/960px-A_plate_Rice_with_Shredded_Carrots_green_pepper_and_Stew.jpg",
+    "imageCredit": "Uthman salma (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-quick-simple-chicken-pelau",
@@ -17831,7 +18237,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Simple_Chicken_Fillet_with_Rice_and_a_bowl_of_soup.jpg/960px-Simple_Chicken_Fillet_with_Rice_and_a_bowl_of_soup.jpg",
+    "imageCredit": "Sinchen.Lin (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-happy-new-year-quick-peas-carrots-fried-rice",
@@ -17893,7 +18301,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Chicken%2C_carrots%2C_peas%2C_and_corn_on_fried_rice%2C_with_soy_sauce_and_black_pepper_-_Massachusetts.jpg/960px-Chicken%2C_carrots%2C_peas%2C_and_corn_on_fried_rice%2C_with_soy_sauce_and_black_pepper_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-goat-pilaf-r10890",
@@ -17938,7 +18348,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Kafta_Raita.JPG/960px-Kafta_Raita.JPG",
+    "imageCredit": "Miansari66 (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-rias-easy-raw-mango-chutney",
@@ -17978,7 +18390,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Raw_Mango_Chutney_India.jpg/960px-Raw_Mango_Chutney_India.jpg",
+    "imageCredit": "Divya Kudua (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-refreshing-pineapple-chow",
@@ -18022,7 +18436,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/DFC_3934_A_colorful_medley_of_freshly_chopped_fruits_-_pineapple_grapes_apple_rings_papaya_and_apricot_pieces_-_piled_together_for_a_bright_refreshing_fruit_salad.jpg/960px-thumbnail.jpg",
+    "imageCredit": "PattayaPatrol (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-boiled-tomato-choka",
@@ -18076,7 +18492,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT20M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Plate_of_Boiled_Plantain%2C_Yam%2CBoiled_Egg%2C_and_Tomato_Stew.jpg/960px-Plate_of_Boiled_Plantain%2C_Yam%2CBoiled_Egg%2C_and_Tomato_Stew.jpg",
+    "imageCredit": "Uthman salma (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-rias-chicken-biryani",
@@ -18146,7 +18564,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT30M",
     "cookTime": "PT40M",
-    "totalTime": "PT1H10M"
+    "totalTime": "PT1H10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biryani_with_Chicken_Golek.jpg/960px-Biryani_with_Chicken_Golek.jpg",
+    "imageCredit": "Vee Satayamas (CC BY 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-rias-family-chicken-soup-recipe",
@@ -18230,7 +18650,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Cream_of_Chicken_Soup.jpg/960px-Cream_of_Chicken_Soup.jpg",
+    "imageCredit": "Miansari66 (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-rias-family-crepe-recipe",
@@ -18324,7 +18746,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT20M",
     "cookTime": "PT1H15M",
-    "totalTime": "PT1H35M"
+    "totalTime": "PT1H35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Jerk_chicken_stall.jpg/960px-Jerk_chicken_stall.jpg",
+    "imageCredit": "Rathfelder (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-rias-rice-and-beans-recipe",
@@ -18367,7 +18791,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT1H",
     "cookTime": "PT30M",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/RED_PAHADI_REYANSH_RICE_BEAN.jpg/960px-RED_PAHADI_REYANSH_RICE_BEAN.jpg",
+    "imageCredit": "Ranjithkumar Murugesan (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-holiday-ham",
@@ -18521,7 +18947,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT30M",
     "cookTime": "PT1H30M",
-    "totalTime": "PT2H"
+    "totalTime": "PT2H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Whole_Roasted_Alina_Duck%2C_watercress_spaetzle%2C_kohlrabi_and_scallion_%2829974606318%29.jpg/960px-Whole_Roasted_Alina_Duck%2C_watercress_spaetzle%2C_kohlrabi_and_scallion_%2829974606318%29.jpg",
+    "imageCredit": "T.Tseng (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-roasted-pork-shoulder",
@@ -18577,7 +19005,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT30M",
     "cookTime": "PT4H",
-    "totalTime": "PT4H30M"
+    "totalTime": "PT4H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Pork_Shoulder_picnic_roast.jpg/960px-Pork_Shoulder_picnic_roast.jpg",
+    "imageCredit": "Mark Miller (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trini-roat-a-diwali-sweet",
@@ -18736,7 +19166,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 16,
     "prepTime": "PT10M",
     "cookTime": "PT10M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/A_Sketch_of_Sardarni_Sada_Kaur.jpg/960px-A_Sketch_of_Sardarni_Sada_Kaur.jpg",
+    "imageCredit": "Kehar Singh, court artist of Maharaja Ranjit Singh (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-saheena-spinach-fritter",
@@ -18854,7 +19286,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Salmon_pie_with_sour_cream.jpg/960px-Salmon_pie_with_sour_cream.jpg",
+    "imageCredit": "me (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-saltfish-with-veggies-and-flour-dumplings",
@@ -18971,7 +19405,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT10M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Steak_with_sauteed_vegetables_-_Massachusetts.jpg/960px-Steak_with_sauteed_vegetables_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-how-to-cook-pak-choy-patchoi-pak-choi",
@@ -19019,7 +19455,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Steak_with_sauteed_vegetables_-_Massachusetts.jpg/960px-Steak_with_sauteed_vegetables_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-scallion-cilantro-habanero-fried-rice",
@@ -19129,7 +19567,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 20,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Scalloped_yellow_glider_%28Cymothoe_fumana_fumana%29_female.jpg/960px-Scalloped_yellow_glider_%28Cymothoe_fumana_fumana%29_female.jpg",
+    "imageCredit": "Charles J. Sharp (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-seasoning-rice-with-mixed-veggies",
@@ -19240,7 +19680,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Homerton_College_-_Shepherd%27s_pie.jpg/960px-Homerton_College_-_Shepherd%27s_pie.jpg",
+    "imageCredit": "Oxfordian Kissuth (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-shrimp-and-peppers-stir-fry",
@@ -19289,7 +19731,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Pasta_with_pepper%27s_sauce_and_shrimps_%2826982998502%29.jpg/960px-Pasta_with_pepper%27s_sauce_and_shrimps_%2826982998502%29.jpg",
+    "imageCredit": "Luca Nebuloni from Milan, Italy (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-shrimp-veggie-fried-rice",
@@ -19376,7 +19820,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT20M",
     "cookTime": "PT10M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Veggie_Imitation_Shrimp_Stir_Fry_with_Shiitake_and_Bok_Choy_%283754464671%29.jpg/960px-Veggie_Imitation_Shrimp_Stir_Fry_with_Shiitake_and_Bok_Choy_%283754464671%29.jpg",
+    "imageCredit": "Vegan Feast Catering (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trini-style-shrimp-lo-mein-recipe",
@@ -19440,7 +19886,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Shrimp_powder_with_yi_mein_in_chinese_noodles_shop.jpg/960px-Shrimp_powder_with_yi_mein_in_chinese_noodles_shop.jpg",
+    "imageCredit": "Peachyeung316 (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-shrimp-wonton-sticks",
@@ -19508,7 +19956,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT3M",
-    "totalTime": "PT13M"
+    "totalTime": "PT13M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Kimmi%27s_Shrimp_Dip_%28475915161%29.jpg/960px-Kimmi%27s_Shrimp_Dip_%28475915161%29.jpg",
+    "imageCredit": "Mack Male from Edmonton, AB, Canada (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-chicken",
@@ -19673,7 +20123,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Simple_papaya_mung_dal_with_coconut.jpg/960px-Simple_papaya_mung_dal_with_coconut.jpg",
+    "imageCredit": "Raseswari (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-kitchari",
@@ -19860,7 +20312,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Simple_fried_rice.jpg/960px-Simple_fried_rice.jpg",
+    "imageCredit": "Indian Traditional cusine (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-simple-delicious-spice-rub-turkey-recipe",
@@ -20009,7 +20463,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 20,
     "prepTime": "PT30M",
     "cookTime": "PT4H",
-    "totalTime": "PT4H30M"
+    "totalTime": "PT4H30M",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Simple_turkey_tail_brooms.png",
+    "imageCredit": "Bagelpigeon (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-simple-steamed-green-beans-with-garlic",
@@ -20043,7 +20499,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT5M",
     "cookTime": "PT5M",
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Steam_glutinous_rice_with_simple_japanese_hearth%2CKatori-city%2CJapan.JPG/960px-Steam_glutinous_rice_with_simple_japanese_hearth%2CKatori-city%2CJapan.JPG",
+    "imageCredit": "katorisi (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-smoked-herring-and-tomatoes",
@@ -20092,7 +20550,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT10M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Smoked_herring%2C_tomatoes%2C_and_corn%2C_with_black_pepper_and_capers_-_Massachusetts.jpg/960px-Smoked_herring%2C_tomatoes%2C_and_corn%2C_with_black_pepper_and_capers_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-the-softest-chapati-recipe-whole-wheat-flatbread",
@@ -20138,7 +20598,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT10M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Chapati-1.jpg/960px-Chapati-1.jpg",
+    "imageCredit": "safaritravelplus (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-spaghetti-and-meatballs-recipe",
@@ -20207,7 +20669,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT1H30M",
-    "totalTime": "PT1H45M"
+    "totalTime": "PT1H45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Liat_Portal_for_Foodie_Disorder_-_Spaghetti_and_meatballs.jpg/960px-Liat_Portal_for_Foodie_Disorder_-_Spaghetti_and_meatballs.jpg",
+    "imageCredit": "HaJunkiyada (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-spicy-pickled-red-onion",
@@ -20259,7 +20723,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Spicy_hot_oil_seared_hand-pulled_noodles_with_chopped%2C_pickled_red_chili_and_bok_choy_-_Massachusetts.jpg/960px-Spicy_hot_oil_seared_hand-pulled_noodles_with_chopped%2C_pickled_red_chili_and_bok_choy_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-split-peas-dhal-pholourie",
@@ -20444,7 +20910,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/HK_YTM_Jordan_Road_n_Canton_Road_%E9%9D%92%E8%91%89%E6%B5%B7%E9%AE%AE%E9%85%92%E5%AE%B6_Holly_Seafood_Restaurant_food_%E6%A4%B0%E7%B5%B2%E7%B3%A5%E7%B1%B3%E7%B3%95_steamed_cake_with_grated_coconut_dessert_June_2025_R12S_02.jpg/960px-HK_YTM_Jordan_Road_n_Canton_Road_%E9%9D%92%E8%91%89%E6%B5%B7%E9%AE%AE%E9%85%92%E5%AE%B6_Holly_Seafood_Restaurant_food_%E6%A4%B0%E7%B5%B2%E7%B3%A5%E7%B1%B3%E7%B3%95_steamed_cake_with_grated_coconut_dessert_June_2025_R12S_02.jpg",
+    "imageCredit": "TsdgTion Orrm (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-stewed-beef",
@@ -20507,7 +20975,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT45M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Deep-dish_pizza%2C_homemade%2C_with_cheese_and_tomato_over_stewed_beef_-_Massachusetts.jpg/960px-Deep-dish_pizza%2C_homemade%2C_with_cheese_and_tomato_over_stewed_beef_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-stewed-beef-with-dumplings",
@@ -20588,7 +21058,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/20240404_Stewed_wihte_cabbage_with_potatoe_dumplings_anagoria.jpg/960px-20240404_Stewed_wihte_cabbage_with_potatoe_dumplings_anagoria.jpg",
+    "imageCredit": "Anagoria (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-stewed-black-eye-peas",
@@ -20653,7 +21125,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT40M",
     "cookTime": "PT40M",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Hamburger%2C_roast_corn%2C_and_stewed_tomato%2C_with_Worcestershire_sauce_and_black_pepper_-_Massachusetts.jpg/960px-Hamburger%2C_roast_corn%2C_and_stewed_tomato%2C_with_Worcestershire_sauce_and_black_pepper_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-caribbean-stewed-canned-black-beans",
@@ -20826,7 +21300,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT40M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Chicken_breast_with_olive_oil%2C_yuzu_kosho%2C_and_black_pepper%2C_on_stewed_tomato_and_wild_rice_-_Massachusetts.jpg/960px-Chicken_breast_with_olive_oil%2C_yuzu_kosho%2C_and_black_pepper%2C_on_stewed_tomato_and_wild_rice_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-stewed-chicken-with-bodi-bora-yard-beans",
@@ -20888,7 +21364,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Chicken_breast_with_olive_oil%2C_yuzu_kosho%2C_and_black_pepper%2C_on_stewed_tomato_and_wild_rice_-_Massachusetts.jpg/960px-Chicken_breast_with_olive_oil%2C_yuzu_kosho%2C_and_black_pepper%2C_on_stewed_tomato_and_wild_rice_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trini-stewed-chicken-with-macaroni-and-veggies",
@@ -20950,7 +21428,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Chicken_macaroni_gratin_%288256535271%29.jpg/960px-Chicken_macaroni_gratin_%288256535271%29.jpg",
+    "imageCredit": "pelican from Tokyo, Japan (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-stewed-chicken-with-pigeon-peas",
@@ -21004,7 +21484,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Chicken_breast_with_olive_oil%2C_yuzu_kosho%2C_and_black_pepper%2C_on_stewed_tomato_and_wild_rice_-_Massachusetts.jpg/960px-Chicken_breast_with_olive_oil%2C_yuzu_kosho%2C_and_black_pepper%2C_on_stewed_tomato_and_wild_rice_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-stewed-chicken-with-potatoes",
@@ -21056,7 +21538,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Stewed_Chicken_in_Clay_Pot.jpg/960px-Stewed_Chicken_in_Clay_Pot.jpg",
+    "imageCredit": "Ceeseven (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-stewed-gizzards",
@@ -21114,7 +21598,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Chicken_gizzard_slices.jpg/960px-Chicken_gizzard_slices.jpg",
+    "imageCredit": "Fumikas Sagisavas (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-stewed-lamb-instant-pot-option",
@@ -21170,7 +21656,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Lamb_and_potato%2C_fried_then_stewed%2C_Uzbek_style_-_San_Francisco%2C_CA.jpg/960px-Lamb_and_potato%2C_fried_then_stewed%2C_Uzbek_style_-_San_Francisco%2C_CA.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-stewed-lentils",
@@ -21234,7 +21722,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT45M",
     "cookTime": "PT30M",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Roasted_pork_tenderloin%2C_stewed_lentils%2C_saut%C3%A9ed_cauliflower%2C_seared_cherry_tomatoes_%E3%83%9D%E3%83%BC%E3%82%AF%E3%83%86%E3%83%B3%E3%83%80%E3%83%BC%E3%83%AD%E3%82%A4%E3%83%B3%E3%81%AE%E3%83%AD%E3%83%BC%E3%82%B9%E3%83%88%E3%80%81%E3%83%AC%E3%83%B3%E3%82%BA%E8%B1%86%E3%81%AE%E7%85%AE%E8%BE%BC%E3%81%BF%E3%80%81%E3%82%AB%E3%83%AA%E3%83%95%E3%83%A9%E3%83%AF%E3%83%BC%E3%81%AE%E7%82%92%E3%82%81%E3%82%82%E3%81%AE%E3%80%81%E7%84%BC%E3%81%8D%E3%83%97%E3%83%81%E3%83%88%E3%83%9E%E3%83%88.jpg/960px-thumbnail.jpg",
+    "imageCredit": "naotakem (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-stewed-turkey-with-pigeon-peas",
@@ -21594,7 +22084,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Laotian_bowl_of_Pheu_Hmong_at_Sunday_Market_in_French_Guiana.jpg/960px-Laotian_bowl_of_Pheu_Hmong_at_Sunday_Market_in_French_Guiana.jpg",
+    "imageCredit": "amanderson2 (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-tamarind-chutney-for-doubles-and-aloo-pie",
@@ -21806,7 +22298,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT1H",
     "cookTime": "PT30M",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Preparing_sandwiches_with_butter_and_cream_cheese_on_brown_bread_at_home_during_daytime.jpg/960px-Preparing_sandwiches_with_butter_and_cream_cheese_on_brown_bread_at_home_during_daytime.jpg",
+    "imageCredit": "Shixart1985 (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-saltfish-and-tomatoes",
@@ -21852,7 +22346,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Jamaican_Ackee_and_Saltfish.jpg/960px-Jamaican_Ackee_and_Saltfish.jpg",
+    "imageCredit": "Sumit Surai (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trini-cassava-oil-down",
@@ -21943,7 +22439,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT10M",
     "cookTime": "PT16M",
-    "totalTime": "PT26M"
+    "totalTime": "PT26M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Cheese_Sandwich_with_Rye_Bread.jpg/960px-Cheese_Sandwich_with_Rye_Bread.jpg",
+    "imageCredit": "Miscellaneous contributor (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trini-chinese-style-fried-chicken",
@@ -22004,7 +22502,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT2D",
     "cookTime": "PT30M",
-    "totalTime": "PT2D30M"
+    "totalTime": "PT2D30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Louisiana_Famous_Fried_Chicken_Chinese_Food_sign.jpg/960px-Louisiana_Famous_Fried_Chicken_Chinese_Food_sign.jpg",
+    "imageCredit": "Richard Bauer (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-curry-chicken-with-pigeon-peas",
@@ -22400,7 +22900,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 25,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Trini_La_Espatan_%28Pirinioak%29%2C_1973.jpg/960px-Trini_La_Espatan_%28Pirinioak%29%2C_1973.jpg",
+    "imageCredit": "Goizarin (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-sponge-cake",
@@ -22587,7 +23089,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT5M",
     "cookTime": "PT40M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Cranberry_chutney.jpg/960px-Cranberry_chutney.jpg",
+    "imageCredit": "Anathea Utley from lisbon, maine (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-stewed-lamb",
@@ -22792,7 +23296,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H5M"
+    "totalTime": "PT1H5M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Curry_Powder%2C_Trinidad_and_Tobago.JPG/960px-Curry_Powder%2C_Trinidad_and_Tobago.JPG",
+    "imageCredit": "Kalamazadkhan (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-bhagi",
@@ -22981,7 +23487,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 20,
     "prepTime": "PT20M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Trinidad_and_Tobago-style_black_cake.jpg/960px-Trinidad_and_Tobago-style_black_cake.jpg",
+    "imageCredit": "Guettarda (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-black-eyed-peas-pelau",
@@ -23285,7 +23793,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Trinidad_iftar_plate_date%2C_pholourie%2C_channa.jpg/960px-Trinidad_iftar_plate_date%2C_pholourie%2C_channa.jpg",
+    "imageCredit": "999real (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-stir-fry-cabbage-and-tomatoes-stewed-cabbage-and-tomatoes",
@@ -23322,7 +23832,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Bake_and_Shark_with_hot_sauce_and_cabbage_Natalie%27s_famous_Bake_and_Shark_Maracas_Bay_Trinidad.jpg/960px-Bake_and_Shark_with_hot_sauce_and_cabbage_Natalie%27s_famous_Bake_and_Shark_Maracas_Bay_Trinidad.jpg",
+    "imageCredit": "amanderson2 (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-callaloo",
@@ -23386,7 +23898,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/02.Trinidad_%2859%29.JPG/960px-02.Trinidad_%2859%29.JPG",
+    "imageCredit": "Elemaki (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-carhee",
@@ -23535,7 +24049,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Dhalpuri_roti%2C_curry_chicken%2C_aloo_and_channa_from_Hi-Way_Roti_Shop_Nelson_Rd%2C_Freeport_Trinidad.jpg/960px-Dhalpuri_roti%2C_curry_chicken%2C_aloo_and_channa_from_Hi-Way_Roti_Shop_Nelson_Rd%2C_Freeport_Trinidad.jpg",
+    "imageCredit": "AFRICAN TIGRESS (CC BY 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-what-is-trinidad-chow-and-how-to-make-it",
@@ -23580,7 +24096,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/02.Trinidad_%2859%29.JPG/960px-02.Trinidad_%2859%29.JPG",
+    "imageCredit": "Elemaki (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-coconut-palette-popsicles",
@@ -23622,7 +24140,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Coconut_Vendor%2C_Marabella%2C_Trinidad_and_Tobago.JPG/960px-Coconut_Vendor%2C_Marabella%2C_Trinidad_and_Tobago.JPG",
+    "imageCredit": "Kalamazadkhan (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-corn-soup-with-dumplings",
@@ -23848,7 +24368,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT25M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Dhalpurie_Roti%2C_Channa_and_Potato%2C_Curry_Shrimp%2C_Trinidad_and_Tobago.JPG/960px-Dhalpurie_Roti%2C_Channa_and_Potato%2C_Curry_Shrimp%2C_Trinidad_and_Tobago.JPG",
+    "imageCredit": "Kalamazadkhan (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-curry-beef-recipe",
@@ -23907,7 +24429,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT10M",
     "cookTime": "PT40M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Curry_Powder%2C_Trinidad_and_Tobago.JPG/960px-Curry_Powder%2C_Trinidad_and_Tobago.JPG",
+    "imageCredit": "Kalamazadkhan (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-curry-channa-with-eggplant-no-preboiling-method",
@@ -23982,7 +24506,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT10M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H10M"
+    "totalTime": "PT1H10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Dhalpurie_Roti%2C_Channa_and_Potato%2C_Curry_Shrimp%2C_Trinidad_and_Tobago.JPG/960px-Dhalpurie_Roti%2C_Channa_and_Potato%2C_Curry_Shrimp%2C_Trinidad_and_Tobago.JPG",
+    "imageCredit": "Kalamazadkhan (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-curry-chicken",
@@ -24049,7 +24575,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Dhalpuri_roti%2C_curry_chicken%2C_aloo_and_channa_from_Hi-Way_Roti_Shop_Nelson_Rd%2C_Freeport_Trinidad.jpg/960px-Dhalpuri_roti%2C_curry_chicken%2C_aloo_and_channa_from_Hi-Way_Roti_Shop_Nelson_Rd%2C_Freeport_Trinidad.jpg",
+    "imageCredit": "AFRICAN TIGRESS (CC BY 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-curry-duck",
@@ -24127,7 +24655,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT45M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H45M"
+    "totalTime": "PT1H45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Curry_Powder%2C_Trinidad_and_Tobago.JPG/960px-Curry_Powder%2C_Trinidad_and_Tobago.JPG",
+    "imageCredit": "Kalamazadkhan (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-dasheen-bush-bhagi-trinidad-taro-leaves-recipe",
@@ -24196,7 +24726,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Dasheen_bush_%28Colocasia_esculenta%29_field_in_Trinidad_and_Tobago.jpg/960px-Dasheen_bush_%28Colocasia_esculenta%29_field_in_Trinidad_and_Tobago.jpg",
+    "imageCredit": "Food and Agriculture Organization of the United Nations (CC BY 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-dhal",
@@ -24250,7 +24782,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H10M"
+    "totalTime": "PT1H10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/02.Trinidad_%2859%29.JPG/960px-02.Trinidad_%2859%29.JPG",
+    "imageCredit": "Elemaki (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-how-to-make-trinidad-doubles-detailed-recipe-instructions",
@@ -24368,7 +24902,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT1H30M",
-    "totalTime": "PT1H40M"
+    "totalTime": "PT1H40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/02.Trinidad_%2859%29.JPG/960px-02.Trinidad_%2859%29.JPG",
+    "imageCredit": "Elemaki (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-fish-broth-fish-brof",
@@ -24502,7 +25038,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT15M",
     "cookTime": "PT25M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Nathan%27s_grill_and_pappy%27s_fried_chicken_Aranguez_Trinidad.jpg/960px-Nathan%27s_grill_and_pappy%27s_fried_chicken_Aranguez_Trinidad.jpg",
+    "imageCredit": "999real (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-fried-bake-and-shark-r2209",
@@ -24555,7 +25093,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Nathan%27s_grill_and_pappy%27s_fried_chicken_Aranguez_Trinidad.jpg/960px-Nathan%27s_grill_and_pappy%27s_fried_chicken_Aranguez_Trinidad.jpg",
+    "imageCredit": "999real (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trini-fried-bake",
@@ -24608,7 +25148,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Nathan%27s_grill_and_pappy%27s_fried_chicken_Aranguez_Trinidad.jpg/960px-Nathan%27s_grill_and_pappy%27s_fried_chicken_Aranguez_Trinidad.jpg",
+    "imageCredit": "999real (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-fried-bake-and-shark-r6621",
@@ -24652,7 +25194,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Nathan%27s_grill_and_pappy%27s_fried_chicken_Aranguez_Trinidad.jpg/960px-Nathan%27s_grill_and_pappy%27s_fried_chicken_Aranguez_Trinidad.jpg",
+    "imageCredit": "999real (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-fry-bodi-with-shrimp",
@@ -24722,7 +25266,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Dhalpurie_Roti%2C_Channa_and_Potato%2C_Curry_Shrimp%2C_Trinidad_and_Tobago.JPG/960px-Dhalpurie_Roti%2C_Channa_and_Potato%2C_Curry_Shrimp%2C_Trinidad_and_Tobago.JPG",
+    "imageCredit": "Kalamazadkhan (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-fried-okra-and-potatoes-fry-ochro-and-aloo",
@@ -24888,7 +25434,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT2H15M"
+    "totalTime": "PT2H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/A_bakery_in_El_Socorro%2C_Trinidad_on_the_El_Socorro_main_road_with_a_sign_for_hot_hops%2C_hops_bread_is_a_type_of_local_bread_roll.jpg/960px-A_bakery_in_El_Socorro%2C_Trinidad_on_the_El_Socorro_main_road_with_a_sign_for_hot_hops%2C_hops_bread_is_a_type_of_local_bread_roll.jpg",
+    "imageCredit": "999real (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-rias-trinidad-lime-pepper-sauce",
@@ -24946,7 +25494,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT30M",
     "cookTime": null,
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/FOOD_Trinidad_Scorpion_Pepper_Sauce.jpg/960px-FOOD_Trinidad_Scorpion_Pepper_Sauce.jpg",
+    "imageCredit": "Grueslayer (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-macaroni-and-eggs",
@@ -25105,7 +25655,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nice_green_mango_Trinidad.jpg/960px-Nice_green_mango_Trinidad.jpg",
+    "imageCredit": "999real (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-mother-in-law-trinidad-pepper-condiment",
@@ -25151,7 +25703,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Mother_Jones_Protesting_in_Trinidad_Colorado.jpg/960px-Mother_Jones_Protesting_in_Trinidad_Colorado.jpg",
+    "imageCredit": "Charles H. Kerr Company (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-curry-shrimp-roti-r3291",
@@ -25529,7 +26083,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/02.Trinidad_%2859%29.JPG/960px-02.Trinidad_%2859%29.JPG",
+    "imageCredit": "Elemaki (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-pepper-roti",
@@ -25674,7 +26230,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Trinidad_Pimento_Peppers.jpg/960px-Trinidad_Pimento_Peppers.jpg",
+    "imageCredit": "MdAgDept (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-pigtail-pelau",
@@ -25798,7 +26356,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT30M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Bake_and_Shark_with_hot_sauce_and_cabbage_Natalie%27s_famous_Bake_and_Shark_Maracas_Bay_Trinidad.jpg/960px-Bake_and_Shark_with_hot_sauce_and_cabbage_Natalie%27s_famous_Bake_and_Shark_Maracas_Bay_Trinidad.jpg",
+    "imageCredit": "amanderson2 (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-how-to-make-chicken-puffs-trinidad-r6790",
@@ -25853,7 +26413,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 30,
     "prepTime": "PT20M",
     "cookTime": "PT20M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/02.Trinidad_%2859%29.JPG/960px-02.Trinidad_%2859%29.JPG",
+    "imageCredit": "Elemaki (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-pumpkin-talkari",
@@ -25910,7 +26472,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT50M",
-    "totalTime": "PT1H5M"
+    "totalTime": "PT1H5M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Dhalpurie_Roti%2C_Pumpkin%2C_Channa_and_Potato%2C_Curry_Goat%2C_Trinidad_and_Tobago.JPG/960px-Dhalpurie_Roti%2C_Pumpkin%2C_Channa_and_Potato%2C_Curry_Goat%2C_Trinidad_and_Tobago.JPG",
+    "imageCredit": "Kalamazadkhan (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-pumpkin-with-mixed-seafood",
@@ -26057,7 +26621,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT5M",
     "cookTime": "PT5M",
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/FOOD_Trinidad_Scorpion_Pepper_Sauce.jpg/960px-FOOD_Trinidad_Scorpion_Pepper_Sauce.jpg",
+    "imageCredit": "Grueslayer (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-salad",
@@ -26100,7 +26666,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/02.Trinidad_%2859%29.JPG/960px-02.Trinidad_%2859%29.JPG",
+    "imageCredit": "Elemaki (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-sardine-choka",
@@ -26308,7 +26876,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Dhalpurie_Roti%2C_Channa_and_Potato%2C_Curry_Shrimp%2C_Trinidad_and_Tobago.JPG/960px-Dhalpurie_Roti%2C_Channa_and_Potato%2C_Curry_Shrimp%2C_Trinidad_and_Tobago.JPG",
+    "imageCredit": "Kalamazadkhan (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-stewed-cannellini-beans",
@@ -26448,7 +27018,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Nathan%27s_grill_and_pappy%27s_fried_chicken_Aranguez_Trinidad.jpg/960px-Nathan%27s_grill_and_pappy%27s_fried_chicken_Aranguez_Trinidad.jpg",
+    "imageCredit": "999real (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-stewed-fish-recipe",
@@ -26651,7 +27223,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 25,
     "prepTime": "PT15M",
     "cookTime": "PT1H30M",
-    "totalTime": "PT1H45M"
+    "totalTime": "PT1H45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Trinidad_and_Tobago_Sweet_Tassa.jpg/960px-Trinidad_and_Tobago_Sweet_Tassa.jpg",
+    "imageCredit": "Chrisbal (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-sweet-rice-caribbean-rice",
@@ -26706,7 +27280,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT5M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H5M"
+    "totalTime": "PT1H5M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Trinidad_and_Tobago_Sweet_Tassa.jpg/960px-Trinidad_and_Tobago_Sweet_Tassa.jpg",
+    "imageCredit": "Chrisbal (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-tomato-choka-recipe",
@@ -26745,7 +27321,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/A_fruit_and_vegetable_stall_in_South_Trinidad_selling_coconuts%2C_coconut_water%2C_pineapple%2C_bananas%2C_green_fig%2C_tomatoes_and_more.jpg/960px-A_fruit_and_vegetable_stall_in_South_Trinidad_selling_coconuts%2C_coconut_water%2C_pineapple%2C_bananas%2C_green_fig%2C_tomatoes_and_more.jpg",
+    "imageCredit": "999real (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-vegan-pelau",
@@ -26797,7 +27375,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/02.Trinidad_%2859%29.JPG/960px-02.Trinidad_%2859%29.JPG",
+    "imageCredit": "Elemaki (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-white-garlic-sauce-easy-caribbean-white-sauce",
@@ -26934,7 +27514,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Cornbread_in_glass_pan.jpg/960px-Cornbread_in_glass_pan.jpg",
+    "imageCredit": "Infrogmation of New Orleans (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-fried-caraille",
@@ -27209,7 +27791,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT40M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Liat_Portal_for_Foodie_Disorder_-_Turmeric_Chicken_with_Rice_and_Vegetables.jpg/960px-Liat_Portal_for_Foodie_Disorder_-_Turmeric_Chicken_with_Rice_and_Vegetables.jpg",
+    "imageCredit": "HaJunkiyada (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-turmeric-rice-yellow-rice",
@@ -27261,7 +27845,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6e/YELLOW_TURMERIC_RICE_KNOWN_AS_ARROZ_VALENCIANA_PANGASINAN_STYLE.jpg",
+    "imageCredit": "Elmer Centeno Guevarra (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-ultimate-fish-pie",
@@ -27403,7 +27989,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 16,
     "prepTime": "PT20M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H5M"
+    "totalTime": "PT1H5M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Ruf_Ultimate_%282%29.jpg/960px-Ruf_Ultimate_%282%29.jpg",
+    "imageCredit": "The Car Spy (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-sada-eddoes",
@@ -27456,7 +28044,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/A_Sketch_of_Sardarni_Sada_Kaur.jpg/960px-A_Sketch_of_Sardarni_Sada_Kaur.jpg",
+    "imageCredit": "Kehar Singh, court artist of Maharaja Ranjit Singh (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-veggie-chow-mein",
@@ -27519,7 +28109,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT10M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Vegetable_Chow_Mein_in_Vancouver%2C_BC_%285611849162%29.jpg/960px-Vegetable_Chow_Mein_in_Vancouver%2C_BC_%285611849162%29.jpg",
+    "imageCredit": "Jennifer from Vancouver, Canada (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-versatile-salad-dressing-recipe",
@@ -27651,7 +28243,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Salmon%2C_tomato%2C_mashed_potato%2C_broccoli%2C_mushrooms%2C_and_corn_-_Massachusetts.jpg/960px-Salmon%2C_tomato%2C_mashed_potato%2C_broccoli%2C_mushrooms%2C_and_corn_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidad-tobago-yellow-rice-and-peas",
@@ -27714,7 +28308,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Yellow-throated_Warbler%2C_Peacock_Park%2C_Coconut_Grove%2C_Florida_2021.jpg/960px-Yellow-throated_Warbler%2C_Peacock_Park%2C_Coconut_Grove%2C_Florida_2021.jpg",
+    "imageCredit": "Ant.tab (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-a-quick-summer-fruit-compote",
@@ -27842,7 +28438,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT30M",
     "cookTime": "PT4H",
-    "totalTime": "PT4H30M"
+    "totalTime": "PT4H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/The_Drum_Jamaican_Smoke_House%2C_Isleworth_-_London_2024-09-06.jpg/960px-The_Drum_Jamaican_Smoke_House%2C_Isleworth_-_London_2024-09-06.jpg",
+    "imageCredit": "Jim Linwood (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-addictive-summertime-glazed-grilled-peaches",
@@ -27957,7 +28555,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": "PT20M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Curried_cauliflower_and_chickpea_stew.jpg/960px-Curried_cauliflower_and_chickpea_stew.jpg",
+    "imageCredit": "Jim Reynolds from Cleveland, USA (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-apple-mango-chicken-salad-2",
@@ -28005,7 +28605,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Curry_roasted_cauliflower_and_haricots_verts%2C_roasted_garlic_celeriac_puree%2C_beef_bourguignon%2C_and_chicken_thigh_with_sweet_potato_and_apple_-_Boston%2C_MA.jpg/960px-Curry_roasted_cauliflower_and_haricots_verts%2C_roasted_garlic_celeriac_puree%2C_beef_bourguignon%2C_and_chicken_thigh_with_sweet_potato_and_apple_-_Boston%2C_MA.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-apple-thyme-mashed-potatoes",
@@ -28056,7 +28658,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/2017-11-22_17_49_56_A_Thanksgiving_dinner_plate_with_turkey%2C_stuffing%2C_mashed_potatoes_and_gravy%2C_apple_sauce%2C_cranberry_sauce%2C_croissant_rolls%2C_pickles_and_deviled_eggs_in_Ewing%2C_Mercer_County%2C_New_Jersey.jpg/960px-thumbnail.jpg",
+    "imageCredit": "Famartin (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-applewood-smoked-pineapple-chow-2",
@@ -28172,7 +28776,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT20M",
     "cookTime": "PT1H",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Caribbean_Sea_-_Long_Exposure.jpg/960px-Caribbean_Sea_-_Long_Exposure.jpg",
+    "imageCredit": "Martin Falbisoner (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-avocado-grapefruit-salad",
@@ -28220,7 +28826,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT12M",
     "cookTime": null,
-    "totalTime": "PT12M"
+    "totalTime": "PT12M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Salad_with_avocado%2C_grapefruit%2C_pommegranate_%26_walnuts.jpg/960px-Salad_with_avocado%2C_grapefruit%2C_pommegranate_%26_walnuts.jpg",
+    "imageCredit": "Paul Keller (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-baigan-eggplant-and-aloo-potato-with-stewed-pork",
@@ -28355,7 +28963,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT30M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Litti%2C_dal%2C_baigan_choka_and_saag.jpg/960px-Litti%2C_dal%2C_baigan_choka_and_saag.jpg",
+    "imageCredit": "FoodPlate (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-banana-bread-pudding-2",
@@ -28419,7 +29029,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT20M",
     "cookTime": "PT50M",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/West_50_Banana_Bread_Pudding.jpg/960px-West_50_Banana_Bread_Pudding.jpg",
+    "imageCredit": "Andrew Currie (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaican-beans-and-franks-2",
@@ -28470,7 +29082,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT5M",
     "cookTime": "PT15M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/%28Wisconsin%29_McBean%2C_Frank_-_13th_Infantry%2C_Company_I_-_DPLA_-_8ae179dcb319b42808961a5f092734ed.jpg/960px-%28Wisconsin%29_McBean%2C_Frank_-_13th_Infantry%2C_Company_I_-_DPLA_-_8ae179dcb319b42808961a5f092734ed.jpg",
+    "imageCredit": "War Department. The Adjutant General's Office. 3/4/1907-9/18/1947 (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-best-simple-jamaican-jerk-turkey-legs-easy-oven-recipe",
@@ -28597,7 +29211,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT1H",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Cane_sugar_caramel_pudding_on_sale_at_the_Monday_Market_in_Kakuri%2C_Kaduna_04.jpg/960px-Cane_sugar_caramel_pudding_on_sale_at_the_Monday_Market_in_Kakuri%2C_Kaduna_04.jpg",
+    "imageCredit": "Kambai Akau (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-bok-choy-with-corned-beef-2",
@@ -28645,7 +29261,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Salmon%2C_green_beans%2C_bok_choy%2C_leafy_veg%2C_mushrooms%2C_avocado%2C_mashed_potato%2C_baby_corn_-_Massachusetts.jpg/960px-Salmon%2C_green_beans%2C_bok_choy%2C_leafy_veg%2C_mushrooms%2C_avocado%2C_mashed_potato%2C_baby_corn_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-trinidadian-chenette-guinep-ackee-chow-recipe",
@@ -28811,7 +29429,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT10M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Pizza_night-_prosciutto%2C_Pineapple%2C_and_caramelized_onions_%2833460897776%29.jpg/960px-Pizza_night-_prosciutto%2C_Pineapple%2C_and_caramelized_onions_%2833460897776%29.jpg",
+    "imageCredit": "terri_bateman (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-jamaican-trinidadian-caribbean-beef-sweet-potato-and-pumpkin-soup-2",
@@ -29597,7 +30217,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT35M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Caribbean_chicken_20200507.jpg/960px-Caribbean_chicken_20200507.jpg",
+    "imageCredit": "Rodhullandemu (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-caribbean-curry-cow-heel-cow-foot-2",
@@ -30021,7 +30643,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT30M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Ratatouille%2C_Mazatl%C3%A1n%2C_21_de_junio_de_2023.jpg/960px-Ratatouille%2C_Mazatl%C3%A1n%2C_21_de_junio_de_2023.jpg",
+    "imageCredit": "El Nuevo Doge (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-caribbean-soup-recipe-authentic-hearty-traditional-soup",
@@ -30104,7 +30728,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT45M",
     "cookTime": "PT2H30M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Cubans_enjoying_the_Caribbean_water_at_La_Boca_on_a_Saturday_night%2C_03-23-2019_254_%2832915771267%29.jpg/960px-Cubans_enjoying_the_Caribbean_water_at_La_Boca_on_a_Saturday_night%2C_03-23-2019_254_%2832915771267%29.jpg",
+    "imageCredit": "Richard Hurd from Green Bay, USA (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-bitter-melon-with-shrimp-stir-fry",
@@ -30298,7 +30924,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Caribbean_shrimp_marinaded_in_orange_juice_and_chilis.jpg/960px-Caribbean_shrimp_marinaded_in_orange_juice_and_chilis.jpg",
+    "imageCredit": "Jon Sullivan (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-caribbean-stewed-chicken-with-butter-beans",
@@ -30677,7 +31305,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Dish_of_pelau%2C_coleslaw%2C_cassava_pone%2C_and_a_mac_and_cheese_pie.jpg/960px-Dish_of_pelau%2C_coleslaw%2C_cassava_pone%2C_and_a_mac_and_cheese_pie.jpg",
+    "imageCredit": "K6ka (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-charred-sweet-corn-porridge",
@@ -31186,7 +31816,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Buckeye_Classic_Silver_Caribbean_Rum_02.jpg/960px-Buckeye_Classic_Silver_Caribbean_Rum_02.jpg",
+    "imageCredit": "Indrajit Das (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-classic-caribbean-yam-pie",
@@ -31254,7 +31886,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Buckeye_Classic_Silver_Caribbean_Rum_02.jpg/960px-Buckeye_Classic_Silver_Caribbean_Rum_02.jpg",
+    "imageCredit": "Indrajit Das (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-geera-pork-spicy-cumin-pork",
@@ -31393,7 +32027,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT20M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Classic_Club_Sandwich_with_Leafy_Green_Salad%2C_Jamaica_Blue_Carousel%2C_2025_%2801%29.jpg/960px-Classic_Club_Sandwich_with_Leafy_Green_Salad%2C_Jamaica_Blue_Carousel%2C_2025_%2801%29.jpg",
+    "imageCredit": "Bahnfrend (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-trinidadian-classic-shrimp-ceviche-2",
@@ -31504,7 +32140,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/French_toast_with_cinnamon_and_coconut_flakes.jpg/960px-French_toast_with_cinnamon_and_coconut_flakes.jpg",
+    "imageCredit": "W.carter (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-coconut-macaroni-and-cheese",
@@ -31853,7 +32491,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Serving_cooked_cornmeal_known_as_Isitshwala.jpg/960px-Serving_cooked_cornmeal_known_as_Isitshwala.jpg",
+    "imageCredit": "JerryMathema1807 (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-crazy-delicious-pak-choy-fried-rice-quick-caribbean-vegan-it",
@@ -31963,7 +32603,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT25M",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/2020-02-14_04_54_13_A_sample_of_Tostito%27s_Creamy_Spinach_Dip_in_the_Dulles_section_of_Sterling%2C_Loudoun_County%2C_Virginia.jpg/960px-2020-02-14_04_54_13_A_sample_of_Tostito%27s_Creamy_Spinach_Dip_in_the_Dulles_section_of_Sterling%2C_Loudoun_County%2C_Virginia.jpg",
+    "imageCredit": "Famartin (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-108785-2",
@@ -32135,7 +32777,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Chinese_yam_and_buckwheat_crispy_rolls.jpg/960px-Chinese_yam_and_buckwheat_crispy_rolls.jpg",
+    "imageCredit": "Fumikas Sagisavas (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-crispy-fried-chicken-wonton",
@@ -32199,7 +32843,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 50,
     "prepTime": "PT20M",
     "cookTime": "PT10M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Freshippo_crispy_fried_chicken.jpg/960px-Freshippo_crispy_fried_chicken.jpg",
+    "imageCredit": "Fumikas Sagisavas (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-curry-aloo-vegan-curry-potatoes-a-vegetarian-delight",
@@ -32261,7 +32907,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT35M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/DFC_4179_Crispy_golden_fried_fish_topped_with_caramelized_onions_fresh_red_onion_slices_and_fragrant_curry_leaves_-_a_crunchy_savory_delight.jpg/960px-DFC_4179_Crispy_golden_fried_fish_topped_with_caramelized_onions_fresh_red_onion_slices_and_fragrant_curry_leaves_-_a_crunchy_savory_delight.jpg",
+    "imageCredit": "PattayaPatrol (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-curry-aloo-with-leftover-stewed-pork",
@@ -32387,7 +33035,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT20M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Pigeon_Curry_in_Guwahati%2C_Assam_2.JPG/960px-Pigeon_Curry_in_Guwahati%2C_Assam_2.JPG",
+    "imageCredit": "Prasadsovani (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-curry-cassava-a-deep-rooted-recipe",
@@ -32454,7 +33104,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Cassava_flower_curry_from_Rayong.jpg/960px-Cassava_flower_curry_from_Rayong.jpg",
+    "imageCredit": "Vee Satayamas (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-curry-channa-pigeon-peas-aloo-ultimate-comfort-food",
@@ -32592,7 +33244,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Pumpkin_Katsu_Curry_and_Chicken_Katsu_Curry_-_Sunoso.jpg/960px-Pumpkin_Katsu_Curry_and_Chicken_Katsu_Curry_-_Sunoso.jpg",
+    "imageCredit": "Andy Li (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-curry-chicken-with-bodi",
@@ -32661,7 +33315,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT30M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Pumpkin_Katsu_Curry_and_Chicken_Katsu_Curry_-_Sunoso.jpg/960px-Pumpkin_Katsu_Curry_and_Chicken_Katsu_Curry_-_Sunoso.jpg",
+    "imageCredit": "Andy Li (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-20-minute-curry-chicken-with-spinach",
@@ -32729,7 +33385,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Chicken_breast_on_potato%2C_with_mushrooms_and_creamed_spinach_-_Christchurch%2C_New_Zealand.jpg/960px-Chicken_breast_on_potato%2C_with_mushrooms_and_creamed_spinach_-_Christchurch%2C_New_Zealand.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-curry-chickpeas-with-potato-spinach",
@@ -32795,7 +33453,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Spinach-Chickpea_Curry_%283117324894%29.jpg/960px-Spinach-Chickpea_Curry_%283117324894%29.jpg",
+    "imageCredit": "Kari Sullivan from Austin, TX (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-jamaican-curry-mackerel-with-tomato-sauce-2",
@@ -32840,7 +33500,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT15M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Mackerel_with_pickles_and_mullet_roe_-_Mackerel_sauce_with_white_wine%2C_lemon%2C_capers_and_chilies_in_vinegar%2C_fried_tomato%2C_mullet_roe%2C_mackerel_marinated_in_sugar_and_salt._Mackerel_infusion_%2815250555084%29.jpg/960px-thumbnail.jpg",
+    "imageCredit": "City Foodsters (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-curry-smelts-recipe-a-dangerously-addictive-comfort-meal",
@@ -32913,7 +33575,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT20M",
     "cookTime": "PT30M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Gould_and_Curry_Smelting_Works%2C_Virginia_City%2C_Nevada_-_NARA_-_519592.jpg/960px-Gould_and_Curry_Smelting_Works%2C_Virginia_City%2C_Nevada_-_NARA_-_519592.jpg",
+    "imageCredit": "Timothy H. O'Sullivan (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaican-curry-stew-chicken-wings-2",
@@ -32981,7 +33645,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT35M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Coconut_Curry_Chicken_Stew_at_Scout%27s_Place_%28Highly_recommended%29_%286550034153%29.jpg/960px-Coconut_Curry_Chicken_Stew_at_Scout%27s_Place_%28Highly_recommended%29_%286550034153%29.jpg",
+    "imageCredit": "Richie Diesterheft from Chicago, IL, USA (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-curry-stew-pork-with-kale",
@@ -33047,7 +33713,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Curry_rice_with_stew.jpg/960px-Curry_rice_with_stew.jpg",
+    "imageCredit": "Uthman salma (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-curry-string-beans-with-potato-aloo",
@@ -33115,7 +33783,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Potato_and_Green_Beans_Curry.jpg/960px-Potato_and_Green_Beans_Curry.jpg",
+    "imageCredit": "Gaurav Dhwaj Khadka (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-delicious-easy-stewed-beef-liver-recipe",
@@ -33901,7 +34571,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT40M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Grilled_chicken_flavoured_with_soy_sauce_and_fried_chicken_flavoured_with_sweet_and_spicy_sauce%2C_and_rice_mixed_with_leaf_mustard_and_spicy_fish_eggs_lunch_box_of_NewDays.jpg/960px-thumbnail.jpg",
+    "imageCredit": "毒島みるく (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-easy-comforting-roasted-butternut-and-carrot-soup",
@@ -34120,7 +34792,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Crab_apple.jpg/960px-Crab_apple.jpg",
+    "imageCredit": "Fumikas Sagisavas (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-haitian-easy-haitian-pineapple-jam",
@@ -34244,7 +34918,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT40M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Roasted_garlic_broccolini%2C_dinner_bun%2C_roasted_fingerling_potatoes%2C_couscous_salad_with_dressing%2C_turkey_caprese_tea_sandwiches_-_Boston%2C_MA.jpg/960px-Roasted_garlic_broccolini%2C_dinner_bun%2C_roasted_fingerling_potatoes%2C_couscous_salad_with_dressing%2C_turkey_caprese_tea_sandwiches_-_Boston%2C_MA.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-easy-hoisin-noodles-with-chicken-caribbean-chinese-stir-fry-",
@@ -34370,7 +35046,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT5M",
     "cookTime": "PT20M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Starbucks_Iced_Shaken_Peach_Oolong_Tea.jpg/960px-Starbucks_Iced_Shaken_Peach_Oolong_Tea.jpg",
+    "imageCredit": "Fumikas Sagisavas (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-quick-cornbread",
@@ -34420,7 +35098,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT35M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Cornbread_in_glass_pan.jpg/960px-Cornbread_in_glass_pan.jpg",
+    "imageCredit": "Infrogmation of New Orleans (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaican-easy-jamaican-carrot-juice",
@@ -34532,7 +35212,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT25M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Jamaican_rice_and_peas_1.jpg/960px-Jamaican_rice_and_peas_1.jpg",
+    "imageCredit": "Xaymacan (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-easy-jerk-shrimp-fried-rice-on-the-traeger-flatrock",
@@ -34681,7 +35363,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT1H",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Roasted_Lemon_Herb_Chicken.jpg/960px-Roasted_Lemon_Herb_Chicken.jpg",
+    "imageCredit": "TheCulinaryGeek (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-easy-pigeon-peas-dhal",
@@ -34816,7 +35500,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT4H30M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Jamaican_jerk_pork.jpg/960px-Jamaican_jerk_pork.jpg",
+    "imageCredit": "Xaymacan (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-stewed-pigeon-peas",
@@ -34948,7 +35634,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Stuffing_for_Thanksgiving_Dinner.jpg/960px-Stuffing_for_Thanksgiving_Dinner.jpg",
+    "imageCredit": "Dorevabelfiore (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-easy-tropical-mango-passionfruit-juice",
@@ -35077,7 +35765,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Vegetable_Chow_Mein_in_Shillong.jpg/960px-Vegetable_Chow_Mein_in_Shillong.jpg",
+    "imageCredit": "ANKAN (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-how-to-make-eddoes-choka",
@@ -35147,7 +35837,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT1H10M",
     "cookTime": "PT20M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/La_%22choca%22_%28o_choka%2C_gallareta%2C_focha%29.jpg/960px-La_%22choca%22_%28o_choka%2C_gallareta%2C_focha%29.jpg",
+    "imageCredit": "Jail ibañez (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-fantastic-sweet-rice-rice-pudding",
@@ -35621,7 +36313,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT2H",
     "cookTime": "PT25M",
-    "totalTime": "PT2H25M"
+    "totalTime": "PT2H25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Louisiana_Famous_Fried_Chicken_Chinese_Food_sign.jpg/960px-Louisiana_Famous_Fried_Chicken_Chinese_Food_sign.jpg",
+    "imageCredit": "Richard Bauer (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-fry-aloo-potato-with-corned-mutton",
@@ -35674,7 +36368,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Christchurch_Meat_Company_Limited_Compressed_corned_mutton%2C_warranted_to_keep_in_any_climate._Christchurch_Press_Co_Lith%2C_N.Z._1906-1920%3F.jpg/960px-Christchurch_Meat_Company_Limited_Compressed_corned_mutton%2C_warranted_to_keep_in_any_climate._Christchurch_Press_Co_Lith%2C_N.Z._1906-1920%3F.jpg",
+    "imageCredit": "National Library NZ on The Commons (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-trinidadian-fry-aloo-potato-with-ochro-okra",
@@ -35764,7 +36460,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Salad_of_iceberg_lettuce%2C_tomatoes%2C_corn%2C_turkey%2C_hard-boiled_eggs%2C_and_bacon%2C_with_garlic_vinaigrette_and_black_pepper_-_Massachusetts.jpg/960px-Salad_of_iceberg_lettuce%2C_tomatoes%2C_corn%2C_turkey%2C_hard-boiled_eggs%2C_and_bacon%2C_with_garlic_vinaigrette_and_black_pepper_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-garlic-and-chive-string-beans-with-cashews",
@@ -35819,7 +36517,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT8M",
-    "totalTime": "PT18M"
+    "totalTime": "PT18M",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Garlic_parsley_shrimp_with_string_beans.jpg",
+    "imageCredit": "joshmadison (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-garlic-chive-butter",
@@ -35860,7 +36560,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Prawns_in_garlic_butter_-_Taupo%2C_New_Zealand.jpg/960px-Prawns_in_garlic_butter_-_Taupo%2C_New_Zealand.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-herb-garlic-mushrooms",
@@ -35912,7 +36614,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT12M",
-    "totalTime": "PT17M"
+    "totalTime": "PT17M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Pinenut-herb_crusted_rack_of_lamb_with_portabella_mushroom%2C_Brussels_sprouts%2C_and_black_garlic_-_16444216096.jpg/960px-Pinenut-herb_crusted_rack_of_lamb_with_portabella_mushroom%2C_Brussels_sprouts%2C_and_black_garlic_-_16444216096.jpg",
+    "imageCredit": "City Foodsters (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-grilled-corn-salad-the-ultimate-summer-side-dish",
@@ -35980,7 +36684,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT20M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Grilled_corn_salad_ingredients_yellow_sweet_corn_lime_slices_fruit_cayenne_pepper_salt_fruit_vegetables_%2828151565064%29.jpg/960px-Grilled_corn_salad_ingredients_yellow_sweet_corn_lime_slices_fruit_cayenne_pepper_salt_fruit_vegetables_%2828151565064%29.jpg",
+    "imageCredit": "Personal Creations (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaican-succulent-grilled-leg-of-goat-2",
@@ -36042,7 +36748,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT2H",
-    "totalTime": "PT2H15M"
+    "totalTime": "PT2H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Grilled_goat_cheese%2C_Martinsthal.jpg/960px-Grilled_goat_cheese%2C_Martinsthal.jpg",
+    "imageCredit": "Gerda Arendt (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-guyanese-mango-sour-recipe",
@@ -36149,7 +36857,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Chicken_sausage_and_eggplants_stuffed_with_walnuts_and_hot_pepper%2C_on_wild_rice%2C_all_with_guacamole_habanero_sauce_-_Massachusetts.jpg/960px-Chicken_sausage_and_eggplants_stuffed_with_walnuts_and_hot_pepper%2C_on_wild_rice%2C_all_with_guacamole_habanero_sauce_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-haitian-haitian-pikliz-picklese",
@@ -36196,7 +36906,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Haitian_Pikliz.jpg/960px-Haitian_Pikliz.jpg",
+    "imageCredit": "Aliceba (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaican-trinidadian-the-best-oxtail-soup-recipe-youll-ever-taste-2",
@@ -36423,7 +37135,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT2H35M"
+    "totalTime": "PT2H35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Vegan_Coconut_Rum_Raisin_Ice_Cream_%284991731451%29.jpg/960px-Vegan_Coconut_Rum_Raisin_Ice_Cream_%284991731451%29.jpg",
+    "imageCredit": "Veganbaking.net from USA (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-homemade-tamarind-bbq-sauce-2",
@@ -36490,7 +37204,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Tamarind_Sauce.jpg/960px-Tamarind_Sauce.jpg",
+    "imageCredit": "FBenjr123 (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-outstanding-honey-mustard-dressing-dip",
@@ -36538,7 +37254,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Bell_peppers_on_mixed_greens%2C_with_dressing_of_mustard%2C_garlic_olive_oil%2C_and_vinegar_-_Massachusetts.jpg/960px-Bell_peppers_on_mixed_greens%2C_with_dressing_of_mustard%2C_garlic_olive_oil%2C_and_vinegar_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-how-to-make-pommecythere-talkari",
@@ -36671,7 +37389,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT10M",
     "cookTime": "PT1H10M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Family_of_John_H._Children_8%2C_10%2C_13%2C_15_yrs._old_pulling_and_picking_beets_on_farm_at_Iliff%28%3F%29_Ten_members_of_the_family._They_will_make_about_%24900_this_season_but_have_very_heavy_expenses_LOC_nclc.00329.jpg/960px-thumbnail.jpg",
+    "imageCredit": "Hine, Lewis Wickes; National Child Labor Committee Collection (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-stew-chicken-soup",
@@ -37431,7 +38151,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT25M",
     "cookTime": "PT6H",
-    "totalTime": "PT6H25M"
+    "totalTime": "PT6H25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Incredible_amounts_of_smoke_being_generated_by_wildfires_south_of_Great_Slave_Lake_in_Canada_on_8-14_%28CIRA_2017-08-15%29.gif/960px-Incredible_amounts_of_smoke_being_generated_by_wildfires_south_of_Great_Slave_Lake_in_Canada_on_8-14_%28CIRA_2017-08-15%29.gif",
+    "imageCredit": "GOES imagery: CSU/CIRA & NOAA (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-incredible-smoked-stewed-oxtail",
@@ -37517,7 +38239,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT7H",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Incredible_amounts_of_smoke_being_generated_by_wildfires_south_of_Great_Slave_Lake_in_Canada_on_8-14_%28CIRA_2017-08-15%29.gif/960px-Incredible_amounts_of_smoke_being_generated_by_wildfires_south_of_Great_Slave_Lake_in_Canada_on_8-14_%28CIRA_2017-08-15%29.gif",
+    "imageCredit": "GOES imagery: CSU/CIRA & NOAA (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-incredible-wine-braised-oxtail",
@@ -37804,7 +38528,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Jamaican_spice_bun.jpg/960px-Jamaican_spice_bun.jpg",
+    "imageCredit": "Xaymacan (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaican-the-ultimate-jamaican-brown-stew-chicken-2",
@@ -37877,7 +38603,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/View_of_a_butterfly_made_out_of_two_elephant%27s_heads_in_the_Jamaican_jerk_chicken_bar_on_Hanbury_Street_-_geograph.org.uk_-_5344257.jpg/960px-View_of_a_butterfly_made_out_of_two_elephant%27s_heads_in_the_Jamaican_jerk_chicken_bar_on_Hanbury_Street_-_geograph.org.uk_-_5344257.jpg",
+    "imageCredit": "Robert Lamb (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-classic-jamaican-brown-stew-salmon",
@@ -38019,7 +38747,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Jamaican_breakfast_ackee_saltfish_callaloo.jpg/960px-Jamaican_breakfast_ackee_saltfish_callaloo.jpg",
+    "imageCredit": "Karolyn (CC BY 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-jamaican-callaloo-with-turkey-2",
@@ -38078,7 +38808,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Jamaican_breakfast_ackee_saltfish_callaloo.jpg/960px-Jamaican_breakfast_ackee_saltfish_callaloo.jpg",
+    "imageCredit": "Karolyn (CC BY 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaican-jamaican-callaloo-with-shrimp-2",
@@ -38138,7 +38870,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Jamaican_breakfast_ackee_saltfish_callaloo.jpg/960px-Jamaican_breakfast_ackee_saltfish_callaloo.jpg",
+    "imageCredit": "Karolyn (CC BY 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-easy-jamaican-escovitch-fried-chicken",
@@ -38242,7 +38976,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Jamaican_rice_and_peas_1.jpg/960px-Jamaican_rice_and_peas_1.jpg",
+    "imageCredit": "Xaymacan (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-jamaican-jamaican-stewed-oxtail-with-butter-beans",
@@ -38370,7 +39106,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT1H30M",
-    "totalTime": "PT1H40M"
+    "totalTime": "PT1H40M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Breadfruit_at_Longville%2C_one_of_the_first_planted_in_Jamaica_LCCN2006685084.jpg/960px-Breadfruit_at_Longville%2C_one_of_the_first_planted_in_Jamaica_LCCN2006685084.jpg",
+    "imageCredit": "Berryman, William, artist (Public domain) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-easy-jerk-chicken-pasta-salad-recipe-quick-tasty",
@@ -38442,7 +39180,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Chicken_Milanese%2C_Pasta_with_Snap_Peas%2C_Salad.jpg/960px-Chicken_Milanese%2C_Pasta_with_Snap_Peas%2C_Salad.jpg",
+    "imageCredit": "Jeffrey_Allen (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaican-jerk-rotisserie-chicken",
@@ -38494,7 +39234,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT20M",
     "cookTime": "PT2H",
-    "totalTime": "PT2H20M"
+    "totalTime": "PT2H20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Jerk_Chicken_Rotisserie.jpg/960px-Jerk_Chicken_Rotisserie.jpg",
+    "imageCredit": "Jasonbook99 (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-lentils-and-split-peas-dhal-2",
@@ -38549,7 +39291,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Mixture_of_beans_%28small_red%2C_cannellini%2C_pinto%2C_roman%2C_red_kidney%2C_black%29%2C_peas_%28blackeye%2C_yellow_split%29%2C_and_pardina_lentils_37.jpg/960px-Mixture_of_beans_%28small_red%2C_cannellini%2C_pinto%2C_roman%2C_red_kidney%2C_black%29%2C_peas_%28blackeye%2C_yellow_split%29%2C_and_pardina_lentils_37.jpg",
+    "imageCredit": "Bean appreciator (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-loaded-caribbean-corned-beef-2",
@@ -38727,7 +39471,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT50M",
-    "totalTime": "PT1H5M"
+    "totalTime": "PT1H5M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Talkari.jpg/960px-Talkari.jpg",
+    "imageCredit": "Ashu905 (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaican-trinidadian-caribbean-black-cake",
@@ -38890,7 +39636,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT10M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Freshippo_crispy_fried_chicken.jpg/960px-Freshippo_crispy_fried_chicken.jpg",
+    "imageCredit": "Fumikas Sagisavas (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-a-non-traditional-caribbean-christmas-rum-fruit-cake-2",
@@ -39082,7 +39830,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT1H10M",
-    "totalTime": "PT1H25M"
+    "totalTime": "PT1H25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Roasted_chicken_oven.jpg/960px-Roasted_chicken_oven.jpg",
+    "imageCredit": "P1898 (CC BY 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-amazing-pineapple-jerk-chicken",
@@ -39135,7 +39885,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H10M"
+    "totalTime": "PT1H10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Chicken_%26_Pineapple_Rice_Bake.jpg/960px-Chicken_%26_Pineapple_Rice_Bake.jpg",
+    "imageCredit": "Elsie Hui (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-oven-braised-caribbean-curry-duck",
@@ -39259,7 +40011,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT12M",
-    "totalTime": "PT27M"
+    "totalTime": "PT27M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Vegetarian_oyster_flavoured_sauce.JPG/960px-Vegetarian_oyster_flavoured_sauce.JPG",
+    "imageCredit": "Mk2010 (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-papaya-pineapple-marmalade",
@@ -39381,7 +40135,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT12M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Peach_Blossom_Flavoured_Ice_cream_from_Mcdonald%27s.jpg/960px-Peach_Blossom_Flavoured_Ice_cream_from_Mcdonald%27s.jpg",
+    "imageCredit": "Wishds (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-perfect-peach-chutney",
@@ -39638,7 +40394,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Mackerel_with_pickles_and_mullet_roe_-_Mackerel_sauce_with_white_wine%2C_lemon%2C_capers_and_chilies_in_vinegar%2C_fried_tomato%2C_mullet_roe%2C_mackerel_marinated_in_sugar_and_salt._Mackerel_infusion_%2815250555084%29.jpg/960px-thumbnail.jpg",
+    "imageCredit": "City Foodsters (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-quick-easy-grilled-zucchini-recipe-for-busy-nights",
@@ -39689,7 +40447,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT6M",
-    "totalTime": "PT16M"
+    "totalTime": "PT16M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Pesto_Chicken_and_Grilled_Zucchini.jpg/960px-Pesto_Chicken_and_Grilled_Zucchini.jpg",
+    "imageCredit": "Infrogmation of New Orleans (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-quick-and-easy-cilantro-chimichurri",
@@ -39737,7 +40497,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Kanpachi_with_chimichurri_and_elote_corn_-_San_Francisco.jpg/960px-Kanpachi_with_chimichurri_and_elote_corn_-_San_Francisco.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-quick-and-easy-crab-apple-chutney-raw",
@@ -39789,7 +40551,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Apple_Pachadi_Gojju_Chutney_%283117296225%29.jpg/960px-Apple_Pachadi_Gojju_Chutney_%283117296225%29.jpg",
+    "imageCredit": "GoDakshin from Bangalore, India (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-quick-and-easy-one-pot-mac-and-cheese-2",
@@ -39839,7 +40603,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT15M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Mac_%26_Cheese_Triangles_-_McDonalds_2025-10-26.jpg/960px-Mac_%26_Cheese_Triangles_-_McDonalds_2025-10-26.jpg",
+    "imageCredit": "Andy Li (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-quick-and-easy-smoked-herring-choka-2",
@@ -39893,7 +40659,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT5M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Smoked_herring%2C_tomatoes%2C_and_corn%2C_with_black_pepper_and_capers_-_Massachusetts.jpg/960px-Smoked_herring%2C_tomatoes%2C_and_corn%2C_with_black_pepper_and_capers_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-quick-and-easy-sweet-potato-breakfast-hash",
@@ -39949,7 +40717,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Sweet_potatoes_the_most_affordable_breakfast_in_rural_areas.jpg/960px-Sweet_potatoes_the_most_affordable_breakfast_in_rural_areas.jpg",
+    "imageCredit": "Sisnoe (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-trinidadian-stewed-lentils",
@@ -40047,7 +40817,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Caribbean_Red_Pepper.jpg/960px-Caribbean_Red_Pepper.jpg",
+    "imageCredit": "NewMexMike (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-quick-and-tasty-garlic-ginger-scallion-fried-rice",
@@ -40097,7 +40869,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT10M",
     "cookTime": "PT6M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Wok-Fried_Prawns_with_Scallion-Ginger-Garlic_Sauce.jpg/960px-Wok-Fried_Prawns_with_Scallion-Ginger-Garlic_Sauce.jpg",
+    "imageCredit": "Zheng Zhou (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-quick-and-tasty-stir-fry",
@@ -40215,7 +40989,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT20M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/HK_MK_%E6%97%BA%E8%A7%92_Mong_Kok_%E5%A5%B6%E8%B7%AF%E8%87%A3%E8%A1%97_6_Nelson_Street_%E5%BD%8C%E6%95%A6%E9%81%93_636_Nathan_Road_%E6%B0%B8%E9%9A%86%E9%8A%80%E8%A1%8C%E4%B8%AD%E5%BF%83_CMB_Wing_Lung_Bank_Centre_shop_%E8%8A%B1%E5%9C%92%E9%A4%90%E5%BB%B3_Sweetheart_Garden_Restaurant_food_Curry_chicken_n_potato_October_2025_N13P_04.jpg/960px-thumbnail.jpg",
+    "imageCredit": "FHSING MAgasdk (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-quick-shrimp-bok-choy-stir-fry",
@@ -40282,7 +41058,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT12M",
-    "totalTime": "PT27M"
+    "totalTime": "PT27M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Veggie_Imitation_Shrimp_Stir_Fry_with_Shiitake_and_Bok_Choy_%283754464671%29.jpg/960px-Veggie_Imitation_Shrimp_Stir_Fry_with_Shiitake_and_Bok_Choy_%283754464671%29.jpg",
+    "imageCredit": "Vegan Feast Catering (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-red-onion-and-sardine-salad",
@@ -40327,7 +41105,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Salad_of_warmed_sardines_and_corn_on_lettuce%2C_with_chili_pepper%2C_onion%2C_garlic_olive_oil%2C_and_black_pepper_-_Massachusetts.jpg/960px-Salad_of_warmed_sardines_and_corn_on_lettuce%2C_with_chili_pepper%2C_onion%2C_garlic_olive_oil%2C_and_black_pepper_-_Massachusetts.jpg",
+    "imageCredit": "Daderot (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaican-trinidadian-herb-and-wine-braised-oxtails",
@@ -40763,7 +41543,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Liat_Portal_for_Foodie_Disorder_-_Roasted_chicken_with_vegetables_and_white_rice.jpg/960px-Liat_Portal_for_Foodie_Disorder_-_Roasted_chicken_with_vegetables_and_white_rice.jpg",
+    "imageCredit": "HaJunkiyada (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaican-string-beans-with-salted-pigtails-in-coconut-milk",
@@ -40987,7 +41769,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/A_heap_of_shrimp_shells_on_a_plate_in_Tuntorp_1.jpg/960px-A_heap_of_shrimp_shells_on_a_plate_in_Tuntorp_1.jpg",
+    "imageCredit": "W.carter (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-simple-and-delicious-egg-fried-rice",
@@ -41167,7 +41951,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT4H",
-    "totalTime": "PT4H15M"
+    "totalTime": "PT4H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Simple_Spargel_Schinken_Butter.jpg/960px-Simple_Spargel_Schinken_Butter.jpg",
+    "imageCredit": "GeoTrinity (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-tasty-coconut-spinach",
@@ -41221,7 +42007,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT10M",
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Mirny%2C_Malibu_Caribbean_Rum_with_Coconut%2C_Psychedelic%2C_Crimea.jpg/960px-Mirny%2C_Malibu_Caribbean_Rum_with_Coconut%2C_Psychedelic%2C_Crimea.jpg",
+    "imageCredit": "Vyacheslav Argenberg (CC BY 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-simple-caribbean-vegan-fried-rice",
@@ -41342,7 +42130,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT10M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Chinese_chicken_dish%2C_Idstein.jpg/960px-Chinese_chicken_dish%2C_Idstein.jpg",
+    "imageCredit": "Gerda Arendt (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-simple-garlic-rosemary-roasted-chicken",
@@ -41391,7 +42181,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Rosemary_Roast_Chicken.jpg/960px-Rosemary_Roast_Chicken.jpg",
+    "imageCredit": "TheCulinaryGeek (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-simple-oven-roasted-rou-cou-annatto-chicken",
@@ -41457,7 +42249,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT1H10M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Simple_roast_chicken_%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AA%E3%83%AC%E3%82%B7%E3%83%94%E3%81%AE%E3%83%AD%E3%83%BC%E3%82%B9%E3%83%88%E3%83%81%E3%82%AD%E3%83%B3.jpg/960px-Simple_roast_chicken_%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AA%E3%83%AC%E3%82%B7%E3%83%94%E3%81%AE%E3%83%AD%E3%83%BC%E3%82%B9%E3%83%88%E3%83%81%E3%82%AD%E3%83%B3.jpg",
+    "imageCredit": "naotakem (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-roast-turkey-breast-2",
@@ -41655,7 +42449,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Spaghetti_with_a_simple_cherry_tomato_sauce_and_roasted_broccoli_%E3%83%97%E3%83%81%E3%83%88%E3%83%9E%E3%83%88%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AE%E3%82%B9%E3%83%91%E3%82%B2%E3%83%83%E3%83%86%E3%82%A3%E3%80%81%E3%83%AD%E3%83%BC%E3%82%B9%E3%83%88%E3%83%96%E3%83%AD%E3%83%83%E3%82%B3%E3%83%AA%E3%83%BC%E6%B7%BB%E3%81%88.jpg/960px-Spaghetti_with_a_simple_cherry_tomato_sauce_and_roasted_broccoli_%E3%83%97%E3%83%81%E3%83%88%E3%83%9E%E3%83%88%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AE%E3%82%B9%E3%83%91%E3%82%B2%E3%83%83%E3%83%86%E3%82%A3%E3%80%81%E3%83%AD%E3%83%BC%E3%82%B9%E3%83%88%E3%83%96%E3%83%AD%E3%83%83%E3%82%B3%E3%83%AA%E3%83%BC%E6%B7%BB%E3%81%88.jpg",
+    "imageCredit": "naotakem (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-simply-delicious-20-minute-curry-chicken",
@@ -41850,7 +42646,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT5H",
-    "totalTime": "PT5H15M"
+    "totalTime": "PT5H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Caribbean_Sea_-_Long_Exposure.jpg/960px-Caribbean_Sea_-_Long_Exposure.jpg",
+    "imageCredit": "Martin Falbisoner (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-jamaican-amazing-coconut-stewed-oxtails-2",
@@ -42094,7 +42892,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Plate_of_food_with_matooke%2C_rice%2C_greens%2C_beans_ground_nuts_and_chicken.jpg/960px-Plate_of_food_with_matooke%2C_rice%2C_greens%2C_beans_ground_nuts_and_chicken.jpg",
+    "imageCredit": "Samson Ssemakadde (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-canadian-mother-in-law-spicy-condiment-dish",
@@ -42255,7 +43055,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Spicy_fried_fish.jpg/960px-Spicy_fried_fish.jpg",
+    "imageCredit": "Fumikas Sagisavas (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-caribbean-fiery-geera-cumin-shrimp",
@@ -42310,7 +43112,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT5M",
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Liat_Portal_for_Foodie_Disorder_-_Shrimp_Spring_Roll_with_Spicy_Peanut_Sauce.jpg/960px-Liat_Portal_for_Foodie_Disorder_-_Shrimp_Spring_Roll_with_Spicy_Peanut_Sauce.jpg",
+    "imageCredit": "HaJunkiyada (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-quick-fiery-pepper-pickle",
@@ -42347,7 +43151,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Scotch_bonnet_chili_pepper.jpg/960px-Scotch_bonnet_chili_pepper.jpg",
+    "imageCredit": "Temaciejewski (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-steamed-ground-provisions",
@@ -42631,7 +43437,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/2026-02-17_18_11_16_A_strawberry_lemonade_from_Auntie_Anne%27s_at_the_Oxford_Valley_Mall_in_Middletown_Township%2C_Bucks_County%2C_Pennsylvania.jpg/960px-2026-02-17_18_11_16_A_strawberry_lemonade_from_Auntie_Anne%27s_at_the_Oxford_Valley_Mall_in_Middletown_Township%2C_Bucks_County%2C_Pennsylvania.jpg",
+    "imageCredit": "Famartin (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-strawberry-chow-spicy-pickle-salad-recipe-2",
@@ -42668,7 +43476,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Garden_strawberry_%28Fragaria_%C3%97_ananassa%29_single2.jpg/960px-Garden_strawberry_%28Fragaria_%C3%97_ananassa%29_single2.jpg",
+    "imageCredit": "Ivar Leidus (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-general-caribbean-string-beans-with-potato-and-salted-cod",
@@ -43181,7 +43991,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H5M"
+    "totalTime": "PT1H5M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Ultimate_Bacon_-_Honest_Fried_Chicken_with_rosemary_chips_-_Honest_Burgers_2025-01-20.jpg/960px-Ultimate_Bacon_-_Honest_Fried_Chicken_with_rosemary_chips_-_Honest_Burgers_2025-01-20.jpg",
+    "imageCredit": "Andy Li (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-the-ultimate-shrimp-cocktail-2",
@@ -43366,7 +44178,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Traditional_Caribbean_home_architecture_with_tropical_surrounding_foliage.jpg/960px-Traditional_Caribbean_home_architecture_with_tropical_surrounding_foliage.jpg",
+    "imageCredit": "Oleg Yunakov (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-traditional-caribbean-pineapple-juice-2",
@@ -43412,7 +44226,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Traditional_Caribbean_home_architecture_with_tropical_surrounding_foliage.jpg/960px-Traditional_Caribbean_home_architecture_with_tropical_surrounding_foliage.jpg",
+    "imageCredit": "Oleg Yunakov (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-traditional-caribbean-pommecythere-june-plum-golden-apple-ja",
@@ -43908,7 +44724,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Callaloo-mit-Shrimps-GT.jpg/960px-Callaloo-mit-Shrimps-GT.jpg",
+    "imageCredit": "GeoTrinity (Wikimedia Commons) (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-tamarind-sauce-for-doubles-pholourie",
@@ -44165,7 +44983,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT2H",
     "cookTime": "PT30M",
-    "totalTime": "PT2H30M"
+    "totalTime": "PT2H30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Ultimate_Bacon_-_Honest_Fried_Chicken_with_rosemary_chips_-_Honest_Burgers_2025-01-20.jpg/960px-Ultimate_Bacon_-_Honest_Fried_Chicken_with_rosemary_chips_-_Honest_Burgers_2025-01-20.jpg",
+    "imageCredit": "Andy Li (CC0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-ultimate-curry-duck",
@@ -44562,7 +45382,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT2H15M"
+    "totalTime": "PT2H15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Whipped_cream_with_strawberries_and_coconut_%28KETO%2C_LCHF%2C_Low_Carb%2C_Gluten_free%2C_FIT%29_-_52775014013.jpg/960px-Whipped_cream_with_strawberries_and_coconut_%28KETO%2C_LCHF%2C_Low_Carb%2C_Gluten_free%2C_FIT%29_-_52775014013.jpg",
+    "imageCredit": "Ewelina Podrez-Siama (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-trinidadian-baigan-aloo-vegan-curry-eggplant-potato",
@@ -44624,7 +45446,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT20M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H5M"
+    "totalTime": "PT1H5M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Lamb_Curry%2C_Butter_Chicken%2C_Eggplant_and_Potatoes_-_Zam_Zam_AUD8.50_%284175236185%29.jpg/960px-Lamb_Curry%2C_Butter_Chicken%2C_Eggplant_and_Potatoes_-_Zam_Zam_AUD8.50_%284175236185%29.jpg",
+    "imageCredit": "Alpha from Melbourne, Australia (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-avocado-watercress-salad-with-a-clementine-vinaigrette-2",
@@ -44666,7 +45490,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Jicama_watercres_avocado_salad_%2829308040848%29.jpg/960px-Jicama_watercres_avocado_salad_%2829308040848%29.jpg",
+    "imageCredit": "Joey Doll (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-fusion-quick-herb-roasted-chicken-2",
@@ -44780,7 +45606,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Roasted_Chicken_%26_Buttered_Broccoli_%2825221955296%29.jpg/960px-Roasted_Chicken_%26_Buttered_Broccoli_%2825221955296%29.jpg",
+    "imageCredit": "Prayitno / Thank you for (12 millions +) view from Los Angeles, USA (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "carib-caribbean-zesty-garlic-flavored-avocado-yogurt-dip-2",

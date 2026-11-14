@@ -78,8 +78,14 @@ publisher's wording.
 - Arrabiata, teriyaki, pancakes and salmon soup: TheMealDB meal photographs.
 - Classic Beef Chili: Caitlin Bensel for Food & Wine.
 - Publisher-based Caribbean and African records do not bundle or hot-link publisher photographs.
-- Records without a publisher photograph show one of Mise's own programmatic SVG
+- Records with no publisher photograph carry one of Mise's own programmatic SVG
   cover plates — original line art in the house palette, drawn by `tools/build-plates.mjs`.
+- The surviving photo gaps on records that came from online collections were filled
+  from Wikimedia Commons under each file's own license (CC BY, CC BY-SA, CC0 or the
+  public domain); the attribution string travels with the record and is shown on the
+  recipe detail view. Tools: `tools/build-images.mjs` looks up, scores and licenses-checks
+  candidates. Wikimedia Commons is a community repository; the link back to the file
+  page is the credit. Mise does not claim any Commons photo as its own.
 - Step photographs referenced in the Food & Wine source data are by Molly Bolton; Mise does not
   re-host them.
 

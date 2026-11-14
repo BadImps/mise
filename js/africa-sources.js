@@ -71,7 +71,9 @@ window.MISE_AFRICA_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT50M",
-    "totalTime": "PT60M"
+    "totalTime": "PT60M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Nigerian_Jollof_rice_%40Tyap_Wiki_Zaria_Outreach.jpg/960px-Nigerian_Jollof_rice_%40Tyap_Wiki_Zaria_Outreach.jpg",
+    "imageCredit": "Kambai Akau (CC0) via Wikimedia Commons"
   },
   {
     "id": "africa-ethiopia-doro-wat",
@@ -135,7 +137,9 @@ window.MISE_AFRICA_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT120M",
-    "totalTime": "PT135M"
+    "totalTime": "PT135M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Injera_and_doro_wat.jpg/960px-Injera_and_doro_wat.jpg",
+    "imageCredit": "Edsel Little (CC BY-SA 2.0) via Wikimedia Commons"
   },
   {
     "id": "africa-nigeria-suya",
@@ -189,7 +193,9 @@ window.MISE_AFRICA_SOURCES = [
     "yields": 22,
     "prepTime": "PT20M",
     "cookTime": "PT25M",
-    "totalTime": "PT105M"
+    "totalTime": "PT105M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Ready-to-eat_Suya_at_the_Suya_production_site_in_Nigeria_04.jpg/960px-Ready-to-eat_Suya_at_the_Suya_production_site_in_Nigeria_04.jpg",
+    "imageCredit": "Ewatomi1 (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "africa-nigeria-egusi-soup",
@@ -254,7 +260,9 @@ window.MISE_AFRICA_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT50M",
-    "totalTime": "PT60M"
+    "totalTime": "PT60M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Egusi_Soup._Egusi_is_the_indegenious_soup_of_Nigerians._This_soup_is_named_after_the_thickener_-Egusi%3BEgusi_is_gotten_from_Fluted_Pumpkin_or_Melon_seeds..jpg/960px-Egusi_Soup._Egusi_is_the_indegenious_soup_of_Nigerians._This_soup_is_named_after_the_thickener_-Egusi%3BEgusi_is_gotten_from_Fluted_Pumpkin_or_Melon_seeds..jpg",
+    "imageCredit": "Okache Ruthie (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "africa-nigeria-african-puff-puff-recipe",
@@ -309,7 +317,9 @@ window.MISE_AFRICA_SOURCES = [
     "yields": 10,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": ""
+    "totalTime": "",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Puffing_Billy_in_Africa.jpg/960px-Puffing_Billy_in_Africa.jpg",
+    "imageCredit": "Tracy Anne Brooks (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "africa-ethiopia-injera",
@@ -390,7 +400,9 @@ window.MISE_AFRICA_SOURCES = [
     "yields": 10,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": ""
+    "totalTime": "",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Ethiopie-Injera_grill%C3%A9.jpg/960px-Ethiopie-Injera_grill%C3%A9.jpg",
+    "imageCredit": "Ji-Elle (CC BY-SA 3.0) via Wikimedia Commons"
   },
   {
     "id": "africa-nigeria-how-to-make-moin-moin-moi-moi",
@@ -457,7 +469,9 @@ window.MISE_AFRICA_SOURCES = [
     "yields": 5,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT60M"
+    "totalTime": "PT60M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Voil%C3%A0_un_tilbury%2C_Pam%C3%A9la%2C_qui_nous_a_men%C3%A9s_en_moins_de_trois_mois_de_la_rue_Saint_-_Jacques_%C3%A0_Clichy...hein_le_bon_cheval%21_-_DPLA_-_045e153b1f74a088e8354d07d5579fd2.jpg/960px-thumbnail.jpg",
+    "imageCredit": "Gavarni, Paul, 1804-1866 (Public domain) via Wikimedia Commons"
   },
   {
     "id": "africa-ghana-easy-kelewele-spicy-fried-plantains",
@@ -501,7 +515,9 @@ window.MISE_AFRICA_SOURCES = [
     "yields": 6,
     "prepTime": "PT5M",
     "cookTime": "PT10M",
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Fried_Plantain_in_Bouake.jpg/960px-Fried_Plantain_in_Bouake.jpg",
+    "imageCredit": "Hanay (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "africa-kenya-nyama-choma-kenyan-grilled-meat",
@@ -561,7 +577,9 @@ window.MISE_AFRICA_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT150M"
+    "totalTime": "PT150M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Jay_nyama_Choma.jpg/960px-Jay_nyama_Choma.jpg",
+    "imageCredit": "Jayquins (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "africa-kenya-sweet-fried-bread-mandazi-mahamri",
@@ -618,7 +636,9 @@ window.MISE_AFRICA_SOURCES = [
     "yields": 24,
     "prepTime": "PT75M",
     "cookTime": "PT15M",
-    "totalTime": "PT90M"
+    "totalTime": "PT90M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Khatte_Mithe_Aloo_%28_sweet_%26_sour_potato_curry_%29_with_Maida_Poori_%28_Deep_Fried_Puffy_Bread%29.jpg/960px-Khatte_Mithe_Aloo_%28_sweet_%26_sour_potato_curry_%29_with_Maida_Poori_%28_Deep_Fried_Puffy_Bread%29.jpg",
+    "imageCredit": "Monali.mishra (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "africa-kenya-east-african-chapati-recipe-how-to-make-chapati",
@@ -670,7 +690,9 @@ window.MISE_AFRICA_SOURCES = [
     "yields": 8,
     "prepTime": "PT60M",
     "cookTime": "PT20M",
-    "totalTime": "PT80M"
+    "totalTime": "PT80M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Chapati_kenya.jpg/960px-Chapati_kenya.jpg",
+    "imageCredit": "safaritravelplus (CC0) via Wikimedia Commons"
   },
   {
     "id": "africa-nigeria-african-pepper-soup-goat-meat",
@@ -709,7 +731,9 @@ window.MISE_AFRICA_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT45M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Spicy_Goat_meat_pepper_soup.jpg/960px-Spicy_Goat_meat_pepper_soup.jpg",
+    "imageCredit": "Halima Waziri (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "africa-nigeria-spinach-stew-efo-riro",
@@ -758,7 +782,9 @@ window.MISE_AFRICA_SOURCES = [
     "yields": 5,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Spinach_stew%2C_Turkish_style.jpg/960px-Spinach_stew%2C_Turkish_style.jpg",
+    "imageCredit": "E4024 (CC BY-SA 4.0) via Wikimedia Commons"
   },
   {
     "id": "africa-south-africa-bunny-chow",
@@ -835,7 +861,9 @@ window.MISE_AFRICA_SOURCES = [
     "yields": 4,
     "prepTime": "PT25M",
     "cookTime": "PT3H",
-    "totalTime": "PT3H25M"
+    "totalTime": "PT3H25M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Bunny_Chow.jpg/960px-Bunny_Chow.jpg",
+    "imageCredit": "David Berkowitz from New York, NY, USA (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "africa-south-africa-bobotie",
@@ -926,7 +954,9 @@ window.MISE_AFRICA_SOURCES = [
     "yields": 8,
     "prepTime": "PT20M",
     "cookTime": "PT60M",
-    "totalTime": "PT80M"
+    "totalTime": "PT80M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Falmouth%2C_Cornwall_-_Bobotie_%28Lightly_spiced_mutton%2C_almonds_and_raisins_with_a_baked_egg_and_cream_topping%29_served_with_raisin_rice_and_chutney.jpg/960px-Falmouth%2C_Cornwall_-_Bobotie_%28Lightly_spiced_mutton%2C_almonds_and_raisins_with_a_baked_egg_and_cream_topping%29_served_with_raisin_rice_and_chutney.jpg",
+    "imageCredit": "CharmaineZoe's Marvelous Melange from England (CC BY 2.0) via Wikimedia Commons"
   },
   {
     "id": "africa-ghana-waakye",
@@ -966,6 +996,8 @@ window.MISE_AFRICA_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT30M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Waakye_2.jpg/960px-Waakye_2.jpg",
+    "imageCredit": "M_nunoo (CC BY-SA 3.0) via Wikimedia Commons"
   }
 ];

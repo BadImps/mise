@@ -1481,7 +1481,7 @@
     const publisherRows = sourceRows.map((record) => {
       const here = knownImported(record.sourceUrl);
       return `<div class="live-row">
-        <span class="live-thumb source-thumb" aria-hidden="true">${esc(record.country.slice(0, 2).toUpperCase())}</span>
+        ${imgWrap(record.image, record.name, 'live-thumb')}
         <span><span class="live-name">${esc(record.name)}</span>
           <span class="live-sub">${esc(record.country)} / ${esc(record.source)}${record.author ? ` / ${esc(record.author)}` : ''} · <a href="${esc(record.sourceUrl)}" target="_blank" rel="noopener noreferrer">Publisher page</a></span></span>
         ${here ? `<a class="btn sm" href="#/recipe/${esc(here.id)}">Open ${icon('arrow-right')}</a>`
@@ -1580,7 +1580,7 @@
     const publisherRows = sourceRows.map((record) => {
       const here = knownImported(record.sourceUrl);
       return `<div class="live-row">
-        <span class="live-thumb source-thumb" aria-hidden="true">${esc(record.country.slice(0, 2).toUpperCase())}</span>
+        ${imgWrap(record.image, record.name, 'live-thumb')}
         <span><span class="live-name">${esc(record.name)}</span>
           <span class="live-sub">${esc(record.country)} / ${esc(record.source)}${record.author ? ` / ${esc(record.author)}` : ''} · <a href="${esc(record.sourceUrl)}" target="_blank" rel="noopener noreferrer">Publisher page</a></span></span>
         ${here ? `<a class="btn sm" href="#/recipe/${esc(here.id)}">Open ${icon('arrow-right')}</a>`
@@ -2663,6 +2663,7 @@
   function recipeFromSourceRecord(record) {
     const raw = P.recipeFromJsonLd({
       name: record.name,
+      image: record.image || undefined,
       recipeIngredient: record.ingredients,
       recipeInstructions: record.instructions,
       recipeYield: record.yields,
@@ -2671,8 +2672,11 @@
       totalTime: record.totalTime,
       author: record.author,
       recipeCuisine: record.country,
+      description: record.description || undefined,
     }, { id: record.id, url: record.sourceUrl, sourceName: record.source });
-    return P.buildRecipe(raw, { importedAt: new Date().toISOString() });
+    const recipe = P.buildRecipe(raw, { importedAt: new Date().toISOString() });
+    if (record.imageCredit) recipe.imageCredit = record.imageCredit;
+    return recipe;
   }
 
   function importSourceRecord(record) {
