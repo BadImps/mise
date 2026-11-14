@@ -91,11 +91,15 @@ publisher's wording.
   original to Mise (`js/tools.js`), drawn in the house stroke style. The Android
   status-bar pot icon (`android/app/src/main/res/drawable/ic_pot.xml`) is
   likewise original.
-- The automated voice guide uses the device's own speech services — system text
-  to speech for reading steps aloud, and the system speech recognizer (Android
-  shell, via the MiseNative bridge) or Web Speech API (browsers) for commands.
-  Audio never reaches Mise's code; Mise receives only the recognized words or
-  an error code. No recordings are stored, kept or uploaded.
+- The automated voice guide's fixed phrases — "Step 1" through "Step 40" and the
+  two one-off confirmations — are synthesized once at build time with
+  Kokoro-82M (hexgrad/Kokoro-82M, Apache-2.0), voice `af_heart`, American
+  English, speed 0.92; they ship as `assets/voice/*.wav` and were rendered by
+  `tools/render-voice-clips.py`. Everything else — step text and all other
+  fixed lines — goes through the device's own text-to-speech engine, or the
+  Web Speech API in browsers. Audio never reaches a network service; Mise
+  receives only the recognized words or an error code, and no recordings are
+  stored, kept or uploaded.
 - Step photographs referenced in the Food & Wine source data are by Molly Bolton; Mise does not
   re-host them.
 

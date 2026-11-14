@@ -2148,7 +2148,44 @@
 
   const synth = () => (typeof window.speechSynthesis !== 'undefined' ? window.speechSynthesis : null);
   const nativeSpeech = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.speechStart === 'function';
+  const nativeVoice = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.ttsSpeak === 'function';
   const webSpeechCtor = () => window.SpeechRecognition || window.webkitSpeechRecognition || null;
+  const STUDIO_CLIP_BASE = 'assets/voice/';
+  let activeClip = null;
+  let ttsAfter = null;
+
+  function studioClipPath(text) {
+    const numbered = String(text).match(/^Step (\d{1,2})$/);
+    if (numbered) {
+      const n = Number(numbered[1]);
+      return (n >= 1 && n <= 40) ? STUDIO_CLIP_BASE + 'step-' + n + '.wav' : null;
+    }
+    if (text === 'There is no previous step.') return STUDIO_CLIP_BASE + 'no-previous-step.wav';
+    if (text === 'Cook cancelled.') return STUDIO_CLIP_BASE + 'cook-cancelled.wav';
+    return null;
+  }
+
+  function playStudioClip(path, after) {
+    try {
+      if (activeClip) {
+        try { activeClip.pause(); activeClip.currentTime = 0; } catch (err) { /* ignore */ }
+        activeClip = null;
+      }
+      const audio = new Audio(path);
+      audio.preload = 'auto';
+      activeClip = audio;
+      const done = () => {
+        if (activeClip === audio) activeClip = null;
+        if (after) after();
+      };
+      audio.onended = done;
+      audio.onerror = done;
+      const started = audio.play();
+      if (started && typeof started.catch === 'function') started.catch(done);
+    } catch (err) {
+      if (after) after();
+    }
+  }
 
   function guideSetStatus(status, hint) {
     guideStatusText = status;
@@ -2159,12 +2196,28 @@
     if (hintEl) hintEl.textContent = guideHintText;
   }
 
+  /* Speak order: a pre-rendered Kokoro clip for the fixed phrases ("Step N"
+     up to 40, and the two one-off confirmations), then the Android shell's
+     system voice with the best installed English voice picked natively, then
+     the browser speech engine everywhere else. */
   function guideSay(text, after) {
+    const clean = String(text == null ? '' : text).trim();
+    const clip = clean ? studioClipPath(clean) : null;
+    if (clip) { playStudioClip(clip, after); return; }
+    if (nativeVoice()) {
+      ttsAfter = after || null;
+      try {
+        MiseNative.ttsSpeak(clean);
+        return;
+      } catch (err) {
+        ttsAfter = null;
+      }
+    }
     const engine = synth();
     if (!engine) { if (after) after(); return; }
     try {
       engine.cancel();
-      const utterance = new SpeechSynthesisUtterance(String(text));
+      const utterance = new SpeechSynthesisUtterance(clean);
       utterance.rate = 0.92;
       utterance.pitch = 1;
       utterance.volume = 1;
@@ -2178,6 +2231,12 @@
   }
 
   function stopGuideSpeak() {
+    if (activeClip) {
+      try { activeClip.pause(); } catch (err) { /* ignore */ }
+      activeClip = null;
+    }
+    if (nativeVoice()) { try { MiseNative.ttsStop(); } catch (err) { /* ignore */ } }
+    ttsAfter = null;
     const engine = synth();
     if (engine) { try { engine.cancel(); } catch (err) { /* ignore */ } }
   }
@@ -2378,7 +2437,14 @@
   }
 
   // Android shell emits window.__miseSpeechResult({"text":"..."}) and
-  // window.__miseSpeechError({"code":"..."}) for each recognizer turn.
+  // window.__miseSpeechError({"code":"..."}) for each recognizer turn, and
+  // window.__miseSpeechDone({}) when the system voice finishes speaking
+  // (or fails — either way the guide moves on instead of wedging).
+  window.__miseSpeechDone = () => {
+    const cb = ttsAfter;
+    ttsAfter = null;
+    if (cb) cb();
+  };
   window.__miseSpeechResult = (raw) => {
     let payload = null;
     try { payload = JSON.parse(raw); } catch (err) { payload = null; }

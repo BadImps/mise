@@ -69,6 +69,7 @@ public final class MainActivity extends Activity {
     private int pendingCookTotal;
     private boolean pendingSpeech;
     private MiseSpeech miseSpeech;
+    private MiseVoice miseVoice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +97,21 @@ public final class MainActivity extends Activity {
                     json.put("code", code == null ? "error" : code);
                 } catch (org.json.JSONException ignored) { }
                 emitJavascript("__miseSpeechError", json);
+            }
+        });
+        miseVoice = new MiseVoice(this, handler, new MiseVoice.Reply() {
+            @Override
+            public void onDone() {
+                emitJavascript("__miseSpeechDone", new org.json.JSONObject());
+            }
+
+            @Override
+            public void onError(String code) {
+                org.json.JSONObject json = new org.json.JSONObject();
+                try {
+                    json.put("code", code == null ? "error" : code);
+                } catch (org.json.JSONException ignored) { }
+                emitJavascript("__miseSpeechDone", json); // guide must never wedge
             }
         });
 
@@ -451,6 +467,16 @@ public final class MainActivity extends Activity {
         @JavascriptInterface
         public void speechStop() {
             handler.post(MainActivity.this::stopSpeechRecognition);
+        }
+
+        @JavascriptInterface
+        public void ttsSpeak(String text) {
+            if (miseVoice != null) miseVoice.speak(text);
+        }
+
+        @JavascriptInterface
+        public void ttsStop() {
+            if (miseVoice != null) miseVoice.stop();
         }
 
         @JavascriptInterface
