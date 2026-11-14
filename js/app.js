@@ -1025,7 +1025,8 @@
 
   /* ---------- library ---------- */
   const libraryState = { tab: 'kitchen', q: '', source: 'all', status: 'idle', results: [], error: '' };
-  const caribbeanState = { q: '' };
+  const CARIBBEAN_ROW_CAP = 60;
+  const caribbeanState = { q: '', expanded: false };
   const africaState = { q: '' };
   const globalState = { q: '' };
 
@@ -1234,7 +1235,7 @@
       <div class="panel-head">
         <span>
           <h2 id="caribbean-title">Caribbean recipes</h2>
-          <p class="meta">A small, source-attributed collection of dishes from across the Caribbean, including recipes inspired by Grenada and Saint Lucia; not a complete survey.</p>
+          <p class="meta">A source-attributed collection of dishes from across the Caribbean, including recipes inspired by Grenada and Saint Lucia; not a complete survey.</p>
         </span>
         <button class="btn" type="button" data-action="import-all-caribbean">${icon('import')}Import all ${total}</button>
       </div>
@@ -1291,8 +1292,16 @@
           : `<button class="btn sm" type="button" data-action="import-meal" data-id="${esc(meal.idMeal)}">Read ${icon('arrow-right')}</button>`}
       </div>`;
     });
-    const body = [...publisherRows, ...mealRows].join('') || `<div class="live-empty">No Caribbean record matches “${esc(caribbeanState.q)}”. Clear the search to see all ${total}.</div>`;
-    return { body, count: `${rows.length + sourceRows.length} of ${total} records` };
+    const allRows = [...publisherRows, ...mealRows];
+    const capped = !q && !caribbeanState.expanded && allRows.length > CARIBBEAN_ROW_CAP;
+    const shown = capped ? allRows.slice(0, CARIBBEAN_ROW_CAP) : allRows;
+    const more = capped
+      ? `<div class="chef-more"><button class="btn" type="button" data-action="caribbean-more">Show ${allRows.length - shown.length} more recipes ${icon('arrow-right')}</button><span class="meta">${shown.length} of ${allRows.length} shown</span></div>`
+      : (!q && caribbeanState.expanded && allRows.length > CARIBBEAN_ROW_CAP
+        ? `<div class="chef-more"><button class="btn" type="button" data-action="caribbean-less">Show fewer ${icon('arrow-left')}</button><span class="meta">All ${allRows.length} shown</span></div>`
+        : '');
+    const body = shown.join('') || `<div class="live-empty">No Caribbean record matches “${esc(caribbeanState.q)}”. Clear the search to see all ${total}.</div>`;
+    return { body: body + more, count: `${allRows.length} of ${total} records` };
   }
 
   function refreshCaribbeanRows() {
@@ -2541,6 +2550,10 @@
           <p>Bobotie, waakye, oil down, pom, Johnny cake, Bajan salt fish cakes, locrio de pica pica, sawine, pernil asado, pelau, soup joumou, Trinidad black cake and Jamaican patty are read from <a href="https://www.196flavors.com" target="_blank" rel="noopener noreferrer">196flavors.com</a>. Mise does not re-host their photographs.</p>
         </div>
         <div>
+          <h3>Cooking with Ria</h3>
+          <p>Trinidadian and Caribbean dishes read from <a href="https://cookingwithria.com" target="_blank" rel="noopener noreferrer">cookingwithria.com</a>, by CookingwithRia: 406 records covering the site's full recipe-card set, kept from each post's published card — the same data served as its schema.org Recipe block. Photographs are not bundled or hot-linked. Ingredients, steps and times keep the publisher's wording; each record links to its page, and multi-recipe posts link to each recipe card.</p>
+        </div>
+        <div>
           <h3>That Girl Cooks Healthy and BBC Good Food</h3>
           <p>Caribbean dishes from <a href="https://thatgirlcookshealthy.com" target="_blank" rel="noopener noreferrer">thatgirlcookshealthy.com</a> and <a href="https://www.bbcgoodfood.com" target="_blank" rel="noopener noreferrer">bbcgoodfood.com</a> are read the same way, from each page's own schema.org Recipe data. Vegan versions keep the word “vegan” in their names.</p>
         </div>
@@ -2584,6 +2597,17 @@
     if (action === 'paste') { openPaste(target.dataset.url || ''); return; }
     if (action === 'close-modal') { closeModal(); return; }
     if (action === 'paste-parse') { parsePasted(target.dataset.url || ''); return; }
+
+    if (action === 'caribbean-more') {
+      caribbeanState.expanded = true;
+      refreshCaribbeanRows();
+      return;
+    }
+    if (action === 'caribbean-less') {
+      caribbeanState.expanded = false;
+      refreshCaribbeanRows();
+      return;
+    }
 
     if (action === 'chef-toggle') {
       const id = target.dataset.id || '';
@@ -2750,6 +2774,7 @@
     }
     if (event.target.id === 'caribbean-q') {
       caribbeanState.q = event.target.value;
+      caribbeanState.expanded = false;
       refreshCaribbeanRows();
     }
     if (event.target.id === 'africa-q') {

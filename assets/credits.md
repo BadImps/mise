@@ -14,10 +14,12 @@
 
 ### Caribbean publisher recipes
 
-The 36 records in `js/caribbean-sources.js` preserve each publisher's recipe-card
-JSON-LD ingredient and instruction text. Country labels follow the publisher's
-recipe context; they are browsing labels, not claims of origin or authenticity.
-An “(inspired)” suffix stays on dishes the publisher presents as inspired.
+The 442 records in `js/caribbean-sources.js` preserve each publisher's published
+recipe text — schema.org `Recipe` JSON-LD, or the recipe-card markup the publisher
+serves (the same data behind the page's Recipe block). Country labels follow the
+
+publisher's recipe context; they are browsing labels, not claims of origin or
+authenticity. An “(inspired)” suffix stays on dishes the publisher presents as inspired.
 
 - **Pepperpot on Christmas Morning** (Guyana): Alica's Pepperpot, by Alica.
   <https://www.alicaspepperpot.com/pepperpot-on-christmas-morning/>
@@ -39,6 +41,13 @@ An “(inspired)” suffix stays on dishes the publisher presents as inspired.
 - **Rice & peas** and **Jerk chicken** (Jamaica): BBC Good Food.
   <https://www.bbcgoodfood.com/recipes/rice-and-peas> ·
   <https://www.bbcgoodfood.com/recipes/jerk-chicken>
+- **The 406 records read from Cooking with Ria** (mostly Trinidad & Tobago, plus Jamaica,
+  Guyana, Cuba, Puerto Rico, Haiti, Barbados, Dominican Republic, Grenada, The Bahamas,
+  Suriname and Belize): <https://cookingwithria.com>, by CookingwithRia. The manifest
+  `tools/build-cookingwithria.mjs` reads the site's public REST API and keeps every post
+  whose recipe card meets the data contract (ingredients and instructions present); one
+  card with no steps stays out rather than enter as an incomplete record. Multi-card
+  posts link each record to its own recipe-card anchor.
 
 Vegan versions keep the word “vegan” in their source names. The Coquito card lists
 `½ ground cinnamon` without a unit; Mise preserves that gap instead of guessing a unit.
@@ -77,7 +86,7 @@ publisher's wording.
 - Live search and live recipe records come from TheMealDB's public API (`themealdb.com/api`).
 - `js/caribbean.js` caches the 27 meals TheMealDB returned for Jamaica, the only Caribbean-facing
   area with results at generation time. Other queried areas returned zero **in TheMealDB**, not
-  elsewhere. Together with the 36 publisher recipes, the Caribbean collection holds 63 records
+  elsewhere. Together with the 442 publisher recipes, the Caribbean collection holds 469 records
   across 13 places and does not claim to cover the entire Caribbean.
 - `js/africa.js` caches all 39 meals TheMealDB returns for Algerian, Egyptian, Kenyan, Moroccan and
   Tunisian. The 16 publisher recipes add Nigerian, Ghanaian, Ethiopian, Kenyan and South African
@@ -90,6 +99,7 @@ publisher's wording.
   29 areas returning meals, and 472 meal matches under `filter.php?a=`. Mise reports coverage gaps
   instead of representing the set as world-complete.
 - `tools/build-collections.mjs` regenerates the TheMealDB snapshots and publisher collections from
-  the URLs above. It does not write or paraphrase a recipe.
+  the URLs above. `tools/build-cookingwithria.mjs` regenerates the Cooking with Ria records from the
+  site's public WordPress REST API. Neither writes or paraphrases a recipe.
 - Imported links are read in the browser from the page's own schema.org `Recipe` JSON-LD. The page's
   text, photographs and marks remain the publisher's.
