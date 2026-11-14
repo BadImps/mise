@@ -91,6 +91,11 @@ publisher's wording.
   original to Mise (`js/tools.js`), drawn in the house stroke style. The Android
   status-bar pot icon (`android/app/src/main/res/drawable/ic_pot.xml`) is
   likewise original.
+- The automated voice guide uses the device's own speech services — system text
+  to speech for reading steps aloud, and the system speech recognizer (Android
+  shell, via the MiseNative bridge) or Web Speech API (browsers) for commands.
+  Audio never reaches Mise's code; Mise receives only the recognized words or
+  an error code. No recordings are stored, kept or uploaded.
 - Step photographs referenced in the Food & Wine source data are by Molly Bolton; Mise does not
   re-host them.
 

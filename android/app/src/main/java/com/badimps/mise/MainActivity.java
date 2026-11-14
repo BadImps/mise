@@ -49,6 +49,7 @@ public final class MainActivity extends Activity {
     private static final int COOK_NOTIFICATION_ID = 4271;
     private static final String EXTRA_DESTINATION = "mise.destination";
     private static final int REQUEST_POST_NOTIFICATIONS = 1001;
+    private static final int REQUEST_RECORD_AUDIO = 1002;
 
     private FrameLayout root;
     private WebView webView;
@@ -66,6 +67,8 @@ public final class MainActivity extends Activity {
     private String pendingCookText;
     private int pendingCookStep;
     private int pendingCookTotal;
+    private boolean pendingSpeech;
+    private MiseSpeech miseSpeech;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +79,25 @@ public final class MainActivity extends Activity {
         configureWindow();
         ensureCookChannel();
         pendingDestination = destinationFrom(getIntent());
+        miseSpeech = new MiseSpeech(this, handler, new MiseSpeech.Reply() {
+            @Override
+            public void onResult(String text) {
+                org.json.JSONObject json = new org.json.JSONObject();
+                try {
+                    json.put("text", text == null ? "" : text);
+                } catch (org.json.JSONException ignored) { }
+                emitJavascript("__miseSpeechResult", json);
+            }
+
+            @Override
+            public void onError(String code) {
+                org.json.JSONObject json = new org.json.JSONObject();
+                try {
+                    json.put("code", code == null ? "error" : code);
+                } catch (org.json.JSONException ignored) { }
+                emitJavascript("__miseSpeechError", json);
+            }
+        });
 
         root = findViewById(R.id.root);
         webView = findViewById(R.id.webview);
@@ -304,6 +326,33 @@ public final class MainActivity extends Activity {
         if (manager != null) manager.cancel(COOK_NOTIFICATION_ID);
     }
 
+    /** Delivers a bridge event object to the web layer as window.<name>(payload). */
+    private void emitJavascript(final String functionName, final org.json.JSONObject payload) {
+        handler.post(() -> {
+            if (webView == null) return;
+            final String argument = payload.toString();
+            webView.evaluateJavascript(
+                    "window." + functionName + " && window." + functionName + "(" + argument + ")", null);
+        });
+    }
+
+    /** Starts a one-utterance speech recognizer turn; the web layer re-arms. */
+    private void startSpeechRecognition() {
+        if (isFinishing() || isDestroyed()) return;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
+                && checkSelfPermission(android.Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            pendingSpeech = true;
+            requestPermissions(new String[]{android.Manifest.permission.RECORD_AUDIO}, REQUEST_RECORD_AUDIO);
+            return;
+        }
+        if (miseSpeech != null) miseSpeech.start();
+    }
+
+    private void stopSpeechRecognition() {
+        pendingSpeech = false;
+        if (miseSpeech != null) miseSpeech.stop();
+    }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -313,6 +362,19 @@ public final class MainActivity extends Activity {
             showCookNotification(pendingCookTitle, pendingCookStep, pendingCookTotal, pendingCookText);
         }
         pendingCook = false;
+        if (requestCode == REQUEST_RECORD_AUDIO) {
+            boolean granted = grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED;
+            if (granted && pendingSpeech && miseSpeech != null) {
+                miseSpeech.start();
+            } else if (!granted) {
+                org.json.JSONObject json = new org.json.JSONObject();
+                try {
+                    json.put("code", "denied");
+                } catch (org.json.JSONException ignored) { }
+                emitJavascript("__miseSpeechError", json);
+            }
+        }
+        pendingSpeech = false;
     }
 
     @Override
@@ -379,6 +441,16 @@ public final class MainActivity extends Activity {
                 info.put("app", true);
             } catch (org.json.JSONException ignored) { }
             return info.toString();
+        }
+
+        @JavascriptInterface
+        public void speechStart() {
+            handler.post(MainActivity.this::startSpeechRecognition);
+        }
+
+        @JavascriptInterface
+        public void speechStop() {
+            handler.post(MainActivity.this::stopSpeechRecognition);
         }
 
         @JavascriptInterface
@@ -566,6 +638,7 @@ public final class MainActivity extends Activity {
     @Override
     protected void onPause() {
         if (webView != null) webView.onPause();
+        stopSpeechRecognition();
         super.onPause();
     }
 
@@ -621,6 +694,7 @@ public final class MainActivity extends Activity {
             webView.destroy();
             webView = null;
         }
+        stopSpeechRecognition();
         super.onDestroy();
     }
 }

@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <!-- Needed from Android 13 (API 33) to post the ongoing cooking notification. -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Voice guide: one-utterance speech recognition while cooking. -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <!-- Chromebooks and desktop-mode tablets have no touchscreen. -->
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />

@@ -466,6 +466,9 @@
   function render() {
     closeToolPop();
     const route = parseRoute();
+    if (route.parts[0] !== 'cook' && guideListening) {
+      guideStopListening();
+    }
     const key = route.path;
     setChrome(route);
 
@@ -514,10 +517,13 @@
         if (recipe) store.set(KEY.cookDismissed, false);
         if (recipe) {
           const stepParam = parseInt(route.params.get('step') || '', 10);
-          view.innerHTML = cookView(recipe, stepParam);
+          const voiceParam = route.params.get('voice') === '1';
+          view.innerHTML = cookView(recipe, stepParam, voiceParam);
           title = 'Cook ' + recipe.name + ' · Mise';
+          maybeSpeakGuide(route, recipe);
         } else {
           view.innerHTML = missingView('cook');
+          maybeSpeakGuide(route, null);
         }
       } else if (route.parts[0] === 'done') {
         const recipe = getRecipe(route.parts[1] || '');
@@ -657,7 +663,7 @@
             <div class="fact"><div class="flabel">Total time</div><div class="fvalue${total ? '' : ' dash'}"${total ? '' : ' title="The source gives no total time"'}>${total ? esc(minutesText(total)) : '–'}</div></div>
           </div>
           <div class="hero-actions">
-            <a class="btn primary" href="#/cook/${esc(recipe.id)}">${icon('play')}Start cooking</a>
+            <button class="btn primary" type="button" data-action="start-cook" data-id="${esc(recipe.id)}">${icon('play')}Start cooking</button>
             <a class="btn" href="#/recipe/${esc(recipe.id)}">See the breakdown</a>
           </div>
         </div>
@@ -1888,7 +1894,7 @@
         <div class="title-actions">
           <button class="btn icon ghost fav-toggle${isFavorite(recipe.id) ? ' is-on' : ''}" type="button" data-action="toggle-favorite" data-id="${esc(recipe.id)}" aria-pressed="${isFavorite(recipe.id)}" aria-label="${isFavorite(recipe.id) ? 'Remove from' : 'Save to'} favorites">${icon('star')}</button>
           ${recipe.sourceUrl ? `<a class="btn" href="${esc(safeUrl(recipe.sourceUrl))}" target="_blank" rel="noopener noreferrer">${icon('external')}Source</a>` : ''}
-          <a class="btn primary" href="#/cook/${esc(recipe.id)}">${icon('play')}Start cooking</a>
+          <button class="btn primary" type="button" data-action="start-cook" data-id="${esc(recipe.id)}">${icon('play')}Start cooking</button>
         </div>
       </div>
 
@@ -2119,6 +2125,271 @@
     } catch (err) { /* notifications are best-effort */ }
   }
 
+  /* ---------- automated voice guide ----------
+
+     A second way to cook: choose "Automated voice guide" when starting. Mise
+     reads "Step N", pauses a second, reads the step, then listens for a
+     command — "repeat" / "say that again" re-reads it, "next" / "done" (or
+     close neighbours) advances, "start over" resets to step one, "repeat last
+     step" / "repeat last instruction" reads the previous one without moving,
+     and "cancel" ends the cook. Voice comes from the device's own speech
+     service (the Android shell uses the system recognizer; a browser uses
+     webkitSpeechRecognition when present). Nothing is recorded or uploaded —
+     the recognizer runs the words straight through, Mise never sees audio.
+     When speech is unavailable the buttons in the guide bar still drive
+     everything. */
+  let guideWant = null; // null = undecided this session; true = voice wanted; false = muted
+  let lastSpokenKey = '';
+  let guideStreak = 0;
+  let guideListening = false;
+  let webRecognizer = null;
+  let guideStatusText = '';
+  let guideHintText = '';
+
+  const synth = () => (typeof window.speechSynthesis !== 'undefined' ? window.speechSynthesis : null);
+  const nativeSpeech = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.speechStart === 'function';
+  const webSpeechCtor = () => window.SpeechRecognition || window.webkitSpeechRecognition || null;
+
+  function guideSetStatus(status, hint) {
+    guideStatusText = status;
+    if (hint !== undefined) guideHintText = hint;
+    const statusEl = document.getElementById('guide-status');
+    const hintEl = document.getElementById('guide-transcript');
+    if (statusEl) statusEl.textContent = guideStatusText;
+    if (hintEl) hintEl.textContent = guideHintText;
+  }
+
+  function guideSay(text, after) {
+    const engine = synth();
+    if (!engine) { if (after) after(); return; }
+    try {
+      engine.cancel();
+      const utterance = new SpeechSynthesisUtterance(String(text));
+      utterance.rate = 0.92;
+      utterance.pitch = 1;
+      utterance.volume = 1;
+      utterance.lang = navigator.language || 'en-US';
+      utterance.onend = () => { if (after) after(); };
+      utterance.onerror = () => { if (after) after(); };
+      engine.speak(utterance);
+    } catch (err) {
+      if (after) after();
+    }
+  }
+
+  function stopGuideSpeak() {
+    const engine = synth();
+    if (engine) { try { engine.cancel(); } catch (err) { /* ignore */ } }
+  }
+
+  function guideStepContext() {
+    if (!session || !session.recipeId) return null;
+    const recipe = getRecipe(session.recipeId);
+    if (!recipe) return null;
+    const total = recipe.steps.length;
+    if (!total) return null;
+    const step = Math.min(Math.max(1, session.step || 1), total);
+    return { recipe, total, step, text: (recipe.steps[step - 1] || {}).text || '' };
+  }
+
+  function stepTimerLine(ctx) {
+    const step = ctx.recipe.steps[ctx.step - 1];
+    const timers = ((step && step.timers) || []).map((t) => P.timerText(t));
+    if (!timers.length) return '';
+    return ' This step includes a timer for ' + timers.join(' and ') + '.';
+  }
+
+  function guideAnnounceStep() {
+    const ctx = guideStepContext();
+    if (!ctx) return;
+    guideListening = false;
+    guideStopListening();
+    guideSetStatus('Reading step ' + ctx.step + ' of ' + ctx.total + '…', 'The microphone is off while Mise reads.');
+    guideSay('Step ' + ctx.step, () => {
+      window.setTimeout(() => {
+        guideSay(ctx.text + stepTimerLine(ctx), () => beginGuideListen());
+      }, 1000);
+    });
+  }
+
+  function guideSpeakPrevious() {
+    const ctx = guideStepContext();
+    if (!ctx) return;
+    const idx = ctx.step - 2;
+    guideListening = false;
+    guideStopListening();
+    if (idx < 0) {
+      guideSay('There is no previous step.', () => beginGuideListen());
+      return;
+    }
+    const step = ctx.recipe.steps[idx];
+    guideSetStatus('Reading step ' + (idx + 1) + ' of ' + ctx.total + ' (previous)', '');
+    guideSay('Step ' + (idx + 1), () => {
+      window.setTimeout(() => guideSay(step.text || '', () => beginGuideListen()), 1000);
+    });
+  }
+
+  function beginGuideListen() {
+    if (guideWant !== true) return;
+    guideSetStatus('Listening…', 'Say “next”, “repeat”, “start over”, “repeat last step” or “cancel”.');
+    if (nativeSpeech()) {
+      guideListening = true;
+      try {
+        MiseNative.speechStart();
+        return;
+      } catch (err) { /* fall through to the buttons */ }
+    }
+    const Ctor = webSpeechCtor();
+    if (Ctor) {
+      try {
+        if (webRecognizer) { try { webRecognizer.abort(); } catch (err) { /* ignore */ } }
+        webRecognizer = new Ctor();
+        webRecognizer.lang = navigator.language || 'en-US';
+        webRecognizer.continuous = false;
+        webRecognizer.interimResults = false;
+        webRecognizer.maxAlternatives = 1;
+        webRecognizer.onresult = (event) => {
+          const res = event.results && event.results[0] && event.results[0][0];
+          onGuideSpeechText(res ? res.transcript : '');
+        };
+        webRecognizer.onerror = (event) => onGuideSpeechError((event && event.error) || 'error');
+        webRecognizer.onend = () => { if (guideWant === true && guideListening) rearmGuideListen(600); };
+        webRecognizer.start();
+        guideListening = true;
+        return;
+      } catch (err) { /* handled below */ }
+    }
+    guideListening = false;
+    guideSetStatus('Voice unavailable', 'Speech recognition is not available on this device. The guide still reads each step; use the buttons below.');
+  }
+
+  function rearmGuideListen(delay) {
+    window.setTimeout(() => {
+      if (guideWant === true && !guideListening) beginGuideListen();
+    }, delay || 700);
+  }
+
+  function guideStopListening() {
+    guideListening = false;
+    if (nativeSpeech()) { try { MiseNative.speechStop(); } catch (err) { /* ignore */ } }
+    if (webRecognizer) {
+      try { webRecognizer.abort(); } catch (err) { /* ignore */ }
+      webRecognizer = null;
+    }
+  }
+
+  const GUIDE_COMMANDS = [
+    { name: 'repeatLast', re: /^(repeat (the )?(last|previous) (step|instruction)|read (previous )?step again|previous step)$/i },
+    { name: 'startOver', re: /^(start over|start over recipe|restart|begin again|start again)$/i },
+    { name: 'repeat', re: /^(repeat|say (that|it) again|again|come again|one more time|read (that|it) again)$/i },
+    { name: 'next', re: /^(next|next step|next instruction|continue|done|finished|complete|proceed|move on|on to the next|keep going)$/i },
+    { name: 'cancel', re: /^(cancel|cancel recipe|cancel cook|cancel cooking|stop|stop cooking|end cook|end cooking|quit|quit cooking)$/i },
+  ];
+
+  function parseGuideCommand(text) {
+    const normalized = String(text || '').toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9 ]+/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    for (const cmd of GUIDE_COMMANDS) {
+      if (cmd.re.test(normalized)) return cmd.name;
+    }
+    return null;
+  }
+
+  function onGuideSpeechText(raw) {
+    guideListening = false;
+    const heard = String(raw || '').trim();
+    const command = heard ? parseGuideCommand(heard) : null;
+    guideStreak = 0;
+    switch (command) {
+      case 'repeatLast': guideSpeakPrevious(); return;
+      case 'startOver': guideStartOver(); return;
+      case 'repeat': guideAnnounceStep(); return;
+      case 'next': {
+        const recipe = session && getRecipe(session.recipeId);
+        if (recipe) cookNext(recipe);
+        return;
+      }
+      case 'cancel': cancelCurrentCook(); return;
+      default: break;
+    }
+    guideStreak += 1;
+    if (guideStreak >= 3) {
+      guideSetStatus('Paused — I couldn’t catch that.', 'Tap “Listen” to try again, or use the buttons below.');
+      return;
+    }
+    guideSetStatus('Didn’t catch that.', heard ? 'Heard “' + heard + '”. Say “next”, “repeat”, “start over” or “cancel”.' : 'Say “next”, “repeat”, “start over” or “cancel”.');
+    rearmGuideListen(700);
+  }
+
+  function onGuideSpeechError(code) {
+    guideListening = false;
+    if (code === 'denied') {
+      guideSetStatus('Microphone is off.', 'Allow the microphone for Mise in system settings, or use the buttons below.');
+      return;
+    }
+    if (code === 'unavailable' || code === 'network' || code === 'server') {
+      guideSetStatus('Speech unavailable', 'Speech recognition is not available right now. Use the buttons below to move between steps.');
+      return;
+    }
+    // silence / noise — re-arm a few times before pausing
+    guideStreak += 1;
+    if (guideStreak >= 4) {
+      guideSetStatus('It’s quiet — voice paused.', 'Tap “Listen” to resume, or use the buttons below.');
+      return;
+    }
+    rearmGuideListen(900);
+  }
+
+  function guideStartOver() {
+    const recipe = session && getRecipe(session.recipeId);
+    if (!recipe) return;
+    session.step = 1;
+    session.done = [];
+    session.checks = {};
+    session.startedAt = Date.now();
+    session.complete = false;
+    store.set(KEY.session, session);
+    showCookStep(recipe);
+  }
+
+  function guideLeave() {
+    guideWant = false;
+    lastSpokenKey = '';
+    guideStreak = 0;
+    guideListening = false;
+    guideStopListening();
+    stopGuideSpeak();
+  }
+
+  function maybeSpeakGuide(route, recipe) {
+    if (!route || route.parts[0] !== 'cook' || !recipe) return;
+    if (route.params.get('voice') === '1' && guideWant === null) {
+      guideWant = true;
+      lastSpokenKey = '';
+    }
+    if (guideWant !== true || !session) return;
+    const key = recipe.id + ':' + session.step + ':' + session.startedAt;
+    if (key === lastSpokenKey) return;
+    lastSpokenKey = key;
+    window.setTimeout(guideAnnounceStep, 250);
+  }
+
+  // Android shell emits window.__miseSpeechResult({"text":"..."}) and
+  // window.__miseSpeechError({"code":"..."}) for each recognizer turn.
+  window.__miseSpeechResult = (raw) => {
+    let payload = null;
+    try { payload = JSON.parse(raw); } catch (err) { payload = null; }
+    onGuideSpeechText(payload && payload.text ? payload.text : '');
+  };
+  window.__miseSpeechError = (raw) => {
+    let payload = null;
+    try { payload = JSON.parse(raw); } catch (err) { payload = null; }
+    onGuideSpeechError(payload && payload.code ? payload.code : 'error');
+  };
+
   function getSession(recipe, stepParam) {
     let s = store.get(KEY.session, null);
     const stale = s && s.startedAt && Date.now() - s.startedAt > 12 * 60 * 60 * 1000;
@@ -2137,6 +2408,9 @@
 
   function cancelCurrentCook() {
     const recipe = session && session.recipeId ? getRecipe(session.recipeId) : null;
+    const wasVoice = guideWant === true;
+    guideLeave();
+    if (wasVoice) guideSay('Cook cancelled.');
     session = null;
     store.set(KEY.session, null);
     store.set(KEY.last, null);
@@ -2148,7 +2422,34 @@
     navigate('#/cook');
   }
 
-  function cookView(recipe, stepParam) {
+  function guideBarHtml(voice) {
+    if (!voice) return '';
+    const on = guideWant !== false;
+    if (!guideStatusText) {
+      guideStatusText = 'Voice guide on';
+      guideHintText = 'Say “next”, “repeat”, “start over”, “repeat last step” or “cancel”.';
+    }
+    const status = on ? guideStatusText : 'Voice guide is off';
+    const hint = on ? guideHintText : 'Tap “Voice guide” to have each step read out.';
+    return `<div class="guide-bar${on ? ' is-on' : ''}" id="guide-bar" role="status" aria-live="polite">
+      <span class="guide-dot" aria-hidden="true"></span>
+      <div class="guide-copy">
+        <b id="guide-status">${esc(status)}</b>
+        <span class="guide-transcript" id="guide-transcript">${esc(hint)}</span>
+      </div>
+      <button class="btn ghost guide-mute" type="button" data-action="toggle-guide">${icon('mic')}${on ? 'Mute voice' : 'Voice guide'}</button>
+    </div>
+    <div class="guide-commands" ${on ? '' : 'hidden'}>
+      <button class="chipbtn" type="button" data-action="guide-repeat">${icon('reset')}Repeat</button>
+      <button class="chipbtn" type="button" data-action="guide-last">${icon('arrow-left')}Last step</button>
+      <button class="chipbtn" type="button" data-action="cook-next">${icon('check')}Next</button>
+      <button class="chipbtn" type="button" data-action="guide-listen">${icon('mic')}Listen</button>
+      <button class="chipbtn" type="button" data-action="start-over">${icon('reset')}Start over</button>
+      <button class="chipbtn danger" type="button" data-action="cancel-cook">${icon('x')}Cancel cook</button>
+    </div>`;
+  }
+
+  function cookView(recipe, stepParam, voice) {
     const s = getSession(recipe, stepParam);
     if (!recipe.steps.length) return `<div class="page"><div class="panel state-panel"><h2>No steps in this record</h2><p>${esc(recipe.source)} supplied ingredients but no method text, so there is nothing honest to cook from.</p><div class="actions"><a class="btn primary" href="#/recipe/${esc(recipe.id)}">Back to the recipe</a></div></div></div>`;
 
@@ -2195,6 +2496,7 @@
            <div class="cook-meta">${icon('flame')}${s.done.length} of ${recipe.steps.length} Steps Complete</div>
            <h1>Cooking Instructions</h1>
            <p class="cook-sub">All ${recipe.steps.length} steps are shown in full, in the publisher’s order. Select a step to make it current and see its ingredients and timers.</p>
+           ${guideBarHtml(voice)}
            ${missNote ? `<div class="notice quiet cook-gap-note">${icon('info')}<span>${esc(missNote)}</span></div>` : ''}
            <ol class="cook-steps">${stepList}</ol>
            <div class="cook-actions">
@@ -2336,7 +2638,7 @@
               <div class="done-name">${esc(recipe.name)}</div>
               <div class="done-src">${esc(recipe.source)}${recipe.author ? ' / ' + esc(recipe.author) : ''}${recipe.yields ? ' / serves ' + recipe.yields : ''}</div>
               <div class="done-actions">
-                <a class="btn" href="#/cook/${esc(recipe.id)}">${icon('reset')}Cook it again</a>
+                <button class="btn" type="button" data-action="start-cook" data-id="${esc(recipe.id)}">${icon('reset')}Cook it again</button>
                 <a class="btn ghost" href="#/recipe/${esc(recipe.id)}">Open the recipe</a>
               </div>
             </div>
@@ -2592,7 +2894,9 @@
 
   /* ---------- session actions ---------- */
   function showCookStep(recipe) {
-    navigate('#/cook/' + recipe.id + '?step=' + session.step);
+    const query = new URLSearchParams((location.hash.split('?')[1] || ''));
+    const voice = query.get('voice') === '1' ? '&voice=1' : '';
+    navigate('#/cook/' + recipe.id + '?step=' + session.step + voice);
   }
 
   function cookStep(routeRecipe, n) {
@@ -2628,6 +2932,8 @@
     const finishedAt = Date.now();
     const startedAt = session ? session.startedAt : finishedAt;
     recordCook(recipe, Math.max(0, finishedAt - startedAt));
+    const wasVoice = guideWant === true;
+    guideLeave();
     store.set(KEY.lastcook, {
       recipeId: recipe.id,
       startedAt,
@@ -2642,6 +2948,7 @@
     }
     announce('Finished cooking ' + recipe.name + '.');
     clearCookNotification();
+    if (wasVoice) guideSay('Finished cooking ' + recipe.name + '. Good work.');
     navigate('#/done/' + recipe.id);
   }
 
@@ -2977,6 +3284,28 @@
 
   function closeModal() {
     if (modal && modal.open) modal.close();
+  }
+
+  function openStartCook(recipe) {
+    modalBody.innerHTML = `<div class="modal-body">
+      <button class="btn icon ghost modal-close" type="button" data-action="close-modal" aria-label="Close">${icon('x')}</button>
+      <h2 id="modal-title">How would you like to cook?</h2>
+      <p class="lede">“${esc(recipe.name)}” — pick how you want Mise to run the steps.</p>
+      <div class="choice-list">
+        <button class="choice-card" type="button" data-action="cook-choice" data-id="${esc(recipe.id)}" data-mode="manual">
+          <span class="choice-icon">${icon('play')}</span>
+          <span class="choice-copy"><b>Manual cook</b><span>Steps on screen — you drive. Read, check and move at your own pace.</span></span>
+          ${icon('arrow-right', 'choice-go')}
+        </button>
+        <button class="choice-card" type="button" data-action="cook-choice" data-id="${esc(recipe.id)}" data-mode="voice">
+          <span class="choice-icon">${icon('mic')}</span>
+          <span class="choice-copy"><b>Automated voice guide</b><span>Hands-free: Mise reads “Step N” and the step aloud, then listens. Say “repeat”, “next”, “start over” or “cancel” — or tap the buttons.</span></span>
+          ${icon('arrow-right', 'choice-go')}
+        </button>
+      </div>
+      <p class="hint" style="margin-top:12px">Voice comes from this device’s speech service. Mise never records or uploads audio; it only counts the command you asked for.</p>
+    </div>`;
+    openModal();
   }
 
   function sourcesListHtml() {
@@ -3458,6 +3787,60 @@
     }
     if (action === 'exit-cook') {
       if (recipe) navigate('#/recipe/' + recipe.id);
+      return;
+    }
+    if (action === 'start-cook') {
+      const id = target.dataset.id || (route.parts[1] || '');
+      const recipe = getRecipe(id);
+      if (recipe) openStartCook(recipe);
+      return;
+    }
+    if (action === 'cook-choice') {
+      const recipe = getRecipe(target.dataset.id || '');
+      closeModal();
+      if (!recipe) return;
+      if (target.dataset.mode === 'voice') {
+        guideWant = true;
+        lastSpokenKey = '';
+        guideStreak = 0;
+        navigate('#/cook/' + recipe.id + '?voice=1');
+      } else {
+        navigate('#/cook/' + recipe.id);
+      }
+      return;
+    }
+    if (action === 'toggle-guide') {
+      const recipe = route.parts[1] ? getRecipe(route.parts[1]) : null;
+      if (!recipe) return;
+      if (guideWant === true) {
+        guideWant = false;
+        guideStopListening();
+        stopGuideSpeak();
+        announce('Voice guide muted.');
+        render();
+        return;
+      }
+      guideWant = true;
+      lastSpokenKey = '';
+      announce('Voice guide on.');
+      render();
+      return;
+    }
+    if (action === 'guide-repeat') {
+      if (guideWant !== true) { announce('Voice guide is off. Turn it on to hear the step.'); return; }
+      guideAnnounceStep();
+      return;
+    }
+    if (action === 'guide-last') {
+      if (guideWant !== true) { announce('Voice guide is off. Turn it on to hear the previous step.'); return; }
+      guideSpeakPrevious();
+      return;
+    }
+    if (action === 'guide-listen') {
+      if (guideWant !== true) { announce('Voice guide is off. Tap the mic button to turn it on.'); return; }
+      guideStreak = 0;
+      guideSetStatus('Listening…', 'Say “next”, “repeat”, “start over”, “repeat last step” or “cancel”.');
+      beginGuideListen();
       return;
     }
     if (action === 'cancel-cook') {

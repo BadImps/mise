@@ -556,6 +556,21 @@
 .tool-pop-copy { display: grid; gap: 4px; padding-right: 18px; }
 .tool-pop-copy b { font-size: var(--fs-small); color: var(--text); }
 .tool-pop-copy span { color: var(--muted); }
+
+/* ---------- automated voice guide ---------- */
+.guide-bar { display: flex; align-items: center; gap: 12px; margin: 4px 0 12px; padding: 12px 14px; border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 14px; background: var(--accent-soft); }
+.guide-dot { flex: none; width: 11px; height: 11px; border-radius: 999px; background: var(--accent); }
+.guide-bar.is-on .guide-dot { animation: guidePulse 1.5s ease-in-out infinite; }
+@keyframes guidePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(168, 132, 47, 0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(168, 132, 47, 0.16); }
+}
+.guide-copy { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.guide-copy b { font-size: var(--fs-small); color: var(--text); }
+.guide-transcript { color: var(--muted); font-size: var(--fs-meta); line-height: 18px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.guide-mute { flex: none; height: 40px; padding: 0 12px; display: inline-flex; align-items: center; gap: 7px; font-size: var(--fs-meta); }
+.guide-mute .i { width: 16px; height: 16px; }
+.guide-commands { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 .timer-btn {
   display: inline-flex; align-items: center; gap: 10px;
   min-height: 52px; padding: 7px 14px 7px 10px;

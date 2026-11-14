@@ -312,6 +312,8 @@ textarea.input { height: auto; min-height: 160px; padding: 10px 12px; resize: ve
   font-size: var(--fs-meta); font-weight: 500; white-space: nowrap;
 }
 .chipbtn:hover { border-color: var(--control); color: var(--text); }
+.chipbtn.danger { color: var(--negative); border-color: rgba(157, 48, 43, 0.35); }
+.chipbtn.danger:hover { color: var(--negative); border-color: var(--negative); }
 .chipbtn[aria-pressed="true"] { border-color: var(--text); color: var(--text); box-shadow: inset 0 0 0 1px var(--text); /* taste-skill-ignore: selected state */ }
 .chipbtn .n { font-variant-numeric: tabular-nums; color: var(--faint); }
 .chipbtn[aria-pressed="true"] .n { color: var(--muted); }
@@ -397,11 +399,28 @@ textarea.input { height: auto; min-height: 160px; padding: 10px 12px; resize: ve
 .modal[open] { animation: modal-in 160ms var(--ease-out); }
 @keyframes modal-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 .modal-body { padding: 24px; overflow: auto; max-height: min(84svh, 720px); }
-.modal h2 { font-size: var(--fs-section); line-height: 26px; font-weight: 600; margin-bottom: 8px; }
+.modal h2 { font-size: var(--fs-section); line-height: 26px; font-weight: 600; margin-bottom: 8px; padding-right: 44px; }
 .modal .lede { color: var(--muted); font-size: var(--fs-small); line-height: 21px; }
 .modal .modal-foot { display: flex; justify-content: flex-end; gap: 8px; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--rule); }
 .modal .close-x { position: absolute; right: 14px; top: 14px; }
 .modal-close { position: absolute; right: 14px; top: 14px; }
+
+/* ---------- start-cook choice ---------- */
+.choice-list { display: grid; gap: 10px; margin-top: 16px; }
+.choice-card {
+  display: flex; align-items: center; gap: 14px; width: 100%;
+  text-align: start; padding: 14px;
+  border: 1px solid var(--border); border-radius: 14px;
+  background: var(--surface); color: var(--text); cursor: pointer;
+  transition: border-color 150ms var(--ease-out), background 150ms var(--ease-out), transform 150ms var(--ease-out);
+}
+.choice-card:hover, .choice-card:focus-visible { border-color: var(--accent); background: var(--accent-soft); transform: translateY(-1px); }
+.choice-icon { flex: none; width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: var(--accent-soft); color: var(--accent-ink); }
+.choice-icon .i { width: 22px; height: 22px; }
+.choice-copy { flex: 1; min-width: 0; display: grid; gap: 3px; }
+.choice-copy b { font-size: var(--fs-small); color: var(--text); }
+.choice-copy span { color: var(--muted); font-size: var(--fs-meta); line-height: 18px; }
+.choice-go { flex: none; width: 18px; height: 18px; color: var(--muted); }
 
 /* ---------- phone: the rail becomes a bottom bar ---------- */
 @media (max-width: 860px) {
