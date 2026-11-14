@@ -1,0 +1,44 @@
+plugins {
+    id "com.android.application"
+}
+
+android {
+    namespace "com.badimps.mise.voiceprobe"
+    compileSdk 36
+    defaultConfig {
+        applicationId "com.badimps.mise.voiceprobe"
+        minSdk 26
+        targetSdk 36
+        versionCode 1
+        versionName "0.1-prototype"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation files("libs/sherpa-onnx-1.13.8.aar")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:2.2.0"
+    testImplementation "junit:junit:4.13.2"
+}
+
+tasks.register("verifyVoiceRuntime") {
+    doLast {
+        def runtime = file("libs/sherpa-onnx-1.13.8.aar")
+        if (!runtime.exists()) {
+            throw new GradleException("Run node tools/prepare-voice-probe.mjs from the repository root first")
+        }
+        def digest = java.security.MessageDigest.getInstance("SHA-256")
+        runtime.withInputStream { input ->
+            byte[] buffer = new byte[65536]
+            int count
+            while ((count = input.read(buffer)) != -1) digest.update(buffer, 0, count)
+        }
+        if (digest.digest().encodeHex().toString() != "633c24321e06b1fe79feafa03ea16cbc0f8a286641e2da3559bac91bdb13bd96") {
+            throw new GradleException("Voice prototype AAR checksum mismatch")
+        }
+    }
+}
+tasks.named("preBuild").configure { dependsOn("verifyVoiceRuntime") }

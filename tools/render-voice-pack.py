@@ -21,8 +21,6 @@ SPEED = 0.92
 PHRASES = [(f"step-{n}.wav", f"Step {n}") for n in range(1, 41)] + [
     ("no-previous-step.wav", "There is no previous step."),
     ("cook-cancelled.wav", "Cook cancelled."),
-    ("are-you-there.wav", "Are you there?"),
-    ("cook-paused.wav", "Cook paused."),
 ]
 PERSONAS = [("carol", "af_heart"), ("sean", "am_michael")]
 

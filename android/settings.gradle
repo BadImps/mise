@@ -16,3 +16,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Mise"
 include ":app"
+if (providers.gradleProperty("voiceProbe").isPresent()) {
+    include ":voice-probe"
+}

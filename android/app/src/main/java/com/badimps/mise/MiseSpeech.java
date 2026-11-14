@@ -43,9 +43,9 @@ final class MiseSpeech {
         main.post(this::startListening);
     }
 
-    /** Stop listening and release the mic. Safe to call from any thread. */
+    /** Stop listening, close the mic, and release the recognizer. Safe to call from any thread. */
     void stop() {
-        main.post(this::cancelInternal);
+        main.post(this::destroyRecognizer);
     }
 
     private void startListening() {
@@ -53,65 +53,63 @@ final class MiseSpeech {
             reply.onError("unavailable");
             return;
         }
-        cancelInternal();
+        // reuse the recognizer across turns — destroying and re-binding every
+        // utterance is what made the microphone keep dropping
+        if (recognizer == null) {
+            recognizer = SpeechRecognizer.createSpeechRecognizer(context);
+            recognizer.setRecognitionListener(new RecognitionListener() {
+                @Override
+                public void onReadyForSpeech(Bundle params) { }
+
+                @Override
+                public void onBeginningOfSpeech() { }
+
+                @Override
+                public void onRmsChanged(float rmsdB) { }
+
+                @Override
+                public void onBufferReceived(byte[] buffer) { }
+
+                @Override
+                public void onEndOfSpeech() { }
+
+                @Override
+                public void onPartialResults(Bundle partialResults) { }
+
+                @Override
+                public void onEvent(int eventType, Bundle params) { }
+
+                @Override
+                public void onResults(Bundle results) {
+                    List<String> matches = results == null ? null
+                            : results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
+                    String text = matches == null || matches.isEmpty() ? "" : matches.get(0);
+                    reply.onResult(text == null ? "" : text);
+                }
+
+                @Override
+                public void onError(int error) {
+                    reply.onError(codeFor(error));
+                }
+            });
+        }
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, false);
         intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 1);
         intent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1500L);
         intent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_MINIMUM_LENGTH_MILLIS, 900L);
-
-        SpeechRecognizer fresh = SpeechRecognizer.createSpeechRecognizer(context);
-        fresh.setRecognitionListener(new RecognitionListener() {
-            @Override
-            public void onReadyForSpeech(Bundle params) { }
-
-            @Override
-            public void onBeginningOfSpeech() { }
-
-            @Override
-            public void onRmsChanged(float rmsdB) { }
-
-            @Override
-            public void onBufferReceived(byte[] buffer) { }
-
-            @Override
-            public void onEndOfSpeech() { }
-
-            @Override
-            public void onPartialResults(Bundle partialResults) { }
-
-            @Override
-            public void onEvent(int eventType, Bundle params) { }
-
-            @Override
-            public void onResults(Bundle results) {
-                List<String> matches = results == null ? null
-                        : results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
-                String text = matches == null || matches.isEmpty() ? "" : matches.get(0);
-                reply.onResult(text == null ? "" : text);
-                cancelInternal();
-            }
-
-            @Override
-            public void onError(int error) {
-                reply.onError(codeFor(error));
-                cancelInternal();
-            }
-        });
         try {
-            fresh.startListening(intent);
-            recognizer = fresh;
+            recognizer.startListening(intent);
         } catch (RuntimeException e) {
             Log.w(TAG, "Could not start listening", e);
             reply.onError("denied");
-            try {
-                fresh.destroy();
-            } catch (Throwable ignored) { }
+            // the service may reject the reused binding; rebuild it once
+            destroyRecognizer();
         }
     }
 
-    private void cancelInternal() {
+    private void destroyRecognizer() {
         SpeechRecognizer current = recognizer;
         recognizer = null;
         if (current != null) {

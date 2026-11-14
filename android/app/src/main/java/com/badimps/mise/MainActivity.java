@@ -68,6 +68,8 @@ public final class MainActivity extends Activity {
     private int pendingCookStep;
     private int pendingCookTotal;
     private boolean pendingSpeech;
+    /** True while a RECORD_AUDIO permission prompt is showing, so the voice cook and the lazy recognizer turn never double-request. */
+    private boolean recordPermissionPromptPending;
     private MiseSpeech miseSpeech;
     private MiseVoice miseVoice;
 
@@ -352,12 +354,14 @@ public final class MainActivity extends Activity {
         });
     }
 
-    /** Requests the microphone if needed; used before a voice cook starts. */
+    /** Requests the microphone if needed; used when cooking is in progress and the voice guide is turned on. */
     private void prepareSpeech() {
         if (isFinishing() || isDestroyed()) return;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
-                && checkSelfPermission(android.Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+                && checkSelfPermission(android.Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED
+                && !recordPermissionPromptPending) {
             pendingSpeech = false;
+            recordPermissionPromptPending = true;
             requestPermissions(new String[]{android.Manifest.permission.RECORD_AUDIO}, REQUEST_RECORD_AUDIO);
         }
     }
@@ -367,7 +371,13 @@ public final class MainActivity extends Activity {
         if (isFinishing() || isDestroyed()) return;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
                 && checkSelfPermission(android.Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            if (recordPermissionPromptPending) {
+                // a prompt from prepareSpeech() is already showing; don't stack a second one
+                pendingSpeech = true;
+                return;
+            }
             pendingSpeech = true;
+            recordPermissionPromptPending = true;
             requestPermissions(new String[]{android.Manifest.permission.RECORD_AUDIO}, REQUEST_RECORD_AUDIO);
             return;
         }
@@ -389,6 +399,7 @@ public final class MainActivity extends Activity {
         }
         pendingCook = false;
         if (requestCode == REQUEST_RECORD_AUDIO) {
+            recordPermissionPromptPending = false;
             boolean granted = grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED;
             if (granted && pendingSpeech && miseSpeech != null) {
                 miseSpeech.start();

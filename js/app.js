@@ -465,6 +465,18 @@
     document.body.classList.toggle('route-cook', route.parts[0] === 'cook');
   }
 
+  let lastCenteredCookStep = '';
+
+  function centerCurrentCookStep(recipe) {
+    // keep the highlighted step at the centre of the screen when it changes
+    if (!recipe) { lastCenteredCookStep = ''; return; }
+    const key = recipe.id + ':' + ((session && session.recipeId === recipe.id) ? session.step : 1);
+    if (key === lastCenteredCookStep) return;
+    lastCenteredCookStep = key;
+    const card = document.querySelector('.cook-step-card.current');
+    if (card) card.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  }
+
   function render() {
     closeToolPop();
     const route = parseRoute();
@@ -522,6 +534,7 @@
           const voiceParam = route.params.get('voice') === '1';
           view.innerHTML = cookView(recipe, stepParam, voiceParam);
           title = 'Cook ' + recipe.name + ' · Mise';
+          centerCurrentCookStep(recipe);
           maybeSpeakGuide(route, recipe);
         } else {
           view.innerHTML = missingView('cook');
@@ -2139,17 +2152,19 @@
      webkitSpeechRecognition when present). Nothing is recorded or uploaded —
      the recognizer runs the words straight through, Mise never sees audio.
      When speech is unavailable the buttons in the guide bar still drive
-     everything. */
+     everything. The microphone stays open while you cook and pauses after two
+     minutes of quiet — tap "Listen" to hear the step again and keep cooking,
+     or cancel the cook to end it. */
+  const GUIDE_SILENCE_MS = 2 * 60 * 1000;
   let guideWant = null; // null = undecided this session; true = voice wanted; false = muted
   let lastSpokenKey = '';
-  let guideStreak = 0;
   let guideListening = false;
   let webRecognizer = null;
   let guideStatusText = '';
   let guideHintText = '';
-  let guideAwaitTimer = null;
-  let guideAreYouThere = false;
-  let guidePaused = false;
+  let guideLastHeard = Date.now();
+  let guideTimerPrompt = false; // waiting for a yes/no answer to the timer question
+  let guideWaitingTimer = false; // timer owns the flow until it finishes or is cleared
 
   const synth = () => (typeof window.speechSynthesis !== 'undefined' ? window.speechSynthesis : null);
   const nativeSpeech = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.speechStart === 'function';
@@ -2223,8 +2238,6 @@
     }
     if (text === 'There is no previous step.') return clipBase() + 'no-previous-step.wav';
     if (text === 'Cook cancelled.') return clipBase() + 'cook-cancelled.wav';
-    if (text === 'Are you there?') return clipBase() + 'are-you-there.wav';
-    if (text === 'Cook paused.') return clipBase() + 'cook-paused.wav';
     return null;
   }
 
@@ -2259,10 +2272,10 @@
     if (hintEl) hintEl.textContent = guideHintText;
   }
 
-  /* Speak order: the device's own speech engine carries every line — steps,
-     confirmations, "Are you there?" — in one constant voice chosen in Settings.
-     Only a device with NO speech engine at all falls back to the pre-rendered
-     Kokoro clips for the fixed phrases, so the app never wedges silent. */
+  /* Speak order: the device's own speech engine carries every line — steps and
+   confirmations — in one constant voice chosen in Settings. Only a device with
+   NO speech engine at all falls back to the pre-rendered Kokoro clips for the
+   fixed phrases, so the app never wedges silent. */
   function guideSay(text, after) {
     const clean = String(text == null ? '' : text).trim();
     const engineOK = nativeVoice() || !!synth();
@@ -2276,9 +2289,11 @@
     if (nativeVoice()) {
       ttsAfter = after || null;
       try {
+        armTtsWatchdog(clean, null);
         MiseNative.ttsSpeak(clean);
         return;
       } catch (err) {
+        clearTtsWatchdog();
         ttsAfter = null;
       }
     }
@@ -2290,14 +2305,22 @@
     }
     try {
       engine.cancel();
+      let ended = false;
+      const done = () => {
+        if (ended) return;
+        ended = true;
+        clearTtsWatchdog();
+        if (after) after();
+      };
       const utterance = new SpeechSynthesisUtterance(clean);
       utterance.rate = 0.92;
       utterance.pitch = 1;
       utterance.volume = 1;
       utterance.lang = navigator.language || 'en-US';
       if (webPersonaVoice) utterance.voice = webPersonaVoice;
-      utterance.onend = () => { if (after) after(); };
-      utterance.onerror = () => { if (after) after(); };
+      utterance.onend = done;
+      utterance.onerror = done;
+      armTtsWatchdog(clean, done);
       engine.speak(utterance);
     } catch (err) {
       if (after) after();
@@ -2310,6 +2333,7 @@
       activeClip = null;
     }
     if (nativeVoice()) { try { MiseNative.ttsStop(); } catch (err) { /* ignore */ } }
+    clearTtsWatchdog();
     ttsAfter = null;
     const engine = synth();
     if (engine) { try { engine.cancel(); } catch (err) { /* ignore */ } }
@@ -2325,11 +2349,31 @@
     return { recipe, total, step, text: (recipe.steps[step - 1] || {}).text || '' };
   }
 
-  function stepTimerLine(ctx) {
-    const step = ctx.recipe.steps[ctx.step - 1];
-    const timers = ((step && step.timers) || []).map((t) => P.timerText(t));
-    if (!timers.length) return '';
-    return ' This step includes a timer for ' + timers.join(' and ') + '.';
+  function timersForStep(ctx) {
+    const step = ctx && ctx.recipe.steps[ctx.step - 1];
+    return ((step && step.timers) || []);
+  }
+
+  function activeTimerForStep(recipe, stepNumber) {
+    if (!timerState) return null;
+    if (timerState.done) return null;
+    if (timerState.recipeId !== recipe.id || timerState.step !== stepNumber) return null;
+    return timerState;
+  }
+
+  // After Mise finishes reading the step, offer to start the step's timer.
+  // If the guide is waiting on a timer it does not narrate or advance until
+  // the timer is done (or the user clears it), at which point it resumes.
+  function offerStepTimer(ctx) {
+    const timers = timersForStep(ctx);
+    const recipe = ctx && ctx.recipe;
+    if (!timers.length || activeTimerForStep(recipe, ctx.step)) {
+      beginGuideListen(true);
+      return;
+    }
+    guideTimerPrompt = true;
+    guideSetStatus('Timer for this step?', 'Say “yes” to start the ' + P.timerText(timers[0]) + ' timer, or “no” to skip it.');
+    guideSay('This step includes a timer for ' + P.timerText(timers[0]) + '. Should I start it?', () => beginGuideListen(true));
   }
 
   function guideAnnounceStep() {
@@ -2340,7 +2384,7 @@
     guideSetStatus('Reading step ' + ctx.step + ' of ' + ctx.total + '…', 'The microphone is off while Mise reads.');
     guideSay('Step ' + ctx.step, () => {
       window.setTimeout(() => {
-        guideSay(ctx.text + stepTimerLine(ctx), () => beginGuideListen());
+        guideSay(ctx.text, () => offerStepTimer(ctx));
       }, 1000);
     });
   }
@@ -2352,43 +2396,65 @@
     guideListening = false;
     guideStopListening();
     if (idx < 0) {
-      guideSay('There is no previous step.', () => beginGuideListen());
+      guideSay('There is no previous step.', () => beginGuideListen(true));
       return;
     }
     const step = ctx.recipe.steps[idx];
     guideSetStatus('Reading step ' + (idx + 1) + ' of ' + ctx.total + ' (previous)', '');
     guideSay('Step ' + (idx + 1), () => {
-      window.setTimeout(() => guideSay(step.text || '', () => beginGuideListen()), 1000);
+      window.setTimeout(() => guideSay(step.text || '', () => {
+        // re-read the current step after a two-second pause
+        window.setTimeout(() => guideAnnounceStep(), 2000);
+      }), 1000);
     });
   }
 
-  function clearGuideAwait() {
-    if (guideAwaitTimer) {
-      window.clearTimeout(guideAwaitTimer);
-      guideAwaitTimer = null;
+  function guideGotoStep(recipe, n) {
+    if (!recipe || !session) return;
+    const target = Math.min(Math.max(1, n), recipe.steps.length);
+    session.step = target;
+    session.complete = false;
+    store.set(KEY.session, session);
+    const voice = guideWant === true ? '&voice=1' : '';
+    const hash = '#/cook/' + recipe.id + '?step=' + target + voice;
+    if (location.hash === hash) {
+      guideAnnounceStep();
+      return;
+    }
+    navigate(hash); // maybeSpeakGuide narrates the newly highlighted step
+  }
+
+  function pauseGuideForSilence() {
+    guideListening = false;
+    guideStopListening();
+    guideSetStatus('Cook paused — two minutes of quiet.', 'Tap “Listen” to hear the current step again and keep cooking.');
+    announce('Cook paused after two minutes of quiet.');
+  }
+
+  function checkGuideSilence(now) {
+    if (guideWant !== true || !guideListening) return;
+    if (now - guideLastHeard >= GUIDE_SILENCE_MS) {
+      pauseGuideForSilence();
     }
   }
 
-  function armGuideAwait(ms) {
-    if (guideAwaitTimer) return; // one deadline per read; re-armed listens never slide it
-    guideAwaitTimer = window.setTimeout(() => {
-      if (guideWant !== true) return;
-      askAreYouThere();
-    }, ms);
-  }
-
-  function beginGuideListen(mode) {
+  function beginGuideListen(resetSilence) {
     if (guideWant !== true) return;
-    const yesNo = mode === 'yesno';
-    guideSetStatus(yesNo ? 'Are you there? — listening…' : 'Listening…',
-      yesNo ? 'Say “yes” to keep cooking, or say a command.' : 'Say “next”, “repeat”, “start over”, “repeat last step” or “cancel”.');
+    if (resetSilence) guideLastHeard = Date.now();
+    if (guideTimerPrompt) {
+      guideSetStatus('Timer for this step — listening…', 'Say “yes” to start the timer, or “no” to skip it.');
+    } else {
+      guideSetStatus('Listening…', 'Say “next”, “repeat”, “start over”, “repeat last step”, “what is step 3” or “cancel”.');
+    }
     if (nativeSpeech()) {
       guideListening = true;
       try {
         MiseNative.speechStart();
-        if (!yesNo) armGuideAwait(6000);
         return;
-      } catch (err) { /* fall through to the buttons */ }
+      } catch (err) {
+        guideSetStatus('Voice unavailable', 'The speech recognizer could not start. Use the buttons below to move between steps.');
+        return;
+      }
     }
     const Ctor = webSpeechCtor();
     if (Ctor) {
@@ -2407,7 +2473,6 @@
         webRecognizer.onend = () => { if (guideWant === true && guideListening) rearmGuideListen(600); };
         webRecognizer.start();
         guideListening = true;
-        if (!yesNo) armGuideAwait(6000);
         return;
       } catch (err) { /* handled below */ }
     }
@@ -2415,42 +2480,39 @@
     guideSetStatus('Voice unavailable', 'Speech recognition is not available on this device. The guide still reads each step; use the buttons below.');
   }
 
-  function askAreYouThere() {
-    if (guideWant !== true) return;
-    guideAreYouThere = true;
-    guideSetStatus('Are you there?', 'Say “yes” to keep cooking.');
-    guideStopListening();
-    guideSay('Are you there?', () => {
-      if (guideWant !== true) return;
-      clearGuideAwait();
-      guideAwaitTimer = window.setTimeout(() => {
-        if (guideWant === true && guideAreYouThere) guidePauseCook();
-      }, 4000);
-      beginGuideListen('yesno');
-    });
+  let ttsWatchdog = null;
+  let guideErrorStreak = 0;
+
+  function armTtsWatchdog(clean, fallbackAfter) {
+    clearTtsWatchdog();
+    // Long texts get longer windows; a flat cap keeps brutal failures recoverable.
+    const estimateMs = Math.min(60000, Math.max(9000, 6000 + String(clean || '').length * 100));
+    ttsWatchdog = window.setTimeout(() => {
+      ttsWatchdog = null;
+      const cb = ttsAfter;
+      ttsAfter = null;
+      guideSetStatus('Hearing silence from the voice service — continuing.', 'Say “next”, “repeat”, “start over”, “what is step 3” or “cancel”.');
+      if (cb) { cb(); return; }
+      if (fallbackAfter) fallbackAfter();
+    }, estimateMs);
   }
 
-  function guidePauseCook() {
-    guideAreYouThere = false;
-    guideWant = false;
-    guidePaused = true;
-    guideStopListening();
-    stopGuideSpeak();
-    clearGuideAwait();
-    guideSetStatus('Cook paused.', 'Tap “Resume” to hear the current step again.');
-    announce('Cook paused.');
-    render();
+  function clearTtsWatchdog() {
+    if (ttsWatchdog) {
+      window.clearTimeout(ttsWatchdog);
+      ttsWatchdog = null;
+    }
   }
 
   function rearmGuideListen(delay) {
+    // re-arm keeps the accumulated quiet clock — it only opens the microphone again
     window.setTimeout(() => {
-      if (guideWant === true && !guideListening) beginGuideListen();
-    }, delay || 700);
+      if (guideWant === true && !guideListening) beginGuideListen(false);
+    }, delay == null ? 250 : delay);
   }
 
   function guideStopListening() {
     guideListening = false;
-    clearGuideAwait();
     if (nativeSpeech()) { try { MiseNative.speechStop(); } catch (err) { /* ignore */ } }
     if (webRecognizer) {
       try { webRecognizer.abort(); } catch (err) { /* ignore */ }
@@ -2458,12 +2520,27 @@
     }
   }
 
+  const GUIDE_HEAD_FILLER = /^(um|uh|er|ehm|ok|okay|alright|right|so|hey|well|please|can you|could you|would you|will you|just|now|then)\s+/;
+  const GUIDE_TAIL_FILLER = /(\s+(please|now|then|thanks|thank you|this time))+$/;
+
+  function stripGuideFillers(text) {
+    // natural phrasing: "ok next", "um can you repeat please", "please start over"
+    // — keep one loop pass until stable so nested fillers ("um okay next") resolve.
+    let out = String(text || '');
+    for (let i = 0; i < 6; i++) {
+      const stripped = out.replace(GUIDE_HEAD_FILLER, '').replace(GUIDE_TAIL_FILLER, '').trim();
+      if (stripped === out) return stripped;
+      out = stripped;
+    }
+    return out;
+  }
+
   const GUIDE_COMMANDS = [
-    { name: 'repeatLast', re: /^(repeat (the )?(last|previous) (step|instruction)|read (previous )?step again|previous step)$/i },
-    { name: 'startOver', re: /^(start over|start over recipe|restart|begin again|start again)$/i },
-    { name: 'repeat', re: /^(repeat|say (that|it) again|again|come again|one more time|read (that|it) again)$/i },
-    { name: 'next', re: /^(next|next step|next instruction|continue|done|finished|complete|proceed|move on|on to the next|keep going)$/i },
-    { name: 'cancel', re: /^(cancel|cancel recipe|cancel cook|cancel cooking|stop|stop cooking|end cook|end cooking|quit|quit cooking)$/i },
+    { name: 'repeatLast', re: /^(repeat (the )?(last|previous) (step|instruction)|read (previous )?step again|previous step|previous one|last one|go back|repeat last|read previous again|replay)$/i },
+    { name: 'startOver', re: /^(start over|start over recipe|restart|restart recipe|begin again|start again|start again from the beginning|from the top|from the start|from the beginning)$/i },
+    { name: 'repeat', re: /^(repeat|repeat it|repeat that|say (that|it) again|again|come again|one more time|read (that|it) again|say again|pardon|what|huh)$/i },
+    { name: 'next', re: /^(next|next step|next instruction|continue|done|done here|i am done|im done|all done|finished|finish|complete|proceed|move on|on to the next|keep going|go ahead|go next|skip|skip ahead)$/i },
+    { name: 'cancel', re: /^(cancel|cancel recipe|cancel cook|cancel cooking|cancel everything|stop|stop that|stop the cook|stop cooking|end (the )?(cook|cooking)|end cooking|quit|quit it|quit cooking|terminate)$/i },
   ];
 
   function normalizeVoice(text) {
@@ -2474,73 +2551,102 @@
       .trim();
   }
 
-  function parseGuideCommand(text) {
-    const normalized = normalizeVoice(text);
-    for (const cmd of GUIDE_COMMANDS) {
-      if (cmd.re.test(normalized)) return cmd.name;
+  const NUM_ONES = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+  const NUM_TENS = [null, null, 'twenty', 'thirty', 'forty'];
+
+  function numberFromText(raw) {
+    const toks = String(raw || '').trim().split(/\s+/).filter(Boolean);
+    if (!toks.length) return null;
+    if (toks.length === 1) {
+      const t = toks[0];
+      if (/^\d{1,3}$/.test(t)) return Number(t);
+      const one = NUM_ONES.indexOf(t);
+      if (one >= 0) return one;
+      const ten = NUM_TENS.indexOf(t);
+      if (ten >= 0) return ten * 10;
+      return null;
+    }
+    if (toks.length === 2) {
+      const ten = NUM_TENS.indexOf(toks[0]);
+      const one = NUM_ONES.indexOf(toks[1]);
+      if (ten > 1 && one > 0 && one <= 9) return ten * 10 + one;
     }
     return null;
   }
 
-  function handleAreYouThere(heard, command) {
-    clearGuideAwait();
-    guideAreYouThere = false;
-    const normalized = normalizeVoice(heard);
-    const yes = /^(yes|yeah|yep|yup|sure|ok|okay|alright|all right|i am here|i m here|still here|present|here|ready|still with you|still with me)$/i.test(normalized);
-    if (yes || command) {
-      if (command === 'cancel') { cancelCurrentCook(); return; }
-      if (command === 'startOver') { guideStartOver(); return; }
-      if (command === 'repeat') { guideAnnounceStep(); return; }
-      if (command === 'repeatLast') { guideSpeakPrevious(); return; }
-      if (command === 'next') {
-        const recipe = session && getRecipe(session.recipeId);
-        if (recipe) cookNext(recipe);
-        return;
-      }
-      guideSetStatus('Good — cooking continues.', 'Say “next”, “repeat”, “start over” or “cancel”.');
-      beginGuideListen();
-      return;
+  // "what is step 4" / "what's step four" / "go to step twelve"
+  const GO_TO_STEP_RE = /^(?:what is (?:the )?step|what is the step|what's (?:the )?step|what is step|go to (?:the )?step|goto (?:the )?step|step)\s+(.{1,40})$/i;
+
+  function parseGuideCommand(text) {
+    const normalized = stripGuideFillers(normalizeVoice(text));
+    const gotoMatch = normalized.match(GO_TO_STEP_RE);
+    if (gotoMatch) {
+      const n = numberFromText(gotoMatch[1]);
+      if (n != null && n >= 0) return { name: 'gotoStep', n };
     }
-    guidePauseCook();
+    for (const cmd of GUIDE_COMMANDS) {
+      if (cmd.re.test(normalized)) return { name: cmd.name };
+    }
+    return null;
   }
 
   function onGuideSpeechText(raw) {
+    guideErrorStreak = 0;
     guideListening = false;
-    clearGuideAwait();
+    guideLastHeard = Date.now(); // any recognized utterance resets the two-minute quiet clock
     const heard = String(raw || '').trim();
     const command = heard ? parseGuideCommand(heard) : null;
-    if (guideAreYouThere) {
-      handleAreYouThere(heard, command);
+    // dedicated yes/no conversation right after a timer question
+    if (guideTimerPrompt) {
+      if (command && command.name === 'cancel') {
+        guideTimerPrompt = false;
+        cancelCurrentCook();
+        return;
+      }
+      const normalized = heard ? normalizeVoice(heard) : '';
+      const yes = /^(yes|yeah|yep|yup|sure|ok|okay|alright|all right|start|start it|do it|please|go ahead|correct|yess?)$/i.test(normalized);
+      guideTimerPrompt = false;
+      const ctx = guideStepContext();
+      const recipe = ctx && ctx.recipe;
+      if (yes && recipe && ctx) {
+        const timers = timersForStep(ctx);
+        if (timers.length && !activeTimerForStep(recipe, ctx.step)) {
+          startTimer(recipe, ctx.step, 0);
+          guideWaitingTimer = true;
+          guideSetStatus('Timer running.', 'Mise will wait for it. You can say “repeat” or “cancel”.');
+          guideSay('Starting the timer. Mise will wait for it.', () => beginGuideListen(true));
+          return;
+        }
+      }
+      guideSetStatus('No timer started.', 'Say “next” when you’re ready — or say “what is step 4” to jump.');
+      guideSay('No timer started. Say next when you are ready.', () => beginGuideListen(true));
       return;
     }
-    guideStreak = 0;
-    switch (command) {
+    const recipe = session && getRecipe(session.recipeId);
+    const cmd = command && command.name;
+    // while a timer holds the steps open, advancing waits on the timer
+    if (guideWaitingTimer && (cmd === 'next' || cmd === 'gotoStep')) {
+      guideSetStatus('Timer is running.', 'Mise will move on when it finishes. Say “repeat” to hear the step again, or “cancel”.');
+      guideSay('Timer is running — Mise will continue when it finishes.', () => beginGuideListen(true));
+      return;
+    }
+    switch (cmd) {
       case 'repeatLast': guideSpeakPrevious(); return;
       case 'startOver': guideStartOver(); return;
       case 'repeat': guideAnnounceStep(); return;
-      case 'next': {
-        const recipe = session && getRecipe(session.recipeId);
-        if (recipe) cookNext(recipe);
+      case 'next': if (recipe) cookNext(recipe); return;
+      case 'gotoStep':
+        if (recipe) guideGotoStep(recipe, Math.min(Math.max(1, command.n), recipe.steps.length));
         return;
-      }
       case 'cancel': cancelCurrentCook(); return;
       default: break;
     }
-    guideStreak += 1;
-    if (guideStreak >= 3) {
-      guideSetStatus('Paused — I couldn’t catch that.', 'Tap “Listen” to try again, or use the buttons below.');
-      return;
-    }
-    guideSetStatus('Didn’t catch that.', heard ? 'Heard “' + heard + '”. Say “next”, “repeat”, “start over” or “cancel”.' : 'Say “next”, “repeat”, “start over” or “cancel”.');
+    guideSetStatus('Didn’t catch that.', heard ? 'Heard “' + heard + '”. Say “next”, “repeat”, “start over”, “what is step 3” or “cancel”.' : 'Say “next”, “repeat”, “what is step 3” or “cancel”.');
     rearmGuideListen(700);
   }
 
   function onGuideSpeechError(code) {
     guideListening = false;
-    if (guideAreYouThere) {
-      // nothing to do — the four-second window governs the pause
-      return;
-    }
     if (code === 'denied') {
       guideSetStatus('Microphone is off.', 'Allow the microphone for Mise in system settings, or use the buttons below.');
       return;
@@ -2549,13 +2655,15 @@
       guideSetStatus('Speech unavailable', 'Speech recognition is not available right now. Use the buttons below to move between steps.');
       return;
     }
-    // silence / noise — re-arm a few times before pausing
-    guideStreak += 1;
-    if (guideStreak >= 4) {
-      guideSetStatus('It’s quiet — voice paused.', 'Tap “Listen” to resume, or use the buttons below.');
+    // busy / client / audio / unknown — surfaces get real guidance after
+    // repeated failures instead of looping silently forever.
+    guideErrorStreak += 1;
+    if (guideErrorStreak >= 6) {
+      guideSetStatus('Voice keeps failing.', 'Use the buttons below. If this started after an update, check that Mise has the microphone permission in system settings.');
       return;
     }
-    rearmGuideListen(900);
+    // silence / noise — the recognizer closes an idle turn on its own; re-open immediately
+    rearmGuideListen(250);
   }
 
   function guideStartOver() {
@@ -2579,11 +2687,12 @@
   function guideLeave() {
     guideWant = false;
     lastSpokenKey = '';
-    guideStreak = 0;
     guideListening = false;
-    guideAreYouThere = false;
-    guidePaused = false;
-    clearGuideAwait();
+    guideLastHeard = Date.now();
+    guideErrorStreak = 0;
+    guideTimerPrompt = false;
+    guideWaitingTimer = false;
+    clearTtsWatchdog();
     guideStopListening();
     stopGuideSpeak();
   }
@@ -2612,6 +2721,7 @@
     try { return JSON.parse(raw); } catch (err) { return null; }
   };
   window.__miseSpeechDone = () => {
+    clearTtsWatchdog();
     const cb = ttsAfter;
     ttsAfter = null;
     if (cb) cb();
@@ -2654,7 +2764,7 @@
     store.set(KEY.timer, null);
     clearCookNotification();
     announce(recipe ? `Cook cancelled — ${recipe.name} discarded.` : 'Cook cleared.');
-    navigate('#/cook');
+    navigate('#/');
   }
 
   function guideBarHtml(voice) {
@@ -2662,17 +2772,17 @@
     const on = guideWant !== false;
     if (!guideStatusText) {
       guideStatusText = 'Voice guide on';
-      guideHintText = 'Say “next”, “repeat”, “start over”, “repeat last step” or “cancel”.';
+      guideHintText = 'Say “next”, “repeat”, “start over”, “what is step 3” or “cancel”.';
     }
-    const status = on ? guideStatusText : (guidePaused ? 'Cook paused.' : 'Voice guide is off');
-    const hint = on ? guideHintText : (guidePaused ? guideHintText : 'Tap “Voice guide” to have each step read out.');
+    const status = on ? guideStatusText : 'Voice guide is off';
+    const hint = on ? guideHintText : 'Tap “Voice guide” to have each step read out.';
     return `<div class="guide-bar${on ? ' is-on' : ''}" id="guide-bar" role="status" aria-live="polite">
       <span class="guide-dot" aria-hidden="true"></span>
       <div class="guide-copy">
         <b id="guide-status">${esc(status)}</b>
         <span class="guide-transcript" id="guide-transcript">${esc(hint)}</span>
       </div>
-      <button class="btn ghost guide-mute" type="button" data-action="toggle-guide">${icon('mic')}${on ? 'Mute voice' : (guidePaused ? 'Resume' : 'Voice guide')}</button>
+      <button class="btn ghost guide-mute" type="button" data-action="toggle-guide">${icon('mic')}${on ? 'Mute voice' : 'Voice guide'}</button>
     </div>
     <div class="guide-commands" ${on ? '' : 'hidden'}>
       <button class="chipbtn" type="button" data-action="guide-repeat">${icon('reset')}Repeat</button>
@@ -3035,6 +3145,7 @@
     renderTimerDock();
     render();
     announce('Timer cleared.');
+    resumeStepsFromTimer();
   }
 
   function finishTimer() {
@@ -3050,6 +3161,18 @@
     }
     renderTimerDock();
     updateTimerDigits(document.querySelector('[data-timer-display]'), '00:00');
+    resumeStepsFromTimer();
+  }
+
+  // End of a timer releases the paused automated flow: speak a beat, then
+  // advance to the next step and narrate it. No voice guide, no advance.
+  function resumeStepsFromTimer() {
+    if (!guideWaitingTimer) return;
+    guideWaitingTimer = false;
+    if (guideWant !== true) return;
+    const recipe = session && getRecipe(session.recipeId);
+    if (!recipe) return;
+    guideSay('Moving on.', () => cookNext(recipe));
   }
 
   function renderTimerDock() {
@@ -3123,6 +3246,7 @@
       }
       if (timerState.running && rem <= 0) finishTimer();
     }
+    checkGuideSilence(Date.now());
     syncCookClock();
     syncCookBadge();
   }
@@ -3185,7 +3309,7 @@
     announce('Finished cooking ' + recipe.name + '.');
     clearCookNotification();
     if (wasVoice) guideSay('Finished cooking ' + recipe.name + '. Good work.');
-    navigate('#/done/' + recipe.id);
+    navigate('#/');
   }
 
   function checksFor(recipe) {
@@ -3535,7 +3659,7 @@
         </button>
         <button class="choice-card" type="button" data-action="cook-choice" data-id="${esc(recipe.id)}" data-mode="voice">
           <span class="choice-icon">${icon('mic')}</span>
-          <span class="choice-copy"><b>Automated voice guide</b><span>Hands-free: Mise reads “Step N” and the step aloud, then listens. Say “repeat”, “next”, “start over” or “cancel” — or tap the buttons.</span></span>
+          <span class="choice-copy"><b>Automated voice guide</b><span>Hands-free: Mise reads “Step N” and the step aloud, asks about timers, then listens. Say “next”, “repeat”, “start over”, “what is step 3” or “cancel” — or tap the buttons.</span></span>
           ${icon('arrow-right', 'choice-go')}
         </button>
       </div>
@@ -3577,26 +3701,33 @@
     const groups = [
       ['Move to the next step', ['next', 'next step', 'next instruction', 'continue', 'done', 'finished', 'complete', 'proceed', 'move on', 'on to the next', 'keep going']],
       ['Hear this step again', ['repeat', 'say that again', 'say it again', 'again', 'come again', 'one more time', 'read that again', 'read it again']],
-      ['Hear the previous step', ['repeat last step', 'repeat the last step', 'repeat the previous step', 'repeat last instruction', 'repeat the last instruction', 'read previous step again', 'previous step']],
-      ['Start from the beginning', ['start over', 'start over recipe', 'restart', 'begin again', 'start again']],
+      ['Jump to any step and hear it', ['what is step 1', 'what is step 4', 'what is step twelve', 'go to step 2', 'go to step 12', 'step eight']],
+      ['Hear the previous step, then the current one', ['repeat last step', 'repeat the last step', 'repeat the previous step', 'repeat last instruction', 'repeat the last instruction', 'read previous step again', 'previous step']],
+      ['Start from the beginning', ['start over', 'start over recipe', 'restart', 'begin again', 'start again', 'from the top']],
+      ['Answer a timer question', ['yes', 'yeah', 'sure', 'ok', 'okay', 'no', 'not yet', 'skip']],
       ['End the cook', ['cancel', 'cancel recipe', 'cancel cook', 'cancel cooking', 'stop', 'stop cooking', 'end cook', 'end cooking', 'quit', 'quit cooking']],
-      ['Answer “Are you there?”', ['yes', 'yeah', 'yep', 'yup', 'sure', 'ok', 'okay', 'alright', 'all right', 'I am here', 'I’m here', 'still here', 'here', 'ready', 'present', 'still with you']],
     ];
     const lists = groups.map(([title, phrases]) => `<div class="command-group">
         <dt>${esc(title)}</dt>
         <dd>${phrases.map((p) => `<span class="command-say">${esc(p)}</span>`).join(' ')}</dd>
       </div>`).join('');
-    return `<section class="panel commands-panel" aria-labelledby="settings-commands-title">
-      <div class="panel-head">
-        <div>
-          <h2 id="settings-commands-title">Voice commands</h2>
-          <p class="meta">Recognized by the automated voice guide — exactly these words, at the start or on their own.</p>
-        </div>
+    return `<details class="panel commands-panel source-all" id="voice-commands">
+      <summary class="source-all-summary">
+        <span class="source-all-name">
+          <b>Voice commands</b>
+          <span class="meta">Tap to see every phrase Mise listens for.</span>
+        </span>
+        <span class="source-plus" aria-hidden="true">${icon('plus')}</span>
+      </summary>
+      <div class="source-all-body">
+        <p class="meta">Recognized by the automated voice guide — natural phrasing is fine (“ok next”, “um repeat please”, “please start over”). Anything unrecognized comes back with the words Mise heard.</p>
+        <p class="meta">Voice input uses this device’s speech service (Google Speech Services on Android, Web Speech on desktop browsers). Audio never reaches Mise’s code and nothing is recorded or uploaded — the recognizer returns only the words.</p>
+        <p class="meta">The microphone pauses after 2 minutes of quiet; tap <i>Listen</i> to hear the current step again and resume. Say “cancel” — or tap the mic button to mute voice — to stop.</p>
+        <p class="meta">When a step carries a timer, Mise asks to start it after reading the step. Say “yes” and the timer runs — Mise waits for it instead of narrating ahead, then continues with the next step when the timer finishes or you clear it.</p>
+        <p class="meta">“repeat last step” reads the previous step, then the current step again after a two-second pause.</p>
+        <dl class="command-groups">${lists}</dl>
       </div>
-      <p class="meta">Voice input uses this device’s speech service (Google Speech Services on Android, Web Speech on desktop browsers). Audio never reaches Mise’s code and nothing is recorded or uploaded — the recognizer returns only the words.</p>
-      <p class="meta">If nothing is said for 6 seconds after Mise finishes reading a step, it asks “Are you there?”. Answer “yes” (or any recognized command) and it keeps listening. Answer “no” — or say nothing for 4 seconds — and the cook pauses; tap <i>Resume</i> to hear the current step again.</p>
-      <dl class="command-groups">${lists}</dl>
-    </section>`;
+    </details>`;
   }
 
   function engineChipsHtml() {
@@ -3619,8 +3750,8 @@
     return `<section class="panel voice-panel" aria-labelledby="settings-voice-title">
       <div class="panel-head">
         <div>
-          <h2 id="settings-voice-title">One voice</h2>
-          <p class="meta">Every spoken line — the steps, the prompts, the “Are you there?” — uses the same voice. Pick it once.</p>
+          <h2 id="settings-voice-title">Choose a Preferred Voice</h2>
+          <p class="meta">Every spoken line — the steps, the prompts, the confirmations — uses the same voice. Pick it once.</p>
         </div>
         <span class="pill soft">${esc(spokenVoice)}</span>
       </div>
@@ -4122,7 +4253,6 @@
       if (target.dataset.mode === 'voice') {
         guideWant = true;
         lastSpokenKey = '';
-        guideStreak = 0;
         requestMicForCook();
         navigate('#/cook/' + recipe.id + '?voice=1');
       } else {
@@ -4135,7 +4265,6 @@
       if (!recipe) return;
       if (guideWant === true) {
         guideWant = false;
-        guidePaused = false;
         guideStopListening();
         stopGuideSpeak();
         announce('Voice guide muted.');
@@ -4143,7 +4272,9 @@
         return;
       }
       guideWant = true;
-      guidePaused = false;
+      // cooking in progress — let the mic permission be granted right here,
+      // not hours later at the first recognizer turn
+      requestMicForCook();
       lastSpokenKey = '';
       announce('Voice guide on.');
       render();
@@ -4161,9 +4292,8 @@
     }
     if (action === 'guide-listen') {
       if (guideWant !== true) { announce('Voice guide is off. Tap the mic button to turn it on.'); return; }
-      guideStreak = 0;
-      guideSetStatus('Listening…', 'Say “next”, “repeat”, “start over”, “repeat last step” or “cancel”.');
-      beginGuideListen();
+      guideSetStatus('Listening…', 'Say “next”, “repeat”, “start over”, “what is step 3” or “cancel”.');
+      beginGuideListen(true);
       return;
     }
     if (action === 'cancel-cook') {

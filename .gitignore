@@ -7,6 +7,8 @@ previews/
 android/.gradle/
 android/build/
 android/app/build/
+android/voice-probe/build/
+android/voice-probe/libs/
 android/local.properties
 android/signing/upload-signing.properties
 android/signing/*.jks
