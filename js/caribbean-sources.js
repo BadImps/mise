@@ -1458,7 +1458,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT60M",
-    "totalTime": "PT85M"
+    "totalTime": "PT85M",
+    "image": "https://thatgirlcookshealthy.com/wp-content/uploads/2021/10/Trinidad-macaroni-pie-image.png",
+    "imageCredit": "That Girl Cooks Healthy (thatgirlcookshealthy.com)"
   },
   {
     "id": "carib-jamaica-jamaican-fruit-cake-vegan-gluten-free",
@@ -2179,7 +2181,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://www.196flavors.com/wp-content/uploads/2013/01/locrio-de-pica-pica-FP.jpg",
+    "imageCredit": "196 Flavors (196flavors.com)"
   },
   {
     "id": "carib-guyana-sawine",
@@ -3256,7 +3260,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/04/30-min-bonelss-curry-stew-chicken_-1.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-curry-canned-chickpeas-and-potatoes",
@@ -4154,7 +4160,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/01/Aunty-Iya-Shrimp-Lo-Mein_.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-aunty-tainas-scrambled-egg-with-tomatoes",
@@ -4238,7 +4246,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/12/avocado-zaboca-choka-4.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-rias-avocado-tomato-salad-with-cilantro",
@@ -4330,7 +4340,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT25M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2019/09/baigan-and-aloo-7-scaled.png",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-baigan-choka-recipe",
@@ -4454,7 +4466,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT5M",
     "cookTime": "PT10M",
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2022/06/baiganee-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-gulgula-bread-aka-banana-banana-bread",
@@ -4551,7 +4565,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": null,
-    "totalTime": "PT5M"
+    "totalTime": "PT5M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/10/bandhania-chutney-in-a-bowl.webp",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-barfi-diwali-sweet",
@@ -5096,7 +5112,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT10M",
     "cookTime": "PT10M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2020/11/dhal-rice-and-bhagee-watermark.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-bhagi-recipe-peas-ochro",
@@ -5151,7 +5169,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT5M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H5M"
+    "totalTime": "PT1H5M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/09/MUMMY-BHAGI-WITH-PEAS-AND-OCHRO-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-big-batch-curry-channa-and-aloo",
@@ -5319,7 +5339,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT30M",
     "cookTime": "PT15M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2015/02/Boil-and-Fry-Black-Eye-Peas-14.jpeg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-boiled-mango-chutney-for-doubles-aloo-pies-pholourie",
@@ -5426,7 +5448,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT20M",
     "cookTime": "PT1H30M",
-    "totalTime": "PT1H50M"
+    "totalTime": "PT1H50M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/08/breadfruit-oil-down.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-buljol-salted-codfish-salad-and-a-story-about-nana",
@@ -5689,7 +5713,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT10M",
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/01/canned-sardine-with-tomatoes.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-cabbage-with-saltfish",
@@ -5748,7 +5774,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/04/Caribbean-Cabbage-with-Saltfish.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-cocoa-tea-recipe",
@@ -5792,7 +5820,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": null,
     "cookTime": "PT10M",
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/10/trinidad-cocoa-tea.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-jamaica-how-to-make-caribbean-coconut-cake-jamaican-toto",
@@ -5984,7 +6014,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT10M",
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2024/05/cornbeef-and-fried-bake-copy.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-caribbean-fried-fish",
@@ -6154,7 +6186,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 20,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": "PT2D30M"
+    "totalTime": "PT2D30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2021/12/caribbean-ginger-beer-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-caribbean-green-seasoning-recipe",
@@ -6200,7 +6234,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2013/03/Trinidad-Green-Seasoning-jar.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-caribbean-inspired-cranberry-chutney",
@@ -6245,7 +6281,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT5M",
     "cookTime": "PT15M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/11/cranberry-chutney.webp",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-caribbean-pepper-sauce-peppah-sauce",
@@ -6419,7 +6457,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT5M",
     "cookTime": "PT20M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/12/pumpkin-rice-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-sorrel-drink",
@@ -6459,7 +6499,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT1H",
     "cookTime": "PT20M",
-    "totalTime": "PT13H20M"
+    "totalTime": "PT13H20M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/10/sorrel-drink-1.webp",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-amazing-stewed-oxtail-oxtail-stew-recipe-kitchen-organizatio",
@@ -6530,7 +6572,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT20M",
     "cookTime": "PT3H",
-    "totalTime": "PT3H20M"
+    "totalTime": "PT3H20M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/11/trinidad-stewed-oxtail-recipe-card.webp",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-caribbean-sweet-potato-salad",
@@ -7220,7 +7264,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2024/04/chicken-lo-mein.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-how-to-make-chicken-puffs-trinidad-r6792",
@@ -7470,7 +7516,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT30M",
     "cookTime": "PT15M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2022/01/chunky-veggie-stir-fry-copy.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-cilantro-chutney-cilantro-dressing",
@@ -7741,7 +7789,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT20M",
     "cookTime": "PT30M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/04/Boiled-Ground-Provisions-Medium.jpeg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-brownies-the-delicious-experiment",
@@ -8067,7 +8117,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://cookingwithria.com/wp-content/uploads/2013/03/Cornmeal-Dumplings.png",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-cousin-marias-extra-cheesy-macaroni-pie-baked-mac-and-cheese",
@@ -8133,7 +8185,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 20,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2022/12/Extra-Cheesy-Macaroni-Pie.png",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-cow-heel-and-pig-tail-soup",
@@ -8273,7 +8327,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://cookingwithria.com/wp-content/uploads/2015/02/cole-slaw-final.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-creamy-cajun-shrimp-and-chicken-pasta",
@@ -8933,7 +8989,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/06/curry-can-salmon_-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-curried-canned-sardine",
@@ -8990,7 +9048,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT5M",
     "cookTime": "PT15M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/07/CURRY-SARDINE-WITH-TOMATOES.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-curry-home-fowl",
@@ -9102,7 +9162,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT25M",
     "cookTime": "PT25M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/02/cuury-shrimp-and-peas.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-curry-shrimp-recipe",
@@ -9234,7 +9296,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/01/curry-baigan-and-aloo-with-shrimp.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-curry-baigan-and-aloo",
@@ -9300,7 +9364,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://cookingwithria.com/wp-content/uploads/2024/04/curry-baigan-and-aloo-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-curry-baigan-with-eddoes-curry-eggplant-with-eddoes",
@@ -9390,7 +9456,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT25M",
     "cookTime": "PT30M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/02/curry-baigan-and-eddoes-boil-eggs-paratha-6.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-curry-beef-and-aloo",
@@ -9521,7 +9589,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/10/curry-bodi-and-aloo-curry-channa-and-aloo-with-baigan-dhalpuri-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-curry-cabbage",
@@ -10874,7 +10944,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/10/curry-shortribs-with-zucchini.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-curry-seafood-medley-curry-mixed-seafood",
@@ -10932,7 +11004,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT30M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2021/10/curry-mixed-seafood-watermark.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-curry-stew-chicken",
@@ -11173,7 +11247,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT1H30M",
-    "totalTime": "PT1H40M"
+    "totalTime": "PT1H40M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2022/01/dhal-dumpling-soup.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-how-to-make-dhalpuri-dhal-puri-roti-trinidad",
@@ -11292,7 +11368,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 16,
     "prepTime": "PT1H30M",
     "cookTime": "PT30M",
-    "totalTime": "PT2H"
+    "totalTime": "PT2H",
+    "image": "https://cookingwithria.com/wp-content/uploads/2018/12/DHALPURI-ROTI-3.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-softest-dosti-roti-recipe-on-internet",
@@ -11764,7 +11842,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://cookingwithria.com/wp-content/uploads/2015/02/02-scalloped-potatoes-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-eddoes-choka",
@@ -11885,7 +11965,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/02/banana-bread-mini-loaves-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-delicious-empanadas",
@@ -12018,7 +12100,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2015/02/Festive-Quinoa-Salad-12-scaled.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-flavorful-geera-rice",
@@ -12075,7 +12159,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/03/geera-rice.png",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-how-to-make-freshly-grated-coconut",
@@ -12599,7 +12685,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 17,
     "prepTime": "PT20M",
     "cookTime": "PT20M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/11/gojiya-gujiya.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-grandmas-fried-eggs",
@@ -12640,7 +12728,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT5M",
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/07/trini-fried-eggs.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-lemon-roasted-potatoes",
@@ -12964,7 +13054,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT15M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/11/Gulgula-in-bowl-2.webp",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-guyana-guyanese-mango-sour",
@@ -13014,7 +13106,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT40M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/07/guyanese-mango-sour.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-guyana-soft-silky-guyanese-oil-roti-clap-roti",
@@ -13079,7 +13173,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT20M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/12/Guyanese-OIl-Roti-Clap-Roti-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-herb-buttermilk-fried-chicken",
@@ -13252,7 +13348,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT20M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2015/02/cornish-hen-out-of-oven.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-herb-roasted-leg-of-lamb",
@@ -13615,7 +13713,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 20,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/11/lasagna.webp",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-rias-homemade-bread",
@@ -14035,7 +14135,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 16,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2021/04/hot-cross-buns.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-how-to-cook-canned-salmon",
@@ -14139,7 +14241,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT40M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/10/PERFECT-BASMATI-RICE-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-salted-mackerel-with-tomatoes",
@@ -14217,7 +14321,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/03/Salted-Mackerel-boiled-ground-provisions-cou-cou-5.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-how-to-make-coconut-milk",
@@ -14390,7 +14496,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT10M",
     "cookTime": "PT50M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/03/moms-stewed-red-beans.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-stewed-lentils-with-coconut-milk",
@@ -14505,7 +14613,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT30M",
     "cookTime": "PT15M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/03/stewed-lentils-with-coconut-milk.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-how-to-make-the-perfect-rice-for-fried-rice-stovetop-rice-co",
@@ -14553,7 +14663,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT2M",
     "cookTime": "PT20M",
-    "totalTime": "PT22M"
+    "totalTime": "PT22M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2024/06/how-to-make-the-perfect-rice-for-fried-rice.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-instant-pot-curry-channa-and-aloo-2",
@@ -14786,7 +14898,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": null,
     "cookTime": "PT45M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/06/curry-lima-beans-caribbean-style-4.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-instant-pot-masala-curry-goat",
@@ -15006,7 +15120,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT20M",
     "cookTime": "PT20M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/06/shrimp-pies.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-jamaica-jamaican-escovitch-fish-recipe",
@@ -15100,7 +15216,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2015/02/Jamaican-Escoviche-fish.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-jamaica-jamaican-steamed-cabbage",
@@ -15160,7 +15278,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT5M",
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/11/sunday-lunch-week-43-jamaican-stew-peas-with-pigtail_-5.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-jamaica-jamaican-stew-peas",
@@ -15225,7 +15345,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT30M",
     "cookTime": "PT2H",
-    "totalTime": "PT2H30M"
+    "totalTime": "PT2H30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/11/sunday-lunch-week-43-jamaican-stew-peas-with-pigtail_.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-kachori-and-raw-mango-chutney",
@@ -15391,7 +15513,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT5M",
     "cookTime": "PT30M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/06/Blender-Sponge-Cake-3.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-lazy-wife-instant-pot-lamb-pilaf",
@@ -15456,7 +15580,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2022/10/lamb-pilaf_-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-quick-quarantine-leftover-jerk-chicken-fried-rice",
@@ -15511,7 +15637,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT10M",
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2020/04/left-over-jerk-chicken-fried-rice-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-lentil-puri-lentil-roti-lentil-flatbread",
@@ -15728,7 +15856,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT30M",
     "cookTime": null,
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/03/maleeda-malida-IMG_6232.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-mango-talkarie",
@@ -15784,7 +15914,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT15M",
     "cookTime": "PT10M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2020/05/mango-talkarie-cooking-with-ria_-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-marble-cake",
@@ -15905,7 +16037,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/01/masala-chai-3.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-meatloaf-with-veggies",
@@ -16046,7 +16180,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT55M",
-    "totalTime": "PT1H10M"
+    "totalTime": "PT1H10M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/11/curry-seim-and-peas-in-white-bowl-1.webp",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-mummys-curry-aloo-curry-potato",
@@ -16117,7 +16253,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/08/mummy-curry-aloo.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-mummys-holiday-rice-and-beans",
@@ -16199,7 +16337,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 25,
     "prepTime": "PT1H",
     "cookTime": "PT30M",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2024/12/holiday-rice-and-beans-warermark.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-curry-chicken-2",
@@ -16319,7 +16459,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT5M",
     "cookTime": "PT20M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2024/05/Murtani-scaled.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-mushroom-bell-pepper-stir-fry",
@@ -16800,7 +16942,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2011/03/MEATLOAF-ASPARAGUS-AND-MASHED-POTATO.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-irresistible-roasted-cauliflower",
@@ -17333,7 +17477,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2024/05/patchoi-with-srhrimp-watermark-scaled.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-cwrs-peanut-butter-and-banana-smoothie",
@@ -17904,7 +18050,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT1H10M",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2024/02/peruvian-roasted-chicken-and-green-sauce-wm.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-aunty-jangs-pholourie-recipe",
@@ -18082,7 +18230,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/04/instant-pot-stewed-oxtail-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-egg-salad",
@@ -18691,7 +18841,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2020/03/crepe.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-jamaica-best-jamaican-jerk-chicken-recipe",
@@ -18846,7 +18998,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 40,
     "prepTime": "PT15M",
     "cookTime": "PT2H30M",
-    "totalTime": "PT2H15M"
+    "totalTime": "PT2H15M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/11/Holiday-Baked-Ham-5.webp",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-roasted-duck-and-scallion-pancakes",
@@ -19052,7 +19206,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 20,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/11/trinidad-roat.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-sada-aloo-stewed-potatoes",
@@ -19105,7 +19261,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2022/09/Sada-aloo.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-sada-roti-plain",
@@ -19220,7 +19378,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://cookingwithria.com/wp-content/uploads/2020/10/TRINIDAD-SAHEENA-SPINACH-FRITTER-watermark.png",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-canned-salmon-pie",
@@ -19359,7 +19519,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT20M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2020/10/Saltfish-with-Veggies-and-Boiled-Flour-Dumplings.png",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-sauteed-buljol",
@@ -19494,7 +19656,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT10M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2015/02/SCALLION-CILANTRO-HABANERO-FRIED-RICE-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-scalloped-cassava",
@@ -19612,7 +19776,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT5M",
     "cookTime": "PT15M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2021/05/seasoning-rice_-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-shepherds-pie",
@@ -20015,7 +20181,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT5M",
     "cookTime": "PT20M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/10/EASY-BONELESS-CURRY-CHICKEN-3.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-carrot-salad",
@@ -20059,7 +20227,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/07/carrot-salad.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-simple-coconut-curry-fish",
@@ -20181,7 +20351,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://cookingwithria.com/wp-content/uploads/2024/04/kitchari-7.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-simple-pot-bake-or-roast-bake-stovetop-version",
@@ -20244,7 +20416,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2022/06/Saltfish-tomatoes-and-pot-bake-2-scaled.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-rice-and-peas",
@@ -20782,7 +20956,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT1H",
     "cookTime": "PT20M",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/10/dhal-pholourie-featured-768.webp",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-st-lucian-green-fig-salad",
@@ -20841,7 +21017,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT30M",
     "cookTime": null,
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2012/09/St.-Lucian-Fig-Salad-11.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-steamed-salmon-with-tomato-coconut-sauce-corn-dumplings",
@@ -21181,7 +21359,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2020/07/stewed-black-beans-4-1.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-stewed-canned-red-beans-with-coconut-milk",
@@ -21241,7 +21421,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT5M",
     "cookTime": "PT25M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/02/stewed-red-beans-blog-post.png",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-stewed-chicken-wings",
@@ -21791,7 +21973,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/10/stewed-turkey-with-pigeon-peas_.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-stovetop-bbq-chicken",
@@ -21835,7 +22019,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/02/stovetop-bbq-chicken-recipe.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-succulent-oven-bbq-ribs-recipe-three-ways",
@@ -21900,7 +22086,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT20M",
     "cookTime": "PT1H30M",
-    "totalTime": "PT1H50M"
+    "totalTime": "PT1H50M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2011/05/ribs-cornbread-ig.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-crab-lobster-boil",
@@ -21961,7 +22149,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2024/06/Trinidad-Boiled-Corn-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-summertime-pasta-with-sausage-meat-or-shrimp-and-veggies-veg",
@@ -22036,7 +22226,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT20M",
     "cookTime": "PT15M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2015/02/19-Pasta-with-sausage-and-veggies-19.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-super-sunday-french-toast",
@@ -22127,7 +22319,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT30M",
     "cookTime": null,
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2020/11/Tamarind-Chutney.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-pasteles",
@@ -22217,7 +22411,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2016/12/PASTELES-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-the-perfect-sandwich-bread-butter-flap-coco-bread",
@@ -22395,7 +22591,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT45M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/02/trini-cassava-oil-down_.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-cheese-paste-sandwich",
@@ -22569,7 +22767,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://cookingwithria.com/wp-content/uploads/2022/12/curry-chicken-with-pigeon-peas.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-custard-pie-flan",
@@ -22629,7 +22829,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://cookingwithria.com/wp-content/uploads/2020/12/Trini-Custard-Pie_-copy.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trini-fried-chicken-recipe",
@@ -22692,7 +22894,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT25M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2020/06/Trini-Fried-Chicken.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trini-veggie-fried-rice",
@@ -22778,7 +22982,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT20M",
     "cookTime": "PT10M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2020/06/Trini-Fried-Rice.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-mummys-kitcherie-kichadi",
@@ -22841,7 +23047,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT40M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2021/10/kitcherie2-copy.png",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-ladoo",
@@ -22974,7 +23182,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 16,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/11/Sponge-cake-2.webp",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trini-stewed-pork-holiday-recipes",
@@ -23028,7 +23238,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://cookingwithria.com/wp-content/uploads/2022/12/STEWED-PORK-MACARONI-PIE-PLANTAIN-copy.png",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-cranberry-chutney",
@@ -23151,7 +23363,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT30M",
     "cookTime": "PT1H30M",
-    "totalTime": "PT2H"
+    "totalTime": "PT2H",
+    "image": "https://cookingwithria.com/wp-content/uploads/2011/12/stewed-lamb-plate-CWR-scaled.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trini-style-curry-oxtail",
@@ -23214,7 +23428,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT2H",
-    "totalTime": "PT2H15M"
+    "totalTime": "PT2H15M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/06/trini-style-curry-oxtail.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-curry-crab-dumpling",
@@ -23338,7 +23554,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT5M",
     "cookTime": "PT40M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2019/10/dhal-2Brice-2Band-2Bbhaji.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-bhagi-rice",
@@ -23403,7 +23621,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT25M",
     "cookTime": "PT30M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/10/trinidad-bhagi-rice-with-pigtails.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-black-cake-caribbean-rum-soaked-fruit-cake",
@@ -23553,7 +23773,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT15M",
     "cookTime": "PT50M",
-    "totalTime": "PT1H5M"
+    "totalTime": "PT1H5M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/12/Trinidad-Blackeye-peas-Pelau.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-boil-fry-dumplings",
@@ -23605,7 +23827,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT25M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/05/boil-fry-dumpling.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-boil-channa-cup-ah-channa",
@@ -23656,7 +23880,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": null,
     "cookTime": "PT50M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2024/08/cup-ah-channa-3.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-boiled-corn",
@@ -23702,7 +23928,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2024/06/Trinidad-Boiled-Corn.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-bread-and-channa-sandwich",
@@ -23982,7 +24210,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT30M",
     "cookTime": "PT30M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://cookingwithria.com/wp-content/uploads/2020/11/KURHI-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-chicken-roti",
@@ -24215,7 +24445,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT30M",
     "cookTime": "PT40M",
-    "totalTime": "PT1H10M"
+    "totalTime": "PT1H10M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2020/08/How-to-make-trinidad-corn-soup.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-corn-soup-with-pigtails",
@@ -24300,7 +24532,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT45M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H45M"
+    "totalTime": "PT1H45M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/10/sunday-lunch-week-39-corn-soup-with-pigtail-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-curry-aloo",
@@ -24995,7 +25229,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT30M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2012/04/IMG_9502.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-fried-aloo",
@@ -25316,7 +25552,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 3,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2024/10/fried-okra-and-aloo-4.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-fry-seim-recipe",
@@ -25366,7 +25604,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT25M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/10/Trinidad-Fry-Seim.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-hops-bread-soft-dinner-rolls-recipe",
@@ -25546,7 +25786,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT5M",
     "cookTime": "PT15M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/10/macaroni-and-eggs-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-macaroni-salad",
@@ -25610,7 +25852,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT10M",
     "cookTime": "PT12M",
-    "totalTime": "PT22M"
+    "totalTime": "PT22M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2012/07/Macaroni-salad-2.jpeg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-mango-chow",
@@ -25811,7 +26055,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2024/09/trinidad-shrimp-roti-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-paratha",
@@ -25917,7 +26163,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2019/10/TRINIDAD-2BPARATHA-BUSS-2BUP-2BSHOT-2BROTI-9.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-parsad",
@@ -25987,7 +26235,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT5M",
     "cookTime": "PT30M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2019/10/parsad-3.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-peanut-punch-rich-creamy-caribbean-beverage",
@@ -26028,7 +26278,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT5M",
     "cookTime": null,
-    "totalTime": "PT5M"
+    "totalTime": "PT5M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/06/peanut-punch.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-pelau",
@@ -26284,7 +26536,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT15M",
     "cookTime": "PT50M",
-    "totalTime": "PT1H5M"
+    "totalTime": "PT1H5M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/10/trinidad-pigtail-pelau.webp",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-coconut-bake-pot-bake",
@@ -26533,7 +26787,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT35M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/06/trinidad-pumpkin-with-mixed-seafood-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-pumpkin-talkari-with-shrimp",
@@ -26587,7 +26843,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/09/sunday-lunch-weeek-34-pumpkin-with-shrim-curry-lamb-dosti-roti.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-roast-pepper-sauce",
@@ -26712,7 +26970,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT1M",
-    "totalTime": "PT16M"
+    "totalTime": "PT16M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2012/04/canned-sardine-ingredients-1.jpeg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-sawine-vermicelli-milk-dessert",
@@ -26759,7 +27019,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": null,
     "cookTime": "PT30M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2011/09/TRINIDAD-SAWINE.png",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-seim-and-aloo",
@@ -26824,7 +27086,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT25M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/05/seim-and-aloo-3.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-curry-shrimp-roti-r7702",
@@ -26951,7 +27215,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://cookingwithria.com/wp-content/uploads/2026/06/caribbean-sttewed-cannellini-beans_-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-stewed-chicken-recipe",
@@ -27092,7 +27358,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT20M",
     "cookTime": "PT20M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2020/02/Stewed-Fish.png",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-stewed-red-beans",
@@ -27164,7 +27432,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT1H",
     "cookTime": "PT45M",
-    "totalTime": "PT1H45M"
+    "totalTime": "PT1H45M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2015/02/23-Trini-Stewed-Red-Beans-24.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidad-sweet-bread-coconut-bread",
@@ -27423,7 +27693,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2024/02/fried-bake-and-shark-with-condiments-3.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-how-to-cook-canned-mackerel",
@@ -27469,7 +27741,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT5M",
     "cookTime": "PT15M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/07/how-to-cook-canned-mackerel-with-tomatoes.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-moist-buttermilk-cornbread",
@@ -27563,7 +27837,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/10/fried-caraille-bitter-melon-served-with-sada-roti.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-trinidadian-steamed-fish",
@@ -27615,7 +27891,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT25M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2025/01/Trinidad-steamed-fish_.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-turkish-inspired-lamb-stew-lamb-saute",
@@ -27685,7 +27963,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT20M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/04/lamb-stew-Turkish-inspired.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-healthy-turmeric-and-geera-liver-with-onions",
@@ -27750,7 +28030,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/03/Turmericandgeeraliverandonionsblog.png",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-turmeric-chicken-with-tomatoes",
@@ -27922,7 +28204,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT1H",
     "cookTime": "PT30M",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2021/10/fish-pie-copy.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-comforting-homemade-lasagna",
@@ -28147,7 +28431,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2015/02/Versatile-Salad-Dressing-scaled.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-veggie-stir-fry-weekly-meal-prep",
@@ -28202,7 +28488,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT15M",
     "cookTime": "PT10M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://cookingwithria.com/wp-content/uploads/2023/01/trader-joes-veggie-stir-fry-2.jpg",
+    "imageCredit": "Cooking with Ria (cookingwithria.com)"
   },
   {
     "id": "carib-trinidad-tobago-simple-tasty-salmon-with-tomatoes",
@@ -28364,7 +28652,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/08/summer-fruit-compote-5.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-a-smoked-jamaican-jerk-duck-recipe-to-make-this-summer-unfor",
@@ -28516,7 +28806,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/06/grilled-peaches-10.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-trinidadian-healthier-airfryer-fried-channa-chickpeas-snack-2",
@@ -28718,7 +29010,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT5M",
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2020/06/pineapple-chow-11.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-authentic-caribbean-kitchri-recipe-one-pot-comfort-food",
@@ -28891,7 +29185,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT35M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/01/baigan-and-aloo-with-stewed-pork-1.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-trinidadian-baigan-choka-eggplant-dip",
@@ -29156,7 +29452,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT1H15M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/01/jamaican-jerk-turkey-legs-6.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-black-pudding-with-caramelized-onion",
@@ -29316,7 +29614,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/07/chenette-chow-1.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-general-caribbean-bright-passion-fruit-vinaigrette-recipe-for-salads-and-grill",
@@ -29369,7 +29669,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/03/Passion-Fruit-Vinaigrette-7.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-caramelized-grilled-pineapple-a-summer-delight",
@@ -29499,7 +29801,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT2H",
-    "totalTime": "PT2H15M"
+    "totalTime": "PT2H15M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2015/01/caribbean-pumpkin-and-beef-soup-11.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-caribbean-black-rum-cake-panettone-christmas-bread-pudding",
@@ -29561,7 +29865,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT50M",
-    "totalTime": "PT1H8M"
+    "totalTime": "PT1H8M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/12/christmas-bread-pudding-recipe-1.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-trinidadian-caribbean-style-boil-and-fry-sweet-potatoes",
@@ -29607,7 +29913,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/04/sweet-potato-recipe-1.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-caribbean-brown-stewed-duck-wings-classic-stew-method",
@@ -29674,7 +29982,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT25M",
     "cookTime": "PT1H45M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/02/caribbean-brown-stew-duck-wings-9.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-trinidadian-caribbean-brown-stewed-pork-short-ribs-2",
@@ -29746,7 +30056,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT20M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/06/trinidad-stew-pork-recipe-6.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-carrot-rice",
@@ -29803,7 +30115,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2018/08/carrot-rice-10.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-general-caribbean-caribbean-chinese-noodles-with-chicken-and-vegetables-stir-f",
@@ -29880,7 +30194,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/09/chicken-and-vegtable-stirfry-3.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-trinidadian-lamb-chops-braised-in-coconut-curry-sauce",
@@ -29965,7 +30281,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2013/03/coconut-curry-lamb-12.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-bahamian-jamaican-trinidadian-coconut-curry-pumpkin-soup-2",
@@ -30019,7 +30337,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT25M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2012/11/curry-coconut-pumpkin-soup-9.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-caribbean-corn-souse-recipe",
@@ -30080,7 +30400,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/08/corn-souse-recipe-9.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-trinidadian-the-ultimate-curry-beef",
@@ -30144,7 +30466,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/06/curry-beef-curry-01.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-caribbean-curry-chicken-bunjay-style-easy-dry-curry-recipe",
@@ -30290,7 +30614,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2024/08/how-to-curry-cow-heel-1.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-trinidadian-ginger-stewed-chicken-with-string-beans",
@@ -30365,7 +30691,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT20M",
     "cookTime": "PT40M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2018/08/stew-chicken-with-string-beans-11.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-trinidadian-caribbean-green-seasoning-2",
@@ -30412,7 +30740,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2023/08/green-seasoning-caribbean-3.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-caribbean-guava-bbq-sauce",
@@ -30491,7 +30821,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2018/07/guava-bbq-sauce-12.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-the-ultimate-caribbean-macaroni-pie-baked-macaroni-cheese-2",
@@ -30574,7 +30906,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT40M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2020/08/trini-macaroni-pie.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-trinidadian-caribbean-ratatouille",
@@ -30799,7 +31133,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2019/01/bitter-melon-with-shrimp-9.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-caribbean-smoked-turkey-soup-2",
@@ -30860,7 +31196,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT25M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H25M"
+    "totalTime": "PT1H25M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2012/09/smoked-turkey-soup-2.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-the-ultimate-steak-marinade-2",
@@ -31018,7 +31356,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT25M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/09/caribbean-stewed-chicken-with-butter-beans-15.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-mushroom-and-olive-stewed-chicken",
@@ -31091,7 +31431,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT20M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H5M"
+    "totalTime": "PT1H5M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2018/11/mushroom-stewed-chicken-11.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-delightful-tomato-rice-2",
@@ -31158,7 +31500,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2019/05/tomat-rice-recipe-12.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-shepherds-pie-2",
@@ -31251,7 +31595,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2024/04/caribbean-shepherds-pie-2.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-trinidadian-cassava-pone-2",
@@ -31361,7 +31707,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT25M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/10/caribbean-corn-porridge-recipe-14.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-chicken-rasta-pasta-recipe",
@@ -31429,7 +31777,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/10/chicken-rasta-pasta-14.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-classic-caribbean-beef-cook-up-rice-2",
@@ -31496,7 +31846,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2024/06/beef-cook-up-rice-recipe-2.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-classic-caribbean-brown-stew-oxtail",
@@ -31573,7 +31925,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT5M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/08/jamaican-brown-stew-oxtail-1.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-trinidadian-classic-curry-bodi-with-shrimp-and-potato",
@@ -31638,7 +31992,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/06/curry-bodi-with-shrimp-1.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-classic-caribbean-curry-chataigne-with-pigeon-peas",
@@ -31701,7 +32057,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT30M",
     "cookTime": "PT1H30M",
-    "totalTime": "PT2H"
+    "totalTime": "PT2H",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/11/curry-pigeon-peas-with-chataigne-10.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-classic-caribbean-salted-beef-callaloo",
@@ -31768,7 +32126,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT30M",
     "cookTime": "PT2H30M",
-    "totalTime": "PT3H"
+    "totalTime": "PT3H",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/01/trinidad-saltbeef-callaloo-9.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-caribbean-sorrel",
@@ -31960,7 +32320,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2018/01/trini-geera-pork-9.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-classic-jamaican-stew-peas",
@@ -32082,7 +32444,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT1H10M"
+    "totalTime": "PT1H10M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/07/Shrimp-Ceviche-7.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-coconut-french-toast-with-caramel-passionfruit-sauce",
@@ -32209,7 +32573,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2017/12/coconut-mac-and-cheese-11.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-coconut-stewed-haddock",
@@ -32269,7 +32635,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2018/06/coconut-stewed-fish-8.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-comforting-breadfruit-oil-down-recipe",
@@ -32354,7 +32722,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT35M",
     "cookTime": "PT2H15M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/08/breadfruit-oil-down-recipe-11.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-trinidadian-comforting-beef-bone-soup-2",
@@ -32436,7 +32806,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT30M",
     "cookTime": "PT2H",
-    "totalTime": "PT2H30M"
+    "totalTime": "PT2H30M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2023/07/beef-bone-soup-3.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-cornmeal-dumplings",
@@ -32545,7 +32917,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT5M",
     "cookTime": "PT12M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/11/vegan-pak-choy-fried-rice-blant-based-recipe-2.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-the-ultimate-4-cheese-spinach-dip",
@@ -32665,7 +33039,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/02/spinach-or-bhagi-recipe-3.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-cribbean-guava-sorrel-concentrate",
@@ -32723,7 +33099,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT20M",
     "cookTime": "PT1H45M",
-    "totalTime": "PT2H5M"
+    "totalTime": "PT2H5M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/12/gauva-sorrel-concentrate-2.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-trinidadian-crispy-pork-belly",
@@ -32966,7 +33344,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/12/curry-potato-with-stew-pork-11.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-trinidadian-how-to-make-a-caribbean-inspired-curry-beef-with-pigeon-peas",
@@ -33187,7 +33567,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT1H30M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/10/vegan-curry-chickpeas-with-pigeon-peas-1.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-curry-chicken-hearts-and-liver",
@@ -33851,7 +34233,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/04/beef-liver-recipe-11.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-delicious-pepper-chicken-recipe-you-need-to-try",
@@ -33904,7 +34288,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/04/pepper-chicken-recipe-2.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-vegan-ackee-and-saltfish",
@@ -33954,7 +34340,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT20M",
     "cookTime": "PT20M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2020/02/vegan-ackee-and-saltfish-9.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-ginger-mango-muffins",
@@ -34010,7 +34398,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT20M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2014/04/diabetic-muffins.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-easy-foolproof-caribbean-stewed-turkey-wings",
@@ -34087,7 +34477,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT1H15M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/04/brown-stew-turkey-wings-12.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-easy-caribbean-curry-chicken-with-romano-beans",
@@ -34164,7 +34556,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT30M",
     "cookTime": "PT1H20M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/01/curry-chicken-with-romano-beans-11.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-trinidadian-delicious-curry-corn-2",
@@ -34240,7 +34634,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/06/trinidad-curry-corn-recipe-3.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-easy-caribbean-fiddlehead-salad-recipe",
@@ -34322,7 +34718,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT25M",
     "cookTime": "PT15M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/05/fiddlehead-salad-5.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-trinidadian-outstanding-honey-mustard-dressing-dip-2",
@@ -34362,7 +34760,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT5M",
     "cookTime": null,
-    "totalTime": "PT5M"
+    "totalTime": "PT5M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/06/simple-honey-mustard-dresing-2.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-easy-caribbean-plantain-casserole",
@@ -34448,7 +34848,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT25M",
     "cookTime": "PT40M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/07/plantain-casserole-14.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-quick-salmon-fried-rice",
@@ -34505,7 +34907,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT5M",
     "cookTime": "PT5M",
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2017/12/salmon-fried-rice-7.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-easy-chicken-flavoured-rice-recipe",
@@ -34671,7 +35075,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT20M",
     "cookTime": "PT1H",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/09/roasted-butternut-squash-and-carrot-soup-1.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-easy-crab-apple-anchar-achar",
@@ -34735,7 +35141,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT30M",
     "cookTime": "PT16M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/09/crab-apple-anchar-recipe-9.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-easy-crab-apple-chow-spicy-pickle",
@@ -34851,7 +35259,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 3,
     "prepTime": "PT20M",
     "cookTime": "PT40M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/05/haitian-pineapple-jam-recipe-1.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-easy-herb-roasted-fingerling-potatoes",
@@ -34986,7 +35396,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/10/hakka-noodles-13.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-easy-homemade-peach-iced-tea",
@@ -35150,7 +35562,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/06/jamaican-carrot-juice-12.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-easy-jamaican-rice-and-peas-no-fuss-25-minute-recipe",
@@ -35280,7 +35694,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT10M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/07/traeger-flatrock-jerk-shrimp-fried-rice-3.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-easy-one-pan-herb-roasted-chicken-and-vegetables",
@@ -35419,7 +35835,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT1H45M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/03/trinidad-pigeon-peas-dhal-vegan-recipe-8.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-easy-slow-cooker-jerk-pork",
@@ -35560,7 +35978,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT5M",
     "cookTime": "PT25M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2019/06/stewed-pigeon-peas-recipe-8.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-easy-thanksgiving-belgian-waffle-stuffing-the-ultimate-holid",
@@ -35688,7 +36108,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT10M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/07/easy-tropical-mango-passionfruit-juice-2.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-easy-vegetable-chow-mein-better-than-takeout",
@@ -35902,7 +36324,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/10/guyana-trinidad-sweet-rice-2.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-festive-sorrel-infused-cocoa-tea-hot-cocoa",
@@ -35961,7 +36385,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": "PT25M"
+    "totalTime": "PT25M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/01/caribbean-sorrel-cocoa-tea-10.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-fierce-green-scotch-bonnet-pesto-2",
@@ -36002,7 +36428,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2018/10/scotch-bonnet-pesto-6.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-fiery-pepper-choka",
@@ -36076,7 +36504,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT10M",
     "cookTime": "PT15M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/07/trinidad-pepper-choka-14.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-fiery-pepper-sauce",
@@ -36107,7 +36537,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2021/03/caribbean-scotch-bonnet-sauce-8.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-flavorful-cabbage-with-ham",
@@ -36151,7 +36583,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2019/02/cabbage-with-ham-9.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-foolproof-herb-roasted-thanksgiving-turkey",
@@ -36248,7 +36682,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/11/easy-herb-roasted-thanksgiving-turkey-11.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-fried-chicken-wings-chinese-takeout-style",
@@ -36415,7 +36851,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT25M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/04/fry-aloo-with-okra-7.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-fry-cornedbeef-with-iceberg-lettuce-2",
@@ -36802,7 +37240,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/03/guyanese-mango-sour-recipe-1.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-habanero-peach-chicken-wing-sauce",
@@ -37000,7 +37440,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT30M",
     "cookTime": "PT4H",
-    "totalTime": "PT4H30M"
+    "totalTime": "PT4H30M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2024/01/oxtail-soup-3.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-jerk-ham-with-mango-orange-pineapple-rum-glaze",
@@ -37079,7 +37521,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2018/12/jerk-christmas-ham-12.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-trinidadian-rum-and-raisin-ice-cream",
@@ -37326,7 +37770,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT1H10M",
-    "totalTime": "PT1H25M"
+    "totalTime": "PT1H25M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/10/trinidad-Pommecythe-Talkari-recipe-1.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-how-to-make-the-best-seasoned-corn-on-the-cob",
@@ -37484,7 +37930,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT30M",
     "cookTime": "PT1H15M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/01/trinidad-stew-chicken-soup-10.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-incredible-chadon-beni-culantro-garlic-sauce",
@@ -37531,7 +37979,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/08/trinidad-garlic-sauce-recipe-8.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-chili-eggs",
@@ -37587,7 +38037,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT3M",
     "cookTime": "PT7M",
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2023/08/chili-eggs-recipe-1.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-incredible-curry-beef-2",
@@ -37673,7 +38125,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2023/03/caribbean-curry-beef-1.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-incredible-curry-mango",
@@ -37735,7 +38189,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT20M",
     "cookTime": "PT35M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/09/curry-mango-curry-12.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-incredible-fiery-pepper-fries",
@@ -37790,7 +38246,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT25M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/05/trinidad-pepper-fries-3.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-incredible-honey-jerk-salmon-easy-oven-method",
@@ -37862,7 +38320,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT21M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/10/easy-honey-jerk-salmon-2.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-incredible-caribbean-pepper-chicken",
@@ -37937,7 +38397,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/08/caribbean-pepper-chicken-2.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-incredible-pepper-steak-recipe",
@@ -38005,7 +38467,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT25M",
     "cookTime": "PT20M",
-    "totalTime": "PT2H45M"
+    "totalTime": "PT2H45M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/11/pepper-steak-recipe-1.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-incredible-salmon-head-broff-caribbean-fish-broth",
@@ -38087,7 +38551,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT40M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/03/salmon-head-fish-broff-recipe-9.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-incredible-smoked-jerk-turkey",
@@ -38314,7 +38780,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/12/wine-braised-oxtail-3.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-individual-coconut-sweet-bread-muffins",
@@ -38408,7 +38876,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 18,
     "prepTime": "PT25M",
     "cookTime": "PT40M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/01/simple-coconut-sweet-bread-recipe-9.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-invigorating-tropical-starfruit-juice-2",
@@ -38465,7 +38935,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/06/refreshing-starfruit-juice-01.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-jamaican-easter-spice-bun",
@@ -38685,7 +39157,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT20M",
     "cookTime": "PT30M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/03/jamaican-brown-stew-salmon-11.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-jamaican-callaloo-with-baby-spinach",
@@ -38923,7 +39397,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT10M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/01/jamaican-escovitch-sauce-9.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-jamaican-rice-and-peas",
@@ -39054,7 +39530,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT25M",
     "cookTime": "PT3H",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2021/02/jamaican-oxtails-with-butter-beans-13.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-jamaican-inspired-roasted-and-fried-breadfruit",
@@ -39346,7 +39824,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2022/06/corned-beef-bully-beef-6.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-trinidadian-caribbean-lobster-callaloo-soup",
@@ -39412,7 +39892,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H15M"
+    "totalTime": "PT1H15M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2019/05/lobster-callaloo-soup-9.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-trinidadian-mango-talkari-masala-mango-2",
@@ -39568,7 +40050,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT25M",
     "cookTime": "PT2H",
-    "totalTime": "PT2H25M"
+    "totalTime": "PT2H25M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2011/12/black-cake-.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-moms-crispy-fried-chicken",
@@ -39698,7 +40182,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT20M",
     "cookTime": "PT45M",
-    "totalTime": "PT1H50M"
+    "totalTime": "PT1H50M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2020/12/christmas-cake-13.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-one-pot-stewed-beef-with-red-beans-for-a-quick-easy-dinner-2",
@@ -39767,7 +40253,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2024/01/caribbean-stew-beef-with-beans-1.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-oven-roasted-chicken-legs",
@@ -39947,7 +40435,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT20M",
     "cookTime": "PT2H",
-    "totalTime": "PT2H20M"
+    "totalTime": "PT2H20M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2016/12/curry-duck-recipe-10.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-general-caribbean-oyster-sauce-flavoured-shrimp-stir-fry",
@@ -40062,7 +40552,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2015/03/Papaya-Pineapple-Marmalade-9.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-american-how-to-make-peach-ice-cream-from-scratch",
@@ -40210,7 +40702,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/06/peach-chutney-10.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-pineapple-sorrel-drink",
@@ -40272,7 +40766,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT4H55M"
+    "totalTime": "PT4H55M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/12/caribbean-pineapple-sorrel-juice-2.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-trinidadian-pommecythere-golden-apple-ambarella-chow",
@@ -40319,7 +40815,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/06/Pommecythere-chow-01.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-quick-easy-brown-stew-mackerel-in-tomato-sauce",
@@ -40771,7 +41269,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT25M",
-    "totalTime": "PT35M"
+    "totalTime": "PT35M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2018/05/caribbean-stewed-lentils-10.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-quick-and-tasty-caribbean-pepper-pickle-2",
@@ -40935,7 +41435,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT10M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2020/05/quick-vegetable-stir-fry-10.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-25-minute-curry-chicken-wings",
@@ -41177,7 +41679,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT20M",
     "cookTime": "PT3H",
-    "totalTime": "PT3H20M"
+    "totalTime": "PT3H20M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2019/04/wine-braised-oxtails-9.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-refreshing-caribbean-guava-lemonade",
@@ -41240,7 +41744,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT20M",
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/05/guava-lemonade-11.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-refreshing-caribbean-mauby-lemonade",
@@ -41306,7 +41812,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 10,
     "prepTime": "PT10M",
     "cookTime": "PT10M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/08/caribbean-mauby-lemonade-5.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-refreshing-mango-peach-strawberry-lemonade",
@@ -41372,7 +41880,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 12,
     "prepTime": "PT20M",
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/06/summertime-mango-peach-strawberry-lemonade-2.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-refreshing-watermelon-chow",
@@ -41417,7 +41927,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/07/watermelon-chow-6.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-ridiculously-quick-and-easy-strawberry-lemonade",
@@ -41475,7 +41987,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT20M",
     "cookTime": "PT5M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/07/strawberry-lemonade-11.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-trinidadian-roasted-chicken-with-moruga-hill-rice-soup",
@@ -41593,7 +42107,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT50M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/06/salted-pig-tail-with-string-beans-1.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-saltfish-buljol-saheena-bites",
@@ -41693,7 +42209,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 40,
     "prepTime": "PT20M",
     "cookTime": "PT20M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/06/saltfish-buljol-saheena-bites-3.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-caribbean-shrimp-broff-soup",
@@ -41827,7 +42345,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2015/11/jamaican-fried-rice-recipe.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-simple-and-tasty-steamed-cabbage-with-ham",
@@ -41881,7 +42401,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT15M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/01/steamed-cabbage-with-ham-1.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-simple-bread-and-butter-pickles",
@@ -42078,7 +42600,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT12M",
     "cookTime": "PT10M",
-    "totalTime": "PT22M"
+    "totalTime": "PT22M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/08/vegan-fried-rice-1.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-simple-chinese-style-chicken-wings",
@@ -42317,7 +42841,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT4H",
     "cookTime": "PT3H",
-    "totalTime": "PT7H15M"
+    "totalTime": "PT7H15M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2017/12/oven-roasted-turkey-breast-6.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-simple-summertime-roasted-sausages-with-bell-peppers",
@@ -42400,7 +42926,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/06/summertime-sausages-with-peppers-6.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-simple-tomato-basil-salad",
@@ -42514,7 +43042,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 5,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2024/02/20-minute-curry-chicken-2.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-sizzling-jamaican-jerk-marinade",
@@ -42563,7 +43093,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/02/jamaican-jerk-chicken-marinade-1.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-trinidadian-the-ultimate-slow-cooker-oxtail",
@@ -42712,7 +43244,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT3H",
-    "totalTime": "PT3H20M"
+    "totalTime": "PT3H20M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2018/10/coconut-stewed-oxtails-2.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-bahamian-jamaican-trinidadian-small-batch-caribbean-green-seasoning-2",
@@ -42757,7 +43291,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT15M"
+    "totalTime": "PT15M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2023/10/small-batch-green-seasoning-1.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-soul-soothing-beef-and-lentil-soup",
@@ -42840,7 +43376,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT25M",
     "cookTime": "PT2H",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/02/hearty-beef-and-lentil-soup-13.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-chinese-influenced-green-beans-with-chicken",
@@ -42933,7 +43471,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": null,
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2017/11/mother-in-law-trinidad-6.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-spicy-cranberry-pineapple-chutney-2",
@@ -42994,7 +43534,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2024/10/cranberry-pineapple-chutney-1.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-spicy-fried-fish-balls",
@@ -43203,7 +43745,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT45M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/11/caribbean-steamed-ground-provisions-9.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-honey-nut-squash",
@@ -43264,7 +43808,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT30M",
-    "totalTime": "PT40M"
+    "totalTime": "PT40M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2019/03/stewed-honey-nut-squash-10.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-taro-with-stewed-saltfish",
@@ -43326,7 +43872,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2014/08/taro-with-stewed-saltfish-12.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-trinidadian-stovetop-mango-jerk-shrimp",
@@ -43379,7 +43927,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT5M",
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2018/06/jamaican-jerk-shrimp-2.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-strawberry-apple-cider-lemonade",
@@ -43536,7 +44086,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT20M",
     "cookTime": "PT30M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/02/string-beans-with-potato-recipe-7.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-summertime-creamy-cucumber-salad",
@@ -43586,7 +44138,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": null,
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/08/simple-creamy-cucumber-salad-7.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-summertime-pineapple-strawberry-juice",
@@ -43626,7 +44180,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/06/pineapple-stawberry-juice-featured.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-tasty-saheena-bites-with-mango-chutney",
@@ -43717,7 +44273,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 30,
     "prepTime": "PT20M",
     "cookTime": "PT15M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/03/trinidad-saheena-bites-with-mango-chutney-13.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-general-caribbean-the-best-caribbean-banana-punch-recipe-creamy-refreshing-and",
@@ -43777,7 +44335,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/07/classic-trinidad-banana-punch-7.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-the-easiest-corn-and-sweet-potato-hash-recipe",
@@ -43833,7 +44393,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT21M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/09/corn-and-sweet-potato-breakfast-hash-12.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-the-ultimate-bhagi-spinach-rice",
@@ -43914,7 +44476,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT20M",
     "cookTime": "PT40M",
-    "totalTime": "PT1H"
+    "totalTime": "PT1H",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/09/trinidad-bhagi-rice-12.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-trinidadian-the-ultimate-chicken-wings-pelau",
@@ -44046,7 +44610,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT20M",
     "cookTime": null,
-    "totalTime": "PT20M"
+    "totalTime": "PT20M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2018/12/shrimp-cocktail-7.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-the-ultimate-trinbago-seafood-callaloo",
@@ -44128,7 +44694,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT35M",
     "cookTime": null,
-    "totalTime": "PT2H5M"
+    "totalTime": "PT2H5M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/10/the-ultimate-trinidad-seafood-callaloo-2.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-traditional-caribbean-pepper-sauce",
@@ -44280,7 +44848,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT10M",
     "cookTime": "PT40M",
-    "totalTime": "PT50M"
+    "totalTime": "PT50M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/12/Pommecythere-jam-10.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-traditional-caribbean-stew-peas-kidney-beans-with-ham-bone",
@@ -44348,7 +44918,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT20M",
     "cookTime": "PT2H30M",
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/01/caribbean-stew-peas-with-ham-bone-12.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-trinidadian-salt-beef-yellow-split-peas-dhal-2",
@@ -44417,7 +44989,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT2H",
-    "totalTime": "PT2H15M"
+    "totalTime": "PT2H15M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2023/04/saltbeef-dhal-1.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-trinidad-chicken-pastelle-recipe",
@@ -44498,7 +45072,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT1H",
     "cookTime": "PT1H",
-    "totalTime": "PT2H"
+    "totalTime": "PT2H",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/12/chicken-pastelle-2.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-trinidadian-caribbean-curry-fish-with-green-mango-2",
@@ -44568,7 +45144,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": null,
     "prepTime": "PT15M",
     "cookTime": "PT30M",
-    "totalTime": "PT45M"
+    "totalTime": "PT45M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2018/04/curry-fish-with-mango-2.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-trinidadian-the-ultimate-seafood-pelau-2",
@@ -44648,7 +45226,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2022/09/seafood-pelau-17.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-trinidadian-amazing-shrimp-callaloo-spinach-soup-2",
@@ -44780,7 +45360,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/06/trinidad-doubles-tamarind-sauce-1.jpeg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-trinidadian-caribbean-corn-soup",
@@ -44857,7 +45439,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT30M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H30M"
+    "totalTime": "PT1H30M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2018/04/corn-soup-recipe-11.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-trinidadian-breadfruit-pie",
@@ -44917,7 +45501,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT25M",
     "cookTime": "PT50M",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2012/12/breadfruit-pie-16.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-the-ultimate-chicken-tikka-masala-2",
@@ -45043,7 +45629,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 8,
     "prepTime": "PT20M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H20M"
+    "totalTime": "PT1H20M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2010/05/trinidad-curry-duck-recipe-11.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-ultimate-curry-eggs",
@@ -45103,7 +45691,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT20M",
-    "totalTime": "PT30M"
+    "totalTime": "PT30M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2021/04/curry-boiled-eggs-10.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-jamaican-trinidadian-ultimate-slow-cooker-curry-goat",
@@ -45151,7 +45741,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": null,
     "cookTime": "PT5H",
-    "totalTime": "PT5H"
+    "totalTime": "PT5H",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2019/04/slow-cooked-curry-goat-11.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-ultimate-trinidadian-corn-pie-corn-casserole",
@@ -45221,7 +45813,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 6,
     "prepTime": "PT15M",
     "cookTime": "PT40M",
-    "totalTime": "PT55M"
+    "totalTime": "PT55M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2025/08/trinidad-corn-pie-12.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-unforgettable-saltfish-buljol-pizza",
@@ -45334,7 +45928,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT25M",
     "cookTime": null,
-    "totalTime": null
+    "totalTime": null,
+    "image": "https://caribbeanpot.com/wp-content/uploads/2026/06/saltfish-buljol-pizza-8.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-caribbean-coconut-strawberry-ice-cream",
@@ -45544,7 +46140,9 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 4,
     "prepTime": "PT10M",
     "cookTime": "PT1H",
-    "totalTime": "PT1H10M"
+    "totalTime": "PT1H10M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2020/10/herb-roasted-chicken-8.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   },
   {
     "id": "carib-fusion-simple-herb-roasted-chicken-2",
@@ -45654,6 +46252,8 @@ window.MISE_CARIBBEAN_SOURCES = [
     "yields": 2,
     "prepTime": "PT10M",
     "cookTime": null,
-    "totalTime": "PT10M"
+    "totalTime": "PT10M",
+    "image": "https://caribbeanpot.com/wp-content/uploads/2014/08/avocado-dip-7.jpg",
+    "imageCredit": "CaribbeanPot.com (caribbeanpot.com)"
   }
 ];
