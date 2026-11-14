@@ -2670,6 +2670,7 @@
     try {
       build = bridge && bridge.buildInfo ? JSON.parse(bridge.buildInfo()) : null;
     } catch (_) { build = null; }
+    const webVersion = Number(window.MISE_WEB_VERSION || 0) || 0;
     const pantryCount = pantrySelection.size;
     const importCount = imported.length;
     return `<div class="page settings-page">
@@ -2715,7 +2716,7 @@
               </div>
               <div>
                 <dt>Recipe content</dt>
-                <dd>${build ? `Content v${esc(String(build.webVersionCode))}` : 'Bundled content'}</dd>
+                <dd>${build ? `Content v${esc(String(build.webVersionCode))}` : (webVersion ? `Content v${webVersion} <span>(web build)</span>` : 'Bundled content')}</dd>
               </div>
               <div>
                 <dt>Latest release</dt>
@@ -2758,6 +2759,44 @@
     </div>`;
   }
 
+  async function checkChannelViaGitHub(button, status) {
+    const mine = Number(window.MISE_WEB_VERSION || 0) || 0;
+    if (button) { button.disabled = true; button.innerHTML = `${icon('refresh')}Checking…`; }
+    if (status) status.textContent = 'Checking the release channel…';
+    try {
+      const res = await fetch('https://api.github.com/repos/BadImps/mise/releases/latest', {
+        headers: { Accept: 'application/vnd.github+json' },
+        cache: 'no-store',
+      });
+      if (!res.ok) throw new Error('GitHub answered ' + res.status);
+      const data = await res.json();
+      const tag = String(data.tag_name || '');
+      const published = data.published_at ? formatDate(data.published_at) : '';
+      const m = /content-(\d+)$/.exec(tag);
+      const latest = m ? 3 + Number(m[1]) : null;
+      const latestNode = $('#build-latest');
+      if (latestNode) {
+        latestNode.textContent = latest != null
+          ? `Web v${latest} · ${tag}${published ? ' · ' + published : ''}`
+          : `${tag || 'Unknown release'}${published ? ' · published ' + published : ''}`;
+      }
+      if (status) {
+        const releaseUrl = String(data.html_url || 'https://github.com/BadImps/mise/releases/latest');
+        if (latest != null && latest > mine) {
+          status.innerHTML = `Update available: web v${latest} (<a href="${esc(releaseUrl)}" target="_blank" rel="noopener noreferrer">${esc(tag)}</a>${published ? ', ' + esc(published) : ''}). It installs automatically inside the Android app — updates check at launch. The next cold start applies it.`;
+        } else if (mine) {
+          status.textContent = `You're on web v${mine}. The latest on this channel is ${latest != null ? 'web v' + latest : esc(tag)}${published ? ' (published ' + published + ')' : ''}.`;
+        } else {
+          status.textContent = `Latest release: ${esc(tag)}${published ? ' (published ' + published + ')' : ''}.`;
+        }
+      }
+    } catch (error) {
+      if (status) status.textContent = `Could not reach the release channel: ${error && error.message ? error.message : 'unknown error'}.`;
+    } finally {
+      if (button) { button.disabled = false; button.innerHTML = `${icon('refresh')}Check for updates`; }
+    }
+  }
+
   /* ---------- events ---------- */
   document.addEventListener('click', (event) => {
     const target = event.target.closest('[data-action]');
@@ -2773,9 +2812,9 @@
       const bridge = window.MiseNative;
       const button = target;
       const status = $('#update-status');
+      const webVersion = Number(window.MISE_WEB_VERSION || 0) || 0;
       if (!bridge || typeof bridge.checkNow !== 'function') {
-        if (status) status.textContent = 'In-app updates are part of the Android app. Releases live on GitHub under BadImps/mise.';
-        announce('In-app updates are part of the Android app.', true);
+        checkChannelViaGitHub(button, status);
         return;
       }
       button.disabled = true;

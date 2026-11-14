@@ -162,8 +162,16 @@ await copyFile(apkPath, join(dist, apkName));
 
 const entries = [];
 for (const file of included) {
+  const relativePath = relative(root, file).replaceAll("\\", "/");
+  if (relativePath === "js/web-version.js") {
+    entries.push({
+      name: relativePath,
+      data: Buffer.from(`/* Mise / content version stamp. Rewritten by tools/make-release.mjs. */\nwindow.MISE_WEB_VERSION = ${webVersionCode};\n`, "utf8"),
+    });
+    continue;
+  }
   entries.push({
-    name: relative(root, file).replaceAll("\\", "/"),
+    name: relativePath,
     data: await readFile(file),
   });
 }
