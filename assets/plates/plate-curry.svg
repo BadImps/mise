@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-label="A karahi of curry over flame">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="40%" r="78%">
+      <stop offset="0" stop-color="#2b2e33"/>
+      <stop offset="1" stop-color="#17191b"/>
+    </radialGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#ffffff" fill-opacity="0.045"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="270" fill="url(#halo)"/>
+  <rect width="480" height="270" fill="url(#dots)"/>
+  <ellipse cx="240" cy="203" rx="140" ry="14" fill="#000000" fill-opacity="0.38"/>
+  <path d="M132 128 C144 196 178 214 240 214 C302 214 336 196 348 128 Z" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M124 128 h232" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M124 128 c-14 0 -22 -8 -22 -18 M356 128 c14 0 22 -8 22 -18" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="200" cy="166" r="4" fill="#cdb069"/><circle cx="286" cy="166" r="4" fill="#cdb069"/><circle cx="244" cy="184" r="4" fill="#cdb069"/>
+    <path d="M204 216 q10 16 0 22 M240 216 q10 16 0 22 M276 216 q10 16 0 22" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+</svg>

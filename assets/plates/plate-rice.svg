@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-label="A bowl of rice with chopsticks">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="40%" r="78%">
+      <stop offset="0" stop-color="#2b2e33"/>
+      <stop offset="1" stop-color="#17191b"/>
+    </radialGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#ffffff" fill-opacity="0.045"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="270" fill="url(#halo)"/>
+  <rect width="480" height="270" fill="url(#dots)"/>
+  <ellipse cx="240" cy="203" rx="140" ry="14" fill="#000000" fill-opacity="0.38"/>
+  <ellipse cx="240" cy="118" rx="112" ry="12" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M132 120 C140 190 180 212 240 212 C300 212 340 190 348 120" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <ellipse cx="240" cy="118" rx="112" ry="12" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.6"/>
+    <circle cx="196" cy="120" r="3" fill="#cdb069"/><circle cx="232" cy="114" r="3" fill="#cdb069"/><circle cx="268" cy="121" r="3" fill="#cdb069"/><circle cx="300" cy="116" r="3" fill="#cdb069"/><circle cx="215" cy="127" r="2.4" fill="#cdb069"/><circle cx="252" cy="126" r="2.4" fill="#cdb069"/>
+    <path d="M300 74 L380 22 M316 88 L392 36" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

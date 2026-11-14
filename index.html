@@ -44,6 +44,14 @@
       <path d="M7.25 13.5a4.1 4.1 0 1 1 .85-8.1A4.35 4.35 0 0 1 15.9 5.4a4.1 4.1 0 1 1 .85 8.1v3.25a1.75 1.75 0 0 1-1.75 1.75h-6a1.75 1.75 0 0 1-1.75-1.75z"/>
       <path d="M7.25 16h9.5M7.25 19h9.5"/>
     </symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+    </symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24">
+      <polyline points="22 4 22 10 16 10"/>
+      <path d="M20 15a8.5 8.5 0 1 1-1.7-9.3L22 10"/>
+    </symbol>
     <symbol id="i-pot" viewBox="0 0 24 24">
       <path d="M4.5 9.5h15v6.75a4 4 0 0 1-4 4h-7a4 4 0 0 1-4-4z"/>
       <path d="M2.5 11.5h2M19.5 11.5h2M9.25 6.25c0-1.4.9-1.9.9-3M14 6.25c0-1.4.9-1.9.9-3"/>
@@ -137,9 +145,9 @@
     </div>
 
     <div class="rail-foot">
-      <button class="rail-link" type="button" data-action="sources" aria-label="Sources, credits and limits" title="Sources">
-        <svg><use href="#i-info"/></svg>
-      </button>
+      <a class="rail-link" href="#/settings" data-nav="settings" aria-label="Settings" title="Settings">
+        <svg><use href="#i-gear"/></svg>
+      </a>
     </div>
   </nav>
 
@@ -153,7 +161,7 @@
   <a href="#/cook" data-nav="cook"><svg><use href="#i-pot"/></svg><span>Cook</span></a>
   <a href="#/chef" data-nav="chef" aria-label="Ask the Chef"><svg><use href="#i-chef"/></svg><span>Chef</span></a>
   <a href="#/research" data-nav="research"><svg><use href="#i-globe"/></svg><span>Research</span></a>
-  <button type="button" data-action="sources"><svg><use href="#i-info"/></svg><span>Sources</span></button>
+  <a href="#/settings" data-nav="settings" aria-label="Settings"><svg><use href="#i-gear"/></svg><span>Settings</span></a>
 </nav>
 
 <div id="timer-dock" class="timer-dock" hidden></div>

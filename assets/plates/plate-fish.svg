@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-label="A plated fish with lemon">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="40%" r="78%">
+      <stop offset="0" stop-color="#2b2e33"/>
+      <stop offset="1" stop-color="#17191b"/>
+    </radialGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#ffffff" fill-opacity="0.045"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="270" fill="url(#halo)"/>
+  <rect width="480" height="270" fill="url(#dots)"/>
+  <ellipse cx="240" cy="203" rx="140" ry="14" fill="#000000" fill-opacity="0.38"/>
+  <ellipse cx="240" cy="150" rx="150" ry="20" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+    <path d="M150 150 C200 106 280 106 330 150 C280 194 200 194 150 150 Z" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M330 150 l36 -22 M330 150 l36 22" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="205" cy="146" r="4" fill="#cdb069"/>
+    <path d="M225 140 l14 14 M245 136 l14 14 M265 136 l14 14" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8"/>
+    <circle cx="330" cy="120" r="10" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.85"/><path d="M322 120 h16 M330 112 v16" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.85"/>
+</svg>

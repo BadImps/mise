@@ -14,7 +14,7 @@
 
 ### Caribbean publisher recipes
 
-The 442 records in `js/caribbean-sources.js` preserve each publisher's published
+The 714 records in `js/caribbean-sources.js` preserve each publisher's published
 recipe text — schema.org `Recipe` JSON-LD, or the recipe-card markup the publisher
 serves (the same data behind the page's Recipe block). Country labels follow the
 
@@ -48,6 +48,12 @@ authenticity. An “(inspired)” suffix stays on dishes the publisher presents 
   whose recipe card meets the data contract (ingredients and instructions present); one
   card with no steps stays out rather than enter as an incomplete record. Multi-card
   posts link each record to its own recipe-card anchor.
+- **The 272 records read from CaribbeanPot.com** (mostly Trinidadian, Jamaican and
+  fusion cooking): <https://caribbeanpot.com>, by Chris De La Rosa and Sandie Markle.
+  `tools/build-caribbeanpot.mjs` applies the same contract to the site's REST API.
+  Six posts whose recipes publish no ingredient list anywhere — the card, the print
+  view and the schema.org Recipe block — are excluded.
+  Multi-card posts link each record to its own recipe-card anchor.
 
 Vegan versions keep the word “vegan” in their source names. The Coquito card lists
 `½ ground cinnamon` without a unit; Mise preserves that gap instead of guessing a unit.
@@ -72,6 +78,8 @@ publisher's wording.
 - Arrabiata, teriyaki, pancakes and salmon soup: TheMealDB meal photographs.
 - Classic Beef Chili: Caitlin Bensel for Food & Wine.
 - Publisher-based Caribbean and African records do not bundle or hot-link publisher photographs.
+- Records without a publisher photograph show one of Mise's own programmatic SVG
+  cover plates — original line art in the house palette, drawn by `tools/build-plates.mjs`.
 - Step photographs referenced in the Food & Wine source data are by Molly Bolton; Mise does not
   re-host them.
 
@@ -86,7 +94,7 @@ publisher's wording.
 - Live search and live recipe records come from TheMealDB's public API (`themealdb.com/api`).
 - `js/caribbean.js` caches the 27 meals TheMealDB returned for Jamaica, the only Caribbean-facing
   area with results at generation time. Other queried areas returned zero **in TheMealDB**, not
-  elsewhere. Together with the 442 publisher recipes, the Caribbean collection holds 469 records
+  elsewhere. Together with the 714 publisher recipes, the Caribbean collection holds 741 records
   across 13 places and does not claim to cover the entire Caribbean.
 - `js/africa.js` caches all 39 meals TheMealDB returns for Algerian, Egyptian, Kenyan, Moroccan and
   Tunisian. The 16 publisher recipes add Nigerian, Ghanaian, Ethiopian, Kenyan and South African
@@ -98,8 +106,12 @@ publisher's wording.
 - A public-area audit on 2026-11-10 found 195 unique area labels in TheMealDB's `list.php?a=list`,
   29 areas returning meals, and 472 meal matches under `filter.php?a=`. Mise reports coverage gaps
   instead of representing the set as world-complete.
-- `tools/build-collections.mjs` regenerates the TheMealDB snapshots and publisher collections from
-  the URLs above. `tools/build-cookingwithria.mjs` regenerates the Cooking with Ria records from the
-  site's public WordPress REST API. Neither writes or paraphrases a recipe.
+- `tools/build-cookingwithria.mjs` and `tools/build-caribbeanpot.mjs` regenerate the
+  two Cooking with Ria and CaribbeanPot.com records from their public WordPress REST APIs.
+  `tools/build-collections.mjs` regenerates the TheMealDB snapshots and publisher collections
+  from the URLs above. None of them writes or paraphrases a recipe.
+- `tools/build-plates.mjs` writes the programmatic SVG cover plates used for records
+  with no publisher photograph. They are original, text-free line art in the house
+  palette, not model-generated images.
 - Imported links are read in the browser from the page's own schema.org `Recipe` JSON-LD. The page's
   text, photographs and marks remain the publisher's.

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-label="A bowl of noodles with chopsticks">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="40%" r="78%">
+      <stop offset="0" stop-color="#2b2e33"/>
+      <stop offset="1" stop-color="#17191b"/>
+    </radialGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#ffffff" fill-opacity="0.045"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="270" fill="url(#halo)"/>
+  <rect width="480" height="270" fill="url(#dots)"/>
+  <ellipse cx="240" cy="203" rx="140" ry="14" fill="#000000" fill-opacity="0.38"/>
+  <ellipse cx="240" cy="128" rx="112" ry="13" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M132 130 C142 196 186 214 240 214 C294 214 338 196 348 130" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M204 96 v30 M224 92 v30 M244 92 v30 M264 96 v30" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+    <path d="M294 66 L384 28 M312 80 L392 48" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

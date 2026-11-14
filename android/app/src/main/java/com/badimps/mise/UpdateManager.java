@@ -115,8 +115,12 @@ final class UpdateManager {
     }
 
     void check(Listener listener) {
-        long last = prefs.getLong(KEY_LAST_CHECK, 0L);
-        if (System.currentTimeMillis() - last < CHECK_INTERVAL_MS) {
+        check(listener, false);
+    }
+
+    void check(Listener listener, boolean force) {
+        long last = force ? 0L : prefs.getLong(KEY_LAST_CHECK, 0L);
+        if (!force && System.currentTimeMillis() - last < CHECK_INTERVAL_MS) {
             listener.onResult(null, false);
             return;
         }

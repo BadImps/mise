@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-label="A tall glass with straw and lime">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="40%" r="78%">
+      <stop offset="0" stop-color="#2b2e33"/>
+      <stop offset="1" stop-color="#17191b"/>
+    </radialGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#ffffff" fill-opacity="0.045"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="270" fill="url(#halo)"/>
+  <rect width="480" height="270" fill="url(#dots)"/>
+  <ellipse cx="240" cy="203" rx="140" ry="14" fill="#000000" fill-opacity="0.38"/>
+  <path d="M196 60 h88 l-10 150 h-68 Z" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M210 116 h60" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.7"/>
+    <path d="M240 60 L280 16" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="316" cy="170" r="13" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/><path d="M308 170 h16 M316 162 v16" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+    <circle cx="236" cy="140" r="3.4" fill="#cdb069" opacity="0.9"/><circle cx="260" cy="166" r="3.4" fill="#cdb069" opacity="0.9"/>
+</svg>

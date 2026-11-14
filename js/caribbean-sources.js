@@ -1,4 +1,4 @@
-/* Caribbean recipes read from publisher schema.org Recipe data (That Girl Cooks Healthy, 196 Flavors, BBC Good Food) or the recipe-card markup the publisher serves (Cooking with Ria; see tools/build-cookingwithria.mjs). Each record links to its publisher page; multi-card posts link to each recipe card anchor. */
+/* Caribbean recipes read from publisher schema.org Recipe data or from the recipe-card markup the publisher serves (Cooking with Ria and CaribbeanPot.com; see tools/build-cookingwithria.mjs and tools/build-caribbeanpot.mjs). Each record links to its publisher page; multi-card posts link to each recipe card anchor. */
 window.MISE_CARIBBEAN_SOURCES = [
   {
     "id": "carib-guyana-pepperpot-on-christmas-morning",
@@ -27715,5 +27715,17117 @@ window.MISE_CARIBBEAN_SOURCES = [
     "prepTime": "PT15M",
     "cookTime": "PT30M",
     "totalTime": "PT45M"
+  },
+  {
+    "id": "carib-caribbean-a-quick-summer-fruit-compote",
+    "country": "Caribbean",
+    "name": "A Quick Summer Fruit Compote.",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/a-quick-summer-fruit-compote/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 lb peaches, seeded, sliced",
+      "1 lb plums, seeded, sliced",
+      "1/4 teaspoon salt",
+      "1 cup cherries, seeded",
+      "1 cardamom pod",
+      "2 pieces orange peel, 1-inch slices",
+      "2 tablespoons honey",
+      "1/2 cup Origin Wine Spritzer, Nyarai Cellars",
+      "Tools"
+    ],
+    "description": "A vibrant summer fruit compote made with peaches, plums, cherries, and a splash of Nyarai Cellars Origin Wine Spritzer. Perfect as a side with smoked duck or as a topping for desserts, pancakes, and more.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the peaches, plums, and cherries thoroughly. Remove the seeds and slice the fruits into large, chunky pieces for a rustic texture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the sliced fruits into a deep saucepan."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the salt, cardamom pod, orange peel, lemon juice, honey, and Origin Wine Spritzer to the saucepan with the fruits."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn the stove to medium heat and bring the mixture to a gentle boil, stirring occasionally to combine all the flavors."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once it reaches a boil, reduce the heat to a simmer. Let it cook uncovered for 30 minutes, stirring occasionally until the fruits soften and the juices thicken into a compote."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Before serving, remove the cardamom pod and orange peel. If you added bay leaves or ginger slices, be sure to remove those as well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm or cool. This compote pairs beautifully with smoked duck, much like cranberry sauce with roasted turkey. It also makes a delicious topping for ice cream, pastries, pancakes, and waffles."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT30M",
+    "totalTime": "PT40M"
+  },
+  {
+    "id": "carib-caribbean-a-smoked-jamaican-jerk-duck-recipe-to-make-this-summer-unfor",
+    "country": "Caribbean",
+    "name": "A Smoked Jamaican Jerk Duck",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/a-smoked-jamaican-jerk-duck-recipe-to-make-this-summer-unforgettable/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 whole duck, 7 lb",
+      "1 lemon, juice",
+      "1 tablespoon allspice berries",
+      "1 tablespoon black peppercorns",
+      "1 tablespoon pepper flakes, optional",
+      "2 bay leaves, crushed",
+      "1/2 teaspoon nutmeg, freshly grated recommended",
+      "1 teaspoon ground cinnamon",
+      "1 tablespoon sea salt",
+      "4 scallions",
+      "5 slices fresh ginger",
+      "12 sprigs thyme",
+      "2 clementines, halved",
+      "1 can Nyarai Cellars Origin Wine Spritzer",
+      "1 teaspoon dehydrated chives, optional",
+      "1 teaspoon onion powder, optional",
+      "1 teaspoon garlic powder, optional"
+    ],
+    "description": "A delicious twist on Caribbean duck with bold Jamaican jerk flavors, gently smoked over cherry wood for a memorable summertime dish.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Rinse the duck with cool water and lemon juice, then pat dry with paper towels. Remove any visible pinfeathers using tweezers. Trim excess fat as needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "With a sharp knife, score only the skin (not the meat) on the breast side of the duck. This allows the fat to render and helps the seasoning penetrate."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a mortar and pestle, crush the allspice berries, black peppercorns, pepper flakes (if using), and bay leaves. Stir in the salt, cinnamon, and nutmeg. If using, mix in the optional dry brine ingredients (dehydrated chives, onion, and garlic powder)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Rub the entire duck thoroughly with the dry seasoning mix. Place on a wire rack over a cookie sheet, uncovered, and refrigerate for 12–16 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a roasting pan with a wire rack, layer the scallions, thyme, ginger slices, and halved clementines. Pour the wine spritzer into the pan."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the duck from the fridge and place it breast-side up on the rack. Transfer to a preheated smoker at 275°F (135°C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Smoke for 2 hours, rotating the pan halfway through if your smoker has hot spots."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase the smoker temperature to 375°F (190°C) and cook for an additional 1 1/2 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "For an extra layer of smoke flavor (if using a Traeger), reduce heat to 180–190°F (82–88°C) and engage “Super Smoke” for the final hour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the duck from the smoker and let it rest for 10 minutes before carving. Serve warm, ideally with the Summer Fruit Compote and a chilled Nyarai Cellars Origin Wine Spritzer ."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT30M",
+    "cookTime": "PT4H",
+    "totalTime": "PT4H30M"
+  },
+  {
+    "id": "carib-fusion-addictive-summertime-glazed-grilled-peaches",
+    "country": "Fusion",
+    "name": "Addictive Summertime Glazed Grilled Peaches",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/addictive-summertime-glazed-grilled-peaches/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 lbs ripe peaches, firm, halved, pits removed",
+      "2 tablespoons oil, high smoke point",
+      "2 tablespoons brown sugar",
+      "1/2 lemon, juiced",
+      "1/4 teaspoon sea salt",
+      "2 tablespoons maple syrup",
+      "1 tablespoon orange extract"
+    ],
+    "description": "These beautifully caramelized Grilled Peaches are roasted over high heat then finished with a maple cbrown sugaritrus glaze that perfectly balances sweetness, acidity, and fresh seasonal summer flavor.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the peaches thoroughly and pat dry with paper towels. Cut them in half, remove the pits, and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat your cast iron pan inside a wood fired oven or outdoor grill until properly hot. Add the oil and coat the surface evenly. I used grapeseed oil because of its high smoke point, though avocado oil, peanut oil, clarified butter, or sunflower oil all work equally well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Carefully remove the hot pan and place the peaches cut side down onto the surface."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Return the pan to the heat and roast for about four to six minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the pan (wear thick heta proof gloves)and carefully flip the peaches over to expose the now beautifully golden caramelized edges. At this stage be prepared for the lovely perfume of roasted peaches filling the air."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a small bowl whisk together the brown sugar, lemon juice, sea salt, maple syrup, and orange extract until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Drizzle or brush the glaze generously over the peaches."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "As I mention in the video, the orange extract can easily be replaced with Grand Marnier and adding a bit of vanilla extract or ground cinnamon works beautifully as well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the pan back into the oven and continue roasting for another three to five minutes. Keep a close eye on the tops so they do not burn."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Rotate the pan occasionally to ensure even color and proper caramelization."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from the heat and serve immediately."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If using a conventional indoor oven simply set it to 425°F and adjust cooking time accordingly, particularly during the finishing stage where it may take slightly longer than cooking over direct high heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve as is or enjoy over vanilla bean ice cream , coconut mango ice cream , or vintage coconut ice cream ."
+      }
+    ],
+    "yields": 4,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-trinidadian-healthier-airfryer-fried-channa-chickpeas-snack-2",
+    "country": "Fusion, Trinidadian",
+    "name": "Air Fryer Curried Chickpeas",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/healthier-airfryer-fried-channa-chickpeas-snack-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 can chickpeas, drained, rinsed, dried",
+      "1 tablespoon olive oil",
+      "1/2 Scotch Bonnet pepper, whole or chopped",
+      "3 cloves garlic, crushed",
+      "1 teaspoon Caribbean green seasoning",
+      "1/4 teaspoon sea salt"
+    ],
+    "description": "Crispy, spicy air-fried chickpeas with Caribbean green seasoning, Scotch Bonnet pepper, and garlic, a quick and healthy Caribbean snack.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Drain, rinse, and towel-dry chickpeas. Toss with olive oil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Meanwhile, crush garlic and pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "When chickpeas are crisp, transfer to a bowl. Immediately toss with garlic, Scotch Bonnet, green seasoning, and salt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm or store in an airtight container at room temperature for up to 3 weeks."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": "PT20M",
+    "totalTime": "PT20M"
+  },
+  {
+    "id": "carib-fusion-apple-mango-chicken-salad-2",
+    "country": "Fusion",
+    "name": "Apple Mango Chicken Salad",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/apple-mango-chicken-salad-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1/2 cup mango, cubed",
+      "1/2 cup apple, cubed",
+      "3 cups cooked chicken, shredded",
+      "1/2 cup celery, diced",
+      "1/4 cup red onion, diced",
+      "3/4 cup mayonnaise",
+      "3/4 teaspoon mustard",
+      "1 teaspoon lemon juice",
+      "pinch curry powder",
+      "pinch salt",
+      "pinch black pepper"
+    ],
+    "description": "A refreshing Caribbean-style chicken salad with tropical mango, crisp apple, and a hint of curry; perfect for sandwiches or a light, flavorful meal.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl, combine mango and apple. Stir in lemon juice to prevent discoloration."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add shredded chicken, celery, and red onion."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in mayonnaise, mustard, curry powder, salt, and pepper until evenly mixed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Chill for about 30 minutes to meld flavors."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve on bread, lettuce wraps, or as a standalone salad."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": null,
+    "totalTime": "PT15M"
+  },
+  {
+    "id": "carib-caribbean-apple-thyme-mashed-potatoes",
+    "country": "Caribbean",
+    "name": "Apple Thyme Mashed Potatoes",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/apple-thyme-mashed-potatoes/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 1/2 lbs Yukon gold potatoes, peeled, sliced 1 cm thick",
+      "3 medium honeycrisp apples, peeled, chunked",
+      "1 1/3 tablespoons salt, divided",
+      "1 3/4 cups milk",
+      "3 cloves garlic, smashed",
+      "5 sprigs thyme",
+      "4 tablespoons butter",
+      "1/2 teaspoon nutmeg, freshly grated",
+      "3/4 teaspoon black pepper",
+      "1 tablespoon chives, chopped"
+    ],
+    "description": "Apple Thyme Mashed Potatoes. A silky, seasonal mash of Yukon gold potatoes, sweet apples, and fresh thyme, infused with warm spices for a comforting and flavorful side dish perfect for fall and winter meals.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Peel the potatoes, slice into 1 cm rounds, and rinse. Peel and chunk the apples. Place both into a pot, cover with cold water, and add 1 tablespoon of salt. Bring to a boil and cook until tender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Drain the potatoes and apples, then return them to the pot over very low heat to dry for 3 minutes. Turn off the heat and keep the pot uncovered. This will help burn off any remaining liquid."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a saucepan, add the milk, garlic, thyme, butter, and grated nutmeg. Bring to a gentle simmer and cook for 3 to 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the remaining salt and black pepper to the dried potatoes and apples, then mash until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain in about 2/3 of the infused milk and whisk to your desired texture. Add the remaining milk if needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste for salt and adjust. Fold in the chives, add more black pepper if desired, and serve warm."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT30M",
+    "totalTime": "PT45M"
+  },
+  {
+    "id": "carib-fusion-applewood-smoked-pineapple-chow-2",
+    "country": "Fusion",
+    "name": "Applewood Smoked Pineapple Chow",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/applewood-smoked-pineapple-chow-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 pineapple, ripe",
+      "1/2 red onion",
+      "2 cloves garlic",
+      "1/4 teaspoon sea salt",
+      "1/4 Scotch Bonnet pepper",
+      "2 tablespoon shado beni, or cilantro",
+      "1/2 lime, or lemon",
+      "1 pinch Black pepper",
+      "1 handful apple wood chips"
+    ],
+    "description": "A Caribbean twist on classic Trini chow with grilled pineapple, applewood smoke, and roasted Scotch Bonnet pepper.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Create a pouch with a piece of sturdy tin foil with a handful of apple wood chips, wrap and poke some holes with a fork. Place it on the side of the grill area (or directly on the hot coals or flame) and cover the lid."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Peel and slice the Pineapple (1) into 1/2 inch slices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "With your grill on medium heat, place the pineapple slices over a medium heat and cover the grill immediately (you don’t want to loose that lovely smoke you created). Put Scotch Bonnet Pepper (1/4) on the grill as well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Grill for 2 minutes, then flip and grill for another 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Slice the Red Onion (1/2) very thin, dice the Garlic (2 clove) very finely. Chop the Fresh Cilantro (2 tablespoon)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the roasted Scotch Bonnet off the grill, deseed and chop finely. Then slice the grilled pineapple into bite sized pieces (like little pizza slices)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Assemble everything and place everything into a large bowl and mix well. Drizzle with juice from the Lime (1/2). Season with Sea Salt (1/4 teaspoon) and Ground Black Pepper (1 pinch), then stir."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve immediately, or let chill in the fridge for an hour, which would allow the flavors to develop and settle together."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT5M",
+    "totalTime": "PT15M"
+  },
+  {
+    "id": "carib-general-caribbean-authentic-caribbean-kitchri-recipe-one-pot-comfort-food",
+    "country": "General Caribbean",
+    "name": "Authentic Caribbean Kitchri Recipe (One-Pot Comfort Food)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/authentic-caribbean-kitchri-recipe-one-pot-comfort-food/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoons olive oil",
+      "1 large onion, diced",
+      "6 cloves garlic, smashed",
+      "2 pimento peppers, sliced",
+      "1/2 cup chopped sweet bell peppers, optional, as an alternative to pimento peppers",
+      "1 tablespoon Caribbean green seasoning",
+      "1 teaspoon black pepper",
+      "1 teaspoon turmeric, saffron in Trinidad and Tobago",
+      "3/4 tablespoon Anchar Masala, or ground roasted cumin",
+      "1 medium carrot, grated",
+      "6 to 8 okra, cut into 1 cm wheels",
+      "1 teaspoon salt, plus additional salt to taste",
+      "200 grams spinach, washed and roughly chopped",
+      "1 cup yellow split peas, cooked in salted water",
+      "2 cups water",
+      "1 1/2 cups coconut milk",
+      "1 1/2 cups parboiled long-grain brown rice, washed"
+    ],
+    "description": "This comforting Caribbean kitchri brings together brown rice, yellow split peas, coconut milk, vegetables, and fragrant island seasonings in one pot. It's a hearty vegan and vegetarian-friendly meal with a soft, creamy texture, making it a delicious choice for plant-based dinners and Ital-inspired cooking.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil in a deep pot over medium heat. Add the onion, garlic, and sliced pimento peppers. If you cannot source pimento peppers, add about 1/2 cup of chopped sweet bell peppers instead. Cook for two minutes. There is an intoxicating magic when that Caribbean holy trinity hits the pan. That sudden, fragrant rush of sweet onions, sharp garlic, and sliced pimentos fills the kitchen with pure nostalgia—a sensory promise that something incredible is underway."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn the heat down to medium-low and add the Caribbean green seasoning , black pepper, and turmeric, which we call saffron in Trinidad and Tobago. While most people may use geera (ground roasted cumin), I much prefer using Anchar Masala in my kitchri. Cook for another 2 to 3 minutes, then add the salt, grated carrot, and okra."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "You can now add the washed and roughly chopped spinach, along with the pre-cooked yellow split peas. The yellow split peas should be cooked in salted boiling water, using about 1 teaspoon of salt, for approximately 40 to 45 minutes, then drained. They will almost double in volume, yielding about 2 cups once cooked."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir to combine everything, then add the water and coconut milk. Turn the heat up to medium-high to bring the mixture to a boil, then reduce the heat to a simmer. Typically, you’d use a 2:1 liquid-to-rice ratio when cooking rice. However, we want an extra 1/2 cup of liquid in this kitchri because it’s supposed to have a slightly soggy texture. As I indicated in the video below, this could be seen as a Caribbean-style risotto."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After about 25 minutes, the rice should be fully cooked and plump with the flavours of the ingredients we’ve used. This is where you’ll adjust the salt to your liking and decide on the consistency you want for your finished kitchri. In my case, I turned off the stove and, keeping in mind that the pot I used was a glazed clay one, knew the residual heat would continue to tighten up the liquid and dry the dish further. I allowed it to rest, covered, for 10 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Do you have a similar one-pot rice dish you enjoy making as much as your family enjoys eating? Leave me a comment below. And should you have a related question or tip you'd like to share, I invite you to share it in our Private Members Community (free)."
+      }
+    ],
+    "yields": 5,
+    "prepTime": "PT20M",
+    "cookTime": "PT1H",
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-avocado-grapefruit-salad",
+    "country": "Fusion",
+    "name": "Avocado Grapefruit Salad",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/avocado-grapefruit-salad/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 ripe avocados",
+      "1/4 red onion",
+      "1 tablespoon cilantro, chopped",
+      "1 grapefruit, segmented",
+      "1 pinch sea salt",
+      "1 pinch black pepper",
+      "1 Bird’s Eye pepper, seeded"
+    ],
+    "description": "A quick, vegan, gluten-free salad featuring creamy avocado, tangy grapefruit, crisp onion, and a hint of Caribbean heat, accented by the heat of bird’s eye pepper, perfect for a quick, healthy meal.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Slice the avocados into wedges. If not serving immediately, drizzle with lemon juice to prevent them from browning."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Thinly slice the red onion and finely chop the cilantro."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Segment the grapefruit, removing all peel and pith, and separate the segments."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "On a serving plate, arrange the avocado slices, grapefruit segments, and red onion."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Sprinkle the chopped cilantro and bird’s eye pepper over the salad."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season with sea salt and black pepper to taste. Serve immediately and enjoy this refreshing Caribbean-inspired salad."
+      }
+    ],
+    "yields": 2,
+    "prepTime": "PT12M",
+    "cookTime": null,
+    "totalTime": "PT12M"
+  },
+  {
+    "id": "carib-caribbean-baigan-eggplant-and-aloo-potato-with-stewed-pork",
+    "country": "Caribbean",
+    "name": "Baigan (Eggplant) And Aloo (Potato) With Stewed Pork",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/baigan-eggplant-and-aloo-potato-with-stewed-pork/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoons olive oil",
+      "5 cloves garlic, smashed",
+      "3 lbs eggplant, peeled and cubed",
+      "3/4 tablespoon salt, adjust to taste",
+      "1/2 teaspoon black pepper",
+      "2 lbs potatoes, peeled and sliced",
+      "1 large onion, sliced",
+      "1/2 scotch bonnet pepper, optional",
+      "2 cups water",
+      "2 to 3 cups leftover stewed pork, brown-stew pork",
+      "Optional ingredients:",
+      "Coconut milk, up to 1/2 cup",
+      "2 Pimento peppers, chopped",
+      "tablespoon Caribbean green seasoning"
+    ],
+    "description": "A comforting Caribbean classic made with tender eggplant and potatoes simmered together, then finished with leftover stewed pork for a deeply flavorful one-pot meal. This is traditional Monday cooking at its best and perfect with hot sada roti.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash, peel, and dice the eggplant and potatoes. Prepare the onion, garlic, and scotch bonnet pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil in a wide pot over medium heat. Add the garlic and cook on low heat for about 2 minutes until fragrant, taking care not to brown it."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the eggplant to the pot, increase the heat to medium, and stir well. Season with the salt and black pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After about 1 minute, add the potatoes, sliced onion, and scotch bonnet pepper in an amount you can tolerate. Stir to combine. Habanero pepper is an excellent substitute for the scotch bonnet."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover the pot and bring to a boil. Add the water, reduce the heat to a simmer, and cook with the lid slightly ajar. Stir every 4-5 minutes and add more water if required."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After about 20 minutes, add the leftover stewed pork and stir well so it’s evenly distributed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook uncovered for 4 to 6 minutes, or until most of the liquid has cooked off and the dish has a thick, rich consistency. Taste and adjust the salt to your liking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the salt if needed. Serve with hot roti (I prefer Sada roti)."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT20M",
+    "cookTime": "PT35M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-trinidadian-baigan-choka-eggplant-dip",
+    "country": "Trinidadian",
+    "name": "Baigan Choka (Oven-Roasted Eggplant Dip)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/baigan-choka-eggplant-dip/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 medium eggplants, about 2-3 lbs",
+      "1/4 teaspoon salt",
+      "2 tablespoon olive oil",
+      "1 teaspoon vegetable oil",
+      "2 cloves garlic, divided",
+      "1 pepper scotch bonnet pepper, seeds removed",
+      "1 small onion"
+    ],
+    "description": "A classic Trinidadian dish, baigan choka is traditionally made by roasting eggplant over an open flame. This oven-broiled version captures the essence of the original, delivering that smoky flavor with less mess, perfect for those in cooler climates or without access to a grill.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Set your oven to the broil setting 525 degrees F (275 degrees C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Prepare the Eggplant (2). Trim off the stem area, make some slits in the eggplant for maximum flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Slice one of the Garlic (2 clove) thinly and place them into the slits in the eggplant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Line a sturdy baking tray with tin foil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the eggplant and Scotch Bonnet Pepper (1) and drizzle Vegetable Oil (1 teaspoon) on eggplants. Using your hands rub the oil around the eggplant and place it in the oven for 25 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 5 minutes, remove the scotch bonnet – it should be slightly charred now."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a heavy bowl (or mortar and pestle) place the scotch bonnet (stem removed), remaining clove of garlic and Salt (1/4 teaspoon) and pound to a smooth paste."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 25-30 minutes, your eggplant should be perfectly cooked. Remove from the oven and slice down the center and using a table spoon, scoop out all that goodness and place in the same bowl as garlic-pepper mixture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Now crush the eggplant you scooped out until it’s somewhat smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the Olive Oil (2 tablespoon) in a small frying pan just until it starts to smoke."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Meanwhile, thinly slice the Onion (1) and place it on top of the eggplant mixture (do not mix it yet). Now pour the heated oil onto the onion."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix well and serve."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT5M",
+    "cookTime": "PT30M",
+    "totalTime": "PT35M"
+  },
+  {
+    "id": "carib-trinidadian-banana-bread-pudding-2",
+    "country": "Trinidadian",
+    "name": "Banana Bread Pudding",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/banana-bread-pudding-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 loaf day-old bread, torn into 1–2 inch pieces",
+      "2 1/4 cups warm milk",
+      "2 tablespoons butter",
+      "1 tablespoon custard powder",
+      "3 eggs, room temperature",
+      "1/2 teaspoon cinnamon powder",
+      "1 tablespoon vanilla extract",
+      "1 cup granulated sugar",
+      "2 ripe bananas, sliced",
+      "1/3 cup raisins",
+      "1/4 teaspoon nutmeg"
+    ],
+    "description": "A Caribbean-style baked dessert made with ripe bananas, custard-soaked bread, and warm island spices. Enhanced with warm spices and a hint of vanilla, this dish is perfect served warm with a drizzle of caramel sauce.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat oven to 350°F (175°C). Grease a 9×13-inch baking dish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl, whisk the warm milk and butter until the butter is fully melted."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a small bowl, mix 3 tablespoons of the warm milk with custard powder until smooth. Add this to the milk mixture and whisk to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a separate bowl, whisk together eggs, sugar, cinnamon, nutmeg, and vanilla."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Combine the egg mixture with the milk mixture and whisk thoroughly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the bread pieces, bananas, and raisins to a large bowl. Pour the custard over and mix gently, pressing to ensure the bread absorbs the liquid."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover and let rest for 20 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Transfer to prepared dish and bake for 50–55 minutes, or until golden and just set."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Let rest 5 minutes before serving. Serve warm with caramel sauce or coconut ice cream."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT20M",
+    "cookTime": "PT50M",
+    "totalTime": "PT1H15M"
+  },
+  {
+    "id": "carib-jamaican-beans-and-franks-2",
+    "country": "Jamaican",
+    "name": "Beans and Franks",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/beans-and-franks-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "5-8 hot dogs, franks",
+      "6-8 strips bacon",
+      "1 medium onion, chopped",
+      "2 stalks scallions, chopped",
+      "2 cups bell peppers, assorted sweet peppers",
+      "4-6 sprigs thyme, just the leaves",
+      "1 can baked beans",
+      "1/2 teaspoon black pepper",
+      "1 teaspoon salt, adjust accordingly",
+      "1 tablespoon brown sugar, raw cane sugar"
+    ],
+    "description": "A nostalgic one‑pot dish of baked beans, hot dogs, bacon, peppers, and thyme, ready in under 20 minutes.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Place bacon in a cold pan, heat to medium, and cook until browned and fat is rendered. Remove bacon and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce heat to medium-low; add sliced franks to the bacon fat and brown. Remove any excess fat if over 2 tablespoons."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add chopped onion and cook until translucent (3–5 minutes), then stir in bell peppers, thyme, salt, and black pepper; cook until peppers soften (3–5 minutes)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Return chopped bacon, add baked beans, and sprinkle brown sugar; stir gently to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook another 3–5 minutes, then add scallions, stir, and remove from heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot on toast or in bowls for a one‑pot meal."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT5M",
+    "cookTime": "PT15M",
+    "totalTime": "PT20M"
+  },
+  {
+    "id": "carib-caribbean-best-simple-jamaican-jerk-turkey-legs-easy-oven-recipe",
+    "country": "Caribbean",
+    "name": "Best Simple Jamaican Jerk Turkey Legs: Easy Oven Recipe",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/best-simple-jamaican-jerk-turkey-legs-easy-oven-recipe/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 scallions, chopped",
+      "2 limes, juiced, divided",
+      "3 cloves garlic, crushed",
+      "4 slices ginger",
+      "1 scotch bonnet pepper",
+      "1 tablespoon brown sugar",
+      "1 bay leaf",
+      "1/2 medium onion, chopped",
+      "1 tablespoon dark soy sauce",
+      "1 tablespoon light soy sauce",
+      "6 sprigs thyme",
+      "1 tablespoon olive oil",
+      "1 teaspoon ground allspice, pimento",
+      "3/4 teaspoon black pepper",
+      "6 turkey legs",
+      "1 medium onion, sliced",
+      "3 scallions, cut into large pieces",
+      "5 sprigs thyme",
+      "2 tablespoons olive oil"
+    ],
+    "description": "These oven-baked Jamaican jerk turkey legs are deeply seasoned with a homemade jerk marinade and roasted until juicy, tender, and full of bold Caribbean flavor. This recipe can used on your outdoor grill or smoker for a more aunthetic Jamaican jerk flavor.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Give the onion, scallions, scotch bonnet pepper, and garlic a rough chop."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the juice of one lime, garlic, ginger, scotch bonnet pepper (a habanero pepper will work as well), bay leaf, onion, dark soy sauce, light soy sauce, thyme, olive oil, ground allspice, and black pepper to a blender and puree until smooth or slightly chunky."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Wash the turkey legs with the juice of the remaining lime and cool water. Drain and pat dry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the turkey legs in a bowl or resealable bag, pour the jerk marinade over them, and mix well to coat evenly. Refrigerate overnight for best flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat the oven to 375°F (190°C). Line a baking dish with foil and place the marinated turkey legs inside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Tuck in the sliced onion, scallions, and thyme, then drizzle with olive oil. Lightly cover with foil and place in the oven."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 45 minutes, remove the foil and baste the turkey legs with the pan juices. Repeat basting a few times."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Continue cooking uncovered for another 20 to 25 minutes until fully cooked and nicely colored."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot with rice and peas or your favorite Caribbean sides."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT20M",
+    "cookTime": "PT1H15M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-black-pudding-with-caramelized-onion",
+    "country": "General Caribbean",
+    "name": "Black Pudding With Caramelized Onion",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/black-pudding-with-caramelized-onion/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 tablespoon butter",
+      "2 large onions, sliced",
+      "1/4 teaspoon sea salt",
+      "3/4 lb blood pudding, casing removed",
+      "2 scallions, finely chopped",
+      "2 tablespoons parsley, finely chopped",
+      "1 habanero pepper, finely chopped, no seeds",
+      "3 sprigs thyme, leaves only",
+      "2 tablespoons olive oil",
+      "1/2 teaspoon black pepper"
+    ],
+    "description": "Transform leftover blood pudding into a rich Caribbean spread with caramelized onions, herbs, and habanero heat.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the butter in a saucepan over medium heat and add the sliced onions, followed by the sea salt. Stir to coat, place a lid on the pan, and cook over medium to low heat for about 15 minutes until softened and beginning to release their moisture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the lid, reduce the heat slightly, and continue cooking until the onions turn a deep amber color. Stir every five minutes to ensure the natural sugars caramelize without burning. This process will take about 50 minutes in total and you will notice the onions becoming richly sweet and fragrant as they deepen in color."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the casing from the black pudding and break it into smaller pieces. Prep the others ingeredients as well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After removing the caramelized onions from the pan and setting them aside, increase the heat to medium to low and add the olive oil without washing the pan. Add the parsley, habanero pepper, scallions, thyme leaves, and black pepper. Cook for about 3 minutes until you hear the gentle sizzle and the aroma of the herbs and pepper fills the kitchen."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the black pudding to the pan and crush it as you stir, combining all the flavors into a somewhat thick, paste-like consistency."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 3 to 4 minutes, fold in the caramelized onions and heat through for about 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm as a topping for sandwiches or crackers. Alternatively, keep the caramelized onions separate and spoon them over the finished pudding as a topping."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT1H",
+    "totalTime": null
+  },
+  {
+    "id": "carib-trinidadian-bok-choy-with-corned-beef-2",
+    "country": "Trinidadian",
+    "name": "Bok Choy with Corned Beef",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/bok-choy-with-corned-beef-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 tablespoon olive oil",
+      "1/2 cup leftover fried corned beef",
+      "1 medium onion, sliced",
+      "3 lbs Shanghai bok choy, separated into white stalks and green leaves",
+      "1/2 teaspoon sea salt, adjust to taste",
+      "1/2 teaspoon black pepper",
+      "8-10 grape tomatoes, halved"
+    ],
+    "description": "A quick and flavorful Caribbean stir-fry combining tender bok choy and savory corned beef, perfect for a satisfying meal.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil in a wide sauté pan over medium heat. Add the leftover fried corned beef and sliced onion to the pan. Stir well and cook for about 3 minutes until the onions are translucent."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the white stalks of the bok choy to the pan. Stir to combine and cook for 4–6 minutes, uncovered, until the stalks begin to soften."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season with sea salt and black pepper, adjusting to taste."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the green leaves of the bok choy to the pan. Stir well and cook for an additional 2–3 minutes until the leaves are wilted but still vibrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Top the dish with the halved grape tomatoes. Cook for another 3–4 minutes, allowing the tomatoes to soften slightly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust seasoning if necessary. Serve hot."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT15M",
+    "totalTime": "PT25M"
+  },
+  {
+    "id": "carib-general-caribbean-trinidadian-chenette-guinep-ackee-chow-recipe",
+    "country": "General Caribbean, Trinidadian",
+    "name": "Bold & Flavorful Chenette Chow (Guinep / Ackee Chow)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/chenette-guinep-ackee-chow-recipe/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb chenette, peeled",
+      "1/2 teaspoon sea salt",
+      "1/2 teaspoon pimenton, smoked paprika",
+      "1/2 teaspoon black pepper",
+      "2 cloves garlic, crushed",
+      "1/2 Scotch Bonnet pepper, sliced thinly",
+      "1 tablespoon Chadon Beni, chopped, about 4 leaves",
+      "2 tablespoons water"
+    ],
+    "description": "Chennette Chow i s a spicy, tangy fruit pickle that captures the vibrant flavors of Trinidad and Tobago. Made with guinep (also known as Spanish lime or ackee), Scotch Bonnet pepper, fresh Chadon Beni, and citrus juice, this refreshing snack is a Caribbean street-food favorite, perfect for when the chenette tree is in full season.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the chenette thoroughly to remove any sap and debris. Using a sharp knife, gently split each fruit and remove the thin, leathery outer skin. Discard the skins and place the peeled chenette pulp into a large bowl."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Sprinkle the black pepper and sea salt over the chenette. Stir gently to coat the fruit evenly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the chopped Chadon Beni and thinly sliced Scotch Bonnet pepper. Adjust the amount of pepper based on your heat tolerance, or substitute with pimento peppers for a milder version."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Sprinkle in the smoked paprika to introduce a subtle smoky note, though this is optional and not traditional."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the crushed garlic, fresh lime juice, and water to the bowl. Stir well to combine all the flavors, ensuring the chenette is coated in the spicy, garlicky brine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover the bowl and let it marinate in the refrigerator for about 20 minutes to allow the flavors to develop before serving."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enjoy as a spicy snack, similar to a pickle. Store leftovers in an airtight container in the fridge for up to 4-6 days."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": null,
+    "totalTime": "PT35M"
+  },
+  {
+    "id": "carib-fusion-general-caribbean-bright-passion-fruit-vinaigrette-recipe-for-salads-and-grill",
+    "country": "Fusion, General Caribbean",
+    "name": "Bright Passion Fruit Vinaigrette Recipe for Salads and Grilling",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/bright-passion-fruit-vinaigrette-recipe-for-salads-and-grilling/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 passion fruits, pulp removed and seeds strained",
+      "3/4 cup olive oil",
+      "1/4 cup Champagne vinegar",
+      "1/4 teaspoon sea salt",
+      "1/2 teaspoon black pepper, fresh ground",
+      "3 tablespoons honey, scotch bonnet infused",
+      "1/2 lemon, juiced",
+      "1 tablespoon Dijon mustard"
+    ],
+    "description": "A bright and tropical passion fruit vinaigrette perfect for salads and grilling, delivering a balance of sweet, tangy, and lightly spiced Caribbean flavors.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Remove the pulp out of the passion fruits, strain to remove the seeds and discard them, then set aside. You should notice a lovely tropical burst of fruity scent, which adds a wonderful touch to the finished vinaigrette."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a bowl, add the olive oil, champagne vinegar, salt, black pepper, and honey."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Whisk for a few seconds until slightly combined, then add the strained passion fruit pulp, lemon juice, and Dijon mustard."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Whisk well until fully combined and smooth, with a light glossy finish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Alternatively, place all the ingredients into a small jar, secure the lid, and shake vigorously until fully blended."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use immediately or store in the refrigerator. When ready to use, bring to room temperature and shake or whisk thoroughly to restore the texture and highlight the fruit flavors."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Here are a few of my Caribbean-inspired salad recipes: Caribbean Orange Pineapple Salad , Shrimp, Avocado And Mango Salad , Heirloom Tomato and Wtermelon Salad, and Zesty Cucumber Chow ."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT10M",
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-caramelized-grilled-pineapple-a-summer-delight",
+    "country": "General Caribbean",
+    "name": "Caramelized Grilled Pineapple",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caramelized-grilled-pineapple-a-summer-delight/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 large pineapple, peeled, cored and cut into wedges",
+      "1/4 cup water",
+      "3 tablespoons golden brown sugar",
+      "1/2 teaspoon cinnamon",
+      "1/4 cup heavy cream",
+      "2 tablespoons butter, optional",
+      "Flaky finishing salt, optional"
+    ],
+    "description": "Fresh grilled pineapple coated in a rich homemade caramel sauce makes for an easy tropical dessert that's perfect for summer entertaining. Whether served on its own or over ice cream, this grilled pineapple recipe delivers smoky, caramelized flavor with every bite.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Peel, wash, core, and cut the pineapple into wedges."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat your grill to high. Grill the pineapple for 4 to 6 minutes, turning as needed so each side develops good color and light char. The sweet tropical aroma as the fruit grills is one of my favorite parts of making this recipe, reminding me of childhood in the Caribbean."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "As the pineapple grills. Place the water and brown sugar in a cold saucepan. Turn the heat on and gently swirl the pan as the sugar melts."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Continue cooking until the mixture becomes frothy before turning a deep amber color as the water cooks away."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "When large bubbles begin to appear, about 2 to 3 minutes, add the cinnamon."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Carefully whisk in the heavy cream. The caramel will bubble vigorously for a few seconds, so take your time."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook for another 3 minutes, then stir in the butter if using."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the grilled pineapple to the caramel sauce and gently toss until each piece is coated."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm on its own, over Vanilla Bean Ice Cream , or my childhood favorite, Dad's Coconut Ice Cream . If desired, finish with a sprinkle of flaky salt for a sweet and salty contrast."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT5M",
+    "cookTime": "PT10M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-jamaican-trinidadian-caribbean-beef-sweet-potato-and-pumpkin-soup-2",
+    "country": "Fusion, Jamaican, Trinidadian",
+    "name": "Caribbean Beef, Sweet Potato and Pumpkin Soup",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-beef-sweet-potato-and-pumpkin-soup-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2-3 pounds beef bones",
+      "1/2 teaspoon salt",
+      "1/4 teaspoon black pepper",
+      "2 carrots",
+      "1 large onion",
+      "2 stalks celery",
+      "2 large sweet potatoes",
+      "1 medium butternut squash",
+      "2-3 cups pumpkin, diced",
+      "Water or beef stock, enough to cover",
+      "3 cloves garlic",
+      "3 tablespoons olive oil, divided",
+      "4 sprigs thyme",
+      "1 scotch bonnet pepper",
+      "2 tablespoons parsley, chopped",
+      "1 stock cube",
+      "2 scallions",
+      "3-4 allspice berries",
+      "flour dumplings, potato, and other root vegetables, optional"
+    ],
+    "description": "This rich, Caribbean-style soup blends tender beef with the natural sweetness of sweet potatoes and pumpkin, creating a comforting, slow-simmered broth perfect for winter meals or anytime you crave a taste of home.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat oven to 400°F (204 °C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pat the beef bones dry and place in a baking dish with chopped carrots and celery. Toss with 2 tablespoons olive oil. Roast for 45 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Meanwhile, peel and cube sweet potatoes, pumpkin, and butternut squash. Keep covered in water to prevent discoloration."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large soup pot, heat 1 tablespoon olive oil over medium-low heat. Add onion, garlic, scallions, thyme, and black pepper. Cook for 3–4 minutes until fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase heat to medium-high. Add roasted beef and vegetables to the pot, including all pan drippings. Stir well to coat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add pumpkin, sweet potatoes, squash, stock cube, allspice, parsley, and enough water or beef stock to cover. Add whole scotch bonnet pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring to a boil, then reduce to a simmer. Cover loosely and cook for 1 hour 45 minutes, or until beef is tender and vegetables break down. Skim any foam."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt. Remove scotch bonnet before serving. Add flour dumplings or other provisions in the last 10 minutes, if using. Serve hot."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT15M",
+    "cookTime": "PT2H",
+    "totalTime": "PT2H15M"
+  },
+  {
+    "id": "carib-caribbean-caribbean-black-rum-cake-panettone-christmas-bread-pudding",
+    "country": "Caribbean",
+    "name": "Caribbean Black Rum Cake & Panettone Christmas Bread Pudding",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-black-rum-cake-panettone-christmas-bread-pudding/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 cups milk",
+      "1 cup cream",
+      "1 1/4 cups sugar",
+      "4 tablespoons melted butter",
+      "1 tablespoon vanilla extract",
+      "1/2 teaspoon nutmeg",
+      "1/2 teaspoon ground cinnamon",
+      "1 panettone bread, fruit, torn into pieces and air-dried",
+      "1 cup rum cake fruit puree"
+    ],
+    "description": "A warm, custardy Christmas bread pudding made with Italian panettone and rich Caribbean black cake fruit puree for deep holiday flavor and irresistible aroma.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Break the panettone bread into pieces and set aside to air-dry. I used the panettone with dried fruits (no chocolate)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat the oven to 375°F (190°C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a mixing bowl, whisk the eggs, milk, cream, sugar, melted butter, vanilla, nutmeg, and cinnamon until fully combined."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Grease a baking dish, then place the dried bread pieces inside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Drop teaspoon-sized amounts of the rum cake fruit puree evenly over the top of the bread."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the milk mixture over the bread and gently shake or stir with a spoon to help the custard reach all the bread and fruit pockets."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the dish on the middle rack and bake uncovered for 15 minutes. Cover with foil and continue baking for another 35 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from the oven and let rest for 10 minutes before serving."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm with my decadent vanilla cream sauce ."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT50M",
+    "totalTime": "PT1H8M"
+  },
+  {
+    "id": "carib-fusion-trinidadian-caribbean-style-boil-and-fry-sweet-potatoes",
+    "country": "Fusion, Trinidadian",
+    "name": "Caribbean Boil and Fry Sweet Potatoes with Saltfish",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-style-boil-and-fry-sweet-potatoes/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 pounds sweet potatoes",
+      "1 teaspoon salt, for boiling",
+      "1 1/2 tablespoons olive oil",
+      "1 tablespoon butter",
+      "1 medium onion, diced",
+      "6-8 cloves garlic, smashed",
+      "1 teaspoon fresh thyme, leaves only",
+      "1/2 teaspoon black pepper",
+      "1/2 cup salted cod"
+    ],
+    "description": "Tender boiled sweet potatoes sautéed in butter and olive oil with garlic, thyme, and optional saltfish, an easy, classic Caribbean dish full of comfort and flavor.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Trim sweet potatoes and cut into large chunks. Place in a pot with water and salt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Boil for 20 minutes until fork tender. Drain and cool. Peel off skins and cut into bite-sized pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a wide skillet, heat olive oil and butter over medium heat. Add onion, garlic, thyme, scallions, and black pepper. Sauté for 3–4 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add saltfish (if using) and stir. Add sweet potatoes and gently mix to coat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook 4–6 minutes, allowing potatoes to absorb flavor and develop golden edges. Serve warm as a side dish or with roti or rice."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT30M",
+    "totalTime": "PT40M"
+  },
+  {
+    "id": "carib-general-caribbean-caribbean-brown-stewed-duck-wings-classic-stew-method",
+    "country": "General Caribbean",
+    "name": "Caribbean Brown Stewed Duck Wings",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-brown-stewed-duck-wings-classic-stew-method/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 lbs duck wings",
+      "1 lime, divided",
+      "1/2 tablespoon sea salt",
+      "3/4 tablespoon black pepper, divided",
+      "1 tablespoon Worcestershire sauce",
+      "1 1/2 tablespoon Caribbean green seasoning",
+      "1 tomato, diced",
+      "1 medium onion, diced",
+      "1 1/2 tablespoon olive oil",
+      "1 heaping tablespoon golden brown sugar",
+      "1 scotch bonnet pepper",
+      "2 slices fresh ginger",
+      "4 to 6 sprigs fresh thyme",
+      "6 to 8 cloves garlic",
+      "1 1/2 cups water",
+      "1 cup orange juice",
+      "2 bay leaves",
+      "2 scallions, green tops chopped"
+    ],
+    "description": "Learn how to make classic Caribbean brown stewed duck wings using an authentic stew technique with added orange juice for a rich, balanced flavor of the duck wings.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the duck wings with the juice of half the lime and cool water. Drain well and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season the duck wings with the salt, half of the black pepper, Worcestershire sauce, Caribbean green seasoning , tomato, and onion. Mix thoroughly, cover, and marinate for at least 2 hours or overnight."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the oil in a heavy pot over medium-high heat. Add the brown sugar and allow it to melt, foam, and turn a deep amber color. Vent the kitchen as this step will produce smoke. Carefully add the seasoned duck wings and stir to coat evenly. If the sugar turns black, turn off the heat, allow the pot to cool completely, wash it, and start over to avoid bitterness."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover the pot, reduce heat to medium, and cook for 5 minutes so the wings release their natural juices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the lid, increase the heat, and allow any remaining liquid to cook off to deepen the color and intensify the stew flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the scotch bonnet pepper, thyme, garlic, remaining black pepper, and ginger. Stir well, then add the water and orange juice."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring to a boil, add the bay leaves, reduce heat to a gentle simmer, and cook with the lid slightly ajar for 1 hour 30 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt as needed. Add additional water if more gravy is desired. Finish with chopped scallions and serve hot with rice and peas ."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT25M",
+    "cookTime": "PT1H45M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-trinidadian-caribbean-brown-stewed-pork-short-ribs-2",
+    "country": "Fusion, Trinidadian",
+    "name": "Caribbean Brown Stewed Pork Short Ribs",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-brown-stewed-pork-short-ribs-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs pork spare ribs, aka short ribs",
+      "1 lemon, juiced",
+      "3/4 tablespoon salt",
+      "2 tablespoons Caribbean green seasoning",
+      "1 tablespoon Worcestershire sauce",
+      "1 teaspoon black pepper",
+      "1 medium onion, diced",
+      "1 tablespoon vegetable oil",
+      "2 tablespoons golden brown sugar",
+      "1 Scotch Bonnet pepper, optional",
+      "1 medium tomato, diced",
+      "2 scallions, chopped",
+      "5 sprigs thyme",
+      "1 teaspoon ginger, grated",
+      "6 cups water",
+      "2 tablespoons parsley, finely chopped",
+      "2 Bay leaves",
+      "2 tablespoons Roocou",
+      "1/2 cup coconut milk"
+    ],
+    "description": "Fall-off-the-bone pork ribs caramelized in golden sugar and simmered in herbs, hot pepper, and tomato; a beloved Caribbean stew full of bold flavor.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash ribs with lemon juice and cool water. Drain and season with green seasoning, salt, black pepper, onion, and Worcestershire sauce. Marinate for at least 2 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a deep pot over medium-high heat, add oil, then sugar. Stir until it melts and turns deep amber; do not let it blacken."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add seasoned ribs. Stir to coat. Cover and cook for 10 minutes to release juices, stirring occasionally."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Uncover and increase the heat slightly to reduce the liquid, about 5 minutes, until the oil resurfaces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add tomato, thyme, Scotch Bonnet, scallions, and ginger. Stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add water, rinsing seasoning bowl into pot. Bring to boil, then reduce to simmer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover (lid slightly ajar) and simmer for 90 minutes or until ribs are tender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Adjust salt to taste. Add parsley and reduce uncovered to thicken gravy. Remove thyme sprigs and bay leaves (if used) before serving."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve and enjoy!"
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT20M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H20M"
+  },
+  {
+    "id": "carib-fusion-carrot-rice",
+    "country": "Fusion",
+    "name": "Caribbean Carrot Rice",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/carrot-rice/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 cups parboiled brown rice",
+      "3 1/2 cups vegetable stock, gluten-free",
+      "1 1/2 tablespoons olive oil",
+      "1/2 teaspoon salt",
+      "1/4 teaspoon black pepper",
+      "1 whole scotch bonnet pepper",
+      "1 garlic clove, diced",
+      "1 large carrot, grated",
+      "1 tablespoon parsley, chopped",
+      "3 sprigs fresh thyme",
+      "2 seasoning peppers, pimento",
+      "Pinch saffron, optional"
+    ],
+    "description": "A vibrant vegan rice dish infused with grated carrots, Caribbean spices, and herbs, perfect as a side or main.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Rinse rice until water runs clear."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat olive oil over low heat; add scallion, garlic, parsley, thyme, seasoning peppers, black pepper, and scotch bonnet. Sauté gently for about 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add grated carrot and continue cooking 2–3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in rice, salt, and vegetable stock; sprinkle saffron if using."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring to a boil, then reduce heat; cover and simmer 20–25 minutes until liquid is absorbed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off heat, remove scotch bonnet, cover, and let rest 10 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Fluff with fork, garnish with extra parsley, and serve."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT20M",
+    "totalTime": "PT30M"
+  },
+  {
+    "id": "carib-fusion-general-caribbean-caribbean-chinese-noodles-with-chicken-and-vegetables-stir-f",
+    "country": "Fusion, General Caribbean",
+    "name": "Caribbean Chinese Noodles with Chicken and Vegetables Stir Fry",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-chinese-noodles-with-chicken-and-vegetables-stir-fry/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 lbs, skinless/boneless chicken",
+      "1 1/2 tablespoons, Caribbean green seasoning",
+      "1/2 teaspoon, MSG",
+      "1 tablespoon, light soy sauce",
+      "1 1/2 tablespoons, dark soy sauce",
+      "1 teaspoon, toasted sesame oil",
+      "3 cloves, garlic (crushed)",
+      "1 teaspoon, sugar",
+      "1 tablespoon, rice vinegar",
+      "1 tablespoon, grated ginger",
+      "1 1/2 tablespoon, oyster sauce",
+      "1 tablespoon, Hoisin sauce",
+      "3 tablespoons, vegetable oil (divided)",
+      "2 stalks, celery (chopped)",
+      "1/2 large, green bell pepper (chunks)",
+      "1/2 large, red bell pepper (chunks)",
+      "1 large, onion (chunks)",
+      "3/4 lb, cremini mushrooms (chopped)",
+      "1/2 teaspoon, salt (adjust)",
+      "2 lbs, cooked Hakka noodles"
+    ],
+    "description": "This Easy chicken and vegetable stir fry combines tender chicken, Hakka-style noodles, and crisp vegetables with a savory Caribbean Chinese sauce inspired by the flavors I remember growing up in Trinidad and Tobago. It is a full-size batch designed for sharing and can be prepared on a Traeger Flat Rock griddle outdoors or in a wok indoors.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Season the chicken with the Caribbean green seasoning, MSG, and light soy sauce. Allow it to marinate for about 10-15 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "I used my Traeger Flat Rock griddle, but you can use a wok indoors. Add 1/2 the vegetable oil over medium heat, then add the seasoned chicken. Cook for about 4 minutes on each side, using something to cover the chicken as it cooks so it gets fully cooked all the way through."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Create the sauce that will be used to pull everything together. In a bowl, whisk together the dark soy sauce, sesame oil, garlic, sugar, rice vinegar, ginger, oyster sauce, and hoisin sauce. Set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the cooked chicken pieces and set aside. Once cool, chop into smaller pieces for later."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the remaining oil to the surface of the griddle over medium-low heat, then add the celery, bell peppers, onion, and mushrooms. Cover and let them steam-cook for 3 minutes. Stir, add the salt, and continue cooking for another 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Push the vegetables to the cooler side of the griddle, then add the pre-cooked noodles. Use your favorite noodles and cook according to the package instructions. I enjoy using a Hakka-style noodle as they are a bit thicker as sucks up the sauce nicely."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Top with the sauce you created, then return the chopped chicken along with any accumulated juices. Place the lid back on for 2 minutes. Then mix in the vegetables to combine everything."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 3 minutes, turn the heat up to medium-high to develop a slight smokiness in the finished noodle dish. This will also caramelize the sugars in the sauce and give you a lovely toasted sweetness. The scent of which took me back to being 7 years old, when with my dad and brother we eagerly awaited our order from the food truck. The Caribbean heat amplyfied the scent."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In total, cook for 5-7 minutes after adding the noodles. As you turn off the heat, mix in the scallions to gently warm through and give the chicken noodle dinner a lovely finishing note."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you enjoyed this noodle stir-fry dish, may I recommend my Easy Hoisin Noodles , Jerk Chicken Noodles , and my very popular Spicy Beef Noodle Stir Fry ."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT10M",
+    "cookTime": "PT20M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-jamaican-trinidadian-lamb-chops-braised-in-coconut-curry-sauce",
+    "country": "Jamaican, Trinidadian",
+    "name": "Caribbean Coconut Curry Lamb Chops",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/lamb-chops-braised-in-coconut-curry-sauce/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "5 lamb chops, about 3 lbs",
+      "2 tablespoon veg oil",
+      "1/2 teaspoon salt",
+      "8 grape tomatoes",
+      "1/4 teaspoon black pepper",
+      "1 1/2 tablespoon curry powder",
+      "1 1/2 cup coconut milk",
+      "1 tablespoon fresh thyme",
+      "2 stalks scallions",
+      "3 cloves garlic crushed",
+      "1 teaspoon grated ginger",
+      "1 tablespoon shado beni chopped",
+      "1 cup water",
+      "1/4 pepper scotch bonnet pepper, finely diced – no seeds",
+      "1 shallot finely chopped, or onion",
+      "2 tablespoon chopped parsley, flat leaf"
+    ],
+    "description": "One-pot Caribbean-style lamb chops simmered in a creamy coconut curry sauce, infused with island spices and fresh aromatics.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash and pat the Lamb Chop (5) dry with paper towels, then heat the Vegetable Oil (2 tablespoon) in a deep heavy saucepan on medium/high heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Brown the chops on each side for a few minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the browned lamb chops and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn the heat down to low and add a tablespoon more oil if necessary."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Toss in the Shallot (1), Garlic (3 clove), and Fresh Ginger (1 teaspoon) directly into the pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Now add the Curry Powder (1 1/2 tablespoon) and stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Now add back the browned chops and include any juices from chops. Move around the pan to try and pick up some of that curry base in the pan."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add in the Culantro Leaves (1 tablespoon), Scotch Bonnet Pepper (1/4), Scallion (1 bunch), Fresh Thyme (1 tablespoon), Salt (1/2 teaspoon), and Ground Black Pepper (1/4 teaspoon)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add Coconut Milk (1 1/2 cup) and Water (1 cup)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn the heat up so you can bring it to a boil, then reduce the heat to a very low and gentle simmer. Cover the pot and let that cook for about one and a half hours or until the lamb is tender and falling off the bone."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "When the gravy is as thick as you want, toss in the Fresh Parsley (2 tablespoon) and Grape Tomatoes (8), turn off the heat and cover the lid for about 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "The tender pieces lamb and coconut curry are outstanding served with roti, rice, dumplings or even something as simple as a side salad."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H15M"
+  },
+  {
+    "id": "carib-bahamian-jamaican-trinidadian-coconut-curry-pumpkin-soup-2",
+    "country": "Bahamian, Jamaican, Trinidadian",
+    "name": "Caribbean Coconut Curry Pumpkin Soup",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/coconut-curry-pumpkin-soup-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 tablespoon coconut oil",
+      "1 cup chopped onion",
+      "1 clove garlic, minced",
+      "1/2 cup celery, diced",
+      "1/2 teaspoon ginger, grated",
+      "1 tablespoon curry powder",
+      "1/4 teaspoon ground coriander",
+      "4 cups diced pumpkin",
+      "3 cups vegetable broth",
+      "1 cup coconut milk",
+      "1 Scotch Bonnet pepper, finely chopped; optional",
+      "1/2 teaspoon salt",
+      "chives, for garnish"
+    ],
+    "description": "As we move closer to the holiday season I’ve decided to share some tasty Caribbean inspired appetizer recipes with you all. So for the entire month of November you’ll see your taste buds challenged with some twists on traditional Caribbean dishes. But done in such a way that you can easily serve them during your holiday gatherings. We’ll start off with 3 ingredients I simply adore.. pumpkin, coconut and curry. The end result is a wicked coconut curry pumpkin soup which can be served in small bowls or shooter glasses, so you can pass them around to your guests.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat coconut oil over medium heat. Add onion, garlic, celery; cook on low for 3–4 minutes until softened."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in ginger, curry powder, and coriander; toast on low for 4 minutes, stirring constantly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add diced pumpkin, salt, broth, coconut milk, and Scotch Bonnet (if using). Increase heat to bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce to gentle simmer and cook until pumpkin is tender and falling apart (about 25 minutes)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Using an immersion blender, blend gently for about 1 minute until silky smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt as needed. Serve in bowls or shooter glasses, garnished with chives."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT25M",
+    "totalTime": "PT40M"
+  },
+  {
+    "id": "carib-caribbean-caribbean-corn-souse-recipe",
+    "country": "Caribbean",
+    "name": "Caribbean Corn Souse Recipe",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-corn-souse-recipe/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 large sweet corn, cut into 1-inch pieces",
+      "1/2 large cucumber, sliced",
+      "1 teaspoon sea salt",
+      "6 leaves chadon beni, culantro / chopped",
+      "2 tablespoons chives, chopped",
+      "1 Scotch bonnet pepper, whole or to taste",
+      "1 medium onion, sliced",
+      "2 cloves garlic, crushed",
+      "1/2 teaspoon black pepper",
+      "2 tablespoons parsley, chopped",
+      "2 sprigs thyme, leaves only",
+      "3 cups water, adjust as needed"
+    ],
+    "description": "A refreshing vegetarian take on traditional Caribbean souse, this cold corn soup is seasoned with fresh herbs, lime juice, and a touch of Scotch bonnet heat. Perfect for summer gatherings or as a light side dish, this recipe highlights sweet corn in season while keeping all the vibrant flavors of the islands.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Prepare all the ingredients before you begin."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Steam the corn pieces for about 15 minutes until tender but still crisp. This helps preserve their natural sweetness, as explained in the video below."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large mixing bowl, combine the cucumber slices, sea salt, chadon beni , garlic, thyme, black pepper, parsley, chives, Scotch bonnet pepper, and sliced onion."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Squeeze the lime juice directly over the onion to soften its raw bite, then toss everything together."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the hot steamed corn to the bowl and stir well. Let it rest for about 5 minutes so the heat from the corn helps release and bloom the flavors of the herbs, pepper, and garlic."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in the water and stir to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Chill in the refrigerator for at least 15 minutes before serving. Make sure each serving includes a little of everything from the bowl."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Store leftovers in the fridge for up to 5 days, but I’m sure you and your friends will have this gone in a few minutes. Remember to hold back on the amount of spicy pepper (Scotch Bonnet, as in my case) according to your tolerance for heat. Additionally, remember to wash your hands with soap and water after handling such hot peppers."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT15M",
+    "totalTime": "PT30M"
+  },
+  {
+    "id": "carib-jamaican-trinidadian-the-ultimate-curry-beef",
+    "country": "Jamaican, Trinidadian",
+    "name": "Caribbean Curry Beef",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/the-ultimate-curry-beef/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 1/2 pounds stewing beef, cubed",
+      "1 tablespoon Caribbean green seasoning",
+      "2 tablespoons curry powder",
+      "1/2 teaspoon salt",
+      "1/4 teaspoon black pepper",
+      "2 tablespoons vegetable oil",
+      "1 medium onion, sliced",
+      "6 cloves garlic, crushed",
+      "1 Scotch Bonnet pepper, sliced",
+      "3-4 cups water or beef stock",
+      "2 medium potatoes, peeled, cubed"
+    ],
+    "description": "Slow-cooked, richly spiced Caribbean Curry Beef made with stewing beef, green seasoning, curry powder, and Scotch Bonnet, perfect over rice or with roti for a comforting, flavor-packed meal.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the oil in a wide pan on a medium flame, then add the onion and garlic. Reduce the heat to low and cook for 2-3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "With the heat still on low, add the Scotch Bonnet pepper (or any pepper you like, provided you like your curry spicy) , curry leaves (six will be enough if using fresh leaves) , black pepper, and green seasoning , and continue cooking for 4-5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the curry powder, anchar masala, and duck/goat curry powder. Stir well to combine everything."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook another two minutes before adding the diced tomato with one cup of water. Turn the heat up to bring it to a boil, then reduce to a rolling boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In with the salt and cook until the liquid is reduced to the point where you can once again see the oil you started with. This step will intensify the overall curry flavor of the completed curry beef."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Please combine bone-in and boneless beef pieces to produce a more moist and deeper-flavored curry beef. Wash the beef pieces (about 1.5 inches) with the juice of a lime or lemon and cool water. Drain well. Then, add it all to the pot and stir well to coat it with the curry base we created."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn the heat to medium-high to almost sear the pieces of beef and seal in the juices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover entirely with water, tuck in the bay leaves, and bring to a boil. Reduce to a simmer and cook for 90 to 120 minutes or until fork tender. Keep an eye on the liquid level as you may need to add more water during the braising. TIP! Use a combination of water and coconut milk for a lovely, sweet, rich undertone to the curry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In this instance, the beef simmered for 2.5 hours. Taste and adjust the salt, and as you turn off the stove, add the Chadon Beni (culantro) if all you can access is cilantro (coriander) , rock that."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT20M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H20M"
+  },
+  {
+    "id": "carib-general-caribbean-caribbean-curry-chicken-bunjay-style-easy-dry-curry-recipe",
+    "country": "General Caribbean",
+    "name": "Caribbean Curry Chicken: Bunjay Style",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-curry-chicken-bunjay-style-easy-dry-curry-recipe/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs chicken legs, bone-in, skin-on, cut in half",
+      "1 lime or lemon, juiced",
+      "3/4 tablespoon salt",
+      "1/2 teaspoon black pepper",
+      "3 tablespoons curry powder, divided",
+      "1 1/2 tablespoon Caribbean green seasoning",
+      "3 tablespoons vegetable oil",
+      "1 medium onion, diced",
+      "6 cloves garlic, smashed",
+      "1 scotch bonnet pepper, optional",
+      "1 teaspoon turmeric",
+      "3/4 tablespoon ground roasted geera",
+      "3/4 tablespoon anchar masala, or garam masala",
+      "2 tablespoons water",
+      "1 small tomato, grated",
+      "2 tablespoons cilantro, chopped"
+    ],
+    "description": "A traditional Caribbean Curry Chicken using the bunjay method, also known as bunjal in Guyana, a dry curry technique that builds deep flavor without added liquid.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "IMPORTANT! As part of the heritage of Caribbean cooking, we wash meats with the juice of a lime or lemon and cool water. If you're not comfortable doing so due to meat handling regulations, may I suggest you skip that part."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "For best results, please use bone-in chicken like the thigh or drumsticks. Leave the skin on as well, as I explain why in the video below."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season with the salt, black pepper, green seasoning , and 1 tablespoon of curry powder. Mix well and allow to marinate for at least 2 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the oil in a wide pan on a medium flame and add the onion, garlic, and scotch bonnet pepper. Cook for 2–3 minutes, then add the turmeric (we say sorfran), geera (cumin), anchar masala (I’m not a fan of garam masala, but you may use that instead), and the remaining curry powder. Your senses will be captivated with the sizzle of the spices toasting in the hot oil, and the fragrance will immediately take you back to the islands, with fond memories of those Sunday mornings when the village would have that comforting scent of curry in the air."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook for 3 minutes, then add the tomato and 2 tablespoons of water, and burn off any liquid. The addition of the grated tomato will add a balance of acid notes, which complement the spices we used.e"
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once you see the oil at the bottom of the pot we started with, add the seasoned chicken and immediately turn up the heat a bit to sear the chicken pieces. This is the bunjay of the curry and the chicken, or bunjal as it’s commonly said in Guyana."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 2 minutes, turn the heat back down to medium, put the lid on the pan, and cook for another 3–4 minutes. This will allow the chicken to release its natural juices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Now remove the lid, stir well, and continue cooking for another 15–20 minutes or until the chicken is fully cooked. Turn the heat down if the liquid is drying up too quickly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the salt to your liking, and make sure you can see the oils from the rendered skin and what we started with. This bunjay curry chicken is meant to be dry, meaning no sauce or gravy."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once you're happy that we’ve achieved true bunjay or bunjal, finish with the cilantro and turn off the heat. Were I in the Caribbean, I’d be using chadon beni . Serve with rice and dhal ."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT15M",
+    "cookTime": "PT35M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-caribbean-curry-cow-heel-cow-foot-2",
+    "country": "Caribbean",
+    "name": "Caribbean Curry Cow Heel (cow foot)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-curry-cow-heel-cow-foot-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 large onion, diced",
+      "5 cloves garlic, smashed",
+      "1 teaspoon cumin, Geera",
+      "2 tablespoon Caribbean Green Seasoning",
+      "1 tablespoon ground Masala",
+      "2 1/2 tablespoon Curry powder",
+      "2 pimento peppers, seasoning peppers",
+      "1 1/2 cup water",
+      "1 tablespoon black pepper",
+      "6 pimento berries",
+      "3/4 teaspoon ground cinnamon, or 1 stick",
+      "1 Star Anise",
+      "1/2 teaspoon Sichuan peppercorns",
+      "3 Cardamom pods",
+      "2 bay leaves",
+      "2 Scotch Bonnet Peppers, see note",
+      "2 thick slices of ginger",
+      "4 1/2 lbs cow heel",
+      "3/4 tablespoon salt, adjust",
+      "5-10 cups water",
+      "3 tablespoon cilantro, chopped",
+      "2 1/2 tablespoon olive oil"
+    ],
+    "description": "In some parts of the Caribbean “Chow Heel” is also known as “Cow Foot”, and while those outside our culture may find it a bit offensive to eat such a part of the animal, it’s a comforting, tasty and nutritious dish. It’s deep rooted in our history from slavery to indentureship and beyond.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil (use any oil you prefer) on a medium flame in a deep solid pot, followed by the garlic, onion and cumin seeds. Turn the heat down to low, then continue by adding the Caribbean Green seasoning, ground Masala and curry powder. Cook for 4 minutes on low."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the pimento peppers (if you can source it), then turn the heat back up to med/high and add the 1 1/2 cups water. Bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once boiling add the allspice berries, black pepper, cinnamon, Sichuan peppercorns, cardamom, star anise, bay leaves and Scotch bonnet pepper. Turn the heat down so you have a rolling boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "When the liquid has reduced by about 2/3 or so, add the ginger followed by the cow heel to the pot and give it a good mix."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the salt and 6 cups of water. Bring it up to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once it comes up to a boil, reduce it to a simmer, lid on slightly ajar and cook for 2 hrs and 50 minutes to 3 hrs and 15 minutes or until it’s tender. You will be required to stir every 20 mins and it will need more water as it reduces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the hot peppers if you wish, along with the star anise, slices of ginger, bay leaves and if you can get the pimento berries as well. Taste and adjust the salt. If the cow heel is tender and you’re happy with the consistency of the gravy, turn off the stove or add more water and continue cooking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix in the chopped cilantro and get ready to enjoy a delicious curry dish. Yes you can use a pressure cooker and cut the cook time by about 1/2 at least. However from my experience you won’t get the same deep rich flavor as you would with a low and slow braise."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-trinidadian-ginger-stewed-chicken-with-string-beans",
+    "country": "Trinidadian",
+    "name": "Caribbean Ginger Stewed Chicken with String Beans",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/ginger-stewed-chicken-with-string-beans/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs chicken, cut into 1 1/2-inch pieces",
+      "1 lb string beans, cut into 1–1 1/2-inch pieces",
+      "1 tablespoon Caribbean Green Seasoning",
+      "1/4 teaspoon black pepper",
+      "3/4 teaspoon salt, adjust to taste",
+      "1/2 onion, medium; diced",
+      "1/2 Scotch Bonnet pepper, whole or sliced",
+      "1 tablespoon tomato ketchup",
+      "1 1/2 inch ginger, julienned",
+      "1 teaspoon Worcestershire sauce",
+      "1 teaspoon vegetable oil",
+      "1 tablespoon brown sugar",
+      "1 cup water",
+      "6 grape tomatoes, whole or halved"
+    ],
+    "description": "A rich and savory one-pot chicken dish infused with ginger, caramelized sugar, and tender string beans.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Clean the chicken, remove any fat and skin, then cut into 1-inch pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season chicken with salt, pepper, green seasoning, ketchup, onion, Worcestershire, and ginger. Set aside to marinate."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil in a heavy pot over high heat. Add brown sugar and stir until frothy and amber."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Quickly add seasoned chicken. Stir well to coat in caramelized sugar."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce heat to medium, cover, and cook for 5–8 minutes to release natural juices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove lid and increase heat. Cook until all liquid evaporates and oil reappears."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add string beans and stir to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Swish 1 cup water in marinade bowl and pour into pot. Bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce to a rolling boil and cook uncovered for 15 minutes or until chicken and beans are tender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add grape tomatoes in the last 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot. The perfect combo for this, besides hot Sada Roti, is hot rice. Steamed, boiled or done in your favorite way. Enjoy!"
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT20M",
+    "cookTime": "PT40M",
+    "totalTime": "PT1H"
+  },
+  {
+    "id": "carib-trinidadian-caribbean-green-seasoning-2",
+    "country": "Trinidadian",
+    "name": "Caribbean Green Seasoning",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-green-seasoning-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "750 ml Olive Oil, about 1/2 lb",
+      "15-18 stalks scallions",
+      ".226 grams garlic",
+      "3 cups chopped parsley",
+      "6 peppers Pimento",
+      "2 peppers Green Scotch Bonnet Peppers",
+      "2 cups chopped Cilantro",
+      "1 bundle Thyme",
+      "1 cup chopped celery leaves",
+      "5 peppers Italian Roaster Peppers"
+    ],
+    "description": "A large-batch version of Caribbean green seasoning, ideal for meal prep and frequent cooking. This traditional blend of fresh herbs, peppers, and aromatics is a cornerstone of Caribbean cuisine, used to marinate meats, season stews, and elevate everyday dishes with bold, authentic flavor.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash all herbs and peppers thoroughly and allow them to air-dry. Roughly chop the herbs, garlic, and peppers to prep for blending. Remove woody stems from thyme; use only tender stems and leaves."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a food processor or blender, add half of the chopped ingredients and half of the olive oil. Pulse until the mixture begins to blend."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a food processor or blender, add half of the chopped ingredients and half of the olive oil. Pulse until the mixture begins to blend."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Gradually add the remaining ingredients and olive oil, blending until the desired consistency is achieved."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Transfer the green seasoning to clean glass jars, leaving about 1 cm (½ inch) of space at the top."
+      }
+    ],
+    "yields": 10,
+    "prepTime": "PT10M",
+    "cookTime": null,
+    "totalTime": "PT10M"
+  },
+  {
+    "id": "carib-fusion-caribbean-guava-bbq-sauce",
+    "country": "Fusion",
+    "name": "Caribbean Guava BBQ Sauce",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-guava-bbq-sauce/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 tablespoon olive oil",
+      "2 stalks scallions, finely chopped",
+      "6 sprigs thyme, destemmed",
+      "1/2 Vadilia onion, large, diced fine",
+      "2 cloves garlic, smashed",
+      "1/2 cup apple cider vinegar",
+      "2 tablespoon molasses",
+      "1 1/4 cup chili sauce",
+      "1 tablespoon Worcestershire sauce",
+      "1/4 teaspoon black pepper",
+      "3/4 teaspoon salt",
+      "2 tablespoon tomato paste",
+      "1 teaspoon hot smoked paprika",
+      "1/2 cup apple juice"
+    ],
+    "description": "A tropical-inspired barbecue sauce made with ripe guavas, spices, and herbs, ideal for enhancing grilled meats and vegetables.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash and trim the tops off the guavas, then cut into segments."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large saucepan, combine the guavas, 3 cups of apple juice, brown sugar, cinnamon stick, cloves, and lime juice. Bring to a boil over medium-high heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once boiling, reduce heat to a simmer and cook for 25-30 minutes until guavas are soft."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a separate medium saucepan, heat olive oil over low heat. Add scallions, thyme leaves, Vidalia onion, and garlic. Sauté for 4-5 minutes until fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add hot smoked paprika to the sautéed mixture and stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in tomato paste and cook for an additional 1-2 minutes, ensuring it doesn’t burn."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Deglaze the pan with 1/2 cup apple juice and apple cider vinegar. Increase heat to bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add black pepper, salt, molasses, chili sauce, and Worcestershire sauce. Stir to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce heat to a simmer and cook for 10 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain the guava mixture through a fine mesh strainer into the saucepan with the sauce base, pressing to extract as much liquid as possible. Discard solids."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring the combined sauce to a boil, then reduce to a simmer and cook for 35-40 minutes until thickened."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use an immersion blender to puree the sauce until smooth. If using a traditional blender, allow the sauce to cool slightly before blending."
+      }
+    ],
+    "yields": 2,
+    "prepTime": "PT15M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H15M"
+  },
+  {
+    "id": "carib-caribbean-the-ultimate-caribbean-macaroni-pie-baked-macaroni-cheese-2",
+    "country": "Caribbean",
+    "name": "Caribbean Macaroni Pie (Baked Macaroni and Cheese)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/the-ultimate-caribbean-macaroni-pie-baked-macaroni-cheese-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb bucatini pasta",
+      "1 stick butter, divided",
+      "5-8 strips bacon, fried crispy, chopped",
+      "2 pimento peppers, finely diced",
+      "1/2 bird’s eye pepper, finely diced",
+      "1/4 teaspoon black pepper",
+      "1/4 teaspoon salt",
+      "1 1/2 cups aged cheddar cheese, grated",
+      "2 cups cheddar cheese, grated",
+      "1 cup breadcrumbs",
+      "2 tablespoons parsley, finely chopped",
+      "2-3 cloves garlic, crushed, grated, or finely diced",
+      "1 cup bell pepper, diced",
+      "2 stalks scallions, chopped",
+      "3 tablespoons flour",
+      "2 1/2 cups milk",
+      "1/4 teaspoon nutmeg, freshly grated",
+      "1-2 tablespoons butter, for greasing the baking dish"
+    ],
+    "description": "A rich and savory baked pasta dish layered with creamy cheese sauce, crispy bacon, and a golden breadcrumb topping, is a true Caribbean comfort food.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat the oven to 375°F (190°C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook the pasta in salted boiling water according to package instructions until al dente. Drain and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a saucepan over medium heat, melt 2 tablespoons of butter. Add the chopped bacon and cook for 20–30 seconds. Add the breadcrumbs and toast, stirring well. Reduce heat to low, add the chopped parsley, mix, and remove from heat. Set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a deep saucepan, melt the remaining butter over low heat. Add the pimento peppers, bird’s eye pepper, garlic, and bell peppers. Cook for 3–4 minutes, stirring continuously."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the black pepper and salt to the saucepan. Stir in the flour and cook for another 3–4 minutes to eliminate the raw flour taste."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Gradually add the milk, whisking constantly to prevent lumps. If needed, return the pan to the burner for 1–2 minutes to thicken the sauce."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the saucepan from heat and stir in 2/3 of the grated cheeses until melted and smooth. Add the chopped scallions and mix well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the cooked pasta to the cheese sauce, folding gently to combine. Grate the nutmeg into the mixture and stir."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Grease a 9×13-inch baking dish with butter. Pour the macaroni and cheese mixture into the dish, spreading evenly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Top the macaroni with half of the reserved cheese, followed by half of the breadcrumb mixture. Repeat with the remaining cheese and breadcrumbs."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bake uncovered on the middle rack for 40 minutes, until the top is golden brown."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from the oven and let it cool for about 10 minutes before serving."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT20M",
+    "cookTime": "PT40M",
+    "totalTime": "PT1H"
+  },
+  {
+    "id": "carib-fusion-trinidadian-caribbean-ratatouille",
+    "country": "Fusion, Trinidadian",
+    "name": "Caribbean Ratatouille (Ital Vegetable Stew)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-ratatouille/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 tablespoon olive oil",
+      "1 medium eggplant, cubed",
+      "1/2 green bell pepper, diced",
+      "1/2 red bell pepper, diced",
+      "1 medium red onion, diced",
+      "2 stalks celery, chopped",
+      "4 cloves garlic, smashed",
+      "5-8 okra, sliced into 1/2‑inch rounds",
+      "2-3 cups Swiss chard, chopped",
+      "2 cups Jamaican callaloo, chopped",
+      "1/2 Scotch Bonnet pepper, green, sliced, optional",
+      "4 medium tomatoes, diced",
+      "1 tablespoon tomato paste",
+      "1 1/4 teaspoon salt, divided",
+      "1/2 teaspoon black pepper",
+      "5 sprigs thyme, leaves only",
+      "2 sprigs basil, leaves only",
+      "1 medium chayote, christophene, peeled and cubed",
+      "3/4 cup coconut milk",
+      "2 tablespoon parsley, chopped"
+    ],
+    "description": "A hearty plant-based stew featuring eggplant, chayote, bell peppers, okra, leafy greens, and coconut milk, this one-pot Caribbean ratatouille is comfort food with island flavor.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Toss eggplant cubes with 1 tablespoon olive oil and 1/2 teaspoon salt. Let sit 30 minutes to draw out moisture. Rinse and pat dry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Deseed and cube the chayote."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat oven to 400 °F."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In batches, fry eggplant with 1 tablespoon olive oil in oven-proof pan for 5–7 minutes until golden. Set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add remaining 1 tablespoon oil. Sauté chayote and bell peppers on medium-low for 2 minutes. Add celery, onions, and 1/2 teaspoon salt; cook 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in garlic, tomato paste, black pepper, tomatoes, thyme, basil, okra, Swiss chard, callaloo, and Scotch Bonnet. Mix well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Return eggplant to pan. Drizzle coconut milk on top. Stir to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bake in oven for 20–25 minutes until vegetables are tender. Remove, taste for salt, and top with fresh parsley and additional basil leaves before serving."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT30M",
+    "cookTime": "PT45M",
+    "totalTime": "PT1H15M"
+  },
+  {
+    "id": "carib-caribbean-caribbean-soup-recipe-authentic-hearty-traditional-soup",
+    "country": "Caribbean",
+    "name": "Caribbean Saturday Soup (Traditional Hearty Island Soup)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-soup-recipe-authentic-hearty-traditional-soup/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs salted pigtail, chopped into 2-inch pieces",
+      "2 tablespoons olive oil",
+      "1 large onion, sliced",
+      "6 cloves garlic, sliced",
+      "3 pimento peppers aka seasoning peppers, sliced",
+      "2 scotch bonnet peppers, optional",
+      "2 lbs green cooking bananas, peeled, chopped",
+      "1 lb sweet potatoes, cut into large chunks",
+      "2 lbs eddoes, halved",
+      "1 lb Yukon gold potatoes, cut into chunks",
+      "1 1/2 tablespoons Caribbean green seasoning",
+      "3/4 tablespoon black pepper",
+      "2 cups coconut milk",
+      "5 sprigs thyme",
+      "4 cups chicken bone broth",
+      "10 cups water, adjust as needed",
+      "1 lb pumpkin, cubed",
+      "1 lb spinach, washed, chopped"
+    ],
+    "description": "A hearty and authentic Caribbean soup made with salted pigtail, ground provisions, pumpkin, and coconut milk. This traditional island soup is slow-simmered for deep flavor, naturally thick, and perfect for family meals, cold weather comfort, and make-ahead freezing.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Place the salted pigtail in a pot and cover with water. Bring to a boil and cook for 50 to 70 minutes to remove excess salt and help tenderize. Drain and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "While the pigtail cooks, peel and chop all ground provisions and keep them soaking in cool water to prevent discoloration."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil in a deep stock pot over medium-low heat. Add the onion, garlic, pimento peppers, and one scotch bonnet pepper (chopped). Cook for about 4 minutes until fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the pre-cooked pigtail pieces, stir well, and cook for another 2 to 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the cooking bananas, eddoes, sweet potatoes, potatoes, and any other provisions. Do not add salt at this stage. Stir in the Caribbean green seasoning, black pepper, and thyme."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the remaining scotch bonnet pepper whole. Pour in the coconut milk, chicken bone broth, and water. Bring to a boil, then reduce to a steady simmer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Peel, wash. and cube the pumpkin or squash."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 15 minutes, add the pumpkin and stir to incorporate."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "About 70 minutes into cooking, add the spinach. Taste and adjust salt if needed. Add more water if the soup is too thick and continue cooking for another 30 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Traditionally dasheen or taro leaves would be used. The spinach will wilt quicky, if you're concerend about the pile."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "MAke sure you stir the pot every 5-8 minutes the last 30 minutes of cooking and adjust the liquid level. This is when it would start sticking to the bottom of the pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If adding dumplings, add them during the final 15 minutes of cooking. Remove the whole scotch bonnet pepper before serving."
+      }
+    ],
+    "yields": 10,
+    "prepTime": "PT45M",
+    "cookTime": "PT2H30M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-bitter-melon-with-shrimp-stir-fry",
+    "country": "Fusion",
+    "name": "Caribbean Shrimp and Carilie (Bitter Melon) Stir-Fry",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/bitter-melon-with-shrimp-stir-fry/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 bitter melons, Carilie",
+      "1/3 pound shrimp, peeled, deveined",
+      "1 teaspoon curry powder",
+      "1 teaspoon Caribbean Green Seasoning",
+      "1/2 teaspoon black pepper",
+      "2 tablespoons vegetable oil, divided",
+      "1-5 Bird’s Eye peppers, sliced",
+      "3 cloves garlic, smashed",
+      "1 thumb-sized piece ginger, sliced thin",
+      "2-3 tablespoons water",
+      "1 teaspoon brown sugar",
+      "1/2 teaspoon salt, adjust to taste"
+    ],
+    "description": "A Caribbean-style stir-fry featuring ridged bitter melon and shrimp, seasoned with curry and green seasoning. It’s flavorful, nutritious, and quick to make.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Pat the shrimp dry, then season with Caribbean green seasoning, curry powder, and black pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix and set aside to marinate."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Make about 4 incisions on each of the Bird’s eye peppers without cutting through."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Slice the bitter melon in half and using a spoon scrape the insides out."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat half the vegetable oil in a wok over medium heat. Stir-fry the shrimp for about 1 minute until pink, then remove and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add remaining oil on low heat. Sauté bird’s eye peppers for 2 minutes, then add garlic and ginger; cook for 30 seconds."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Raise heat to medium-low. Add the sliced bitter melon, salt, and water. Stir well to coat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover and cook for 10 minutes or until the melon is tender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Return shrimp to the wok and add brown sugar. Cook for 1 more minute."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust seasoning before serving."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT15M",
+    "totalTime": "PT25M"
+  },
+  {
+    "id": "carib-caribbean-caribbean-smoked-turkey-soup-2",
+    "country": "Caribbean",
+    "name": "Caribbean Smoked Turkey Soup",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-smoked-turkey-soup-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 smoked turkey leg, or necks/wings",
+      "10 cups water",
+      "1 cup black-eye peas, rinsed",
+      "1 sweet potato, chopped",
+      "4 cloves garlic, chopped",
+      "4 sprigs fresh thyme",
+      "1 tbsp fresh oregano",
+      "1 whole scotch bonnet pepper",
+      "1 tsp salt",
+      "1/4 tsp black pepper",
+      "1 pack Grace Flavored Soup mix, or 1 tbsp chicken bouillon",
+      "4 okra, sliced",
+      "1 ear sweet corn, chopped",
+      "1 1/2 cups all-purpose flour",
+      "pinch of sugar",
+      "water, enough to form dough"
+    ],
+    "description": "A rich, smoky Caribbean soup full of root vegetables, beans, and optional dumplings, perfect for feeding a crowd.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat vegetable oil in a large soup pot over medium-low heat. Add onion, garlic, scallions, thyme, and oregano. Sauté for 3–5 minutes until fragrant and softened."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in black eye peas and carrot. Add smoked turkey leg and pour in 10–14 cups water. Add scotch bonnet pepper, salt, and black pepper. Bring to a boil, then reduce to a simmer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Simmer uncovered for 45–60 minutes, or until peas are tender. Meanwhile, peel and cube the dasheen, eddoes, potatoes, and sweet potato. Remove stems from okra. Cut corn into pieces and rinse well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once peas are tender, remove smoked turkey leg and set aside to cool. Add prepared vegetables, corn, tomato paste, and Grace cock soup mix to the pot. Add more water if needed to cover the vegetables. Bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strip meat from the turkey leg and return both meat and bone to the pot. Simmer for 25–35 minutes, until vegetables are soft and soup has thickened. Avoid over-stirring to prevent the soup from becoming too starchy."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt if needed. If using dumplings, mix flour, sugar, and water to form dough. Pinch into small pieces and add in the final 7 minutes of cooking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove and discard the scotch bonnet pepper before serving."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT25M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H25M"
+  },
+  {
+    "id": "carib-caribbean-the-ultimate-steak-marinade-2",
+    "country": "Caribbean",
+    "name": "Caribbean Steak Marinade",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/the-ultimate-steak-marinade-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1/2 cup finely chopped Parsley",
+      "1/4 cup finely chopped thyme",
+      "1 cup chopped chives",
+      "1/2 cup diced tomato, 2 medium tomatoes",
+      "1 teaspoon pepper flakes",
+      "1 tablespoon golden brown sugar",
+      "1 1/2 tablespoon light soy sauce",
+      "1 1/2 tablespoon red wine vinegar",
+      "1 1/2 cup orange juice",
+      "1 1/2 cup extra virgin olive oil",
+      "3/4 teaspoon sa salt",
+      "1 teaspoon ground black pepper",
+      "2 lemons, juice",
+      "1 medium onion, diced",
+      "6 cloves garlic, crushed"
+    ],
+    "description": "This vibrant Caribbean-style steak marinade layers fresh herbs, savory seasonings, and subtle heat for a bold flavor profile that works beautifully with pork, poultry, and fish.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash, drain, chop and dice everything as listed in the ingredient list."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Assemble in a large mixing bowl."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Whisk to combine it all. Should you want to replace the brown sugar with honey, that would be delightful. There are times I add both."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Spread 3 tablespoons of the marinade in the dish you’ll be marinating my steaks in, then on goes the steaks, followed by about 3/4 cup of the marinade over the steaks."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "No I don’t season the steaks with any salt. After you grill them off, you may decide to sprinkle on your fav finishing salt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover with plastic wrap and marinate in the fridge for at least 2 hours. Be sure to take it out of the fridge about 1 hr before you toss them on the grill. Yes, you need a HOT grill and for the first couple minutes you may drizzle on the marinade from the dish onto the steaks (I know people are weary about marinade that’s been on raw meats – this way it cooks off on the grill)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "The remaining marinade is stored in plastic containers in the fridge for up to 2 weeks. After the steaks come off the grill and sliced, the marinade then becomes a dressing to drizzle over the cooked steaks."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "This marinade works great with poultry, fish and pork as well. May I recommend using this marinade on cheaper cuts of beef to add additional flavor and to help tenderize the meat a bit. I used sirloin tips steaks (as seen in the images)."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT15M",
+    "cookTime": null,
+    "totalTime": "PT15M"
+  },
+  {
+    "id": "carib-general-caribbean-caribbean-stewed-chicken-with-butter-beans",
+    "country": "General Caribbean",
+    "name": "Caribbean Stewed Chicken With Butter Beans",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-stewed-chicken-with-butter-beans/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 lbs chicken, legs/thighs",
+      "juice of 1 lemon",
+      "3/4 tablespoon salt, adjust to taste",
+      "1 medium onion, diced",
+      "2 pimento peppers, sliced",
+      "5 cloves garlic, crushed",
+      "1/2 Scotch bonnet pepper, sliced",
+      "6-8 cherry tomatoes, chopped",
+      "6-8 leaves chadon beni",
+      "3 tablespoons parsley, chopped, divided",
+      "1 tablespoon ginger, grated",
+      "2 scallions, chopped, divided",
+      "6 sprigs thyme, divided",
+      "1 tablespoon Worcestershire sauce",
+      "1 tablespoon vegetable oil",
+      "1 1/2 tablespoons golden brown sugar",
+      "2 cups water",
+      "2 tablespoons coconut cream",
+      "1 can Butter beans, 540 ml / 19 oz (lima beans)"
+    ],
+    "description": "Caribbean Stewed Chicken with Butter Beans is a rich, flavourful Caribbean brown-stew made with deeply seasoned chicken, Scotch bonnet, herbs, coconut cream, and tender butter beans. This full-size batch stretches the meal and feeds a family or group.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Cut the chicken into serving-sized pieces, and in keeping with deep-rooted Caribbean traditions, wash it after removing the skin and most of the fat with lemon juice and cool water. Lime juice or 1/2 cup of white vinegar will also work. Caution : If you read the reports about washing chicken and you are not comfortable doing so, do not."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Drain the chicken and season with the salt, onion, pimento peppers, garlic, Scotch bonnet pepper, cherry tomatoes, chadon beni, 1/2 of the parsley, ginger, 1/2 of the scallions, 1/2 of the thyme leaves, and Worcestershire sauce."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix well to combine, and marinate for at least 2 hours. Overnight will give you better results. As a little fella growing up in Trinidad and Tobago, the scent of the seasoned chicken was definetly one of my faves."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In this step, I'll ask you to follow along in the video below, as it's the critical step in the recipe. Heat a heavy pot over medium-high heat, add the oil followed by the brown sugar, and stir. It will go frothy, then turn a deep amber in colour. This is when you'd add the seasoned chicken to the pot and stir to coat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Should the sugar go black, shut off the stove, allow the pot to cool completely, wash, dry, and start over. A common question I get when people see me start with sugar is whether the finished dish will be sweet. I can guarantee you that once you follow the steps I outlined, it won't."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Should the sugar go black, it will ruin the stewed chicken by making it bitter. Be warned also, that your kitchen may go a bit smoky, so you'll want to vent it properly, or it will trigger your smoke detector."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover the pot and reduce the heat to medium-low and cook for 6 minutes. The chicken will sprout its own natural juices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In the interim, pour the water into the same bowl you marinated the chicken in to pick up remnants, and set aside. I’d also recommend rinsing the butter beans to remove the brine it was packaged in as well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Uncover the pot, raise the heat to medium-high, and burn off the liquid. The goal is to get that deep, delicious-looking colour a good stew chicken is supposed to have. This also heightens the overall flavour of the dish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 3-4 minutes, you should start seeing the oil that we started with, and the chicken pieces will have a lovely amber-golden colour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the water to the pot and bring to a boil. As it starts simmering, add the coconut cream, along with the remaining thyme, sprigs and everything."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook for another 4-6 minutes uncovered, rolling. Then add the butter beans and cook until they’ve absorbed the rich, flavourful gravy base. In about 5-6 minutes, the chicken should be fully cooked, the gravy should be a bit thicker, and the beans packed with flavour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Top with the remaining scallion and parsley. Taste and adjust the salt to your liking, and adjust the sauce or gravy’s consistency to your liking, keeping in mind that it will thicken further once cool and with the residual heat of the pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Should you like this dish, may I recommend making the Stewed Chicken With Potatoes I shared a while back, and it would be nice if you could share your thoughts in the comment section below if you made this Stewed Chicken With Butter Beans."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT15M",
+    "cookTime": "PT25M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-mushroom-and-olive-stewed-chicken",
+    "country": "Fusion",
+    "name": "Caribbean Stewed Chicken with Mushrooms and Green Olives",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/mushroom-and-olive-stewed-chicken/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs chicken, legs and thighs",
+      "1 tablespoon Caribbean Green Seasoning",
+      "2/3 teaspoon salt",
+      "1/2 small onion, diced",
+      "1/2 medium tomato, diced",
+      "1 teaspoon tomato ketchup",
+      "1 teaspoon Worcestershire sauce",
+      "1/4 scotch bonnet pepper, optional",
+      "1/4 teaspoon black pepper",
+      "1 teaspoon veg oil",
+      "1 tablespoon brown sugar",
+      "1/2 cup water",
+      "3/4 cup coconut milk",
+      "1 cup green olives",
+      "1/2 lb mushrooms",
+      "2 tablespoons Parsley"
+    ],
+    "description": "A hearty Caribbean stew where tender chicken is simmered with earthy mushrooms and briny green olives in a rich, coconut-infused gravy.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Clean and trim the fat and skin from the chicken, and prepare to season."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl, combine the chicken with Caribbean green seasoning, salt, diced onion, diced tomato, tomato ketchup, Worcestershire sauce, diced scotch bonnet pepper (if using), and black pepper. Mix well to coat the chicken evenly. Cover and refrigerate for at least 2 hours, preferably overnight."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the vegetable oil in a heavy-bottomed pot over medium-high heat. Add the brown sugar and stir continuously until it becomes frothy and turns a deep amber color."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Carefully add the marinated chicken to the pot, including any marinade juices. Stir well to coat the chicken pieces with the caramelized sugar. Reduce the heat to medium, cover the pot, and cook for about 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Uncover the pot and increase the heat to high. Cook until the liquid reduces and the chicken is evenly browned, stirring occasionally to prevent sticking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the sliced mushrooms to the pot and stir to combine. Cook for an additional 5 minutes on high heat, allowing the mushrooms to release their moisture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the water into the bowl used for marinating the chicken to collect any remaining marinade, then add it to the pot along with the coconut milk. Stir well, bring to a boil, then reduce the heat to low, cover, and simmer for 8–10 minutes, or until the chicken is fully cooked."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the lid and increase the heat to help thicken the gravy to your desired consistency. Taste and adjust salt if necessary."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the green olives and chopped parsley to the pot. Stir well and cook for an additional 3–5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot over steamed rice or your preferred side dish."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT20M",
+    "cookTime": "PT45M",
+    "totalTime": "PT1H5M"
+  },
+  {
+    "id": "carib-fusion-delightful-tomato-rice-2",
+    "country": "Fusion",
+    "name": "Caribbean Tomato Herb Rice",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/delightful-tomato-rice-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 cups Basmati rice",
+      "5 large tomatoes",
+      "1 small bunch parsley",
+      "1 small onion, diced",
+      "2 large cloves garlic, diced",
+      "1 Bird’s Eye pepper, chopped",
+      "1 tablespoon olive oil",
+      "4-6 sprigs thyme",
+      "1/2 teaspoon salt",
+      "1 tablespoon brown sugar",
+      "1 1/2 – 2 cups vegetable stock, adjust",
+      "1/4 teaspoon black pepper",
+      "1 tablespoon tomato paste, or tomato puree",
+      "1-2 tablespoon cilantro, chopped, optional"
+    ],
+    "description": "A vegan, gluten-free Caribbean-style rice dish simmered with fresh tomato, herbs, and gentle pepper heat.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Blanch tomatoes 2–4 minutes in boiling water, cool, then peel and wipe core."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Roughly chop tomatoes and parsley; pulse until chunky."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a deep pot, sauté onion, garlic, thyme, pepper, and black pepper in olive oil over low heat for 3–4 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in tomato paste and cook 2 minutes, then add tomato-parsley mix."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add salt and simmer 5 minutes until mixture thickens."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Rinse rice under cool water; stir into tomato base to coat grains."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in stock, bring to a boil, reduce heat, cover, and simmer 15 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off the heat, keep covered for 5 minutes; then stir in the cilantro and fluff."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve and enjoy."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT20M",
+    "totalTime": "PT30M"
+  },
+  {
+    "id": "carib-fusion-shepherds-pie-2",
+    "country": "Fusion",
+    "name": "Caribbean-Inspired Shepherd’s Pie",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/shepherds-pie-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb ground beef, medium",
+      "1/2 tablespoon black pepper",
+      "3/4 teaspoon salt",
+      "1 cup leftover steak, optional, diced",
+      "1 large onion, diced",
+      "1 tablespoon all-purpose flour",
+      "1 1/2 tablespoons Worcestershire sauce",
+      "4 sprigs thyme, leaves only",
+      "1 1/2 tablespoons tomato paste",
+      "1-2 cups beef stock",
+      "1 1/2 cups mixed vegetables, frozen",
+      "1 cup gravy, optional",
+      "1/2 cup cooked mushrooms, optional",
+      "5 cups mashed potatoes, seasoned with milk, butter, black pepper, and roasted garlic",
+      "1 1/2 tablespoons parmesan cheese",
+      "1 tablespoon parsley, finely chopped"
+    ],
+    "description": "A hearty Caribbean-inspired take on the classic shepherd’s pie, using ground beef, leftover steak, and a medley of vegetables, all topped with creamy mashed potatoes.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat the oven to 400°F (200°C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a wide nonstick sauté pan over medium heat, add the ground beef. Cook for 7–10 minutes, breaking it apart with a spatula until browned."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add diced leftover steak and cooked mushrooms (if using) to the pan. Stir to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add diced onion, thyme leaves, black pepper, and salt. Reduce heat to medium-low and cook for 3 minutes until the onion softens."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Sprinkle in the flour and stir well to cook out the rawness, about 2–3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in tomato paste and cook for an additional 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in 1 1/2 cups beef stock and Worcestershire sauce. Stir to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add mixed vegetables and bring the mixture to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If using, add leftover gravy to the pan. Reduce heat to a simmer and cook for about 10 minutes, allowing the mixture to thicken. Add more beef stock if needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust seasoning as necessary."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the meat mixture into an 8×10-inch ovenproof baking dish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Spoon the mashed potatoes over the meat mixture. Combine parmesan cheese and chopped parsley, then sprinkle over the mashed potatoes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Create ridges on the mashed potato surface with a fork for a golden crust."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the baking dish on a cookie sheet or tray to catch any overflow. Bake uncovered in the preheated oven for 30 minutes, or until the top is golden brown."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from oven and let rest for 15–20 minutes before serving."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT20M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H20M"
+  },
+  {
+    "id": "carib-jamaican-trinidadian-cassava-pone-2",
+    "country": "Jamaican, Trinidadian",
+    "name": "Cassava Pone",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/cassava-pone-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 cups grated sweet cassava",
+      "1 cup coconut, grated",
+      "1 cup pumpkin, grated",
+      "1 cup brown sugar",
+      "1 teaspoon ground cinnamon",
+      "1/2 teaspoon ground nutmeg",
+      "2 tablespoons melted butter",
+      "1 cup evaporated milk",
+      "1/2 cup coconut milk",
+      "1 teaspoon baking powder",
+      "1 teaspoon vanilla essence",
+      "1 teaspoon ginger, grated",
+      "1/2 cup raisins"
+    ],
+    "description": "As there are many islands in the Caribbean, so too are there many recipes for making Pone. In this recipe, all the basics are covered to give you a mouth-watering slice of Cassava Pone.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat oven to 350 °F (175 °C). Grease a baking dish (I used a ceramic pie dish)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl, whisk coconut and evaporated milk with sugar and spices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add cassava, pumpkin, melted butter, coconut milk, baking powder, vanilla, ginger, and raisins. Mix well into a thick batter."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour into the prepared dish and bake on the middle rack for 1 hour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If the center is still wet, continue baking 10–20 more minutes, checking with a toothpick."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Allow the cassava pone to cool fully before slicing."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT15M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H15M"
+  },
+  {
+    "id": "carib-caribbean-charred-sweet-corn-porridge",
+    "country": "Caribbean",
+    "name": "Charred Sweet Corn Porridge",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/charred-sweet-corn-porridge/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 ears sweet corn, about 2 cups kernels",
+      "2 1/2 cups water, divided",
+      "1 cup coconut milk",
+      "1 1/2 cups evaporated milk",
+      "1 cup cornmeal",
+      "1/2 teaspoon salt",
+      "1 teaspoon cinnamon",
+      "1 tablespoon pure vanilla extract",
+      "1 teaspoon nutmeg, divided",
+      "3/4 cup sweetened condensed milk",
+      "1/4 cup dried cranberries, optional",
+      "1 bay leaf, optional",
+      "1 stick cinnamon, optional, in place of powder"
+    ],
+    "description": "Warm, creamy, and kissed with the flavor of grilled corn, this Charred Sweet Corn Porridge is a Caribbean-inspired twist on a traditional comfort food. The char adds a gentle smokiness that beautifully complements the sweet coconut and nutmeg notes, creating a perfect bowl for cool mornings or cozy evenings.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Grill the corn until lightly charred to add a smoky undertone to the finished porridge. Allow to cool, then carefully remove the kernels from the cob using a sharp knife."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place about 3/4 of the grilled corn into a blender along with the coconut milk and 1 cup of water. Blend until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the blended mixture into a saucepan. Add the remaining water, evaporated milk, cornmeal, and salt. Stir well to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the remaining grilled corn kernels, ground cinnamon (or cinnamon stick), vanilla extract, sweetened condensed milk, and half of the nutmeg. If using, add the bay leaf."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook over medium heat, stirring constantly to prevent sticking. Add the dried cranberries or other dried fruit if using. Continue to cook for about 10 minutes, or until the porridge reaches your desired thickness."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from heat, adjust the salt to taste, and sprinkle with the remaining nutmeg. Serve warm and enjoy."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT25M",
+    "totalTime": "PT40M"
+  },
+  {
+    "id": "carib-fusion-chicken-rasta-pasta-recipe",
+    "country": "Fusion",
+    "name": "Chicken Rasta Pasta Recipe",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/chicken-rasta-pasta-recipe/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 lb chicken breast, cubed",
+      "2 tablespoons Jamaican jerk marinade",
+      "2 tablespoons olive oil",
+      "1 teaspoon salt, divided",
+      "3/4 lb penne pasta, cooked in salted water",
+      "1 1/2 tablespoons butter",
+      "1 medium onion, sliced",
+      "1 medium red bell pepper, sliced",
+      "1 medium green bell pepper, sliced",
+      "1 medium yellow bell pepper, sliced",
+      "3/4 teaspoon black pepper",
+      "3/4 teaspoon smoked paprika",
+      "1 1/4 cups heavy cream",
+      "1 1/2 tablespoons herb and garlic cream cheese",
+      "1 1/2 tablespoons grated Parmesan"
+    ],
+    "description": "This Chicken Rasta Pasta combines jerk-seasoned chicken, colorful bell peppers, penne pasta, and a rich, creamy sauce for a flavorful Jamaican-inspired meal.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "To make this recipe, start by grabbing your cubed skinless, boneless chicken breast or thighs and placing them in a bowl. Toss the meat thoroughly with two tablespoons of olive oil, 1/2 of the salt, and your favorite jerk marinade , then let it rest to absorb the flavors for at least 20 minutes. For another layer of flavor, try my Honey Jerk Marinade ."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "While the chicken marinates, bring a separate pot of water to a boil and cook your penne pasta according to the package directions before draining it."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Next, place a saucepan over medium heat and add the marinated chicken directly to it. You will not need any extra oil since it is already in the marinade."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook the chicken pieces until you get a rich layer of caramelized browned bits building up at the bottom of the pan and the meat is fully cooked through, then remove the jerk chicken and set it aside. The kitchen should have the lovely aroma of allspice, thyme, and Scotch bonnet."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In that same pan, add the butter and let it melt down to create a rich base for your sauce."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Toss in the sliced onions with your red, green, and yellow bell peppers, stirring them well to let them soften. Season the vegetables with the black pepper, smoked paprika for a touch of smokiness, and the remaining salt. The combination of the cooked peppers and onion with the kiss of smoked paprika adds sensory life to your kitchen. Cook for 3 minutes on a medium-low flame."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in the heavy cream (traditionally coconut milk would be used) and turn up the heat slightly to bring the mixture up to a boil. As it heats, make sure to scrape the bottom of the pan to lift all of those delicious stuck-on jerk chicken flavors. Once the sauce starts boiling, stir in a spoonful of herb and garlic cream cheese. Watch the video below as I discuss why I prefer this over any other cheese."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Finally, add the cooked, drained pasta and the seared jerk chicken back into the pan, tossing everything thoroughly to combine all the ingredients. Finish the dish by stirring in the Parmesan cheese right at the end before serving. Serve hot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Have you had or made Rasta Pasta before? Did you know the origins of the dish and that chicken and shrimp were later added? Leave me a comment below, and if you have any questions about this Chicken Rasta Pasta, drop me a line in The Village, which is our FREE members-only community ."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT15M",
+    "cookTime": "PT15M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-classic-caribbean-beef-cook-up-rice-2",
+    "country": "Caribbean",
+    "name": "Classic Caribbean Beef Cook-Up Rice",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/classic-caribbean-beef-cook-up-rice-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 tablespoon olive oil",
+      "1 tablespoon tomato paste",
+      "1 large carrot, diced",
+      "1 med tomato, diced",
+      "6 cloves garlic, smashed",
+      "1 medium onion, sliced",
+      "2 tablespoon Caribbean Green Seasoning",
+      "1 Scotch Bonnet Pepper, sliced",
+      "1 can red kidney beans, rinsed",
+      "3 cups coconut milk",
+      "1 teaspoon black pepper",
+      "3/4 tablespoon salt, adjust",
+      "8-10 okra, sliced",
+      "1/2 lb pumpkin, diced",
+      "1/2 lb spinach, chopped",
+      "3 cups par-boiled brown rice, washed",
+      "8-9 cups water, divided/adjust",
+      "1 1/2 lb stewing beef, 1 inch pieces"
+    ],
+    "description": "Two years back we kicked off the New Year with my incredibly tasty Cook Up Rice , loaded with chicken, salted pigtail pieces and black eyed peas for the good luck associated with using it at the start of a new year. While you’ll see similarities with that recipe and the beef version we’re about to make, it will also be apparent that I didn’t follow the sort of traditional rules this time.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the oil on a medium flame in a wide/heavy pot, then add the pieces of beef and brown. You may want to turn the heat down to med/low (I explained why I didn’t season and marinate the beef prior in the video) ."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After about 8 minutes, add the tomato paste and cook for another 2-3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "At this point we’ll add the carrot, onion, garlic, Caribbean Green Seasoning, tomato, black pepper, scotch bonnet pepper and salt. Stir and continue cooking for 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the rinsed beans (I used a light color, almost pink bean), stir well, then it’s time to add the coconut milk and 1 cup of water. I used the water to rinse the bowl where I had the coconut milk in. Bring to a boil then reduce to a simmer. This is when you’d add the ginger and bay leaf if you wanted to."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Depending on how large you cut the beef pieces (any cheap cut of beef will work), it may be somewhat tender after one hour and 10 minutes, so it’s time to add the rest of ingredients and bring back to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "With 3 cups of rice it will yield a lot of food (feeds between 8-10 people) and rather than do the 2-1 ratio (liquid – rice), I went with 7 cups of water. You may need to add more later if you like your cook-up rice on the wet or soggy side."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "20 minutes between a rolling boil and simmer, taste the liquid and adjust the salt to your liking. Determine if the rice is to your fancy (doneness) and keep cooking for another 5-10 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "This classic one pot Caribbean dish is usually served with a simple salad, slices of ripe avocado and lately it seems people enjoy coleslaw as a side. Don’t forget to have a tall cold glass of Mauby."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-classic-caribbean-brown-stew-oxtail",
+    "country": "Caribbean",
+    "name": "Classic Caribbean Brown Stew Oxtail",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/classic-caribbean-brown-stew-oxtail/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 lbs oxtails, cut into 1 1/2-inch pieces, trimmed of excess fat",
+      "1 lime, or lemon, for washing oxtail",
+      "3/4 tablespoon salt",
+      "2 tablespoons light soy sauce",
+      "1 tablespoon Caribbean browning",
+      "1 tablespoon tomato ketchup",
+      "1 tablespoon Caribbean Green Seasoning",
+      "3/4 teaspoon black pepper",
+      "1 onion, medium, sliced",
+      "2 scallions, chopped",
+      "5 cloves garlic, smashed",
+      "2 tablespoons olive oil",
+      "1 large tomato, chopped",
+      "6 allspice berries, pimento seeds",
+      "2 bay leaves",
+      "1 tablespoon ginger, grateddd",
+      "10 cups water, adjust as needed",
+      "1/2 red bell pepper, sliced",
+      "1/2 green bell pepper, sliced",
+      "5 sprigs thyme",
+      "1 1/2 cups red kidney beans, cooked or canned, rinsed",
+      "1 Scotch Bonnet pepper, whole",
+      "1 1/2 cups coconut milk",
+      "fresh scallions, or parsley, chopped, for garnish, optional"
+    ],
+    "description": "Falling-off-the-bone tender oxtail, slow-braised in a rich coconut milk and tomato gravy with red kidney beans, fresh herbs, and warming spices. A true Caribbean comfort food classic, this hearty stew is perfect with rice, ground provisions, or dumplings.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the oxtail pieces with cool water and the juice of the lime or lemon. Drain well. Watch this video, How To Season Oxtail For Jamaican Brown Stew Oxtail ."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season the oxtail with salt, soy sauce, browning, ketchup, green seasoning , black pepper, onion, scallions, and garlic. Mix thoroughly, cover, and marinate in the fridge for 3–4 hours or overnight."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat olive oil in a heavy pot over medium-high heat. Brown the oxtail pieces on all sides in batches to avoid overcrowding."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the reserved marinade to the pot and stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the tomato, ginger, bay leaves, and pimento seeds. Continue cooking until the oxtail is very tender, adding extra time if necessary. Pour in 6 cups of water and bring to a boil. Reduce the heat to low, cover with the lid slightly ajar, and simmer for 4 to 4 1/2 hours, adding more water as needed (up to 10 cups total). Skim off any froth that rises."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the sliced bell peppers, thyme sprigs, kidney beans, whole scotch bonnet pepper, and coconut milk. Stir gently. Add the sliced bell peppers, please thyme sprigs, kidney beans, whole scotch bonnet pepper, and coconut milk. Unless you want the kick of that pepper like me, crush it during cooking. May I also remind you to wash your hands with soap immediately after handling such hot peppers."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring the pot back to a boil, then reduce to a simmer and cook uncovered for 30 minutes, allowing the flavors to deepen and the gravy to thicken."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust seasoning with salt as needed. Discard thyme sprigs, pimento seeds, and bay leaves before serving."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Garnish with chopped scallions or parsley if desired. Serve hot with rice or your favorite Caribbean sides."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT15M",
+    "cookTime": "PT5M",
+    "totalTime": "PT20M"
+  },
+  {
+    "id": "carib-fusion-trinidadian-classic-curry-bodi-with-shrimp-and-potato",
+    "country": "Fusion, Trinidadian",
+    "name": "Classic Caribbean Curry Bodi with Shrimp and Potato",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/classic-curry-bodi-with-shrimp-and-potato/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 pound shrimp, 41–15, peeled, deveined",
+      "1 lime, or lemon, juiced",
+      "3 tablespoons olive oil, divided",
+      "1 tablespoon salt, divided",
+      "1 teaspoon black pepper, divided",
+      "2 tablespoons Caribbean green seasoning, divided",
+      "2 1/2 tablespoons curry powder, divided",
+      "1 medium onion, diced",
+      "8-10 cloves garlic, smashed",
+      "3/4 tablespoon Amchar Masala",
+      "2 pounds bodi, yard beans, washed & trimmed",
+      "1 large potato, sliced",
+      "1 cup water",
+      "1 medium tomato, diced",
+      "2 tablespoons coconut cream",
+      "1/2 Scotch Bonnet pepper"
+    ],
+    "description": "A colorful and comforting Caribbean curry featuring bodi (yard beans), succulent shrimp, potatoes, and coconut cream, simmered in fragrant spices, ideal with sada roti or rice.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Peel, devein, and rinse shrimp with lime or lemon juice and cool water. Drain well, then season with 1 tablespoon olive oil, 1 tablespoon green seasoning, ⅓ of the salt, ⅓ of the black pepper, and ½ tablespoon curry powder. Set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat a deep pot over medium heat and add the shrimp. Cook for 2–3 minutes until just done, then remove and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In the same pot, add remaining olive oil, onion, garlic, and anchar masala. Cook on low for 3 minutes, then stir in the remaining black pepper, 1 tablespoon of green seasoning, and the rest of the curry powder. Cook until fragrant and the spices bloom."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add bodi and stir to coat with the spice base."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add coconut cream, Scotch Bonnet (if using), remaining salt, sliced potato, diced tomato, and water. Stir well to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring to a boil, then reduce heat to a simmer. Cook for 25–30 minutes, stirring occasionally and adding water if necessary, until vegetables are tender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once the vegetables are done, return the shrimp to the pot, stir gently, remove from the heat, and let residual warmth finish cooking the shrimp. Serve hot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "At this point, everything should be tender. Add the shrimp we cooked earlier, stir well, shut off the stove, and you’re done."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT15M",
+    "cookTime": "PT30M",
+    "totalTime": "PT45M"
+  },
+  {
+    "id": "carib-caribbean-classic-caribbean-curry-chataigne-with-pigeon-peas",
+    "country": "Caribbean",
+    "name": "Classic Caribbean Curry Chataigne With Pigeon Peas",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/classic-caribbean-curry-chataigne-with-pigeon-peas/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 lb pigeon peas",
+      "1 1/2 lb chataigne, breadnut or katahar",
+      "2 tablespoons olive oil",
+      "1 large onion, divided",
+      "8 cloves 8–10 garlic, divided",
+      "1/2 teaspoon cumin seeds, geera",
+      "1 tablespoon Caribbean Green Seasoning",
+      "2 1/2 tablespoons curry powder",
+      "3/4 cup water, for cooking the curry base",
+      "1 tablespoon Anchar Masala",
+      "1 scotch bonnet pepper, adjust to taste",
+      "1 1/2 cups coconut milk",
+      "3/4 tablespoon salt, adjust to taste",
+      "2 cups water"
+    ],
+    "description": "A hearty vegan curry made with tender chataigne (breadnut or katahar) and creamy pigeon peas, simmered low and slow in a rich, coconut curry sauce. This dish celebrates the flavors of the Caribbean with bold spices, traditional techniques, and wholesome plant-based ingredients.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preboil the thawed pigeon peas for 20 minutes, drain, then repeat for another 20 minutes. Drain well and set aside. If using canned pigeon peas, skip this step."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Thaw the frozen chataigne completely, then squeeze out any excess liquid."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil in a large pot over medium heat. Add the cumin seeds, half of the chopped onion, half of the minced garlic, and half of the scotch bonnet pepper. Reduce the heat to low and sauté for 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the Caribbean green seasoning and cook for another 2 minutes. Add the curry powder and continue to cook on low for 3 minutes, stirring often."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in 3/4 cup of water and cook the curry base to remove the raw taste of the spices. Add the remaining onion, garlic, scotch bonnet pepper (optional for extra heat), and anchar masala. Increase the heat to medium and allow the liquid to reduce."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn the heat to high, add the chataigne, and mix well to coat in the curry base. Stir in the preboiled pigeon peas."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the salt, remaining 2 cups of water, and coconut milk. Bring to a boil, then reduce to a gentle simmer. Cover partially with the lid and cook for 90 minutes, stirring occasionally."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt as needed. The curry should be thick and rich, and the peas and chataigne tender. Remove from heat and serve hot with Sada or paratha roti, rice, or your favorite flatbread."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT30M",
+    "cookTime": "PT1H30M",
+    "totalTime": "PT2H"
+  },
+  {
+    "id": "carib-caribbean-classic-caribbean-salted-beef-callaloo",
+    "country": "Caribbean",
+    "name": "Classic Caribbean Salt(ed) Beef Callaloo",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/classic-caribbean-salted-beef-callaloo/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3/4 lb salted beef, cut into pieces",
+      "1 tablespoon olive oil",
+      "1 medium onion, chopped",
+      "6 cloves garlic, smashed",
+      "1/2 teaspoon black pepper",
+      "4 sprigs 4–6 thyme, leaves only",
+      "10 okra 10–15, chopped",
+      "2 cups pumpkin, diced",
+      "4 pimento peppers, chopped",
+      "1/2 teaspoon salt",
+      "2 lbs baby spinach, washed and chopped",
+      "1 1/2 cups coconut milk",
+      "3 1/2 cups water",
+      "1 scotch bonnet pepper, whole"
+    ],
+    "description": "A rich Trinbagonian (Trinidad and Tobago) callaloo made with salted beef, coconut milk, okra, and spinach, slow-cooked for deep flavor and authentic Caribbean taste. Variations of Callaloo can be found throughout the Caribbean islands.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the salted beef with cool water and the lemon juice. Place in a pot, cover with water, and bring to a rolling boil at 212°F (100°C). Boil for at least 1 hour until partially tender. Drain and set aside. Prep the other ingredients in the meantime."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil in a deep pot on low heat, about 250°F (120°C). Add the onion, garlic, black pepper, scallions, and thyme leaves. Cook gently for 3 minutes, stirring often."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the precooked salted beef and cook for another 2 to 3 minutes to build flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the okra, then add the pumpkin and pimento peppers. Cook for 4 minutes, stirring well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Wash and give the spinach a rough chop, then add it to the pot and stir until it begins to wilt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 2 minutes, add the salt, water, and coconut milk. Bring to a boil at 212°F (100°C), then tuck in the whole scotch bonnet pepper. Reduce to a gentle simmer around 195°F (90°C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Simmer for about 90 minutes until everything is fully cooked and breaking down."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the pieces of salted beef and set aside. Remove the scotch bonnet pepper if you prefer a milder flavor. Using a whisk, stick blender, or swizzle stick, blend to your preferred consistency, pulsing if using a stick blender. I thoroughly enjoy the Caribbean Sunshine (heat) from breaking the braised Scotch Bonnet pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Return the salted beef to the pot, taste, and adjust the salt if needed. Serve hot, ideally with coconut rice and stewed chicken. It’s essential to note that even after pre-boiling the salted beef, it will still contain trace amounts of salt."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT30M",
+    "cookTime": "PT2H30M",
+    "totalTime": "PT3H"
+  },
+  {
+    "id": "carib-jamaican-caribbean-sorrel",
+    "country": "Jamaican",
+    "name": "Classic Caribbean Sorrel Punch",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-sorrel/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 lb hibiscus flowers, trimmed",
+      "8 cups water",
+      "1 sticks cinnamon",
+      "2 pieces dried orange peel",
+      "4 cloves",
+      "1 slice ginger",
+      "sugar, to taste"
+    ],
+    "description": "A festive Caribbean beverage made from hibiscus petals and spices, offering a refreshing and tangy flavor perfect for celebrations.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Remove the cores from the sorrel flowers and discard."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large pot, combine the sorrel petals, water, cinnamon stick, dried orange peel, cloves, and ginger."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring the mixture to a boil, then reduce to a gentle simmer for about 30 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from heat, cover, and let it steep for a few hours or overnight for maximum flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain the mixture using a fine strainer or cheesecloth to remove solids."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Sweeten to taste with sugar. Chill the drink in the refrigerator. Serve over ice, and add a splash of rum if desired."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT10M",
+    "cookTime": "PT30M",
+    "totalTime": "PT40M"
+  },
+  {
+    "id": "carib-caribbean-classic-caribbean-yam-pie",
+    "country": "Caribbean",
+    "name": "Classic Caribbean Yam Pie",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/classic-caribbean-yam-pie/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "5 lbs white yam, peeled, chopped",
+      "water",
+      "3/4 tablespoon salt",
+      "3 tablespoons olive oil",
+      "3/4 lb prepared salted cod",
+      "1 1/2 teaspoons black pepper, divided",
+      "1 large onion, sliced",
+      "1/2 scotch bonnet pepper, sliced thin",
+      "4 cloves garlic, minced",
+      "1 lb pumpkin, diced",
+      "1/2 lb bell peppers, sliced",
+      "1 small christophene, diced",
+      "1 large tomato, sliced",
+      "2 large ripe plantain, sliced",
+      "3 tablespoons vegetable oil",
+      "1 tablespoon butter",
+      "1 cup evaporated milk",
+      "1 1/2 cups medium cheddar, grated, divided",
+      "1 1/2 cups aged cheddar, grated, divided"
+    ],
+    "description": "Hearty and layered with creamy mashed yams, savory saltfish, tender vegetables, and sweet fried plantain, this island-style yam pie is a comforting Caribbean classic perfect for cold-weather cooking.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Peel and chop the yams, then place them in a large pot with salted water. Boil until tender, about 25 minutes. Drain and set aside. Prep the vegetables."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil in a pan on low, add the prepared salted cod, and gently fry for a few minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Raise the heat to medium and add half of the black pepper, onion, garlic, scotch bonnet, scallions, bell peppers, christophene, okra, pumpkin, and tomato. Cover and cook on low heat for 20 minutes, stirring every 5 minutes until everything is tender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the vegetable oil in a frying pan over medium heat and fry the sliced plantain until golden on both sides, about 4–5 minutes. Set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Test the cooked yam with a paring knife, drain fully if any liquid remains, and add the remaining black pepper, butter, and evaporated milk. Mash until smooth. Stir in three-quarters of the medium and aged cheddar. A small amount of freshly grated nutmeg may be added if desired."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Brush the baking dish with melted butter or olive oil. Add a layer of mashed yam, smoothing to settle it evenly. Spoon on two-thirds of the stewed saltfish mixture, followed by the fried plantain slices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add another layer of mashed yam, level it with a spoon, then top with the remaining cheeses and the rest of the stewed saltfish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the dish on the middle rack of a preheated 375°F (190°C) oven. Bake uncovered for 1 hour. Allow the pie to cool for 20–30 minutes before serving so it can set."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-trinidadian-geera-pork-spicy-cumin-pork",
+    "country": "Trinidadian",
+    "name": "Classic Geera Pork (Spicy Cumin Pork)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/geera-pork-spicy-cumin-pork/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 1/2 pounds pork, cubed",
+      "1 of lime, or lemon; juiced, to wash pork",
+      "1/4 teaspoon black pepper",
+      "1 tablespoon Caribbean Green Seasoning",
+      "3/4 teaspoon salt",
+      "1 1/2 tablespoons roasted ground geera, cumin",
+      "2 tablespoons vegetable oil",
+      "1/2 teaspoon geera seeds, cumin seeds",
+      "2 scallions, chopped",
+      "4 cloves garlic, smashed",
+      "2 tablespoons cilantro, chopped",
+      "1 tablespoon parsley, chopped",
+      "2 pimento peppers, diced",
+      "8 Bird’s Eye peppers, chopped",
+      "1 1/4 cups water"
+    ],
+    "description": "A spicy Trinidadian pork dish infused with roasted cumin, herbs, and hot peppers—perfect for lime and domino night.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Cut pork into 3/4-inch pieces. Wash with lime or lemon juice and water. Drain well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season pork with black pepper, salt, green seasoning, and roasted ground geera. Mix to coat wel"
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a wide heavy pan, heat oil on medium heat. Add geera seeds and reduce heat. Cook for 3 minutes until fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add scallions, garlic, cilantro, parsley, pimento peppers, and bird peppers. Cook for 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn heat to medium-high and add seasoned pork. Stir to coat with aromatics."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook uncovered for 8–10 minutes until pork releases and reabsorbs its own juices and oil is visible."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add water, bring to a boil, then lower heat to a gentle simmer. Cover with lid slightly ajar."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Simmer for 35 minutes or until pork is fork-tender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Uncover and increase heat to burn off excess liquid if you prefer a dry finish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Garnish with extra cilantro and pimento peppers before serving."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT15M",
+    "cookTime": "PT45M",
+    "totalTime": "PT1H"
+  },
+  {
+    "id": "carib-jamaican-classic-jamaican-stew-peas",
+    "country": "Jamaican",
+    "name": "Classic Jamaican Stew Peas",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/classic-jamaican-stew-peas/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 cups Red Kidney Beans, soaked",
+      "2 lbs salted pigtails, 1.5-inch pieces",
+      "1 lime or lemon, juice",
+      "1 medium onion, diced",
+      "3 stalks scallions, chopped",
+      "8 cloves garlic",
+      "8 sprigs thyme",
+      "2 bay leaves",
+      "1 Scotch Bonnet pepper",
+      "1 teaspoon black pepper",
+      "6-10 allspice berries, pimento seeds",
+      "3/4 teaspoon smoked pimento, smoked paprika",
+      "1 pack coconut milk powder, 1.76 oz",
+      "9-12 cups water",
+      "1 cup flour, dumplings",
+      "1 teaspoon salt, dumplings",
+      "1/2 teaspoon brown sugar",
+      "3/4 teaspoon salt, adjust to taste"
+    ],
+    "description": "A comforting Caribbean stew made with red kidney beans, salted pigtails, fresh herbs, and spinners in a rich coconut broth.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Add 2 cups of red kidney beans to a pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the pre-boil the salted pigtail pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large pot, combine kidney beans, pigtails, onion, scallions, garlic, thyme, bay leaves, Scotch Bonnet pepper, black pepper, allspice berries, and smoked paprika."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add coconut milk powder and 9 cups of water. Bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce heat to a simmer and cook for 2 to 2.5 hours, skimming foam and adding more water as needed (up to 3 additional cups)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "To make spinners, combine flour, salt, brown sugar, and water in a bowl. Knead into a soft dough. Roll into small, thin dumplings."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add spinners to the pot during the final 25 minutes of cooking. Stir gently and cook until dumplings are soft and the stew has thickened."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt before serving. Enjoy as a hearty stew or over steamed rice."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT20M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H20M"
+  },
+  {
+    "id": "carib-general-caribbean-trinidadian-classic-shrimp-ceviche-2",
+    "country": "General Caribbean, Trinidadian",
+    "name": "Classic Shrimp Ceviche",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/classic-shrimp-ceviche-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb shrimp, cooked, thawed if frozen",
+      "1/3 cup lemon, freshly squeezed",
+      "1/3 cup lime, freshly squeezed",
+      "2 medium tomatoes, diced",
+      "1 small red onion, thinly sliced",
+      "4 chadon beni leaves, finely chopped",
+      "1 avocado, ripened, diced",
+      "1 mango, peeled and diced",
+      "1/2 teaspoon salt",
+      "1/2 teaspoon black pepper",
+      "2 tablespoons chives, chopped",
+      "1 Scotch Bonnet pepper, thinly sliced, optional"
+    ],
+    "description": "Bright, citrusy, and full of island flavor, this Classic Shrimp Ceviche brings together tender shrimp, ripe mango, creamy avocado, and fresh herbs for a vibrant Caribbean twist on the traditional seafood dish. Perfect for warm-weather snacking or as a refreshing appetizer, it’s a no-cook recipe that celebrates bold, fresh ingredients.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Remove the shell from the shrimp, devein, wash, and drain. I used medium-sized shrimp. Pour in the lime and lemon juices and stir."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Marinate in the fridge for 60 to 80 minutes. They will firm up and go opaque in color."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In the meantime, prepare the other ingredients. I suggest that you dice the mango and avocado into similar-sized pieces. Try to get a half-ripe mango, meaning it’s not fully ripe but mature. Once peeled and diced, it will be firm and sweet with a slight tartness."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the marinated shrimp from the fridge and add all of the other ingredients."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir well to combine all these fresh flavors."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Chill for another 10 minutes, then serve."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": null,
+    "totalTime": "PT1H10M"
+  },
+  {
+    "id": "carib-fusion-coconut-french-toast-with-caramel-passionfruit-sauce",
+    "country": "Fusion",
+    "name": "Coconut French Toast with Banana Passion Fruit Caramel Sauce",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/coconut-french-toast-with-caramel-passionfruit-sauce/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 slices Bread, one day old, ¾–1 inch / 2–2.5 cm thick",
+      "2 large eggs",
+      "1 cup coconut milk",
+      "1 teaspoon vanilla extract",
+      "1/4 teaspoon ground nutmeg",
+      "1/4 teaspoon ground cinnamon",
+      "1 pinch salt, optional",
+      "2 tablespoons golden brown sugar",
+      "1 cup coconut milk",
+      "1/4 teaspoon ground ginger",
+      "1 pinch salt",
+      "1 passion fruit, pulp only",
+      "2 ripe bananas, sliced",
+      "1 tablespoon butter",
+      "2 tablespoons pure maple syrup",
+      "1 1/2 tablespoons butter",
+      "1 1/2 tablespoons coconut oil"
+    ],
+    "description": "This Caribbean-inspired French toast combines the creamy richness of coconut milk with the tropical flavors of banana and passion fruit, creating a delightful dish perfect for brunch or a special breakfast treat.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a mixing bowl, whisk together the eggs, 1 cup coconut milk, vanilla extract, nutmeg, cinnamon, and a pinch of salt if using."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the bread slices in the batter, ensuring they are fully submerged. Allow them to soak until the mixture is absorbed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a non-stick saucepan over medium heat, melt the brown sugar until it becomes frothy and amber-colored. Carefully add the coconut milk, whisking continuously. Stir in the ground ginger and a pinch of salt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the passion fruit pulp and sliced bananas, mixing well to coat. Let the mixture simmer for about 5 minutes. Add the butter and maple syrup, stirring until the sauce thickens to your desired consistency."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the butter and coconut oil in a non-stick pan over medium-low heat. Place the soaked bread slices in the pan and cook for about 3 minutes on each side, or until golden brown. Flip the slices a couple more times, cooking for an additional 2 minutes per side to ensure they are cooked through. Adjust the heat as necessary to prevent burning."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cut the French toast slices into triangles if desired and top with the warm banana passion fruit caramel sauce. Serve immediately!"
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT15M",
+    "totalTime": "PT25M"
+  },
+  {
+    "id": "carib-fusion-coconut-macaroni-and-cheese",
+    "country": "Fusion",
+    "name": "Coconut Macaroni and Cheese",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/coconut-macaroni-and-cheese/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 cups uncooked macaroni",
+      "4 cups aged white cheddar, grated",
+      "8 slices bacon, cooked crisp, chopped",
+      "1 garlic clove, grated",
+      "1/4 teaspoon nutmeg",
+      "2 seasoning peppers, pimento, diced",
+      "2 tablespoons parsley, chopped",
+      "4-5 sprigs thyme, leaves removed",
+      "3 tablespoons coconut oil",
+      "1/4 teaspoon black pepper",
+      "2 1/2 tablespoons all-purpose flour",
+      "2 1/2-3 cups coconut milk, chilled",
+      "1/3 teaspoon salt",
+      "1/4 cup Asiago cheese, grated, optional"
+    ],
+    "description": "A creamy, island-inspired twist on mac and cheese with coconut milk, sharp cheddar, bacon, and tropical herb notes.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat oven to 400 °F (200 °C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Boil macaroni in salted water until about 90% cooked. Drain and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a deep pan, warm coconut oil over medium. Add pimento, scallions, parsley, thyme, black pepper, and garlic; sauté 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in half the chopped bacon. Add flour and cook 4–5 minutes on low."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Slowly whisk in chilled coconut milk; simmer gently and grate in nutmeg."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off heat; stir in 3 cups cheddar and salt until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Combine sauce with pasta and transfer to a baking dish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Top with remaining cheddar, Asiago (if used), and reserved bacon."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bake 20 minutes until golden and bubbly. Serve immediately!"
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT40M",
+    "totalTime": "PT55M"
+  },
+  {
+    "id": "carib-caribbean-coconut-stewed-haddock",
+    "country": "Caribbean",
+    "name": "Coconut Stewed Haddock",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/coconut-stewed-haddock/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 pound haddock, cut into 2–3 inch pieces",
+      "1 Lemon, juiced, divided",
+      "1 1/2 tablespoons coconut oil",
+      "2 cloves garlic, diced",
+      "2 seasoning peppers, diced",
+      "1/4 Scotch bonnet pepper, diced",
+      "4 sprigs thyme, leaves only",
+      "2 scallions, chopped",
+      "1/8 teaspoon black pepper",
+      "1/2 teaspoon salt",
+      "1/2 cup coconut milk"
+    ],
+    "description": "A quick and flavorful coconut fish stew with Caribbean aromatics, ready in under 30 minutes.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Rinse the fish with the juice of half a lemon and cool water. Drain and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large pan, heat coconut oil over medium-high heat. Add garlic, seasoning peppers, and scotch bonnet. Lower heat and cook for 1 minute."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add thyme, scallions, and black pepper. Sauté for 2–3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Gently add the fish to the pan and stir to coat with aromatics."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in coconut milk, salt, and the remaining lemon juice. Bring to a gentle simmer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook uncovered for 5–7 minutes or until fish is cooked through."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "(Optional) Add 1 tablespoon roucou for extra color."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust seasoning. Serve hot with your favorite side."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT15M",
+    "totalTime": "PT25M"
+  },
+  {
+    "id": "carib-general-caribbean-comforting-breadfruit-oil-down-recipe",
+    "country": "General Caribbean",
+    "name": "Comforting Breadfruit Oil Down",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/comforting-breadfruit-oil-down-recipe/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoons olive oil",
+      "1 large onion, diced",
+      "2 scallions, chopped",
+      "7 cloves garlic, smashed",
+      "3 sprigs fresh thyme",
+      "3 pimento peppers, chopped",
+      "1 teaspoon black pepper",
+      "5 to 6 pounds mature breadfruit, peeled and chopped",
+      "2 pounds salted pigtail, prepared",
+      "3/4 pound pumpkin, cut into chunks",
+      "1 large carrot, chopped",
+      "3/4 teaspoon salt, adjust to taste",
+      "1 pound spinach, washed and chopped",
+      "2 cups coconut milk",
+      "6 cups water",
+      "2 tablespoons Caribbean green seasoning",
+      "1 small Scotch Bonnet pepper, whole or sliced",
+      "1 tablespoon fresh ginger, grated",
+      "1/4 cup celery, mostly leaves, chopped",
+      "12 to 15 okra, trimmed and halved, optional"
+    ],
+    "description": "A comforting Breadfruit Oil Down recipe featuring mature breadfruit, salted pigtail, coconut milk, pumpkin, and traditional Caribbean seasonings. This Trinidad and Tobago family recipe is perfect for feeding a crowd and enjoying authentic island flavors.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the salted pigtail with the juice of a lime or lemon. Drain, place in a pot, cover with water, and simmer for about 50 minutes to help tenderize the meat while removing much of the curing salt. Drain, rinse, and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil in a large pot over medium heat. Add the onion, scallions, garlic, thyme, pimento peppers, and black pepper. Cook for 3 to 4 minutes until softened."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the prepared mature breadfruit (try to get a mature breadfruit, as younger ones can have a bitterness to them), the prepared salted pigtail, pumpkin, carrot, salt, spinach, and coconut milk. Stir everything together to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in the water, ensuring all the ingredients are covered."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring to a boil over high heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce to a gentle simmer. Stir in the Caribbean green seasoning , Scotch Bonnet pepper, grated ginger, and celery."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook for approximately 75 minutes, adding additional water if necessary."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once the breadfruit is almost fully cooked, stir in the okra."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Continue cooking for another 10 to 15 minutes until the breadfruit, vegetables, and pigtail are tender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the salt if necessary. Remember that the salted pigtail will have a salty element to them, even after pre-boiling."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve with the consistency you prefer, whether slightly thick. Keep in mind the oil down will continue to thicken as it cools."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you enjoy this recipe and have a true appreciation for breadfruit, be sure to try my Breadfruit Pie , Breadfruit Salad , Fried Breadfruit , Roasted Breadfruit with Stewed Saltfish , and one of my longtime favorites, Breadfruit Simmered with Stewed Pork , a dish my mom has been making for our family since I was a little fella growing up in Trinidad and Tobago."
+      }
+    ],
+    "yields": 10,
+    "prepTime": "PT35M",
+    "cookTime": "PT2H15M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-trinidadian-comforting-beef-bone-soup-2",
+    "country": "Trinidadian",
+    "name": "Comforting Caribbean Beef Bone Soup with Root Vegetables",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/comforting-beef-bone-soup-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs beef neck bones",
+      "3 tablespoons olive oil",
+      "2 large heads of garlic, halved",
+      "1 large onion, diced",
+      "2 stalks celery, chopped",
+      "1 teaspoon black pepper, divided",
+      "1 1/2 tablespoons tomato paste",
+      "1 tablespoon salt",
+      "8 sprigs thyme",
+      "2 thick ginger, sliced",
+      "1 Scotch Bonnet Pepper",
+      "10-14 cups hot water",
+      "3 medium carrots, cut into large pieces",
+      "5 medium potatoes, halved",
+      "1 1/2 lbs pumpkin, cut into large pieces",
+      "1 small cabbage, cut into large pieces",
+      "2 tablespoons parsley, chopped"
+    ],
+    "description": "This hearty Caribbean beef bone soup combines roasted beef neck bones with a variety of root vegetables and traditional spices for a soul-warming dish that’s perfect for sharing.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat your oven to 375°F (190°C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Wash the beef neck bones to remove any debris. Pat dry and place in a roasting pan along with the halved garlic heads. Drizzle with olive oil to coat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover the pan lightly with foil and roast in the preheated oven for 1 hour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large soup pot, add the fat from the roasting pan and heat over medium-low flame. Add diced onion, chopped celery, half the black pepper, and the roasted garlic (skins removed). Cook for 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the tomato paste and cook for another 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the roasted beef bones to the pot, stirring to coat. Add ginger slices, tied thyme sprigs, and the whole Scotch Bonnet Pepper (do not break).Add the roasted beef bones to the pot, stirring to coat. Add ginger slices, tied thyme sprigs, and the whole Scotch Bonnet Pepper (do not break)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in 10–14 cups of hot water, ensuring all ingredients are submerged. Increase heat to medium-high and bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once boiling, reduce to a gentle rolling boil. Add the carrots and cook for 1 hour and 40 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove ginger slices, thyme sprigs, and Scotch Bonnet Pepper (or leave for added heat). Add potatoes, pumpkin, and cabbage to the pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring the soup back to a boil and cook for an additional 30 minutes, or until the potatoes are tender. Avoid over-stirring to maintain vegetable integrity."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove any bones that have separated from the meat. Adjust salt to taste. Stir in remaining black pepper and chopped parsley."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Ladle the soup into bowls, ensuring each serving has a mix of meat and vegetables. Enjoy hot."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT30M",
+    "cookTime": "PT2H",
+    "totalTime": "PT2H30M"
+  },
+  {
+    "id": "carib-caribbean-cornmeal-dumplings",
+    "country": "Caribbean",
+    "name": "Cornmeal Dumplings",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/cornmeal-dumplings/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 cup All-purpose flour",
+      "1/2 cup cornmeal",
+      "1 teaspoon sugar, granulated",
+      "1 1/2 teaspoon baking powder",
+      "1 pinch of cinnamon",
+      "1 part lukewarm water"
+    ],
+    "description": "This is one of those meals I like to refer to as being ‘country food’ from it’s rustic feel and simplicity. One of my favorite “bush cook” meals as a kid on the islands was corn meals dumplings with dasheen bush bhaji cooked in coconut milk, on the side. A meal which was guaranteed to give you the sleepies after devouring a huge plate. These corn meal dumplings are also excellent in those heavy soups we enjoy on the islands and if all fails, just top with a bit of butter and you’re good to go.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Add Cornmeal (1/2 cup), All-Purpose Flour (1 cup), Ground Cinnamon (1 pinch), Baking Powder (1 1/2 teaspoon), and Granulated Sugar (1 teaspoon) to a bowl and give it a good whisk to mix everything together."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring a large pot of water to a boil. Then add a bit of the lukewarm Water (to taste) at a time and mix until you have a dough. The dough should be firm, but soft."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Knead for about 2-3 minutes then prepare to separate into dumplings."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pinch off a piece, then shape like a small cigar."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Now flatten out from the center, until you have a shaped dumpling."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heavily season the boiling water with salt. Place them into the pot and cook for about 15 minutes. They will get bigger in size and float when they’re fully cooked."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Drain and serve warm."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you don’t have a topping for these, you can certainly toss it in some butter or olive oil and crack in some fresh black pepper. Enjoy."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-crazy-delicious-pak-choy-fried-rice-quick-caribbean-vegan-it",
+    "country": "General Caribbean",
+    "name": "Crazy Delicious Pak Choy Fried Rice (Quick Caribbean Vegan & Ital Style!)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/crazy-delicious-pak-choy-fried-rice-quick-caribbean-vegan-ital-style/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoons vegetable oil",
+      "1 medium onion, chopped",
+      "1 tablespoon ginger, smashed/chopped",
+      "5 cloves garlic, smashed",
+      "1 1/2 lb pak choy, washed/chopped",
+      "3/4 teaspoon MSG, optional",
+      "1/2 teaspoon salt",
+      "3/4 tablespoon toasted sesame oil",
+      "5 –8 pimento peppers, chopped",
+      "3 cups cooked rice, chilled",
+      "3/4 tablespoon mushroom-flavoured soy sauce, dark soy sauce"
+    ],
+    "description": "A quick and delicious Caribbean-style pak choy fried rice made with fresh vegetables, ginger, garlic, pimento peppers, and toasted sesame oil. This easy one-pot recipe is vegan, vegetarian, plant-based, and Ital-inspired, making it a wonderful option for a satisfying meat-free lunch or dinner.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the oil over medium heat in a wok or wide pan, then add the onion, ginger, and garlic, toss, and cook for 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the washed and trimmed pak choy (bok choy) and stir well to coat with the flavoured oil. The scent in the kitchen will immediately give you that sort of comforting hug. Toss in the MSG (if using), salt, and toasted sesame oil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook for 3 minutes, then add the pieces of pimento (seasoning) peppers and mix well. The pimento pepper will give the dish the lovely fragrance of a Scotch bonnet pepper, without any heat. If you can't source the pimento peppers, use bell peppers. Most West Indian markets, as well as some Asian supermarkets tend to stock them."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you find that the pak choy has released a lot of liquid (which is normal), move everything to the sides and allow the centre area to be just the liquid, where it will burn off quickly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the day-old or chilled rice (watch the video below where I speak more about this and how it helps you to get a fluffy or grainy fried rice)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the soy sauce and mix well to combine everything. The rice was cooked in salted water, so with that in mind, after 2 minutes, taste and adjust the salt to your liking. After 4–5 minutes of adding the rice, you're ready to enjoy a classic one-pot Caribbean vegan fried rice, which happens to be plant-based and fits well for those of us who follow vegetarian and Ital diets. What's your favourite quick meal? Share your thoughts in the comment section below, and don't forget to check out my other Vegan Fried Rice recipe ."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT5M",
+    "cookTime": "PT12M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-the-ultimate-4-cheese-spinach-dip",
+    "country": "Fusion",
+    "name": "Creamy 4-Cheese Spinach Dip",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/the-ultimate-4-cheese-spinach-dip/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2-3 cups chopped spinach, frozen, thawed and drained",
+      "1 Bird’s Eye pepper, deseeded",
+      "¾ cup diced bell pepper",
+      "1 tablespoon parsley",
+      "2 cups cheddar cheese",
+      "1 cup cream cheese",
+      "½ cup Romano cheese",
+      "½ cup Parmesan cheese, optional",
+      "½ cup Asiago cheese",
+      "1 clove garlic, finely diced",
+      "1 tablespoon lemon juice",
+      "3 stalks scallions, chopped",
+      "1 tablespoon vegetable oil, or cooking spray; for greasing the baking dish"
+    ],
+    "description": "A rich, cheesy spinach dip with a Caribbean twist, perfect for parties or cozy nights in.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat your oven to 375°F (190°C). Lightly grease a small baking dish with vegetable oil or spray."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl, combine the drained spinach, bird pepper, diced bell pepper, parsley, garlic, lemon juice, and chopped scallions."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the cream cheese, cheddar, Romano, Asiago, and Parmesan (if using) to the bowl."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix thoroughly with a spatula until everything is evenly combined."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Spoon the mixture into the prepared baking dish and smooth the top."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bake uncovered for 25 minutes or until bubbly and golden at the edges."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from the oven and let rest for 5–7 minutes before serving."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT15M",
+    "cookTime": "PT25M",
+    "totalTime": "PT1H20M"
+  },
+  {
+    "id": "carib-general-caribbean-108785-2",
+    "country": "General Caribbean",
+    "name": "Creamy Spinach With Okra and Pak Choi (Bok Choy)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/108785-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3/4 lb baby spinach, washed and drained",
+      "2 lbs pak choi, washed and chopped",
+      "8 –12 okra, trimmed and cut into 1 cm pieces",
+      "2 tablespoons olive oil",
+      "6 –8 cloves garlic, smashed",
+      "1/2 teaspoon black pepper",
+      "3/4 teaspoon salt",
+      "1 medium onion, sliced",
+      "2 bird’s eye peppers, optional",
+      "6 oz coconut milk",
+      "6 –10 grape tomatoes, cut in half"
+    ],
+    "description": "Creamy Spinach With Okra and Pak Choi simmered in coconut milk for a rich Caribbean-style vegan side dish full of flavor.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash and drain the baby spinach. Wash, trim, and cut the pak choi, separating the white stems into 1 cm pieces and the green leaves into thin ribbons."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the stems and bottom ends of the okra and cut into 1 cm pieces. Slice the onion, mince the garlic, and cut the tomatoes in half."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil on a medium flame in a wide pan. Add the garlic and black pepper and cook for about 30 seconds. I recommend you smah the garlic so at the end you'll have tasty bites of sweet garlic and in this step that fragrance of the garlic will perfume your entire kitchen."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the white parts of the pak choi and stir, then layer on the green parts and baby spinach. You will hear a lovely sizzle from the water still within the leaves from washing. Stir as the greens begin to wilt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the salt, sliced onion, and okra. Stir well and place the lid on the pan to help the greens wilt and cook down."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 5 minutes, add the coconut milk and bird’s eye peppers if using. Reduce the heat to medium-low, cover, and cook for 15 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the lid and increase the heat to medium high. Cook uncovered to allow excess liquid to evaporate, encouraging the natural sugars in the coconut milk to caramelize and add subtle sweetness."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After about 10 minutes, taste and adjust the salt if needed. Turn off the heat and add the grape tomatoes. Serve warm with sada roti , rice, bread, or as a spinach side dish."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT15M",
+    "cookTime": "PT30M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-cribbean-guava-sorrel-concentrate",
+    "country": "Caribbean",
+    "name": "Cribbean Guava Sorrel Concentrate",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/cribbean-guava-sorrel-concentrate/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 to 4 5 cups dried sorrel",
+      "3 pieces dried orange peel, about 3 inches each",
+      "1 small cinnamon stick",
+      "3 slices fresh ginger",
+      "1 teaspoon whole cloves",
+      "1 lb guava, sliced",
+      "16 cups water",
+      "1 bay leaf",
+      "3 cups sugar"
+    ],
+    "description": "A vibrant Caribbean sorrel concentrate infused with guava and warm spices, perfect for cocktails, festive drinks, or reducing into a dessert syrup. While sorrel is a popular drink during the Christmas season in the Caribbean, this sorrel concentrate can be used all year long.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Add the dried sorrel, cinnamon stick, ginger slices, and cloves to a deep stock or soup pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Wash and cut the guava into pieces, and add it to the pot along with the dried orange peel. Some guavas can have a white, pink, or red interior. You may also use guava paste that can be found in Latino and Asian supermarkets."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the water and bring to a boil over medium-high heat. Reduce to a simmer and cook for 35 to 40 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off the heat and allow the mixture to steep for at least 4 hours or overnight."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain the liquid using a strainer lined with cheesecloth, squeezing the sorrel and guava to extract all the juice and flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Return the strained liquid to a pot, add the bay leaf and sugar, and bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce to a simmer (immediately as it comes to a boil – explained in the video below) and cook for 60 to 70 minutes, or until reduced by at least one-third. For a syrup, reduce by two-thirds."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the bay leaf. Allow to cool completely, then bottle and store in the refrigerator."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT20M",
+    "cookTime": "PT1H45M",
+    "totalTime": "PT2H5M"
+  },
+  {
+    "id": "carib-fusion-trinidadian-crispy-pork-belly",
+    "country": "Fusion, Trinidadian",
+    "name": "Crispy Chinese‑Style Pork Belly",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/crispy-pork-belly/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3-4 pounds pork belly, with skin",
+      "2 tablespoons Chinese cooking wine",
+      "2 teaspoons sugar",
+      "1 teaspoon salt, plus 1 teaspoon for skin",
+      "1/2 teaspoon black pepper",
+      "1/2 teaspoon garlic powder",
+      "1/2 teaspoon onion powder",
+      "1 teaspoon Chinese five‑spice powder",
+      "2 tablespoons white vinegar"
+    ],
+    "description": "A perfect combination of crackly skin and juicy meat, seasoned with Chinese five‑spice and slowly roasted to golden perfection.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Score the skin thoroughly (using a skewer), and 1‑inch deep cuts into the flesh."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Marinate the flesh side with wine, sugar, salt (heartily), pepper, garlic and onion powders, and five‑spice powder; avoid the skin."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place belly skin side up on a plate in the fridge, uncovered, overnight to dry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat oven to 400 °F (200 °C). Wrap foil around the flesh side but leave skin exposed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Brush skin with vinegar, sprinkle with remaining salt, and roast on middle rack 55 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase oven to 500 °F (260 °C) broil and cook nearest heat for 7–10 minutes until crackling forms; watch closely."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Rest pork 15 minutes. Slice along scored lines into bite‑size pieces. Serve warm."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT20M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H20M"
+  },
+  {
+    "id": "carib-general-caribbean-crispy-fried-chicken-wonton",
+    "country": "General Caribbean",
+    "name": "Crispy Fried Chicken Wonton",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/crispy-fried-chicken-wonton/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoons light soy sauce",
+      "1 teaspoon sesame oil",
+      "1 teaspoon grated ginger",
+      "1 tablespoon oyster sauce",
+      "1 tablespoon Chinese cooking wine",
+      "1 teaspoon chili crisp",
+      "1 scallion, finely chopped",
+      "1/2 lb ground chicken",
+      "40 –50 wonton wrappers",
+      "1/4 cup water",
+      "2 –3 cups vegetable oil"
+    ],
+    "description": "A crispy fried chicken wonton recipe inspired by Trinidad and Tobago’s rum shop and Chinese restaurant culture, featuring seasoned chicken wrapped and fried until golden and crunchy.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a bowl combine the soy sauce, sesame oil, grated ginger, oyster sauce, Chinese cooking wine, chili crisp for a bit of heat and smoky flavor, and the chopped scallion. I find that by mixing the marinade in advance allows all the wonderful flavors to combine nicely."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour this marinade over the ground chicken and stir to combine. Set aside to marinate for 10–15 minutes. As explained in the video below, I didn’t add any salt as the sodium from all the sauces did the job for me, but you can add about 1/4 teaspoon if you wanted. Additionally, 1/2 teaspoon of white pepper can be added."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "It’s now time to prepare the little packages, called wontons for frying. I like making them all before I start frying as they cook very fast. Take a wonton wrapper and wet 2 sides with water (on your fingers), then place about 1 teaspoon of the chicken mix in the center."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Now press the air out as you seal it and close by folding the dry corners over the wet corners. You’ll be left with a filled triangle package. Wet one of the outer corners with water and pull the other corner to touch, overlap and stick. Sounds a bit confusing, but you can watch the video below to see how simple this is."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "The filling will be enough for about 50 chicken wontons. I did 25 and froze the remaining filling for another day. It will keep for at least 6 weeks in the freezer. Then thaw and use when you're ready to make a new batch of crispy fried chicken wonton."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Set up your frying station with the wrapped wontons, a wok or any pot with high sides filled with the oil for frying and a tray with a wire rack. I'd recommend not draining on paper towels as the steam created can make the fried wontons go soggy."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the veg oil or whatever oil you prefer frying these chicken wontons with to 350–375 F and fry in two batches. It will take 4–6 minutes to get golden brown and have the filling cooked perfectly. I’d recommend flipping them after 3 minutes to ensure both sides get that lovely golden colour from being fried perfectly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "While this recipe is for making crispy fried chicken wonton these can also be added to a simmering pot of chicken stock with a slice of ginger, chopped scallions, soy sauce and garlic, for an amazing chicken wonton soup."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot and enjoy with some adult beverages."
+      }
+    ],
+    "yields": 50,
+    "prepTime": "PT20M",
+    "cookTime": "PT10M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-curry-aloo-vegan-curry-potatoes-a-vegetarian-delight",
+    "country": "General Caribbean",
+    "name": "Curry Aloo (Vegan Curry Potatoes) – A Vegetarian Delight",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/curry-aloo-vegan-curry-potatoes-a-vegetarian-delight/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 1/2 tablespoon olive oil",
+      "1 medium onion, diced",
+      "6-8 cloves garlic, smashed",
+      "1 small scotch bonnet pepper, optional",
+      "1/2 teaspoon black pepper",
+      "3/4 tablespoon ground roasted geera, cumin",
+      "1 tablespoon Caribbean green seasoning",
+      "2 tablespoon curry powder",
+      "3 lbs potatoes, peeled and cut into mixed sizes",
+      "3/4 tablespoon salt, adjust to taste",
+      "4-5 cups water",
+      "3/4 tablespoon anchar masala",
+      "2 tablespoons chopped cilantro"
+    ],
+    "description": "A comforting Trinbagonian curry aloo made with tender potatoes, Caribbean spices, and a rich gravy, perfect for a classic vegan curry potatoes meal.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil (use your fav oil) on a medium to low flame in a wide pan. Add the diced onion and smashed garlic, reduce the heat to low, and cook for two minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the scotch bonnet pepper if using, along with the ground roasted geera, Caribbean green seasoning , and black pepper. Cook on low heat for 2 to 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the curry powder, stir well, and cook until it darkens, starts clumping, and becomes fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn the heat up to medium high and add the potatoes, cut into large and small pieces. The immediate sizzle from the remnants of water from washing the peeled potatoes is like music to my ears, followed quickly by the rich curry scent which follows."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Coat well with the curry base, then add 4 cups of water and the anchar masala. Bring to a boil, then reduce to a rolling boil and cook until the potatoes are tender and falling apart."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After about 20 minutes, taste and adjust the salt to your liking, then decide if the sauce or gravy consistency is where you’d like it. Keep in mind that this curry aloo will naturally thicken as it cools."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook for an additional 5 minutes until the desired texture is achieved, allowing some potatoes to melt down and thicken the sauce while the larger pieces hold their shape. Use the back of your spoon to crush bigger pieces of potato is the sauce its overly watery."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Finish with chopped cilantro to give it a kiss of herbal notes at the end. Were I based in Trinidad and Tobago, I'd use Chadon Beni (culantro)"
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT10M",
+    "cookTime": "PT35M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-curry-aloo-with-leftover-stewed-pork",
+    "country": "Caribbean",
+    "name": "Curry Aloo with Leftover Stewed Pork",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/curry-aloo-with-leftover-stewed-pork/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 ¾ tablespoons vegetable oil",
+      "1 medium onion, sliced",
+      "8 cloves garlic, smashed",
+      "1 Scotch bonnet pepper, optional",
+      "½ teaspoon black pepper",
+      "1 3/4 tablespoons curry powder",
+      "1 tsp anchar masala, or roasted ground cumin if unavailable",
+      "2 ½ lbs potatoes, peeled, washed, and sliced",
+      "1 tsp salt",
+      "4 cups water",
+      "Leftover stewed pork",
+      "3 Tbsp chopped cilantro, or chadon beni/culantro, traditionally"
+    ],
+    "description": "This flavourful Caribbean curry aloo with leftover stewed pork combines soft, tender potatoes with the rich, seasoned depth of brown-stew pork. Toasted curry powder and anchar masala build a bold, aromatic curry base, while the stewed pork adds savoury complexity. Easy to prepare and loaded with authentic island flavor, this dish is perfect with sada roti, paratha roti, or steamed coconut rice.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the vegetable oil in a deep, wide pan over medium heat. Add the onion, garlic, and Scotch bonnet pepper. Reduce heat to low and cook for 3 minutes, allowing everything to soften and infuse the oil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the black pepper, curry powder, and anchar masala. Cook on low for another 3 minutes, stirring to prevent burning. If the mixture gets too dry, add a small splash of oil. This step is essential — it develops the curry’s signature flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the sliced potatoes. Mix thoroughly to coat each piece in the curry base. Turn up the heat to help everything come together. (Cutting the potatoes into different sizes helps some pieces dissolve and naturally thicken the sauce. Explained in the video below)"
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the salt and pour in the water. Bring to a boil, then reduce to a simmer for 20 minutes, or until the potatoes are tender and the sauce begins to thicken."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the stewed pork and cook for 3 minutes — just enough to warm through and blend with the curry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off the heat. Top with chopped cilantro or traditional chadon beni. Taste and adjust salt as needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot with sada roti , a slice of zabouca, and kuchela ."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT30M",
+    "totalTime": "PT40M"
+  },
+  {
+    "id": "carib-jamaican-trinidadian-how-to-make-a-caribbean-inspired-curry-beef-with-pigeon-peas",
+    "country": "Jamaican, Trinidadian",
+    "name": "Curry Beef with Pigeon Peas",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/how-to-make-a-caribbean-inspired-curry-beef-with-pigeon-peas-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 tablespoons curry powder",
+      "3/4 teaspoon black pepper",
+      "3/4 tablespoon garam masala",
+      "3/4 tablespoon roasted geera, ground cumin",
+      "3/4 tablespoon Amchar Masala",
+      "1 cup water, for curry slurry",
+      "1 onion, medium, sliced",
+      "1 teaspoon grated ginger",
+      "6 cloves garlic, crushed",
+      "2 tablespoons Caribbean green seasoning",
+      "1 scotch bonnet pepper, chopped",
+      "2-3 tablespoons olive oil",
+      "2 1/2 lbs beef, cubed; preferably with bones",
+      "3/4 tablespoon salt, adjust to taste",
+      "3 cups pigeon peas, frozen, thawed, and rinsed",
+      "8-10 cups water"
+    ],
+    "description": "A rich and comforting Caribbean curry made with seasoned beef and hearty pigeon peas simmered low and slow in bold spices until tender and flavorful.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a bowl, mix curry powder, black pepper, garam masala, roasted geera, anchar masala, and 1 cup water to form a slurry. Add onion, ginger, garlic, green seasoning, and scotch bonnet pepper. Stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil in a large pot over medium heat. Add the slurry and cook uncovered for 5–7 minutes until thickened and fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add washed beef cubes and stir to coat in curry mixture. Cover and cook over medium-low for 10–15 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove lid and raise heat to medium-high. Cook until liquid evaporates and oil is visible again."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in rinsed pigeon peas. Add enough water to cover ingredients. Season with salt.Stir in rinsed pigeon peas. Add enough water to cover ingredients. Season with salt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring to a boil, then reduce to a gentle simmer. Cook partially covered for 2 to 2 1/2 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mash some peas to help thicken the curry. Simmer until gravy reaches desired consistency."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt before serving."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Let rest 5–10 minutes before serving."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT20M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H20M"
+  },
+  {
+    "id": "carib-trinidadian-curry-cassava-a-deep-rooted-recipe",
+    "country": "Trinidadian",
+    "name": "Curry Cassava",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/curry-cassava-a-deep-rooted-recipe/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 1/2 tablespoons vegetable oil",
+      "1 medium onion, sliced",
+      "8 cloves garlic, roughly chopped",
+      "3/4 tablespoon cumin seeds, geera",
+      "1 Scotch Bonnet pepper, sliced",
+      "1 tablespoon Caribbean green seasoning",
+      "2 1/2 tablespoons curry powder",
+      "3 pounds cassava, fresh or frozen, peeled, deveined, cubed",
+      "3/4 tablespoon salt",
+      "1/2 teaspoon black pepper",
+      "1 tablespoon garam masala, or ancho masala",
+      "3-4 cups water",
+      "Optional",
+      "2 tablespoons chadon beni (culantro), chopped, or chopped cilantro"
+    ],
+    "description": "A robust Guyanese-inspired Curry Cassava, featuring tender cassava chunks simmered in a fragrant blend of curry powder, green seasoning, and garam masala, perfect as a side dish or paired with roti.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Peel the cassava (if using fresh), then cut into chunks and remove the fibrous core running through the center. Rinse well and set aside. If using frozen cassava, ensure it’s peeled and deveined before use."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Warm the oil in a deep pot over medium heat, then add the sliced onion, chopped garlic, Scotch Bonnet, and cumin seeds. Reduce to low heat and cook gently."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 3 minutes, stir in green seasoning and cook for 2 more minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add curry powder and continue cooking on low to bloom spices (approx. 4–5 minutes), adding more oil if needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the cassava chunks, stirring thoroughly to coat with the spiced mixture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn heat to medium-high, add salt, pepper, and garam masala."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in water and bring to a boil, then reduce heat to medium-low. Simmer, partially covered, until cassava is tender and breaking apart, about 25 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Monitor liquid and add water if necessary."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once the cassava is soft and the gravy has thickened, taste and adjust seasoning. Stir in chopped chadon beni or cilantro if using. Serve hot."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT30M",
+    "totalTime": "PT45M"
+  },
+  {
+    "id": "carib-general-caribbean-curry-channa-pigeon-peas-aloo-ultimate-comfort-food",
+    "country": "General Caribbean",
+    "name": "Curry Channa, Pigeon Peas & Aloo",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/curry-channa-pigeon-peas-aloo-ultimate-comfort-food/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "300 g / 11.6 oz frozen pigeon peas, pre-boiled",
+      "2 tablespoons olive oil",
+      "1 large onion, sliced",
+      "10-12 cloves garlic, smashed",
+      "3/4 tablespoon geera, cumin seeds",
+      "2 1/2 tablespoons curry powder",
+      "1 teaspoon black pepper",
+      "540 ml / 19 fl oz chickpeas, rinsed, skins removed",
+      "1/4 cup water",
+      "2 lbs potatoes, cut into large pieces",
+      "1 small Scotch bonnet pepper, optional",
+      "1 tablespoon Caribbean green seasoning",
+      "1 tablespoon anchar masala",
+      "1 teaspoon salt, adjust to taste",
+      "3-4 cups water",
+      "2-3 tablespoons chadon beni, chopped"
+    ],
+    "description": "This hearty Caribbean-style curry combines chickpeas, pigeon peas, and potatoes in a fragrant, spice-infused gravy. This satisfying plant-based dish pairs beautifully with sada roti, paratha roti, buss-up-shut, or steamed rice.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Rinse the frozen pigeon peas with cool water. Place them in a deep saucepan and cover with water, ensuring the water level is approximately 2-3 inches above the peas. Bring to a rolling boil and cook for 45-50 minutes. Drain, rinse, and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil in a deep, heavy saucepan over medium heat. You can use any cooking oil you prefer. Add the sliced onion, smashed garlic, and cumin seeds. Cook for approximately 2-3 minutes, or until fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce the heat to medium-low and add the curry powder and black pepper. The goal is to toast, or fry, the curry powder to release the aromas of the spices that make up the blend. Your kitchen should begin to fill with that comforting, warm, homely scent associated with a good Caribbean curry. Cook for approximately 4 minutes, or until the curry powder darkens slightly and begins to clump. Add a little more oil if you notice that it is sticking to the pan."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Now add the pre-cooked pigeon peas along with the rinsed chickpeas, or channa. If you’re using canned pigeon peas, there’s no need to pre-cook them. Rinse and add them to the pan."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In the video accompanying this recipe, I demonstrate how I remove the outer skins from the chickpeas and explain why I do so. However, this is entirely optional, as removing all the skins can take a few minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir well to coat the legumes in the curry mixture. Add the 1/4 cup of water to deglaze the pan and loosen the flavorful curry residue from the bottom. A lot of flavor lives in that residue, so take the time to lift it into the mixture. Allow the liquid to cook off."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the potato pieces, Caribbean green seasoning , Scotch bonnet pepper if you're using it (or any spicy pepper in the amount you can tolerate), anchar masala, salt, and 3 cups of water. Increase the heat and bring everything to a boil, then reduce the heat and maintain a simmer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "As the curry cooks, stir it approximately every 15 minutes and add more water as needed. If you’re wondering whether vegetable stock would be better than water, I’d humbly suggest sticking with water. This is a traditional Caribbean-style curry, where our ancestors never used stock. To be honest, in my opinion, vegetable stock can taint the finished Curry Channa, Pigeon Peas & Aloo by introducing flavors that don’t belong in this particular dish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook for approximately 45 minutes, then it’s time to personalize things. Taste and adjust the salt to your liking, and determine whether the sauce or gravy has reached a consistency you’re happy with."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Keep in mind that, as in my case, the cast-iron pot I used retains a lot of heat. The gravy will continue to thicken even after you turn off the stove, so account for that when deciding when the curry is ready. Just before you turn off the stove, add the chopped Chadon Beni (aka culantro or Bandanya)"
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Since this dish is usually served with paratha or buss-up-shut roti , it should have a bit of sauce or gravy. Along with the roti, most of the time you'd have a side of mango kuchela . If you've made my apple kuchela , now would be a great time to enjoy some as well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Have you ever combined channa and pigeon peas with aloo in a curry dish? I'd love to hear from you in the comments below. If you have any related questions, feel free to reach out in our private member area, the Ajoupa ! Membership is 100% FREE!"
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT15M",
+    "cookTime": "PT1H30M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-curry-chicken-hearts-and-liver",
+    "country": "Caribbean",
+    "name": "Curry Chicken Hearts And Liver",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/curry-chicken-hearts-and-liver/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 tablespoons olive oil",
+      "1 medium onion, sliced",
+      "7 cloves garlic, smashed",
+      "1/2 teaspoon black pepper",
+      "3/4 tablespoon Garam masala",
+      "1 1/2 tablespoons Caribbean Green Seasoning",
+      "1 3/4 tablespoons curry powder, madras blend",
+      "2-2 2 1/2 cups water, divided",
+      "1 small tomato, diced",
+      "3/4 tablespoon salt",
+      "1 Scotch Bonnet pepper",
+      "1 lemon, juice",
+      "1 lb chicken hearts, sliced 1/2",
+      "1 lb chicken liver, 1 1/2 inch pieces",
+      "1 teaspoon Amchar Masala, or ground roasted cumin",
+      "2 tablespoons chopped parsley"
+    ],
+    "description": "As a lil fella growing up in the Caribbean, I enjoyed Stewed Chicken Liver , something I came to learn was not the norm for children my age. That love graduated to hearts and gizzards, and not only the sort of Caribbean stewed version, but in a deep and rich curry base as well.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the oil on a medium flame in a wide pan and add the onion, garlic, and black pepper. Reduce the heat and cook for 3 minutes before adding the Caribbean Green Seasoning and Garam Masala. Cook for another 3 minutes on low."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the curry powder and stir until well combined. Cook for 3 minutes, then turn the heat to medium and add 3/4 cup water. Stir in the tomato, salt, and Scotch Bonnet pepper. Bring to a rolling boil and cook for 4-5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Do not cover the pan as we want to burn off that liquid. In the video, I explained how I achieved separation when I passed my spoon across the bottom of the pan, meaning all the liquid was gone. Both the chicken hearts and liver were washed with the juice of a lemon and cool water, then drained. At this point, add the chicken hearts to the pot and stir well to coat with the curry base we created."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add 1 1/2 cups of water to the pot, bring to a boil, then reduce the heat to a simmer and cook for 25 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "It’s now time to add the liver to the pan and stir gently. As it comes back to a boil, reduce to a simmer, add the Anchar Masala, and cook for 5-7 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Everything should be fully cooked at this point, so you may taste and adjust the salt to your liking. Top with the chopped parsley. Were I in the Caribbean, I’d use chopped culantro (also known as Chadon Beni ) instead, and the other option is chopped coriander (also known as cilantro) ."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-trinidadian-curry-chicken-with-bodi",
+    "country": "Trinidadian",
+    "name": "Curry Chicken with Bodi (Yard Beans)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/curry-chicken-with-bodi/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 pounds chicken, cut into 2–3 inch pieces",
+      "1 tablespoon Caribbean Green Seasoning",
+      "1 teaspoon salt, adjust to taste",
+      "1/4 teaspoon black pepper",
+      "1/4 Scotch Bonnet pepper, optional",
+      "2 tablespoons vegetable oil",
+      "2 1/2 tablespoon curry powder",
+      "1/4 teaspoon cumin seeds",
+      "1 shallot, or small onion, sliced",
+      "5-7 cloves garlic, sliced",
+      "1 bundle bodi, about 4–5 cups, trimmed and cut into 1–1 1/2 inch pieces",
+      "1 1/2 cups water"
+    ],
+    "description": "This hearty one-pot curry combines spiced chicken with tender yard beans in an authentic Caribbean grav, perfect for roti or rice.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Combine chicken, green seasoning, salt, black pepper, and Scotch bonnet in a bowl. Marinate for 30 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "During that time, trim and wash bodi, then keep in cool water until ready."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil in a large pot over medium. Add shallot and garlic; cook gently for 3–4 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in cumin seeds and curry powder; cook on low for 3–5 minutes to develop flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase heat to high and add chicken with its marinade. Stir to coat in the curry base."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Uncover and raise heat to evaporate excess liquid."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add bodi and stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in 1–1 1/2 cups water (use marinade bowl residue). Bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce heat to low. Cover and simmer for 25–30 minutes, until chicken is cooked and bodi tender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt. Serve hot with rice or warm roti."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT30M",
+    "cookTime": "PT45M",
+    "totalTime": "PT1H15M"
+  },
+  {
+    "id": "carib-trinidadian-20-minute-curry-chicken-with-spinach",
+    "country": "Trinidadian",
+    "name": "Curry Chicken with Potato and Spinach (Trinidadian)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/20-minute-curry-chicken-with-spinach/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs chicken, legs with back, cut into pieces",
+      "3 tablespoons olive oil",
+      "6 cloves garlic, smashed",
+      "1/2 teaspoon black pepper",
+      "1/2 tablespoon cumin, geera",
+      "1 teaspoon anchar masala",
+      "3/4 tablespoon salt, adjust to taste",
+      "1/2 onion, medium, diced",
+      "1 Scotch Bonnet pepper, chopped, optional",
+      "1 1/2 tablespoons curry powder",
+      "2 tablespoons Caribbean Green Seasoning",
+      "1/2 cup water, for deglazing curry base",
+      "4 potatoes, large, pre-boiled, cut into 1/4s",
+      "2 cups water",
+      "1/4 lb baby spinach, roughly chopped"
+    ],
+    "description": "A hearty Caribbean one-pan curry of tender chicken, potatoes, and spinach set in flavorful gravy perfect for roti or rice.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Peel, chop, and boil potatoes in salted water until about 80% done (10 minutes). Drain and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a wide pan, heat olive oil over medium heat. Add onion, garlic, cumin seeds, black pepper, and Scotch bonnet. Sauté for 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in Caribbean green seasoning and cook for 2–3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add curry powder and cook 3 minutes. Add 1/4 cup water to deglaze, scraping up any bits. Cook another 3–4 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase heat to medium-high and add chicken pieces. Stir to coat with curry base. Add salt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 3 minutes, add pre-boiled potatoes and spinach, then 2 cups water."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring to a boil, reduce to a rolling boil, and cook for 10 minutes until chicken is cooked through."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt. Simmer uncovered if you want a thicker gravy."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot with roti, rice, or bread."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT20M",
+    "totalTime": "PT35M"
+  },
+  {
+    "id": "carib-trinidadian-curry-chickpeas-with-potato-spinach",
+    "country": "Trinidadian",
+    "name": "Curry Chickpeas with Potato and Spinach",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/curry-chickpeas-with-potato-spinach/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2-3 tablespoons vegetable oil",
+      "1/2 onion, medium, diced",
+      "4 cloves garlic, diced",
+      "1/2 teaspoon cumin seeds, geera",
+      "1/2 scotch bonnet pepper, thinly sliced",
+      "1/4 teaspoon black pepper",
+      "2 1/2 tablespoons curry powder, madras blend",
+      "1 teaspoon Caribbean Green Seasoning",
+      "3 potatoes, large; cut into 2-inch cubes",
+      "1 can chickpeas, rinsed",
+      "1/2 pound baby spinach",
+      "1/2 teaspoon salt, adjust to taste",
+      "2 1/2-3 cups water"
+    ],
+    "description": "A hearty vegan Caribbean curry made with tender chickpeas, creamy potato, and wilted baby spinach in a richly spiced sauce.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil in a wide pan on medium heat. Add onion and garlic, reduce heat to low, and sauté for 2–3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add cumin seeds and scotch bonnet. Cook for another 1–2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the Cumin Seeds (1/2 teaspoon), along with the Scotch Bonnet Pepper (1/2) and Freshly Ground Black Pepper (1/4 teaspoon) and cook another 1-2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in curry powder and cook for 3–5 minutes, stirring constantly, to toast and deepen flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add potatoes and increase heat to medium-high. Stir well to coat in the curry base."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add chickpeas, water, and green seasoning. Bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce heat, cover slightly, and simmer gently for 25 minutes. Add salt and stir."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use a spoon to mash a few chickpeas and potatoes to thicken the sauce. Add spinach and cover. Cook for 2–3 more minutes until wilted."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste for salt and serve hot with roti or rice."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT30M",
+    "totalTime": "PT40M"
+  },
+  {
+    "id": "carib-fusion-jamaican-curry-mackerel-with-tomato-sauce-2",
+    "country": "Fusion, Jamaican",
+    "name": "Curry Mackerel with Tomato Sauce",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/curry-mackerel-with-tomato-sauce-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoons vegetable oil",
+      "1 teaspoon cumin seeds",
+      "1 medium onion, large dice",
+      "6 cloves garlic, smashed",
+      "1 tablespoon Caribbean green seasoning",
+      "1 tablespoon curry powder",
+      "1/2 teaspoon black pepper",
+      "1 can mackerel in tomato sauce, 253 ml",
+      "3/4 cup water",
+      "1 large tomato, large pieces",
+      "2 tablespoons cilantro, chopped",
+      "1 Scotch Bonnet pepper"
+    ],
+    "description": "A quick and flavorful Caribbean-style curry mackerel in tomato sauce with aromatic spices, perfect for an easy fish dinner over rice or roti.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the oil in a wide pan on a medium flame. Add the cumin seeds and toast for about 1 minute. Then add the onion, garlic, Caribbean green seasoning, and Scotch Bonnet pepper. Lower the heat to medium/low so nothing burns."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Four minutes later, add the curry powder and black pepper and continue cooking on low heat for 3-4 minutes so the spices in the curry powder toast and become fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn the heat to medium and add the mackerel and the sauce. Stir well to coat it with the curry base. Add the water and bring to a boil. Simmer for 4 minutes. You can leave the fish pieces intact or, as in my case, cut them each in half."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the tomato pieces and the chopped cilantro and cook a further minute before tasting and adjusting the salt to your liking. I don’t add salt as I find that tin Mackerel is usually packed in sodium. As you turn off the stove, add the lime (or lemon) juice. Enjoy! Add more water if you want more gravy or sauce."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT5M",
+    "cookTime": "PT15M",
+    "totalTime": "PT20M"
+  },
+  {
+    "id": "carib-general-caribbean-curry-smelts-recipe-a-dangerously-addictive-comfort-meal",
+    "country": "General Caribbean",
+    "name": "Curry Smelts Recipe",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/curry-smelts-recipe-a-dangerously-addictive-comfort-meal/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 lbs smelts",
+      "1 lime or lemon, juiced",
+      "1 teaspoon salt",
+      "1 teaspoon black pepper, divided",
+      "1 1/2 tablespoons Caribbean green seasoning",
+      "3/4 cup all-purpose flour",
+      "2 cups vegetable oil",
+      "1 1/2 tablespoons vegetable oil",
+      "1 small onion, diced",
+      "6 cloves garlic, smashed",
+      "1 scotch bonnet pepper",
+      "3/4 tablespoon anchar masala",
+      "3/4 tablespoon ground roasted geera, cumin",
+      "2 tablespoons curry powder",
+      "2 cups water",
+      "2 tablespoons chopped cilantro or coriander"
+    ],
+    "description": "This curry smelts recipe features crispy fried smelts simmered in a rich Caribbean curry gravy with roasted geera, garlic, onion, and bold island spices. A comforting seafood curry perfect with rice or hot Sada roti .",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the smelts with the juice of the lime or lemon and rinse with cool water. Drain well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season the smelts with the salt, half of the black pepper, and the Caribbean green seasoning . Mix well to fully coat the fish ."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Prepare your frying station with the flour in a bowl, a paper towel-lined plate, and a wok or deep pan with vegetable oil heated for frying."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Dust the seasoned smelts lightly in the flour and fry for 5 to 7 minutes until golden and crisp. As they fry, the kitchen will immediately remind you why simple seafood dishes are often the most satisfying. Drain and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the water into the same bowl used to season the smelts and reserve, so none of that flavor goes to waste."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once all the smelts are fried, heat the remaining vegetable oil in a saucepan on medium heat. Add the onion, garlic, and scotch bonnet pepper and cook for 1 minute until fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the roasted geera, anchar masala, remaining black pepper, and curry powder. Reduce the heat to low and cook for about 4 minutes, stirring occasionally to toast the spices evenly and release their aroma. The scent of the spices cooking away will perfume the entire kitchen with that unmistakable Caribbean warmth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the reserved water (with rememnts of marinade) to the pot and bring the heat back up to medium-high. Allow the curry sauce to reduce by about 25 % and deepen in color and flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the fried smelts back to the pan and spoon the curry sauce over them to coat evenly. Simmer for 3 to 4 minutes until the sauce thickens and the smelts absorb that rich Caribbean curry goodness. If the sauce becomes too thick, add a bit more water."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the salt to your liking. Finish with the chopped cilantro or coriander and serve warm with coconut rice or hot sada roti for the full experience. Were I still based in Trinidad and Tobago, I'd use chopped Chadon Beni (culantro) instead of the cilantro."
+      }
+    ],
+    "yields": 5,
+    "prepTime": "PT20M",
+    "cookTime": "PT30M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-jamaican-curry-stew-chicken-wings-2",
+    "country": "Jamaican",
+    "name": "Curry Stew Chicken Wings",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/curry-stew-chicken-wings-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 pounds chicken wings, trimmed, cut into flats and drumettes",
+      "2 tablespoons curry powder",
+      "1 medium tomato, diced",
+      "1 medium onion, diced",
+      "1 tablespoon ginger, grated",
+      "2 tablespoons Caribbean Green Seasoning",
+      "3/4 teaspoon salt, adjust to taste",
+      "1/2 teaspoon black pepper",
+      "1 teaspoon tomato ketchup",
+      "1 Scotch Bonnet pepper, optional, seeds removed for less heat",
+      "1 1/2 tablespoons grapeseed oil, or any neutral oil",
+      "1 1/2 tablespoons golden brown sugar",
+      "2 scallions, chopped",
+      "1 tablespoon celery leaves, chopped",
+      "2-3 cups water"
+    ],
+    "description": "A Trinidadian classic that blends bold curry flavor with deep caramelized stew, all wrapped around juicy chicken wings.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl, season chicken wings with curry powder, tomato, onion, ginger, green seasoning, salt, pepper, ketchup, and scotch bonnet. Mix well. Marinate for 2 hours or more in the fridge."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a heavy pot over medium-high heat, add oil and brown sugar. Let sugar melt, froth, and turn amber."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Carefully add seasoned wings to pot. Stir well to coat with caramel."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Lower heat to medium-low. Cover and cook for 5–7 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove lid, raise heat, and cook until all natural liquid evaporates and oil is visible."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the lid back on slightly ajar and let it cook on a roiling boil for another 10 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce to rolling simmer, cover slightly, and cook 20 minutes. Add more water if needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt. Simmer uncovered 4 minutes more to thicken gravy if desired."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Finish with chopped scallions and celery leaves. Serve hot."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT15M",
+    "cookTime": "PT35M",
+    "totalTime": "PT50M"
+  },
+  {
+    "id": "carib-trinidadian-curry-stew-pork-with-kale",
+    "country": "Trinidadian",
+    "name": "Curry Stew Pork with Kale",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/curry-stew-pork-with-kale/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 lbs pork, cubed, washed",
+      "3/4 tablespoon salt, adjust",
+      "1 tablespoon curry powder",
+      "1 1/2 tablespoons Caribbean Green Seasoning",
+      "1/2 teaspoon black pepper",
+      "1 tablespoon Worcestershire sauce",
+      "1 tablespoon olive oil",
+      "1 tablespoon golden brown sugar",
+      "1 cup water, for cooking",
+      "5 sprigs thyme",
+      "4 cloves garlic, smashed",
+      "1 large shallot, sliced",
+      "1 tablespoon ginger, grated",
+      "1 Habanero pepper, sliced",
+      "1 lb kale, ribs removed, greens torn",
+      "1/2 cup water, or coconut milk",
+      "10 grape tomatoes, halved"
+    ],
+    "description": "Tender pork simmered in a rich Caribbean curry gravy with hearty kale and vibrant tomatoes, an island-inspired one-pot meal bursting with flavor.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Season pork: combine pork, salt, curry powder, green seasoning, pepper, and Worcestershire in a bowl."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil on medium-high in a deep pot and add golden sugar. When frothy and amber, add pork and stir to coat. If sugar burns, cool pot and begin again."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add 1 cup water from bowl, bring to a boil. Stir in thyme, garlic, shallot, ginger, and habanero. Cover, simmer 35 minutes, adding water if needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove thyme sprigs, increase heat, uncover to cook off excess liquid until a rich color develops."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add kale, stir and pour in 1/2 cup water or coconut milk. Bring to boil then simmer 25 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Let remaining liquid evaporate, then stir in tomatoes. Taste and season with salt as needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Let remaining liquid evaporate, then stir in tomatoes. Taste and season with salt as needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot with sada roti or steamed rice."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT15M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H15M"
+  },
+  {
+    "id": "carib-general-caribbean-curry-string-beans-with-potato-aloo",
+    "country": "General Caribbean",
+    "name": "Curry String Beans with Potato (Aloo)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/curry-string-beans-with-potato-aloo/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 lb string beans, trimmed, cut into 1–1 1/2 inch pieces",
+      "3 large potatoes, cubed, boiled in salted water",
+      "2 tablespoons vegetable oil",
+      "8 cloves garlic, smashed",
+      "1 teaspoon geera seeds, cumin",
+      "1/2 teaspoon black pepper",
+      "1 tablespoon Caribbean green seasoning",
+      "1/2 Scotch Bonnet pepper, optional",
+      "3/4 tablespoon ground masala",
+      "2 tablespoons curry powder",
+      "1/2 tablespoon salt, adjust to taste",
+      "1 cup water",
+      "1 medium onion, diced",
+      "1 medium tomato, diced – optional",
+      "1/2 cup coconut milk, optional"
+    ],
+    "description": "A comforting Caribbean curry dish made with fresh string beans and tender potatoes, perfect for vegan, vegetarian, or Ital diets. Traditionally served with hot sada roti or paratha roti, but just as satisfying with steamed rice.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash, trim the ends of the string beans, and cut into 1–1 1/2 inch pieces. Peel and cube the potatoes as well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a medium pot, boil the cubed potatoes in salted water for 20–25 minutes until tender. Drain and set aside. If you wanted to save on time, you can cook the potatoes while the curry gets going, then add them when it’s time to do so."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the vegetable oil in a wide, deep pot over medium heat. Add the smashed garlic, geera seeds (cumin), and black pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 2 minutes, stir in the Caribbean green seasoning and Scotch Bonnet pepper. Cook for 1 minute."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce heat to low. Add the ground masala and curry powder, stirring well. Cook for 3 minutes to bloom the spices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the string beans and salt, mixing well to coat in the curry base."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in the water, bring to a boil, then reduce to a simmer for 15 minutes. In the video below, I explained how to use coconut milk instead of water or use both, for a lovely sweeter curry finish to the dish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the pre-boiled potatoes and cook for an additional 10 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt. Remember, you can cook this dry or add a bit more water or coconut milk for a slight gravy, especially if you’d like to serve it with your favourite rice side. The last 5 minutes of cooking is when I’d recommend adding the diced tomato if you want."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT40M",
+    "totalTime": "PT55M"
+  },
+  {
+    "id": "carib-general-caribbean-delicious-easy-stewed-beef-liver-recipe",
+    "country": "General Caribbean",
+    "name": "Delicious Easy Stewed Beef Liver Recipe",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/delicious-easy-stewed-beef-liver-recipe/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 lbs beef liver, chopped, cleaned",
+      "3/4 cup milk",
+      "1 teaspoon salt",
+      "1 tablespoon green seasoning",
+      "1 tablespoon Caribbean browning",
+      "1/2 teaspoon black pepper",
+      "2 tablespoon olive oil",
+      "1 medium onion, sliced",
+      "2 scallions, chopped",
+      "2 cloves garlic, crushed",
+      "1 tablespoon tomato ketchup",
+      "1 medium tomato, diced",
+      "1 tablespoon oyster sauce",
+      "1 cup water",
+      "2 tablespoon parsley, chopped",
+      "fresh thyme, optional",
+      "grated ginger, optional"
+    ],
+    "description": "A comforting Caribbean beef liver recipe with tender pieces simmered in a rich, well-seasoned gravy for a bold and satisfying meal.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Remove any membrane from the liver (as explained in the video), cut into 1 to 2 inch pieces, rinse, then soak in the milk for at least 2 hours. While we would normally wash the liver with lime or lemon juice following Caribbean traditions, this milk method works better in my opinion. It helps to eliminate that sort of chemical or metallic taste liver is known for, removes any unpleasant odor, and helps maintain a lovely moist texture when cooked."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Rinse the soaked liver, drain well, and season with salt, black pepper, green seasoning, and Caribbean browning."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil in a wide pan over medium heat and add the seasoned liver pieces. Sear on all sides for 3–5 minutes uncovered to burn off excess liquid."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Rinse the bowl used to marinate the liver with 1 cup of water and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the onion, scallions, garlic, ketchup, additional green seasoning, tomato, and oyster sauce. Stir well to combine and add the optional thyme and ginger if using."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in the reserved water, bring to a boil, then reduce to a rolling simmer with the lid on for 15 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt as needed. Remove the lid and continue cooking to reduce and thicken the sauce to your liking. Under 5 minutes in most cases."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Finish with chopped parsley and serve."
+      }
+    ],
+    "yields": 5,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-delicious-pepper-chicken-recipe-you-need-to-try",
+    "country": "Caribbean",
+    "name": "Delicious Pepper Chicken Recipe You Need to Try",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/delicious-pepper-chicken-recipe-you-need-to-try/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs Chicken thighs, bones removed",
+      "1 teaspoon salt",
+      "1 tablespoon Caribbean Green Seasoning",
+      "1 tablespoon teaspoon black pepper, divided",
+      "1 teaspoon sesame oil",
+      "1 teaspoon grated ginger",
+      "1 cup all-purpose flour",
+      "1 cup corn starch",
+      "2-3 cups veg oil, for frying",
+      "1 1/2 tablespoon veg oil",
+      "1 large onion, large cut",
+      "1 cup bell peppers, large cut",
+      "10 cloves garlic, roughly chopped",
+      "3 Scotch Bonnet peppers, roughly chopped",
+      "2 tablespoons chopped Chadon Beni, aka culantro, or cilantro",
+      "2 tablespoons chive, finely chopped"
+    ],
+    "description": "About 12 years ago, I made a similar Pepper Chicken recipe when I competed in a global cooking competition in Seoul, South Korea. Yet, I cannot believe I’ve never shared this recipe with you until now. We’ve done Pepper Crab , Lemon Pepper Wings , Caribbean Pepper Calamari , Pepper Lobster , Pepper Wings , and Pepper Shrimp , to name a few. But never this one.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Trim off the excess fat and some skin from the chicken thighs (bones removed) and cut into 2-inch pieces. In the video, I spoke about my culture (Caribbean) and how we wash meats with lime, lemon, or white vinegar."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Unfortunately, I lost all of the step-by-step pictures that I usually take for recipes. Season the chicken with the salt, 1/2 of the black pepper, Caribbean Green Seasoning , Sesame oil, and grated ginger. Allow to marinate for at least one hour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil to fry the chicken pieces on a medium/high flame. Combine the flour and cornstarch, then dust the seasoned chicken pieces in the mixture and fry until golden. About 6-7 minutes. Fry in batches to avoid overcrowding the pan. Set aside on a wire rack."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "On a medium flame, add 1 1/2 tablespoons veg oil in a wide pan or wok. Once hot, add the onion, garlic, remaining black pepper, and bell peppers. Cook for 4 minutes, then add Scotch Bonnet peppers and the pre-fried chicken piece and toss well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat through for about 3 minutes, and then you’re done. As you turn off the stove, mix in the finely chopped chives and Chadon Beni (culantro) . You may add additional salt if you prefer. This pepper chicken is excellent as a snack with your favorite beer, a side dish, or a topping for sandwiches."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-jamaican-vegan-ackee-and-saltfish",
+    "country": "Jamaican",
+    "name": "Delicious Vegan Ackee and “Saltfish”",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/vegan-ackee-and-saltfish/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 can ackee, drained and rinsed",
+      "1 can hearts of palm, 14 oz., drained and rinsed",
+      "2 tablespoons coconut oil",
+      "4 cloves garlic, finely diced",
+      "1/2 cup onion, diced",
+      "1/2 cup bell pepper, diced",
+      "2 tomatoes, diced",
+      "1/2 Scotch Bonnet pepper, finely chopped; or to taste",
+      "3 sprigs fresh thyme, leaves only",
+      "3 scallions, sliced",
+      "Salt, to taste",
+      "black pepper, to taste",
+      "1 teaspoons kelp, or seaweed flakes; optional for “sea” flavor"
+    ],
+    "description": "A plant-based take on the iconic Jamaican dish, blending creamy ackee with flaky hearts of palm in a savory, spicy sauté.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat coconut oil in a large skillet over medium heat. Sauté garlic, onion, and bell pepper until softened, about 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add tomatoes, scotch bonnet, and thyme leaves, and cook another 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Gently stir in ackee and hearts of palm. Cook for 5–7 minutes until warm and blended."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season with salt, pepper, and optional kelp flakes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in scallions, cook 1 minute more, then remove from heat. Serve hot."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT20M",
+    "cookTime": "PT20M",
+    "totalTime": "PT40M"
+  },
+  {
+    "id": "carib-fusion-ginger-mango-muffins",
+    "country": "Fusion",
+    "name": "Diabetic-Friendly Ginger Mango Muffins",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/ginger-mango-muffins/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 cup almond flour",
+      "2/3 cup coconut flour",
+      "2 teaspoon baking powder",
+      "1/2 teaspoon baking soda",
+      "1/4 teaspoon salt",
+      "1 cup mango, sliced",
+      "2 teaspoon fresh ginger root, grated",
+      "1 Tbsp orange, zested",
+      "1/2 cup sour cream",
+      "2 tablespoons unsalted butter, melted",
+      "1 teaspoon vanilla extract",
+      "3/4 cup Splenda, granulated",
+      "1 tablespoon molasses",
+      "2 tablespoon pistachio nuts, chopped, optional",
+      "Nonstick cooking spray or muffin liners"
+    ],
+    "description": "Low‑sugar, tropical muffins sweetened with mango and Splenda, perfect for health‑friendly snacking.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat oven to 375 °F (190 °C). Prepare a 12‑cup muffin tin with liners or spray."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a blender, puree mango, ginger, orange zest, molasses, eggs, sour cream, butter, and vanilla until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl, whisk almond flour, coconut flour, baking powder, baking soda, salt, and Splenda."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Divide batter among muffin cups and top with pistachios if using."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bake 16–18 minutes, or until tops are golden and a toothpick comes out clean."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cool 5 minutes in tin, then transfer to a rack to cool completely before serving."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT20M",
+    "totalTime": "PT40M"
+  },
+  {
+    "id": "carib-general-caribbean-easy-foolproof-caribbean-stewed-turkey-wings",
+    "country": "General Caribbean",
+    "name": "Easy & Foolproof Caribbean Stewed Turkey Wings",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-foolproof-caribbean-stewed-turkey-wings/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 1/2 lbs turkey wings, separated",
+      "1 lime or lemon, juiced",
+      "3/4 tablespoon salt, adjust",
+      "3/4 teaspoon black pepper",
+      "1 1/2 tablespoon soy sauce",
+      "1 tablespoon all-purpose seasoning",
+      "2 scallions, chopped",
+      "2 tablespoons tomato ketchup, divided",
+      "1 1/2 tablespoon Caribbean green seasoning",
+      "1 medium onion, sliced",
+      "6-8 allspice berries, aka pimento seeds",
+      "1 1/2 tablespoon browning, Caribbean style",
+      "2 tablespoon vegetable oil",
+      "2 cups bell pepper, assorted, chopped",
+      "3 slices ginger",
+      "2 bay leaves",
+      "1 small habanero pepper, optional",
+      "1 medium carrot, sliced",
+      "2 1/2 to 3 cups water, adjust",
+      "3 tablespoons parsley, chopped"
+    ],
+    "description": "A rich and savory stewed turkey wings recipe with authentic Caribbean flavor made simple without caramelizing sugar, delivering consistent and foolproof results every time.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Split the turkey wings into drummettes and flats, and discard the wing tips or save them for making stock. Wash with the juice of a lime or lemon and cool water. Alternatively, you can use white vinegar and water. Drain."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season with salt, black pepper, soy sauce, all-purpose seasoning, scallions, 1 tablespoon tomato ketchup, green seasoning , onion, allspice berries, and browning."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Marinate for two hours or overnight for best results, as the marinade will penetrate deeper. Remove from the fridge about 30 minutes prior to cooking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the oil in a deep solid pot and add the seasoned wings, shaking off the marinade and reserving it. Stir and cook on medium heat for about 6–10 minutes, allowing a slight color to develop."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add 2 1/2 cups water to the same bowl with the leftover marinade and stir to pick up everything. Set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the bell peppers, ginger, bay leaves, habanero pepper (keep whole and remove later or burst it to release its heat, that Caribbean sunshine), and carrot. Stir well and cook for another 2–3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the water along with the marinade and the remaining ketchup, then bring to a boil by raising the heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce to a simmer and cook for about 1 hour with the lid slightly ajar. Add more water if necessary."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the salt to your liking. If you didn’t break the habanero pepper, now would be a good time to remove it."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Decide if the gravy consistency is to your liking, keeping in mind it will thicken further as it cools and with the residual heat of the pot. Top with parsley and serve with coconut rice or classic Jamaican rice and peas ."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT20M",
+    "cookTime": "PT1H15M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-easy-caribbean-curry-chicken-with-romano-beans",
+    "country": "Caribbean",
+    "name": "Easy Caribbean Curry Chicken with Romano Beans",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-caribbean-curry-chicken-with-romano-beans/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "6 lbs chicken thighs, skin and fat removed",
+      "1 tablespoon salt",
+      "2 tablespoons Caribbean green seasoning",
+      "1 large tomato, diced",
+      "2 scallions, chopped",
+      "1 scotch bonnet pepper, optional",
+      "1/2 teaspoon black pepper",
+      "2 –3 tablespoons olive oil",
+      "1 medium onion, diced",
+      "10 cloves garlic, divided",
+      "2 –3 cups water, divided",
+      "2 cups romano beans, pre-cooked",
+      "1 3/4 tablespoons curry powder",
+      "1 tablespoon roasted geera, cumin",
+      "1 tablespoon anchar masala",
+      "3 tablespoons Chadon beni (culantro), culantro, chopped"
+    ],
+    "description": "This Easy Caribbean Curry Chicken with Romano Beans is a seasonal island-style curry where tender chicken pieces simmer in a deeply flavored curry sauce, finished with creamy romano beans that absorb the spices beautifully without needing potatoes or other fillers.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "pre-cook the Romano beans in boiling water for 45 minutes. Drain and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season the chicken with salt, Caribbean green seasoning, tomato, scallions, scotch bonnet pepper, and black pepper. Mix well and allow to marinate while the beans cook."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the oil in a deep pot over low heat. Add the onion and half of the garlic. Cook for 2 to 3 minutes until softened."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the curry powder and stir constantly to bloom the spices which makes a good curry powder. Cook for about 4 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase the heat to medium-high and add 1/2 cup of water along with the roasted geera and anchar masala. Bring to a boil and maintain a rolling boil until the liquid cooks off and the oil separates."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the seasoned chicken and stir well to coat each piece in the curry base. Cover the pot. After about 3 minutes, the chicken will release its own liquid."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the lid and cook uncovered for about 5 minutes to burn off that liquid. This step helps cook-off the 'rawness' of the curry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the pre-cooked romano beans and stir gently."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in 2 cups of water and bring to a boil, then reduce to a rolling simmer. Add the remaining garlic. Add more water during cooking if necessary."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 25 minutes, taste and adjust salt as needed. Increase the heat if the sauce is too runny and allow it to reduce."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off the heat and stir in the chadon beni or cilantro. Serve hot with coconut rice or rice and peas."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT30M",
+    "cookTime": "PT1H20M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-trinidadian-delicious-curry-corn-2",
+    "country": "Trinidadian",
+    "name": "Easy Caribbean Curry Corn with Green Seasoning",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/delicious-curry-corn-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 tablespoons vegetable oil",
+      "1 onion, diced",
+      "7 cloves garlic, smashed",
+      "1 1/2 tablespoons Caribbean Green Seasoning",
+      "2 tablespoons curry powder",
+      "1 cup water, for cooking curry",
+      "1 tomato, diced",
+      "1 green Scotch Bonnet pepper",
+      "3/4 tablespoon salt",
+      "1/2 teaspoon black pepper",
+      "3/4 tablespoon roasted geera, ground roasted cumin",
+      "6 large sweet corn, kernels",
+      "2 cups water, for cooking corn",
+      "1/2 cup chives, chopped fine",
+      "1 medium onion, diced",
+      "7 cloves garlic, smashed",
+      "1 1/2 tablespoons Caribbean Green Seasoning",
+      "2 tablespoons curry powder",
+      "1 cup water, for cooking curry",
+      "1 medium tomato, diced",
+      "1 green Scotch Bonnet pepper",
+      "3/4 tablespoon salt",
+      "1/2 teaspoon black pepper",
+      "3/4 tablespoon roasted geera, ground roasted cumin",
+      "6 large sweet corn, kernels only",
+      "2 cups water, for cooking corn",
+      "1/2 cup chives, chopped fine"
+    ],
+    "description": "A quick, bold vegetarian curry made with sweet corn, Caribbean spices, and a Scotch Bonnet kick.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat a heavy-bottom pan on medium and add the vegetable oil. Sauté onion and garlic for 2–3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the Caribbean Green Seasoning and cook for another 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the Caribbean Green Seasoning and cook for another 3 minutes. Add 1 cup water, tomato, Scotch Bonnet, salt, geera, and black pepper. Cook until the liquid reduces and thickens to form a curry base."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add corn kernels and stir to coat fully in the curry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in 2 cups of water, bring to a boil, and simmer for about 6 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If using coconut milk, add 1 cup of coconut milk and 1 cup of water."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt as needed. If using, add coconut milk with the water in this step."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off the stove and stir in chopped chives. Let sit for a minute before serving to allow the sauce to thicken."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT15M",
+    "totalTime": "PT25M"
+  },
+  {
+    "id": "carib-fusion-easy-caribbean-fiddlehead-salad-recipe",
+    "country": "Fusion",
+    "name": "Easy Caribbean Fiddlehead Salad Recipe",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-caribbean-fiddlehead-salad-recipe/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb fiddleheads, cleaned and washed",
+      "1 medium red onion, sliced thin",
+      "10-16 grape tomatoes, halved",
+      "2 scallions, chopped",
+      "1 cup sweet peppers, diced",
+      "3/4 lb salted cod, prepared and flaked",
+      "3/4 teaspoon sea salt, divided",
+      "1/2 teaspoon black pepper",
+      "1/4 cup olive oil",
+      "3 cloves garlic, sliced thinly",
+      "2 bird’s eye peppers, sliced thinly",
+      "3 sprigs thyme, leaves only",
+      "1/2 lemon, juiced"
+    ],
+    "description": "A vibrant Caribbean-inspired fiddlehead salad made with salted cod, fresh vegetables, and warm infused olive oil. This easy fiddlehead salad recipe uses traditional saltfish buljol techniques to create a fresh spring dish packed with earthy flavor and Caribbean character.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Remove any papery skins from the fiddleheads, trim the ends, and wash thoroughly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Steam the fiddleheads for about 15 minutes, sprinkling half of the sea salt over them halfway through cooking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If boiling instead, cook them in salted water and immediately shock them in ice water after straining to stop further cooking. Set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Prepare the salted cod by soaking it in boiling water. When the water cools, squeeze, rinse, and squeeze out the remaining water before flaking. Remove any tiny bones that may still be present. Even if you purchase boned (bones removed) there's a risk that some may still be present – remove and discard. Salted pollock will be a cheaper option than Cod. This step removes most of the salt the Cod is cured with, and it helps to rehydrate the fish itself."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl combine the sliced onion, grape tomatoes, scallions, sweet peppers, remaining sea salt, black pepper, and flaked salted cod."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a frying pan add the olive oil, garlic, bird’s eye peppers, and thyme leaves."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the pan over medium heat and as soon as small bubbles begin forming, turn off the stove. The goal is not to cook the garlic, but infuse the oil with it's lovely flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Allow the oil to sit on the warm burner for 3 to 4 minutes so the flavors infuse into the olive oil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the steamed fiddleahds to the salad bowl."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the warm infused oil over the salad ingredients."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Squeeze in the lemon juice and mix well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the salt to your liking before serving."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Instead of the finely chopped bird’s eye peppers, you can use 1 teaspoon of any of the pepper sauces found in my latest cookbook THE BALANCED BURN: Tropical Soul, Northern Sizzle."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT25M",
+    "cookTime": "PT15M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-trinidadian-outstanding-honey-mustard-dressing-dip-2",
+    "country": "Fusion, Trinidadian",
+    "name": "Easy Caribbean Honey Mustard Dressing",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/outstanding-honey-mustard-dressing-dip-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1/2 cup olive oil",
+      "2 tablespoons honey",
+      "2 tablespoons Dijon mustard",
+      "1 tablespoon lemon juice",
+      "1 1/2 tablespoon rice wine vinegar",
+      "1/2 teaspoon black pepper",
+      "1 pinch salt"
+    ],
+    "description": "If you’re looking for a quick, simple, and tasty dressing for your next salad, I have you covered. This honey mustard dressing can also be used as a dip for your favorite vegetable sticks, chicken wings, or chicken nuggets, and a drizzle on sandwiches will be delightful. You can kick things up using my Hot Honey should you want that extra zing.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Make a simple salad with watercress to enjoy this tangy honey mustard dressing."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add all ingredients to a jar. Seal and shake vigorously until well combined. Alternatively, whisk in a bowl until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use immediately or refrigerate for up to 2 weeks."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Shake before each use."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT5M",
+    "cookTime": null,
+    "totalTime": "PT5M"
+  },
+  {
+    "id": "carib-general-caribbean-easy-caribbean-plantain-casserole",
+    "country": "General Caribbean",
+    "name": "Easy Caribbean Plantain Casserole",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-caribbean-plantain-casserole/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 large ripe plantains",
+      "3/4 teaspoon salt",
+      "1/2 cup olive oil",
+      "1 large onion, diced",
+      "2 tablespoons parsley, chopped",
+      "4 to 6 sprigs thyme",
+      "6 cloves garlic, smashed",
+      "1/2 teaspoon black pepper",
+      "1 cup prepared salted cod",
+      "1 cup sweet bell peppers, diced",
+      "2 scallions, chopped",
+      "1/2 teaspoon smoked paprika, optional",
+      "1/2 stick butter, cut into pieces"
+    ],
+    "description": "Sweet ripe plantains layered with savory stewed salted cod, fresh herbs, peppers, and butter, then baked until beautifully golden. This Easy Caribbean Plantain Casserole is a comforting Trinidad-inspired recipe that's perfect as a hearty side dish or light main meal.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the plantains, trim off the ends, and cut each one in half. Using a paring knife, make a shallow slit lengthwise through the skin."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the plantains in a pot, cover with water, add the salt, and bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce to a simmer and cook for 10 minutes. Drain and allow them to cool."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "While the plantains cool, heat the olive oil in a wide saucepan over medium-low heat. Add the onion, parsley, thyme, garlic, black pepper, prepared salted cod, sweet bell peppers, scallions, and smoked paprika if using."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you're unfamiliar with working with salted cod, you have two options for removing most of the salt it was cured with and rehydrating it. Soak it overnight in water, then rinse, squeeze out the remaining water, and shred it. Alternatively, place the salted cod in a pot with water, bring it to a boil, simmer for 10 to 15 minutes, then drain, rinse, and shred. Although I used boneless (boned) salted cod, I still kept a close eye out for any remaining bones, as they can be a potential choking hazard."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook the salted cod mixture over medium-low heat for 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once the plantains are cool enough to handle, peel them where you made the slit in the skin, then cut them into 1 to 2-inch pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat your oven to 380°F."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Spread one-third of the stewed salted cod mixture into a baking dish. Arrange half of the plantain pieces over the top. Spoon another third of the salted cod mixture over the plantains, then add the remaining plantains. Finish with the final layer of the stewed salted cod."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Scatter the butter pieces evenly over the top."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bake on the middle rack of the oven for 25 to 30 minutes, or until the top is beautifully golden and lightly caramelized."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "I didn't add any further salt to the dish, as the remaining salt from the salted cod, along with the plantains being boiled in lightly salted water, was just right. However, feel free to adjust the seasoning to your own liking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Yes, this recipe is somewhat similar to the Boil and Fried Plantain recipe I shared back in 2025. This time, however, we're making use of the oven to bring everything together and develop a lovely caramelized finish that takes this Plantain Casserole to another level."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Be sure to watch the video below for the complete step-by-step demonstration, and don't forget to leave your comments afterward. I'd love to hear if your family has their own version of plantain casserole or if you added your own personal touch to the recipe. Which I highly encourage."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT25M",
+    "cookTime": "PT40M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-quick-salmon-fried-rice",
+    "country": "Fusion",
+    "name": "Easy Caribbean Salmon Fried Rice",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/quick-salmon-fried-rice/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 tablespoons vegetable oil",
+      "1 garlic clove, diced",
+      "1 cup bell peppers, chopped",
+      "5-8 string beans, trimmed and chopped",
+      "2 stalks scallions, chopped",
+      "1 Bird’s Eye pepper, chopped, optional",
+      "2-3 cups chilled cooked rice",
+      "1-2 cups cabbage, chopped",
+      "1 teaspoon sesame oil",
+      "1 can salmon, drained",
+      "1 tablespoon dark soy sauce, or tamari",
+      "1 tablespoon Chinese cooking wine"
+    ],
+    "description": "A speedy one-pot rice dish with canned salmon, fresh veggies, and fragrant seasonings; ready in under 10 minutes.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat vegetable oil in a well-heated pan or wok over medium-high heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add garlic and sauté ~10 seconds; then add bell peppers and string beans, stir-frying ~50 seconds."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Drizzle in sesame oil and stir to coat vegetables."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add cabbage, bird’s-eye pepper, and cooking wine; stir-fry 1 minute."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Gently fold in salmon, being careful not to over-break it."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add chilled rice and soy sauce; stir-fry on high until heated through."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from heat, garnish with scallions, and serve immediately."
+      }
+    ],
+    "yields": 2,
+    "prepTime": "PT5M",
+    "cookTime": "PT5M",
+    "totalTime": "PT10M"
+  },
+  {
+    "id": "carib-caribbean-easy-chicken-flavoured-rice-recipe",
+    "country": "Caribbean",
+    "name": "Easy Chicken Flavoured Rice Recipe",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-chicken-flavoured-rice-recipe/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoons butter",
+      "1 medium onion, diced",
+      "3/4 teaspoon black pepper",
+      "1/2 teaspoon sea salt",
+      "3 small sprigs thyme",
+      "1 stalk celery with leaves, chopped",
+      "2 pimento peppers, chopped",
+      "1 1/2 tablespoons chicken bouillon powder",
+      "1 1/2 tablespoons roucou, annatto extract",
+      "2 cups par-boiled brown rice, washed, drained",
+      "2 1/2 cups chicken stock",
+      "1 1/2 cups water",
+      "2 tablespoons chives, chopped"
+    ],
+    "description": "Chicken-flavored rice. A comforting and flavourful seasoned rice with Caribbean roots, this dish balances lightness for summer with warmth for fall and winter. The addition of roucou (annatto extract) lends both earthy flavor and a vibrant color, a culinary gift from the native peoples of the Caribbean. Similar to “Spanish Rice” enjoyed across the islands, this recipe is versatile, simple, and deeply satisfying.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the butter in a wide pan over medium heat. Add the onion, black pepper, salt, thyme, celery, and pimento peppers. Lower the heat to medium-low and cook for 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Push everything to the side of the pan, clearing the center. Add the chicken bouillon powder and toast lightly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the roucou and mix well to combine the flavors. Cook for another 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the washed and drained rice, stirring gently to coat with the seasonings."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in the chicken stock and water. Increase the heat and bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce to a simmer, partially cover with a lid, and cook for 25 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off the stove, cover fully, and let the rice rest on the hot burner for 10–15 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Fluff with a fork and fold in the chopped chives before serving. I enjoy this with Stewed Oxtail as well as Jamaican Steamed Snapper ."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Optional Ingredients: 1 teaspoon grated garlic | 1 teaspoon grated ginger | 1 small scotch bonnet pepper (finely diced) or dried pepper flakes. To make this rice dish fully vegan or vegetarian, use vegan or vegetarian stock and stock powder."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT40M",
+    "totalTime": "PT50M"
+  },
+  {
+    "id": "carib-fusion-easy-comforting-roasted-butternut-and-carrot-soup",
+    "country": "Fusion",
+    "name": "Easy Comforting Roasted Butternut and Carrot Soup",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-comforting-roasted-butternut-and-carrot-soup/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs butternut squash",
+      "3 large carrots",
+      "2 medium onions",
+      "8-10 cloves garlic",
+      "8 sprigs thyme",
+      "6-8 leaves sage",
+      "2 green wiri wiri peppers, optional",
+      "3 green pimento peppers, aka seasoning peppers",
+      "4 tablespoons olive oil, divided",
+      "1 teaspoon black pepper",
+      "3/4 tablespoon salt",
+      "1 teaspoon curry powder",
+      "3/4 teaspoon ground roasted geera, cumin",
+      "4 cups vegetable stock",
+      "3/4 tablespoon grated ginger",
+      "1 1/2 cups half and half cream",
+      "2 tablespoons honey"
+    ],
+    "description": "A comforting roasted butternut and carrot soup made with roasted vegetables, garlic, herbs, peppers, curry powder, roasted cumin, ginger, cream, and honey. This full-size batch is ideal for preparing ahead and freezing for later.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Cut the squash into 1/2 or 1/4 pieces, scoop out the seeds, and discard them. Peel and cut the onions in half, wash the carrots and cut them lengthwise in half, then place everything onto a lined baking tray."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the herbs and peppers, along with a foil pouch containing the garlic. Add 1 tablespoon of the olive oil to the garlic and close the pouch. This will prevent the garlic from burning while everything is in the oven."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Drizzle the remaining olive oil over everything, top with 1/2 of the salt, and place the baking tray into a preheated 400°F oven uncovered for 45 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "As the vegetables and herbs roast in the oven, the comforting scent will give your kitchen that homely feel, as if you are ready for a cold winter’s night."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the baking tray from the oven and drain the oil into a large soup pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "On a medium-low flame, heat the oil in the pot. That oil is flavored with the herbs, peppers, and roasted vegetables, so it is important that we use this as the base for continuing with the roasted butternut and carrot soup."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the curry powder along with the roasted cumin (geera) and cook for 2 minutes before adding the roasted garlic, along with any oil from the pouch we created."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Give the carrots and onions a rough chop, then add them to the soup pot. Stir well to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Scoop out the roasted flesh of the butternut squash and add it to the pot. You may refer to the video below to see how I walk you through this step."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir well, then add the vegetable stock. You may add chicken stock if you are not concerned about this soup being vegan. Regardless of the stock you use, be mindful that it will have a sodium element and affect the overall salt in the dish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the grated ginger, remaining salt, and black pepper and bring to a boil. As it starts simmering, add the roasted sage leaves and the thyme. With the thyme, remove any woody stems as they can be a potential choking hazard."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Simmer for 7 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the half-and-half cream, or use coconut milk, heavy cream, or a combination of them all, along with the honey, and bring back to a simmer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Using a stick blender, puree everything until smooth. Taste and adjust the salt to your liking, and I recommend freshly ground black pepper when you serve it."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Freeze leftovers for those evenings after work when you want something tasty, light, and generally comforting. It can last in the freezer for at least 60 days."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "May I recommend trying my Roasted Tomato And Rice Soup and Memories of Tomato Choka , a soup my daughters are hooked on and always request at the first sign of Fall temperatures. What's your favourite soup? Leave me a comment below, and should you have any questions about this soup, drop me a line in The Village , which is our FREE Members ONLY Community."
+      }
+    ],
+    "yields": 10,
+    "prepTime": "PT20M",
+    "cookTime": "PT1H",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-easy-crab-apple-anchar-achar",
+    "country": "Caribbean",
+    "name": "Easy Crab Apple Anchar (Achar)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-crab-apple-anchar-achar/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs, crab apples (cored and sliced)",
+      "1/2 cup, vegetable oil",
+      "10 cloves, garlic (smashed)",
+      "2 Scotch bonnet peppers, chopped",
+      "2 1/2 tablespoons, anchar masala",
+      "1 teaspoon, salt",
+      "2 tablespoons, mustard oil"
+    ],
+    "description": "This Easy Crab Apple Anchar (Achar) turns seasonal crab apples into a spicy Caribbean condiment with anchar masala, Scotch bonnet peppers, garlic, and aromatic oils. Inspired by Mango Anchar and the anchar traditions of Trinidad and Tobago and Guyana, it is a flavorful way to enjoy late-summer crab apples.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the crab apples, core them, and remove the seeds, then slice them into 1/2 inch segments."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the crab apple pieces onto a baking tray and expose them to direct sun for a couple of days or place them in a moderate oven for 6-8 hours at about 160-180 F."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "The goal is to dehydrate the crab apples, removing the moisture content so we can then replace that with the spicy oil that everything will be pickled in."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a saucepan on a low flame, add the vegetable oil, garlic, Scotch bonnet peppers, and anchar masala. Cook gently for 4-6 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the prepared crab apple pieces and stir well to coat with this spicy aromatic base. Cook on low for about 10 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Just before you turn off the stove, add the mustard oil, stir well, and give it a quick taste. Adjust the salt and heat to your liking. Some people like anchar a bit more spicy, so you can adjust the amount of Scotch bonnet you add."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour everything into a glass jar and allow it to marinate for at least a week. Give it a mix or shake it every couple of days. Store in a cool, dark spot in your kitchen."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Just as important as the crab apple pieces are, so too is the oil. Add a bit more vegetable oil at the start if you want more seasoned oil. This oil is drizzled over soups, curries, and anywhere you would typically add pepper sauce."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you enjoy this Crab Apple Anchar, may I suggest you give the Apple Kuchela , as well as the Classic Mango Kuchela , a try. Similar flavor profiles, but the texture is distinctly different."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "I would love to hear your take on this Crab Apple Anchar, so leave me a comment below."
+      }
+    ],
+    "yields": 2,
+    "prepTime": "PT30M",
+    "cookTime": "PT16M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-easy-crab-apple-chow-spicy-pickle",
+    "country": "General Caribbean",
+    "name": "Easy Crab Apple Chow (Spicy Pickle)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-crab-apple-chow-spicy-pickle/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "15-20 crab apples, washed",
+      "1 scotch bonnet pepper, chopped",
+      "1 teaspoon black pepper",
+      "5 sweet/salt prunes",
+      "2 tablespoons chopped chadon beni",
+      "4-6 wiri wiri, whole",
+      "1 large shallot, sliced thinly",
+      "8 cloves garlic, smashed",
+      "3/4 teaspoon salt",
+      "2 lemons, juice",
+      "2 limes, juice",
+      "water"
+    ],
+    "description": "This Easy Crab Apple Chow is a fresh, fiery, and tangy Trinbagonian-style fruit pickle made with tart crab apples, citrus, garlic, chadon beni, and hot peppers. This full-size batch is perfect for sharing or enjoying over several days.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the crab apples, remove any blemishes and stems, then make cuts into the skin as I demonstrate in the video below. These cuts will allow the spicy pickle liquid to penetrate the crab apples and get the flavours of the garlic, citrus, hot peppers, and chadon beni deep into the flesh of the crab apples."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the prepared crab apples into a large bowl, followed by the black pepper, sweet/salted prunes, chopped chadon beni, wiri wiri peppers (aka coffee or cherry peppers), shallot, and garlic."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Top with the salt, then pour the lemon and lime juices over everything. While the shallot may be unconventional, the pickling that happens adds a wonderful flavor and another layer of texture to the finished chow."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix well to coat the crab apples with all the punchy flavours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In keeping with the way you’d find chow being sold at the Maracas Lookout in Trinidad and Tobago, place everything into a container. I used a mason jar. Top with water and shake well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place in the fridge to marinate for at least 12 hours. Enjoy! Shake often, as the ingredients may settle. Don’t worry about adding more salt, as the sweet/salted preserved prunes will help balance things nicely."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you like this recipe, more traditional versions of “chow” include Pineapple Chow , Pommecythere Chow (Golden Apple Chow) , Smashed Cucumber Chow, The Ultimate Mango Chow , and the now-popular Chenette Chow ."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT15M",
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-haitian-easy-haitian-pineapple-jam",
+    "country": "General Caribbean, Haitian",
+    "name": "Easy Haitian Pineapple Jam",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-haitian-pineapple-jam/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 large pineapple, about 2 lbs diced",
+      "1/2 teaspoon nutmeg, grated",
+      "1 teaspoon cinnamon, ground",
+      "1/2 teaspoon sea salt",
+      "1 1/2 tablespoon vanilla extract",
+      "1 tablespoon mixed essence",
+      "1 1/2 cups sugar",
+      "1 lime, zest and juice"
+    ],
+    "description": "A rich and flavorful Caribbean-style pineapple jam made with warm spices, citrus, and traditional essence for a balanced, slightly chunky preserve.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Peel the pineapple, rinse it with water, and allow it to drain. Cut into cubes, and unlike other pineapple recipes I’ve shared, keep the core as it will cook down and add additional texture to the finished Haitian Pineapple Jam."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Dice the pineapple into very small pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In the same pot you will be using to cook the jam, add the pineapple, nutmeg, salt, vanilla extract, mixed essence, sugar, two one-inch pieces of lime zest, and the juice of the lime. Stir well to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Allow the mixture to macerate for 4 hours or overnight for best results. If storing longer, use a non-reactive container and refrigerate."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After the maceration process, the mixture will release a significant amount of natural juice."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the pot on a medium-high flame and bring to a boil. Reduce to a rolling boil and simmer, cooking for 40 minutes, stirring often during this time. As the jam cooks and the sugars concentrate, it will become very hot and can splatter, so be mindful and avoid getting burned. You’ll notice it starting to thicken and slightly coat the back of a spoon when it’s close to ready."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Carefully pour the hot mixture into a blender or food processor and pulse. Alternatively, use a stick blender for better control over texture. Keep in mind that the jam will still be extremely hot at this stage due to the cooked sugar, so use caution when blending. The goal is a slightly chunky consistency. If too thick to blend, add 1/4 cup water to assist."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Allow to cool and store in a sterilized glass container in the refrigerator for up to 5 months."
+      }
+    ],
+    "yields": 3,
+    "prepTime": "PT20M",
+    "cookTime": "PT40M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-easy-herb-roasted-fingerling-potatoes",
+    "country": "Fusion",
+    "name": "Easy Herb Roasted Fingerling Potatoes",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-herb-roasted-fingerling-potatoes/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 lbs fingerling potatoes, washed",
+      "1 1/2 teaspoons sea salt, divided",
+      "3/4 cup olive oil",
+      "1 tablespoon rosemary, chopped",
+      "1 tablespoon thyme, leaves only",
+      "4 cloves garlic, roughly chopped",
+      "1 large shallot, diced",
+      "1/2 teaspoon black pepper",
+      "1/2 lemon, juiced",
+      "2 tablespoons chives, chopped"
+    ],
+    "description": "These herb roasted fingerling potatoes are crisp on the outside, buttery on the inside, and infused with fresh rosemary, thyme, garlic, and lemon. A perfect summer side dish for grilling season.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Give the fingerling potatoes a good scrub, as we'll be cooking them with the skin on."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place them in a pot, cover with water, add 1 teaspoon of the salt, and bring to a boil. While I used fingerling potatoes, any small potato will also work."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Since we’re cooking them with the skin on, it will take about 15 to 20 minutes for them to become fully cooked."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Drain the potatoes and place them in a baking dish or pan. I like using a cast iron skillet as I find it distributes the heat evenly, giving the potatoes a lovely crust."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Smash the potatoes with a potato masher, pestle (as in my case), or any clean bottle you may have lying around."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a bowl, whisk together the olive oil, rosemary, thyme, garlic, shallot, black pepper, and lemon juice. This is the scent of my childhood. As the fresh herbs bruise while being whisked into the oil, I'm immediately taken back to Saturday evenings in Guaracara, Trinidad, when I'd harvest herbs for Mom as she prepared meats to marinate ovenight for Sunday Lunch. My tiny hands would be coated with the fragrant oils from the herbs, a scent I cherish even today as an adult."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Drizzle the fragrant herb oil over the smashed fingerling potatoes, trying to get some of the mixture onto all of them."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "You now have the option to place them on a 500°F grill or, if you prefer to use your indoor oven, roast them uncovered at 400°F for 20 to 25 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "There’s no need to flip the fingerling potatoes as they roast. However, you can spoon or brush some of the oil from the pan over them midway through roasting. This will help develop the lovely golden color we’re after."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "As you remove the roasted potatoes from the heat, sprinkle on the remaining sea salt and top with the finely chopped chives to give us that fresh herbal finish."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT10M",
+    "cookTime": "PT40M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-easy-hoisin-noodles-with-chicken-caribbean-chinese-stir-fry-",
+    "country": "Caribbean",
+    "name": "Easy Hoisin Noodles With Chicken — Caribbean-Chinese Stir-Fry Inspiration",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-hoisin-noodles-with-chicken-caribbean-chinese-stir-fry-inspiration/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoons vegetable oil",
+      "1 medium onion, large diced",
+      "2 cups bell peppers, chopped",
+      "1 cup broccoli florets",
+      "3/4 teaspoon salt",
+      "1 cup mushrooms, sliced",
+      "1 tablespoon fresh ginger, grated",
+      "3/4 tablespoon toasted sesame oil",
+      "1 tablespoon chili crisp, optional",
+      "1 1/2 cups cooked chicken, bite-size pieces, leftover",
+      "1 lb noodles, pre-cooked, Hakka style recommended",
+      "1 1/2 tablespoons soy sauce",
+      "1/3 cup hoisin sauce"
+    ],
+    "description": "A quick and flavorful stir-fry noodle recipe that brings together the best of Caribbean and Chinese-inspired cooking. Tender noodles, crisp vegetables, and leftover chicken are tossed in a glossy hoisin sauce for a comforting, weeknight meal that’s ready in minutes.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Cook the noodles according to the package directions. Drain and toss with a touch of vegetable oil to prevent clumping. Set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "While the noodles cook, prepare the vegetables. Keep the white parts of the scallions separate from the green tops. Optional Add-ins: garlic, carrot, cabbage, celery, msg, oyster sauce"
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the vegetable oil in a wok or large pan over medium heat. Add the onion, followed by the bell peppers and broccoli. Stir-fry for 2–3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add salt, mushrooms, and sesame oil. Continue cooking for another 2–3 minutes, stirring often."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Grate in the fresh ginger and add garlic if using. Stir in the chili crisp for a light heat and depth of flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the leftover chicken and warm through for about 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Toss in the pre-cooked noodles, soy sauce, and hoisin sauce. Stir well to coat everything evenly. You may also add a teaspoon of oyster sauce or a splash of Chinese cooking wine at this point if desired."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook for 2–3 minutes, stirring until everything is heated through."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off the heat, top with the green parts of the scallions, and give it all one final toss. Serve hot."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT15M",
+    "totalTime": "PT25M"
+  },
+  {
+    "id": "carib-fusion-easy-homemade-peach-iced-tea",
+    "country": "Fusion",
+    "name": "Easy Homemade Peach Iced Tea",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-homemade-peach-iced-tea/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "12 cups water, divided",
+      "4 green tea bags",
+      "5 ripe peaches, washed, stoned, sliced",
+      "1/2 lemon, juice",
+      "1 cup raw cane sugar, adjust",
+      "1 large orange, sliced",
+      "fresh mint"
+    ],
+    "description": "This refreshing homemade Peach Iced Tea combines ripe seasonal peaches, green tea, lemon, and raw cane sugar, finished with orange slices and fresh mint. It is a simple summertime beverage that highlights fresh peaches without allowing the tea to overpower the fruit.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Into 5 cups of water, place the tea bags and bring to a boil. I like using green tea versus black tea, as it is less harsh in flavor. Simmer for 4-5 minutes, then allow it to cool. In doing so, it will steep, and we will get all the lovely notes of the green tea."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In another pot, add 5 cups of water along with the prepared peaches, lemon juice, and sugar. I used raw cane sugar, but you can use any sweetener you prefer, and in the amounts that suit your sweet tooth. If using honey, may I suggest you add the honey after you have strained the pea,ches and not when the liquid or syrup is still hot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring to a boil, simmer for 15 minutes, then allow it to cool."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large mixing bowl or pitcher, strain the tea and discard the bags."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Then strain the peaches, pushing or pressing down with a spatula if you want some of the pulp. I did not, as I wanted a perfect balance of green tea and peaches, without one overpowering the other."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the remaining two cups of water and mix well to combine everything. Taste and adjust the sweetness to your liking, keeping in mind that the Peach Iced Tea may dilute a bit when ice is added."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Chill and serve with ice, slices of orange ( I find that the hint of ornage compliments the peach and tea flavours perfecty) and sprigs of fresh mint."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Refer to the video below, as much more about the recipe is discussed there."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you have made this recipe, I would love to hear from you and any personalizations you may have made. Please leave a comment and let me know how you enjoyed it."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT5M",
+    "cookTime": "PT20M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-quick-cornbread",
+    "country": "Fusion",
+    "name": "Easy Jalapeño Cornbread",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/quick-cornbread/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3/4 cup all-purpose flour",
+      "1 1/4 cup corn meal",
+      "1/2 teaspoon baking soda",
+      "1/2 teaspoon salt",
+      "1/2 jalapeno, diced fine",
+      "1/2 cup sugar",
+      "1/2 cup butter",
+      "2 eggs",
+      "1 cup buttermilk"
+    ],
+    "description": "A buttery, golden cornbread with just the right touch of jalapeño heat. Simple to make, deeply satisfying, and endlessly customizable.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat oven to 350°F (177°C). Melt butter in a cast iron pan over low heat. Add diced jalapeño and cook for 1 minute to soften and infuse flavor. Let cool slightly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl, whisk the cooled butter with buttermilk, eggs, and sugar until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a separate bowl, mix cornmeal, flour, baking soda, and salt. Add to the wet ingredients and stir until just combined."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the batter into the greased skillet or baking dish. Smooth the top."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bake for 30–35 minutes, or until a toothpick inserted in the center comes out clean."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Let cool slightly before slicing and serving."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT10M",
+    "cookTime": "PT35M",
+    "totalTime": "PT45M"
+  },
+  {
+    "id": "carib-jamaican-easy-jamaican-carrot-juice",
+    "country": "Jamaican",
+    "name": "Easy Jamaican Carrot Juice (Carrot Punch)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-jamaican-carrot-juice/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 pounds carrots, trimmed, chopped",
+      "2 pieces ginger, sliced",
+      "8 cups water",
+      "1 lime, juiced",
+      "1/2 teaspoon ground cinnamon",
+      "3/4 teaspoon nutmeg, grated",
+      "1 can sweetened condensed milk",
+      "1 tablespoon vanilla extract",
+      "dark rum, to taste, for adult version"
+    ],
+    "description": "A creamy, spice-infused Caribbean drink made from fresh carrots, ginger, and warm seasonings.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Peel and roughly chop the carrots. Add half the carrots, one slice of ginger, and 4 cups of water to a blender. Puree until smooth. Repeat with the remaining carrots, ginger, and water."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Puree until smooth. Repeat with the remaining carrots, ginger, and water."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain the blended mixture using a fine mesh strainer or cheesecloth into a large bowl. Press or squeeze to extract as much liquid as possible. Discard the pulp."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add lime juice immediately after straining to prevent discoloration. Stir in cinnamon, grated nutmeg, vanilla extract, and sweetened condensed milk. Start with 2/3 of the can, then taste and adjust sweetness as needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Whisk until fully combined. Chill in the refrigerator before serving. Stir before pouring, as the drink may settle."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "To serve, pour over ice. For a festive adult version, add a splash of dark rum."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": null,
+    "totalTime": "PT15M"
+  },
+  {
+    "id": "carib-general-caribbean-easy-jamaican-rice-and-peas-no-fuss-25-minute-recipe",
+    "country": "General Caribbean",
+    "name": "Easy Jamaican Rice and Peas",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-jamaican-rice-and-peas-no-fuss-25-minute-recipe/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoon butter or oil",
+      "1 medium onion, diced",
+      "2 cloves garlic, finely diced",
+      "2 scallions, chopped",
+      "1 tablespoon allspice berries, pimento seeds",
+      "4 sprigs thyme",
+      "1/2 teaspoon black pepper",
+      "3/4 teaspoon salt",
+      "1 cup red kidney beans, with liquid from can",
+      "1 1/2 cups water",
+      "1 1/2 cups coconut milk",
+      "1/2 Scotch bonnet pepper, optional",
+      "2 cups basmati rice, washed and drained"
+    ],
+    "description": "A quick and flavorful Easy Jamaican Rice and Peas recipe made with coconut milk, kidney beans, thyme, and Scotch bonnet pepper in under 25 minutes. Perfect for busy weeknights when you want authentic Caribbean comfort food fast.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the butter or oil in a deep pot over a medium flame. Add the onion and garlic and cook for 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn the heat down to medium-low and add the scallions, pimento seeds (allspice berries), thyme, black pepper, and salt. Cook for another 2 minutes. The flavors of the Caribbean will scream at you and remind you of those comforting days when mom or granny would be busy in the kitchen."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the kidney beans along with the liquid from the can, then pour in the water and coconut milk. Bring to a gentle simmer and cook for 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the washed basmati rice and stir well. Add the Scotch bonnet pepper. I explained in the video why I cut the pepper in half, along with a few other helpful tips to get the best flavor and texture from this Easy Jamaican Rice and Peas recipe. You may also float the pepper whole and remove it after cooking if you prefer a milder heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring back to a boil, reduce to a simmer, cover the pot, and cook for about 15 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce the heat to as low as possible, or turn the stove off completely if using a cast iron or ceramic pot. Place a piece of foil over the pot and cover tightly. Allow it to steam for 4 to 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Fluff the rice gently to make it shelly and grainy before serving."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm with curry goat, jerk chicken, or classic brown stew chicken."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT10M",
+    "cookTime": "PT25M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-easy-jerk-shrimp-fried-rice-on-the-traeger-flatrock",
+    "country": "General Caribbean",
+    "name": "Easy Jerk Shrimp Fried Rice on the Traeger Flatrock",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-jerk-shrimp-fried-rice-on-the-traeger-flatrock/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3/4 lb large shrimp, cleaned and deveined",
+      "2 tablespoons spicy jerk marinade",
+      "1 tablespoon olive oil",
+      "3 tablespoons vegetable oil, divided",
+      "1 large onion, diced",
+      "1/2 medium red bell pepper, diced",
+      "1/2 medium yellow bell pepper, diced",
+      "1/4 lb cabbage, roughly chopped",
+      "4 cups cooked rice, chilled or day-old",
+      "1 1/2 tablespoons dark soy sauce",
+      "3/4 tablespoon toasted sesame oil",
+      "1 tablespoon oyster sauce",
+      "3 scallions, roughly chopped"
+    ],
+    "description": "The high heat of the Traeger Flatrock creates beautifully seared vegetables, smoky shrimp, and perfectly caramelized sauces in this easy jerk shrimp fried rice recipe. It's a quick Caribbean-inspired meal that's packed with bold flavor and comes together in minutes.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Season the cleaned and deveined shrimp with the spicy Jamaican jerk marinade and olive oil. Mix well and allow them to marinate for about 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Meanwhile, prepare all of the vegetables. As with any fried rice recipe, everything cooks quickly, so having all of your ingredients prepped and within reach makes the cooking process much easier."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the Traeger Flatrock, or any flat-top griddle, over high heat. Add 2 tablespoons of the vegetable oil and spread it over a fairly large cooking surface."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the shrimp and cook for about 1 minute, tossing so they cook evenly. Then set them aside so they don't overcook and become chewy. Be mindful that when the jerk marinade hits the hot griddle surface, it'll create spicy fumes that can potentially choke you. As you'll see in the video below, I wasn't immune to it either."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the remaining vegetable oil, followed by the onion, bell peppers, and cabbage. Stir-fry quickly. As you'll see in the video below, I covered everything with a steam pan for about 30 seconds to help speed up the cooking process."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the chilled rice. I highly recommend using day-old or well-chilled rice, as it gives you a much grainier finished fried rice instead of a soft, sticky texture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Top with the dark soy sauce, oyster sauce, and toasted sesame oil. Stir everything together until evenly coated. Reduce the heat to medium at this point, as you want the sauces to caramelize without burning."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After about 2 minutes, return the cooked shrimp, along with any accumulated juices, to the griddle and stir everything together to complete the jerk shrimp fried rice. I did put the steam pan back on for another 30 to 60 seconds, but no longer, as too much steam will create moisture and make the rice soggy."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Fold in the chopped scallions and serve hot or warm with a side of Classic Caribbean Fruit Punch ."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT15M",
+    "cookTime": "PT10M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-easy-one-pan-herb-roasted-chicken-and-vegetables",
+    "country": "General Caribbean",
+    "name": "Easy One-Pan Herb-Roasted Chicken and Vegetables",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-one-pan-herb-roasted-chicken-and-vegetables/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3/4 cup, olive oil",
+      "1 tablespoon, sage (chopped)",
+      "2 tablespoons, parsley (chopped)",
+      "8-10 cloves, garlic (chopped finely)",
+      "8 sprigs, thyme (leaves only)",
+      "3/4 tablespoon, salt",
+      "1 tablespoon, ginger (grated)",
+      "2 sprigs, rosemary (leaves only)",
+      "3/4 tablespoon, black pepper",
+      "1 tablespoon, Dijon mustard",
+      "1 tablespoon, Rou Cou (annatto)",
+      "2 scallions, chopped and divided",
+      "1 1/2 tablespoons, honey",
+      "1 lemon, juiced",
+      "4 lbs, chicken legs (with back attached)",
+      "2-3 lbs, small potatoes (washed, skin on)",
+      "2-3 stalks, celery (chopped)",
+      "2 large, carrots (cut into 1/2-inch pieces)"
+    ],
+    "description": "This easy oven roasted chicken brings together chicken, fresh herbs, lemon, garlic, ginger, honey, and Rou Cou with potatoes, carrots, and celery. Everything roasts together in one pan, making this a fragrant and satisfying full-size family meal.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a mixing bowl, combine the oil, salt, black pepper, sage, parsley, thyme, rosemary, garlic, lemon juice, honey, Rou Cou, half of the scallions, and Dijon mustard to create the marinade."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove excess fat and skin from the chicken. If you follow the traditional Caribbean practice of washing chicken with lime, lemon, or vinegar, you can do so. Give each piece a couple of cuts where it is thickest."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Set your oven to 425°F."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the chicken pieces to a large roasting pan."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the carrot and celery pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Toss in the potatoes. Cut them into pieces about 2 inches in size. I kept the skin on, but you can peel them if you wish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the marinade over everything and mix well to coat the chicken and vegetables with the fragrant herb-infused marinade."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you want to add a bit of heat to the dish, add dried pepper flakes, finely diced Scotch bonnet, or another spicy pepper you have on hand."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover loosely with foil or parchment paper and roast at 425°F for one hour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from the oven, spoon the juices over everything, and return the pan to the oven for another 30 minutes uncovered."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Adjust the salt, ensure the vegetables and chicken are fully cooked, and top with the remaining scallions."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "It is an ideal one-pan dinner, but you can always pair it with Heirloom Tomato and Watermelon Sala d, Cherry Tomato Salad , or Creamy Cucumber Salad ."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT20M",
+    "cookTime": "PT1H",
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-easy-pigeon-peas-dhal",
+    "country": "General Caribbean",
+    "name": "Easy Pigeon Peas Dhal",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-pigeon-peas-dhal/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 cups green pigeon peas, thawed, rinsed, drained",
+      "3/4 cup yellow split peas",
+      "12 cloves garlic, divided",
+      "1/4 scotch bonnet pepper",
+      "1 medium onion, roughly chopped",
+      "1 teaspoon Caribbean green seasoning",
+      "1/2 teaspoon black pepper",
+      "1 teaspoon salt, adjust to taste",
+      "3/4 tablespoon turmeric",
+      "10 –12 cups water, boiling",
+      "2 1/2 tablespoons vegetable oil",
+      "3/4 teaspoon geera seeds, cumin seeds",
+      "2 –3 curry leaves, optional"
+    ],
+    "description": "A comforting Caribbean pigeon peas dhal made with frozen pigeon peas and yellow split peas, finished with a traditional garlic and cumin chunkay for rich flavor and aroma.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Add the thawed, rinsed, and drained pigeon peas to a deep soup pot, along with the yellow split peas, 7 cloves of garlic, the scotch bonnet pepper, onion, green seasoning , black pepper, salt, and turmeric."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in 10 cups of boiling water, turn on the stove and bring to a boil. Reduce to a simmer and continue cooking, adding more boiling water as necessary as it simmers."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After about 1 hour and 45 minutes, the pigeon peas should be fully cooked and tender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the salt to your liking, then use a swizzle stick (aka dhal gutney) to break down some of the peas. You may use an immersion blender, but pulse gently so you do not create too much foam, as it will change the texture of the finished pigeon peas dhal."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a small frying pan (traditionally a kalchul, also spelled karchul or kalchool would be used), add the vegetable oil, remaining garlic, geera (cumin) seeds, and curry leaves if using. Heat on a high flame and allow the garlic to burn or char."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Being very careful, pour this hot oil mixture into the pigeon peas dhal and stir well. This step is known as chunkay. The moment the hot oil hits the dhal, your entire kitchen fills with a wonderful garlic and cumin scent, and that unmistakable sizzle takes me right back to my childhood."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT15M",
+    "cookTime": "PT1H45M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-easy-slow-cooker-jerk-pork",
+    "country": "General Caribbean",
+    "name": "Easy Slow Cooker Jerk Pork",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-slow-cooker-jerk-pork/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs pork, bone-in",
+      "1 lime or lemon, juiced for washing",
+      "4 tablespoons Jamaican jerk marinade, spicy",
+      "3 tablespoons vegetable oil",
+      "1 cup apple juice",
+      "1 teaspoon salt",
+      "1 large orange, cut into wedges",
+      "1 large onion, rough chopped",
+      "2 bay leaves",
+      "1 tablespoon brown sugar",
+      "1 teaspoon pimento berries, allspice",
+      "6 sprigs thyme",
+      "2 stalks celery, rough chopped",
+      "1 scotch bonnet pepper, diced, optional",
+      "2 to 3 tablespoons honey or maple syrup, optional",
+      "2 tablespoons fresh scallions, chopped, optional"
+    ],
+    "description": "This slow cooker jerk pork delivers bold Jamaican-inspired flavor with minimal effort. The gentle, slow cooking process creates tender pork that can be sliced or shredded for a satisfying Caribbean meal.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the pork with the juice of the lime or lemon and cool water, then pat it dry. This is something I grew up doing and it helps freshen the meat before seasoning."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season the pork with the jerk marinade . I use my hands to really rub it into the meat, especially into the crevices. Be mindful that the marinade can irritate your skin, so wearing gloves is a good idea if you are sensitive. You can allow it to marinate for a few hours or overnight, but since we are slow cooking this, I went ahead immediately."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the vegetable oil in a wide pan over medium heat and add the seasoned pork. After about four minutes, flip it and continue until all sides are nicely browned. This step gives the pork color and helps seal in the juices, but more importantly it blooms the spices in the jerk marinade. Almost immediately you will get that warm scent of cinnamon, nutmeg, and allspice throughout your kitchen. Such a comforting aroma."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the pork and place it in the slow cooker."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Discard most of the oil from the pan and turn the heat down to low. Deglaze the pan with the apple juice, scraping up all the flavorful bits as it comes to a boil. As soon as it reaches a boil, turn off the stove and pour this liquid into the slow cooker."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the salt, orange wedges, onion, bay leaves, brown sugar, pimento berries, thyme, celery, and any optional ingredients to the slow cooker."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Close the lid and cook for 4 1/2 hours on high or 7 to 8 hours on low ."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After about three hours, flip the pork in the slow cooker and continue cooking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "At the four hour mark, test the pork for tenderness. At this stage it will be perfect for slicing. If you continue to about four and a half hours on high, it will begin falling apart and take on the texture of pulled pork."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the jerk pork from the slow cooker and allow it to rest for about 15 minutes before slicing or shredding."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain the liquid, discard the solids, and skim off the fat. You can use it as is or reduce it further to create a rich sauce or gravy to serve with the pork."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve on sandwiches, with rice and peas , or alongside your favorite side dishes."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT20M",
+    "cookTime": "PT4H30M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-stewed-pigeon-peas",
+    "country": "Caribbean",
+    "name": "Easy Stewed Pigeon Peas",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/stewed-pigeon-peas/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 tablespoon olive oil",
+      "1 medium onion, diced",
+      "2 cloves garlic, smashed",
+      "2 sprigs thyme",
+      "1/4 teaspoon black pepper",
+      "1 can pigeon peas, rinsed",
+      "1 can tomato accents, with liquid",
+      "1 teaspoon Caribbean green seasoning",
+      "1/4 cup water",
+      "1 tablespoon brown sugar",
+      "1/2 teaspoon Caribbean browning",
+      "1 vegetable stock cube",
+      "1 tablespoon parsley, chopped"
+    ],
+    "description": "A delicious and fast-cooking version of Caribbean stewed pigeon peas with pantry staples and bold flavors.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a saucepan add Olive Oil (1 tablespoon) and set to low heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add Onion (1), Garlic (2 clove), Freshly Ground Black Pepper (1/4 teaspoon), and Fresh Thyme (2 sprig). Cook for 2-3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the Pigeon Peas (14 ounce) to the pan."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add Stewed Tomatoes (14 ounce) and mix all the ingredients together. Simmer on high heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add in the Fresh Parsley (1 tablespoon), Brown Sugar (1 tablespoon), West Indian Browning (1/2 teaspoon), Water (1/4 cup), Green Caribbean Seasoning (1 teaspoon) and break in a Vegetable Bouillon Cube (1)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Let it gently boil for 10-15 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste to adjust seasoning as needed. Serve and enjoy!"
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT5M",
+    "cookTime": "PT25M",
+    "totalTime": "PT30M"
+  },
+  {
+    "id": "carib-fusion-easy-thanksgiving-belgian-waffle-stuffing-the-ultimate-holid",
+    "country": "Fusion",
+    "name": "Easy Thanksgiving Belgian Waffle Stuffing (The Ultimate Holiday Dressing)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-thanksgiving-belgian-waffle-stuffing-the-ultimate-holiday-dressing/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "12 large Belgian waffles, toasted and chopped into 1-inch pieces",
+      "1 stick salted butter",
+      "1 1/2 cups celery, diced",
+      "1 cup onion, diced",
+      "1 1/2 tablespoons fresh thyme leaves",
+      "1 1/2 tablespoons fresh sage",
+      "2 tablespoons fresh parsley, chopped",
+      "3/4 teaspoon salt",
+      "1 teaspoon black pepper",
+      "1 teaspoon dried marjoram",
+      "3/4 cup dried cranberries",
+      "4 cups chicken stock",
+      "3/4 lb sausage meat"
+    ],
+    "description": "A delicious Thanksgiving side dish made with toasted Belgian waffles, sausage, dried cranberries, and fresh herbs. This sweet and savoury Belgian waffle stuffing is a wonderful alternative to traditional bread stuffing, with a wicked texture and the cozy, comforting scent of butter and herbs.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Toast the Belgian waffles according to the package instructions. Allow them to cool, then chop them into approximately 1-inch pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Melt the butter in a saucepan over medium heat. Add the celery, onion, thyme, sage, parsley, salt and black pepper. Turn the heat down to medium-low and cook for 4-5 minutes, or until everything softens."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the marjoram and dried cranberries and stir well. The kitchen will have that cozy, comforting scent, making you hungry immediately, even if you just ate."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the chicken stock, bring everything to a boil, and simmer for 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the prepared Belgian waffle pieces in a large bowl. Add the uncooked sausage meat, breaking it up between the Belgian waffle pieces. You can precook the sausage if you want, but this is going into an oven where the meat will fully cook. I dislike getting grainy pieces of sausage, so I never precook it. I used pork, but you can use turkey or any version you prefer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the chicken stock mixture over everything and mix well to combine. The toasted waffles will absorb the lovely flavours of the infused chicken stock, becoming soft and plump at the same time."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Let it sit for a few minutes, then give it a final mix. If it’s overly dry, consider adding a bit more chicken stock."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Transfer everything to an oven-proof dish and place it into a preheated 375°F oven."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bake uncovered on the middle rack for 30-40 minutes, or until the sausage is fully cooked and the stuffing is heated through. if the top is getting overly dark, you can lightly tent the baking dish with foil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Have you ever made dressing or stuffing with Belgian waffles? Leave me a comment below, and I welcome you to watch the video below, where I go through all the steps of making this delicious Thanksgiving Belgian waffle stuffing."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Did you get a chance to make the Herb Roasted Turkey I shared last week? How about the Smoked Turkey or the Jerk Turkey recipes?"
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT15M",
+    "cookTime": "PT45M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-easy-tropical-mango-passionfruit-juice",
+    "country": "General Caribbean",
+    "name": "Easy Tropical Mango Passionfruit Juice",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-tropical-mango-passionfruit-juice/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 cup passionfruit pulp, thawed",
+      "1 cup sugar",
+      "9 cups water, divided",
+      "2 cups frozen mango pieces",
+      "1 teaspoon vanilla essence, optional",
+      "Few drops Angostura bitters, optional",
+      "1 of Juice lime or lemon, optional"
+    ],
+    "description": "A sweet-tart fragrant tropical juice that blends mango and passionfruit for a refreshing island drink—perfect on its own or with a splash of rum.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Place the passionfruit pulp in a medium saucepan with the sugar and 3 cups of water. Bring to a gentle simmer over medium heat. Once small bubbles appear, remove from heat, stir well, and allow the mixture to cool to room temperature."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a high-speed blender, combine the remaining 6 cups of water with the frozen mango pieces. Blend until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the mango puree into a large mixing bowl or jug."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain the cooled passionfruit syrup through a fine mesh strainer into the mango mixture, discarding the seeds."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir to combine and taste the juice. Adjust sweetness if needed and add vanilla essence, bitters, or lime juice if using."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Chill before serving or serve over crushed ice."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "For a boozy version, add vodka, dark rum, or champagne before serving."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT10M",
+    "totalTime": "PT20M"
+  },
+  {
+    "id": "carib-general-caribbean-easy-vegetable-chow-mein-better-than-takeout",
+    "country": "General Caribbean",
+    "name": "Easy Vegetable Chow Mein (Better Than Takeout!)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-vegetable-chow-mein-better-than-takeout/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoon vegetable oil",
+      "1 medium onion, sliced",
+      "2 cloves garlic, crushed",
+      "1 teaspoon ginger, grated",
+      "1/2 small carrot, julienned",
+      "1/2 red bell pepper, sliced",
+      "1/2 green bell pepper, sliced",
+      "1/2 christophene, julienned",
+      "1 lb cabbage, shredded, washed, drained",
+      "1/2 teaspoon salt",
+      "1 tablespoon toasted sesame oil",
+      "2 tablespoon Chinese cooking wine",
+      "3 tablespoon soy sauce",
+      "1 teaspoon sugar",
+      "2 tablespoon oyster sauce",
+      "1/2 teaspoon MSG, optional"
+    ],
+    "description": "A classic Trinidad-style vegetable chow mein made with cabbage instead of noodles, highlighting Chinese-Caribbean flavors, quick stir-fry cooking, and a rich, savory sauce.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Prepare all the ingredients in advance so the cooking process flows smoothly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a bowl, combine the Chinese cooking wine, soy sauce, sugar, oyster sauce, and MSG if using. Mix well and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the wok or large pan over medium heat and add the vegetable oil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the onion, garlic, and ginger and stir for about 30 seconds until fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the carrot, christophene, and bell peppers and continue cooking for 2 to 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the shredded cabbage and stir well. As it hits the hot pan, you’ll hear an immediate, lively sizzle as any remaining moisture reacts with the heat. A cloud of steam will rise almost instantly, carrying with it the deep aroma of the garlic and ginger as they bloom even further. The cabbage will begin to soften at the edges while still holding its structure, turning glossy as it absorbs the flavors in the pan. Keep tossing so everything gets coated evenly and that gentle sizzle continues, letting you know you’re building flavor with every movement."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season with salt and continue to stir to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in the prepared sauce and mix well to coat all the vegetables evenly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook over medium to high heat, stirring as needed, until the cabbage reaches your preferred texture, about 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Just before turning off the heat, drizzle in the toasted sesame oil and stir to finish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt as needed before serving."
+      }
+    ],
+    "yields": 5,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-how-to-make-eddoes-choka",
+    "country": "General Caribbean",
+    "name": "Eddoes Choka",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/how-to-make-eddoes-choka/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 lbs eddoes, peeled",
+      "1 teaspoon salt, divided",
+      "water, for boiling eddoes",
+      "5-8 cloves garlic",
+      "1 small habanero pepper, adjust to taste",
+      "1 tablespoon finely chopped cilantro",
+      "2 pimento peppers, optional, thinly sliced",
+      "1 medium onion, thinly sliced",
+      "2 tablespoons olive oil"
+    ],
+    "description": "This easy Eddoes Choka recipe combines tender boiled eddoes with crushed garlic, habanero pepper, onion, and fragrant herbs for a comforting Caribbean side dish. Finished with hot oil in the traditional chunkay style, it is delicious served warm with Sada Roti.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Peel the eddoes, removing the outer skin with a paring knife as shown in the video below. Rinse them, then place them in a pot and cover with water. Add half of the salt and bring to a rolling boil. Cook for 15-20 minutes, or until tender, as I explained in the video. Drain and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Important: Some eddoes may irritate your skin when peeling. You can rub your hands with a protective coating of vegetable oil or wear gloves if you have sensitive skin."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Using a mortar and pestle, crush the garlic, habanero pepper, and the remaining salt, or another hot pepper of your choice, into a paste. Use an amount of pepper you can comfortably tolerate. Remove the mixture from the mortar and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the cooked eddoes to the mortar and crush them into a somewhat smooth paste. You may need to keep scraping down the sides of the mortar, as the starchy eddoes can become sticky."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Transfer the crushed eddoes to a bowl and top with the garlic and habanero mixture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the cilantro and the thinly sliced pimento peppers, if you can source them. The pimento peppers contribute a fragrant, sweet pepper aroma that complements the heat of the habanero. These two ingredients are not traditionally found in the original Eddoes Choka my ancestors would have made, but I enjoy the extra flavour they bring."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Top with the thinly sliced onion, spreading the slices apart so the hot oil can reach them during the chunkay, or tempering, process."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil, or another oil of your choice, until smoking. Carefully pour it over the ingredients, paying particular attention to the onion to gently take away some of its rawness."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "During the chunkay process, listen for the satisfying sizzle as the hot oil hits the onion, pimento peppers, and cilantro. The aroma that rises from the bowl is wonderful, with savoury onion and fragrant herbs mingling with the garlic and pepper. However, if you pour the hot oil directly onto the habanero paste, the fumes may choke you, so take care."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir well to combine everything, adjust the salt to your liking, and enjoy warm with hot Sada Roti."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Have you had or made Eddoes Choka before? Did you make it spicy and loaded with garlic, as I did? Leave a comment below, and if you have any questions about this Eddoes Choka, drop me a line in The Ajoupa , which is our FREE Members-ONLY Community ."
+      }
+    ],
+    "yields": 5,
+    "prepTime": "PT1H10M",
+    "cookTime": "PT20M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-fantastic-sweet-rice-rice-pudding",
+    "country": "Caribbean",
+    "name": "Fantastic Sweet Rice (Rice Pudding)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/fantastic-sweet-rice-rice-pudding/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1/3 cup raw cashews, optional",
+      "1 cup white rice, washed",
+      "1 cup evaporated milk",
+      "1 cup whole milk",
+      "1 cup water",
+      "3/4 teaspoon salt",
+      "4 cardamom pods",
+      "1/2 teaspoon ground ginger",
+      "1 teaspoon ground cinnamon",
+      "1 teaspoon grated nutmeg, divided",
+      "1/2 cup raisins",
+      "1/3 cup dried cranberries",
+      "1 tablespoon vanilla extract",
+      "1/3 cup sweetened condensed milk, adjust to taste"
+    ],
+    "description": "A creamy, spiced Caribbean sweet rice pudding made with milk, cardamom, and condensed milk — rich, comforting, and perfect for festive celebrations (Divali aka Dwali and Eid al-Fitr) or cozy nights in.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the rice thoroughly until the water runs clear, then set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Toast the cashews in a dry pan over medium heat for 3–5 minutes, stirring often so they don’t burn. Set aside. Using the cashews is optional, but it adds a wonderful contrasting texture to the sweet rice, which can be mushy. Any nuts and dried fruit you enjoy can be used."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a deep saucepan, add the washed rice and toast gently over medium-low heat for about 1 minute. May I recommend that you follow along with the video below, as much more is explained."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the evaporated milk, milk, and water. Stir well, then add the cardamom pods (lightly crushed), ground ginger, cinnamon, and half the nutmeg. A cinnamon stick and a thick slice of fresh ginger can be used instead of the powdered forms."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Raise the heat to medium and bring to a gentle boil. Add the raisins, dried cranberries, toasted cashews, and condensed milk."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook for about 20 minutes, stirring frequently during the last 5 minutes to prevent sticking. Adjust sweetness and salt to taste. This is the one time I’d recommend stirring rice often as it cooks."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from heat, discard the cardamom pods, and let cool slightly before serving. The sweet rice will thicken as it cools. Top with the remaining nutmeg. Things like a bay leaf, a 2-inch piece of dried orange peel, and 5-8 cloves would all add wonderful flavor notes to this sweet rice."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm or chilled, topped with a sprinkle of nutmeg."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT20M",
+    "totalTime": "PT30M"
+  },
+  {
+    "id": "carib-caribbean-festive-sorrel-infused-cocoa-tea-hot-cocoa",
+    "country": "Caribbean",
+    "name": "Festive Sorrel Infused Cocoa Tea (hot cocoa)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/festive-sorrel-infused-cocoa-tea-hot-cocoa/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "5 cups milk",
+      "1 cinnamon stick",
+      "2 bay leaves",
+      "2 cardamom pods",
+      "2 whole cloves",
+      "1/2 teaspoon nutmeg, grated",
+      "2 slices ginger",
+      "4 sorrel 4–6 pods, dried",
+      "1 cup heavy cream",
+      "1 cup whipping cream",
+      "1 1/2 tablespoon pure maple syrup",
+      "3 tablespoon 3–4 pure cocoa, grated",
+      "1/2 cup raw cane sugar",
+      "2 tablespoon honey"
+    ],
+    "description": "A rich Caribbean cocoa tea (aka chocolate tea) infused with dried sorrel, warm spices, and pure grated cocoa for a festive holiday twist that’s perfect for breakfast or special mornings.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Place the milk into a saucepan over low heat and bring to a gentle simmer at about 180°F (82°C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the cinnamon stick, bay leaves, cardamom, cloves, ginger, nutmeg, dried sorrel pods, and heavy cream. Stir well and return to a gentle simmer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Allow the mixture to simmer for 6 minutes, keeping the heat low."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "While the tea simmers, whip the whipping cream with the maple syrup until it holds stiff peaks. Set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Grate in the cocoa, then add the raw cane sugar and honey. Stir well and continue simmering for another 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain the cocoa tea to remove the spices and sorrel."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot, topped with whipped cream (optional) for a more elegant touch."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT15M",
+    "totalTime": "PT25M"
+  },
+  {
+    "id": "carib-caribbean-fierce-green-scotch-bonnet-pesto-2",
+    "country": "Caribbean",
+    "name": "Fierce Green Scotch Bonnet Pesto",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/fierce-green-scotch-bonnet-pesto-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "10-15 peppers Scotch Bonnet Peppers, mostly green ones",
+      "1/2 cup pine nuts",
+      "1/4 teaspoon sea salt",
+      "2 cloves garlic",
+      "3/4 cup olive oil",
+      "1/2 cup Parmesan cheese",
+      "1/2 cup cilantro",
+      "1/2 lemon, juice"
+    ],
+    "description": "During the summer months I grow a lot of different varieties of extremely hot peppers, so I’m always looking for ways to put them to use. While I’ve never seen a recipe like this, the end results were just stunning. Based on the traditional way of making a basil pesto, however I’m putting a fiery Caribbean twist to things. So you can expect the Caribbean sunshine (scotch bonnet peppers) to really shine through. Be warned… this is not your grandma’s pesto.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a food processor add the Pine Nuts (1/2 cup) and Garlic (2 clove). Blend until roughly chopped."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "De-stem and roughly chop the Scotch Bonnet Pepper (10). Add them into the food processor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season with Sea Salt (1/4 teaspoon) and add the Fresh Cilantro (1/2 cup), Olive Oil (3/4 cup) and Lemon (1/2). Blend until creamy."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If needed add more olive oil. Add in the Parmesan Cheese (1/2 cup) and blend once more until thick and runny."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-fiery-pepper-choka",
+    "country": "General Caribbean",
+    "name": "Fiery Pepper Choka",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/fiery-pepper-choka/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 tablespoons vegetable oil, divided",
+      "2 dozen Scotch Bonnet peppers",
+      "20 to 25 cloves garlic",
+      "1 large red onion, roughly chopped",
+      "5 limes, juiced",
+      "2 tablespoons chopped parsley",
+      "2 tablespoons chopped Chadon Beni, bandanya, culantro",
+      "3/4 teaspoon salt, or to taste",
+      "2 tablespoons olive oil, optional"
+    ],
+    "description": "A smoky Caribbean Pepper Choka made with fire-roasted Scotch Bonnet peppers, garlic, and onion on the Traeger Flatrock Griddle. This modern approach preserves the traditional flavors while creating incredible depth and texture.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the peppers, remove the stems, and allow them to air dry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour 2 tablespoons of the vegetable oil onto your Traeger Flatrock Griddle, or any flat-top griddle, grill, open flame, large frying pan, or even your oven if that's what you have available. Add the whole peppers, garlic cloves, and onion, cut side down."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook over medium heat for about 5 minutes, then drizzle over the remaining tablespoon of vegetable oil. Cover everything using a griddle dome or an inverted pan and continue cooking for another 8 to 12 minutes, making sure to turn everything every 3 to 4 minutes so they char evenly on all sides."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Important: Try to roast the peppers outdoors if possible, as the aroma and capsaicin released into the air can be quite intense and may leave you coughing. I purposely keep the peppers whole during roasting because cutting them beforehand releases even more of those oils into the air. You’ll experience something similar when grinding the peppers through a food mill or food processor, so be mindful if you’re working indoors. Likewise, be careful when washing your utensils afterward, as the pepper oils can linger. I also try my best never to make this when Pali is around, and especially not when his sisters were younger."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once you’ve achieved a nice char on everything, it’s time to set up the food mill and start grinding the ingredients."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Determine the sort of texture you want your finished Pepper Choka to have. In my case, I like a bit of body to it. If you’re using a food processor or blender instead, I recommend pulsing the ingredients rather than letting the machine run continuously so you have better control over the final consistency."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once you have the base, add the chopped Chadon Beni (bandanya, culantro), parsley, salt, and the juice of the limes. If Chadon Beni is difficult to source where you live, cilantro (coriander) can be used as a substitute, although the flavor won’t be exactly the same."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Give everything a good mix. At this point, if you find the Pepper Choka a little too thick, stir in the olive oil. There’s no need to heat it first."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "I should explain that, traditionally, you would finish this with a chunkay, as I demonstrated in my Murtani (Spicy Choka) recipe . That's where you'd top the choka with thinly sliced onion before pouring smoking hot oil over everything to temper the ingredients. Not only does that quickly remove much of the rawness from the onion, but it also adds another layer of smoky flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Since I roasted the peppers, garlic, and onion with a generous amount of oil on the Traeger Flatrock, I decided to skip that final chunkay step. Much of that smoky character had already been developed before everything was ground together. You could almost think of it as a reverse Pepper Choka."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "That said, if you enjoy the sharper flavor of a more traditional Pepper Choka, feel free to stir in a little fresh (raw) onion and garlic after grinding everything, then finish it with a hot chunkay if you wish. One of the things I love most about Caribbean cooking is that there's always room to adapt a recipe while still respecting the traditions that inspired it."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "I'd also encourage you to give my Curry King Fish recipe a try and serve this Fiery Pepper Choka as the side condiment. Drop me a comment below if you have your own variation of this recipe, and be sure to watch the accompanying video where I share additional tips and give you a better look at the traditional Caribbean food mill I used."
+      }
+    ],
+    "yields": 2,
+    "prepTime": "PT10M",
+    "cookTime": "PT15M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-fiery-pepper-sauce",
+    "country": "Caribbean",
+    "name": "Fiery Pepper Sauce",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/fiery-pepper-sauce/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "40 hot peppers, as described in the video",
+      "2 heads garlic, 12-16 cloves",
+      "6 limes, juice",
+      "1 teaspoon salt",
+      "10 leaves shado beni, culantro",
+      "3/4 cup white vinegar"
+    ],
+    "description": "With only 5 basic ingredients, this wicked raw pepper sauce is a spicy masterpiece that gives you great flavor with the right amount of heat.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Add the Scotch Bonnet Pepper (40), Fresh Cilantro (1/2 cup), Garlic (15 clove), Salt (1 teaspoon), and Distilled White Vinegar (1 cup) to the blender or food processor and puree it until it’s a smooth consistency. This will take about 1 minute."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour into a clean, dry container and store."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-flavorful-cabbage-with-ham",
+    "country": "Caribbean",
+    "name": "Flavorful Cabbage with Ham",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/flavorful-cabbage-with-ham/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1/2 large Cabbage, sliced",
+      "1 small onion, diced",
+      "1 clove of garlic",
+      "1 1/2 cups diced ham",
+      "1 carrot, julienne",
+      "1 stalk celery, sliced",
+      "2 Pimento peppers",
+      "1 Bird’s Eye pepper, chopped",
+      "1/2 teaspoon black pepper",
+      "3/4 teaspoon curry powder",
+      "1/2 teaspoon salt"
+    ],
+    "description": "Learn how to make a quick and tasty gluten-free dish with Cabbage and diced Ham pieces.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a nonstick pan, add Ham (1 1/2 cup) and let it render some of the fat and cook till the edges are golden brown."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add in Onion (1), Pimiento Pepper (2), Garlic (1 clove), Thai Chili Pepper (1), Celery (1 stalk), and Ground Black Pepper (1/2 teaspoon)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove some of the rendered fat if too much in the pan. Sprinkle in Curry Powder (3/4 teaspoon), Carrot (1) and Green Cabbage (1/2). Season with Salt (1/2 teaspoon)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Continuously stir and cook for about 5 minutes or until vegetables are cooked through. Serve and enjoy!"
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-foolproof-herb-roasted-thanksgiving-turkey",
+    "country": "Fusion",
+    "name": "Foolproof Herb Roasted Thanksgiving Turkey",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/foolproof-herb-roasted-thanksgiving-turkey/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 stick butter, room temperature",
+      "2 tablespoons chopped thyme",
+      "2 tablespoons chopped parsley",
+      "2 tablespoons chopped sage",
+      "2 tablespoons chopped chives",
+      "1 tablespoon chopped tarragon",
+      "1 tablespoon crushed garlic",
+      "1 teaspoon black pepper",
+      "1 teaspoon salt",
+      "1-2 chopped pimento peppers, optional",
+      "8-10 lb turkey",
+      "3 stalks celery",
+      "4 cups chicken stock",
+      "4-5 sprigs rosemary",
+      "8 sprigs thyme",
+      "5 sage leaves"
+    ],
+    "description": "This herb roasted Thanksgiving turkey combines fresh Caribbean-inspired herbs, garlic, and butter to create a flavourful compound butter that helps keep the breast moist. It's a wonderful approach to preparing a whole turkey for Thanksgiving, Christmas, or any special family dinner.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the turkey, then pat it dry thoroughly with paper towels. Set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Create the compound butter by combining the softened butter with the chopped thyme, parsley, sage, chives, and tarragon. Add the crushed garlic, black pepper, and finely diced pimento peppers."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix well to evenly distribute the herbs throughout the butter."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Separate the skin from the turkey breast carefully, creating a pocket between the skin and the meat. Use approximately 75% of the herb compound butter to fill this space. Please refer to the video below to see exactly how I do this."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Spread the remaining compound butter over the top of the turkey breast and legs."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In the roasting pan, place the turkey neck, celery, and chicken stock beneath the roasting rack. Position the rack so the turkey sits elevated above the liquid, allowing it to roast evenly. If you don't have a rack, use carrots and more celery to elevate the turkey."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stuff the cavity of the turkey with the salt, sage leaves, thyme sprigs, and rosemary sprigs."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Lightly tent the turkey with aluminum foil before placing it in a preheated 325°F oven."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "As a general guideline, allow approximately 15 minutes of roasting time per pound of turkey. It’s important to note the weight of your turkey when you purchase it, as this will help you estimate the cooking time. Place the roasting pan on the middle rack of your oven."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "There’s no need to baste the turkey. As the compound butter melts, it helps keep the breast moist while adding plenty of flavour. The goal here is to give you a foolproof roasted turkey recipe without sacrificing flavour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "During the final 45 minutes of cooking, increase the oven temperature to 375°F, remove the foil, and continue roasting. If you notice that the liquid in the bottom of the roasting pan is getting low, add more chicken stock as needed. This liquid helps maintain moisture in the roasting environment and will also become the foundation for your gravy."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "The final check is to use a meat thermometer. Insert it into the thickest part of the turkey, avoiding the bone, and ensure it reaches an internal temperature of 165°F."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "You will notice that the only added salt in my original seasoning approach, apart from what may already be in the salted butter, is placed in the cavity of the turkey. However, you can add another teaspoon or so to the compound butter if you prefer. I’m quite conscious of my sodium intake, so I tend to keep things on the lighter side."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once the turkey comes out of the oven, loosely tent it again with aluminum foil and allow it to rest for approximately 15-20 minutes before carving."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Do you roast a turkey for Thanksgiving? How about Christmas or Easter? I’d love to hear how you make yours, so please leave me a comment below. I always enjoy hearing how other home cooks approach their holiday meals."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Also worth checking out are my Jamaican Jerk Turkey and the Smoked Jerk Turkey I shared a few years ago. And if roasting an entire turkey doesn't make much sense because it's just you and a friend having dinner, do try my Oven Roasted Turkey Breast . It's a wonderful alternative when you want all that roasted turkey goodness without preparing a whole bird."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-fried-chicken-wings-chinese-takeout-style",
+    "country": "Caribbean",
+    "name": "Fried Chicken Wings, Chinese Takeout Style",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/fried-chicken-wings-chinese-takeout-style/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs chicken wings, flats and drumettes",
+      "1/2 tsp black pepper",
+      "1/2 tsp white pepper",
+      "1/2 tsp garlic powder",
+      "1/2 Tbsp sea salt, or any salt",
+      "1 tsp sugar",
+      "1 1/2 Tbsp light soy sauce",
+      "2 Tbsp Chinese cooking wine",
+      "1 Tbsp sesame oil",
+      "1 1/2 Tbsp cornstarch",
+      "3 Tbsp all-purpose flour",
+      "6 cups 6–7 vegetable oil, for frying"
+    ],
+    "description": "Crispy double-fried chicken wings seasoned with soy sauce, Chinese cooking wine, and sesame oil for the classic takeout flavor you love.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Cut chicken wings into flats and drumettes. Remove any stray feathers. Those of us from the Caribbean will wash the wings with lime or lemon juice, or white vinegar. Then rinse with cool water."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place wings in a mixing bowl and season with black pepper, white pepper, garlic powder, salt, sugar, soy sauce, Chinese cooking wine, and sesame oil. Mix well. For additional flavor (as mentioned in the video below), you may add a tablespoon of Oyster sauce."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the beaten egg, then mix in the cornstarch and flour until wings are well coated."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover and marinate in the refrigerator for 2 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove wings from the fridge 30 minutes before frying."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat vegetable oil in a deep frying pot to 325°F (163°C). Fry wings in batches for 7–8 minutes until golden. Remove and drain on a wire rack set over a baking sheet. You can use any oil you typically use for deep-frying."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After the first fry, increase oil temperature to 350°F (177°C). Return wings in batches to the oil and fry for 3–4 minutes until extra crispy."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Drain again on the wire rack. Sprinkle lightly with salt while still warm if desired."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot with Pineapple Peppersauce or the more fragrant Grilled Pineapple Peppersauce , or enjoy on their own."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT2H",
+    "cookTime": "PT25M",
+    "totalTime": "PT2H25M"
+  },
+  {
+    "id": "carib-trinidadian-fry-aloo-potato-with-corned-mutton",
+    "country": "Trinidadian",
+    "name": "Fry Aloo with Corned Mutton (Potato and Corned Mutton)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/fry-aloo-potato-with-corned-mutton/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 tablespoons olive oil",
+      "1 medium onion, sliced",
+      "8 cloves garlic, smashed",
+      "1/2 teaspoon salt, adjust to taste",
+      "1/2 Scotch Bonnet pepper, optional",
+      "1/2 teaspoon black pepper",
+      "5 medium potatoes, thinly sliced",
+      "1 cup leftover or canned corned mutton, fried or directly from can"
+    ],
+    "description": "A comforting, savory potato dish featuring thinly sliced aloo and rich corned mutton (canned lamb or goat), perfect for breakfast, lunch, or dinner with sada roti.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Peel and slice potatoes thin. Rinse in cool water to remove starch, then drain well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil in a wide nonstick pan over medium heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add potatoes and stir to coat in oil. Add onion, garlic, salt, black pepper, and Scotch Bonnet. Stir again."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover with a lid and cook on medium-low heat for 10 minutes. Stir every 3–4 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 20 minutes, uncover."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Create a space in the center of the pan and add corned mutton. Cook for 3 minutes to heat, then stir to mix evenly with potatoes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase heat slightly to crisp and reduce moisture. Stir often. Taste and adjust salt. Serve hot with sada roti or as a standalone meal."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT30M",
+    "totalTime": "PT40M"
+  },
+  {
+    "id": "carib-fusion-trinidadian-fry-aloo-potato-with-ochro-okra",
+    "country": "Fusion, Trinidadian",
+    "name": "Fry Aloo with Ochro (Potato and Okra)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/fry-aloo-potato-with-ochro-okra/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3-4 tablespoons olive oil",
+      "2 small onions, sliced",
+      "8 cloves garlic, smashed",
+      "2 Bird’s Eye peppers, whole or chopped",
+      "1/2 teaspoon black pepper",
+      "12 okra, sliced into wheels",
+      "3/4 teaspoon salt",
+      "5 medium potatoes, sliced thin"
+    ],
+    "description": "Thinly sliced potatoes and okra sautéed in olive oil with garlic, pepper, and onion; crispy, vegan, and gluten-free Caribbean comfort food.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil in a wide pan over medium-low. Add onions, garlic, and bird’s eye pepper. Cook 3–4 minutes until fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add okra wheels."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir to coat in oil, then add sliced potatoes, salt, and black pepper. Stir to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover pan and cook for 12 minutes, stirring every 4 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove lid and cook an additional 8–13 minutes, stirring to allow golden edges to form. Taste, add more salt if needed, and serve hot with sada roti or rice."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT25M",
+    "totalTime": "PT35M"
+  },
+  {
+    "id": "carib-caribbean-fry-cornedbeef-with-iceberg-lettuce-2",
+    "country": "Caribbean",
+    "name": "Fry Corned Beef With Iceberg Lettuce",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/fry-cornedbeef-with-iceberg-lettuce-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 can cornedbeef, tin",
+      "1 medium onion",
+      "1 medium tomato",
+      "1 teaspoon tomato ketchup",
+      "1 pepper habanero",
+      "1/2 teaspoon black pepper",
+      "2 stalks scallions",
+      "1/2 medium iceberg lettuce"
+    ],
+    "description": "There are many variations of making/cooking cornedbeef (from a can) in the Caribbean, making it easy to not know them all. Each family will have their version and while it may not be YOUR version, there’s no need to cornedbeef shame anyone (smile) . There were mixed reactions from fans after I posted the video tutorial on YouTube (same video below) … mainly because they reacted to the title without watching the video where I explained why the use of Iceberg Lettuce and not the traditional cabbage .",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Place a saucepan (I used a non-stick) on a medium low heat and add the tin (can) of corned beef, then using a spoon or spatula, break it up into small pieces. I explain why in the video below."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the onion, tomato, ketchup, hot pepper of your choice (I used a habanero) and the black pepper. Give it a good mix to combine. Cook for 4-6 minutes on a medium low heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Toss in the scallions, stir and cook a further 2 minutes before adding the roughly chopped lettuce to the pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "At this point my mom usually turns the stove off (after mixing in the lettuce) and allow the residual heat from the pot to finish things off. In my case I left the stove on for a further 2 minutes before turning it off."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Other options (besides cabbage and lettuce) are kale, spinach and/or Jamaican callaloo (chorai bhagi). The perfect topping for hot steamy rice or if you have the time, rock some hot Sada Roti. When all fails, there’s nothing wrong with everyday sliced bread as a side or for a sandwich."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-garlic-and-chive-string-beans-with-cashews",
+    "country": "Fusion",
+    "name": "Garlic and Chive String Beans with Cashews",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/garlic-and-chive-string-beans-with-cashews/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1/2 cup raw cashew nuts",
+      "2 – tablespoons chive garlic butter",
+      "1 1/2 – lbs string beans, washed, trimmed",
+      "3/4 – teaspoon sea salt",
+      "1/2 – teaspoon black pepper",
+      "3 – cloves garlic, sliced",
+      "2 – tablespoons water",
+      "1/2 – teaspoon lemon zest",
+      "– pinch chili flakes, optional",
+      "1/2 juice – of lemon, optional"
+    ],
+    "description": "Fresh string beans straight from the garden come alive in this quick sauté featuring a vibrant garlic and chive butter, toasted cashews for crunch, and a touch of lemon zest for brightness. Part of my #InSeason series, this simple dish shows how local and seasonal ingredients can elevate everyday meals at the dinner table.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Prep the string beans. Wash, drain and trim off the stems and bottom ends of the beans."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place a dry skillet over medium heat. Add the cashew nuts and toast for 2–3 minutes, stirring often until golden and aromatic. Remove and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the chive garlic butter to the same skillet. Once melted, add the sliced garlic and cook for 1 minute, stirring to release its flavor into the butter."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the trimmed string beans and toss to coat in the flavored butter. Cook for 2–3 minutes, stirring occasionally."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season with sea salt, black pepper, and chili flakes if using. Add the sliced garlic for additional garlic flavor. Add the water, cover the skillet, and allow the beans to steam for 2–3 minutes until just tender but still vibrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Uncover, stir in the toasted cashews and lemon zest. Add lemon juice if using. Sauté uncovered for 1 additional minute to blend flavors and reduce any liquid."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust seasoning to your preference. Serve warm as a side dish."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT8M",
+    "totalTime": "PT18M"
+  },
+  {
+    "id": "carib-fusion-garlic-chive-butter",
+    "country": "Fusion",
+    "name": "Garlic Chive Butter",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/garlic-chive-butter/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 tablespoons salted butter",
+      "6 cloves garlic, crushed",
+      "2 cups chives, finely chopped",
+      "1 lb unsalted butter, softened"
+    ],
+    "description": "",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a saucepan over medium-low heat, melt the salted butter. Add crushed garlic and stir occasionally. Once small bubbles appear at the edges, remove from heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the chopped chives and softened unsalted butter to the saucepan off the heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir until the mixture is fully combined. Add a pinch of sea salt if desired."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Transfer to containers with lids, or roll into a log with plastic wrap to freeze."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Store in the refrigerator for up to 3 months, or keep at room temperature for up to 2 weeks."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": null,
+    "totalTime": "PT15M"
+  },
+  {
+    "id": "carib-fusion-herb-garlic-mushrooms",
+    "country": "Fusion",
+    "name": "Garlic Herb Mushrooms",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/herb-garlic-mushrooms/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 pound button mushrooms, cleaned",
+      "2 tablespoons olive oil",
+      "1 1/2 tablespoons butter",
+      "1 medium onion, diced",
+      "3-5 cloves garlic, crushed",
+      "3-4 sprigs thyme",
+      "1 tablespoon parsley, chopped",
+      "1/4 teaspoon salt",
+      "3-4 tablespoons white wine",
+      "1/4 teaspoon black pepper",
+      "1/4 teaspoon red pepper flakes, optional"
+    ],
+    "description": "Savory sautéed mushrooms with garlic, fresh herbs, and a splash of white wine—elegant, easy, and ideal for meat-free meals or as a side dish.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat olive oil and butter in a wide pan over medium heat. Add onion and sauté gently for 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase heat to medium-high and add mushrooms (halved if large). Cook for 7–9 minutes until they shrink and caramelize."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in white wine to deglaze the pan. Cook 1 minute."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce heat to low and add garlic, thyme, parsley, salt, black pepper, and red pepper flakes. Stir well to coat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook for an additional 2–3 minutes until garlic is fragrant but not browned."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot with your favorite dishes."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT5M",
+    "cookTime": "PT12M",
+    "totalTime": "PT17M"
+  },
+  {
+    "id": "carib-fusion-grilled-corn-salad-the-ultimate-summer-side-dish",
+    "country": "Fusion",
+    "name": "Grilled Corn Salad",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/grilled-corn-salad-the-ultimate-summer-side-dish/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 large ears corn",
+      "1 medium ripe pineapple, cut into spears",
+      "2 bird’s eye peppers, optional",
+      "1 small red onion, sliced",
+      "1 small English cucumber, diced",
+      "1 cup tomato, seeded and diced",
+      "1/2 cup celery, diced",
+      "1/2 cup sweet bell peppers, diced",
+      "1/4 cup cilantro, chopped",
+      "1 teaspoon sea salt, divided",
+      "1 teaspoon coarse black pepper, divided",
+      "1 1/2 tablespoons olive oil",
+      "2 tablespoons honey, I used lavender honey",
+      "2 cloves garlic, crushed",
+      "2 tablespoons lemon juice"
+    ],
+    "description": "This grilled corn salad combines smoky charred corn, sweet grilled pineapple, fresh vegetables, and a simple honey citrus dressing. It's the perfect summer side dish for barbecues, cookouts, and outdoor gatherings.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Grill the ears of corn, making sure to rotate them so you get a balance of char. This will take about 15 minutes on a moderate grill. If desired, soak them in water before grilling. You may also grill them with the husks on, which will steam the corn while protecting it from direct heat. This method will take a little longer but helps prevent burning."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Do the same with the pineapple spears, though they will grill much quicker. About 5 to 7 minutes is all you’ll need to develop a nice char and golden edges. When grilling both the corn and pineapple, be mindful that they can burn easily as the natural sugars caramelize."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once cool enough to handle, remove the corn kernels from the cobs and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cut the grilled pineapple into bite-sized pieces. The fragrance alone reminds me of freshly harvested pineapples back home in Trinidad and Tobago. Sadly the ones we get in Canada, just doesn't compare."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl, combine the corn, pineapple, onion, tomato, cucumber, celery, bird's eye peppers (remove the seeds and membrane to cut back on the heat if you want), sweet bell peppers, cilantro, three-quarters of the black pepper, and three-quarters of the salt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In another bowl, whisk together the olive oil, honey, garlic, remaining salt, remaining black pepper, and lemon juice to create the dressing. As mentioned in the video below, lime juice is an excellent replacement for lemon juice. If using lIme j, may I suggest adding a bit of lemon zestuice."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you're looking for a different dressing for this grilled corn salad, may I suggest my Honey Mustard Dressing ?"
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the dressing over everything and mix well to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve immediately or chilled. Additionally, you can add diced avocado, diced ripe but firm mango, grilled zucchini, broccoli, or any other seasonal vegetable you enjoy or have access to."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT20M",
+    "cookTime": "PT20M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-jamaican-succulent-grilled-leg-of-goat-2",
+    "country": "Jamaican",
+    "name": "Grilled Leg of Goat",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/succulent-grilled-leg-of-goat-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3-4 lbs goat leg, bone-in",
+      "3/4 cup olive oil",
+      "4 cloves garlic, diced or crushed",
+      "5 sprigs thyme",
+      "2 tablespoon parsley, chopped",
+      "2 tablespoon oregano",
+      "2 sprigs rosemary",
+      "1 tablespoon dried pepper flakes",
+      "2 lime, juiced, divided",
+      "1/2 teaspoon ground allspice",
+      "2 teaspoon honey",
+      "2 stalks scallions, chopped",
+      "3/4 tablespoon salt"
+    ],
+    "description": "Elevate your grilling game with this succulent grilled leg of goat. Marinated in a blend of herbs and spices, then slow-grilled to perfection, this dish offers a tender and flavorful alternative to traditional barbecue meats.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash goat leg with juice of 1/2 lime, rinse, and pat dry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Score and tie the goat leg to maintain shape while cooking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Combine olive oil, garlic, thyme, parsley, oregano, rosemary, red pepper flakes, lime juice, allspice, honey, scallions, orange juice, and salt into a marinade."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Massage the marinade into the goat leg and marinate 2 hours or overnight."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat grill for indirect heat at 275–300 °F (135–150 °C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the goat leg away from direct flame on the grill and cook 2–3 hours, basting frequently."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Move the leg over direct heat in the final 15 minutes to crisp the surface."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Rest for 15 minutes before carving and serving."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT15M",
+    "cookTime": "PT2H",
+    "totalTime": "PT2H15M"
+  },
+  {
+    "id": "carib-general-caribbean-guyanese-mango-sour-recipe",
+    "country": "General Caribbean",
+    "name": "Guyanese Mango Sour Recipe",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/guyanese-mango-sour-recipe/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 green mango (about 1 lb), peeled and roughly chopped",
+      "4 cloves garlic, smashed",
+      "1 scotch bonnet pepper, roughly chopped",
+      "3/4 teaspoon roasted geera, cumin",
+      "3/4 teaspoon salt",
+      "3 cups water",
+      "1/2 lime, juiced"
+    ],
+    "description": "This Guyanese mango sour is a bold, spicy, and tangy Caribbean condiment made with green mango, garlic, and roasted geera. The sharp tart flavor and heat make it the perfect dipping sauce for pholourie and other fried snacks.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash and peel the mango, then give it a rough chop and discard the seed or pit."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the chopped mango into a pot along with the smashed garlic and the chopped scotch bonnet pepper, including the seeds for heat. Traditionally in Guyana, Wiri Wiri peppers are the pepper of choice, so if you can source them you can use about five instead."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the water and roasted geera, then bring everything to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce to a steady rolling boil and cook for about 25 to 35 minutes, or until the mango softens and begins to fall apart, filling the kitchen with that warm aroma of garlic and toasted geera."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce the heat or take the pot off the stove for safety, then use a potato masher or stick blender to puree everything. You can control the texture of the finished Guyanese mango sour, whether you prefer it rustic or smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the salt if needed. As you sample it, you should feel that familiar tartness hitting the sides of your cheeks, the same kind of sharp sour taste many of us remember from childhood and our first encounter with this wicked condiment."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Finish by stirring in the fresh lime juice. I prefer lime over white vinegar (traditionall used in most Giyanese homes) because the citrus brightens the finished Guyanese mango sour and lifts the natural tang of the green mango. If the finished mango sour is ovely tart, add sugar, starting with 1/2 teaspoon."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT10M",
+    "cookTime": "PT30M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-habanero-peach-chicken-wing-sauce",
+    "country": "Caribbean",
+    "name": "Habanero Peach Chicken Wing Sauce.",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/habanero-peach-chicken-wing-sauce/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 lbs 2–3 habanero peppers",
+      "2 lbs ripe peaches, seeds removed",
+      "1 tablespoon sea salt",
+      "2 cloves garlic",
+      "1 teaspoon grated ginger",
+      "1 cup maple syrup",
+      "1 small carrot, rough chopped",
+      "3/4 tablespoon mustard powder",
+      "2 1/2 cups apple cider vinegar, adjust to desired consistency",
+      "1 tablespoon Juice lemon, freshly squeezed, to finish"
+    ],
+    "description": "Sweet, fiery, and full of Caribbean flavor! This Peach Habanero Sauce blends ripe peaches, spicy habaneros, and maple syrup for the perfect hot sauce balance.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat the oven to 300°F (150°C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Wash the habanero peppers and remove the stems. Wash and halve the peaches, then remove their seeds."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Arrange the peppers and peaches, cut side up, on a baking tray and roast for 1 hour. Be sure to vent your kitchen well, as roasting hot peppers can be intense. (If smoking instead, cook at 250°F (120°C) for 2–3 hours.)"
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once cooled, transfer the roasted peppers and peaches to a blender, along with the sea salt, garlic, ginger, maple syrup, carrot, mustard powder, and apple cider vinegar. Blend until smooth, working in batches if necessary."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste the sauce and adjust salt to your preference. Stir in the fresh lemon juice to finish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour into sterilized glass jars and store in a cool, dark place or refrigerate. The sauce will keep for 6–10 months in the fridge."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "(You can cook the blended sauce before bottling, but it doesn’t significantly affect shelf life or flavor.) Also note that I have the Mango and Peach Hot Suace Recipe , along with the Smoked Soctch Bonnet and Peach Sauce , with similar flavour profiles avaiable on the wbeiste."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H15M"
+  },
+  {
+    "id": "carib-haitian-haitian-pikliz-picklese",
+    "country": "Haitian",
+    "name": "Haitian Pikliz (Picklese)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/haitian-pikliz-picklese/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 cups shredded cabbage",
+      "1 large carrot",
+      "1 cup bell pepper, green, orange, red",
+      "1 onion",
+      "2 stalks scallions",
+      "6 peppers scotch bonnet peppers",
+      "4 cloves garlic",
+      "1 teaspoon salt",
+      "2 cups vinegar, see note",
+      "1/2 cup lime juice"
+    ],
+    "description": "The Caribbean is flooded with pepper sauces and condiments of all kinds as it’s simply part of our culinary culture. The textures, heat level, ingredients, ways of preserving and overall vibrancy of them all are unique to the maker and individual island. In Trinidad and Tobago you’ll find a lot of chutneys and amchars, while in Barbados you’ll hear the locals boast about their peppersauce. As someone who consider myself an aficionado of anything hot and spicy, it must be said that Haitian Pikliz is at the top of my list when it comes to spicy condiments.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Place Green Cabbage (2 cup), Scotch Bonnet Pepper (6), Assorted Color Bell Peppers (1 cup), Onion (1), Carrot (1), and Scallion (1 bunch) in the mixing bowl."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add in the Peppercorns (12), Salt (1 teaspoon), and Garlic (4 clove)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add some juice from the Lime (1/2) by squeezing over the bowl, then toss everything together."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Get a fairly large glass bottle and pack everything in, then top with Distilled White Vinegar (2 cup). Cover and set aside to marinate. Let sit for 4 to 5 days before using."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "This can be served with your favorite meat dish, soup or whatever savory dish you think could use some heat!"
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-jamaican-trinidadian-the-best-oxtail-soup-recipe-youll-ever-taste-2",
+    "country": "Jamaican, Trinidadian",
+    "name": "Hearty Caribbean Oxtail Soup with Root Vegetables and Dumplings",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/the-best-oxtail-soup-recipe-youll-ever-taste-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs oxtail",
+      "1/2 tablespoon sea salt",
+      "1 teaspoon black pepper",
+      "2 tablespoons olive oil",
+      "2 large carrots",
+      "2 1/2 lbs pumpkin",
+      "1 tablespoon olive oil",
+      "1 medium onion, diced",
+      "1 tablespoon olive oil",
+      "8 cloves garlic, smashed",
+      "6-8 sprigs thyme",
+      "3 scallions, chopped",
+      "1/2 teaspoon black pepper",
+      "1/2 cup hot water",
+      "1 cup yellow split peas, washed",
+      "8-10 cups hot water",
+      "3/4 tablespoon salt",
+      "1 tablespoon Caribbean Green Seasoning",
+      "1 Scotch Bonnet Pepper",
+      "2 tablespoons coconut cream, or 1 cup coconut milk",
+      "3 large potatoes",
+      "2 large sweet potatoes",
+      "6-8 medium eddoes",
+      "10-15 okra",
+      "1 tablespoon tomato paste",
+      "5-8 cups water",
+      "1/3 lb baby spinach",
+      "1 1/2 cups All-purpose flour",
+      "1/4 teaspoon salt",
+      "1 teaspoon brown sugar",
+      "1/2 cup water, adjust as needed"
+    ],
+    "description": "This hearty Caribbean oxtail soup combines tender oxtail, a variety of root vegetables, and traditional island spices to create a soul-warming dish perfect for sharing.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash oxtail pieces with lemon juice and water, then pat dry. Place on a baking tray, season with sea salt, black pepper, and olive oil. Mix well to coat. Roast in a preheated oven at 350°F (175°C) for 1 hour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "On a separate tray, place large pieces of carrots and pumpkin. Drizzle with olive oil and roast alongside the oxtail. Once done, peel and cut into smaller pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large soup pot, heat olive oil over medium heat. Add diced onion, smashed garlic, thyme, scallions, and black pepper. Cook for 3 minutes until fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add roasted oxtail to the pot. Use hot water to deglaze the roasting tray, scraping up any browned bits, and add this liquid to the pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in tomato paste, 10 cups of hot water, and washed yellow split peas. Bring to a boil. Add Scotch Bonnet Pepper (whole), Caribbean Green Seasoning, and salt. Reduce heat to a simmer and cook for 1 hour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the roasted carrots and pumpkin to the pot. Continue to simmer for another 30–40 minutes, allowing the pumpkin to break down and thicken the soup."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Introduce chopped potatoes, sweet potatoes, and eddoes to the soup. Ensure pieces are large to prevent them from disintegrating."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add okra and coconut cream (or milk) to the pot. If the soup is too thick, add additional water to reach desired consistency."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After the root vegetables have cooked for about an hour, add baby spinach and the prepared dumplings to the pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook for an additional 10–15 minutes until dumplings are cooked through."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Ladle the soup into bowls, ensuring each serving has a mix of oxtail, vegetables, and dumplings. Enjoy hot."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT30M",
+    "cookTime": "PT4H",
+    "totalTime": "PT4H30M"
+  },
+  {
+    "id": "carib-jamaican-jerk-ham-with-mango-orange-pineapple-rum-glaze",
+    "country": "Jamaican",
+    "name": "Holiday Jerk Ham with Pineapple Mango Rum Glaze",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/jerk-ham-with-mango-orange-pineapple-rum-glaze/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "9-10 lb smoked ham",
+      "1 tablespoon ground allspice",
+      "1 teaspoon ground cinnamon",
+      "1 teaspoon ground nutmeg",
+      "2 tablespoons olive oil",
+      "1 cup orange juice",
+      "1 inch fresh ginger, peeled, roughly chopped",
+      "4 scallions",
+      "4 cloves garlic",
+      "8-10 sprigs fresh thyme",
+      "2 tablespoons dark soy sauce, or tamari",
+      "1 scotch bonnet pepper, stem and seeds removed",
+      "1 1/2 tablespoons brown sugar",
+      "1/4 cup rum",
+      "2 cups orange juice",
+      "14 oz canned pineapple tidbits",
+      "1 1/2 cups mango pieces",
+      "3/4 cup brown sugar",
+      "1/2 teaspoon ground allspice",
+      "1 teaspoon grated ginger",
+      "1/4 cup rum",
+      "1 orange, zested"
+    ],
+    "description": "A delicious ham for the holiday season. Try something new with this delicious glaze on a beautiful jerk ham.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat oven to 350 °F (175 °C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the ham’s fatty skin; score in a diamond pattern."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Combine marinade ingredients in a food processor until coarse."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Massage the marinade into the ham and let rest 30 minutes to overnight."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Tent with foil and roast ~10 minutes per pound."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Prepare glaze by simmering all glaze ingredients (except zest) for 40–45 minutes. Mash lightly and stir in orange zest."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After ~30 minutes of baking, baste ham every 10–15 minutes with pan juices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "At ~1 hr 15 min, increase oven to 400 °F (200 °C), remove foil, bake 15 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Broil at ~500 °F and spoon glaze onto ham in three layers (3–4 minutes each). Watch closely to avoid burning."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Rest the ham 15 minutes before slicing; serve with glaze on the side."
+      }
+    ],
+    "yields": 12,
+    "prepTime": "PT30M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H30M"
+  },
+  {
+    "id": "carib-jamaican-trinidadian-rum-and-raisin-ice-cream",
+    "country": "Jamaican, Trinidadian",
+    "name": "Homemade Rum Raisin Ice Cream",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/rum-and-raisin-ice-cream/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 egg yolks",
+      "1 1/2 cups milk",
+      "2 1/2 cups heavy cream",
+      "3/4 cup fine sugar",
+      "1/2 cup raisins, soaked in rum overnight or warmed",
+      "Pinch salt",
+      "1 tablespoon vanilla extract"
+    ],
+    "description": "A luscious custard-style ice cream rich with rum‑soaked raisins and vanilla, a Caribbean twist on a classic favorite.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Soak raisins in rum overnight, or warm with 1 cup rum over low heat until plump. Cool before use."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Whisk sugar and egg yolks until pale and creamy."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat milk and cream until just below simmering."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Temper yolk mixture by whisking in warm milk a little at a time, then return all to the pot. Add salt and vanilla."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook custard until it coats the back of a spoon."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain into a bowl and chill for at least 2 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add custard to ice cream maker per machine instructions and churn, adding soaked raisins near the end."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve soft-serve, or transfer to a container and freeze 1–2 hours for firmer scoops."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT20M",
+    "totalTime": "PT2H35M"
+  },
+  {
+    "id": "carib-trinidadian-homemade-tamarind-bbq-sauce-2",
+    "country": "Trinidadian",
+    "name": "Homemade Tamarind BBQ Sauce",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/homemade-tamarind-bbq-sauce-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1/4 cup brown sugar, packed",
+      "1/4 cup cider vinegar",
+      "1 large sweet onion, diced",
+      "2 cups ketchup",
+      "1/4 cup Worcestershire sauce",
+      "2 tablespoons molasses",
+      "2 tablespoons yellow mustard",
+      "1 Scotch bonnet pepper, finely chopped, seeds removed for less heat",
+      "1/2 teaspoon black pepper",
+      "1/2 teaspoon ground allspice",
+      "1 tablespoon olive oil",
+      "1/2 teaspoon salt",
+      "1 tablespoon grated ginger",
+      "3/4 cup tamarind pulp"
+    ],
+    "description": "This tangy and spicy tamarind BBQ sauce is a Caribbean favorite, perfect for adding a burst of flavor to grilled dishes or as a dipping sauce.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Place tamarind pulp in a bowl and pour over 1 to 1½ cups of hot water. Let it soak while you prepare the other ingredients."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a deep saucepan on medium heat, pour in Olive Oil (1 tablespoon), then add the large onion. Turn the heat down to low and let this slowly cook for 5 minutes, stirring often."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add black pepper and ground allspice to the onions. Cook for 1–2 minutes, stirring constantly, to toast the spices and release their flavors."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase heat to medium and add ketchup, Worcestershire sauce, molasses, yellow mustard, Scotch bonnet pepper, salt, and grated ginger. Stir to combine and bring to a gentle boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "While the sauce is heating, use a fork to break up the soaked tamarind pulp, then use your fingers to massage it, releasing the pulp into the water."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "While the sauce is heating, use a fork to break up the soaked tamarind pulp, then use your fingers to massage it, releasing the pulp into the water."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain the tamarind liquid into the saucepan, discarding any solids."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the sauce from heat and allow it to cool completely. Transfer to sterilized glass containers and store in the refrigerator."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use this sauce for grilling, a dipping sauce for your chicken fingers or for burgers. Store in glass containers in the fridge and it will remain good for at least a couple months. Enjoy!"
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT15M",
+    "cookTime": "PT45M",
+    "totalTime": "PT1H"
+  },
+  {
+    "id": "carib-caribbean-outstanding-honey-mustard-dressing-dip",
+    "country": "Caribbean",
+    "name": "Honey Mustard Dressing Dip",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/outstanding-honey-mustard-dressing-dip/",
+    "author": "Sandie Markle",
+    "ingredients": [
+      "1/2 cup olive oil",
+      "2 tablespoons honey",
+      "2 tablespoons Dijon mustard",
+      "1 tablespoon lemon juice",
+      "1 1/2 tablespoons rice wine vinegar",
+      "1/2 teaspoon black pepper",
+      "1 pinch salt"
+    ],
+    "description": "This honey mustard dressing can also be used as a dip for your favorite vegetable sticks, chicken wings, or chicken nuggets, and as a drizzle on salads.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a medium mixing bowl, add mayonnaise, yellow mustard, and honey."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in white vinegar, granulated garlic, and a pinch of salt and pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Using a whisk or spoon, mix all ingredients thoroughly until you reach a smooth, creamy consistency."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste the dressing and adjust sweetness or tanginess by adding more honey or vinegar, if desired."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Transfer the dressing to a glass jar or airtight container. Store in the fridge for up to 1 week."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve cold as a dip or drizzle."
+      }
+    ],
+    "yields": 4,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-how-to-make-pommecythere-talkari",
+    "country": "Caribbean",
+    "name": "How To Make Pommecythere Talkari",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/how-to-make-pommecythere-talkari/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 tablespoons vegetable oil",
+      "1 teaspoon geera, cumin",
+      "8 cloves garlic, smashed",
+      "8 Wiri Wiri peppers",
+      "2 tablespoons anchar masala",
+      "10 green pommecythe, peeled, thick sliced",
+      "2 cups 2–3 water",
+      "3/4 tablespoon salt",
+      "2 tablespoons brown sugar"
+    ],
+    "description": "This Pommecythe Talkari is a traditional Caribbean condiment and snack made from green pommecythe simmered in spiced masala with garlic, cumin, and fiery Wiri Wiri peppers. It’s a perfect blend of sweet, tangy, and spicy flavors — a true taste of Trinbagonian street and home cooking. You’ll see variations of this dish in Guyana and Surinam as well.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Peel the green Pommecythere, cut into wedges, then wash and drain well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a wide pan over medium heat, add the vegetable oil. Once hot, add the geera (cumin) seeds and toast gently for 3 minutes on low heat until fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the smashed garlic and Wiri Wiri peppers, stirring for about 2 minutes to release their aroma."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the anchar masala and continue cooking on low heat for 3–4 minutes, stirring often so it doesn’t stick. Smash the peppers if you’d like this extra spicy, or keep them whole to control the heat a bit."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the sliced Pommecythere pieces and stir well to coat them evenly in the spiced oil mixture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn the heat up to medium, pour in the water, and bring to a boil with the lid on."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once boiling, add the salt and brown sugar. Stir to combine, then reduce the heat to a gentle simmer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook covered (slightly ajar) for about 70 minutes, stirring occasionally, until the Pommecythere pieces are tender. Add more water if needed during cooking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the salt and sugar to balance sweetness, heat, and spice."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase the heat to reduce any remaining liquid. Allow the sauce to caramelize slightly for a deeper, richer flavor. Please note that the Pommecythere does have a spiky core or seed, and if it’s your first time having them, you’d want to keep this in mind when eating the Pommecythe talkari. Also note that the perfect Pommecythere for making this dish is the ‘full’ (meaning mature but not ripe) Pommecythere, which would have a green skin. And yes, you can keep the skin on as in the original recipe for Pommecythere Anchar I shared a few years ago."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from heat and let cool. Store in the refrigerator for up to one week. Serve warm or chilled as a snack or condiment."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT1H10M",
+    "totalTime": "PT1H25M"
+  },
+  {
+    "id": "carib-general-caribbean-how-to-make-the-best-seasoned-corn-on-the-cob",
+    "country": "General Caribbean",
+    "name": "How to Make the Best Seasoned Corn on the Cob",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/how-to-make-the-best-seasoned-corn-on-the-cob/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb salted pigtail, pre-cooked",
+      "1 lime or lemon",
+      "5 sweet corn",
+      "3 pimento peppers, aka seasoning peppers",
+      "6-10 chadon beni leaves, chopped",
+      "6 cloves garlic, smashed",
+      "8-12 sprigs thyme",
+      "1/4 cup parsley, chopped",
+      "1 dried coconut, or 1 can coconut milk",
+      "5 cups water, divided"
+    ],
+    "description": "This seasoned corn on the cob combines sweet corn, salted pigtail, coconut milk, chadon beni, garlic, thyme, parsley, and pimento peppers for a fragrant Caribbean-inspired corn recipe. This full-size batch makes five ears of seasoned corn.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Cut the pieces of salted pigtail into 1-inch pieces, wash with the juice of a lemon or lime, rinse, then place in a deep pot covered with water and simmer for at least 1 hour. This step will tenderize it, plus remove most of the salty brine it was cured in. Drain, rinse, and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a pot, add the corn, pimento peppers, chadon beni, also known as bandanya or culantro, garlic, thyme, and parsley."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "You will need to watch the video below, where I go through the steps in making fresh coconut milk. With a dried coconut, make sure that when you shake it, you can hear liquid swishing around. Crack the hard shell with the back of a large chef's knife or hammer. Then, using a paring knife, place the blade between the shell and coconut flesh and pry the flesh off. Be very careful. In the video, I suggested using a kitchen towel to help make this step safer. Chop the pieces of coconut into small pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a blender, place the pieces of coconut flesh along with 2 cups of water and puree."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add this coconut milk, without straining, to the corn in the pot. Add about 3 cups more water so the corn is submerged."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring to a boil and simmer for 10-15 minutes, or until the corn is fully cooked. With sweet corn, this happens quickly compared to the local corn we had and have in the Caribbean."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Traditionally, mom and dad would use some of the corn husk to cover the pot, helping to add a bit more flavour and also keep the fragrance of the herbs, garlic, and pimento peppers in the pot as it simmers."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "The remnants of salt from the salted pigtail will be enough to season the corn accordingly. However, you can top it with sea salt if you want. No, there is no need for butter, as the richness of the coconut milk will coat the corn on the cob lovingly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you enjoyed this seasoned corn on the cob, consider trying my Corn Souse , Curry Corn , Grilled Corn Salad , Caribbean Roasted (grilled) Corn , and the other fan fave, Charred Sweet Corn Porridge ."
+      }
+    ],
+    "yields": 5,
+    "prepTime": "PT10M",
+    "cookTime": "PT1H10M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-stew-chicken-soup",
+    "country": "Caribbean",
+    "name": "Incredible Caribbean Stew Chicken Soup Recipe",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/stew-chicken-soup/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 large carrot, peeled and chopped",
+      "1 lb pumpkin, peeled and cubed",
+      "2 lbs eddoes, peeled and cut into large pieces",
+      "2 lbs sweet potato, peeled and cubed",
+      "2 lbs Yukon gold potato, peeled and cubed",
+      "2 lbs cassava, peeled, de-veined, and cut into large pieces",
+      "4 lbs chicken legs with backs attached, cut into pieces and trimmed",
+      "1 lemon, juiced",
+      "1 tablespoon salt",
+      "3/4 teaspoon black pepper",
+      "1 tablespoon Worcestershire sauce",
+      "2 tablespoons Caribbean green seasoning",
+      "2 pimento peppers, chopped",
+      "1/2 tomato, chopped",
+      "1 tablespoon grated ginger",
+      "2 tablespoons olive oil",
+      "2 tablespoons brown sugar",
+      "8 cups water",
+      "6 cups chicken stock",
+      "1 large onion, quartered",
+      "2 bay leaves",
+      "6 sprigs thyme",
+      "1 scotch bonnet pepper, whole",
+      "1 1/2 cups coconut milk",
+      "1 lb spinach, roughly chopped",
+      "8 –12 okra, stems removed and chopped",
+      "2 scallions, chopped",
+      "3 tablespoons chopped parsley",
+      "1 1/2 cups all-purpose flour",
+      "Pinch of salt",
+      "1 teaspoon brown sugar",
+      "3/4 cup coconut milk"
+    ],
+    "description": "This hearty Caribbean Stew Chicken Soup is made with brown stewed chicken, ground provisions, dumplings, and coconut milk for true island comfort.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Peel, wash, chop, and drain the carrot, pumpkin, eddoes, sweet potato, Yukon gold potato (use your fav potato), and cassava. Cut the cassava and eddoes into larger pieces to prevent them from falling apart."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cut the chicken into pieces and remove excess skin and fat. Wash with lemon juice and cool water, then drain."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season the chicken with salt, black pepper, Worcestershire sauce, green seasoning, pimento peppers, tomato, and grated ginger. Mix well and marinate for at least 2 hours at 40°F (4°C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat a deep soup pot on high heat. Add the olive oil and brown sugar and stir continuously until the sugar melts, froths, and turns amber. Do NOT allow it to go black or you will end up with bitter tasting soup. Explained in the video below."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the seasoned chicken and stir to coat evenly. Cook for 5 to 8 minutes, stirring often."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the prepared vegetables and stir to coat with the base flavors. Add the water and chicken stock and bring to a boil at 212°F (100°C). Additiionally you can add Caribbean yams, dasheen, green cooking bananas and semi ripe or green plantain to the soup."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the onion, bay leaves, thyme, and float in the scotch bonnet pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the coconut milk, spinach, and okra. Bring back to a boil, then cook at a steady rolling boil with the lid slightly ajar for 30 minutes. If you prefer to add chopped cabbage instead on the spinach (traditionally dasheen bush aka taro leaves would be used), thats an option."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Combine the flour, salt, brown sugar, and coconut milk to form a semi-firm dough. Rest for 10 minutes, then shape into dumplings."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the dumplings to the soup and cook for 10 minutes. They will float when fully cooked. In MHO the real prize with these dumplings is when they've had time to absorb the soup broth and go pillow soft, the next day."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt if needed. Remove the scotch bonnet pepper if desired. Top with scallions and parsley and turn off the heat. Keep in mind that if you break the Scotch Bonnet pepper it will relase the Caribbean Sunshine (heat), unless you're like me and enjoy spicy foods."
+      }
+    ],
+    "yields": 12,
+    "prepTime": "PT30M",
+    "cookTime": "PT1H15M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-incredible-chadon-beni-culantro-garlic-sauce",
+    "country": "Caribbean",
+    "name": "Incredible Chadon Beni (Culantro) Garlic Sauce",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/incredible-chadon-beni-culantro-garlic-sauce/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 chadon beni leaves, culantro, bandania",
+      "2 tablespoons chive",
+      "1 teaspoon black pepper",
+      "1/2 teaspoon salt, adjust to taste",
+      "1/2 cup mayonnaise",
+      "1 cup sour cream",
+      "1 1/2 tablespoons white sugar, adjust to taste",
+      "1 pimento pepper, optional, also called seasoning pepper",
+      "8 cloves garlic",
+      "1/4 cup rice vinegar"
+    ],
+    "description": "A light and creamy Caribbean garlic sauce made with fresh chadon beni (culantro), garlic, and herbs. Perfect for BBQ, fries, or as a dipping sauce, this version balances tangy, sweet, and savory flavors.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash and roughly chop the chadon beni , aka bandania, garlic, chive, and pimento pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place them into a blender or food processor along with the black pepper, salt, mayonnaise, sour cream, sugar, lemon juice, and rice vinegar."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Blend until smooth and creamy, scraping down the sides as needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the salt and sugar for balance—you’re aiming for a slightly sweet, creamy sauce with tangy, garlicky, and herbal notes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour into a clean glass container, cover, and refrigerate for at least 1 hour before serving. Keep refrigerated and enjoy within 1 week. This sauce is best served chilled."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": null,
+    "totalTime": "PT10M"
+  },
+  {
+    "id": "carib-fusion-chili-eggs",
+    "country": "Fusion",
+    "name": "Incredible Chili Eggs",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/chili-eggs/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 large eggs",
+      "2 tablespoons salted butter",
+      "1 teaspoon garlic chili oil",
+      "1 tablespoon Spice Bomb pepper oil, or your favorite hot chili oil",
+      "1 pinch sea salt",
+      "1/4 teaspoon black pepper",
+      "1/2 teaspoon chives, finely chopped"
+    ],
+    "description": "A spicy and savory egg dish made with garlic chili oil, pepper-infused butter, and Caribbean-style seasoning. Quick, bold, and endlessly customizable, it’s perfect for breakfast or brunch, especially with bread or rice to mop it up.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Crack the eggs into a small bowl so they’re ready to use."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat a small non-stick skillet over medium heat. Add butter and let it melt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add garlic chili oil and Spice Bomb pepper oil to the butter. Swirl or stir to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once the oils are hot and aromatic, gently add the eggs to the skillet. Cook uncovered for 1–2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Sprinkle a pinch of sea salt and black pepper over the eggs."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Tilt the pan and spoon the hot oil mixture over the egg whites (and yolks if you prefer them more cooked). Place a lid over the pan and cook for another 3-4 minutes on medium heat until the top is cooked to your liking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After about 2–3 minutes, turn off the heat. Sprinkle chopped chives over the top."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Let sit for 30 seconds, then serve immediately with your preferred side."
+      }
+    ],
+    "yields": 2,
+    "prepTime": "PT3M",
+    "cookTime": "PT7M",
+    "totalTime": "PT10M"
+  },
+  {
+    "id": "carib-caribbean-incredible-curry-beef-2",
+    "country": "Caribbean",
+    "name": "Incredible Curry Beef",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/incredible-curry-beef-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3-4 lbs beef, cubed – 2 inch pieces",
+      "1 teaspoon salt",
+      "2-3 tablespoons olive oil",
+      "1 medium onion, diced",
+      "1 large tomato, diced",
+      "12-15 cloves garlic, smashed",
+      "2 tablespoon Caribbean Green Seasoning",
+      "3/4 teaspoon black pepper",
+      "1 teaspoon cumin seeds, geera",
+      "1 pepper scotch bonnet pepper",
+      "6-8 sprigs thyme",
+      "1 tablespoon Amchar Masala",
+      "2 1/2 tablespoon Curry Powder",
+      "5-8 leaves curry",
+      "2 bay leaves",
+      "3 tablespoon cilantro, chopped",
+      "8 – 9 1/2 cups water, divided"
+    ],
+    "description": "Curry Beef or Beef Curry (Guyana) is one of those things I rarely cook as I’m not the biggest fan of beef (except for steaks and burgers). And yes, I originally shared a Curry Beef and Curry Beef With Potatoes recipe/s a few years back, but this is my enhanced version of this classic Caribbean curry dish. Wait! If memory serves me correct I think I also shared a version with Potato and Channa (chickpeas) as well.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "The original way to do this Curry Beef is to season and marinate the beef overnight (as mentioned in the video below), but today I’ll show you a way to avoid that step, without sacrificing that deep rich flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Prep the ingredients and wash the beef with cool water and the juice of a lime or lemon (white vinegar 1/2 cup will work too), then drain and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the oil in a deep heavy pot on medium heat, add the onion and garlic, then lower the heat to low so we don’t burn anything. After 2-3 minutes, add the cumin seeds and black pepper and continue cooking on that low heat for 2-3 minutes more."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Now add the Caribbean Green Seasoning and cook a further 2-3 minutes, before adding the curry powder. Mix well. Heat still on low as to bloom the spices which makes up a good curry powder."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir occasionally as it can burn even on low heat. Cook for 3-4 minutes, then turn the heat to medium and add 1 1/2 cups water and stir / scrape the bottom of the pot. As it comes back to a boil, reduce to a rolling boil. Add the diced tomato and Anchar Masala (I explained why and where to get the Anchar Masala in the video below) at this point."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook on that rolling boil for 4-5 minutes then crank up the heat to burn off all that liquid (see my tip in the video below). When you get back to seeing the oil we started with, it’s time to add the beef to the pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "With the heat still on medium, stir well to coat the pieces of beef with that wicked curry base we created. Cover the pot and bring to a boil. Yes, it will spring it’s own natural juices. Once you get a bubble, reduce to a simmer and cook for 10 minutes with the lid on slightly ajar."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "To give the finished Curry Beef that deep rooted flavor, it’s important that we remove the lid now, turn up the heat and burn off all that liquid (explained why in the video below). Once you see that dry bottom (pot) with the oil.. its time to add 8 cups of water. Bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "The water is to help us get that fork-tender beef you deserve. At this point is when you’ll add the thyme, curry leaves and bay leaves. Additionally, you may also add a small stick of cinnamon and a few slices of ginger if you like those flavors in your curry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "My beef took 1 hour and 45 minutes from this point to be as tender as I like. Depending on the cut of beef and the age of the animal when it was butchered, it may take longer. This is where you do a few things to personalize it to your liking. Adjust the salt, make sure it’s as tender to your liking and you can control the consistency of the finished gravy by cooking longer or leaving as is. Remember the residual heat in the pot will further cook this. Plus as it cools with will thicken."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "NOTE! Should the beef not be tender or you find that the liquid was burning off quickly – add more water. May I recommend not adding beef stock as it will change the overall flavor of the curry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off the stove, toss in the cilantro (or Culantro – Shado Beni) and enjoy."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "I used a cheap cut of beef and may I recommend you do the same. While I did use boneless beef, some bones in here would contribute to a much deeper flavor. I forgot to mention above that you’ll toss in the scotch bonnet pepper whole when you add the 8 cups of water and try not to break it. Fish it out near the end or BREAK it and release the heat if you like (I did). Near the end you may remove and discard the bay leaves and sprigs from the thyme (same for if you added cinnamon and ginger)."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-incredible-curry-mango",
+    "country": "Caribbean",
+    "name": "Incredible Curry Mango",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/incredible-curry-mango/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoons vegetable oil",
+      "1 medium onion, sliced",
+      "1 habanero pepper, sliced",
+      "8 cloves garlic, smashed",
+      "3/4 teaspoon Black pepper",
+      "1 teaspoon Cumin seeds, geera",
+      "1 tablespoon Caribbean Green Seasoning",
+      "2 tablespoons Curry Powder",
+      "3 green mangoes, large, about 2–3 lbs, cut with seed",
+      "1 teaspoon salt, adjust to taste",
+      "1 tablespoon brown sugar",
+      "1 tablespoon anchar masala",
+      "3 cups water, adjust as needed"
+    ],
+    "description": "Curry Mango – A beloved Caribbean vegan dish made with tart green mangoes simmered in curry powder, green seasoning, and spices until tender and full of flavor.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the green mangoes, remove the stems, and cut them into long pieces, including through the seed (referred to as “bone” in Trinidad and Tobago). Rinse and drain well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil in a wide deep pan over medium heat. Add onion, habanero, garlic, and cumin seeds. Cook on low for 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in Caribbean green seasoning and cook for 2 minutes more. If you’d like to make a small batch of the green seasoning , << click here."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the curry powder, mix well, and cook until the mixture is darker and has begun to clump, about 3 minutes, allowing the spices to develop fully. If you are making this dish as part of your gluten-free diet, please read the label of the curry powder (if you don’t make your own) you use, as some may have fillers that could be made from gluten."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase heat to medium-high and add mango pieces. Stir well to coat with the curry base."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add brown sugar, anchar masala, salt, and water. Bring to a boil, then reduce heat and simmer with the lid slightly ajar for 20 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the lid and continue cooking for 10 minutes, or until sauce is thickened and mango is tender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust seasoning with additional salt or sugar if needed. Serve warm with roti or as a side dish. If it’s a bit tart, you can add a bit more sugar and/or salt to help balance the flavors."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT20M",
+    "cookTime": "PT35M",
+    "totalTime": "PT55M"
+  },
+  {
+    "id": "carib-caribbean-incredible-fiery-pepper-fries",
+    "country": "Caribbean",
+    "name": "Incredible Fiery Pepper Fries",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/incredible-fiery-pepper-fries/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb frozen crinkle fries",
+      "1 tablespoon vegetable oil",
+      "1 medium onion, chunky chopped",
+      "4 cloves garlic, smashed",
+      "2 scotch bonnet peppers, sliced",
+      "1 1/2 cups bell peppers, chunky chopped",
+      "2 scallions, chopped",
+      "1/2 teaspoon salt",
+      "3/4 teaspoon black pepper, coarse",
+      "2 tablespoons Parmesan cheese, grated"
+    ],
+    "description": "A bold Trinidad-style pepper fries recipe made with crispy fries tossed in a fiery scotch bonnet pepper base, delivering intense heat, aroma, and street-food flavor in every bite.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Cook the crinkle fries according to the package instructions. Traditionally in Trinidad and Tobago, this is made with deep-fried French fries, however to make the dish slightly healthier, I opted to oven-bake the fries. Thus only using a tablespoon of oil for the entire dish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the vegetable oil in a wok or wide pan over medium heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the onion, bell peppers, scotch bonnet peppers, garlic, and scallions. Stir well and cook for about 3 minutes. Ensure your kitchen is well ventilated as the pepper fumes will be strong and can irritate your eyes and throat. In the video below you’ll catch me choking with the intense scent of the scotch bonnet peppers being tossed in the hot oil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the salt and black pepper, then toss to coat everything evenly. Cook for another minute."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the pre-cooked fries to the pan and toss thoroughly to coat them with the spicy pepper mixture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook for 3 to 4 minutes until the fries are heated through and infused with the pepper heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off the heat and sprinkle the grated Parmesan cheese over the fries. Toss gently and serve warm."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT25M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-incredible-honey-jerk-salmon-easy-oven-method",
+    "country": "General Caribbean",
+    "name": "Incredible Honey Jerk Salmon (Easy Oven Method)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/incredible-honey-jerk-salmon-easy-oven-method/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 tablespoons Jamaican jerk marinade",
+      "1 1/2 tablespoons olive oil",
+      "1 tablespoon light soy sauce",
+      "1 lemon, juiced",
+      "1 tablespoon ginger, grated",
+      "1 lemon, zested",
+      "2 tablespoons honey",
+      "1 lemon, sliced",
+      "2 lbs salmon, fillet",
+      "6 sprigs thyme",
+      "1 1/2 tablespoons chives, finely chopped"
+    ],
+    "description": "This easy oven-baked honey jerk salmon combines Jamaican jerk marinade, honey, fresh lemon, and ginger for tender, flavourful salmon with beautifully golden edges. It's a comforting Caribbean-inspired dinner for busy weeknights, particularly when the weather turns cold, and you want something delicious without a lot of fuss.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Run your fingers gently over the salmon fillet to check for pin bones, removing any you find with kitchen tweezers. Rinse the fish if that is your usual preparation practice, then pat it dry. Slice the fillet into serving-sized portions without cutting all the way through."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a mixing bowl, combine the Jamaican jerk marinade, olive oil, light soy sauce, lemon juice, grated ginger, lemon zest, and honey. Whisk well to create the honey jerk marinade."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat your oven to 375°F."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Line a baking dish with parchment paper or aluminum foil to make cleanup easier. Arrange the lemon slices in the dish, then place the salmon on top, skin side down. The lemon slices help lift the fish slightly, allowing the marinade to get underneath while releasing their fragrant citrus oils as the salmon roasts."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the honey jerk marinade evenly over the salmon. Top with sprigs of fresh thyme."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bake uncovered at 375°F for 15 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase the oven temperature to 425°F and return the salmon to the oven for another 4 to 6 minutes, or until the edges develop a lovely golden colour and the fish is cooked through."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "By now, your kitchen should be filling with the wonderful aroma of Jamaican jerk spices, fragrant lemon, earthy allspice, thyme, and that gentle hint of scotch bonnet heat, especially if you’re using a spicy jerk marinade. It’s the kind of scent that makes everyone wonder what’s cooking and draws you a little closer to the oven. Check the thickest part of the salmon to ensure it reaches a safe internal temperature of 145°F (63°C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Sprinkle the finely chopped chives over the salmon before serving."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "I recommend serving this honey jerk salmon with my Easy and Delicious Coconut Rice , no-fuss Jamaican Rice and Peas (done in under 25 minutes), or Festive Tomato Rice ."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Should you prefer, you can use the Honey Jerk Marinade I shared a few years back to really carry the fragrant notes and sweetness of the honey in this jerk salmon."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT21M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-incredible-caribbean-pepper-chicken",
+    "country": "General Caribbean",
+    "name": "Incredible Pepper Chicken",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/incredible-caribbean-pepper-chicken/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 lbs, skinless and boneless, chicken thighs (cut into 1-inch pieces)",
+      "1, juice of, lime or lemon",
+      "3/4 tablespoon, divided, salt",
+      "1 teaspoon, toasted, sesame oil",
+      "1 tablespoon, light, soy sauce",
+      "1 tablespoon, Chinese, cooking wine",
+      "1 tablespoon, oyster sauce",
+      "1 tablespoon, grated, ginger",
+      "1 teaspoon, MSG",
+      "2 1/2 tablespoons, corn starch",
+      "Vegetable oil, for frying",
+      "2 tablespoons, vegetable oil",
+      "2 large, onions (cut into large chunks)",
+      "8-12 cloves, garlic (rough chopped)",
+      "1/2 teaspoon, black pepper",
+      "1 large, red bell pepper (cut into chunky pieces)",
+      "1 large, green bell pepper (cut into chunky pieces)",
+      "1/2 large, yellow bell pepper (cut into chunky pieces)",
+      "2, , Scotch Bonnet peppers, sliced",
+      "8, , Wiri Wiri peppers",
+      "3, , scallions, chopped",
+      "1 cup, loosely packed, basil"
+    ],
+    "description": "This spicy Trinbagonian-style Pepper Chicken combines crispy fried chicken with onions, colorful bell peppers, Scotch Bonnet and Wiri Wiri peppers, scallions, and fresh basil for a deeply spicy dish with a slight balance of sweetness.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Cut the chicken into one-inch pieces, wash with the juice of a lime or lemon, or 1 cup white vinegar, and cool water. Drain, then season with 1/2 of the salt, sesame oil, light soy sauce, Chinese cooking wine, oyster sauce, grated ginger, MSG, and the corn starch. Add more ginger for a more pronounced ginger flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix well to combine and marinate for 30 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat about 2-3 cups of vegetable oil, or any oil you prefer to deep-fry with, and cook the chicken pieces in batches to avoid crowding the pan. I like using a wok with high sides to avoid too much splashing onto my stove. The oil should be between 350 – 360 F and cook for 10-12 minutes. You’re free to use a deep fryer or air fryer if you wish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat 2 tablespoons of vegetable oil, using some of the oil from frying the chicken if you prefer, in a wide pan on a medium flame and add the onion, garlic, and black pepper. Cook for 2-4 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Now add the bell peppers and toss. Cook for another 3-4 minutes, then add the Scotch Bonnet and Wiri Wiri peppers. You can use Birds Eye peppers if you wish, or any spicy pepper. Be sure to turn the fan on over your stove to vent the fumes. Add the remaining salt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 3-4 minutes, add the pre-fried chicken pieces to the pot, toss, and reheat for about 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the scallions, toss, cook for a minute or two, then finish with the basil. Turn off the stove and enjoy with fried rice, on sandwiches, or as a side to adult beverages, which we call “cutters” in Trinidad and Tobago."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Deeply spicy with a slight balance of sweetness from the large pieces of onion, bell peppers, and the finishing basil. While most Trinbagonians would reach for Chadon Beni (culantro, or bandania to finish), I find that the basil adds a lovely fragrance and sweetness to the Pepper Chicken."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Have you tried my other chicken recipes, with a bit of island flair? The Ultimate Chicken Tenders , Crispy Fried Chicken , and Crispy Fried Chicken Wonton s are all great options. Chinese Restaurant Style Chicken Wings , Chinese Style Chicken , and my Caribbean Style Fried Chicken are also all hits."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT10M",
+    "cookTime": "PT20M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-incredible-pepper-steak-recipe",
+    "country": "Caribbean",
+    "name": "Incredible Pepper Steak Recipe",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/incredible-pepper-steak-recipe/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb beef, cut into strips",
+      "1 tablespoon baking soda",
+      "3 tablespoons soy sauce",
+      "2 tablespoons brown sugar",
+      "1 tablespoon Worcestershire sauce",
+      "1 tablespoon grated ginger",
+      "1 tablespoon Mirin, or rice vinegar",
+      "3/4 cup water",
+      "1/2 teaspoon salt",
+      "1/2 teaspoon black pepper",
+      "2 cloves garlic, crushed",
+      "1 tablespoon spicy jerk marinade, optional",
+      "2 tablespoons vegetable oil",
+      "1/2 red bell pepper, sliced",
+      "1/2 orange bell pepper, sliced",
+      "1/2 green bell pepper, sliced",
+      "1 large onion, sliced",
+      "1 tablespoon cornstarch",
+      "1 teaspoon sesame seeds"
+    ],
+    "description": "Discover my Incredible Pepper Steak Recipe — tender beef strips, colorful bell peppers, and a rich, savory sauce with a hint of Caribbean flavor. Learn how to make restaurant-quality Pepper Steak at home with simple ingredients and easy steps.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "To tenderize the beef strips so they’re not chewy, combine the baking soda with the beef and mix well. Add 1 tablespoon of water if the mixture feels too dry. Let it sit for 30 minutes to “velvet” the beef. In the video below we discuss how the texture of the beef will change."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 30 minutes, rinse the beef thoroughly several times, then drain and squeeze out excess water."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season the beef with soy sauce, brown sugar, Worcestershire sauce, grated ginger, Mirin, water, salt, black pepper, garlic, and jerk marinade (if using). Cover and marinate in the fridge for at least 2 hours or overnight for best flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat vegetable oil in a wok over medium heat. Add the marinated beef (reserve the marinade) and stir-fry for about 5 minutes until the beef is browned and most of the liquid has evaporated."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the red, orange, and green bell peppers along with the sliced onion. Stir and cook for 2–3 minutes, allowing the vegetables to stay slightly crisp."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a small bowl, whisk the cornstarch into the reserved marinade, then pour into the wok. Stir continuously for 3 minutes until the sauce thickens and coats the beef."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the chopped scallions, taste, and adjust salt if needed. Turn off the heat after 1 minute, then sprinkle with sesame seeds."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot with coconut rice or steamed jasmine rice."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT25M",
+    "cookTime": "PT20M",
+    "totalTime": "PT2H45M"
+  },
+  {
+    "id": "carib-general-caribbean-incredible-salmon-head-broff-caribbean-fish-broth",
+    "country": "General Caribbean",
+    "name": "Incredible Salmon Head Broff (Caribbean Fish Broth)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/incredible-salmon-head-broff-caribbean-fish-broth/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 lbs salmon head",
+      "1 lemon, juiced",
+      "2 tablespoons Caribbean green seasoning",
+      "3 tablespoons fish seasoning, fish stock powder",
+      "1 lb potato, cut in large chunks",
+      "3/4 lb sweet potato, cut in large chunks",
+      "1 large christophene, cut in large chunks",
+      "3/4 lb pumpkin, cut in large chunks",
+      "1 large onion, sliced",
+      "6 cloves garlic, smashed",
+      "2 stalks celery, chopped",
+      "1 large carrot, chopped",
+      "1 tablespoon black pepper, divided",
+      "6 sprigs thyme",
+      "3/4 tablespoon salt, adjust to taste",
+      "10 cups water, adjust as needed",
+      "1 scotch bonnet pepper, whole",
+      "1 1/2 tablespoons light soy sauce",
+      "12 –16 okra, trimmed",
+      "1/2 lb broccoli, optional",
+      "1 lime, juiced",
+      "3 tablespoons chadon beni, chopped",
+      "Fish stock instead of water",
+      "Cabbage",
+      "Green cooking banana"
+    ],
+    "description": "A warm and comforting Caribbean fish broth made with salmon heads, hearty vegetables, and fresh herbs. This nourishing soup is especially popular during Lent when seafood dishes are commonly enjoyed leading up to Easter.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the salmon head with the lemon juice and cool water, then drain and season with the Caribbean green seasoning and fish seasoning."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Wash and prep the other ingredients, trying to keep the sweet potato, potato, carrot and christophene in large pieces so they hold their shape when the soup is completed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the sweet potato, potato, carrot, celery, onion, garlic, fish, half of the black pepper, salt and thyme in a large soup pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Tuck the seasoned fish pieces in between the vegetables, then add the water. Add the soy sauce and place the whole scotch bonnet pepper in the pot. Bring to a boil, then reduce to a rolling simmer, adjusting the water level if needed as it cooks."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook for about 25 minutes, skimming off any scum from the top and discarding it."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the okra and stir well, but be gentle as you do not want to break up the fish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "About 10 minutes later add the broccoli. This is not traditional to the recipe but it is a great way to add more beneficial vegetables to the mix. Spinach or shredded dasheen bush leaves would also work nicely here."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Four minutes later taste and adjust the seasoning to your liking. Remove the scotch bonnet pepper or break it open to release the sizzle of the Caribbean sunshine (heat) if you want more kick in the broth. Add the remianing black pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Finish by adding the lime juice to brighten everything up and the chopped chadon beni for that final herbal note. Turn off the stove and enjoy."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Caution. The more you stir the pot as the broff cooks, it will break up the salmon head and it may relase bones. I'd also recommend letting your guests know about the bones of the fish as it can be a potential choking hazard."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT20M",
+    "cookTime": "PT40M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-incredible-smoked-jerk-turkey",
+    "country": "Caribbean",
+    "name": "Incredible Smoked Jerk Turkey",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/incredible-smoked-jerk-turkey/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "10 sprigs 10–14 thyme",
+      "2 scotch bonnet peppers",
+      "2 tbsp brown sugar",
+      "1 tbsp pimento powder, allspice",
+      "1 tsp ground cinnamon",
+      "1 lime (juice)",
+      "1 lemon (juice)",
+      "4 thick 4–5 slices ginger",
+      "8 cloves garlic",
+      "1 1/2 tbsp olive oil",
+      "1 tbsp honey",
+      "2 tbsp rice vinegar",
+      "2 tbsp dark soy sauce",
+      "1/4 cup orange juice",
+      "2 medium onions",
+      "10 bay leaves",
+      "15 pimento berries 15–20, allspice",
+      "1/2 lb butter",
+      "2 cups 2–3 boiling water"
+    ],
+    "description": "Bring bold Caribbean flavor to your Thanksgiving table with this Incredible Smoked Jerk Turkey — marinated overnight in a fiery, aromatic jerk blend and smoked to juicy perfection with pimento, thyme, and scotch bonnet heat. If you’ve ever found traditional Thanksgiving turkey a little too plain, this Incredible Smoked Jerk Turkey is about to change everything. I created this recipe to blend the heart of Caribbean cooking with the warmth of North American holiday tradition. The result? A turkey that’s juicy, deeply flavorful, and smoky, with every bite reminding you of the islands.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Blend the scallions, thyme, scotch bonnet peppers, brown sugar, pimento powder, cinnamon, lime, lemon, ginger, garlic, olive oil, honey, rice vinegar, soy sauce, orange juice, and onions to create a smooth jerk marinade."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pat the turkey dry with paper towels. Rub half of the marinade all over the turkey, including the cavity. Cover and refrigerate for at least 12 hours to marinate."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat the smoker to 300–325°F (149–163°C). Place the turkey on the smoker rack and tuck the wings under—position two metal pans on either side of the turkey. Insert a meat thermometer into the thickest part of the breast. Please refer to the video below, as it provides further explanation."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In one pan, pour the boiling water, add the bay leaves and pimento berries. In the other pan, melt the butter and stir in the remaining jerk marinade."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Smoke the turkey for about 1 hour, then start basting with the butter-jerk mixture every 45 minutes. Rotate the turkey occasionally for even cooking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After about 3 hours, tent the turkey loosely with foil to prevent over-browning. Continue smoking until the internal temperature reaches 165°F (74°C), about 5 to 5 1/2 hours total."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from the smoker and let the turkey rest for 30 minutes before carving and serving."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT25M",
+    "cookTime": "PT6H",
+    "totalTime": "PT6H25M"
+  },
+  {
+    "id": "carib-general-caribbean-incredible-smoked-stewed-oxtail",
+    "country": "General Caribbean",
+    "name": "Incredible Smoked Stewed Oxtail",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/incredible-smoked-stewed-oxtail/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs oxtail, trimmed and washed",
+      "1 lime or lemon, juiced",
+      "1/2 cup white vinegar, alternative",
+      "1 tablespoon sea salt, divided",
+      "1 1/2 tablespoon black pepper, divided",
+      "1 1/2 tablespoon olive oil",
+      "1 large onion, diced",
+      "6 cloves garlic, smashed",
+      "1 teaspoon allspice berries, pimento",
+      "2 scallions, diced",
+      "1 large tomato, diced",
+      "1 small habanero pepper, optional",
+      "2 bay leaves",
+      "5 sprigs thyme",
+      "3 slices ginger",
+      "1 1/2 tablespoon tomato ketchup",
+      "1 tablespoon Caribbean browning",
+      "1 tablespoon brown sugar",
+      "4 cups beef stock",
+      "1-2 cups water, adjust as needed",
+      "1 1/2 tablespoon parsley, chopped"
+    ],
+    "description": "A rich Caribbean-style Smoked Stewed Oxtail recipe where slowly smoked oxtail is braised low and slow in a deeply seasoned gravy packed with thyme, pimento, aromatics, and bold island flavor.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Trim off any excess fat from the oxtail pieces, then wash with cool water and the juice of the lime or lemon. As mentioned, you can also use white vinegar. Pat dry and season both sides with one third of the salt and black pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the seasoned oxtail pieces onto a smoker and smoke for 2 1/2 to 3 hours, rotating or flipping at least once during the process. Oak, pecan, or mesquite wood will all give excellent results and gently perfume the meat with a subtle smoky flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil (use your fav oil) in a deep pan over a medium flame, then add the onion, garlic, remaining black pepper, scallions, and pimento berries. Turn the heat down to low and cook for about 5 minutes. This will soften everything and allow the aromatics to bloom while releasing their fragrant flavors into the oil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn the heat back to medium and add the previously smoked oxtail pieces, followed by the tomato, browning, bay leaves, tomato ketchup, brown sugar, thyme, and habanero pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "You may use any spicy pepper you prefer or have on hand, as I feel this stewed oxtail benefits from a slight kick, however this remains completely optional. Be mindful that adding the seeds and white membrane of spicy peppers will increase the heat level."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring everything to a boil, add the remaining salt, then reduce to a gentle simmer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "During the slow cooking process, stir every 30 minutes or so and add water in small increments as needed, as the liquid will gradually reduce over time while the gravy deepens in flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Depending on the age of the animal when butchered, the oxtail can take anywhere between 3 1/2 to 5 hours to become fork tender to the point where the meat is practically falling off the bone."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "As the smoked stewed oxtail slowly braises, the thyme, garlic, pimento, and smoky notes begin layering together, creating the sort of deep savory aroma that tells you something special is happening in the pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once the stewed oxtail reaches the tenderness you prefer, adjust the salt to your liking while keeping in mind that the beef stock already contributes sodium. At this point you can also personalize the consistency of the finished gravy. In my case I went for 4 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Finish by adding the chopped parsley as you turn off the stove for a bright herbal finish. Remove the thyme sprigs, bay leaves, and if possible the pimento berries before serving."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm alongside Carrot Rice , Coconut Rice , or classic Jamaican Rice and Peas ."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT20M",
+    "cookTime": "PT7H",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-incredible-wine-braised-oxtail",
+    "country": "Caribbean",
+    "name": "Incredible Wine Braised Oxtail",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/incredible-wine-braised-oxtail/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs oxtail",
+      "3/4 tablespoon salt, divided",
+      "3/4 tablespoon black pepper, divided",
+      "2 tablespoons flour",
+      "3 tablespoons vegetable oil",
+      "1 medium onion, diced",
+      "4 cloves garlic, smashed",
+      "6 sprigs thyme",
+      "8 allspice berries",
+      "2 tablespoons tomato paste",
+      "1/2 teaspoon chili flakes, optional",
+      "3/4 cup red wine",
+      "5 cups beef stock",
+      "3 bay leaves",
+      "1 tablespoon golden brown sugar",
+      "2 tablespoons chopped chives"
+    ],
+    "description": "Incredible Wine Braised Oxtail Recipe. Rich, fall-off-the-bone oxtail slow-braised in red wine with Caribbean aromatics creates a deep, silky gravy perfect for rice, mashed provisions, or crusty bread.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the cut oxtail pieces with the lemon juice and cool water. Drain and pat dry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season the oxtail with 3/4 of the salt and black pepper, then dust with the flour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the vegetable oil in a heavy oven-proof pot over medium heat and brown the oxtail on all sides in batches. Set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Leave about 1 tablespoon of oil in the pot. Reduce the heat to medium-low and add the onion, garlic, scallions, thyme, and allspice berries. Cook for 3 minutes. Add the remaining salt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Clear a space in the center of the pot and add the tomato paste so it touches the heat directly. Cook for 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in the red wine and cook until it evaporates. Return the oxtail to the pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the chili flakes and beef stock. Bring to a boil. Add the bay leaves and stir in the brown sugar."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover and place the pot into a 325°F (165°C) oven for 3 hours, checking every 30 minutes and adding more stock if needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt. Remove the bay leaves and thyme sprigs. If the gravy is too thin, cook uncovered for 10 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once the gravy is rich and the oxtail is tender, top with chopped chives and serve hot. Be mindful of the allspice berries when serving."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-individual-coconut-sweet-bread-muffins",
+    "country": "Caribbean",
+    "name": "Individual Coconut Sweet Bread Muffins",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/individual-coconut-sweet-bread-muffins/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 cup grated coconut",
+      "1 cup evaporated milk",
+      "1/2 cup candied pineapple, roughly chopped",
+      "1/2 cup raisins",
+      "1/2 cup dried strawberries, roughly chopped",
+      "1/2 cup dried cranberries, roughly chopped",
+      "2 tablespoons orange liqueur, optional",
+      "2 tablespoons port, optional",
+      "4 cups all-purpose flour",
+      "3 teaspoons baking powder",
+      "3/4 teaspoon ground nutmeg",
+      "3/4 teaspoon ground cinnamon",
+      "1/2 teaspoon ground ginger",
+      "1/2 teaspoon salt",
+      "1 cup sugar",
+      "4 large eggs",
+      "2 tablespoons vanilla extract",
+      "2 tablespoons honey",
+      "1 cup butter, melted",
+      "1 teaspoon orange zest",
+      "1/2 cup sour cream",
+      "1/2 cup maraschino cherries, halved",
+      "2 tablespoons granulated sugar",
+      "4 tablespoons water",
+      "2 tablespoons raw cane sugar"
+    ],
+    "description": "These individual-size coconut sweet bread muffins deliver all the traditional flavor of Trinidad-style coconut sweet bread in a convenient, muffin-style portion, perfect for breakfast or afternoon tea.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Mix the grated coconut and evaporated milk together in a bowl and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Combine the candied pineapple, raisins, dried strawberries, and dried cranberries in a bowl. Pour over the orange liqueur and port and mix well, (if using) and allow to soak for a few minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a separate bowl, mix the flour, baking powder, nutmeg, cinnamon, ginger, and salt until evenly combined. Sift everything if you'd like."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In another bowl, whisk the eggs and sugar until slightly thickened, or use a hand mixer. Add the vanilla, honey, melted butter, and orange zest, and mix until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the egg mixture into the flour mixture and mix until just combined."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the sour cream, followed by the coconut and milk mixture, and gently fold to incorporate."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Fold in the soaked dried fruits, taking care not to overwork the batter."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat the oven to 325°F (165°C). Lightly grease a muffin pan and divide the batter evenly between the cups."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place half of a maraschino cherry on top of each muffin and bake for 35 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "While the muffins bake, combine the granulated sugar and water in a small saucepan and heat until the sugar dissolves to form a simple syrup."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 35 minutes, brush the tops with the simple syrup and return the pan to the oven for an additional 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Insert a toothpick into the center of a muffin. If it comes out clean, remove from the oven. Sprinkle the tops with raw cane sugar while still warm, then remove the muffins from the pan and place on a cooling rack to cool completely."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enjoy warm."
+      }
+    ],
+    "yields": 18,
+    "prepTime": "PT25M",
+    "cookTime": "PT40M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-invigorating-tropical-starfruit-juice-2",
+    "country": "Caribbean",
+    "name": "Invigorating Tropical Starfruit Juice",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/invigorating-tropical-starfruit-juice-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 large starfruit, about 2 lbs; washed and roughly chopped",
+      "2/3 cup sugar, or preferred sweetener",
+      "2 lemons, juiced",
+      "6-8 cups water, adjust to taste",
+      "1 tablespoon orange extract",
+      "1 teaspoon almond extract",
+      "1 teaspoon mixed essence",
+      "a few drops of bitters"
+    ],
+    "description": "A refreshing Caribbean beverage made with fresh starfruit (carambola), citrus juice, and tropical flavor enhancers. This vibrant starfruit juice is rich in vitamin C, perfect for cooling down on hot days or brightening up any brunch table with its tangy-sweet profile.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Clean and chop the starfruit. Rinse thoroughly, trim the ridges, remove any seeds, and roughly chop."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a blender, combine starfruit and 6–7 cups water."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Blend on high for 1–2 minutes until very smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain the mixture through a fine mesh strainer or cheesecloth into a large bowl, pressing to extract all the juice."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Immediately stir in lemon juice; this preserves the bright color and adds freshness."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add sugar, orange extract, and any optional extracts/bitters. Stir until fully dissolved."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust sweetness or water level, especially if serving over ice. Chill thoroughly , then stir before pouring to recombine any separated ingredients."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve cold , garnished with starfruit slices and mint leaves (optional)."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT10M",
+    "cookTime": null,
+    "totalTime": "PT10M"
+  },
+  {
+    "id": "carib-jamaican-jamaican-easter-spice-bun",
+    "country": "Jamaican",
+    "name": "Jamaican (Easter) Spice Bun",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/jamaican-easter-spice-bun/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3/4 cup golden brown sugar",
+      "1 teaspoon vanilla",
+      "1/2 tablespoon molasses",
+      "1 tablespoon Caribbean browning",
+      "2 tablespoon honey",
+      "1 3/4 cups Guinness stout",
+      "1 cup raisins",
+      "1 cup mixed fruit, peeled",
+      "3/4 cup chopped cherries",
+      "4 tablespoon butter, melted",
+      "3 cups all-purpose flour",
+      "2 1/2 teaspoon baking powder",
+      "1 egg, beaten",
+      "1/4 teaspoon salt",
+      "1 teaspoon cinnamon",
+      "1 teaspoon nutmeg",
+      "1 teaspoon allspice",
+      "1/4 teaspoon ginger powder"
+    ],
+    "description": "A fragrant, spiced fruit bun steeped in Caribbean tradition; perfect with cheese, coffee, or on its own.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat oven to 350 °F (175 °C). Grease an 11×5-inch loaf pan."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a saucepan over medium heat, combine sugar, vanilla, molasses, browning, honey, stout, raisins, cherries, and peel. Stir until bubbles form at the edges, then remove from heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl, stir together flour, baking powder, salt, cinnamon, nutmeg, allspice, and ginger."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add melted butter, beaten egg, and fruit mixture to the dry ingredients. Mix into a dough. Avoid overworking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Transfer dough to the prepared pan. Bake for about 60 minutes or until a toothpick inserted comes out clean."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once baked, brush the bun with simple syrup while still warm."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Let cool in the pan for 15 minutes, then turn out onto a wire rack to cool completely before slicing."
+      }
+    ],
+    "yields": 10,
+    "prepTime": "PT15M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H15M"
+  },
+  {
+    "id": "carib-jamaican-the-ultimate-jamaican-brown-stew-chicken-2",
+    "country": "Jamaican",
+    "name": "Jamaican Brown Stew Chicken",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/the-ultimate-jamaican-brown-stew-chicken-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 lbs chicken, drumsticks and thighs, skin removed",
+      "3/4 teaspoon sea salt",
+      "1/2 teaspoon black pepper",
+      "1 tablespoon jerk dry rub",
+      "1 tablespoon smoked paprika",
+      "8 pimento berries, allspice",
+      "1 1/2 tablespoon Caribbean browning sauce",
+      "1 1/2 tablespoon light soy sauce",
+      "1 medium onion, sliced",
+      "1/2 medium carrot, julienned",
+      "1/4 red bell pepper, sliced",
+      "1/4 yellow bell pepper, sliced",
+      "1/4 green bell pepper, sliced",
+      "1 scotch bonnet pepper, whole or sliced",
+      "4 cloves garlic, minced",
+      "3 slices fresh ginger",
+      "2 tablespoons tomato ketchup",
+      "4 tablespoons olive oil",
+      "2 cups water",
+      "2 tablespoons parsley, chopped"
+    ],
+    "description": "A flavorful Jamaican stew featuring marinated chicken, vibrant bell peppers, and a rich, savory sauce enhanced with browning and traditional spices.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl, combine chicken with sea salt, black pepper, jerk dry rub, smoked paprika, pimento berries, browning sauce, soy sauce, sliced onion, scallions, carrot, bell peppers, garlic, ginger, and scotch bonnet pepper. Mix thoroughly to coat the chicken evenly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover and marinate the chicken in the refrigerator for at least 2 hours or overnight for best results."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat olive oil in a heavy-bottomed pot over medium heat. Remove chicken pieces from the marinade, allowing excess marinade to drip off, and brown them in batches until all sides are seared. Do not overcrowd the pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once all chicken pieces are browned, remove excess oil from the pot, leaving about 1 tablespoon. Return the reserved marinade, including vegetables and spices, to the pot and sauté for 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the browned chicken back to the pot along with any accumulated juices. Pour in 2 cups of water, stirring to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring the mixture to a boil, then reduce heat to medium-low. Add diced tomato and tomato ketchup, stirring well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Simmer the stew uncovered for 15–20 minutes, stirring occasionally, until the chicken is cooked through and the sauce has thickened to your desired consistency."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust seasoning as needed. Remove pimento berries, thyme sprigs, and ginger slices before serving."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Garnish with chopped parsley and serve hot with your choice of sides."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT30M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H30M"
+  },
+  {
+    "id": "carib-general-caribbean-classic-jamaican-brown-stew-salmon",
+    "country": "General Caribbean",
+    "name": "Jamaican Brown Stew Salmon Recipe",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/classic-jamaican-brown-stew-salmon/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 lbs salmon, cut into 2–3 inch pieces",
+      "1 lime, juiced",
+      "1 1/2 tablespoon Caribbean green seasoning",
+      "3/4 tablespoon salt, divided",
+      "1 teaspoon fish seasoning",
+      "1 teaspoon black pepper, divided",
+      "1 cup all-purpose flour",
+      "2 –3 tablespoons oil, plus oil for frying",
+      "1 large onion, sliced",
+      "1 medium green bell pepper, sliced",
+      "1 medium red bell pepper, sliced",
+      "1/2 medium carrot, julienned",
+      "1/2 scotch bonnet pepper, thinly sliced",
+      "5 pimento berries",
+      "1 tablespoon ginger, grated",
+      "1/2 cup tomato ketchup",
+      "1 tablespoon Caribbean browning",
+      "1 tablespoon brown sugar",
+      "2 cups water",
+      "2 scallions, chopped",
+      "4 cloves garlic, crushed, optional",
+      "2 bay leaves, optional",
+      "1 –2 tablespoons soy sauce, optional"
+    ],
+    "description": "A rich and comforting Jamaican brown stew salmon recipe featuring lightly fried salmon simmered in a fragrant, savory tomato-based sauce with classic Caribbean herbs and spices.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Cut the salmon into 2–3 inch pieces, being mindful of any small bones, then wash with lime juice and cool water. Drain well and place in a bowl."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season the salmon with half of the salt, half of the black pepper, Caribbean green seasoning , and fish seasoning. Allow it to sit briefly so the flavors can settle into the fish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Lightly dust each piece of salmon in flour, shaking off any excess. Heat oil (about 2-3 cups veg oil) over medium heat and fry the pieces for 4–6 minutes until they turn a light golden color. The gentle sizzle will be melodious as the fish fries, so be sure to ventilate your kitchen as the aroma of fried fish fills the air and this scent can lingure."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the salmon and place on paper towels to drain excess oil. Continue frying in batches if necessary."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a deep saucepan, heat 2–3 tablespoons of the same oil used for frying as it contains a lot of flavour, over medium-low heat. Add the onion, bell peppers, carrot, pimento berries, ginger, and scotch bonnet. Cook gently until softened and fragrant, as the warm, comforting scent of the Caribbean fills your kitchen."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the tomato ketchup and Caribbean browning until fully combined. Add the water and brown sugar, then bring to a gentle boil. Rinse the bowl used to season the fish with a bit of water and add it to the pot to capture any remaining seasoning. This is also when you'd add soy sauce and bay leaves if you dediced on using."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Allow the sauce to simmer for about 6 minutes, then add the remaining salt and black pepper as it deepens into a rich, classic brown stew sauce."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Gently place the fried salmon pieces into the sauce, spooning the rich gravy over them. Let it simmer for another 4 minutes so the salmon absorbs the deep, savory flavors while staying tender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt as needed, then finish with chopped scallions for a fresh, bright finish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Served with roasted breadfruit , refried cassava , coconut rice , or rice and peas , it's a delightful dish to serve this Good Friday, or anytime you feel like a warm, comforting Caribbean fish dish."
+      }
+    ],
+    "yields": 5,
+    "prepTime": "PT20M",
+    "cookTime": "PT30M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-jamaican-callaloo-with-baby-spinach",
+    "country": "Caribbean",
+    "name": "Jamaican Callaloo with Baby Spinach.",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/jamaican-callaloo-with-baby-spinach/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoons olive oil",
+      "1 medium onion, diced",
+      "6 cloves garlic, smashed",
+      "1 pimento pepper, sliced",
+      "1/2 habanero pepper, sliced",
+      "1/2 teaspoon black pepper",
+      "1 lb Jamaican callaloo, leaves washed and chopped",
+      "3/4 teaspoon salt",
+      "1/2 cup water",
+      "2 tablespoons coconut cream",
+      "1 lb baby spinach, washed",
+      "1 medium tomato, diced",
+      "1 tablespoon lemon juice"
+    ],
+    "description": "A vegan-friendly Caribbean side dish where Jamaican callaloo and baby spinach are simmered with coconut cream, onion, garlic, and fresh pepper for a wholesome and flavorful result.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Prepare the Jamaican Callaloo (chorai bhagi) by removing the leaves from the stems (yes, you can include the stems, but I didn’t), washing them thoroughly, then chopping. Wash the spinach. Chop the tomato, onion, and peppers. Smash the garlic."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat olive oil in a wide pan over medium heat. Add onion, garlic, pimento pepper, habanero, and black pepper. Reduce heat to low and cook for 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the prepared callaloo leaves, raise the heat, and allow them to wilt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add salt, tomato, and water. Stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix in the coconut cream, then add the baby spinach. Cover with a lid to help the spinach wilt. Layering the ingredients is important as explained in the video below."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 5 minutes, remove the lid and cook uncovered to reduce excess liquid."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "At about 20 minutes, stir in the lemon juice. Continue cooking until 25–30 minutes total, when most liquid has evaporated and traces of oil are visible."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off the heat and serve hot with sada roti, cassava dumplings, or as a side dish with rice."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT30M",
+    "totalTime": "PT45M"
+  },
+  {
+    "id": "carib-caribbean-jamaican-callaloo-with-turkey-2",
+    "country": "Caribbean",
+    "name": "Jamaican Callaloo with Ground Turkey",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/jamaican-callaloo-with-turkey-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 tablespoon olive oil",
+      "1 pound ground turkey",
+      "1 medium onion, sliced",
+      "2 cloves garlic, minced",
+      "1 teaspoon fresh thyme leaves",
+      "2 medium tomatoes, diced",
+      "1 scotch bonnet pepper, seeded and chopped",
+      "1/2 teaspoon black pepper",
+      "Salt to taste",
+      "4 cups chopped callaloo leaves, or spinach as substitute"
+    ],
+    "description": "A lighter twist on the classic Jamaican callaloo, substituting ground turkey for saltfish, perfect for a nutritious and flavorful meal.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat olive oil in a large sauté pan over medium heat. Add ground turkey to the pan, breaking it apart with a wooden spoon. Cook until browned and no longer pink, about 5–7 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add sliced onion, minced garlic, and chopped scallions to the pan. Sauté until the onions are translucent, about 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in thyme leaves, diced tomatoes, and chopped scotch bonnet pepper. Cook for another 2–3 minutes until the tomatoes soften."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season with black pepper and salt to taste."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add chopped callaloo leaves to the pan. Stir well to combine all ingredients."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover the pan and let the callaloo steam until wilted and tender, about 5–7 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the lid, stir the mixture, and cook uncovered for an additional 2 minutes to evaporate any excess liquid."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust seasoning if necessary. Serve hot."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT20M",
+    "totalTime": "PT30M"
+  },
+  {
+    "id": "carib-jamaican-jamaican-callaloo-with-shrimp-2",
+    "country": "Jamaican",
+    "name": "Jamaican Callaloo With Shrimp",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/jamaican-callaloo-with-shrimp-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb callaloo greens, or substitute spinach/amaranth",
+      "1 lb shrimp, peeled and deveined",
+      "2 tablespoons vegetable oil",
+      "3 cloves garlic, thinly sliced",
+      "1 onion, or scallion whites, sliced",
+      "2 scallions, chopped",
+      "3-4 sprigs fresh thyme",
+      "1 Scotch Bonnet peppers, remove before serving",
+      "salt, to taste",
+      "black pepper, to taste",
+      "1 tomato, chopped"
+    ],
+    "description": "Sautéed callaloo greens and shrimp in garlicky, aromatic herbs make this a comforting, flavorful Caribbean dish.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash, trim, and chop the callaloo into ribbons. If using the stems, use only tender ones and scrape off some of the outer skin. Set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Thinly slice the garlic, and chop the onion, scallion, tomato, and Scotch bonnet pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil in a wide skillet over medium heat. Add onion, garlic, black pepper, and scallion. Reduce heat to low and sauté for 3–4 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in shrimp (if using precooked, rinse and squeeze out excess moisture). Cook for 3 minutes. For fresh shrimp, cook for 3 minutes, remove, and set aside; return them during the final few minutes of cooking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase heat to medium-high and add the callaloo, tomato, thyme, and Scotch bonnet. Stir to combine; the greens will wilt down."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add water and simmer uncovered for about 10–12 minutes or until callaloo reaches your desired tenderness."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt as needed. Optional: Finish with a splash of lemon juice to balance the flavors. Stir to combine and cook off any excess liquid."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add reserved shrimp if using fresh. Stir in scallions. Serve hot."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT15M",
+    "totalTime": "PT25M"
+  },
+  {
+    "id": "carib-caribbean-easy-jamaican-escovitch-fried-chicken",
+    "country": "Caribbean",
+    "name": "JAMAICAN ESCOVITCH FRIED CHICKEN",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-jamaican-escovitch-fried-chicken/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 tablespoon sugar",
+      "3/4 cup water",
+      "3/4 cup white vinegar",
+      "1 teaspoon whole allspice, pimento",
+      "3/4 teaspoon black pepper",
+      "1 large clove garlic, smashed",
+      "1 bay leaf, optional",
+      "4 sprigs thyme",
+      "1 medium onion, sliced",
+      "1/2 scotch bonnet pepper",
+      "1/2 yellow bell pepper, sliced",
+      "1/2 red bell pepper, sliced",
+      "2 scallions, chopped",
+      "Pinch of salt"
+    ],
+    "description": "A classic Jamaican escovitch sauce poured over fried chicken, delivering tangy, slightly sweet, and savoury flavours with quick-pickled vegetables.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash all the vegetables and chop everything that needs to be prepared."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the vinegar, water, thyme, sugar, and black pepper into a saucepan over low heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add all the remaining ingredients, except the fried chicken, and bring the mixture to a gentle simmer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook for 4 to 5 minutes until the vegetables are slightly tender and the flavours have infused."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from the heat and pour the hot escovitch sauce over the leftover or freshly fried chicken pieces."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT15M",
+    "cookTime": "PT10M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-jamaican-jamaican-rice-and-peas",
+    "country": "Jamaican",
+    "name": "Jamaican Rice and Peas",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/jamaican-rice-and-peas/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 cup dry red kidney beans",
+      "1/4 teaspoon black pepper",
+      "1-1/2 cups coconut milk",
+      "1 pepper Scotch Bonnet peppers",
+      "1 bulb onion",
+      "2 cloves garlic",
+      "1/2 teaspoon salt",
+      "3 sprigs thyme",
+      "2 cups long grain brown rice, par boiled",
+      "1/4 teaspoon ground allspice",
+      "2 stalks scallions",
+      "3 to 4 cups water"
+    ],
+    "description": "Creamy coconut-infused rice simmered with tender beans, aromatic herbs, and gentle heat; a Caribbean table essential.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "If using dried beans, rinse and soak overnight."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Drain and place in a large pot with water; bring to a boil, reduce heat, and simmer until tender, about 50 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add coconut milk, onion, garlic, scallions, thyme, scotch bonnet, salt, pepper, and pimento (if using) to the pot; stir and bring just to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add rice, stir once, then reduce heat to low, cover tightly, and cook 20–25 minutes until rice is tender and liquid is absorbed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from heat and let sit, covered, 10 minutes. Remove the scotch bonnet, thyme stems, and pimento berries."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Fluff rice gently with a fork and serve hot."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT10M",
+    "cookTime": "PT30M",
+    "totalTime": "PT40M"
+  },
+  {
+    "id": "carib-general-caribbean-jamaican-jamaican-stewed-oxtail-with-butter-beans",
+    "country": "General Caribbean, Jamaican",
+    "name": "Jamaican Stewed Oxtail With Butter Beans.",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/jamaican-stewed-oxtail-with-butter-beans/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 lbs oxtail, trimmed",
+      "1 lemon, juiced",
+      "3/4 teaspoon black pepper",
+      "1 tablespoon all-purpose seasoning",
+      "3/4 tablespoon salt",
+      "1 tablespoon dried garlic or garlic powder",
+      "1 tablespoon Caribbean browning",
+      "1 tablespoon dark soy sauce",
+      "1 teaspoon Worcestershire sauce",
+      "2 to 3 tablespoons olive oil",
+      "2 tablespoons tomato paste",
+      "1 medium onion, diced",
+      "5 to 7 sprigs thyme",
+      "4 large garlic cloves, smashed",
+      "1 scotch bonnet pepper",
+      "2 thick slices ginger",
+      "2 scallions, chopped",
+      "1 1/2 tablespoons Caribbean green seasoning",
+      "5 cups water",
+      "1 tablespoon brown sugar",
+      "5 to 9 pimento berries",
+      "1 can butter beans, rinsed and drained",
+      "2 tablespoons parsley, finely chopped"
+    ],
+    "description": "Learn how to make an authentic Jamaican stewed oxtail with butter beans, rich gravy, and deep Caribbean flavor. With easy step by step instructions from uncle Chris of CaribbeanPot.com",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the oxtail with lemon juice and cool water, trimming excess fat (discard). Rinse and pat dry. Lime juice (2 limes) or white vinegar (1 cup) will also work"
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season the oxtail with salt, black pepper, soy sauce, all-purpose seasoning, dried garlic, browning, and Worcestershire sauce. Mix well and marinate."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the oil in a heavy pot over medium heat and brown oxtail in batches for 4 to 6 minutes per batch. Remove and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Lower heat, leave about one tablespoon oil, add tomato paste (for a bit of acidity and sweetness) , and cook for 2 to 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Return oxtail to the pot and add onion, scallions, thyme, garlic, ginger, scotch bonnet, and green seasoning . Stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase heat, add water, bring to a boil, then add brown sugar and pimento berries while scraping the pot bottom."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover partially and cook on low heat for about 2 hours 45 minutes until tender. Keep an eye on the liquid level and add more water if necessary. Ol der oxtail will (age of cow) take much longer to get tender, so adjust the cooking time accordingly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add butter beans (rinsed) and cook for 15 minutes. Taste and adjust the salt to your liking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove thyme stems and pimento berries. Finish with parsley and turn off heat. Serve with Jam aican Rice and Peas, Coconut Rice , or Pigeon Peas Rice (aka gungo rice)."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT25M",
+    "cookTime": "PT3H",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-jamaican-inspired-roasted-and-fried-breadfruit",
+    "country": "Caribbean",
+    "name": "Jamaican-Inspired Roasted and Fried Breadfruit",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/jamaican-inspired-roasted-and-fried-breadfruit/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 mature breadfruit, about 3 lbs",
+      "½ cup olive oil, or coconut oil or butter",
+      "½ teaspoon sea salt"
+    ],
+    "description": "This oven-roasted and fried breadfruit recipe captures the heart of Caribbean home cooking — simple, wholesome, and deeply satisfying. Whether you’re revisiting a childhood favorite or exploring breadfruit for the first time, this method brings out the fruit’s best qualities: tender, golden, and unforgettable.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Cut a small X on the bottom of the breadfruit to allow steam to escape during roasting."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the breadfruit on the middle rack of a 425°F (220°C) oven."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Roast for 90 minutes, or until the skin is evenly charred and the flesh is tender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Allow the roasted breadfruit to cool slightly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Peel off the skin and remove the core."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Slice into wedges or thick pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil in a frying pan over medium heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Fry the breadfruit slices for 3–4 minutes per side, or until golden brown and crisp at the edges. Remove and drain on paper towels. Sprinkle with salt while still hot."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT1H30M",
+    "totalTime": "PT1H40M"
+  },
+  {
+    "id": "carib-fusion-easy-jerk-chicken-pasta-salad-recipe-quick-tasty",
+    "country": "Fusion",
+    "name": "Jerk Chicken Pasta Salad",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/easy-jerk-chicken-pasta-salad-recipe-quick-tasty/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3/4 lb pasta, cooked in salted water",
+      "1 lb chicken breast, skinless, boneless",
+      "1/2 teaspoon salt",
+      "1 1/2 tablespoons jerk marinade",
+      "1 1/2 tablespoons olive oil",
+      "3/4 cup Italian salad dressing",
+      "1 teaspoon Dijon mustard",
+      "1/2 teaspoon black pepper",
+      "1 clove garlic, crushed",
+      "2 tablespoons honey",
+      "1 medium red onion, diced",
+      "1 cup bell peppers, diced",
+      "8-10 cherry tomatoes, halved",
+      "1/3 lb baby spinach",
+      "3/4 cup Feta cheese, crumbled"
+    ],
+    "description": "This easy Jerk Chicken Pasta Salad combines Jamaican jerk-seasoned chicken with rotini pasta, colorful vegetables, baby spinach, and Italian salad dressing. The chicken is finished with honey for a flavorful sweet and savory glaze, making this a quick Caribbean-inspired salad for summer meals and potlucks.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Bring salted water to a boil, then cook the rotini pasta according to the package instructions."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Coat the chicken pieces with the salt, jerk marinade, and olive oil. Cook in a dry frying pan over medium-low heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook on one side for 3-4 minutes, then flip and cook for another 3-4 minutes, until the chicken is fully cooked. As the chicken cooks, the scent of the jerk seasoning fills the air with the rich aromas of allspice, thyme, cinnamon, and Scotch bonnet, bringing a distinctly Caribbean character to the kitchen. Set the chicken aside to cool."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once the chicken has cooled slightly, chop it into small pieces. You can control the size of the pieces to suit your preference."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Return the chicken to the same frying pan with the accumulated juices. Add the honey and cook over medium heat for 3-4 minutes, or until the chicken is fully coated with the honey."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a bowl, combine the Italian salad dressing, Dijon mustard, black pepper, and crushed garlic. Whisk until combined."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the drained pasta in a large bowl while it is still steaming. Add the diced red onion, diced bell peppers, and halved cherry tomatoes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in the salad dressing, then add the chicken pieces followed by the baby spinach."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix well to combine the flavors and textures. Top with crumbled feta or your fav cheese."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Chill and serve. If you've made this recipe, I'd love to hear from you in the comments below."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT15M",
+    "cookTime": "PT15M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-jamaican-jerk-rotisserie-chicken",
+    "country": "Jamaican",
+    "name": "Jerk Rotisserie Chicken",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/jerk-rotisserie-chicken/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 whole chickens, about 2.5-3 lbs each",
+      "2 stalks scallions",
+      "5 sprigs thyme",
+      "1 scotch bonnet pepper",
+      "2 tablespoon soy sauce",
+      "1 tablespoon olive oil",
+      "2 tablespoon cane sugar, or brown sugar",
+      "1/2 teaspoon cinnamon",
+      "1/2 teaspoon nutmeg",
+      "1 tablespoon allspice, pimento powder",
+      "3 slices ginger",
+      "1 tablespoon fish sauce",
+      "3 lime leaves",
+      "2 cloves garlic",
+      "2 tablespoon parsley"
+    ],
+    "description": "This chicken is seasoned and marinated in a spicy Jamaican jerk marinade, before it goes on the grill to Rotisserie for a couple hours. The result is the best jerk rotisserie chicken you’ll ever taste.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a blender, add Cane Sugar (2 tablespoon), Olive Oil (1 tablespoon), Fresh Ginger (3 slice), Garlic (2 clove), Scallion (1 bunch), Scotch Bonnet Pepper (1), Ground Allspice (1 tablespoon), Fresh Thyme (5 sprig), Ground Cinnamon (1/2 teaspoon), Ground Nutmeg (1/2 teaspoon) Soy Sauce (2 tablespoon), Kaffir Lime Leaf (3), Fresh Parsley (2 tablespoon), and Fish Sauce (1 tablespoon). Blend all the ingredients together to make the marinade."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Prep your Whole Chicken (2) by trimming any excess fats, wash with lemon water. Pour the marinade over the chickens and rub it thoroughly on the chicken and in the cavity. Let it marinate in the fridge for a minimum of 4 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Set the chickens up on your rotisserie grill. Place a pan with Water (to taste) underneath the chickens and add Garlic (4 clove), Fresh Thyme (5 sprig), Kaffir Lime Leaf (to taste) and Whole Allspice (10)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Roast the chickens while maintaining a temperature of 275-300 degrees F (135-150 degrees C) for 2 1/2 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve and enjoy!"
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT20M",
+    "cookTime": "PT2H",
+    "totalTime": "PT2H20M"
+  },
+  {
+    "id": "carib-trinidadian-lentils-and-split-peas-dhal-2",
+    "country": "Trinidadian",
+    "name": "Lentils and Split Peas Dhal (Trini Lentil Dhal)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/lentils-and-split-peas-dhal-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 cup yellow split peas",
+      "1 cup lentils",
+      "4 cloves garlic, divided; 2 diced, 2 sliced",
+      "3/4 teaspoon salt",
+      "3/4 teaspoon turmeric",
+      "1/4 small onion, sliced thin",
+      "1/4 teaspoon black pepper",
+      "1/2 hot pepper, optional",
+      "8 cups water, adjust as needed",
+      "3 tablespoon vegetable, or olive oil"
+    ],
+    "description": "A comforting Caribbean dhal made with yellow split peas, lentils, garlic, turmeric, and a fragrant garlic oil finish, perfect with rice or roti.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Rinse split peas and lentils thoroughly; drain."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring 8 cups water to boil in large pot. Add lentils, split peas, onion, 2 diced garlic cloves, turmeric, salt, black pepper, and hot pepper (if using)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce to a gentle simmer with lid slightly ajar. Cook about 80 minutes (or 15 minutes in pressure cooker), stirring occasionally and skimming any foam."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once peas are soft but still holding shape, whisk gently to break down some into a thick stew."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a small frying pan, heat oil. Add remaining 2 garlic slices and fry until edges darken."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Carefully pour hot garlic oil into dhal over the garlic. Stir and taste. Adjust salt as needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot with rice, roti, or as a bowl of soup."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H15M"
+  },
+  {
+    "id": "carib-caribbean-loaded-caribbean-corned-beef-2",
+    "country": "Caribbean",
+    "name": "Loaded Caribbean Corned Beef",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/loaded-caribbean-corned-beef-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 can corned beef",
+      "1 medium onion",
+      "1 medium tomato",
+      "1 small habanero pepper",
+      "1 small carrot",
+      "1/2 pepper green bell pepper",
+      "1/2 pepper orange bell pepper",
+      "2 stalks scallions",
+      "1 cup frozen corn",
+      "1 tablespoon ketchup",
+      "1/2 teaspoon black pepper",
+      "1 clove garlic"
+    ],
+    "description": "This version of “fry” Corned-beef aka Bully Beef is inspired by after-school visits to my Jamaican friend’s home and the way his grandma (RIP granny) would make it. Her version was a bit more runny/saucy as I believe she would add a 1/4 cup or so of water.. I talk about this in the video below.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Place the opened tin of corned beef in a dry non-stick pan… I explain why I don’t start with oil in the pan, as well as why I don’t add any salt, in the video below."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "On a low heat, break up the corned beef into pieces.. it will be easier as it heats up."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the black pepper, carrot, bell peppers, habanero pepper, onion, frozen corn and tomato."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir well to make sure everything is mixed together nicely. Cook on a medium heat and at this point add the ketchup and garlic."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After about 6 minutes with the lid on.. BOOM! You’re Done. Toss in the scallions to finish!"
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Please serve hot! Add chopped cabbage to leftover and refry for yet another excellent side dish."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-trinidadian-caribbean-lobster-callaloo-soup",
+    "country": "Fusion, Trinidadian",
+    "name": "Lobster Callaloo Soup (Caribbean Spinach and Seafood Stew)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-lobster-callaloo-soup/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 lobster tails, washed with 1/2 lemon, backs split",
+      "1 tablespoon olive oil",
+      "1 tablespoon butter",
+      "1 stalk celery, diced",
+      "1 medium onion, diced",
+      "4 cloves garlic, minced",
+      "2 shado beni leaves, chopped",
+      "1/4 Scotch Bonnet pepper, sliced, optional",
+      "4-6 sprigs thyme, leaves only",
+      "1/2 teaspoon black pepper",
+      "3/4 teaspoon salt",
+      "1 lb baby spinach, washed, rough-chopped",
+      "2 cups sweet potato, cubed",
+      "2 cups pumpkin, cubed",
+      "2 cups water",
+      "1 1/2 cups coconut milk",
+      "1 1/2 cups seafood stock"
+    ],
+    "description": "A rich and savory Caribbean soup made with spinach, okra, pumpkin, and tender lobster, simmered in coconut milk and seafood stock.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a deep pot, heat olive oil and butter on medium. Add lobster tails, cover, reduce to low, and cook for 4–5 minutes. Remove and let cool."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove lobster meat from shells; reserve meat. Add large shell pieces back to pot. Add water and bring to a boil. Simmer 10 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add celery, onion, shado beni, garlic, Scotch Bonnet, thyme, and black pepper. Sauté on low for 4 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove lobster meat from shells; reserve meat. Add large shell pieces back to pot. Add water and bring to a boil. Simmer 10 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove shells. Add spinach, salt, sweet potato, pumpkin, and okra. Stir in coconut milk and seafood stock."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring to a boil, then simmer partially covered for 50 minutes until vegetables are soft."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Blend gently with swizzle stick or immersion blender to desired texture.Blend gently with swizzle stick or immersion blender to desired texture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Adjust salt, stir in reserved lobster meat, and serve hot."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H15M"
+  },
+  {
+    "id": "carib-trinidadian-mango-talkari-masala-mango-2",
+    "country": "Trinidadian",
+    "name": "Mango Talkari (Masala Mango)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/mango-talkari-masala-mango-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 green mangoes",
+      "1/2 cup brown sugar",
+      "1 Scotch Bonnet pepper, any hot pepper will work",
+      "1/2 teaspoon salt",
+      "4 cloves garlic",
+      "2 1/2 tablespoon Amchar Masala",
+      "1/4 teaspoon Cumin seeds, geera",
+      "2 tablespoon veg oil",
+      "3-4 tablespoon cilantro, chopped",
+      "1/3 cup water"
+    ],
+    "description": "A bold, tangy Trinidadian dish made with green mangoes simmered in spices, garlic, and hot pepper. Perfect as a snack or side to any curry meal; vegan and gluten-free.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Cut mango into 1/2-inch slices with the skin and seed. Remove the white sponge-like core if visible."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place mango in a large pot, cover with water, and bring to a boil. Add salt, reduce to a rolling boil, and cook for 30 minutes. Drain and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "While the mango cooks, heat oil in a wide pan on medium. Add garlic and reduce heat to low. Sauté for 30 seconds, then stir in cumin seeds and cook for 1 minute."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add Amchar Masala and toast for 2–3 minutes to release flavor. Add half the cilantro and the diced hot pepper. Stir and cook for 1 minute."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Raise heat to medium. Add boiled mango, stir well, then add brown sugar and 1/3 cup water. Bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover and cook for 20 minutes, stirring occasionally. Adjust salt and sugar to taste. For a softer texture, add more water and simmer longer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Uncover, cook to your desired consistency, then finish with the remaining cilantro."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve and enjoy!"
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT50M",
+    "totalTime": "PT1H5M"
+  },
+  {
+    "id": "carib-jamaican-trinidadian-caribbean-black-cake",
+    "country": "Jamaican, Trinidadian",
+    "name": "Moist Caribbean Black Cake with Soaked Fruit",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-black-cake/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 cups dark rum",
+      "4 cups sherry, or cherry brandy",
+      "1 pound prunes, pitted",
+      "1 pound mixed peel",
+      "1/2 pound raisins",
+      "1/2 pound maraschino cherries",
+      "1/4 pound lemon peel",
+      "1/2 pound unsalted butter, softened",
+      "1 cup brown sugar",
+      "6 large eggs, room temperature",
+      "1 teaspoon vanilla",
+      "1 teaspoon mixed essence",
+      "1 tablespoon lime, zested",
+      "1 dash Angostura bitters, optional",
+      "4-5 cups soaked dried fruit",
+      "2 cups all-purpose flour",
+      "1 teaspoon cinnamon",
+      "1/8 teaspoon allspice",
+      "1/4 teaspoon nutmeg, freshly grated",
+      "2 teaspoons baking powder",
+      "1 tablespoon burnt sugar browning",
+      "1 pinch salt"
+    ],
+    "description": "A festive and deeply flavorful Caribbean Christmas cake made with soaked fruits, warm spices, and a touch of burnt sugar browning.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Roughly chop the prunes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Blend the dried fruit with a portion of the rum and sherry to a thick, chunky paste."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Blend until it is a thick but smooth consistency (with a little chunkiness)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the entire mixture into a large bowl."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the mixture into a large jar, add the remaining alcohol, seal the jar, and store it for at least 1 month."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat the oven to 250°F (120 °C). Grease and line baking pans with parchment."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cream butter and sugar until pale. Beat in eggs one at a time, then add vanilla, mixed essence, lime zest, and bitters."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Beat in eggs one at a time, then add vanilla, mixed essence, lime zest, and bitters."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Fold in half of the soaked fruit, then half of the dry mixture (flour, spices, baking powder, salt)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Repeat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add browning and mix to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Divide into prepared pans (fill 2/3 full). Bake for 2 1/2 hours or until a toothpick inserted comes out clean."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Brush the cake tops with a mix of rum and sherry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cool completely, then brush again before wrapping and storing."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT25M",
+    "cookTime": "PT2H",
+    "totalTime": "PT2H25M"
+  },
+  {
+    "id": "carib-general-caribbean-moms-crispy-fried-chicken",
+    "country": "General Caribbean",
+    "name": "Mom’s Crispy Fried Chicken",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/moms-crispy-fried-chicken/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "6 boneless chicken thighs, skin on",
+      "3/4 tablespoon salt",
+      "1/2 teaspoon black pepper",
+      "1 tablespoon Caribbean Green Seasoning",
+      "1 tablespoon Worcestershire sauce",
+      "1 teaspoon curry powder",
+      "1 teaspoon sesame oil",
+      "1 teaspoon grated ginger",
+      "2 cups buttermilk",
+      "2 cups crushed salted crackers",
+      "2 cups vegetable oil, for frying"
+    ],
+    "description": "Golden and crispy, this Caribbean fried chicken uses crushed salted crackers for a flavorful, crunchy coating. Seasoned with green seasoning and marinated in buttermilk, it’s a nostalgic take on a beloved island favorite.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Trim excess fat and skin from the boneless chicken thighs."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season the chicken with salt, black pepper, Caribbean green seasoning, Worcestershire sauce, curry powder, sesame oil, and grated ginger. Mix well to coat evenly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in the buttermilk and gently shake or stir to combine, ensuring the seasoning remains on the chicken. Cover and marinate in the refrigerator for at least 4 hours, or overnight if possible."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the salted crackers in a zipper bag or tea towel and crush using a rolling pin or pestle until finely crumbled."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat vegetable oil in a deep, wide pan over medium-high heat until it reaches 350°F (175°C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the chicken from the marinade and let the excess buttermilk drip off. Dredge each piece in the crushed crackers, pressing gently to adhere."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Working in batches, fry the chicken for 4–5 minutes per side until golden brown and fully cooked. Do not overcrowd the pan."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Transfer fried chicken to a wire rack to drain. Avoid using paper towels, which can cause sogginess."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Optional: Sprinkle with finishing or sea salt while still hot, if desired."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Assemble sandwiches with lightly buttered bread and your favorite toppings—mustard, mayonnaise, tomato ketchup, pickled onions, and lettuce work beautifully."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT10M",
+    "totalTime": "PT25M"
+  },
+  {
+    "id": "carib-caribbean-a-non-traditional-caribbean-christmas-rum-fruit-cake-2",
+    "country": "Caribbean",
+    "name": "No-Soak Caribbean Christmas Rum (Fruit Cake)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/a-non-traditional-caribbean-christmas-rum-fruit-cake-2/",
+    "author": "Sandie Markle",
+    "ingredients": [
+      "2 boxed cake mixes, white or yellow",
+      "Ingredients as per box, usually eggs, oil or butter",
+      "1 cup dark rum",
+      "1 1/2 cups Port, or sherry",
+      "1 teaspoon nutmeg, grated",
+      "1 teaspoon ground cinnamon",
+      "1 teaspoon ground ginger",
+      "1 orange, zested",
+      "1 cup raisins",
+      "1 cup prunes, roughly chopped",
+      "1 cup citrus peel",
+      "1 cup mixed dried fruit",
+      "1-2 tablespoons Caribbean browning",
+      "1 1/2 tablespoons vanilla extract",
+      "Extra rum or Port for brushing"
+    ],
+    "description": "This simplified version of the traditional Caribbean Christmas cake is perfect for those who didn’t soak fruits months in advance. Using boxed cake mix and a blend of dried fruits soaked in rum and port, it delivers festive flavors with less effort.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a food processor or blender, combine citrus peel, raisins, mixed dried fruit, prunes, cinnamon, ginger, vanilla extract, nutmeg, dark rum, orange zest, and port. Blend to desired consistency, scraping down the sides as needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large mixing bowl, prepare the boxed cake mixes according to package instructions. Add Caribbean browning and whisk until well incorporated."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Fold the fruit mixture into the cake batter until evenly distributed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat oven to 350°F (175°C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Grease and flour Bundt or cake pans. Divide the batter between the pans. Bake according to package directions, typically 45 minutes, or until a toothpick inserted into the center comes out clean."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Allow cakes to cool in the pans for 10 minutes, then transfer to a cooling rack. Once completely cooled, brush the tops with additional port or rum."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Slice and enjoy. Store any leftovers in an airtight container."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT20M",
+    "cookTime": "PT45M",
+    "totalTime": "PT1H50M"
+  },
+  {
+    "id": "carib-caribbean-one-pot-stewed-beef-with-red-beans-for-a-quick-easy-dinner-2",
+    "country": "Caribbean",
+    "name": "One-Pot Stewed Beef with Red Beans for a Quick, Easy Dinner",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/one-pot-stewed-beef-with-red-beans-for-a-quick-easy-dinner-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 medium tomato, diced",
+      "1 medium onion, diced",
+      "7 cloves garlic, smashed",
+      "1 teaspoon black pepper",
+      "3/4 tablespoon salt",
+      "1 tablespoon Worcestershire sauce",
+      "1 pepper Scotch Bonnet Pepper, cut in 1/2",
+      "1 teaspoon grated ginger",
+      "1 1/2 tablespoon Caribbean Green Seasoning",
+      "1 tablespoon olive oil",
+      "1 3/4 tablespoon golden brown sugar",
+      "2 cups water",
+      "1 1/2 cups coconut milk",
+      "1 large can Red Kidney Beans, rinsed",
+      "2 tablespoon chopped parsley",
+      "3 lbs stewing beef, large cube"
+    ],
+    "description": "Yea not so much quick, but hear me out. Cook a large batch and freeze (and thaw), for days you want a quick dinner with steamed rice or maybe you have time to make hot Sada Roti . This combination of tender beef and red kidney beans is a rich and delicious coconut gravy, with hints of herbs and ginger. Simply Delicious!",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the pieces of beef (any cheap cut will work) with the juice of a lime or lemon or 1/4 cup white vinegar and cool water (not mentioned in the ingredient list) and drain. Then season with the salt, black pepper, onion, ginger, tomato, Scotch Bonnet (optional), Caribbean Green Seasoning and Worcestershire sauce. Should you have time, allow it to marinate in the fridge for at least 2 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use the video as a guide for this step. Place a deep pan (heavy one will work best) on a med/high flame and add the oil and brown sugar. The sugar will melt, go frothy, then a deep amber. At this point is when you’ll add the seasoned beef to the pot (carefully) and stir to coat with the caramelized sugar (no the dish will not be sweet). Should the sugar go BLACK, you need to STOP immediately. Allow the pot to cool completely, wash it and start over with a dry pot. If not, you’ll be left with BITTER tasting beef."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the lid on the pot (slightly ajar), turn the heat down to med/low and cook for 15 minutes. It will sprout natural juices. Remember to stir a couple times."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Now remove the lid, crank up the heat and burn off that liquid to the point where you see the oil we started with at the bottom of the pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once all of the liquid is gone, add the coconut milk and stir well. Then pour the water into the same bowl you marinated the beef in, swish it around to pick up remaining marinade.. pour that water into the pot now. Stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once it comes to a boil, reduce it to between a rolling boil and a simmer (med/low flame) and allow it to cook for 30 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "At this point we’ll add the kidney beans (any large bean will work) and bring back to a boil. Reduce to a simmer, lid slightly ajar and cook for another 30-35 minutes. Basically until the beef is tender. I explained why we added the beans at this point in the video."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "During the cooking process, keep an eye on the liquid level and add more water should you need to. Once the beef is tender, adjust the salt to your liking. Determine if the gravy is at the consistency you like (cook longer to thicken or smash some of the beans, should you want it thicker). Keep in mind that the residual heat in the pot will further cook and thicken the gravy."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once you’re happy with the results, add the parsley as you turn off the heat."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-oven-roasted-chicken-legs",
+    "country": "Caribbean",
+    "name": "Oven Roasted Chicken Legs",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/oven-roasted-chicken-legs/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 sprigs rosemary, rough chopped",
+      "3 tablespoons chives, chopped",
+      "5 sprigs thyme",
+      "3 small 3–5 onions",
+      "3 scallions 3–5, tops of the onions",
+      "6 cloves garlic",
+      "3/4 tablespoon salt, divided",
+      "3/4 tablespoon black pepper, divided",
+      "2 pimento peppers, optional",
+      "1 stalk celery, leaves and stem",
+      "3 stems parsley",
+      "1 bell pepper, sliced, optional",
+      "1/3 cup olive oil",
+      "5 chicken legs with thighs, about 3 lbs"
+    ],
+    "description": "With fresh herbs, garden vegetables, and tender chicken, this oven roasted chicken legs recipe is a comforting, flavorful dish perfect for weeknight dinners or Sunday lunch. Inspired by Trinidad and Tobago’s beloved “bake chicken,” this version uses rosemary, thyme, parsley, and garlic for layers of island flavor, while staying true to a simple roasted chicken you can enjoy year-round. Serve with mashed potatoes, rice, or roasted vegetables for a complete meal.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat the oven to 400°F (200°C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place half of the salt and black pepper along with all the herbs, onions, scallions, garlic, celery, parsley, pimento peppers, bell peppers (if using), and olive oil into a roasting pan. Mix well to combine, massaging the herbs with your hands to help release their flavors."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Trim excess fat and skin from the chicken legs. Cut small slits in the thickest parts of the meat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the chicken legs to the roasting pan and mix thoroughly with the marinade."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Sprinkle the remaining salt and black pepper directly onto the skin of the chicken."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the roasting pan uncovered on the middle rack of the oven. Roast for 1 hour 10 minutes, basting the chicken with pan juices every 20 minutes. Rotate the pan if necessary for even cooking. For more pan drippings, you can add 1 cup of chicken stock to the roasting pan at the start. Refer to the video below where I share more tips."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If the chicken begins to brown too quickly, loosely cover with foil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from the oven and let rest a few minutes before serving. This recipe is part of my In Season series, where I highlight ingredients that influence our dinners at home. In this case, the herbs and onions all came from my garden."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT1H10M",
+    "totalTime": "PT1H25M"
+  },
+  {
+    "id": "carib-caribbean-amazing-pineapple-jerk-chicken",
+    "country": "Caribbean",
+    "name": "Oven-Baked Pineapple Jerk Chicken",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/amazing-pineapple-jerk-chicken/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 tablespoon jerk seasoning",
+      "1/4 teaspoon black pepper",
+      "2 tablespoon dark soy sauce",
+      "1/2 scotch bonnet pepper, diced, seeds removed",
+      "4 cloves garlic, diced",
+      "1 can chunky pineapple",
+      "3 stalks scallions, chopped",
+      "6-8 sprigs thyme",
+      "1 tablespoon brown sugar",
+      "1/4 cup orange juice",
+      "1 tablespoon olive oil",
+      "2 whole chicken, about 5 lbs"
+    ],
+    "description": "A fast and flavorful oven-baked Caribbean-style chicken infused with pineapple and bold jerk seasoning.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Mix all ingredients except chicken in a large bowl, bruising thyme to release oils."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Marinate chicken in mixture for at least 2 hours, or proceed immediately."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat oven to 410 °F (210 °C). Line a pan with foil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Arrange chicken pieces skin side up; roast uncovered for 1 hour 15 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Broil briefly to crisp skin if needed, watching carefully."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Let rest a few minutes, then serve."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H10M"
+  },
+  {
+    "id": "carib-trinidadian-oven-braised-caribbean-curry-duck",
+    "country": "Trinidadian",
+    "name": "Oven-Braised Caribbean Curry Duck",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/oven-braised-caribbean-curry-duck/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "6-8 lbs duck, Muscovy preferred",
+      "2-3 tablespoons flour, for washing",
+      "1 tablespoon salt",
+      "1/4 teaspoon black pepper",
+      "1 teaspoon roasted geera, cumin",
+      "4-5 tablespoons curry powder, divided",
+      "1 Scotch Bonnet pepper",
+      "2-3 tablespoons vegetable oil",
+      "4 Bird’s Eye peppers, optional",
+      "2-3 tablespoons shado beni, chopped, divided",
+      "2 stalks scallions, chopped",
+      "2 tablespoons Caribbean green seasoning",
+      "1 small onion, diced",
+      "8-10 cloves garlic, crushed",
+      "1 slice ginger, optional"
+    ],
+    "description": "This recipe offers a convenient twist on the traditional Caribbean curry duck by utilizing oven or slow cooker methods, making it accessible for home cooks seeking authentic flavors without the need for outdoor cooking.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Place the cut duck pieces into a large bowl, add flour, and mix well. Add cool water and wash each piece individually. Rinse and drain in a colander to remove excess water and blood."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In the same bowl, add salt, black pepper, roasted geera, 1 tablespoon curry powder, scotch bonnet pepper, half of the chopped shado beni, scallions, green seasoning, and ginger (if using). Mix well to coat the duck pieces. Cover and refrigerate for at least 4 hours or overnight."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat vegetable oil in a deep pot over medium-high heat. Add diced onion and crushed garlic, then reduce heat to low and cook gently for 3–5 minutes, ensuring the garlic doesn’t burn. Add 3 tablespoons of curry powder and stir well, cooking for another 4–5 minutes to toast the spices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase heat to high and add the marinated duck pieces to the pot in batches, stirring to coat with the curry base. Continue adding all the duck, stirring every 4–5 minutes. Cook uncovered for about 15 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat oven to 375°F (190°C). Transfer the contents of the pot to an oven-proof baking dish, add bird’s eye peppers (if using), and cover tightly with aluminum foil. Place on the middle rack of the oven and bake for 1 hour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 1 hour, remove the dish from the oven, carefully uncover, and stir the duck. Reseal with foil and return to the oven for another hour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 2 hours total baking time, check the duck for tenderness. If it’s not as tender as desired, continue baking for an additional 30–45 minutes. Once done, remove from oven, adjust salt to taste, and garnish with the remaining chopped shado beni."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT20M",
+    "cookTime": "PT2H",
+    "totalTime": "PT2H20M"
+  },
+  {
+    "id": "carib-fusion-general-caribbean-oyster-sauce-flavoured-shrimp-stir-fry",
+    "country": "Fusion, General Caribbean",
+    "name": "Oyster Sauce Flavoured Shrimp Stir Fry",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/oyster-sauce-flavoured-shrimp-stir-fry/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb medium shrimp, 16-20 count, peeled and deveined",
+      "1/4 teaspoon salt",
+      "1/2 teaspoon black pepper",
+      "2 1/2 tablespoons vegetable oil, divided",
+      "1 large onion, sliced",
+      "1 tablespoon ginger, grated",
+      "6 cloves garlic, finely chopped",
+      "1 green bell pepper, sliced",
+      "1 red bell pepper, sliced",
+      "2 tablespoons oyster sauce",
+      "3/4 tablespoon hoisin sauce, optional",
+      "1 tablespoon sesame oil, toasted",
+      "2 tablespoons soy sauce",
+      "1 tablespoon water",
+      "1 tablespoon sesame seeds"
+    ],
+    "description": "This Oyster Sauce Flavoured Shrimp Stir Fry is a quick and delicious dish inspired by my childhood lunches in San Fernando, Trinidad and Tobago. It brings together juicy shrimp, crisp bell peppers, and a savoury oyster sauce glaze that’s perfect with steamed rice or noodles. A versatile recipe you can easily adapt with beef, chicken, or extra vegetables to stretch for more guests.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Peel, devein, and rinse the shrimp under cool water. Drain well and season with salt and black pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat 1 tablespoon of vegetable oil in a large frying pan or wok over medium heat. Add the seasoned shrimp and stir-fry for about 2 minutes until they start to turn pink. Remove the shrimp from the pan and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In the same pan, add the remaining 1 1/2 tablespoons of oil over low heat. Add the sliced onion, garlic, ginger, and stir for about 1 minute to build flavour. Then add the green and red bell peppers. Cook for 3-4 minutes, stirring often, until they begin to soften."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "While the vegetables cook, combine the soy sauce, hoisin sauce (if using), sesame oil, and oyster sauce in a small bowl. Mix well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn the heat to medium-low, pour in the sauce mixture, and stir to coat the vegetables evenly. Rinse the sauce bowl with 1 tablespoon of water to capture any remaining sauce and add it to the pan."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook for 2 minutes to allow the sauce to thicken slightly. Return the shrimp to the pan, stirring well to coat with the sauce and warm through."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off the heat and sprinkle the sesame seeds and chopped scallions over the stir-fry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot with steamed sticky rice or your favourite noodles. Add chili oil or fresh sliced hot peppers if you like it spicy."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT12M",
+    "totalTime": "PT27M"
+  },
+  {
+    "id": "carib-caribbean-papaya-pineapple-marmalade",
+    "country": "Caribbean",
+    "name": "Papaya Pineapple Marmalade",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/papaya-pineapple-marmalade/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 cups ripe pineapple, diced",
+      "2 cups ripe papaya, diced",
+      "3-4 cups sugar, adjust to taste",
+      "1 tablespoon lemon, zested in thin strips",
+      "1/3 cup lemon juice",
+      "1 tablespoon ginger, grated",
+      "Pinch of salt",
+      "1 tablespoon honey"
+    ],
+    "description": "A vibrant tropical spread that blends papaya and pineapple into a sticky-sweet marmalade with warm notes of ginger and citrus.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Prepare fruit by peeling and dicing pineapple and papaya. Zest and juice lemons."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Combine all ingredients in a wide pan over medium heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring mixture to a boil, then reduce to a simmer; cook, uncovered, about 30 minutes until fruit is tender and mixture thickens."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Adjust thickness by simmering more if needed or mashing a few pieces with your spoon."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "(Optional) Check for set at 224 °F (107 °C) using a candy thermometer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from heat and pour hot marmalade into sterilized jars; seal once cool."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT30M",
+    "totalTime": "PT40M"
+  },
+  {
+    "id": "carib-american-how-to-make-peach-ice-cream-from-scratch",
+    "country": "American",
+    "name": "Peach Ice Cream From Scratch",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/how-to-make-peach-ice-cream-from-scratch/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 large peaches, peeled and diced",
+      "1 teaspoon lemon juice",
+      "1 cup sugar, divided",
+      "1 1/2 cups heavy cream",
+      "1 1/2 cups milk",
+      "1/4 teaspoon salt",
+      "4 egg yolks",
+      "1 teaspoon vanilla"
+    ],
+    "description": "This creamy Peach Ice Cream From Scratch uses ripe peaches, a rich egg custard, heavy cream, and milk to create a homemade summer dessert. It is part of my In Season Series, where I share ways to enjoy seasonal ingredients even when they are not traditionally Caribbean.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Put the washed, peeled and chopped peaches in a bowl. Mix in 1/3 cup of sugar and the lemon juice. Mix well to combine and allow the peaches to macerate for about 3-4 hours, mixing at least once during this time."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain and separate the peach syrup from the solids. Give the peach solids a further crush with a fork or pulse with a stick blender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a pot over medium heat, add the milk, cream, 1/3 cup of sugar, and salt. Bring to a simmer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Whisk the 4 egg yolks with the remaining 1/3 cup of sugar, then add 3 tablespoons of the warm milk mixture while whisking. Add a bit more and continue whisking. This step is called tempering the eggs, so when you add them to the pot they will not scramble."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the eggs to the pot and whisk. Turn the heat down to low and cook at a very gentle simmer for 4-6 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "It will thicken naturally. Once the custard can coat the back of a spoon, turn off the stove."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the peach syrup and vanilla and whisk. If you want to strain the custard at this point, you can."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Chill until cold."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the peach custard into your ice cream maker and follow the instructions for use."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In my case, I allowed the machine to run for about 20 minutes, until it became somewhat firm. Add the reserved peach solids and continue until it is firm. In my case, this took another 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "The peach ice cream will now have the texture of soft-serve ice cream. Pour it into a freezer-proof container with a lid and place it in the freezer to set for a couple of hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "More Peach Recipes If you make this Peach Ice Cream, leave me a comment and let me know how you personalized it. I always enjoy hearing how you make these recipes your own, whether you added a little more peach, changed the texture, or simply made it for a family gathering. And if you are a fan of peaches, be sure to check out my Peach Chow , Peach Chutney , Habanero Peach Chicken Wing Sauce , and Glazed Grilled Peaches . For something refreshing, my Mango Peach Strawberry Lemonade is also a fan favourite."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT10M",
+    "cookTime": "PT12M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-perfect-peach-chutney",
+    "country": "General Caribbean",
+    "name": "Perfect Peach Chutney",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/perfect-peach-chutney/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "5 peaches, ripe but firm",
+      "2 bird’s eye peppers, rough chopped",
+      "4-6 cloves garlic, crushed",
+      "1 teaspoon salt",
+      "1 lime, juiced",
+      "1 teaspoon roasted ground geera, cumin",
+      "2-4 tablespoons water",
+      "2 tablespoons cilantro or chadon beni, finely chopped"
+    ],
+    "description": "A bright and vibrant Caribbean-inspired Peach Chutney featuring ripe peaches, fresh herbs, citrus, garlic, and Caribbean peppers. This easy no-cook condiment delivers the perfect balance of sweet, tart, savoury, and spicy flavours.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the peaches thoroughly and pat dry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cut all the peaches in half and remove the pits. Discard the seeds."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Using a box grater, grate two of the peaches and place the grated peach into a mixing bowl."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Roughly chop the remaining three peaches and place them into a blender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the bird’s eye peppers, crushed garlic, salt, roasted ground geera, lime juice, and 2 tablespoons of water to the blender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Blend until smooth, adding additional water if needed to achieve a smooth consistency."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the blended peach mixture into the bowl containing the grated peaches."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix thoroughly to combine both textures evenly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the chopped cilantro or chadon beni and gently fold into the mixture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt if necessary."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place in the refrigerator and chill before serving to allow the flavours to fully combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Store refrigerated for up to 5 to 7 days. I'd recommend stirring before use in stored."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT15M",
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-pineapple-sorrel-drink",
+    "country": "Caribbean",
+    "name": "Pineapple Sorrel Drink",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/pineapple-sorrel-drink/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 cups dried sorrel",
+      "13 cups 13–14 water",
+      "1 cinnamon stick",
+      "3 bay leaves",
+      "8 inches dried orange peel",
+      "1 teaspoon cloves",
+      "2 slices ginger",
+      "1 large pineapple, chopped",
+      "2 cups sugar"
+    ],
+    "description": "A festive Caribbean sorrel drink enhanced with pineapple, warm spices, and citrus for a rich, holiday-ready beverage perfect for Christmas entertaining.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Give the pineapple a thorough wash if keeping the skin on, or peel and wash it before chopping into 1 cm pieces. More is explained in the video below, especially if you’re keeping the skin on vs peeling."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the dried sorrel into a deep soup or stock pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the cinnamon stick, bay leaves, dried orange peel, ginger, and cloves with the stove turned off."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the chopped pineapple, followed by the water, then bring the pot to a boil over medium-high heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce the heat to a simmer and cook for 30–40 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off the stove and allow the mixture to steep for at least 4 hours. Overnight steeping gives the best flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain the mixture, squeezing well to extract all the liquid from the rehydrated sorrel and pineapple. As mentioned in the video below, the pineapple and sorrel remnants can be used to make a jam, jelly, or chutney. Please comment below if you’d like to see the recipe."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Sweeten to taste, bottle, and store in the refrigerator for up to 6 weeks."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve chilled over ice and garnish with fresh pineapple or lemon slices if desired."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT40M",
+    "totalTime": "PT4H55M"
+  },
+  {
+    "id": "carib-fusion-trinidadian-pommecythere-golden-apple-ambarella-chow",
+    "country": "Fusion, Trinidadian",
+    "name": "Pommecythere Chow (Golden Apple Pickle)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/pommecythere-golden-apple-ambarella-chow/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 teaspoon sea salt",
+      "2 Scotch Bonnet peppers, crushed or thinly sliced",
+      "5-8 chadon beni leaves, chopped",
+      "6 cloves garlic, crushed",
+      "10-15 Chinese salted prunes",
+      "1/2 medium red onion, thinly sliced",
+      "2 limes, juiced",
+      "1 of lemon, juiced",
+      "3/4 cup water",
+      "1/4 teaspoon black pepper"
+    ],
+    "description": "A tangy, spicy pickle made with pommecythere (golden apples), citrus, pepper, garlic, and herbs, perfect for snacking, topping, or brightening meals.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash, peel, and chop the Pommecytheres."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once you’ve prepped the Pommecytheres, assemble the rest of the ingredients."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Combine pommecytheres, sea salt, Scotch Bonnet, chadon beni, garlic, salted prunes, and red onion in a large bowl."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add lime juice, lemon juice, water, and black pepper. Toss well to coat all fruit and aromatics. Taste and adjust salt if the mixture is too tart."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover and chill in the refrigerator for at least two hours before serving. Serve chilled as a snack, side, or condiment. Store leftovers in the fridge for up to several days."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": null,
+    "totalTime": "PT15M"
+  },
+  {
+    "id": "carib-general-caribbean-quick-easy-brown-stew-mackerel-in-tomato-sauce",
+    "country": "General Caribbean",
+    "name": "Quick & Easy Brown Stew Mackerel in Tomato Sauce",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/quick-easy-brown-stew-mackerel-in-tomato-sauce/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoon olive oil",
+      "1/2 small carrot, julienned",
+      "1/2 medium red bell pepper, sliced",
+      "1/2 medium green bell pepper, sliced",
+      "1 large onion, sliced",
+      "4 sprigs thyme",
+      "6 pimento berries",
+      "2 scallions, chopped",
+      "1/2 scotch bonnet pepper, sliced (optional)",
+      "1 clove garlic, crushed",
+      "1/2 teaspoon salt",
+      "1/2 teaspoon black pepper",
+      "1 tablespoon Caribbean browning",
+      "2 tablespoon tomato ketchup",
+      "1 1/2 cups water, divided",
+      "1 can mackerel in tomato sauce, 425g",
+      "1 large tomato, chunky pieces",
+      "1/2 lime, juiced"
+    ],
+    "description": "A quick and flavorful Brown Stew Mackerel made with canned mackerel in tomato sauce, perfect for Lent and Good Friday meals with classic Caribbean seasoning.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Prepare all the ingredients after a good wash and set them aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil over a medium flame in a deep saucepan. Add the carrots and cook for about 2 minutes, allowing them to soften slightly and release their natural sweetness."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the bell peppers, onion, scallions, scotch bonnet pepper, pimento berries, thyme, and garlic. Reduce the heat to medium-low and cook for about 3 minutes so the aromatics come alive and build that base of flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn the heat back to medium and add the salt, black pepper, Caribbean browning, tomato ketchup, and 1 cup of water. As it comes to a boil, your kitchen should be perfumed with that lovely combination of bright Caribbean flavors, slightly tangy from the ketchup and fragrant from the herbs and spices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring to a boil and let it simmer for about 3 minutes to allow everything to come together into a rich gravy. Should you want to add a teaspoon of Caribbean Green Seasoing , it would add another level of herbal notes to the finished dish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the mackerel along with the tomato sauce from the can. Rinse the can with the remaining water and add it to the pot. Gently break the mackerel into smaller pieces while still keeping its shape and form. Refer to the video where I showed how to break the pieces of mackerel while keeping it's integrity."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring to a boil, then reduce to a simmer and cook for 4 to 6 minutes until the gravy thickens and coats everything nicely."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "I like adding the chunky pieces of tomato near the end of cooking, so they keep their shape, but absorb some of the Jamaican borwn stew sauce. This allows me to stretch the brown stew mackerel for feeding more people."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the salt to your liking, then finish with freshly squeezed lime juice and turn off the stove."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm with rice, dumplings, boiled green bananas, sada roti , or as a traditional fish dish for Good Friday."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT15M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-quick-easy-grilled-zucchini-recipe-for-busy-nights",
+    "country": "Caribbean",
+    "name": "Quick & Easy Grilled Zucchini Recipe for Busy Nights",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/quick-easy-grilled-zucchini-recipe-for-busy-nights/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 medium zucchini, sliced",
+      "1/2 cup olive oil",
+      "3/4 teaspoon sea salt",
+      "3/4 teaspoon black pepper",
+      "1 teaspoon thyme leaves, about 5 sprigs",
+      "3 cloves garlic, crushed"
+    ],
+    "description": "Quick and healthy grilled zucchini recipe with garlic, thyme, and lemon. Perfect for busy weeknights or summer barbecues. Includes easy Caribbean flavor variations with curry powder and green seasoning. Ready in under 15 minutes.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash and slice the zucchini into strips about 3/4 centimeter thick."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use a sharp paring knife to score shallow hash marks on both sides of each slice—this helps the marinade soak into the flesh. All is explained in the video below."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a mixing bowl, whisk together olive oil, sea salt, black pepper, thyme leaves, crushed garlic, and lemon juice to create the marinade. Add red pepper flakes if you’d like a touch of heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Brush both sides of each zucchini slice with the marinade and place them on a sheet pan."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat your grill pan (or outdoor grill) to high heat. Grill the zucchini for about 3 minutes per side until tender and slightly charred. You may also place these under the broiler of your oven for 3 minutes per side."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "As they cook, brush with any leftover marinade for extra flavor. I’d also recommend placing them back onto the sheet pan you first marinated them on, as there will be remnants of the marinade there."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from the grill and, if desired, sprinkle with a bit more sea salt and black pepper. Serve warm."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT6M",
+    "totalTime": "PT16M"
+  },
+  {
+    "id": "carib-fusion-quick-and-easy-cilantro-chimichurri",
+    "country": "Fusion",
+    "name": "Quick and Easy Cilantro Chimichurri Recipe",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/quick-and-easy-cilantro-chimichurri/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 cups finely chopped cilantro",
+      "3 cloves garlic, crushed",
+      "2 Bird’s Eye peppers, finely chopped",
+      "1 tablespoon thyme leaves",
+      "3 tablespoons red wine vinegar",
+      "1/4 cup olive oil",
+      "1 large shallot, finely chopped",
+      "Juice of 1 orange",
+      "1 tablespoon finely chopped Chadon Beni, culantro",
+      "1/2 teaspoon sea salt",
+      "1 tablespoon black pepper"
+    ],
+    "description": "Learn how to make this quick and easy cilantro chimichurri with fresh herbs, Chadon Beni, citrus, and garlic. Perfect for grilled meats, seafood, and vegetables.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "The easy way to make this cilantro chimichurri is to place all of the ingredients into a food processor or blender and pulse until combined. However, I prefer the manual method of finely chopping everything with a knife before mixing it together. It takes a few extra minutes, but the finished cilantro chimichurri has a much nicer texture, and I find the individual herbs and aromatics stand out better than when everything is processed into a smooth paste."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl, place all of the ingredients except the sea salt, orange juice and red wine vinegar."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Give everything a good mix, then sprinkle the sea salt over the top before pouring in the orange juice and red wine vinegar. I find doing it this way helps the salt dissolve a bit before giving everything one final mix."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "With the addition of thyme, Chadon Beni (culantro) and a bit of fresh citrus, which also adds a subtle sweetness to balance the sharpness of the vinegar, the overall flavor of this cilantro chimichurri takes on a distinctly Caribbean personality."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve at room temperature with grilled meats, toss it with roasted vegetables, and don't sleep on using it with Jerk Chicken , Jerk Pork , or Grilled Lobster ."
+      }
+    ],
+    "yields": 2,
+    "prepTime": "PT10M",
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-quick-and-easy-crab-apple-chutney-raw",
+    "country": "Fusion",
+    "name": "Quick and Easy Crab Apple Chutney",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/quick-and-easy-crab-apple-chutney-raw/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "14-16 crab apples, trimmed, cored and cubed",
+      "1 Scotch bonnet pepper",
+      "1 lemon, juice",
+      "3/4 teaspoon salt",
+      "1/4 cup water",
+      "2 tablespoons finely chopped chadon beni",
+      "1/2 teaspoon ground roasted geera, cumin (optional)"
+    ],
+    "description": "This spicy raw crab apple chutney combines tart crab apples, Scotch bonnet pepper, citrus, and chadon beni for a fresh Caribbean-inspired dipping sauce. It is a small-batch recipe that requires no cooking.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the crab apples well with cool water, removing the stems and any imperfections or blemishes. Trim, core, and cut the crab apples into chunks."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the crab apple cubes into a blender ( i opted for a magic bullet) along with the Scotch bonnet pepper ( use any spicy pepper and in the amounts you can tolerate) , salt, lemon juice, and water. Puree until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the pureed crab apples into a bowl and mix in the finely chopped chadon beni ."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the roasted geera if using and mix well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Store the finished chutney in the refrigerator and use within one week."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "This chutney works as an excellent dipping sauce for Pholourie , Shrimp Pholourie , Trinidad Doubles, Aloo Pies , as well as Accras ."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you enjoy this style of chutney and would like to experiment a bit more, I suggest giving my Peach Chutney , which is slightly sweet, a try. With Thanksgiving around the corner, you may also want to make some space on your dinner table for my Spicy Cranberry Pineapple Chutney . And do not pass up the opportunity to give my Roasted Pineapple Coconut Chutney a test drive."
+      }
+    ],
+    "yields": 2,
+    "prepTime": "PT15M",
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-trinidadian-quick-and-easy-one-pot-mac-and-cheese-2",
+    "country": "Trinidadian",
+    "name": "Quick and Easy One-Pot Mac and Cheese",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/quick-and-easy-one-pot-mac-and-cheese-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb bucatini pasta",
+      "1/2 lb sharp white cheddar, grated",
+      "1 teaspoon salt, adjust to taste",
+      "1/2 teaspoon black pepper",
+      "1/2 cup evaporated milk, warmed",
+      "2 tablespoons mayonnaise",
+      "pepper sauce, to taste",
+      "jalapeño gouda, for extra kick",
+      "butter, as a substitute for mayo"
+    ],
+    "description": "This simple, stove-top mac and cheese comes together in minutes with bold Caribbean flavor, aged white cheddar, and no oven time. A childhood favorite in Trinidad and Tobago, this no-fuss recipe is creamy, comforting, and perfect with a splash of pepper sauce or stew gravy on top.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Cook the bucatini in a large pot of salted water according to package instructions until al dente."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "While the pasta cooks, grate the white cheddar and set aside. Tip: chilling the cheese for 10–15 minutes in the freezer makes grating easier."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once the pasta is cooked, drain it but do not rinse. Return the empty pot to the stovetop (with the burner turned off) and immediately add the drained pasta back in."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Sprinkle in the black pepper, then stir in the grated cheese, mayonnaise, and warmed evaporated milk. Mix thoroughly to melt the cheese and create a creamy sauce."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add pepper sauce if desired and mix well. Taste and adjust salt to your preference. You may substitute butter for mayonnaise if preferred."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve immediately. Enjoy plain or topped with your favorite stew gravy or even a few drops of ketchup or sliced boiled eggs, island-style."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT5M",
+    "cookTime": "PT15M",
+    "totalTime": "PT20M"
+  },
+  {
+    "id": "carib-trinidadian-quick-and-easy-smoked-herring-choka-2",
+    "country": "Trinidadian",
+    "name": "Quick and Easy Smoked Herring Choka (Trinidad-Style Fish Choka)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/quick-and-easy-smoked-herring-choka-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "8-10 smoked herring fillets, prepared, boned, soaked",
+      "1 Scotch Bonnet pepper, sliced",
+      "1 scallion, chopped",
+      "2 medium tomatoes, diced",
+      "1 medium onion, sliced thin",
+      "1 tablespoon parsley, chopped",
+      "1/2 teaspoon black pepper",
+      "2 cloves garlic, crushed",
+      "4 tablespoons olive oil"
+    ],
+    "description": "A classic Smoked Herring Choka made with smoky herring, hot pepper, fresh onions and a sizzling oil chunkay, bringing Caribbean flavor and texture in minutes.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Place the prepared smoked herring fillets in a large bowl and flake them with a fork."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the tomatoes, scallion, parsley, sliced Scotch Bonnet, black pepper, and crushed garlic, tossing gently to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Layer the thinly sliced onion over the top; do not stir."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil in a small sauté pan over medium-high heat until wisps of smoke appear."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Carefully pour the hot oil over the onion slices to achieve the signature “chunkay” effect."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix thoroughly to disperse flavors evenly. Taste and add salt only if needed (the smoked herring may already be salty)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm or at room temperature with rice and dhal, fried bake, or roasted breadfruit."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT15M",
+    "cookTime": "PT5M",
+    "totalTime": "PT20M"
+  },
+  {
+    "id": "carib-fusion-quick-and-easy-sweet-potato-breakfast-hash",
+    "country": "Fusion",
+    "name": "Quick and Easy Sweet Potato Breakfast Hash",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/quick-and-easy-sweet-potato-breakfast-hash/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 tablespoons olive oil",
+      "2 large Japanese sweet potatoes, washed and cut into 1-inch cubes",
+      "4 sprigs thyme, or 1/2 teaspoon dried thyme",
+      "1/2 teaspoon black pepper",
+      "1/2 teaspoon salt",
+      "3/4 teaspoon smoked paprika",
+      "1/2 teaspoon hot pepper flakes",
+      "1 medium onion, cut chunky",
+      "1 medium bell pepper, cut chunky",
+      "3 cloves garlic, smashed",
+      "3 scallions, roughly chopped"
+    ],
+    "description": "This Sweet Potato Breakfast Hash is quick, easy, and packed with flavor and nutrition. A perfect vegetarian or vegan breakfast ready in minutes.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "You may peel the skin off the sweet potatoes or keep it with the skin on offering concentrated amounts of fiber, antioxidants, and minerals compared to the flesh alone. Cut into 1 inch pieces. Rinse and keep covered in water if peeling in advance."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil in a wide skillet over low heat. Add the wet sweet potato cubes along with the thyme, black pepper, salt, smoked paprika, and hot pepper flakes. I prefer using sweet and smoky Spanish Pimenton"
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover the pan with a lid and cook for 7 minutes to allow the potatoes to steam and soften."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Create a space in the center of the pan and add the onion, bell pepper, garlic, and scallions. You may add any vegetable of choice here if you wish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir everything together, leave the pan uncovered, and cook for another 5 to 7 minutes, or until the sweet potatoes are fully cooked and the vegetables reach your desired texture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the salt if needed. Serve hot and enjoy."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Optional: About 5 minutes after adding the vegetables, you can create small wells in the hash, crack in eggs, cover, and cook for 4 minutes to make a complete breakfast. Top the eggs with more smoked paprika, black pepper and salt."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT15M",
+    "cookTime": "PT15M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-trinidadian-stewed-lentils",
+    "country": "Fusion, Trinidadian",
+    "name": "Quick and Tasty Caribbean Lentil Stewed Lentils",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/stewed-lentils/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 can lentils",
+      "1 can stewed tomatoes",
+      "1/4 teaspoon salt",
+      "1 cup diced pumpkin",
+      "1 cup veg stock",
+      "1 teaspoon browning",
+      "1/4 teaspoon black pepper",
+      "1 bulb large shallot, chopped",
+      "3 cloves garlic, crushed",
+      "2 stalks scallions, chopped",
+      "1 tablespoon chopped parsley",
+      "1 tablespoon brown sugar",
+      "1 tablespoon olive oil",
+      "1 bay leaf",
+      "1/2 Scotch Bonnet pepper"
+    ],
+    "description": "This simple, one-pot lentil stew loaded with pumpkin is a fuss-free, delicious and nutritious dinner option, perfect for a weekday night!",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the Olive Oil (1 tablespoon) in a saucepan on a medium flame. Add the Shallot (1) and Garlic (3 clove), and turn the heat down and cook for 2-3 minutes on low."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add black pepper, scallions, and pumpkin. Stir well and cook for another minute."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add Scotch Bonnet pepper (if using), then stir in lentils, stewed tomatoes, sugar, bay leaf, parsley, stock, and salt. Bring to a boil, add browning, and stir."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce to a gentle boil, cover, and simmer for 20–25 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove bay leaf. Check salt and adjust. Mash some pumpkin if you want a thicker consistency. Serve hot with rice, toast, or roti."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT25M",
+    "totalTime": "PT35M"
+  },
+  {
+    "id": "carib-caribbean-quick-and-tasty-caribbean-pepper-pickle-2",
+    "country": "Caribbean",
+    "name": "Quick and Tasty Caribbean Pepper Pickle",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/quick-and-tasty-caribbean-pepper-pickle-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 Habanero Peppers, sliced thin",
+      "2 Scotch Bonnet peppers, sliced thin",
+      "1 cup Wiri Wiri peppers, rough chopped",
+      "10-15 Bird’s Eye peppers, sliced",
+      "1 medium onion, sliced thin",
+      "5 cloves garlic, smashed",
+      "1 inch Bitter Melon, sliced thin",
+      "3/4 teaspoon sea salt",
+      "4 lemons, juice"
+    ],
+    "description": "Here’s yet another spicy pickle to serve as a side to your fav curry dishes or as in my case, with Chicken Pelau . Using freshly harvested hot peppers from my garden as the growing season comes to an end, it was an excellent use of the final produce for 2024. While these pickled peppers can be used immediately, the remainder will keep for months in the fridge and warm me up during those cold winter nights in Canada.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash and prep everything."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a bowl, place the peppers, garlic and bitter melon (we say Carilie in the Caribbean)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Spread the thinly sliced onion on the top, then sprinkle on the salt. As explained in the video, this will take away some of the direct rawness of the onion. You may let it sit like this for 20 minutes or proceed immediately."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the lemon juice over everything and give it a good mix. You may use lime juice or white vinegar if you don’t have lemon juice. Please try to use freshly squeezed juice and not the bottle stuff for best results."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "You may use this immediately and store the remainder in a sealed glass jar in the fridge for a few months. Keep in mind that the acid from the citrus will continue to soften everything as it age and some of the ‘heat’ will be lost during that time. Treat it as you would any spicy condiment and NOT as a dish itself."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-quick-and-tasty-garlic-ginger-scallion-fried-rice",
+    "country": "General Caribbean",
+    "name": "Quick and Tasty Garlic Ginger Scallion Fried Rice",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/quick-and-tasty-garlic-ginger-scallion-fried-rice/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoon vegetable oil",
+      "1 stalk celery, sliced",
+      "3 scallions, chopped",
+      "3 cloves garlic, rough chopped",
+      "3/4 tablespoon ginger, grated",
+      "3 cups cooked rice, chilled",
+      "1 1/2 tablespoon light soy sauce",
+      "1 tablespoon chili crisp, optional",
+      "1 tablespoon toasted sesame oil"
+    ],
+    "description": "A quick and flavorful scallion fried rice made with garlic, ginger, and leftover rice, inspired by Caribbean-Chinese cooking traditions.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Prep all of the ingredients in advance as this is a very quick recipe to put together. I’d recommend chilling the rice to give you that grainy or shelly texture and not have soggy fried rice."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the oil in a wide pan on medium-high heat and add the celery as this takes the longest to cook."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "90 seconds later add the scallions, garlic, and ginger, and stir-fry for about 40 seconds. As the scallion, garlic, and ginger hit the hot oil, they chunkay, igniting a sharp, frantic hiss that immediately fills the kitchen with an aroma so bold it’ll have the neighbors knocking on your door."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the rice, followed by the soy sauce, chili crisp if using, and sesame oil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix well, heat the rice through for about 2 to 3 minutes and combine all of the flavours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the salt (add if necessary). We didn't add any as the rice was cooked in salted water and the soy sauce will have a level of added sodium, along with the chili crisp."
+      }
+    ],
+    "yields": 2,
+    "prepTime": "PT10M",
+    "cookTime": "PT6M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-quick-and-tasty-stir-fry",
+    "country": "Fusion",
+    "name": "Quick and Tasty Stir-Fry",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/quick-and-tasty-stir-fry/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1/2 small savoy cabbage, chopped",
+      "1/2 red bell pepper, cut into 1/2-inch pieces",
+      "1/2 yellow bell pepper, cut into 1/2-inch pieces",
+      "1/2 cilantro, chayote; cut into strips",
+      "1/2 onion, medium, diced",
+      "2 cloves garlic, diced fine",
+      "1/2 teaspoon ginger, grated",
+      "10 string beans, cut into 1-inch pieces",
+      "1/4 large broccoli, cut into florets",
+      "1 teaspoon vegetable oil",
+      "1 tablespoon light soy sauce",
+      "1/4 teaspoon black pepper",
+      "1 tablespoon hoisin sauce",
+      "1/2 teaspoon sesame oil",
+      "1-2 tablespoons water"
+    ],
+    "description": "A fast, colorful Caribbean-style stir fry packed with fresh vegetables, soy sauce, and hoisin.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Prepare all vegetables and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil in a nonstick pan over medium-high heat. Add onion, garlic, ginger, black pepper, and sesame oil. Sauté for 1 minute."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add christophene, carrot, and string beans. Stir and cook for 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add broccoli and water. Stir and cook for 1 minute to steam."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add bell peppers. Stir well to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 3 minutes, add hoisin sauce. Mix until all vegetables are coated."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Toss in cabbage. Cook for 2 more minutes until just wilted."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm as a side or light main dish."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT10M",
+    "totalTime": "PT20M"
+  },
+  {
+    "id": "carib-jamaican-25-minute-curry-chicken-wings",
+    "country": "Jamaican",
+    "name": "Quick Curry Chicken Wings",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/25-minute-curry-chicken-wings/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoons vegetable oil",
+      "1 medium onion, diced",
+      "12 cloves garlic, smashed",
+      "1/2 scotch bonnet pepper, seeds removed, optional",
+      "1 teaspoon ground roasted geera, cumin",
+      "2 tablespoons Caribbean green seasoning",
+      "1 teaspoon anchar masala",
+      "1/2 teaspoon black pepper",
+      "2 tablespoons curry powder, Caribbean blend",
+      "3 pounds chicken wings, split into flats and drumettes",
+      "1 teaspoon salt, adjust to taste",
+      "1 1/2 cups water",
+      "2 tablespoons chadon beni, chopped, or substitute cilantro"
+    ],
+    "description": "A fast, flavorful curry chicken dish with wings, perfect for busy weeknights or Caribbean roti cravings.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil in a nonstick pan over medium heat. Add onion, garlic, scotch bonnet, green seasoning, black pepper, anchar masala, and geera. Cook for 4 minutes, stirring often."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add curry powder and stir well. Cook for another 2–3 minutes to toast the spices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add chicken wings and salt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir to coat evenly with the curry base. Cook for 3 minutes uncovered."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in the water. Bring to a boil, then reduce heat and simmer uncovered for 18–22 minutes, or until fully cooked."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If wings are large, add more water and cook an additional 5 minutes. Adjust salt as needed. Finish with chopped chadon beni or cilantro. Serve hot with roti or rice."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT5M",
+    "cookTime": "PT20M",
+    "totalTime": "PT25M"
+  },
+  {
+    "id": "carib-caribbean-quick-shrimp-bok-choy-stir-fry",
+    "country": "Caribbean",
+    "name": "Quick Shrimp & Bok Choy Stir Fry",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/quick-shrimp-bok-choy-stir-fry/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb medium shrimp, peeled, deveined",
+      "1 teaspoon salt, divided",
+      "1 tablespoon light soy sauce",
+      "1 teaspoon sesame oil",
+      "1 tablespoon Chinese cooking wine",
+      "1/2 teaspoon msg, optional",
+      "1 tablespoon hot/spicy stir fry oil, or any oil",
+      "1 large onion, cubed",
+      "1 medium red bell pepper, cubed",
+      "1 teaspoon grated ginger",
+      "2 cloves garlic, grated, optional",
+      "1 lb bok choy, rough chopped",
+      "1 1/2 tablespoons mushroom flavoured soy sauce",
+      "2 tablespoons oyster sauce"
+    ],
+    "description": "A fast and flavorful shrimp stir fry that celebrates bok choy with bold flavors of soy, oyster sauce, and ginger. Perfect with steamed jasmine rice or coconut rice.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Peel, devein, and wash the shrimp. Pat dry. Prep the vegetables in advance, as this recipe goes quickly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season shrimp with 1/2 teaspoon salt, light soy sauce, sesame oil, Chinese cooking wine, and MSG. Mix well and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat stir-fry oil in a wok over medium heat. Add the onion and bell pepper. Cook for 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add garlic and ginger. Stir and cook for 30 seconds."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add bok choy and cook for 4 minutes, stirring occasionally. In the video below, I discuss other vegetables you can add to this stir fry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add mushroom soy sauce, oyster sauce, and remaining 1/2 teaspoon salt. Stir to coat vegetables."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Push vegetables to the side of the wok. Add the shrimp and cook for 2 minutes until they turn pink."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Combine everything in the wok. Cook for 1 more minute, then taste and adjust seasoning."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot with steamed rice or the coconut rice dish I shared with you a few years back."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT12M",
+    "totalTime": "PT27M"
+  },
+  {
+    "id": "carib-trinidadian-red-onion-and-sardine-salad",
+    "country": "Trinidadian",
+    "name": "Red Onion and Sardine Salad",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/red-onion-and-sardine-salad/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 can sardines, I like the ones with the peppers made by Brunswick",
+      "1/2 tomato sliced thin",
+      "1 stalk scallion sliced thin, optional",
+      "1/2 lime or lemon juice",
+      "1 pinch Black pepper, to taste",
+      "1/4 onion sliced thin",
+      "1/4 hot pepper sliced, I used a habanero – you can use whatever you have or like",
+      "2 tablespoon vegetable oil, I like using olive oil"
+    ],
+    "description": "Fish is a serious turn off for a lot of people and even more unattractive is when that fish comes in a can. But if you’re a regular on the site, you’ll know that I have a series that I call “lazy man” dishes ( Corned Beef / Salmon ). And today we’re about to add a new member into the family. Since it’s one of those meals you can put together in mere minutes and it’s very delicious. Providing you’re not afraid to try something a bit different.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Remove the Sardines in Water (3.75 ounce) and place them on a plate. Using a fork break up into pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add Ground Black Pepper (to taste), Scotch Bonnet Pepper (1/2), Celery Leaves (1 tablespoon), Fresh Parsley (1 tablespoon), Tomato (1), and the juice from Lemon (1). Mix well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Lay the Red Onion (1/4) on top."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat up the Olive Oil (1 tablespoon) in a pan over medium heat, pour over the sardines with the red onion on top."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix, serve and enjoy with bread or crackers.."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-jamaican-trinidadian-herb-and-wine-braised-oxtails",
+    "country": "Jamaican, Trinidadian",
+    "name": "Red Wine Braised Caribbean Oxtails",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/herb-and-wine-braised-oxtails/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 pounds oxtails, cut into 1–1 1/2‑inch pieces, trimmed",
+      "2 tablespoons all‑purpose flour",
+      "2 tablespoons vegetable oil",
+      "3 stalks celery, diced",
+      "1 onion, diced",
+      "3 cloves garlic, smashed",
+      "1 tablespoon tomato paste",
+      "1 tablespoon Caribbean Green Seasoning",
+      "1 1/2 cups Guinness stout, or red wine",
+      "1 teaspoon cracked black pepper",
+      "5 allspice berries, whole",
+      "1 teaspoon salt",
+      "2 carrots, sliced into wheels",
+      "2-3 cups beef stock",
+      "2 Bay leaves",
+      "1 tablespoon brown sugar",
+      "1 tablespoon parsley, chopped"
+    ],
+    "description": "Tender oxtails braised in red wine with Caribbean herbs and spices; rich, comforting, and perfect for cold evenings.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Dust the oxtails in flour, shaking off excess."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil over medium, then brown oxtails in batches; set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Lower heat, add celery and onion, cooking for 2–3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add garlic, pepper, tomato paste, allspice berries, and cook 2–3 more minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat the oven to 375°F (190°C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Return oxtails to pot, add salt, pour in wine, and scrape up browned bits."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add beef stock to nearly cover meat. Stir in green seasoning, carrots, bay leaves, and brown sugar. Bring to a gentle boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover pot slightly ajar and transfer to preheated oven. Braise for 2 1/2–3 hours, checking every 15–20 minutes and adding stock if needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove bay leaves, stir in parsley, skim fat, and adjust salt. Serve hot with garlic mashed cassava or rice."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT20M",
+    "cookTime": "PT3H",
+    "totalTime": "PT3H20M"
+  },
+  {
+    "id": "carib-general-caribbean-refreshing-caribbean-guava-lemonade",
+    "country": "General Caribbean",
+    "name": "Refreshing Caribbean Guava Lemonade",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/refreshing-caribbean-guava-lemonade/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb ripe guava, chopped",
+      "3-4 lemons, chopped",
+      "1 stick cinnamon",
+      "1 3/4 cups sugar",
+      "2 litres water",
+      "sprigs thyme"
+    ],
+    "description": "This tropical Guava Lemonade combines ripe guava, fresh lemons, and warm cinnamon for a refreshing Caribbean summer drink. Made using a Brazilian-style limonada suíça technique, this homemade Guava Lemonade delivers bold citrus flavor with fragrant tropical sweetness.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the lemons and guavas very well since the entire fruits, including the skins, will be used. Organic lemons work especially well for this recipe."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the stems from the guavas and give them a rough chop."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Roughly chop the lemons and discard any visible seeds if desired."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the chopped lemons, guavas, sugar, and cinnamon stick into a non-reactive bowl or container. Mix well, cover, and place in the fridge overnight or for about 10 hours to macerate. Stir a few times during the process if possible to help release the fragrant juices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Working in batches, place the fruit mixture into a blender with twice the amount of water and puree until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain the mixture to remove the seeds and pulp residue. As you open the blender, the deep tropical aroma of guava and citrus will fill the kitchen, instantly bringing me back to childhood days in Guaracara where homemade juices were part of everyday life."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Repeat the blending and straining process once more for an extra smooth and seed-free Guava Lemonade."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Chill thoroughly before serving. Give the Guava Lemonade a good shake or stir before pouring, as the natural fruit pulp will settle at the bottom over time. Unlike a typical clear lemonade, this version will have a slightly cloudy appearance from the blended guava and whole lemons, which is exactly what gives it that rich tropical body and flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve over ice with fresh thyme sprigs. I like letting the thyme bruise gently against the ice so it releases its subtle herbal notes into the drink. Mint or lavender also work beautifully."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cheers to a hydrated summer."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT20M",
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-refreshing-caribbean-mauby-lemonade",
+    "country": "General Caribbean",
+    "name": "Refreshing Caribbean Mauby Lemonade",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/refreshing-caribbean-mauby-lemonade/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "10 cups water, divided",
+      "1 star anise",
+      "4 pieces Mauby bark",
+      "1- inch piece cinnamon stick",
+      "1 bay leaf",
+      "4- inch piece dried orange peel, optional",
+      "4 –6 slices orange",
+      "1 1/2 cups sugar",
+      "1 cup fresh lemon juice, about 5 to 6 lemons"
+    ],
+    "description": "This refreshing Caribbean Mauby Lemonade combines homemade Mauby syrup with fresh lemon juice for a unique tropical drink that's sweet, citrusy, and perfectly balanced by the classic earthy flavour of Mauby.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Place 5 cups of the water into a saucepan along with the star anise, Mauby bark, cinnamon stick, bay leaf, dried orange peel, orange slices, and sugar."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring to a boil, then reduce to a gentle simmer and cook for 10 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from the heat and allow the mixture to cool completely while it continues to steep. This here is the scent of my childhood. Every Sunday morning there would be a pot of Mauby steeping in the kitchen while Sunday lunch was being prepared."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once completely cooled, strain the liquid into a large pitcher or bowl, discarding the solids."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the remaining 5 cups of water along with the fresh lemon juice."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Whisk well until fully combined."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the sweetness if necessary. Keep in mind that it a may dilute a bit when ice is added."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Chill thoroughly before serving over ice with fresh lemon slices and mint."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you enjoy this Mauby Lemonade, be sure to check out my Big People Lemonade loaded with a dose of Caribbean white rum."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Be sure to watch the video below where I also discuss making traditional Mauby and share a few additional flavour variations you can experiment with. If you make this recipe, leave me a comment and let me know how you personalized your Mauby Lemonade. I always enjoy hearing how you make these recipes your own."
+      }
+    ],
+    "yields": 10,
+    "prepTime": "PT10M",
+    "cookTime": "PT10M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-refreshing-mango-peach-strawberry-lemonade",
+    "country": "Fusion",
+    "name": "Refreshing Mango Peach Strawberry Lemonade",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/refreshing-mango-peach-strawberry-lemonade/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 cups frozen fruit, mango, peach, strawberry",
+      "8 cups water, divided",
+      "1 3/4 cups sugar, adjust to taste",
+      "Juice of 6 lemons",
+      "1 tablespoon vanilla extract or Caribbean mixed essence, optional"
+    ],
+    "description": "A refreshing summer lemonade recipe made with frozen mangoes, peaches, strawberries, and fresh lemon juice. This fruit-packed lemonade delivers bright citrus flavor, tropical sweetness, and the perfect balance of tart and refreshing.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Allow the frozen fruit to thaw for approximately 15 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the thawed fruit to a high-speed blender along with 4 cups of water."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Juice the lemons and discard any seeds."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Blend the fruit mixture on high speed until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain the blended fruit into a large bowl or pitcher if desired. Leave the pulp in if you prefer a fuller fruit texture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the fresh lemon juice and stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in the remaining 4 cups of water."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the sugar, beginning with 1 cup. Taste and adjust as needed. It's much easier to add more sugar, or you'll risk having to add water to dilute, and you'll ruin the finished lemonade."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Whisk until the sugar dissolves completely and the lemonade is fully combined. This is when you'd add the vanilla extract or Caribbean mixed essence."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Chill thoroughly before serving."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve over ice and garnish with fresh mint and lemon slices if desired."
+      }
+    ],
+    "yields": 12,
+    "prepTime": "PT20M",
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-refreshing-watermelon-chow",
+    "country": "General Caribbean",
+    "name": "Refreshing Watermelon Chow",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/refreshing-watermelon-chow/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs watermelon, large chunks",
+      "1/2 teaspoon salt",
+      "2 cloves garlic, crushed",
+      "1/4 Scotch Bonnet pepper, finely chopped",
+      "2 tablespoons cilantro, chopped",
+      "2 tablespoons mint, chiffonade",
+      "1/2 teaspoon chili lime powder, Trader Joe’s",
+      "2 limes, juiced"
+    ],
+    "description": "Sweet, juicy watermelon is transformed into a refreshing Caribbean Watermelon Chow with fresh lime juice, Scotch Bonnet pepper, garlic, cilantro, and mint. This quick no-cook recipe is the perfect balance of sweet, spicy, salty, and tangy flavors.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Add the large chunks of the watermelon to a large bowl. I'd suggest using chilled watermelon."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Now top with all of the ingredients and, being somewhat gentle, combine to allow all of the flavors to marry and become harmonious."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "I’d recommend allowing this to sit in the fridge for about 10 to 15 minutes to marinate, or cousoumeh (pronounced coo-sue-may), as we’d say in Trinidad. In Trinidadian Creole, cousoumeh refers to letting ingredients sit together so the flavors have time to marry and become harmonious before serving. While the term can also describe ingredients slowly simmering together, in this recipe it’s all about giving the watermelon time to absorb the lime juice, garlic, herbs, and pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve chilled."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you enjoy watermelon, may I suggest you also try my Watermelon Ice , Heirloom Tomato and Watermelon Salad , and the ever-classic Refreshing Watermelon and Berry Smoothie recipes."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT15M",
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-ridiculously-quick-and-easy-strawberry-lemonade",
+    "country": "Fusion",
+    "name": "Ridiculously Quick and Easy Strawberry Lemonade",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/ridiculously-quick-and-easy-strawberry-lemonade/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "12 large strawberries, chopped",
+      "1 cup sugar",
+      "7 cups water, divided",
+      "1 cup fresh lemon juice, about 6 lemons",
+      "Mint"
+    ],
+    "description": "Made with fresh local strawberries and freshly squeezed lemons, this Ridiculously Quick and Easy Strawberry Lemonade is a refreshing summer drink that's perfect for making the most of strawberry season.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Remove the stems from the strawberries, give them a good wash, and chop them."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the chopped strawberries in a deep pot with 3 cups of the water and the sugar. Bring to a boil, then reduce to a simmer and cook for 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Allow the mixture to cool for 10 to 15 minutes before using a stick blender to puree until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Juice the lemons, as there’s no substitute for freshly squeezed lemons, then pour the juice into a large pitcher or bowl."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain the strawberry puree to remove the seeds and excess pulp, then add it to the pitcher."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in the remaining 4 cups of water and stir well to combine. Taste and adjust the sugar to your own liking. Honey, raw can sugar, and other sweeteners are also options instead of using processed sugar."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Like the Rosemary Infused Lemonade I shared previously, may I recommend serving this Strawberry Lemonade over plenty of ice with a few sprigs of fresh mint. As the mint leaves bruise against the ice, they'll release their aromatic oils into the lemonade, giving every sip a gentle kiss of added herbal flavour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you enjoy this Strawberry Lemonade, you should also give my Strawberry Apple Cider Lemonade a try. And if you're after something with a bit more Caribbean flair, my Guava Lemonade is always a hit thanks to the rich flavour of ripe guavas."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Let me know your thoughts on this refreshing Strawberry Lemonade and if there are ways you make it more personal to your own preferences by leaving a comment below. I’d love to hear from you."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT20M",
+    "cookTime": "PT5M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-trinidadian-roasted-chicken-with-moruga-hill-rice-soup",
+    "country": "Trinidadian",
+    "name": "Roasted Chicken and Moruga Rice Soup",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/roasted-chicken-with-moruga-hill-rice-soup/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 chicken legs, drumsticks with thighs",
+      "1 lb pumpkin, cubed",
+      "2 onions, roughly chopped",
+      "2 carrots, large, chopped",
+      "1 head garlic, whole cloves, skin‑on",
+      "1 bell pepper, roasted, skin removed, chopped",
+      "1/4 cup olive oil",
+      "1 tablespoon sea salt, divided",
+      "1 tablespoon black pepper, divided",
+      "3/4 cup Moruga Hill rice",
+      "1 lb sweet potato, cubed",
+      "2 tablespoons Caribbean Green Seasoning",
+      "8-10 cups water, or stock",
+      "2 scallions, chopped",
+      "2 tablespoons parsley, chopped"
+    ],
+    "description": "A richly flavored, Trinidadian-inspired soup combining roasted chicken, upland Moruga Hill rice, and hearty vegetables in a comforting broth.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Mix olive oil with half the salt and pepper. Coat chicken, garlic, onion, carrots, pumpkin, and bell pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Roast at 375 °F for 50 minutes uncovered."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Tip roasting juices into a soup pot, add rice, and toast on medium-low for 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove chicken from roast pan, discard skins, chop roughly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add to pot along with pumpkin, bell pepper, garlic, onion, carrots, green seasoning, sweet potato, remaining salt and pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover with water or stock, include scallions and an optional bay leaf or thyme. Bring to a rolling boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Simmer for 35 minutes or until rice is tender. Taste and adjust seasoning."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off heat, stir in parsley, let rest for a few minutes, then serve."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you want a spicy element to the soup, feel free to add your favorite spicy pepper or peppersauce (hot sauce) after you added the water to the soup pot."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H15M"
+  },
+  {
+    "id": "carib-jamaican-string-beans-with-salted-pigtails-in-coconut-milk",
+    "country": "Jamaican",
+    "name": "Salted Pigtails and String Beans in Coconut Milk",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/string-beans-with-salted-pigtails-in-coconut-milk/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoons olive oil",
+      "1 1/2 lbs salted pigtail, pre-cooked, chopped",
+      "1 medium onion, sliced",
+      "6 cloves garlic, smashed",
+      "1/2 teaspoon black pepper",
+      "1 habanero pepper, optional, sliced",
+      "2 pimento peppers, seasoning peppers",
+      "2 1/2 lbs string beans, trimmed, cut into 1 1/2″ pieces",
+      "1 cup coconut milk, or water",
+      "Salt, adjust at the end",
+      "1 cup grape tomatoes, halved"
+    ],
+    "description": "Hearty string beans and savory salted pigtails simmered in creamy coconut milk—this Jamaican-style one-pot dish is rich in flavor and tradition.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat olive oil in a wide pan over medium heat. Add salted pigtails and sauté for about 4 minutes, then add onion, garlic, black pepper, habanero (if using), and pimento peppers; cook for another 4–5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the string beans, mixing well to coat with flavors."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in coconut milk (or water) and bring to a boil. Reduce heat to simmer for 25 minutes, covered."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the lid, stir in grape tomatoes (if using), taste, adjust salt as needed (the pigtails are already salty), and increase heat to reduce any excess liquid."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm alongside rice, roti, or ground provisions."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT50M",
+    "totalTime": "PT1H"
+  },
+  {
+    "id": "carib-general-caribbean-saltfish-buljol-saheena-bites",
+    "country": "General Caribbean",
+    "name": "Saltfish Buljol Saheena Bites",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/saltfish-buljol-saheena-bites/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3/4 lb baby spinach, washed and chopped",
+      "1 cup saltfish buljol, prepared",
+      "3/4 cup yellow split peas flour, powder dhal",
+      "1 cup all purpose flour",
+      "1/2 teaspoon salt",
+      "1 teaspoon black pepper",
+      "1 teaspoon ground roasted cumin, geera",
+      "1 tablespoon yeast",
+      "3/4 tablespoon turmeric, sorfran",
+      "1 cup water, adjust as needed",
+      "2 to 3 cups vegetable oil, for frying"
+    ],
+    "description": "A delicious Trinbago-inspired appetizer combining flavorful saltfish buljol with traditional saheena batter made with spinach, powder dhal, geera, and sorfran, fried until perfectly crisp and golden.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a large mixing bowl add the washed and chopped baby spinach."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "To that add the prepared saltfish buljol , followed by the yellow split peas flour, what we say is powder dhal in Trinbago, along with the all purpose flour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the salt, but be mindful that the saltfish buljol itself will already have elements of salt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Now add the black pepper, ground roasted cumin or geera as we call it in Trinidad, the yeast, and the turmeric, which we refer to as sorfran in Trinidad and Tobago."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "I like mixing everything together at this point as I find it allows all of the ingredients to combine properly before we start adding the water."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Start by adding roughly half of the water and mix well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Continue adding the remaining water a little at a time until you have a thick batter. Since flour can be temperamental, depending on the brand and environment, you may need a bit more than one cup of water in total."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once you have that thick batter, cover the bowl with a damp kitchen towel and allow the yeast time to activate."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "About 40 minutes later set up your frying station. Have the batter ready, a wok with the vegetable oil (any pot or pan with high sides to prevent splattering onto the stove), and a wire rack placed over a cookie tray."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Yes, you can use paper towels instead, but I find that when hot fried saheenas sit on paper towels too long, they can become soggy and take away from that lovely crispy exterior."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "On a medium flame the oil should be ready in about 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Using a tablespoon, scoop portions of the batter and gently place them into the hot oil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Fry for about 4 to 6 minutes, flipping them as they cook so you get even color, crisp edges, and a beautiful golden exterior."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Work in batches so we do not crowd the pan and cause the oil temperature to drop too quickly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Transfer the fried Saltfish Buljol Saheena Bites onto the wire rack so any excess oil drains properly. If you wanted to sprinkle on some sea salt as you remove them from the fryer, you may do so."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "This batter should give you somewhere between 40 to 50 Saltfish Buljol Saheena Bites."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "And may I suggest how imperative it is to serve these warm. The crispy edges with that moist, fluffy, perfectly seasoned center is a true delight."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Yes, these reheat beautifully in the air fryer and yes, you can keep the batter in the fridge for a few days before frying. Just remember to bring it back to room temperature first."
+      }
+    ],
+    "yields": 40,
+    "prepTime": "PT20M",
+    "cookTime": "PT20M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-caribbean-shrimp-broff-soup",
+    "country": "Caribbean",
+    "name": "Shrimp Broff (Caribbean Shrimp Soup)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-shrimp-broff-soup/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 pounds shrimp, with heads on, cleaned",
+      "6 cups water",
+      "1 large onion, quartered",
+      "4 stalks celery, diced, divided",
+      "3 cilantro, chopped; divided",
+      "10 springs thyme, leaves and whole",
+      "3 tablespoons parsley, chopped, divided",
+      "3 tablespoons vegetable oil",
+      "1 tablespoon butter",
+      "2 cups pumpkin, diced",
+      "2 cups sweet potato, diced",
+      "2-3 green cooking bananas, sliced into rounds",
+      "2 pimento peppers, diced",
+      "4 cloves garlic, minced",
+      "1 teaspoon black pepper, divided",
+      "1 teaspoon Caribbean green seasoning",
+      "1/2 teaspoon salt",
+      "1/4 scotch bonnet pepper, whole; optional",
+      "Noodles, optional, for serving"
+    ],
+    "description": "A comforting, light shrimp soup with aromatic broth, diced vegetables, and tender shrimp ready in under an hour.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Sauté oil, butter, 2 celery, 2 scallions, and some parsley and thyme leaves with onion in a saucepan over medium-high heat for 4 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add shrimp heads and shells, cook for 2–3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add 6 cups water and bring to a boil. Reduce heat to low and simmer 25 minutes, skimming foam occasionally."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain the stock into a clean pot; discard solids."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In the same pot, sauté remaining celery, garlic, pimento, scallion, thyme sprigs, and black pepper in 1 tablespoon oil for 4 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add carrot, pumpkin, sweet potato, and green banana slices; pour in the strained stock and bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season with salt, Caribbean green seasoning, and add the whole scotch bonnet pepper; simmer 20–25 minutes until vegetables are tender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "(Optional) Stir in noodles during the last 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Off heat, gently add seasoned shrimp to the broth and cover for 8–10 minutes until shrimp are cooked through."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt. Serve hot."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT15M",
+    "cookTime": "PT45M",
+    "totalTime": "PT1H"
+  },
+  {
+    "id": "carib-caribbean-simple-and-delicious-egg-fried-rice",
+    "country": "Caribbean",
+    "name": "Simple and Delicious Egg Fried Rice",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/simple-and-delicious-egg-fried-rice/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoon veg oil",
+      "3 eggs, whisk",
+      "1 cup frozen vegetables, optional",
+      "1 teaspoon sesame oil",
+      "1 1/2 tablespoon mushroom flavored soy sauce, dark",
+      "3-4 cups cooked rice, chilled",
+      "2 stalks scallions, chopped"
+    ],
+    "description": "While I’m not the biggest fan of eggs in fried rice, with leftover rice in the fridge, I thought I’d make (and share) a quick meal for lunch. In speaking with my parents and siblings, I can confirm that the same holds for them. Eggs in fried rice is a huge PASS!",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the oil in a wok or wide pan on a medium flame. Add the eggs and scramble. After two minutes (as shown in the video), push the eggs to the side."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you feel more comfortable removing the scrambled eggs and setting them aside, feel free to do so. Add them back when you add the rice."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If using frozen vegetables in the dish, add them and cook for 3 minutes before adding the chilled rice (leftover) to the wok."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Chilled rice will give you a more grainy fried rice."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix well to combine everything, then top with the sesame oil (use toasted sesame oil if you have it for a more nutty flavor) and stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the soy sauce. Any dark soy sauce will work, but I much prefer using the mushroom-flavored variety. In the video, I shared my tip for using the sides of the wok to get additional flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Two minutes later, you can add the chopped scallion, stir, and turn off the stove. I didn’t add any salt to the dish as the rice was cooked in salted water, and the soy sauce added some sodium to the finished fried rice. However, you may taste and adjust to your liking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "For a little heat, you may serve it with chili oil or your favorite pepper sauce."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-simple-and-tasty-steamed-cabbage-with-ham",
+    "country": "Caribbean",
+    "name": "Simple and Tasty Steamed Cabbage With Ham",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/simple-and-tasty-steamed-cabbage-with-ham/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 tablespoon olive oil",
+      "1/2 medium onion, sliced",
+      "1/4 Scotch bonnet pepper, sliced",
+      "4 sprigs thyme, leaves only",
+      "1/2 teaspoon black pepper",
+      "1 clove garlic, smashed",
+      "1 1/2 cups ham, chopped",
+      "1 lb cabbage, rough chopped",
+      "1/2 teaspoon salt",
+      "2 tablespoons water",
+      "1 small carrot, julienned",
+      "1 small bell pepper, rough chopped",
+      "3/4 teaspoon curry powder"
+    ],
+    "description": "This steamed cabbage with ham is a Caribbean-style side dish made with leftover ham, fresh vegetables, and bold seasoning. It’s an easy cabbage recipe that’s flavorful, flexible, and perfect for everyday meals.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil on a medium flame in a pan with a lid. Add the onion, scotch bonnet pepper, garlic, thyme, and black pepper. Turn the heat down to low and cook gently for 3 to 4 minutes until the onion softens and everything becomes fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the chopped ham and stir to combine. Continue cooking on medium-low heat to allow some of the fat from the ham to render and flavor the dish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the salt and cabbage to the pot, followed by the water. Stir well to combine, then cover the pot to begin steaming."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 3 minutes, top with the bell pepper and carrot and sprinkle on the curry powder. Add any other vegetables you are using. Cover and continue cooking, but on low heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After another 4 minutes, taste and adjust the salt to your liking. Cook a little longer if you prefer softer vegetables."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot as a side to your favorite Caribbean meals or use as a filling for a simple sandwich."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT15M",
+    "cookTime": "PT15M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-simple-bread-and-butter-pickles",
+    "country": "Caribbean",
+    "name": "Simple Bread and Butter Pickles",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/simple-bread-and-butter-pickles/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 pounds pickling cucumbers, sliced 1/4 inch thick",
+      "1 medium yellow onion, sliced",
+      "2 jalapeño peppers, thinly sliced",
+      "3 tablespoons kosher salt",
+      "2 cups white sugar",
+      "2 cups white vinegar",
+      "1/4 cup water",
+      "2 cloves garlic, sliced",
+      "1 tablespoon mustard seed",
+      "1 teaspoon celery seeds",
+      "1 teaspoon whole black peppercorns",
+      "3/4 teaspoon ground turmeric",
+      "1/3 teaspoon ground cloves"
+    ],
+    "description": "Sweet, tangy, and just a little spicy, these Bread and Butter Pickles are a great way to preserve the fresh bounty of cucumbers when they’re in season. While not traditionally Caribbean, this small-batch recipe is perfect for adding a burst of flavor to sandwiches, burgers, or simply enjoying straight from the jar. With jalapeños for a mild kick, and classic spices like mustard seed, turmeric, and cloves, the result is a crunchy, aromatic pickle that tastes even better after a day or two in the fridge.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the cucumbers thoroughly and slice into 1/4-inch rounds."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the cucumbers, onion slices, and jalapeño slices into a large bowl. Sprinkle with kosher salt and mix thoroughly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover with plastic wrap and refrigerate for 4 hours, stirring a couple of times during the brining process."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Drain the vegetables and rinse thoroughly under cool water to remove most of the salt. Drain well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a deep saucepan, combine sugar, vinegar, water, garlic, mustard seed, celery seeds, black peppercorns, turmeric, and cloves. Stir and bring to a gentle boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce heat and simmer for 3 minutes to allow the flavors to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the cucumber, onion, and jalapeño slices to the pot. Bring back to a gentle simmer and cook for 2–3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from heat and allow the mixture to cool."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Transfer pickles and brine into clean glass jars. Store in the refrigerator for best flavor, allowing 1–2 days before eating."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "For long-term storage, process in a hot water bath according to safe canning guidelines."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT4H",
+    "totalTime": "PT4H15M"
+  },
+  {
+    "id": "carib-fusion-tasty-coconut-spinach",
+    "country": "Fusion",
+    "name": "Simple Caribbean Coconut Spinach",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/tasty-coconut-spinach/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb baby spinach",
+      "2 cloves garlic, diced fine",
+      "2 stalks scallions, chopped",
+      "1 1/2 tablespoon coconut oil",
+      "1/4 teaspoon salt",
+      "1 pinch nutmeg, freshly grated",
+      "1/4 teaspoon black pepper",
+      "1/4 cup coconut milk",
+      "1 Bird’s Eye pepper"
+    ],
+    "description": "A vegan Caribbean side dish simmered in coconut milk with garlic, scallions, and a touch of pepper heat.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash and drain the baby spinach thoroughly. A salad spinner helps speed this up."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a wide pan, heat the coconut oil on low heat. Add garlic, scallions, and black pepper. Sauté for 3 minutes, ensuring the garlic does not burn. Add the whole bird’s eye pepper if using."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Begin adding spinach in batches, stirring as it wilts to make room for more. Once all the spinach is in, sprinkle with salt and nutmeg. Increase heat to medium-high."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir well and pour in the coconut milk. Do not cover the pan."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Allow the mixture to come to a boil. Cook uncovered for 7–10 minutes, or until liquid evaporates and spinach reaches desired texture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Adjust salt to taste. Remove from heat and squeeze in a few drops of lemon juice if using."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm as a flavorful vegan side."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT5M",
+    "cookTime": "PT10M",
+    "totalTime": "PT15M"
+  },
+  {
+    "id": "carib-caribbean-simple-caribbean-vegan-fried-rice",
+    "country": "Caribbean",
+    "name": "Simple Caribbean Vegan Fried Rice.",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/simple-caribbean-vegan-fried-rice/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 tablespoon vegetable oil",
+      "1 medium onion, chopped",
+      "1/4 lb Jamaican callaloo, stems and leaves separated",
+      "1/2 cup bodi, chopped",
+      "1 small bitter melon, sliced",
+      "1/2 teaspoon black pepper",
+      "1 pimento pepper, sliced",
+      "2 sprigs thyme, leaves only",
+      "2 tablespoons chives, chopped",
+      "3 cloves garlic, finely chopped",
+      "3/4 tablespoon sesame oil",
+      "3 cups cooked rice, preferably chilled, day-old",
+      "1 stalk celery, chopped, including leaves",
+      "1 tablespoon light soy sauce",
+      "1 tablespoon oyster sauce, optional",
+      "1 medium tomato, chopped"
+    ],
+    "description": "A wholesome vegan fried rice recipe made with Jamaican callaloo, bodi, and bitter melon, bringing together fresh garden flavors with a Caribbean twist.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Prep the vegetables in advance."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the vegetable oil in a wok or large frying pan over medium heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the onion and cook until softened, about 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the callaloo stems, bodi, and bitter melon. Cook for 2–3 minutes, stirring often."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the Callaloo leaves (aka chorai bhagi or spinach). Season with black pepper, then add the pimento pepper, thyme leaves, chives, and garlic. Cook for 1 minute until fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Push the vegetables to one side of the pan and add the sesame oil. Stir in the rice, breaking up clumps with your spoon."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix the rice with the vegetables and add the celery, soy sauce, and oyster sauce (if using). Stir well to combine. If making this dish fully vegan, use Hoisin sauce instead of the Oyster sauce. Additionally, I’d recommend adding a teaspoon of grated ginger along with a tablespoon of Chinese cooking wine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the chopped tomato last and cook for 1–2 minutes, just until softened."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt if needed. Remove from the heat and serve warm. Make sure to have some freshly made Pineapple Peppersauce on the side."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT12M",
+    "cookTime": "PT10M",
+    "totalTime": "PT22M"
+  },
+  {
+    "id": "carib-caribbean-simple-chinese-style-chicken-wings",
+    "country": "Caribbean",
+    "name": "Simple Chinese-Style Chicken Wings",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/simple-chinese-style-chicken-wings/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs chicken wings, split",
+      "3/4 tablespoon five spice powder",
+      "2 tablespoons Chinese cooking wine",
+      "1 teaspoon msg, optional",
+      "2 tablespoons mushroom flavor soy sauce",
+      "1 tablespoon grated ginger",
+      "3 cups vegetable oil"
+    ],
+    "description": "A simple, fragrant, Trinibago-Chinese inspired fried chicken wing recipe marinated with five spice, ginger, and mushroom soy sauce for authentic island takeout flavor.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Season the chicken wings with the five spice powder, Chinese cooking wine, msg, mushroom soy sauce, and grated ginger. Mix well to coat evenly. Cover and let marinate overnight or at least 5 hours in the refrigerator."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the vegetable oil in a heavy pot to 375°F (190°C). The temperature will drop once the wings are added; try to maintain 350°F (177°C) during frying."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the wings from the marinade and shake off the excess. Pat each piece dry with paper towels so they fry evenly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Fry the wings in small batches, avoiding crowding the pot. Cook for 7–10 minutes, turning as needed to brown on all sides."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Transfer the fried wings to a wire rack to drain while you continue with the remaining batches."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Dust with sea salt (optional) while still hot. The mushroom-flavored soy sauce will have enough sodium to season the wings properly; however you can add salt as suggested if you prefer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm with lemon slices and pepper sauce ."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT10M",
+    "totalTime": "PT20M"
+  },
+  {
+    "id": "carib-caribbean-simple-garlic-rosemary-roasted-chicken",
+    "country": "Caribbean",
+    "name": "Simple Garlic Rosemary Roasted Chicken",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/simple-garlic-rosemary-roasted-chicken/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 whole chicken, 3–4 pounds",
+      "1 tablespoon fresh rosemary, chopped, plus extra for cavity",
+      "4 cloves garlic, chopped",
+      "1 pimento pepper, chopped, or substitute celery pepper",
+      "1 lemon, zestedd and juiced",
+      "2 tablespoons olive oil",
+      "3/4 teaspoon salt",
+      "1/4 teaspoon black pepper"
+    ],
+    "description": "A tender, flavorful roast chicken infused with garlic, rosemary, lemon, and fragrant Caribbean-style pimento pepper; perfectly golden and delicious.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat oven to 400 °F (200 °C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a small bowl, mix rosemary, garlic, chopped pimento pepper, lemon zest and juice, olive oil, salt, and pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Brush the marinade all over the chicken and inside the cavity; stuff with extra rosemary and lemon pieces. Tie legs and tuck wings."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place chicken breast-side up on the middle rack; roast uncovered. Baste every 15 minutes with accumulated juices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Roast for about 1 hour, or until the internal temperature reaches 165 °F (74 °C) in the thickest part."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Let the chicken rest for 10 minutes before carving to retain juices."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT15M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H15M"
+  },
+  {
+    "id": "carib-general-caribbean-simple-oven-roasted-rou-cou-annatto-chicken",
+    "country": "General Caribbean",
+    "name": "Simple Oven Roasted Rou Cou (Annatto) Chicken",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/simple-oven-roasted-rou-cou-annatto-chicken/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 whole chicken, about 3 lbs, spatchcocked",
+      "1 lemon or lime, juiced, for washing",
+      "2 tablespoons olive oil",
+      "4 tablespoons rou cou, annatto extract",
+      "1 teaspoon sea salt",
+      "1 teaspoon black pepper",
+      "1 tablespoon Caribbean green seasoning",
+      "1 teaspoon Angostura bitters",
+      "3/4 tablespoon smoked pimentón, paprika"
+    ],
+    "description": "This oven roasted rou cou chicken uses annatto, Caribbean green seasoning, and fresh herbs to create a vibrant Caribbean-style roasted chicken with beautiful colour and deeply herbal flavor.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Spatchcock the chicken by cutting down the spine and pressing firmly on the breastbone to flatten it."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Wash the chicken with the juice of the lemon or lime and cool water, then pat dry with paper towels."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the chicken skin side down and season with the olive oil, rou cou , sea salt, black pepper, green seasoning , Angostura bitters, and smoked paprika. As the rou cou touches the meat, you will notice the beautiful orange-red colour develop along with its light earthy aroma and the fresh herbal fragrance of the green seasoning."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Rub the marinade evenly over the chicken and place it in the refrigerator to marinate for 4 hours. Reserve any marinade left in the bowl after marinating."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat the oven to 380°F."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Line a baking pan and place a wire rack inside so the chicken is elevated while roasting."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the chicken skin side down on the rack and roast uncovered on the middle rack of the oven for 30 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "At this stage your kitchen should begin to fill with the rich scent of roasting chicken and fresh herbs. Carefully remove the pan from the oven, flip the chicken so it is skin side up, and baste with the reserved marinade."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Return the chicken to the oven and continue roasting uncovered for another 40 to 45 minutes until the skin deepens in colour and the chicken is fully cooked."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from the oven and allow the chicken to rest for 5 to 8 minutes before slicing so the juices settle back into the meat. I enjoy this Oven Roasted Rou Cou Chiken with c hesy mashed cassava, but any side of carb or sald will be just an wonderful."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT15M",
+    "cookTime": "PT1H10M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-roast-turkey-breast-2",
+    "country": "Fusion",
+    "name": "Simple Oven Roasted Turkey Breast",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/roast-turkey-breast-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "5 lbs turkey breast",
+      "4 cups water",
+      "5 sprigs thyme",
+      "2-3 tablespoon chopped parsley",
+      "7-10 black peppercorns",
+      "5-10 allspice berries",
+      "4 cloves garlic",
+      "1 tablespoon salt",
+      "1 tablespoon brown sugar",
+      "1 tablespoon olive oil",
+      "1 large carrot",
+      "2 stalks celery",
+      "1 head garlic",
+      "1/2 large onion",
+      "1 cup water, or chicken stock",
+      "1/4 teaspoon black pepper, ground",
+      "2 sprigs thyme"
+    ],
+    "description": "A flavorful and moist turkey breast, perfect for smaller gatherings and easy holiday meals.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl, combine 1 cup of lukewarm water with salt, brown sugar, crushed garlic, peppercorns, allspice berries, thyme, and parsley. Stir until salt and sugar dissolve. Add 3 cups of cold water and mix well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the turkey breast in a large resealable bag or container. Pour the brine over the turkey, ensuring it’s fully submerged. Seal and refrigerate overnight or for at least 4 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the turkey from the brine, rinse under cold water, and pat dry with paper towels."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat the oven to 375°F (190°C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Line the bottom of a roasting pan with chopped carrot, celery, halved garlic head, and quartered onion."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the turkey breast on top of the vegetables. Drizzle olive oil over the turkey and sprinkle with ground black pepper. Tuck two sprigs of thyme under the turkey. Pour 1 cup of water or chicken stock into the pan. Cover the pan with aluminum foil and roast in the preheated oven for 2 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the foil and increase the oven temperature to 425°F (220°C). Continue roasting for an additional 30 to 45 minutes, or until the skin is golden brown and a meat thermometer inserted into the thickest part of the breast reads 165°F (74°C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the turkey from the oven and let it rest for at least 15 minutes before slicing. Serve with your choice of sides and enjoy!"
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT4H",
+    "cookTime": "PT3H",
+    "totalTime": "PT7H15M"
+  },
+  {
+    "id": "carib-fusion-simple-summertime-roasted-sausages-with-bell-peppers",
+    "country": "Fusion",
+    "name": "Simple Summertime Roasted Sausages With Bell Peppers",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/simple-summertime-roasted-sausages-with-bell-peppers/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 lbs hot Italian sausage, cut into 2-inch pieces",
+      "2 large peaches, quartered",
+      "2 scallions, roughly chopped",
+      "1 lb bell peppers, cut into large pieces",
+      "3/4 teaspoon sea salt",
+      "1 tablespoon rosemary leaves",
+      "6 sprigs thyme",
+      "1 teaspoon black pepper",
+      "2 bird’s eye peppers, optional",
+      "1 large onion, cut into large pieces",
+      "6 cloves garlic, smashed",
+      "2 stalks celery, roughly chopped",
+      "1/4 cup olive oil",
+      "2 tablespoons honey"
+    ],
+    "description": "A simple summer recipe featuring juicy Italian sausages with peppers , fresh herbs, garlic, peaches, and onions roasted together for an easy family-friendly meal packed with incredible seasonal flavor.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "I like to place the sausages in the freezer for about 30 minutes before slicing so they firm up nicely and hold their shape better when cut. Slice them into roughly 2-inch pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "While I personally prefer using spicy Italian sausages, feel free to go wild with your own choice. So many times what we cook is determined by cost, so grab whichever sausage happens to be on sale because the other ingredients in this recipe will add tremendous flavor and texture to the final dish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "I enjoy adding seasonal fruit whenever possible, so for this version of sausages with peppers I opted for ripe but still firm peaches with the pits removed. If you wanted to keep things a bit more tropical, pineapple wedges would work wonderfully here as well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Into your roasting pan add the sausages, peaches, scallions, bell peppers, sea salt, rosemary, thyme, bird’s eye peppers (cut or leave whole if you decide to include them) if using, garlic, celery, and onion. I like using different colored peppers because it helps the finished dish really stand out visually."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the olive oil and honey (use 3 tablespoons of maple syrup if you prefer) over everything, then toss thoroughly so every ingredient gets evenly coated."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place uncovered on a grill preheated to roughly 500°F and close the lid."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If using an indoor oven instead, place uncovered on the middle rack and roast between 400°F and 415°F for roughly 30 to 40 minutes, giving everything a toss at least two times while it roasts."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After about 10 minutes on the grill, give everything a toss so the sausages begin browning evenly and all of the vegetables roast consistently."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "At around the 20 minute mark, toss again and be prepared for that incredible rush of roasting goodness the second you open the grill. The olive oil now flavored with fresh rosemary, thyme, onion, and garlic, combined with the caramelization happening on the peppers and sausage, creates an aroma that immediately awakens your senses in the best possible way. These moments is what I live for as a chef."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Continue cooking until the sausages are fully cooked through, usually about 30 minutes on a propane grill. If using a smoker, expect the cooking time to take considerably longer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Try not to move the peaches around too much once they have roasted for about 12 minutes as they become extremely delicate at this point and can easily begin falling apart."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve immediately while hot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you want to keep things light alongside these delicious sausages with peppers, I highly recommend pairing them with heirloom tomato and watermelon salad , kale salad , creamy cucumber salad , or my always popular coconut rice ."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT15M",
+    "cookTime": "PT30M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-simple-tomato-basil-salad",
+    "country": "Caribbean",
+    "name": "Simple Tomato Basil Salad",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/simple-tomato-basil-salad/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 tomatoes, I used a combination of heirloom and grape from my garden",
+      "1/2 lemon, juice",
+      "1 tablespoon olive oil",
+      "1/4 teaspoon black pepper",
+      "1/4 teaspoon sea salt",
+      "1 tablespoon aged balsamic",
+      "5-8 basil leaves, I used Italian basil",
+      "1 tablespoon chopped parsley"
+    ],
+    "description": "A light, tasty and healthy salad. Quick and easy warm-weather lunch. If you’re doing a massive salad, you can double up on the dressing.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash and core the tomatoes, then chop them into irregular pieces for varied texture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl, whisk together lemon juice, olive oil, black pepper, sea salt, and chopped parsley."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the tomatoes to the bowl and toss gently to coat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Top with whole or gently sliced basil leaves."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Drizzle aged balsamic over the salad just before serving."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve immediately for the best flavor."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": null,
+    "totalTime": "PT10M"
+  },
+  {
+    "id": "carib-general-caribbean-simply-delicious-20-minute-curry-chicken",
+    "country": "General Caribbean",
+    "name": "Simply Delicious 20 Minute Curry Chicken",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/simply-delicious-20-minute-curry-chicken/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 lbs boneless chicken, cut into 1 to 1 1/2 inch pieces",
+      "2 tablespoon olive oil",
+      "1 medium onion, diced",
+      "6 –8 cloves garlic, smashed",
+      "1 medium tomato, diced",
+      "1/2 teaspoon black pepper",
+      "1 large scotch bonnet pepper, sliced",
+      "1 teaspoon ground roasted cumin, geera",
+      "1 1/2 tablespoon Caribbean Green Seasoning",
+      "2 tablespoon curry powder",
+      "1 teaspoon Anchar Masala",
+      "3/4 teaspoon salt, adjust",
+      "2 cups water",
+      "2 tablespoon chadon beni, chopped"
+    ],
+    "description": "A quick and easy curry chicken recipe made with Caribbean spices, tender boneless chicken, and a rich, flavorful gravy perfect for busy weeknights and comforting family meals.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the chicken with cool water and the juice of a lemon, lime, or vinegar if desired, then drain and pat dry. IMPORTANT! It's part of my Caribbean heritage to wash meats before using, if this does not sit well with you, please skip this step (safety reasons)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil (use any oil you prefer) in a heavy pan on medium heat, keeping a steady flame for this easy curry chicken."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the onion, garlic, tomato, Caribbean Green Seasoning, Scotch bonnet pepper, black pepper, and roasted geera. Cook for 2 minutes, allowing the base to become fragrant and deeply aromatic. The gently sizzle of the action in the pot, along with the fragrance of it all happening, will fill your kitchen with a comforting hug."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the curry powder and Anchar Masala and stir well. Cook for 3 minutes to fully develop the flavor of this easy curry chicken base. We're blooming the spices which makes up a curry powder."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the chicken pieces and stir well to coat evenly in the curry. Cook for 5 minutes, allowing the chicken to take on that rich color and flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the salt and water, bring to a boil, then cook for 10 minutes until the chicken is tender and the easy curry chicken gravy forms."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt, and check the consistency of the sauce to your liking. Keep in mind that the sauce or gravy will thicken as the curry cools."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off the heat and stir in the chopped shado beni (aka culantro). Cilantro is a suitable replacement for culantro. Typically, I'd serve this with hot S ada Roti, my Easy Coconut Rice , or the Dry Pigeon Peas Rice."
+      }
+    ],
+    "yields": 5,
+    "prepTime": "PT10M",
+    "cookTime": "PT20M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-jamaican-sizzling-jamaican-jerk-marinade",
+    "country": "Jamaican",
+    "name": "Sizzling Jamaican Jerk Marinade",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/sizzling-jamaican-jerk-marinade/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "6 stalks scallions, roughly chopped",
+      "14 sprigs thyme, stems removed",
+      "2 peppers scotch bonnet",
+      "2 tablespoons brown sugar",
+      "1 tablespoon Pimento (allspice) powder",
+      "1 teaspoon ground cinnamon",
+      "1 lime, juiced",
+      "1 lemon, juiced",
+      "5 thick slices of ginger",
+      "8 cloves garlic",
+      "1 1/2 tablespoon olive oil",
+      "1 tablespoon honey",
+      "2 tablespoons rice vinegar",
+      "2 tablespoons dark soy sauce",
+      "1/4 cup orange juice",
+      "2 medium onions, roughly chopped"
+    ],
+    "description": "This vibrant Jamaican jerk marinade combines the heat of Scotch bonnet peppers with the aromatic flavors of fresh herbs and spices, creating a versatile marinade perfect for a variety of meats.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Prepare Ingredients: Wash and roughly chop the scallions, thyme (remove woody stems), ginger, garlic, and onions."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place all ingredients into a food processor or blender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pulse until the mixture reaches your desired consistency. For a chunkier texture, pulse briefly; for a smoother marinade, blend longer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use immediately to marinate your choice of meat or fish, or transfer to a clean container and refrigerate for later use"
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": null,
+    "totalTime": "PT15M"
+  },
+  {
+    "id": "carib-jamaican-trinidadian-the-ultimate-slow-cooker-oxtail",
+    "country": "Jamaican, Trinidadian",
+    "name": "Slow Cooker Caribbean Oxtails",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/the-ultimate-slow-cooker-oxtail/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4-5 lbs oxtails, cut, trimmed and washed with water and lime or lime juice",
+      "3/4 tablespoon salt",
+      "1/4 teaspoon black pepper",
+      "1 tablespoon Caribbean Green Seasoning",
+      "1 teaspoon Worcestershire sauce",
+      "1 Scotch Bonnet pepper, optional",
+      "2 tablespoon tomato paste, concentrated tomato",
+      "4 sprigs thyme",
+      "1 large tomato, diced",
+      "2 stalks scallions, chopped",
+      "3-5 cloves garlic, smashed",
+      "1 medium onion, diced",
+      "1/2 teaspoon Caribbean Browning",
+      "1 teaspoon dark soy sauce",
+      "1 star anise",
+      "1 large carrot, cut into thick wheels",
+      "1 teaspoon grated ginger",
+      "1 bay leaf",
+      "1 cube beef stock",
+      "1 cup water",
+      "1 1/2 teaspoon brown sugar",
+      "1 1/2 tablespoon parsley, chopped fine"
+    ],
+    "description": "Set-it-and-forget-it Caribbean-style oxtails slow-cooked with fragrant herbs, aromatics, and hearty gravy for melting tenderness.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a slow cooker add Oxtail (4 pound)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season with Salt (3/4 tablespoon), Dark Soy Sauce (1 teaspoon), Fresh Ginger (1 teaspoon), Tomato Paste (2 tablespoon), Green Caribbean Seasoning (1 tablespoon), Worcestershire Sauce (1 teaspoon), Ground Black Pepper (1/4 teaspoon), Fresh Thyme (4 sprig), Scallion (1 bunch), Garlic (3 clove) and Onion (1)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add in the Tomato (1), Carrot (1), Star Anise (1), Bay Leaf (1), Scotch Bonnet Pepper (1), West Indian Browning (1/2 teaspoon), Beef Stock Cube (1) and Water (1/2 cup)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Mix everything well and add Brown Sugar (1 1/2 teaspoon)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Set your slow cooker on high and let it cook for 5 1/2 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the bay leaf, sprigs of thyme and star anise."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the meat from the gravy and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Skim the fat off the gravy and add it to a pan set over medium heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Whisk it continuously to reduce the sauce."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain the gravy and reduce further. Add in the Fresh Parsley (1 tablespoon)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the sauce over the oxtail. Serve and enjoy!"
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT5H",
+    "totalTime": "PT5H15M"
+  },
+  {
+    "id": "carib-jamaican-amazing-coconut-stewed-oxtails-2",
+    "country": "Jamaican",
+    "name": "Slow‑Braised Coconut Oxtail Stew with Navy Beans",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/amazing-coconut-stewed-oxtails-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 lb oxtail, trimmed and cut into even pieces",
+      "1 small onion, diced",
+      "1/3 scotch bonnet pepper, seeded and diced",
+      "6 grape tomatoes, halved",
+      "1 tablespoon Caribbean Green Seasoning",
+      "2/3 teaspoon salt, adjust to taste",
+      "1/4 teaspoon black pepper",
+      "1 teaspoon Worcestershire sauce",
+      "1 teaspon tomato ketchup",
+      "2-4 drops Angostura bitters, optional",
+      "1 tablespoom vegetable oil",
+      "1 tablespoon brown sugar",
+      "1 cup navy beans, soaked, drained",
+      "1 stalk scallion, chopped",
+      "2 cloves garlic, minced",
+      "4 sprigs fresh thyme",
+      "1 1/2 cupes water",
+      "1 cup coconut milk",
+      "2 tablespoons fresh parsley, chopped"
+    ],
+    "description": "This coconut-stewed oxtail recipe combines the rich, savory flavors of Caribbean cooking with the creamy richness of coconut milk. Slow-braised until tender, the oxtails are infused with aromatic herbs and spices, making this dish a true island comfort food.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl, combine the oxtails with diced onion, grape tomatoes, diced scotch bonnet pepper, Caribbean green seasoning, salt, Worcestershire sauce, ketchup, black pepper, and Angostura bitters (if using). Mix well to coat the oxtails evenly. Cover and refrigerate for at least 2 hours, preferably overnight."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat your oven to 350°F (180°C). In a heavy, oven-safe pot, heat the vegetable oil over high heat. Add the brown sugar and stir continuously with a dry spoon until it melts, becomes frothy, and turns an amber color."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Quickly add the marinated oxtails to the pot, including any marinade juices. Stir well to coat the oxtails in the caramelized sugar. Cover the pot and cook on medium heat for about 7 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the lid and increase the heat to high. Cook until the liquid reduces and the oxtails are evenly browned. This process enhances the flavor and color of the dish. to 350 degrees F (180 degrees C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the soaked navy beans (discard soaking water), chopped scallion, minced garlic, thyme sprigs, water, coconut milk, and allspice berries to the pot. Stir well and bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover the pot and place it in the preheated oven. Bake for approximately 3.5 hours, checking occasionally to ensure there is enough liquid. If necessary, add up to 1/2 cup of water or coconut milk to maintain the desired consistency."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once the oxtails are tender and the beans are cooked, remove the pot from the oven. Discard the thyme sprigs and allspice berries. Skim off any excess oil from the surface. Garnish with chopped parsley and serve hot."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT20M",
+    "cookTime": "PT3H",
+    "totalTime": "PT3H20M"
+  },
+  {
+    "id": "carib-bahamian-jamaican-trinidadian-small-batch-caribbean-green-seasoning-2",
+    "country": "Bahamian, Jamaican, Trinidadian",
+    "name": "Small Batch Caribbean Green Seasoning",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/small-batch-caribbean-green-seasoning-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 cup olive oil",
+      "5 cloves garlic",
+      "7 sprigs thyme",
+      "2 stalks scallions",
+      "8 stems chives, no tough stems",
+      "4 stems parsley, about 3 tablespoon chopped",
+      "6-8 leaves Chadon Beni, cilantro",
+      "4 peppers Pimento Peppers"
+    ],
+    "description": "A homemade concentrated blend of fresh Caribbean herbs and aromatics, perfect for marinating meats, enhancing stews, or adding a burst of flavor to any dish.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash all herbs and peppers thoroughly and allow them to air-dry."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Roughly chop garlic, thyme, scallions, chives, parsley, Chadon Beni, and pimento peppers."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place all ingredients into a blender or food processor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the olive oil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Blend to your desired texture, smooth or slightly chunky. Transfer to an airtight container and refrigerate."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT15M",
+    "cookTime": null,
+    "totalTime": "PT15M"
+  },
+  {
+    "id": "carib-general-caribbean-soul-soothing-beef-and-lentil-soup",
+    "country": "General Caribbean",
+    "name": "Soul-Soothing Beef and Lentil Soup",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/soul-soothing-beef-and-lentil-soup/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 butternut squash (1 lb – 454 g), halved, seeds and core removed",
+      "3 tablespoons olive oil, divided",
+      "1 1/2 tablespoons salt, divided",
+      "1 1/2 tablespoons black pepper, divided",
+      "2 lbs beef, cubed",
+      "2 stalks celery, chopped",
+      "1 large onion, diced",
+      "1 inch ginger, smashed",
+      "5 sprigs thyme",
+      "1 1/2 tablespoons Caribbean Green Seasoning",
+      "8 cloves garlic",
+      "1 cup lentils, washed",
+      "1 medium carrot, diced",
+      "1 scotch bonnet pepper, whole",
+      "6 cups beef stock",
+      "1 can stewed tomatoes, 540 ml",
+      "1 1/2 cups coconut milk",
+      "6 to 8 cups water",
+      "5 small potatoes, peeled, quartered",
+      "1 medium sweet potato, cut into large chunks",
+      "2 tablespoons parsley, chopped",
+      "3 scallions, chopped"
+    ],
+    "description": "Hearty Caribbean beef and lentil soup with roasted squash, coconut milk, and tender vegetables. Comfort in every bowl.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat your oven to 400 F. Cut the squash in half, remove and discard the seeds and core, and place it on a lined baking tray. Drizzle with 1 tablespoon olive oil, 1/4 tablespoon salt, and 1/4 tablespoon black pepper. Roast until tender and lightly caramelized around the edges."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the remaining olive oil in your soup pot over medium-high heat. Add the beef pieces and cook until slightly browned, allowing them to develop color and begin releasing their flavor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the celery, onion, ginger, thyme, Caribbean Green Seasoning , and garlic. Continue cooking for 3 to 4 minutes. The sizzling and aroma of the herbs should be intoxicating as they bloom in the hot oil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the remaining salt, 3/4 of the remaining black pepper, lentils, carrot, and beef stock."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the stewed tomatoes, followed by the whole scotch bonnet pepper and coconut milk. Bring to a boil, then reduce to a simmer and cook. 1/2 cup of pure coconut cream will also work."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 35 to 40 minutes, remove the roasted squash from the oven. When cool enough to handle safely, scoop out the flesh and add it directly to the soup pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Continue cooking for 1 hour and 15 minutes from the time the soup reached a rolling boil, adding 4 cups of water to start and more as necessary to maintain the desired consistency."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Peel and rinse the potatoes and sweet potato. Cut into large pieces and add to the soup pot. Cook for another 30 minutes. The goal is melt-in-your-mouth pieces of beef and an almost velvety texture from the coconut milk, roasted squash, and lentils, which will begin breaking down at this stage."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "NOTE! In the Caribbean it's normal to add dasheen (taro), eddoes, green cooking bananas, flour dumplings, and yam to this sort of soup."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Depending on the age and cut of the beef, it may take longer to become fork-tender. Add more water and continue cooking if necessary. Remove the scotch bonnet pepper for controlled heat, or break it to release more spice. You may also remove the ginger and sprigs of thyme."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Finish with the chopped parsley and scallions. Add the remaining black pepper, taste, and adjust the salt to your liking. Keep in mind that beef stock is not traditionally used in many Caribbean soups, but it captures the essence of the beef beautifully. Be mindful of its sodium content."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT25M",
+    "cookTime": "PT2H",
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-chinese-influenced-green-beans-with-chicken",
+    "country": "Fusion",
+    "name": "Spicy Asian Green Beans with Ground Chicken and Hoisin Sauce",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/chinese-influenced-green-beans-with-chicken/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 pound string beans, trimmed",
+      "1/2 pound ground chicken",
+      "2 tablespoons vegetable oil",
+      "1 tablespoon ginger, diced",
+      "2 cloves garlic, large; diced fine",
+      "2-3 Bird’s Eye peppers, diced",
+      "1 tablespoon hoisin sauce",
+      "1 1/4 tablespoons dark soy sauce",
+      "2-4 drops sesame oil",
+      "1 tablespoon Chinese cooking wine",
+      "1/4 teaspoon salt"
+    ],
+    "description": "A fast, flavorful, and slightly spicy stir-fry that bridges Asian and Caribbean kitchens.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Bring a pot of water to a boil and blanch the string beans for 2–3 minutes. Immediately transfer to ice water to stop cooking and preserve color. Drain and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat vegetable oil in wok or pan over medium heat. Add ground chicken and cook 5–7 minutes, breaking it up until browned."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce heat to low and stir in garlic, ginger, and bird’s eye peppers. Cook for 3 minutes to release flavors."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in hoisin sauce, dark soy sauce, sesame oil, and cooking wine. Cook another 2–3 minutes until sauce is fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase heat to medium-high, add blanched beans, and toss thoroughly. Season with salt and cook for 4–5 minutes, until beans are crisp-tender and coated."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot over rice or noodles."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT15M",
+    "totalTime": "PT25M"
+  },
+  {
+    "id": "carib-trinidadian-canadian-mother-in-law-spicy-condiment-dish",
+    "country": "Trinidadian",
+    "name": "Spicy Caribbean Pickled Peppers (“Mother-in-Law” Style)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/canadian-mother-in-law-spicy-condiment-dish/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 limes, juiced",
+      "1 lemon, juiced",
+      "1/2 teaspoon salt",
+      "1/4 teaspoon black pepper",
+      "1/2 medium red onion",
+      "2 stalks scallions",
+      "1 pear",
+      "2 nectarines",
+      "2 sticks celery",
+      "1 tablespoon cilantro, chopped",
+      "2 cloves garlic",
+      "4 Guyana peppers",
+      "1 Granny Smith apple",
+      "1 red apple"
+    ],
+    "description": "This spicy condiment is often used on the side of many curry dishes in Trinidad and Tobago. The name may come from the ‘spicy’ nature of one’s mother in law, mixed with different textures and flavors (complexity). Do keep in mind that you can control the amount of heat of this condiment by the number and type of hot peppers you use.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In the bowl where you will be mixing everything juice the Lemon (1) and Lime (2). Dice the Scallion (1 bunch). Dice the Guyana Pepper (4). Dice the Granny Smith Apple (1), Red Apple (1), Red Onion (1/2), Pear (1), Nectarine (2), and Celery (2 stalk). Season with Salt (1/2 teaspoon) and Freshly Ground Black Pepper (1/4 teaspoon). Add the Garlic (2 clove) and Fresh Cilantro (1 tablespoon). Mix well and place in the fridge about an hour to marinate."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve cold. Store in an airtight container and set in the fridge to be used up to a week later."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-spicy-cranberry-pineapple-chutney-2",
+    "country": "Caribbean",
+    "name": "Spicy Cranberry Pineapple Chutney",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/spicy-cranberry-pineapple-chutney-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 cup dark brown sugar",
+      "2 lbs cranberries, washed",
+      "3 cups apple cider",
+      "3/4 teaspoon sea salt",
+      "1 teaspoon cinnamon",
+      "1 tablespoon grated ginger",
+      "2 bay leaves",
+      "2 cardamom pods",
+      "1 lemon, zested and juiced",
+      "1 large pineapple, peeled, cored, diced",
+      "1 habanero pepper, optional",
+      "3/4 lb dried cranberries"
+    ],
+    "description": "This chutney combines the tartness of cranberries with the sweetness of pineapple and the warmth of Caribbean spices, creating a versatile condiment that enhances both holiday and everyday meals.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Add the brown sugar to a deep (heavy) pot then turn the heat to med/low and cook. Stir as it melts, then go a dark brown in color (watch the video below). It does not need to bubble or go frothy."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "At this point you’ll add the fresh cranberries (I used fresh, but previously frozen will also work) and stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the apple cider (use apple juice if you don’t have cider), stir then add the salt, bay leaves, ginger, cinnamon, cardamom, along with the zest and juice of the lemon. Bring to a boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the pineapple. May I recommend dicing the pineapple into 1/4 inch pieces and not as large as you see in the image above."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "You may now add the dried cranberries along with the Habanero pepper, providing you want it spicy. Any spicy pepper will work if you cannot source a habanero. However, as mentioned, it’s definitely an optional ingredient."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "As it comes to a boil, reduce to a simmer and cook for about 40 minutes. Should you find that it’s getting too thick, add more apple cider."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Keep in mind that the chutney (word used loosely as this could also be considered a jam) will thicken as it cools. You’re looking for something with texture/body, tart, spicy and rounded with an undertone of spiced tartness."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Store in sterilized glass containers in the fridge. Like my Cranberry Mango Sauce and the Cranberry Sorrel Jam I did a few years ago, this will go great with your holiday ham, thanksgiving turkey or as a spread on your morning toast and afternoon sandwiches."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT15M",
+    "cookTime": "PT40M",
+    "totalTime": "PT55M"
+  },
+  {
+    "id": "carib-fusion-spicy-fried-fish-balls",
+    "country": "Fusion",
+    "name": "Spicy Fried Fish Balls",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/spicy-fried-fish-balls/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb fresh cod fillets",
+      "2 cloves garlic, crushed",
+      "3/4 cup Parmesan cheese",
+      "1 tablespoon chopped parsley",
+      "1 tablespoon chopped thyme",
+      "2 eggs",
+      "3/4 cup panko bread crumbs, any bread crumbs should work",
+      "1/4 teaspoon salt",
+      "1/4 teaspoon black pepper",
+      "1/2 pepper scotch bonnet pepper, diced finely",
+      "2-3 cups veg oil for frying",
+      "1/2 cup flour for dusting"
+    ],
+    "description": "After posting a pic of this finished spicy fish balls on Facebook , someone commented “must be a male fish!”. Rude talk aside, I thought it was funny. I don’t recall if it was in Guyana or in Barbados I first had something similar, but I do recall how tasty they were, so I knew back then I’d have to come up with a recipe sooner or later. In keeping with this month’s theme of party food with a Caribbean twist for the holiday season… I give you the most delicious fish balls you’ll ever try. With the use of panko bread crumbs and Parmesan cheese, you’ll see how international this recipe really is.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash and pat the Cod Fillet (1 pound) and dry with some paper towels. Then cut into chunks and place into a food processor."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Give the fish a few pulses in the food processor and remember to scrape down the side so you get an even consistency."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the Parmesan Cheese (3/4 cup), Fresh Parsley (1 tablespoon), Fresh Thyme (1 tablespoon), Garlic (2 clove), Egg (2), Panko Breadcrumbs (3/4 cup), Salt (1/4 teaspoon), Ground Black Pepper (1/4 teaspoon), and Scotch Bonnet Pepper (1/2)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pulse for a minute or two and remember to stop to scrape down, until you have a well mixed consistency."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Shape this into the small balls for frying. Take about a tablespoon’s worth of filling and roll in your hands to form the ball."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Roll balls in All-Purpose Flour (1/2 cup) and coat evenly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the Vegetable Oil (as needed) over medium-high heat and fry balls for 3-4 minutes. Drain on paper towels."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm with your favorite dipping sauce."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-trinidadian-caribbean-fiery-geera-cumin-shrimp",
+    "country": "Trinidadian",
+    "name": "Spicy Geera Shrimp (Caribbean Roasted Cumin)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-fiery-geera-cumin-shrimp/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 pounds shrimp, peeled, deveined",
+      "1 tablespoon roasted cumin powder, geera",
+      "1 tablespoon Caribbean Green Seasoning",
+      "1/2 teaspoon salt",
+      "1/4 teaspoon black pepper",
+      "2 tablespoons olive oil",
+      "2 tablespoons vegetable oil",
+      "1 tablespoon cumin seeds",
+      "1/2 teaspoon coriander seeds",
+      "1 habanero pepper, sliced, seeds optional",
+      "5 Wiri Wiri peppers, or Scotch bonnet peppers, sliced",
+      "3 cloves garlic, diced",
+      "1 scallion, chopped",
+      "2 tablespoons cilantro, chopped"
+    ],
+    "description": "A quick and fiery Caribbean-style shrimp dish, flavored with roasted cumin (geera), aromatic spices, and fresh herbs that’s ready in under 10 minutes.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Season shrimp in a bowl with ½ tablespoons roasted cumin, green seasoning, salt, and pepper. Let rest if time allows."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir well and allow to marinate (if you have time) for an hour or so."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat olive and vegetable oils in a wide skillet on low. Add cumin seeds, coriander seeds, garlic, habanero, and peppers. Cook 3–4 minutes, stirring often."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase heat to medium-high; add shrimp and remaining roasted cumin. Stir-fry quickly for 4–5 minutes until shrimp are just cooked."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from heat; stir in scallion and cilantro."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt or heat, then serve immediately."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT5M",
+    "cookTime": "PT5M",
+    "totalTime": "PT10M"
+  },
+  {
+    "id": "carib-caribbean-quick-fiery-pepper-pickle",
+    "country": "Caribbean",
+    "name": "Spicy Scotch Bonnet Pepper Pickle",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/quick-fiery-pepper-pickle/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 Scotch Bonnet pepper",
+      "6-8 Wiri Wiri peppers",
+      "2 cloves garlic",
+      "1/2 medium onion",
+      "1/2 teaspoon sea salt",
+      "1/4 teaspoon black pepper",
+      "2 tablespoons chopped cilantro",
+      "2 tablespoons water"
+    ],
+    "description": "This is one of those quick and spicy pepper pickles, with a lot of texture and bursts of flavorful heat, that I enjoy when making Chicken Pelau . It’s also an incredible side to many curry dishes, vegan or protein-based.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Give everything a good wash, then a uniform-sized chop, and place it all in a bowl."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the salt and black pepper. You may crush or finely chop the garlic. Add the water and lime juice and stir well to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Allow the citrus juice (lime) to gently cure it for about 15 minutes before using it as a side condiment or spicy salsa-like dip. If you prefer it more fiery, use a couple of Trinidad Moruga Scorpion peppers. Yes, I did include the seeds and white membrane around the seeds from the Scotch Bonnet and Wiri Wiri peppers. TIP! Even if you wore gloves when handling the hot peppers, I’d recommend washing your hands immediately with soap and water."
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-steamed-ground-provisions",
+    "country": "Caribbean",
+    "name": "Steamed Ground Provisions",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/steamed-ground-provisions/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb eddoes",
+      "1 lb taro, dasheen",
+      "1 large ripe plantain",
+      "water",
+      "salt, optional"
+    ],
+    "description": "A healthy, flavor-packed alternative to boiling, these steamed ground provisions hold their shape, retain their nutrients, and deliver the pure taste of Caribbean roots.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash and peel the eddoes if you prefer, then cut them in half. You can also steam them with the skin on—just scrub thoroughly before cutting."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Trim the ends off the ripe (but firm) plantain, then cut it into 2–3 inch pieces. Slice the skin lengthwise the thickness of the peel to help it open during steaming."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Peel the taro, discard the skin, and slice into 1 1/2 inch rounds. Rinse well with cool water."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Arrange the provisions in the steamer, placing the denser eddoes on the bottom layer and the softer plantain pieces on top, along with the Taro pieces, which are notorious for cooking quickly when boiled."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Steam for 35–45 minutes. Test doneness by inserting a knife through the thickest part of an eddoe or taro—it should slide in easily."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once cooked, let the plantain cool slightly, then peel off the loosened skin."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm as a wholesome side or main."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT45M",
+    "totalTime": "PT55M"
+  },
+  {
+    "id": "carib-fusion-honey-nut-squash",
+    "country": "Fusion",
+    "name": "Stewed Honey Nut Squash with Saltfish",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/honey-nut-squash/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 honey nut squash, peeled and cubed",
+      "1/2 onion, diced",
+      "2 cloves garlic, diced",
+      "1 tablespoon olive oil",
+      "1 tablespoon brown sugar",
+      "1/2 teaspoon Caribbean Green Seasoning",
+      "3/4 cup salted cod",
+      "1/4 teaspoon salt"
+    ],
+    "description": "A cozy and flavorful Caribbean side dish made with tender honey nut squash, saltfish, and aromatic seasonings. A perfect balance of sweet, savory, and salty that pairs beautifully with roti or rice.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Boil the salted cod in a pot of water for about 20 minutes to remove the salt. Drain and rinse the fish, then shred it into small pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Peel, core, and cube the honey nut squash, then place in a bowl with cool water to prevent discoloration."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat olive oil in a heavy pot over medium heat. Reduce to low, then add onion, garlic, and a pinch of black pepper. Sauté for 2–3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the prepared salted cod and stir well. Mix in the Caribbean green seasoning and continue stirring."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase the heat to medium-high. Add the drained squash cubes and stir thoroughly to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Sprinkle in the brown sugar, cover the pot, and cook for 3–5 minutes. The squash will begin to release its natural juices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add salt, reduce the heat to low, and cover. Simmer for 20–24 minutes, stirring occasionally, until squash is soft and beginning to break apart."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt if needed. Raise the heat to medium-high to evaporate excess liquid, using the back of a spoon to mash any remaining solid pieces. Cook an additional 5–7 minutes until desired texture is reached."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot, either as a side dish or with roti."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT30M",
+    "totalTime": "PT40M"
+  },
+  {
+    "id": "carib-jamaican-taro-with-stewed-saltfish",
+    "country": "Jamaican",
+    "name": "Stewed Saltfish with Taro (Dasheen)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/taro-with-stewed-saltfish/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 pounds taro, dasheen",
+      "1/2 pound saltfish,, cod; soaked and flaked",
+      "2 tablespoons vegetable oil",
+      "1 onion, diced",
+      "1/2 cup bell pepper, diced",
+      "2 celery stalks, diced",
+      "3 cloves garlic, minced",
+      "1 tomato, diced",
+      "3 sprigs fresh thyme, leaves only",
+      "2 scallions, chopped",
+      "Salt, to taste",
+      "Black pepper, to taste",
+      "1 Scotch Bonnet pepper, seeded and finely chopped"
+    ],
+    "description": "Creamy taro paired with savory stewed saltfish, aromatics, and herbs for a comforting Caribbean-style one-pot meal.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Using a sharp knife or potato peeler, remove the other skin of the Taro (2 pound) and discard. Remove any blemishes and cut off any previously cut areas to expose the fresh interior."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Boil or steam taro chunks in salted water until fork-tender, about 15–20 minutes; drain and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "While taro cooks, heat oil in a large pot over medium heat. Sauté onion, bell pepper, celery, and garlic until softened, about 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add tomato, Scotch bonnet pepper, and thyme."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook 3 minutes more until fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in flaked saltfish and cook for 5 minutes to meld flavors."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Gently fold in cooked taro chunks, stirring carefully to coat with the stewed mixture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season with salt and pepper to taste, stir in scallions, and serve hot."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT15M",
+    "cookTime": "PT30M",
+    "totalTime": "PT45M"
+  },
+  {
+    "id": "carib-trinidadian-stovetop-mango-jerk-shrimp",
+    "country": "Trinidadian",
+    "name": "Stovetop Mango Jerk Shrimp",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/stovetop-mango-jerk-shrimp/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 pounds medium shrimp, cleaned, deveined",
+      "1 cup mango, diced",
+      "1 Scotch Bonnet peppers, diced fine",
+      "4 cloves garlic, diced fine",
+      "4 sprigs thyme, leaves only",
+      "1/2 teaspoon ginger, grated",
+      "2 tablespoons olive oil, divided",
+      "1/4 teaspoon salt",
+      "1 tablespoon dark soy sauce",
+      "1 tablespoon brown sugar",
+      "1/2 lime, juiced",
+      "2 tablespoons parsley, chopped",
+      "1/4 teaspoon cinnamon",
+      "1/4 teaspoon nutmeg",
+      "3/4 teaspoon allspice",
+      "1/4 teaspoon black pepper"
+    ],
+    "description": "Spicy, sweet, and fast; this stovetop jerk shrimp recipe combines fiery Caribbean seasoning with juicy mango for a dish that’s bold, quick, and always a crowd-pleaser.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a bowl, combine shrimp with salt, black pepper, half the olive oil, dark soy sauce, cinnamon, nutmeg, allspice, and brown sugar. Mix well. Marinate for 1 hour or cook immediately."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat remaining olive oil in a large pan over medium heat. Add scallions, garlic, thyme, and Scotch bonnet pepper. Reduce heat to low and sauté for 3 minutes.Heat remaining olive oil in a large pan over medium heat. Add scallions, garlic, thyme, and Scotch bonnet pepper. Reduce heat to low and sauté for 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase heat to medium-high. Add seasoned shrimp and stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add diced mango and grated ginger. Cook for 4–5 minutes, stirring often, until shrimp are just cooked through."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt. Squeeze in lime juice and top with chopped parsley. Serve hot with your favorite Caribbean sides."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT5M",
+    "totalTime": "PT20M"
+  },
+  {
+    "id": "carib-caribbean-strawberry-apple-cider-lemonade",
+    "country": "Caribbean",
+    "name": "Strawberry Apple Cider Lemonade",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/strawberry-apple-cider-lemonade/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3/4 lb strawberries, washed, hulled, chopped",
+      "1 cup raw cane sugar",
+      "6 cups water, divided",
+      "3 cups apple cider",
+      "couple drops Angostura bitters, optional",
+      "1 teaspoon vanilla essence, optional",
+      "lemon slices, for garnish, optional",
+      "strawberry slices, for garnish, optional",
+      "1/2 cup dark rum, vodka, or sparkling wine, optional"
+    ],
+    "description": "A refreshing summertime drink made with fresh strawberries, lemon juice, and apple cider. With optional Caribbean touches like Angostura bitters and vanilla essence, this lemonade can be enjoyed as a family-friendly cooler or with a splash of rum for an adult twist.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Prep your ingredients in advance. Wash, hull, and chop the strawberries. Juice the lemons. Place the chopped strawberries in a blender with 1 cup of water and blend until smooth. TIP! If the water is lukewarm, it will help dissolve the sugar easily."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour the strawberry purée into a large pitcher. Strain if you prefer a smoother lemonade, or keep the pulp for added texture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the raw cane sugar until dissolved."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the freshly squeezed lemon juice, remaining 5 cups water, and apple cider. Mix well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust sweetness as needed. If using, stir in a couple drops of Angostura bitters and vanilla essence."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Chill in the refrigerator for at least 1 hour, or serve immediately over ice."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Garnish with lemon and strawberry slices before serving."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "For an adult version, add dark rum, vodka, or sparkling wine just before serving."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": null,
+    "totalTime": "PT15M"
+  },
+  {
+    "id": "carib-caribbean-strawberry-chow-spicy-pickle-salad-recipe-2",
+    "country": "Caribbean",
+    "name": "Strawberry Chow (Spicy pickle / salad) Recipe",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/strawberry-chow-spicy-pickle-salad-recipe-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 lbs strawberries, green and red mix",
+      "1 clove garlic",
+      "1/2 teaspoon sea salt",
+      "1/2 orange, juice",
+      "1/2 medium red onion, sliced thin",
+      "1 scotch bonnet pepper, crush or sliced thin",
+      "2 tablespoon cilantro",
+      "1/2 lime, juice"
+    ],
+    "description": "A quick chow (like a spicy pickle or salad) using freshly picked strawberries. A great way to put ripe (and green) strawberries to use this spring/summer.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a mortar and pestle, crush the Garlic (2 clove) with Sea Salt (to taste) and then add the juice of the Orange (1/2)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a bowl add the Red Onion (1), Scotch Bonnet Pepper (1), Fresh Strawberry (1 cup) and the garlic orange juice combo. Give it a quick stir."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add in Lime (1/2), Fresh Cilantro (to taste), Cherry Tomato (to taste) and adjust for Sea Salt (to taste). Stir and allow it to marinate for about 30 minutes. Serve and enjoy!"
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-string-beans-with-potato-and-salted-cod",
+    "country": "General Caribbean",
+    "name": "String Beans With Potato And Salted Cod",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/string-beans-with-potato-and-salted-cod/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 tablespoons olive oil",
+      "1/3 lb salted cod, soaked, rinsed, and shredded",
+      "1 medium onion, sliced",
+      "3 cloves garlic, smashed",
+      "1/4 Scotch bonnet pepper, optional",
+      "2 thin slices ginger",
+      "1/3 teaspoon black pepper",
+      "1 1/2 lbs string beans, cut into 1-inch pieces",
+      "2 medium potatoes, sliced 1/8-inch thick",
+      "1 tomato, chopped",
+      "1/2 teaspoon salt",
+      "2 tablespoons coconut cream",
+      "3/4 cup water"
+    ],
+    "description": "A classic Caribbean recipe for string beans cooked with potato, salted cod, and coconut cream. Simple, comforting, and full of flavor.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the oil on a medium flame in a deep pan and add the prepared salted cod. Reduce the heat to medium-low and cook for 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the onion, garlic, Scotch bonnet pepper (habanero will also work), ginger, and black pepper. Cook on low for about 3 minutes until fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the string beans and stir well to coat with the seasoned base."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase the heat to medium and add the potato and tomato. Stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the coconut cream, salt, and water. Cover the pan and bring to a boil, then reduce to a gentle simmer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook with the lid on for 20 to 30 minutes, depending on how tender you like your string beans."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the lid to allow any remaining liquid to cook off. Taste and adjust salt if needed. Serve hot with sada roti ."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT20M",
+    "cookTime": "PT30M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-summertime-creamy-cucumber-salad",
+    "country": "Caribbean",
+    "name": "Summertime Creamy Cucumber Salad",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/summertime-creamy-cucumber-salad/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1/2 cup mayo",
+      "3/4 cup sour cream",
+      "3 tablespoons rice vinegar",
+      "1 tablespoon sugar",
+      "1/2 teaspoon sea salt",
+      "1/2 teaspoon black pepper",
+      "3 tablespoons chopped dill",
+      "2 large cucumbers, sliced 1/8 inch thick",
+      "1 medium red onion, sliced 1/8 inch thick"
+    ],
+    "description": "A cool, crisp, and refreshing cucumber salad with a creamy dill dressing that’s perfect for hot summer days. While not a traditional Caribbean dish, it’s a seasonal favorite I enjoy making when cucumbers are at their peak in my Canadian garden.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash, drain, and slice the cucumbers about 1/8 inch thick."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Chop the dill and slice the onion to match the thickness of the cucumbers."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl, whisk together the mayo, sour cream, rice vinegar, sugar, sea salt, black pepper, and dill until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the sliced cucumbers and onion to the bowl and mix well to coat evenly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Chill in the refrigerator for about 15 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the salt just before serving."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": null,
+    "totalTime": "PT30M"
+  },
+  {
+    "id": "carib-fusion-summertime-pineapple-strawberry-juice",
+    "country": "Fusion",
+    "name": "Summertime Pineapple Strawberry Juice",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/summertime-pineapple-strawberry-juice/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 large ripe pineapple, cubed",
+      "1 lb strawberries",
+      "8-10 cups water",
+      "1 lemon",
+      "3/4 cup sugar",
+      "1 tablespoon Mixed Essence",
+      "1 teaspoon Angostura bitters"
+    ],
+    "description": "A refreshing Caribbean drink blending pineapple, strawberries, citrus, and island flavor, perfect chilled or spiked.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Peel, core, and cube the pineapple. Hull and halve the strawberries."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In batches, blend fruit with some of the water until smooth. Strain through a fine mesh strainer into a large bowl or pitcher."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Skim off any foam that rises to the top. Add remaining water, lemon juice, sugar, Mixed Essence, and bitters (if using). Stir well to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust sweetness or acidity if needed. Chill thoroughly before serving over ice. Garnish with pineapple slices or fresh berries."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT10M",
+    "cookTime": null,
+    "totalTime": "PT10M"
+  },
+  {
+    "id": "carib-general-caribbean-tasty-saheena-bites-with-mango-chutney",
+    "country": "General Caribbean",
+    "name": "Tasty Saheena Bites With Mango Chutney",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/tasty-saheena-bites-with-mango-chutney/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 green mango, peeled and chopped",
+      "1 tablespoon chadon beni, chopped",
+      "3 cloves garlic, crushed",
+      "1/2 teaspoon salt",
+      "2 limes, juiced",
+      "1/2 teaspoon sugar",
+      "2 tablespoons water",
+      "1 1/2 cups all purpose flour",
+      "3/4 cup split pea flour",
+      "3/4 lb baby spinach, washed and finely chopped",
+      "1 tablespoon yeast",
+      "4 cloves garlic, crushed",
+      "3/4 teaspoon salt",
+      "2 tablespoons chadon beni, chopped",
+      "1/2 scotch bonnet pepper, finely diced",
+      "1/3 teaspoon turmeric",
+      "3/4 teaspoon geera, ground roasted cumin",
+      "1 cup water, adjust as needed"
+    ],
+    "description": "These crispy Caribbean saheena bites made with spinach and split pea flour are served with a bright, tangy green mango chutney for the perfect savory snack or appetizer.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash, peel, and cut the green mango into small pieces. Try to select a mature green mango that is firm and tart rather than ripe, as the chutney should have a slightly sour edge that balances the fried saheena."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the mango pieces into a blender along with the chopped chadon beni, crushed garlic, salt, lime juice, sugar, and water. Blend until smooth. If you prefer a chutney with more texture, you can grate the mango instead and blend the remaining ingredients before mixing them together."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste the chutney and adjust the salt or pepper if needed. Set aside or refrigerate. This chutney can be stored in the refrigerator for up to one week."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Thoroughly wash the baby spinach, drain well, and chop it very finely."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large bowl combine the all purpose flour, split pea flour, chopped spinach, yeast, crushed garlic, salt, chopped chadon beni , diced scotch bonnet pepper, turmeric, and ground roasted cumin."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add 3/4 of the water to start with and add as needed, and mix well to form a thick batter. You can use a spatula, but I prefer using my hands (as explained in the video), working the batter through my fingers to ensure everything is evenly distributed and properly combined."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover the bowl and allow the batter to rest for about 30 to 45 minutes so the yeast can activate."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat about 3 cups of vegetable oil in a wok or deep pot over medium heat. The oil should be hot enough that the batter sizzles gently when added, but not aggressively."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Using two tablespoons, scoop portions of the batter and carefully drop them into the hot oil. The fritters should begin sizzling immediately."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Allow the saheena bites to fry for about 4 to 6 minutes, turning them occasionally so they cook evenly and develop crispy golden edges while cooking fully through the center."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "As they fry, the gentle sizzling will fill the kitchen with a wonderful aroma from the garlic, cumin, and herbs."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the saheena bites with a slotted spoon and place them on paper towels to absorb excess oil. If you like, you can lightly sprinkle them with salt while they are still hot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Continue frying in batches so the pot is not overcrowded."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve the saheena bites warm with the green mango chutney for dipping. Excess can be refridgerated and reheated in an air fryer."
+      }
+    ],
+    "yields": 30,
+    "prepTime": "PT20M",
+    "cookTime": "PT15M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-general-caribbean-the-best-caribbean-banana-punch-recipe-creamy-refreshing-and",
+    "country": "General Caribbean",
+    "name": "The Best Caribbean Banana Punch Recipe",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/the-best-caribbean-banana-punch-recipe-creamy-refreshing-and-nutritious/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 ripe bananas",
+      "2 tablespoons honey",
+      "1 tablespoon vanilla",
+      "1/2 teaspoon freshly grated nutmeg",
+      "3/4 teaspoon ground cinnamon",
+      "1 1/2 cups evaporated milk",
+      "5 to 6 cups milk",
+      "Sea moss, optional",
+      "Smooth peanut butter, optional",
+      "Protein powder, optional",
+      "Pinch of salt, optional"
+    ],
+    "description": "A rich and creamy Caribbean Banana Punch made with ripe bananas, milk, evaporated milk, honey, vanilla, and warm spices. This refreshing Trinbagonian favorite comes together in minutes and is perfect for breakfast, an afternoon snack, or cooling off on a hot summer day.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Chill the bananas, then peel and break them into pieces before placing them in your blender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the honey, vanilla, freshly grated nutmeg, ground cinnamon, evaporated milk, and milk."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If using sea moss, smooth peanut butter, or protein powder, add them to the blender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Blend until smooth and creamy."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and add a small pinch of salt if you'd like to enhance all of the flavors."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve well chilled or over ice. be sure to stir or shake before serving from the frdige as it may settle."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Be sure to refer to the video below for the complete demonstration, and don't forget to leave your comments afterward. I'd love to hear if your family has their own version of Banana Punch."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Note: This is my take on the Banana Punch my mom made for us growing up. She would usually use about 1/2 cup of sweetened condensed milk instead of the honey I've used here, and it was always one of our favorite homemade treats."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT10M",
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-fusion-the-easiest-corn-and-sweet-potato-hash-recipe",
+    "country": "Fusion",
+    "name": "The Easiest Corn and Sweet Potato Hash Recipe",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/the-easiest-corn-and-sweet-potato-hash-recipe/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 tablespoons, vegetable oil, divided",
+      "1 lb, sweet potato, skin on, large dice",
+      "3/4 teaspoon, salt",
+      "4 ears, corn, kernels removed",
+      "1 large, bell pepper, diced",
+      "1/4 cup, water",
+      "4 cloves, garlic, smashed",
+      "5 sprigs, thyme",
+      "1 teaspoon, smoked paprika",
+      "3/4 teaspoon, black pepper",
+      "2, scallions, chopped"
+    ],
+    "description": "This easy Corn and Sweet Potato Hash combines fresh sweet corn, sweet potato, bell pepper, garlic, thyme, and smoked paprika for a simple Caribbean-inspired breakfast or vegetable hash. It is naturally suited to vegan and vegetarian cooking.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Add the vegetable oil to the hot griddle or pan over a low flame, then add the large chunks of sweet potato. Be sure to wash the sweet potato if you are keeping the skin on. Top with the salt and cover to allow steam to develop and help cook the potato pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 5 minutes, stir a couple of times, then add the kernels of corn, diced bell pepper, and water. The corn used in this recipe was from fresh ears of corn with the kernels removed. Cover and cook for another 4 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the cover and mix in the garlic, thyme, smoked paprika and black pepper. Continue cooking for another 6 to 8 minutes, tossing every 2 to 3 minutes to combine all of the flavours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn the heat up to medium-high and cook for another 3 to 4 minutes to allow some charring and caramelization to happen with the corn and sweet potato."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Finish by tossing in the chopped scallions, mix, and serve."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If you enjoyed this recipe, may I suggest you give the Charred Sweet Corn Porridge Recip e a try? Along with the Ultimate Curry Corn , Grilled Corn Salad , and my Grilled Corn recipes, these are all great ways to enjoy corn. The perfect way to end the summer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "I would love to hear from you, especially if you have a unique way of making this Corn and Sweet Potato Hash, in the comments below."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT21M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-the-ultimate-bhagi-spinach-rice",
+    "country": "Caribbean",
+    "name": "The Ultimate Bhagi (Spinach) Rice",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/the-ultimate-bhagi-spinach-rice/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb dasheen bush bhagi, any spinach will work",
+      "2 tbsp coconut oil",
+      "1/2 lb salted cod, prepared",
+      "1/2 medium onion, diced",
+      "6 cloves garlic, crushed",
+      "1/2 tsp black pepper",
+      "3/4 cup bell peppers, diced",
+      "1 tbsp tomato paste",
+      "1 tbsp Caribbean green seasoning",
+      "1 tsp curry powder",
+      "1 cup pumpkin, grated",
+      "2 cups long grain brown rice, washed",
+      "5 cups 5–6 water, adjust as needed",
+      "2 tbsp coconut cream",
+      "1/2 tsp salt",
+      "3 wiri wiri peppers"
+    ],
+    "description": "A classic Caribbean one-pot rice dish made with dasheen bush (or spinach), salted cod, and coconut cream for a hearty, flavorful, and comforting meal.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash, trim, and prepare the dasheen bush leaves. Bundle and cut into thin ribbons. Prep the other ingredients at this time as well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the coconut oil in a wide pan over medium flame. Add the prepared salted cod and stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 3 minutes, add the onion, garlic, and black pepper. Reduce heat to medium-low and cook for 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the diced bell peppers, stir, then make space in the center of the pot. Add the tomato paste (and smoked paprika if using). Cook for 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the Caribbean green seasoning and curry powder. Stir to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the grated carrot and pumpkin (or squash). Cook for 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Increase heat to medium and add the bhagi (or spinach). Stir well and cook for 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the washed rice and mix to coat with seasonings."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in water and bring to a boil. Once bubbling, add the coconut cream and wiri wiri peppers."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce to a simmer, add salt, and cover. Cook until liquid is absorbed and rice is fully cooked and plump, 20–25 minutes. Add more water if necessary."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Adjust salt to taste, remembering the salted cod contributes saltiness. Decide if you want the rice soggy or grainy. Keep wiri wiri peppers whole for mild heat, or burst them for spice."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off the heat, cover, and let rest for 5–10 minutes. Fluff with a fork before serving."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT20M",
+    "cookTime": "PT40M",
+    "totalTime": "PT1H"
+  },
+  {
+    "id": "carib-trinidadian-the-ultimate-chicken-wings-pelau",
+    "country": "Trinidadian",
+    "name": "The Ultimate Chicken Wings Pelau",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/the-ultimate-chicken-wings-pelau/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 pounds chicken wings, split",
+      "3/4 tablespoon salt",
+      "3/4 teaspoon black pepper",
+      "1 tablespoon grated ginger",
+      "2 tablespoons Caribbean Green Seasoning",
+      "1 tablespoon Worcestershire sauce",
+      "1 tomato, roughly chopped",
+      "1 onion, diced",
+      "1 Scotch Bonnet pepper, optional",
+      "1 tablespoon vegetable oil",
+      "2 tablespoons golden brown sugar",
+      "1 large carrot, diced",
+      "1 can pigeon peas, drained, rinsed",
+      "3 pimento peppers, roughly chopped",
+      "2 tablespoons parsley, chopped",
+      "2 tablespoons scallions, chopped",
+      "2 tablespoons chadon beni, chopped",
+      "2 cups parboiled long-grain brown rice, washed",
+      "3 cups water",
+      "2 cups coconut milk"
+    ],
+    "description": "This classic one-pot dish is made with rice, peas, and usually a meat of some kind (marinated overnight) , simmered in coconut milk and finished with chopped herbs.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Season the wings with the salt, black pepper, Green Seasoning , grated ginger, Scotch Bonnet pepper, Worcestershire sauce, tomato, and onion. Allow to marinate overnight if you have time, or at least 2 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the oil in a heavy and wide pot and add the brown sugar."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir well to coat, then continue cooking over medium-high heat for 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "It will spring its natural juices, the goal is to burn that off and in doing so, develop a lovely deep color. Once that liquid is gone and your wings are a deep golden colour, it’s time to continue."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the carrot, pigeon peas (from a can, rinsed) , pimento peppers, and 1/2 of the parsley, plus scallions and Chadon Beni ."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the washed rice, along with the coconut milk and water."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring to a boil, then reduce the heat to a simmer and cook until the chicken wings are fully cooked and the rice is tender and plump."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the salt to your liking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the remaining parsley, scallions, and Chadon Beni. Cover the pot and allow it to sit for 10-15 minutes before serving. The residual heat will allow the added herbs to bloom for a lovely finishing note."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT20M",
+    "cookTime": "PT45M",
+    "totalTime": "PT1H5M"
+  },
+  {
+    "id": "carib-fusion-the-ultimate-shrimp-cocktail-2",
+    "country": "Fusion",
+    "name": "The Ultimate Shrimp Cocktail",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/the-ultimate-shrimp-cocktail-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 tablespoon cilantro, chopped finely",
+      "1 small avocado, cubed",
+      "1 1/2 tomatoes, diced fine",
+      "2 scallions, chopped fine",
+      "1 clove garlic, crushed",
+      "1 lemon, juiced",
+      "1/2 lime, juiced",
+      "1/3 teaspoon salt",
+      "1 teaspoon sugar",
+      "1/4 teaspoon black pepper",
+      "1 cup tomato ketchup",
+      "1 shallot, diced fine",
+      "3/4 cup cucumber, diced fine",
+      "1 teaspoon Worcestershire sauce",
+      "1 teaspoon Tabasco sauce",
+      "1/3 cup celery, diced fine",
+      "1 tablespoon horseradish, grated",
+      "3 sprigs thyme, leaves chopped finely",
+      "1 1/2 cooked shrimp, tails on",
+      "Scotch Bonnet pepper, optional, finely chopped"
+    ],
+    "description": "A fresh, citrusy, and spicy shrimp cocktail that will impress your family and friends this summer, when you whip up a batch at your backyard BBQ.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Grate horseradish into a large bowl. Add cilantro, avocado, tomato, scallions, garlic, shallot, cucumber, celery, and thyme. Stir in ketchup, lemon juice, lime juice, Worcestershire sauce, Tabasco, salt, sugar, and black pepper. Mix well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cover and chill for at least 1 hour to allow flavors to meld."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pat shrimp dry with paper towels. Add shrimp to the chilled cocktail sauce and toss gently."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust seasoning. Add optional Scotch Bonnet pepper for heat. Serve immediately, or portion into shooter glasses for a fun presentation."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT20M",
+    "cookTime": null,
+    "totalTime": "PT20M"
+  },
+  {
+    "id": "carib-caribbean-the-ultimate-trinbago-seafood-callaloo",
+    "country": "Caribbean",
+    "name": "The Ultimate Trinbago Seafood Callaloo",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/the-ultimate-trinbago-seafood-callaloo/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 limes or lemons, for washing seafood",
+      "2 tablespoons butter",
+      "1 medium onion, chopped",
+      "6 sprigs 6–8 thyme",
+      "4 stems parsley",
+      "1 stalk celery, with leaves",
+      "3/4 teaspoon black pepper",
+      "3/4 tablespoon sea salt, for stock",
+      "8 cups water, for stock",
+      "2 tablespoons oil",
+      "1 medium onion, sliced",
+      "4 cloves garlic, smashed",
+      "3/4 teaspoon black pepper",
+      "1 pimento pepper, chopped",
+      "1/3 lb pumpkin, cubed",
+      "10 okra 10–15, sliced",
+      "2 lbs dasheen leaves, chopped, include stems",
+      "2 lbs baby spinach, roughly chopped",
+      "1 tablespoon salt, divided",
+      "2 lbs lobster",
+      "1 lb wild-caught shrimp",
+      "1 lb crab legs",
+      "1 1/2 cups coconut milk",
+      "1 green scotch bonnet pepper, whole",
+      "1 teaspoon Caribbean green seasoning"
+    ],
+    "description": "A creamy, rich, and deeply flavorful seafood twist on the traditional Trinidad and Tobago Callaloo—made with fresh lobster, crab legs, shrimp, and the vibrant greens of dasheen leaves and spinach, simmered in coconut milk.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Clean and prep the shrimp, lobster, and crab legs by removing shells and washing thoroughly with cool water and lime or lemon juice. Follow along with the video below."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large stock pot over medium heat, melt butter, then add onion, thyme, parsley, celery, and black pepper. Cook for 4 minutes, then add the seafood shells and continue cooking for another 4 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add 8 cups of water, bring to a boil, and simmer for 45 minutes to make the stock."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a separate soup pot over medium heat, add oil, onion, garlic, black pepper, and pimento pepper. Cook for 3 minutes. Add the pumpkin and okra, and cook for another minute."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the chopped dasheen leaves and spinach in batches, allowing them to wilt. Sprinkle in 3/4 tablespoon salt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the lobster claws and crab legs. Strain the seafood stock into the pot, add coconut milk, and bring to a boil. Cover partially and simmer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season the shrimp and lobster tails with lemon juice, Caribbean green seasoning, and remaining salt."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 90 minutes, remove the lobster claws and crab legs. Use an immersion blender to pulse the callaloo mixture—avoid continuous blending, as it will change the texture and overall flavor. Remove the scotch bonnet pepper if you prefer mild heat. In my case, I broke the pepper to give the finished Callaloo a slight kick from its heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the shrimp and lobster meat, stir, then return the claws and crab legs. Simmer for 2 minutes, taste, and adjust salt to your liking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off the heat and serve warm with rice, macaroni pie, or ground provisions."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT35M",
+    "cookTime": null,
+    "totalTime": "PT2H5M"
+  },
+  {
+    "id": "carib-caribbean-traditional-caribbean-pepper-sauce",
+    "country": "Caribbean",
+    "name": "Traditional Caribbean Pepper Sauce",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/traditional-caribbean-pepper-sauce/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4-6 cups Hot Peppers, chopped",
+      "6 cloves garlic",
+      "1/2 cup chopped cilantro",
+      "1 teaspoon sea salt",
+      "1 cup white vinegar"
+    ],
+    "description": "",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the Scotch Bonnet Pepper (6 cup) and trim off the stems."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Give the peppers, Garlic (6 clove) and Fresh Cilantro (1/2 cup) a rough chop."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place a deep bowl under the area where the ground peppers will fall, then start adding a mixture of the garlic, peppers and chopped cilantro into the mill and start cranking. Keep a wooden spoon handy as you may have to press down on everything for it to work through the mill."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Adjust coarseness based on your preferences."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Continue grinding until everything has been passed through."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Finally mix in the Distilled White Vinegar (1 cup), Sea Salt (1 teaspoon), and juice from the Lime (1) with the ground peppers."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Since vinegar was used, this pepper sauce can remain on your kitchen counter as the vinegar will act as a preservative. For longer shelf life, you can certainly keep it in the fridge. Enjoy!"
+      }
+    ],
+    "yields": null,
+    "prepTime": null,
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-traditional-caribbean-pineapple-juice-2",
+    "country": "Caribbean",
+    "name": "Traditional Caribbean Pineapple Juice",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/traditional-caribbean-pineapple-juice-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 large ripe pineapple",
+      "3/4 cup granulated sugar",
+      "5 cups water",
+      "3 slices ginger",
+      "2 dashes Angostura bitters"
+    ],
+    "description": "Learn to make the best pineapple juice the Caribbean way. It uses fresh pineapple skins, core, and warming spices to create a refreshing homemade juice rich in enzymes and antioxidants, perfect for digestion, immunity, and staying cool.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash the pineapple thoroughly. Remove the skin and core, and set aside the flesh."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large pot, combine the pineapple skin and core with water, sugar, and ginger slices. Bring to a boil, then reduce heat and simmer for 25–30 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from heat and allow the mixture to cool."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cut the reserved pineapple flesh into chunks. In a blender, combine the pineapple chunks with the cooled liquid (strain out and discard the skins, core, and ginger slices). Blend until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Strain the blended mixture to remove any pulp."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in Angostura bitters. Chill before serving over ice."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT30M",
+    "totalTime": "PT45M"
+  },
+  {
+    "id": "carib-caribbean-traditional-caribbean-pommecythere-june-plum-golden-apple-ja",
+    "country": "Caribbean",
+    "name": "Traditional Caribbean Pommecythere (June Plum / Golden Apple) Jam",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/traditional-caribbean-pommecythere-june-plum-golden-apple-jam/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "6 ripe pommecythere, peeled",
+      "1 cup sugar",
+      "1 stick cinnamon",
+      "2 slices ginger",
+      "2 cups water",
+      "1/4 teaspoon salt",
+      "1 bay leaf, optional"
+    ],
+    "description": "A classic Caribbean preserve made with ripe pommecythere (aka june plum or golden apple) slowly simmered with warm spices, creating a bright, tangy, and nostalgic jam perfect for toast, bakes, and desserts.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash and peel the ripe pommecythere. As suggested in the video (below), cut them in half before peeling to help reduce the overall cook time."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the peeled pommecythere to a medium pot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the sugar, cinnamon stick, ginger slices, salt, water, and the optional bay leaf."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the pot over medium-high heat and bring to a boil. Once boiling, reduce to a simmer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Cook for 40 minutes to 1 hour, or until the pommecythere becomes tender and begins to fall apart."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the cinnamon stick and ginger slices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Transfer the jam to a clean glass container. It will thicken as it cools to a jam-like consistency. Store in the refrigerator for up to 1 month. The joy for my siblings and me when we were small, was getting the spiky seeds to suck on – be cautious."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": "PT40M",
+    "totalTime": "PT50M"
+  },
+  {
+    "id": "carib-caribbean-traditional-caribbean-stew-peas-kidney-beans-with-ham-bone",
+    "country": "Caribbean",
+    "name": "Traditional Caribbean Stew Peas (kidney beans) With Ham Bone",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/traditional-caribbean-stew-peas-kidney-beans-with-ham-bone/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 ham bone",
+      "2 cups dried kidney beans, soaked overnight, drained and rinsed",
+      "1 large onion, diced",
+      "1 bay leaf",
+      "2 scallions",
+      "6 sprigs thyme",
+      "6 cloves garlic, smashed",
+      "8 pimento berries, allspice",
+      "1 teaspoon black pepper",
+      "1 teaspoon salt",
+      "1 large carrot, cut into 1/4-inch wheels",
+      "1 scotch bonnet pepper, whole",
+      "4 cups coconut milk, prepared from powder",
+      "7 cups water, divided",
+      "3/4 tablespoon brown sugar",
+      "1 1/2 cups all-purpose flour",
+      "1/4 teaspoon salt",
+      "1 teaspoon brown sugar",
+      "3-4 tablespoons water"
+    ],
+    "description": "This Jamaican stew peas recipe is a classic Caribbean dish made with red kidney beans slowly simmered in coconut milk and seasoned with fresh herbs and spices. A smoky ham bone adds depth and richness as the stew thickens naturally during cooking. Finished with soft dumplings, this stew peas recipe delivers the hearty, comforting flavors that have made it a favorite in Jamaican and Caribbean kitchens for generations.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Place the ham bone into a deep soup pot along with the soaked kidney beans."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the onion, bay leaf, scallions, thyme, garlic, and pimento berries."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the black pepper, salt, carrot, scotch bonnet pepper (keep whole and don't break) , coconut milk, and 5 cups of the water."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring to a boil, then reduce to a gentle simmer. Cook with the lid slightly ajar for about 2 hours, stirring occasionally, until the beans are tender and beginning to break down. Add more water as needed and stir in the brown sugar."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Combine the flour, salt, brown sugar, and water to form a soft dough. Cover with a damp paper towel and allow it to rest for 10 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the dumplings to the pot along with additional water if needed (it will thicken futher, so I recommend adding at least another cup). Continue cooking for another 20–30 minutes. At this stage, you can remove the scotch bonnet pepper if desired. to control the heat, or break it to release that lovely Caribbean heat to the dish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt, keeping in mind the stew will thicken further as it cools."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn off the heat, remove the bay leaf, thyme sprigs, and pimento berries, and serve warm. Serve with Coconut Rice ."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT20M",
+    "cookTime": "PT2H30M",
+    "totalTime": null
+  },
+  {
+    "id": "carib-trinidadian-salt-beef-yellow-split-peas-dhal-2",
+    "country": "Trinidadian",
+    "name": "Trini-Style Salted Beef Yellow Split Peas Dhal",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/salt-beef-yellow-split-peas-dhal-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "5 cups yellow split peas, washed",
+      "3 L water",
+      "3/4 tablespoon salt",
+      "1 teaspoon black pepper",
+      "2 tablespoon turmeric",
+      "20-22 cloves garlic",
+      "1 medium onion",
+      "1 pepper scotch bonnet pepper",
+      "3 peppers pimento",
+      "2-3 tablespoons olive oil",
+      "3/4 lb salted beef",
+      "1 tablespoon cumin seeds"
+    ],
+    "description": "Hearty Trinidadian dhal enriched with salted beef, garlic, and cumin for a comforting, flavorful dish.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Rinse the salted beef thoroughly. Place in a pot with water (not the 3 liters for dhal) and bring to a boil. Simmer for 1 to 1.5 hours to tenderize and remove excess salt. Drain, rinse, and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large pot, bring 3 liters (12 2/3 cups) of water to a boil. Add the washed split peas and turmeric. Skim off any froth that rises to the top."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large pot, bring 3 liters of water to a boil. Add the washed split peas and turmeric. Skim off any froth that rises to the top."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the pre-cooked salted beef, black pepper, 3/4 of the garlic (smashed), diced onion, scotch bonnet, and pimento peppers. Simmer until peas are very soft and falling apart, about 1 to 1.5 hours. Stir every 15 minutes and add more water if needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove the beef and set aside. Blend the dhal using a swizzle stick or stick blender until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the salt, adjusting for taste. Return the beef to the pot, removing any bones and cutting it into pieces as necessary."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat olive oil in a small pan. Add remaining smashed garlic and cumin seeds. Cook until the garlic is browned and the oil is aromatic. Carefully pour the dhal into the bowl and stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Keep in mind that the dhal will thicken as it cools. Once cooled you can divide into containers and freeze for later use."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Let simmer a few more minutes to marry flavors. Remove from heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enjoy hot with rice, roti, or bread. Store leftovers in the freezer for up to 3 months."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT2H",
+    "totalTime": "PT2H15M"
+  },
+  {
+    "id": "carib-caribbean-trinidad-chicken-pastelle-recipe",
+    "country": "Caribbean",
+    "name": "Trinidad Chicken Pastelle Recipe.",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/trinidad-chicken-pastelle-recipe/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 lb ground chicken",
+      "3 tablespoons olive oil, divided",
+      "1/2 tablespoon black pepper",
+      "1 tablespoon thyme, chopped",
+      "1 tablespoon parsley, chopped",
+      "1 medium tomato, diced",
+      "1 teaspoon capers",
+      "4 1/2 cups chicken stock, divided",
+      "2 pimento peppers, chopped",
+      "1/4 cup dried cranberries, chopped",
+      "1/4 cup raisins",
+      "2 tablespoons sliced olives",
+      "3/4 tablespoon salt, divided",
+      "2 tablespoons butter",
+      "3 cups fine corn meal",
+      "banana leaves, cut and washed"
+    ],
+    "description": "A classic Trinidad Christmas favorite, this Trinbagonian Chicken Pastelle Recipe features seasoned ground chicken simmered with herbs, dried fruit, and aromatics, then wrapped in cornmeal dough and steamed in banana leaves for a festive Caribbean holiday dish.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat 1 tablespoon of the olive oil in a wide pan over medium heat at about 350°F (175°C). Add the ground chicken and break it up into small pieces as it cooks. Cook for 7 to 10 minutes until lightly browned."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the black pepper, scallions, thyme, parsley, tomato, and capers. Stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add 1 1/2 cups of the chicken stock, bring to a boil, then reduce to a gentle simmer at 212°F (100°C). Cook for 20 to 25 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the salt, the pimento peppers, cranberries, raisins, and olives. Cook for 2 to 3 minutes, then turn off the heat and allow the filling to cool completely."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat the remaining chicken stock with the butter, then turn off the heat just before it reaches a simmer at approximately 200°F (93°C). Add more butter for a richer taste and texture to the cornmeal."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the cornmeal in a bowl and add half of the warm stock. Mix, adding more stock gradually, until a soft but firm dough forms. (A tacky feel is expected)"
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Roll into balls slightly larger than a ping pong ball and rub them lightly with the remaining olive oil to prevent them from drying out as we begin filling them."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Prepare the tortilla press with parchment paper (place a piece on the bottom, then another after you place the dough ball), lightly greased. Press each ball into a thin circle."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place about 2 tablespoons of filling in the center, fold over all sides, and seal gently with your fingers."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the filled pastelle on a piece of banana leaf, top with another piece, wrap in foil, and seal like a small package. Most Asian, West Indian, and Latin grocery stores will have frozen banana leaves. Thaw, wipe with a warm clot,h and cut into pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Steam at 212°F (100°C) for 25 to 30 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve warm, traditionally with pineapple pepper sauce . Pastelles can be left wrapped and frozen for up to 2 months. Thaw, warm in the microwave, or re-steam and enjoy."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT1H",
+    "cookTime": "PT1H",
+    "totalTime": "PT2H"
+  },
+  {
+    "id": "carib-trinidadian-caribbean-curry-fish-with-green-mango-2",
+    "country": "Trinidadian",
+    "name": "Trinidad Curry Fish with Green Mango",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-curry-fish-with-green-mango-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2-3 lb white ocean fish, fillets or steak",
+      "1/2 Lime, juiced, for fish wash",
+      "1 tablespoon Caribbean green seasoning",
+      "1/2 teaspoon salt",
+      "1/2 teaspoon black pepper, divided",
+      "1/2 teaspoon curry powder, for fish seasoning",
+      "1 cup water, reserve from marinade bowl",
+      "2 cups vegetable oil, approx., for frying",
+      "3/4 cup All-purpose flour, for dusting fish",
+      "2 tablespoon vegetable oil, for curry",
+      "2 tablespoon curry powder, for sauce",
+      "1/2 small onion, diced",
+      "4 cloves garlic, minced",
+      "1/2 medium tomato, diced",
+      "1-2 scallions, chopped",
+      "1/4 Scotch Bonnet pepper, seeded, chopped, optional",
+      "1 large green mango, peeled, cut into 1/2-inch pieces"
+    ],
+    "description": "Savory fried fish and tangy green mango combine in a warming Caribbean curry sauce.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash fish with lime juice, rinse thoroughly, and pat dry. Marinate with green seasoning, salt, half the pepper, and curry powder for 1 hour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Lightly dust the marinated fish with flour."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil over medium-high heat and fry fish 4 minutes per side until golden. Drain on paper towels."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Discard oil and wipe pan dry. Add the reserved marinade water, setting aside any residual oil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat 2 tablespoons of vegetable oil; sauté the onion and garlic on low heat until softened."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add scotch bonnet, tomato, remaining pepper, and 2 tablespoons of curry powder; cook 3–4 minutes until fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in green mango, then add reserved marinade liquid; bring to a boil. Cover and simmer 6–8 minutes until mango is tender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Gently add fried fish and scallions, simmering 5 minutes to combine flavors."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt and pepper if needed. Serve hot with rice or roti."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": "PT30M",
+    "totalTime": "PT45M"
+  },
+  {
+    "id": "carib-fusion-trinidadian-the-ultimate-seafood-pelau-2",
+    "country": "Fusion, Trinidadian",
+    "name": "Trinidad Seafood Pelau with Coconut and Pigeon Peas",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/the-ultimate-seafood-pelau-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb shrimp, large, peeled, deveined",
+      "1 lb cod, cut into 1-inch pieces",
+      "1 lb mussels, cleaned",
+      "1 lb clams, cleaned",
+      "1 lb lobster tail, shells saved, meat chopped",
+      "1 tablespoon butter, optional, for shell stock",
+      "2 scallions, chopped",
+      "2 tablespoons Caribbean green seasoning, divided",
+      "1 teaspoon black pepper, divided",
+      "4 sprigs thyme",
+      "1 1/2 cups pumpkin, diced",
+      "4-6 cloves garlic, minced",
+      "1 large carrot, diced",
+      "1 can pigeon peas, rinsed",
+      "1 tablespoon olive oil",
+      "2 tablespoons brown sugar",
+      "1 1/2 cups coconut milk",
+      "1 tablespoon salt, or to taste",
+      "2 cups par-boiled brown rice, long-grain",
+      "1/2 teaspoon ginger, grated",
+      "3–5 bird’s eye peppers, whole or halved",
+      "4–7 cups water, or shell stock",
+      "3-4 tablespoons parsley, chopped"
+    ],
+    "description": "Shellfish‑infused Caribbean pelau with shrimp, lobster, cod, mussels, clams, pigeon peas, pumpkin, and coconut milk; one‑pot comfort with island flair.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Clean seafood: rinse shrimp with lime water, chop lobster meat and reserve shells; set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "For shell stock, simmer lobster shells, shrimp shells, thyme, scallions, half the pepper, and butter in 3 cups water until reduced by 2/3. Strain and reserve stock."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In the main pot, heat olive oil and brown sugar over high heat, stirring until amber."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add pigeon peas, pumpkin, and carrot."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Lower heat to medium and add garlic, scallions, bird’s eye pepper, ginger, coconut milk, and simmer for 1 minute."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in brown rice, green seasoning, salt, remaining pepper, and 2½ cups hot water. Bring to boil, then reduce to simmer and cook covered for 10 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add reserved shell stock, cover, and cook 7 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add mussels and clams, pressing into liquid. Simmer 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Gently stir in chopped lobster and shrimp, remove from heat, cover, and let rest for 4 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Uncover, taste and adjust salt, sprinkle parsley, and squeeze lemon before serving."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT30M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H30M"
+  },
+  {
+    "id": "carib-trinidadian-amazing-shrimp-callaloo-spinach-soup-2",
+    "country": "Trinidadian",
+    "name": "Trinidad Shrimp Callaloo with Spinach",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/amazing-shrimp-callaloo-spinach-soup-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 lbs baby spinach, roughly chopped",
+      "1 medium onion, diced",
+      "2 tablespoons butter",
+      "1 teaspoon black pepper, divided",
+      "3/4 tablespoon salt, divided",
+      "1 1/2 tablespoons olive oil",
+      "1 scotch bonnet pepper, seeds removed",
+      "2 lbs large shrimp, head-on, shell-on",
+      "3 cups water",
+      "1 stalk celery, diced",
+      "5 sprigs thyme",
+      "4 cloves garlic, finely diced",
+      "2 1/2 cups pumpkin, cubed",
+      "2 medium sweet potatoes, cubed",
+      "18 small okra, sliced into 1/4-inch pieces",
+      "1 1/2 cups coconut milk",
+      "1 vegetable bouillon cube",
+      "2 fish/seafood bouillon cubes",
+      "1/2 teaspoon Caribbean green seasoning"
+    ],
+    "description": "A flavorful Trinidadian-inspired soup featuring shrimp, spinach, and a medley of Caribbean spices, perfect for a hearty meal.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Peel and devein the shrimp, reserving the heads and shells. Rinse and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a large saucepan, melt butter over medium heat. Add diced celery and shrimp shells/heads. Cook for 4 minutes, stirring well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add 1/2 teaspoon black pepper and stir. Increase heat, add water, and bring to a boil. Reduce to a simmer and cook for 25–30 minutes to create a shrimp stock."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add cubed pumpkin and sweet potatoes to the pot. Stir and cook for 2 minutes. Add sliced okra and stir to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add chopped spinach to the pot. It may seem like a lot, but it will wilt down. Pour in coconut milk and stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "While the soup simmers, season the cleaned shrimp with Caribbean green seasoning and the remaining 1/4 tablespoon salt. Refrigerate to marinate."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "While the soup simmers, season the cleaned shrimp with Caribbean green seasoning and the remaining 1/4 tablespoon salt. Refrigerate to marinate."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After the soup has simmered and vegetables are tender, use a swizzle stick, whisk, or immersion blender to achieve desired consistency. Pulse gently to avoid over-blending."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the marinated shrimp to the soup, stir well, and turn off the heat. Cover and let the residual heat cook the shrimp for 5–8 minutes until fully cooked."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot as a soup, over rice, or with crusty bread."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT30M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H30M"
+  },
+  {
+    "id": "carib-trinidadian-tamarind-sauce-for-doubles-pholourie",
+    "country": "Trinidadian",
+    "name": "Trinidad Tamarind Sauce for Doubles & Pholourie",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/tamarind-sauce-for-doubles-pholourie/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 lb tamarind pulp, seeds and shell removed",
+      "3 1/2 cups water",
+      "2 Scotch Bonnet peppers, include seeds",
+      "6 cloves garlic",
+      "6 leaves chadon beni, culantro",
+      "1 tablespoon ground roasted cumin, geera",
+      "1 1/2 tablespoons anchar masala",
+      "2 tablespoons brown sugar",
+      "1/4 teaspoon salt, adjust if needed"
+    ],
+    "description": "A tangy, sweet, and spicy tamarind condiment made with scotch bonnet, garlic, and culantro, best for dipping pholourie, doubles, and more.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Remove shells and seeds from tamarind and soak in 3 cups boiling water until cool. Squeeze pulp to release and strain out seeds and fibers."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once the water is cold, use your hands in a rubbing motion to separate the pulp from the seeds."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Discard the seeds and any pieces of shell that may have been mixed in."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove shells and seeds from tamarind and soak in 3 cups boiling water until cool. Squeeze pulp to release and strain out seeds and fibers."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a saucepan, combine tamarind pulp liquid, blended mix, cumin, anchar masala, brown sugar, and salt. Bring to a gentle boil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Reduce heat to simmer for 10–15 minutes. Taste and adjust salt or sugar, then remove from heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Allow to cool to the desired consistency; store in the fridge for up to 3 weeks."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": null,
+    "totalTime": "PT10M"
+  },
+  {
+    "id": "carib-jamaican-trinidadian-caribbean-corn-soup",
+    "country": "Jamaican, Trinidadian",
+    "name": "Trinidad-Style Corn Soup with Salted Pigtails",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/caribbean-corn-soup/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 – 2 lbs salted pigtails, cut into 1-inch pieces",
+      "1 1/4 cups yellow split peas, washed",
+      "5 cups water, adjust as necessary",
+      "4 cloves garlic, crushed",
+      "2 tablespoons coconut oil",
+      "6 sprigs thyme",
+      "1 large onion, diced",
+      "2 stalks celery, diced",
+      "1/4 cup parsley, chopped",
+      "1/4 teaspoon black pepper",
+      "3 stalks scallions, chopped",
+      "3 Pimento peppers, whole",
+      "2 Bird’s Eye peppers, whole",
+      "3 tablespoons shado beni, chopped",
+      "2 cups pumpkin, diced",
+      "2 cups sweet potato, diced",
+      "2-3 cups chicken stock",
+      "1 1/2 cups coconut milk",
+      "4-6 ears corn, cut into 1-inch pieces",
+      "1 can creamed corn",
+      "1 cup frozen corn kernels, optional",
+      "1 cup All-purpose flour",
+      "pinch of salt",
+      "1/4 cup water, adjust as needed"
+    ],
+    "description": "A hearty and flavorful Caribbean soup combining yellow split peas, root vegetables, and salted pigtails, enriched with coconut milk and traditional spices.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash and place the salted pigtail pieces in a large pot, cover with water, and bring to a boil. Reduce to a rolling boil and cook for 25 minutes to tenderize and remove excess salt. Drain and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In the same pot, add 5 cups of water, the washed split peas, and crushed garlic. Bring to a boil, then reduce to a simmer and cook for 35–40 minutes until the peas are tender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a separate large soup pot, heat coconut oil over medium heat. Add diced onion, scallions, thyme, black pepper, pimento peppers, bird’s eye peppers, shado beni, parsley, and celery. Reduce heat to low and sauté for 4–5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add diced pumpkin, sweet potato, and carrots to the sautéed aromatics. Stir well, then add chicken stock. Bring to a boil and cook for 25 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Gently add the cooked split peas and pigtails to the soup pot. Stir in coconut milk and creamed corn. If using, add frozen corn kernels. Bring to a boil, then reduce to a simmer and cook for 20 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use a swizzle stick or whisk to gently break down the pumpkin, sweet potato, and carrots, thickening the soup. Add more stock or water if the soup becomes too thick."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a mixing bowl, combine flour and a pinch of salt. Gradually add water, kneading to form a soft dough. Let rest for 5 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Divide into three balls, roll each into a cylinder, and cut into 1/2-inch pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the dumplings and corn pieces to the boiling soup. Cook for an additional 5 minutes. Taste and adjust seasoning as needed."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT30M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H30M"
+  },
+  {
+    "id": "carib-trinidadian-breadfruit-pie",
+    "country": "Trinidadian",
+    "name": "Ultimate Breadfruit Pie",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/breadfruit-pie/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 large breadfruit, about 4 lb",
+      "1 1/2 cups evaporated milk",
+      "2 tablespoons parsley, chopped",
+      "1 cup cheddar cheese, grated",
+      "1/2 cup Monterey Jack cheese, grated",
+      "1 medium onion, chopped",
+      "Salt and black pepper, to taste"
+    ],
+    "description": "A Caribbean-style layered breadfruit casserole with creamy cheese sauce, perfect as a comforting main or hearty side.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat the oven to 350 degrees F (180 degrees C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Peel and prepare the breadfruit by cutting off the stem, slicing into wedges, peeling the skin, and removing the core."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Boil wedges in salted water for 20 minutes, or until tender. Drain and cool slightly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a saucepan, melt butter over low heat. Whisk in flour and cook for 4–5 minutes to form a smooth roux."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Slowly whisk in evaporated milk. Add parsley, onion, mustard, scotch bonnet (if using), nutmeg, black pepper, and cheeses (reserve 1/4 cup cheddar for topping). Stir until thick and smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Slice boiled breadfruit into 1/4-inch thick slices. Layer half in a greased baking dish, then pour over half the cheese sauce. Repeat with remaining breadfruit and sauce."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Sprinkle top with reserved cheddar (and breadcrumbs if using)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Slice each wedge of cooked breadfruit about 1/4 inch thick, then place a layer onto a greased cooking dish. Add a layer of cheese sauce, then another layer of sliced breadfruit and top with the remaining cheese sauce."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Rest 5 minutes before serving."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT25M",
+    "cookTime": "PT50M",
+    "totalTime": "PT1H20M"
+  },
+  {
+    "id": "carib-fusion-the-ultimate-chicken-tikka-masala-2",
+    "country": "Fusion",
+    "name": "Ultimate Chicken Tikka Masala",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/the-ultimate-chicken-tikka-masala-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 pounds boneless chicken thighs, cut into 1–2-inch pieces",
+      "1 1/2 cups plain yogurt",
+      "1 tablespoon ginger, grated",
+      "2 teaspoons garlic, minced",
+      "1 tablespoon garam masala",
+      "2 teaspoons turmeric",
+      "2 teaspoons ground cumin",
+      "2 teaspoons ground coriander",
+      "1 teaspoon chili powder",
+      "5 cardamom pods, crushed",
+      "1 tablespoon vegetable oil, or ghee",
+      "1 onion, diced",
+      "2 medium tomatoes, finely diced",
+      "1 1/2 cups full-fat coconut milk",
+      "1 tablespoon honey, or coconut sugar",
+      "Salt and pepper, to taste",
+      "2 tablespoons cilantro, chopped"
+    ],
+    "description": "This dish features marinated chicken tikka pieces simmered in a creamy, spiced tomato-coconut sauce; rich, comforting, and infused with island-inspired flavor.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a bowl, combine yogurt, ginger, garlic, garam masala, turmeric, cumin, coriander, chili powder, cardamom, salt, and pepper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add chicken pieces, toss to coat, and marinate for at least 2 hours or overnight."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil or ghee in a skillet over medium. Add diced onion and sauté 3–4 minutes until soft."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add marinated chicken (reserve extra marinade), browning on all sides, about 5 minutes. Remove and set aside."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add tomatoes and reserved marinade to the pan. Cook 5 minutes, stirring, until tomatoes begin to break down."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Return chicken to pan, stir in coconut milk and honey."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bring to a gentle simmer, cover, and cook 15–20 minutes until chicken is cooked through and sauce thickens."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust seasoning. Stir in cilantro before serving."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT2H",
+    "cookTime": "PT30M",
+    "totalTime": "PT2H30M"
+  },
+  {
+    "id": "carib-trinidadian-ultimate-curry-duck",
+    "country": "Trinidadian",
+    "name": "Ultimate Curry Duck",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/ultimate-curry-duck/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "6-7 lbs duck, trimmed and cut into 1-2 inch pieces",
+      "1 lime or lemon",
+      "1 medium tomato, sliced",
+      "1 onion, sliced",
+      "1 hot pepper, habanero or scotch bonnet",
+      "1/2 teaspoon ground geera, cumin",
+      "1/2 teaspoon Amchar Masala",
+      "3/4 tablespoon salt",
+      "1 tablespoon green seasoning mix",
+      "4 cloves garlic, crushed",
+      "1 dash black pepper",
+      "4 leaves shado beni",
+      "2 cups water"
+    ],
+    "description": "Tender duck simmered in a rich Caribbean curry with garlic, shado beni, and bold spices.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Wash duck pieces with lime juice and water, trimming off excess fat and skin. Drain well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Season duck with tomato, onion, hot pepper, geera, amchar masala, salt, green seasoning, garlic, black pepper, and shado beni. Marinate 1–2 hours or overnight."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a heavy pot over high heat, warm oil. Mix curry powder with ¼ cup water into a paste. Add sliced onion and curry paste to hot oil. Cook on medium for 5 minutes until fragrant and thick."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add seasoned duck and stir to coat with curry base. Cover and simmer 35 minutes until juices are released."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove lid and increase heat to reduce liquid, stirring to prevent sticking."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add 2 cups water, bring to gentle boil, cover, and simmer another 35 minutes until duck is tender and sauce has thickened. Adjust salt if needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot with dhalpourie, roti, rice, or your favorite starch."
+      }
+    ],
+    "yields": 8,
+    "prepTime": "PT20M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H20M"
+  },
+  {
+    "id": "carib-caribbean-ultimate-curry-eggs",
+    "country": "Caribbean",
+    "name": "Ultimate Curry Eggs",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/ultimate-curry-eggs/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 hard boiled eggs, halved",
+      "1 shallot, or onion, diced",
+      "4 cloves garlic, crushed",
+      "1 pimento pepper, sliced",
+      "1-2 Wiri Wiri peppers, or Scotch bonnet peppers, whole or sliced",
+      "1 tomato, diced, seeds removed",
+      "1 tablespoon Caribbean Green Seasoning",
+      "1 teaspoon cumin seeds",
+      "1 tablespoon curry powder",
+      "1 teaspoon black pepper",
+      "1/2 teaspoon salt, or to taste",
+      "2 tablespoon vegetable oil",
+      "1 cup water",
+      "2 scallions, chopped, for garnish",
+      "4 cloves garlic, crushed",
+      "1 pimento pepper, sliced",
+      "1 tablespoon Caribbean green seasoning",
+      "1 teaspoon cumin seeds",
+      "1 tablespoon curry powder",
+      "1 teaspoon black pepper",
+      "1/2 teaspoon salt, to taste",
+      "2 tablespoon vegetable oil, to taste",
+      "1 cup water, to taste"
+    ],
+    "description": "Simple yet satisfying, these Curry Eggs features hard‑boiled eggs simmered in a rich curry sauce with aromatics and warm spices, delivering bold Caribbean flavor in under 30 minutes.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat oil in a saucepan over medium heat. Add shallot, garlic, pimento pepper, and cumin seeds; cook until fragrant."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Lower heat and stir in curry powder, Caribbean green seasoning, black pepper, and salt. Toast gently for 3–4 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add water and tomato; bring to a gentle simmer. Allow sauce to thicken slightly on low heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place halved eggs yolk‑side down into sauce gently. Simmer for 3–4 minutes, then turn eggs over and simmer another 2 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Sprinkle scallions, taste and adjust seasoning if needed. Remove from heat and serve."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT20M",
+    "totalTime": "PT30M"
+  },
+  {
+    "id": "carib-jamaican-trinidadian-ultimate-slow-cooker-curry-goat",
+    "country": "Jamaican, Trinidadian",
+    "name": "Ultimate Slow Cooker (CrockPot) Curry Goat",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/ultimate-slow-cooker-curry-goat/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "3 pounds goat, bone-in, cleaned and trimmed",
+      "4 large potatoes, cut into quarters",
+      "1 Scotch Bonnet pepper, sliced or whole",
+      "2 tablespoons Caribbean Green Seasoning",
+      "2 tablespoons curry powder",
+      "1 large onion, diced",
+      "5 sprigs thyme",
+      "4-6 cloves garlic, smashed",
+      "3-5 pieces ginger, thinly sliced",
+      "8 pimento berries, whole",
+      "1 tomato, large; diced",
+      "3/4 tablespoon salt",
+      "1/4 teaspoon black pepper",
+      "2 scallions, chopped",
+      "2 tablespoons water"
+    ],
+    "description": "Classic Caribbean curry goat adapted for slow cooking, tender, spiced, and perfect for busy days.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Add all the ingredients to the slow cooker. Stir well to combine everything evenly. Set the slow cooker on low and cook for 5 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 4.5 hours, check for doneness. Skim off any surface fat using a spoon or paper towel. Remove Scotch Bonnet if used whole."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust salt. To thicken, mash a few pieces of potato or cook uncovered for 20–30 minutes more."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Top with fresh chopped cilantro before serving."
+      }
+    ],
+    "yields": 6,
+    "prepTime": null,
+    "cookTime": "PT5H",
+    "totalTime": "PT5H"
+  },
+  {
+    "id": "carib-caribbean-ultimate-trinidadian-corn-pie-corn-casserole",
+    "country": "Caribbean",
+    "name": "Ultimate Trinbagonian Corn Pie (Corn Casserole)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/ultimate-trinidadian-corn-pie-corn-casserole/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 cups corn kernels, divided",
+      "2 cups evaporated milk, divided",
+      "1 tablespoon honey",
+      "2 tablespoons butter",
+      "1 medium onion, diced fine",
+      "1 stalk celery, diced fine",
+      "1 teaspoon black pepper",
+      "4 sprigs thyme, leaves only",
+      "2 scallions, chopped fine",
+      "1/2 tablespoon salt, adjust to taste",
+      "2 pimento peppers, chopped",
+      "2 cloves garlic, crushed",
+      "1/2 teaspoon nutmeg, grated",
+      "1 egg",
+      "1 carrot, small, grated",
+      "1 cup fine cornmeal",
+      "1 cup aged cheddar cheese, grated, divided"
+    ],
+    "description": "A savory baked corn dish from Trinidad and Tobago, this corn pie is a comforting casserole made with sweet corn, cornmeal, and cheese. Popular alongside Sunday lunches and holiday spreads, it’s rich, flavorful, and satisfying—perfect for summer when corn is fresh, or as a cozy side in the winter months.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the butter in a deep saucepan over medium heat. Add the onion, celery, and black pepper. Cook for 2 minutes, then reduce heat to medium-low. Add thyme, scallions, salt, pimento peppers, and garlic."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 3 minutes, stir in the grated nutmeg and cook for 1 more minute."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a blender, puree 1/2 cup of the milk with 1/2 cup of the corn kernels and the honey to make corn milk. As explained in the Corn Pie recipe video below, the honey will further enhance the natural sweetness of the fresh sweet corn. Add the remaining kernels to the pot and stir well."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn the heat back to medium and add the corn milk and the remaining evaporated milk, then bring to a gentle simmer. Here’s where you’ll add the grated carrot for a bit of added texture and sweetness."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once small bubbles appear, stir in the cornmeal and half of the cheese. Mix well to combine."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Transfer mixture to a greased baking dish and top with the remaining cheese."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bake uncovered in a preheated 350°F (175°C) oven for 30–40 minutes, depending on thickness."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Look for a firm set with a golden cheesy top."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Allow to cool for 10–15 minutes before slicing and serving."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT15M",
+    "cookTime": "PT40M",
+    "totalTime": "PT55M"
+  },
+  {
+    "id": "carib-fusion-unforgettable-saltfish-buljol-pizza",
+    "country": "Fusion",
+    "name": "Unforgettable Saltfish Buljol Pizza",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/unforgettable-saltfish-buljol-pizza/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1/3 lb prepared salted cod, prepared and flaked",
+      "2 scallions, chopped",
+      "1 Bird’s Eye pepper, optional",
+      "1 cup sweet bell peppers, diced",
+      "1/2 tablespoon black pepper",
+      "1 large tomato, seeded and diced",
+      "1 1/2 tablespoons parsley, chopped",
+      "1 large shallot, thinly sliced",
+      "1/2 lemon, juiced",
+      "Pizza dough, store bought",
+      "1/4 cup corn meal",
+      "1/4 cup olive oil, divided"
+    ],
+    "description": "A bold Caribbean-inspired homemade pizza combining the bright freshness of traditional saltfish buljol with crisp pizza dough for an unforgettable island twist on pizza nigh",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Prepare the salted cod by either soaking overnight in water, soaking in boiling water for 20 minutes, or boiling for 5 to 7 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Rinse the fish, squeeze dry, then shred or flake into small pieces."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Check carefully for bones and remove any you find. Years ago I had a painful experience that saw me have to go to the emergency room with a bone logged in my throat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the shredded salted fish into a large bowl."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the tomato, scallion, shallot, parsley, black pepper, bird's eye pepper, and diced bell peppers."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the lemon juice and mix well to combine everything evenly."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Do not add additional salt as there will still be residual salt from the cured fish."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Preheat your wood fired oven."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If using a conventional (kitchen) oven, preheat to 500°F and heat a pizza stone or baking tray."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Dust your pizza peel with the corn meal."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stretch the dough gently by hand and place it onto the prepared peel."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Top generously with the Saltfish Buljol mixture."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Drizzle over half of the olive oil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Slide the pizza into the oven."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If using a wood fired oven, rotate every 20 to 30 seconds to prevent uneven burning."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bake for 3 to 5 minutes in a wood fired oven."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "If baking in a conventional oven, bake for 10 to 14 minutes until the crust is golden and cooked through."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Remove from the oven."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Drizzle on the remaining olive oil immediately."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Dust with grated parmesan if desired."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve with Chadon Beni Garlic Sauce or drizzle with Habanero Hot Honey ."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT25M",
+    "cookTime": null,
+    "totalTime": null
+  },
+  {
+    "id": "carib-caribbean-coconut-strawberry-ice-cream",
+    "country": "Caribbean",
+    "name": "Vegan Coconut Strawberry Ice Cream",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/coconut-strawberry-ice-cream/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 pound strawberries",
+      "3/4 cup sugar, adjust to taste",
+      "1 tablespoon lemon juice",
+      "Pinch of salt",
+      "2 cups coconut milk",
+      "2 tablespoons honey",
+      "1 teaspoon vanilla extract"
+    ],
+    "description": "A creamy, refreshing summer dessert made without dairy or eggs, perfect for hot weather and special diets.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Reserve 1/4 of the strawberries and crush roughly with 1–2 tablespoons of sugar using a mortar, pestle, or potato masher."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the remaining strawberries, sugar, lemon juice, salt, vanilla, and honey in a blender. Puree until smooth."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Combine the puree and crushed berries in a bowl. Stir in the coconut milk until fully incorporated."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Chill the mixture in the refrigerator for 1–2 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Transfer to your ice cream maker and churn according to manufacturer’s instructions, usually 20–30 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "For firmer texture, transfer to a lidded container and freeze until set. Enjoy!"
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT15M",
+    "cookTime": null,
+    "totalTime": "PT2H15M"
+  },
+  {
+    "id": "carib-trinidadian-baigan-aloo-vegan-curry-eggplant-potato",
+    "country": "Trinidadian",
+    "name": "Vegan Curry Eggplant and Potato (Baigan and Aloo)",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/baigan-aloo-vegan-curry-eggplant-potato/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 1/2 tablespoon olive oil",
+      "1 bulb medium onion, sliced",
+      "6 cloves garlic, smashed",
+      "1/2 teaspoon black pepper",
+      "1 Pimento pepper, aka seasoning pepper",
+      "3/4 Habanero pepper, remove the seeds",
+      "1 teaspoon grated ginger",
+      "3/4 tablespoon Caribbean Green Seasoning",
+      "4 medium potato, sliced",
+      "1/2 tablespoon salt",
+      "3 lbs eggplant, (baigan)",
+      "2 cups water",
+      "1 cup chopped tomato"
+    ],
+    "description": "This Baigan and Aloo recipe is a comforting Caribbean classic that combines the creamy texture of eggplant with the hearty bite of potatoes, all seasoned with a blend of spices and herbs. It’s a vegan and gluten-free dish that’s both flavorful and satisfying.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Heat the olive oil in a wide pan over medium heat. Add the sliced onion and smashed garlic. Reduce the heat to medium-low and cook for 3–4 minutes until softened."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stir in the chopped pimento pepper, habanero pepper, grated ginger, Caribbean green seasoning, and black pepper. Cook on medium-low for another 3 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the sliced potatoes to the pan and stir well to combine with the seasonings."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "After 5 minutes, add the cubed eggplant to the pan. Stir well; the eggplant will wilt, so don’t worry about the pan being full."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pour in the water and add the salt. Bring the mixture to a boil, then reduce the heat and simmer uncovered for 20 minutes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Add the chopped tomato to the pan. Cook for an additional 3 minutes, then taste and adjust the salt if necessary."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Once the potatoes are tender and the eggplant has broken down to create a thick sauce, remove from heat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Serve hot with Sada Roti or steamed white rice."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT20M",
+    "cookTime": "PT45M",
+    "totalTime": "PT1H5M"
+  },
+  {
+    "id": "carib-fusion-avocado-watercress-salad-with-a-clementine-vinaigrette-2",
+    "country": "Fusion",
+    "name": "Watercress and Avocado Salad with Clementine Vinaigrette",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/avocado-watercress-salad-with-a-clementine-vinaigrette-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "2 bunches watercress, trimmed",
+      "1 medium avocado, ripe, sliced",
+      "3 clementines, juiced",
+      "1/2 teaspoon Dijon mustard",
+      "1/4 teaspoon salt",
+      "1/4 teaspoon black pepper",
+      "1/3 cup olive oil",
+      "2 tablespoons red wine vinegar",
+      "1 tablespoon honey"
+    ],
+    "description": "A bright, refreshing salad made with peppery watercress, creamy avocado, and a zesty citrus vinaigrette. Naturally vegan and gluten-free, it’s the perfect side for grilled meals or a light lunch on its own.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "In a bowl or jar with a lid, combine clementine juice, Dijon mustard, salt, black pepper, olive oil, red wine vinegar, and honey. Whisk or shake to emulsify."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Wash and trim the watercress, removing thick stems. Place in a serving bowl."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Slice the avocado and arrange over the watercress."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Drizzle with the vinaigrette just before serving. Optionally, reserve a bit of dressing to serve at the table."
+      }
+    ],
+    "yields": null,
+    "prepTime": "PT10M",
+    "cookTime": null,
+    "totalTime": "PT10M"
+  },
+  {
+    "id": "carib-fusion-quick-herb-roasted-chicken-2",
+    "country": "Fusion",
+    "name": "Weeknight Herb‑Crusted Chicken Leg-Quarters",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/quick-herb-roasted-chicken-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "6 chicken chicken legs",
+      "4 garlic cloves, crushed",
+      "3/4 teaspoon dried thyme",
+      "3/4 teaspoon dried rosemary",
+      "3/4 teaspoon dried parsley",
+      "1/4 teaspoon onion powder",
+      "1/4 teaspoon black pepper",
+      "1/2 teaspoon coriander seeds, crushed",
+      "3/4 teaspoon red pepper flakes, optional",
+      "2 tablespoons olive oil",
+      "1 teaspoon salt"
+    ],
+    "description": "A flavorful weeknight dinner, an oven-baked chicken dish with crispy skin, seasoned with a fragrant herb and garlic crust.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat oven to 400 °F (200 °C). Line a baking tray with parchment paper."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a bowl, combine garlic, herbs, spices, olive oil, and salt into a paste."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Rub the mixture thoroughly under and over the skin of each leg quarter."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Arrange leg quarters skin-up on the tray, leaving space between each piece."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Bake for 1 hour 10 minutes, or until skin is crisp and internal temperature reaches 165 °F (74 °C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Let rest for 5 minutes before serving."
+      }
+    ],
+    "yields": 4,
+    "prepTime": "PT10M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H10M"
+  },
+  {
+    "id": "carib-fusion-simple-herb-roasted-chicken-2",
+    "country": "Fusion",
+    "name": "Whole Roasted Chicken with Herb Butter",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/simple-herb-roasted-chicken-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "4 tablespoons olive oil",
+      "1 tablespoon parsley, chopped",
+      "1 tablespoon sage, chopped",
+      "1 tablespoon rosemary, chopped",
+      "1 tablespoon thyme, leaves",
+      "2 cloves garlic, crushed",
+      "1/2 teaspoon salt",
+      "1/4 teaspoon black pepper",
+      "1 whole chicken, 4-5 lb",
+      "4 sage leaves",
+      "2 sprigs rosemary",
+      "2 stalks scallions",
+      "4 sprigs thyme"
+    ],
+    "description": "A simple, oven-roasted chicken infused with island herbs and golden, crispy skin.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Preheat oven to 400 °F (200 °C)."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Clean the chicken and trim away excess fat."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "In a small bowl, combine olive oil, chopped parsley, sage, rosemary, thyme, and garlic to create an herb-garlic oil."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Loosen the skin over the chicken breast and thighs, then spread half of the herb-garlic oil under the skin. Rub the remaining herb-garlic oil over the outside of the chicken."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Stuff the cavity with whole sage, rosemary, thyme, and scallions."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place the bird on a roasting rack set inside a roasting pan. Roast uncovered for 1 hour 20 minutes, basting every 15 minutes with pan juices."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Broil for 3 minutes to crisp the skin, watching carefully to prevent burning."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Tent with foil and let rest for 5–10 minutes before carving."
+      }
+    ],
+    "yields": 6,
+    "prepTime": "PT20M",
+    "cookTime": "PT1H",
+    "totalTime": "PT1H20M"
+  },
+  {
+    "id": "carib-caribbean-zesty-garlic-flavored-avocado-yogurt-dip-2",
+    "country": "Caribbean",
+    "name": "Zesty Garlic Avocado Yogurt Dip",
+    "source": "CaribbeanPot.com",
+    "sourceUrl": "https://caribbeanpot.com/zesty-garlic-flavored-avocado-yogurt-dip-2/",
+    "author": "Chris De La Rosa",
+    "ingredients": [
+      "1 – 1.5 cups plain Greek yogurt",
+      "1 ripe avocado",
+      "1 clove garlic",
+      "1/4 cup cilantro, chopped",
+      "1/2 lemon, juiced",
+      "1 pinch sea salt",
+      "1/4 pepper scotch bonnet pepper, seeds removed",
+      "fresh ground black pepper, to taste",
+      "1 pinch sugar"
+    ],
+    "description": "This creamy dip combines ripe avocado, Greek yogurt, fresh herbs, and a hint of Caribbean heat. Ideal with chips, wings, or as a fresh sandwich spread.",
+    "instructions": [
+      {
+        "@type": "HowToStep",
+        "text": "Slice the avocado in half, remove the seed, and scoop out the flesh. Roughly dice it."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Finely dice the garlic and scotch bonnet pepper. Roughly chop the cilantro."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Place avocado, yogurt, garlic, scotch bonnet, cilantro, lemon juice, salt, sugar, and black pepper into a food processor or blender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Pulse until smooth and creamy. Scrape down the sides as needed to ensure full incorporation."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Taste and adjust the seasoning to your liking. Serve chilled."
+      }
+    ],
+    "yields": 2,
+    "prepTime": "PT10M",
+    "cookTime": null,
+    "totalTime": "PT10M"
   }
 ];

@@ -29,6 +29,7 @@ import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.webkit.JavascriptInterface;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,6 +47,7 @@ public final class MainActivity extends Activity {
     private TextView loadingHint;
     private WebContentStore store;
     private UpdateManager updates;
+    private UpdateManager.Manifest pendingUpdate;
     private BroadcastReceiver downloadReceiver;
     private final Handler handler = new Handler(Looper.getMainLooper());
     private boolean loadFailed;
@@ -146,6 +148,7 @@ public final class MainActivity extends Activity {
             settings.setForceDark(WebSettings.FORCE_DARK_OFF);
         }
 
+        webView.addJavascriptInterface(new MiseBridge(), "MiseNative");
         webView.setBackgroundColor(CHARCOAL);
         webView.setOverScrollMode(View.OVER_SCROLL_NEVER);
         webView.setWebChromeClient(new WebChromeClient());
@@ -239,6 +242,109 @@ public final class MainActivity extends Activity {
         loading.setVisibility(View.VISIBLE);
         loadingHint.setText(R.string.load_error);
         Log.w(TAG, "Web content failed: " + description);
+    }
+
+    /** Exposes build and update state to the web layer as window.MiseNative. */
+    private final class MiseBridge {
+
+        @JavascriptInterface
+        public String buildInfo() {
+            org.json.JSONObject info = new org.json.JSONObject();
+            try {
+                info.put("versionName", BuildConfig.VERSION_NAME);
+                info.put("versionCode", BuildConfig.VERSION_CODE);
+                info.put("webVersionCode", store.getActiveVersion());
+                info.put("app", true);
+            } catch (org.json.JSONException ignored) { }
+            return info.toString();
+        }
+
+        @JavascriptInterface
+        public void checkNow() {
+            handler.post(() -> updates.check(new UpdateManager.Listener() {
+                @Override
+                public void onResult(final UpdateManager.Manifest manifest, final boolean webUpdated) {
+                    if (isFinishing() || isDestroyed() || webView == null) return;
+                    if (webUpdated) {
+                        String updatedName = manifest != null ? manifest.versionName : BuildConfig.VERSION_NAME;
+                        int updatedContent = manifest != null && manifest.web != null ? manifest.web.versionCode : 0;
+                        org.json.JSONObject json = new org.json.JSONObject();
+                        try {
+                            json.put("status", "updated");
+                            json.put("versionName", updatedName);
+                            json.put("webVersionCode", updatedContent);
+                        } catch (org.json.JSONException ignored) { }
+                        emit(json);
+                        finishWebUpdateAfterLoad();
+                        Toast.makeText(MainActivity.this,
+                                "Mise content updated to " + updatedName, Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    boolean apkAvailable = manifest != null
+                            && manifest.apk != null
+                            && manifest.versionCode > BuildConfig.VERSION_CODE;
+                    org.json.JSONObject json = new org.json.JSONObject();
+                    try {
+                        if (apkAvailable) {
+                            pendingUpdate = manifest;
+                            json.put("status", "apk");
+                            json.put("versionName", manifest.versionName);
+                            json.put("versionCode", manifest.versionCode);
+                            json.put("webVersionCode", manifest.web != null ? manifest.web.versionCode : 0);
+                            json.put("notes", manifest.notes);
+                        } else {
+                            json.put("status", "uptodate");
+                            json.put("versionName", BuildConfig.VERSION_NAME);
+                            json.put("versionCode", BuildConfig.VERSION_CODE);
+                            json.put("webVersionCode", store.getActiveVersion());
+                        }
+                    } catch (org.json.JSONException ignored) { }
+                    emit(json);
+                }
+
+                @Override
+                public void onError(final String message) {
+                    org.json.JSONObject json = new org.json.JSONObject();
+                    try {
+                        json.put("status", "error");
+                        json.put("message", message == null ? "unknown error" : message);
+                    } catch (org.json.JSONException ignored) { }
+                    emit(json);
+                }
+            }, /* force */ true));
+        }
+
+        @JavascriptInterface
+        public void applyUpdate() {
+            handler.post(() -> {
+                if (pendingUpdate != null && !isFinishing() && !isDestroyed()) {
+                    showUpdateDialog(pendingUpdate);
+                }
+            });
+        }
+
+        private void emit(final org.json.JSONObject payload) {
+            handler.post(() -> {
+                if (webView == null) return;
+                final String argument = payload.toString();
+                webView.evaluateJavascript(
+                        "window.__miseUpdateResult && window.__miseUpdateResult(" + argument + ")", null);
+            });
+        }
+
+        /** Mirrors the reload the silent startup check does after a content update. */
+        private void finishWebUpdateAfterLoad() {
+            handler.post(() -> {
+                if (webView == null) return;
+                String current = webView.getUrl();
+                webView.clearCache(true);
+                if (current != null && current.startsWith("https://" + WebContentStore.HOST + "/")) {
+                    webView.loadUrl(current);
+                } else {
+                    loadStart();
+                }
+            });
+        }
     }
 
     private void checkForUpdates() {

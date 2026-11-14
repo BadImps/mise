@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-label="A jar of pickles and peppers">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="40%" r="78%">
+      <stop offset="0" stop-color="#2b2e33"/>
+      <stop offset="1" stop-color="#17191b"/>
+    </radialGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#ffffff" fill-opacity="0.045"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="270" fill="url(#halo)"/>
+  <rect width="480" height="270" fill="url(#dots)"/>
+  <ellipse cx="240" cy="203" rx="140" ry="14" fill="#000000" fill-opacity="0.38"/>
+  <path d="M168 88 h76 a14 14 0 0 1 14 14 v106 a16 16 0 0 1 -16 16 h-72 a16 16 0 0 1 -16 -16 V102 a14 14 0 0 1 14 -14 Z" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M168 88 v-8 a10 10 0 0 1 10-10 h56 a10 10 0 0 1 10 10 v8" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M190 120 q10 10 0 20 M232 118 q-10 12 0 22 M212 160 q8 8 0 16" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.85"/>
+    <path d="M320 140 q30 -14 44 8 q-18 18 -44 0 Z M328 152 l-12 14" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+    <path d="M320 112 q22 -22 40 2 q-14 18 -40 0 Z M326 120 l-10 10" stroke="#cdb069" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.75"/>
+</svg>
