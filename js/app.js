@@ -65,6 +65,8 @@
     timer: 'mise.timer.v1',
     scale: 'mise.scale.v1',
     pantry: 'mise.pantry.v1',
+    favorites: 'mise.favorites.v1',
+    recentCooks: 'mise.recent-cooks.v1',
   };
 
   const store = {
@@ -222,6 +224,71 @@
     if (recipe.description) return recipe.description;
     const c = coverStats(recipe);
     return `${recipe.source} publishes ${recipe.stats.steps} steps for this recipe. Mise traced ${c.named} of ${c.checked} listed ingredients into them and kept the rest as written.`;
+  }
+
+  /* ---------- favorites & recent cooks ---------- */
+  const savedFavorites = Array.isArray(store.get(KEY.favorites, [])) ? store.get(KEY.favorites, []) : [];
+  const favoriteSet = new Set(savedFavorites.filter((id) => typeof id === 'string'));
+  let favorites = savedFavorites.filter((id) => typeof id === 'string' && favoriteSet.has(id));
+
+  const savedRecent = Array.isArray(store.get(KEY.recentCooks, [])) ? store.get(KEY.recentCooks, []) : [];
+  let recentCooks = savedRecent.filter((entry) => entry && typeof entry.recipeId === 'string');
+
+  function isFavorite(id) {
+    return favoriteSet.has(id);
+  }
+
+  function toggleFavorite(id) {
+    if (favoriteSet.has(id)) {
+      favoriteSet.delete(id);
+      favorites = favorites.filter((value) => value !== id);
+    } else {
+      favoriteSet.add(id);
+      favorites = favorites.concat(id);
+    }
+    store.set(KEY.favorites, favorites);
+    return favoriteSet.has(id);
+  }
+
+  function favoriteRecipes() {
+    return favorites.map((id) => getRecipe(id)).filter(Boolean);
+  }
+
+  function recordCook(recipe, elapsedMs) {
+    const entry = {
+      recipeId: recipe.id,
+      name: recipe.name,
+      source: recipe.source,
+      completedAt: Date.now(),
+      elapsedMs: Math.max(0, Number(elapsedMs) || 0),
+    };
+    recentCooks.unshift(entry);
+    if (recentCooks.length > 60) recentCooks = recentCooks.slice(0, 60);
+    store.set(KEY.recentCooks, recentCooks);
+  }
+
+  function cookedSummary() {
+    const map = new Map();
+    for (const entry of recentCooks) {
+      const existing = map.get(entry.recipeId);
+      if (!existing) {
+        map.set(entry.recipeId, {
+          recipeId: entry.recipeId,
+          name: entry.name,
+          source: entry.source,
+          count: 1,
+          lastCompletedAt: entry.completedAt,
+          elapsedMs: entry.elapsedMs,
+        });
+      } else {
+        existing.count += 1;
+        if (entry.completedAt > existing.lastCompletedAt) {
+          existing.lastCompletedAt = entry.completedAt;
+          existing.elapsedMs = entry.elapsedMs;
+        }
+      }
+    }
+    return [...map.values()].sort((a, b) => b.lastCompletedAt - a.lastCompletedAt);
   }
 
   function usageTrack(recipe, ing) {
@@ -402,6 +469,7 @@
       lastPath = key;
     }
     syncCookClock();
+    syncCookBadge();
   }
 
   /* ---------- home ---------- */
@@ -438,7 +506,11 @@
       ${featured ? featuredHero(featured, recentlyOpened) : ''}
 
       <div class="home-lower">
-        ${kitchenPanel(all)}
+        <div class="home-main">
+          ${kitchenPanel(all)}
+          ${favoritesPanel()}
+          ${recentlyCookedPanel()}
+        </div>
         <aside class="home-aside">
           ${chefTeaser()}
           <section class="panel home-note" aria-labelledby="home-note-title">
@@ -458,7 +530,7 @@
     const selected = chefSelectedIds().length;
     return `<section class="panel chef-teaser" aria-labelledby="chef-teaser-title">
       <div class="panel-head">
-        <div class="meta-line">${icon('chef')}Offline pantry matcher</div>
+        <div class="meta-line">${icon('chef')}The pantry matcher</div>
         <span class="pill soft">No account</span>
       </div>
       <h2 id="chef-teaser-title">Ask the Chef</h2>
@@ -507,6 +579,90 @@
           </div>
         </div>
       </div>
+    </section>`;
+  }
+
+  function favoritesPanel() {
+    const list = favoriteRecipes();
+    const rows = list.map((recipe) => {
+      const c = coverStats(recipe);
+      return `<div class="rrow favorites-row">
+        ${imgWrap(recipe.image, recipe.name, 'rthumb')}
+        <span class="rrow-copy">
+          <a class="rname" href="#/recipe/${esc(recipe.id)}">${esc(recipe.name)}</a>
+          <span class="rsub">${esc(recipe.source)}${recipe.cuisine ? ' / ' + esc(recipe.cuisine) : ''}</span>
+        </span>
+        <span class="meter-line ${c.missing ? 'gap' : ''}">
+          <span class="meter"><span style="width:${c.pct}%"></span></span>
+          <span class="ratio"><b>${c.named}</b><span>/${c.checked}</span></span>
+        </span>
+        <span class="rnum">${recipe.stats.steps} <span>steps</span></span>
+        <button class="icon-round fav-toggle is-on" type="button" data-action="toggle-favorite" data-id="${esc(recipe.id)}" aria-pressed="true" aria-label="Remove ${esc(recipe.name)} from favorites">${icon('star')}</button>
+      </div>`;
+    }).join('');
+    return `<section class="panel list-block favorites-panel" aria-labelledby="favorites-title">
+      <div class="panel-head">
+        <h2 id="favorites-title">My Favorite Recipes</h2>
+        <span class="pill soft" id="favorites-count">${list.length} saved</span>
+      </div>
+      ${rows
+        ? `<div class="recipe-rows favorites-rows" id="favorites-rows">${rows}</div>`
+        : `<div class="home-empty" id="favorites-rows">${icon('star')}<div><b>No favorites yet.</b> Open a recipe and tap the star to pin it here.</div></div>`}
+    </section>`;
+  }
+
+  function refreshFavoritesPanel() {
+    const rows = $('#favorites-rows');
+    if (!rows) return;
+    const list = favoriteRecipes();
+    if (!list.length) {
+      rows.outerHTML = `<div class="home-empty" id="favorites-rows">${icon('star')}<div><b>No favorites yet.</b> Open a recipe and tap the star to pin it here.</div></div>`;
+    } else {
+      rows.innerHTML = list.map((recipe) => {
+        const c = coverStats(recipe);
+        return `<div class="rrow favorites-row">
+          ${imgWrap(recipe.image, recipe.name, 'rthumb')}
+          <span class="rrow-copy">
+            <a class="rname" href="#/recipe/${esc(recipe.id)}">${esc(recipe.name)}</a>
+            <span class="rsub">${esc(recipe.source)}${recipe.cuisine ? ' / ' + esc(recipe.cuisine) : ''}</span>
+          </span>
+          <span class="meter-line ${c.missing ? 'gap' : ''}">
+            <span class="meter"><span style="width:${c.pct}%"></span></span>
+            <span class="ratio"><b>${c.named}</b><span>/${c.checked}</span></span>
+          </span>
+          <span class="rnum">${recipe.stats.steps} <span>steps</span></span>
+          <button class="icon-round fav-toggle is-on" type="button" data-action="toggle-favorite" data-id="${esc(recipe.id)}" aria-pressed="true" aria-label="Remove ${esc(recipe.name)} from favorites">${icon('star')}</button>
+        </div>`;
+      }).join('');
+    }
+    const counter = $('#favorites-count');
+    if (counter) counter.textContent = `${list.length} saved`;
+  }
+
+  function recentlyCookedPanel() {
+    const all = cookedSummary();
+    const top = all.slice(0, 6);
+    const totalCooks = recentCooks.length;
+    const rows = top.map((entry) => {
+      const recipe = getRecipe(entry.recipeId);
+      return `<div class="rrow recent-row">
+        ${recipe ? imgWrap(recipe.image, recipe.name, 'rthumb') : `<span class="rthumb recent-fallback">${icon('pot')}</span>`}
+        <span class="rrow-copy">
+          ${recipe ? `<a class="rname" href="#/recipe/${esc(recipe.id)}">${esc(entry.name)}</a>` : `<span class="rname">${esc(entry.name)}</span>`}
+          <span class="rsub">${entry.count} cook${entry.count === 1 ? '' : 's'} &middot; last ${formatDate(new Date(entry.lastCompletedAt).toISOString())} &middot; ${esc(entry.source)}</span>
+        </span>
+        ${recipe ? `<a class="icon-round recent-go" href="#/cook/${esc(recipe.id)}" aria-label="Cook ${esc(entry.name)} again">${icon('play')}</a>` : ''}
+      </div>`;
+    }).join('');
+    return `<section class="panel list-block recently-cooked" aria-labelledby="recent-title">
+      <div class="panel-head">
+        <h2 id="recent-title">Recently Cooked</h2>
+        <span class="pill soft">${totalCooks} total</span>
+      </div>
+      ${rows
+        ? `<div class="recipe-rows">${rows}</div>`
+        : `<div class="home-empty">${icon('pot')}<div><b>Nothing cooked yet.</b> Finish a cook and Mise records it here.</div></div>`}
+      ${all.length > 6 ? `<p class="meta recent-more">and ${all.length - 6} more &mdash; see them in <a href="#/library">the library</a>.</p>` : ''}
     </section>`;
   }
 
@@ -1008,7 +1164,7 @@
     return `<div class="page chef-page">
       <div class="title-row chef-title">
         <div>
-          <p class="eyebrow">Offline pantry matcher</p>
+          <p class="eyebrow">The pantry matcher</p>
           <h1>Ask the Chef</h1>
           <p class="sub">Tell it what is in your kitchen. It checks the ingredients published with every recipe already bundled in Mise, then ranks what your pantry covers best. No network call and no invented substitutions.</p>
         </div>
@@ -1044,7 +1200,7 @@
               <h2 id="chef-results-title">Tonight's options</h2>
               <p class="meta" id="chef-result-summary">${esc(chefSummary(data))}</p>
             </div>
-            <span class="chef-offline">${icon('chef')}Offline</span>
+            <span class="chef-local">${icon('chef')}Stays on this device</span>
           </div>
           <div id="chef-result-body">${chefResultsHtml(data)}</div>
           <p class="chef-disclaimer">${icon('info')}<span>The Chef is a deterministic pantry matcher, not a language model. It preserves each publisher's ingredients and steps; it does not create substitutions or claim a recipe is complete.</span></p>
@@ -1635,6 +1791,7 @@
           <p class="sub">${esc(descriptionFor(recipe))}</p>
         </div>
         <div class="title-actions">
+          <button class="btn icon ghost fav-toggle${isFavorite(recipe.id) ? ' is-on' : ''}" type="button" data-action="toggle-favorite" data-id="${esc(recipe.id)}" aria-pressed="${isFavorite(recipe.id)}" aria-label="${isFavorite(recipe.id) ? 'Remove from' : 'Save to'} favorites">${icon('star')}</button>
           ${recipe.sourceUrl ? `<a class="btn" href="${esc(safeUrl(recipe.sourceUrl))}" target="_blank" rel="noopener noreferrer">${icon('external')}Source</a>` : ''}
           <a class="btn primary" href="#/cook/${esc(recipe.id)}">${icon('play')}Start cooking</a>
         </div>
@@ -2023,6 +2180,7 @@
             : 'This cook is finished. Open the recipe to see its structure again.'}</p>
         </div>
         <div class="title-actions">
+          <button class="btn icon ghost fav-toggle${isFavorite(recipe.id) ? ' is-on' : ''}" type="button" data-action="toggle-favorite" data-id="${esc(recipe.id)}" aria-pressed="${isFavorite(recipe.id)}" aria-label="${isFavorite(recipe.id) ? 'Remove from' : 'Save to'} favorites">${icon('star')}</button>
           <a class="btn primary" href="#/library">Back to library</a>
         </div>
       </div>
@@ -2250,6 +2408,16 @@
     }
   }
 
+  function syncCookBadge() {
+    const timer = store.get(KEY.timer, null);
+    const cooking = store.get(KEY.session, null);
+    const active = Boolean(
+      (timer && timer.endsAt && timer.endsAt > Date.now())
+      || (cooking && cooking.step && !cooking.complete)
+    );
+    document.body.classList.toggle('cook-active', active);
+  }
+
   function syncCookClock() {
     const node = document.querySelector('[data-elapsed]');
     if (!node || !session) return;
@@ -2308,6 +2476,7 @@
   function finishCook(recipe) {
     const finishedAt = Date.now();
     const startedAt = session ? session.startedAt : finishedAt;
+    recordCook(recipe, Math.max(0, finishedAt - startedAt));
     store.set(KEY.lastcook, {
       recipeId: recipe.id,
       startedAt,
@@ -2619,49 +2788,32 @@
   }
 
   function sourcesListHtml() {
-    return `<div class="source-list">
-        <div>
-          <h3>TheMealDB</h3>
-          <p>Live search, four bundled recipes, the world collection and the African and Caribbean snapshots come from TheMealDB's public API. Each record keeps its meal id and links back to <a href="https://www.themealdb.com" target="_blank" rel="noopener noreferrer">themealdb.com</a>. TheMealDB gives no total time or yield, so Mise shows a dash rather than an estimate.</p>
-        </div>
-        <div>
-          <h3>Food &amp; Wine</h3>
-          <p>Classic Beef Chili is from <a href="https://www.foodandwine.com/recipes/classic-beef-chili" target="_blank" rel="noopener noreferrer">Food &amp; Wine</a>, recipe by Robby Melvin, photograph by Caitlin Bensel. The record is the page's own schema.org Recipe data. Step photographs in that data are by Molly Bolton and are linked, not re-hosted.</p>
-        </div>
-        <div>
-          <h3>Chef Lola's Kitchen</h3>
-          <p>Nigerian jollof rice, suya, egusi, moin moin, puff puff, pepper soup, efo riro, doro wat, injera, kelewele, nyama choma, mandazi and East African chapati are read from <a href="https://cheflolaskitchen.com" target="_blank" rel="noopener noreferrer">cheflolaskitchen.com</a>. Ingredients and steps keep the publisher's wording; each record links to its page.</p>
-        </div>
-        <div>
-          <h3>196 Flavors</h3>
-          <p>Bobotie, waakye, oil down, pom, Johnny cake, Bajan salt fish cakes, locrio de pica pica, sawine, pernil asado, pelau, soup joumou, Trinidad black cake and Jamaican patty are read from <a href="https://www.196flavors.com" target="_blank" rel="noopener noreferrer">196flavors.com</a>. Mise does not re-host their photographs.</p>
-        </div>
-        <div>
-          <h3>Cooking with Ria</h3>
-          <p>Trinidadian and Caribbean dishes read from <a href="https://cookingwithria.com" target="_blank" rel="noopener noreferrer">cookingwithria.com</a>, by CookingwithRia: 406 records covering the site's full recipe-card set, kept from each post's published card — the same data served as its schema.org Recipe block. Photographs are not bundled or hot-linked. Ingredients, steps and times keep the publisher's wording; each record links to its page, and multi-recipe posts link to each recipe card.</p>
-        </div>
-        <div>
-          <h3>CaribbeanPot.com</h3>
-          <p>Caribbean dishes read from <a href="https://caribbeanpot.com" target="_blank" rel="noopener noreferrer">caribbeanpot.com</a>, by Chris De La Rosa and Sandie Markle: 272 records covering every recipe card that carries a full ingredients list — the same data served as each page's schema.org Recipe block. Photographs are not bundled or hot-linked. Multi-recipe posts link to each recipe card; six posts whose recipes ship no ingredient list anywhere are excluded rather than guessed.</p>
-        </div>
-        <div>
-          <h3>That Girl Cooks Healthy and BBC Good Food</h3>
-          <p>Caribbean dishes from <a href="https://thatgirlcookshealthy.com" target="_blank" rel="noopener noreferrer">thatgirlcookshealthy.com</a> and <a href="https://www.bbcgoodfood.com" target="_blank" rel="noopener noreferrer">bbcgoodfood.com</a> are read the same way, from each page's own schema.org Recipe data. Vegan versions keep the word “vegan” in their names.</p>
-        </div>
-        <div>
-          <h3>Global recipe research</h3>
-          <p>The <a href="#/research">Global research</a> screen documents a 10 Nov 2026 audit of TheMealDB area filters: 195 area labels, ${GLOBAL_CENSUS.length} areas with matches and ${GLOBAL_CENSUS.reduce((sum, entry) => sum + entry[1], 0)} matches. The world kitchen keeps ${GLOBAL.records.length} recognition-led records; African and Caribbean recipes are collected in their own tabs.</p>
-        </div>
-        <div>
-          <h3>Manrope, Fraunces and Caveat</h3>
-          <p>Manrope, Fraunces and Caveat are bundled typefaces under the SIL Open Font License 1.1. Caveat is used only for the ingredient names on the cook-mode binder page.</p>
-        </div>
-        <div>
-          <h3>Cover plates</h3>
-          <p>Records with no publisher photograph carry one of Mise's own programmatic SVG plates — charcoal and brass line art, one per dish style. They are drawn in <code>tools/build-plates.mjs</code> and are not model-generated images.</p>
-        </div>
+    const item = (name, body) => `<details class="source-item">
+      <summary><span class="source-name">${name}</span><span class="source-plus" aria-hidden="true">${icon('plus')}</span></summary>
+      <div class="source-item-body">${body}</div>
+    </details>`;
+    return `<details class="source-all" id="source-all">
+      <summary class="source-all-summary">
+        <span class="source-all-name">
+          <b id="settings-sources-title">Sources, credits and limits</b>
+          <span class="meta">Every recipe in Mise is a published record. Mise adds structure, never prose.</span>
+        </span>
+        <span class="source-plus" aria-hidden="true">${icon('plus')}</span>
+      </summary>
+      <div class="source-all-body">
+        ${item('TheMealDB', `<p>Live search, four bundled recipes, the world collection and the African and Caribbean snapshots come from TheMealDB's public API. Each record keeps its meal id and links back to <a href="https://www.themealdb.com" target="_blank" rel="noopener noreferrer">themealdb.com</a>. TheMealDB gives no total time or yield, so Mise shows a dash rather than an estimate.</p>`)}
+        ${item('Food &amp; Wine', `<p>Classic Beef Chili is from <a href="https://www.foodandwine.com/recipes/classic-beef-chili" target="_blank" rel="noopener noreferrer">Food &amp; Wine</a>, recipe by Robby Melvin, photograph by Caitlin Bensel. The record is the page's own schema.org Recipe data. Step photographs in that data are by Molly Bolton and are linked, not re-hosted.</p>`)}
+        ${item('Chef Lola\'s Kitchen', `<p>Nigerian jollof rice, suya, egusi, moin moin, puff puff, pepper soup, efo riro, doro wat, injera, kelewele, nyama choma, mandazi and East African chapati are read from <a href="https://cheflolaskitchen.com" target="_blank" rel="noopener noreferrer">cheflolaskitchen.com</a>. Ingredients and steps keep the publisher's wording; each record links to its page.</p>`)}
+        ${item('196 Flavors', `<p>Bobotie, waakye, oil down, pom, Johnny cake, Bajan salt fish cakes, locrio de pica pica, sawine, pernil asado, pelau, soup joumou, Trinidad black cake and Jamaican patty are read from <a href="https://www.196flavors.com" target="_blank" rel="noopener noreferrer">196flavors.com</a>. Mise does not re-host their photographs.</p>`)}
+        ${item('Cooking with Ria', `<p>Trinidadian and Caribbean dishes read from <a href="https://cookingwithria.com" target="_blank" rel="noopener noreferrer">cookingwithria.com</a>, by CookingwithRia: 406 records covering the site's full recipe-card set, kept from each post's published card — the same data served as its schema.org Recipe block. Photographs are not bundled or hot-linked. Ingredients, steps and times keep the publisher's wording; each record links to its page, and multi-recipe posts link to each recipe card.</p>`)}
+        ${item('CaribbeanPot.com', `<p>Caribbean dishes read from <a href="https://caribbeanpot.com" target="_blank" rel="noopener noreferrer">caribbeanpot.com</a>, by Chris De La Rosa and Sandie Markle: 272 records covering every recipe card that carries a full ingredients list — the same data served as each page's schema.org Recipe block. Photographs are not bundled or hot-linked. Multi-recipe posts link to each recipe card; six posts whose recipes ship no ingredient list anywhere are excluded rather than guessed.</p>`)}
+        ${item('That Girl Cooks Healthy and BBC Good Food', `<p>Caribbean dishes from <a href="https://thatgirlcookshealthy.com" target="_blank" rel="noopener noreferrer">thatgirlcookshealthy.com</a> and <a href="https://www.bbcgoodfood.com" target="_blank" rel="noopener noreferrer">bbcgoodfood.com</a> are read the same way, from each page's own schema.org Recipe data. Vegan versions keep the word “vegan” in their names.</p>`)}
+        ${item('Global recipe research', `<p>The <a href="#/research">Global research</a> screen documents a 10 Nov 2026 audit of TheMealDB area filters: 195 area labels, ${GLOBAL_CENSUS.length} areas with matches and ${GLOBAL_CENSUS.reduce((sum, entry) => sum + entry[1], 0)} matches. The world kitchen keeps ${GLOBAL.records.length} recognition-led records; African and Caribbean recipes are collected in their own tabs.</p>`)}
+        ${item('Manrope, Fraunces and Caveat', `<p>Manrope, Fraunces and Caveat are bundled typefaces under the SIL Open Font License 1.1. Caveat is used only for the ingredient names on the cook-mode binder page.</p>`)}
+        ${item('Cover plates', `<p>Records with no publisher photograph carry one of Mise's own programmatic SVG plates — charcoal and brass line art, one per dish style. They are drawn in <code>tools/build-plates.mjs</code> and are not model-generated images.</p>`)}
+        <p class="limit-note"><strong>Limits, stated plainly.</strong> Live links are read in your browser, so a site with a strict CORS policy or a bot wall may refuse; paste the page source instead. Timers are the durations written in a step, and a range counts down from the lower bound while its label keeps the range. Ingredient-to-step links are word matches: an ingredient a step uses without naming stays a gap. Scaled amounts are rounded to the nearest 1/8. One timer runs at a time.</p>
       </div>
-      <p class="limit-note"><strong>Limits, stated plainly.</strong> Live links are read in your browser, so a site with a strict CORS policy or a bot wall may refuse; paste the page source instead. Timers are the durations written in a step, and a range counts down from the lower bound while its label keeps the range. Ingredient-to-step links are word matches: an ingredient a step uses without naming stays a gap. Scaled amounts are rounded to the nearest 1/8. One timer runs at a time.</p>`;
+    </details>`;
   }
 
   function settingsView() {
@@ -2690,13 +2842,26 @@
           ${importCard()}
 
           <section class="panel sources-panel" id="settings-sources" aria-labelledby="settings-sources-title" tabindex="-1">
-            <div class="panel-head">
-              <div>
-                <h2 id="settings-sources-title">Sources, credits and limits</h2>
-                <p class="meta">Every recipe in Mise is a published record. Mise adds structure, never prose.</p>
-              </div>
-            </div>
             ${sourcesListHtml()}
+          </section>
+          <section class="panel research-panel" aria-labelledby="settings-research-title">
+            <details class="settings-research" id="settings-research">
+              <summary class="research-summary">
+                <span class="research-summary-main">
+                  ${icon('globe')}
+                  <span class="research-summary-text">
+                    <b id="settings-research-title">Global research</b>
+                    <span class="meta">TheMealDB's area audit · 10 Nov 2026</span>
+                  </span>
+                </span>
+                <span class="source-plus" aria-hidden="true">${icon('plus')}</span>
+              </summary>
+              <div class="settings-research-body">
+                <p class="meta">${GLOBAL_CENSUS.length} areas with matches — ${GLOBAL_CENSUS.reduce((sum, entry) => sum + entry[1], 0)} matches — across 195 area labels. ${esc((CARIBBEAN.meals || []).length)} Jamaican records come from the API; every other Caribbean cuisine comes from publisher records instead, never by substitution. The world kitchen keeps ${GLOBAL.records.length} recognition-led records.</p>
+                <p class="meta">Nothing is renamed, guessed or interpolated: when TheMealDB reports zero results for a cuisine, Mise shows who provided it instead.</p>
+                <a class="section-link" href="#/research">Open Global research ${icon('arrow-right')}</a>
+              </div>
+            </details>
           </section>
         </div>
 
@@ -2843,6 +3008,22 @@
       }
       return;
     }
+    if (action === 'toggle-favorite') {
+      event.preventDefault();
+      const id = target.dataset.id || '';
+      const recipe = getRecipe(id);
+      if (!recipe) return;
+      const on = toggleFavorite(id);
+      $$(`[data-action="toggle-favorite"][data-id="${CSS.escape(id)}"]`).forEach((button) => {
+        button.setAttribute('aria-pressed', String(on));
+        button.classList.toggle('is-on', on);
+        button.setAttribute('aria-label', (on ? 'Remove from' : 'Save to') + ' favorites');
+      });
+      announce((on ? 'Saved ' : 'Removed ') + recipe.name + (on ? ' to favorites.' : ' from favorites.'));
+      refreshFavoritesPanel();
+      return;
+    }
+
     if (action === 'settings-clear-pantry') {
       pantrySelection = new Set();
       savePantry();

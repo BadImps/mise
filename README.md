@@ -1,6 +1,6 @@
 # Mise
 
-Mise is a source-attributed recipe book with a cook mode built to be read at arm's length. It runs as a plain offline web app and ships to Android as a native WebView wrapper for phones, foldables, and tablets.
+Mise is a source-attributed recipe book with a cook mode built to be read at arm's length. It runs as a plain web app with no server dependencies and ships to Android as a native WebView wrapper for phones, foldables, and tablets.
 
 The app keeps 253 recipe records in the bundled library:
 
@@ -16,7 +16,7 @@ Publisher recipe text is preserved as published. Missing yields, times, or units
 - **Library and World browsing** across the bundled collection, with search and cuisine filters.
 - **Africa and Caribbean tabs** that keep multi-source coverage visible instead of reducing a region to one database's results.
 - **Cook mode** that shows the full instruction text, one active step at a time, with inline timers and a persistent timer dock.
-- **Offline recipe storage** in `localStorage`, so imported and saved recipes survive restarts.
+- **Local recipe storage** in `localStorage`, so imported and saved recipes survive restarts.
 - **Live TheMealDB search** for recipes outside the bundled collection.
 - **Tablet layouts** driven by the existing responsive CSS, with unrestricted orientation and multi-window resizing in Android.
 
