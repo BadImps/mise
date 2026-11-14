@@ -320,6 +320,16 @@ textarea.input { height: auto; min-height: 160px; padding: 10px 12px; resize: ve
 .chipbtn.good { color: var(--accent-ink); border-color: rgba(168, 132, 47, 0.45); background: var(--accent-soft); }
 .chipbtn.good:hover { border-color: var(--accent); color: var(--accent-ink); }
 
+/* ---------- Settings roadmap (personal) ---------- */
+.roadmap-panel { }
+.roadmap-group + .roadmap-group { margin-top: 16px; border-top: 1px solid var(--rule); padding-top: 16px; }
+.roadmap-priority { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; margin: 0 0 10px; font-size: var(--fs-small); letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink); font-weight: 700; }
+.roadmap-note { letter-spacing: 0; text-transform: none; font-weight: 400; color: var(--muted); font-size: var(--fs-meta); }
+.roadmap-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+.roadmap-item { display: flex; gap: 10px; align-items: start; font-size: var(--fs-meta); line-height: 20px; color: var(--muted); }
+.roadmap-item b { color: var(--text); font-weight: 600; }
+.roadmap-tag { flex: none; margin-top: 2px; }
+
 /* ---------- voice override picker (Settings) ---------- */
 .voice-overrides { margin-top: 16px; border-top: 1px dashed var(--rule); padding-top: 12px; }
 .voice-overrides .voice-override { display: grid; gap: 4px; margin-top: 10px; }

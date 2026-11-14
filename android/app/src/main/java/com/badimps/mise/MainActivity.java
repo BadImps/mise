@@ -38,6 +38,11 @@ import android.webkit.JavascriptInterface;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.print.PrintAttributes;
+import android.print.PrintDocumentAdapter;
+import android.print.PrintManager;
+import android.media.AudioManager;
+import android.media.ToneGenerator;
 import android.window.OnBackInvokedDispatcher;
 
 public final class MainActivity extends Activity {
@@ -72,6 +77,18 @@ public final class MainActivity extends Activity {
     private boolean recordPermissionPromptPending;
     private MiseSpeech miseSpeech;
     private MiseVoice miseVoice;
+    /** Used by CookMediaReceiver to dispatch notification media taps into the web layer. */
+    static volatile MainActivity mediaHandler;
+
+    void pushMediaAction(final String action) {
+        handler.post(() -> {
+            org.json.JSONObject json = new org.json.JSONObject();
+            try {
+                json.put("action", action == null ? "" : action);
+            } catch (org.json.JSONException ignored) { }
+            emitJavascript("__miseMediaAction", json);
+        });
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +98,7 @@ public final class MainActivity extends Activity {
         // The decor view must exist before getInsetsController() is queried.
         configureWindow();
         ensureCookChannel();
+        mediaHandler = this;
         pendingDestination = destinationFrom(getIntent());
         miseSpeech = new MiseSpeech(this, handler, new MiseSpeech.Reply() {
             @Override
@@ -296,6 +314,50 @@ public final class MainActivity extends Activity {
                 null);
     }
 
+    /** Alarm-stream chime for an expired timer (WebView blocks autoplay from tick). */
+    private void playTimerChime(String kind) {
+        final String id = kind == null || kind.trim().isEmpty() ? "chime" : kind.trim();
+        try {
+            AudioManager audio = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+            if (audio == null) return;
+            int stream = AudioManager.STREAM_ALARM;
+            ToneGenerator generator = new ToneGenerator(stream, 100);
+            final int[] sequence;
+            switch (id) {
+                case "bell":
+                    sequence = new int[]{ToneGenerator.TONE_PROP_BEEP, ToneGenerator.TONE_PROP_ACK};
+                    break;
+                case "digital":
+                    sequence = new int[]{ToneGenerator.TONE_DTMF_S, ToneGenerator.TONE_DTMF_D, ToneGenerator.TONE_DTMF_S, ToneGenerator.TONE_DTMF_D, ToneGenerator.TONE_DTMF_S};
+                    break;
+                case "alert":
+                    sequence = new int[]{ToneGenerator.TONE_CDMA_ABBR_ALERT, ToneGenerator.TONE_CDMA_ABBR_ALERT, ToneGenerator.TONE_CDMA_ABBR_ALERT};
+                    break;
+                case "gentle":
+                    sequence = new int[]{ToneGenerator.TONE_PROP_BEEP, ToneGenerator.TONE_PROP_BEEP, ToneGenerator.TONE_PROP_ACK};
+                    break;
+                case "chime":
+                default:
+                    sequence = new int[]{ToneGenerator.TONE_DTMF_A, ToneGenerator.TONE_DTMF_C, ToneGenerator.TONE_DTMF_D};
+                    break;
+            }
+            long t = 90;
+            int dur = id.equals("digital") ? 120 : 200;
+            for (int tone : sequence) {
+                final int idFinal = tone;
+                final int duration = dur;
+                handler.postDelayed(() -> {
+                    try {
+                        generator.startTone(idFinal, duration);
+                    } catch (Throwable ignored) { }
+                }, t);
+                t += duration + 90;
+            }
+        } catch (Throwable ignored) {
+            Toast.makeText(this, "Timer finished.", Toast.LENGTH_LONG).show();
+        }
+    }
+
     private void showCookNotification(String title, int step, int total, String stepText) {
         if (isFinishing() || isDestroyed()) return;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
@@ -320,6 +382,17 @@ public final class MainActivity extends Activity {
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, intent,
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
+        // Lock-screen actions while cooking — keep the UX useful without waking the screen.
+        PendingIntent prevAction = PendingIntent.getBroadcast(this, 1,
+                new Intent(this, CookMediaReceiver.class).putExtra(CookMediaReceiver.EXTRA_ACTION, CookMediaReceiver.ACTION_PREV),
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+        PendingIntent pauseAction = PendingIntent.getBroadcast(this, 2,
+                new Intent(this, CookMediaReceiver.class).putExtra(CookMediaReceiver.EXTRA_ACTION, CookMediaReceiver.ACTION_PAUSE_RESUME),
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+        PendingIntent nextAction = PendingIntent.getBroadcast(this, 3,
+                new Intent(this, CookMediaReceiver.class).putExtra(CookMediaReceiver.EXTRA_ACTION, CookMediaReceiver.ACTION_NEXT),
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+
         String safeTitle = title == null || title.trim().isEmpty() ? "Mise" : title.trim();
         String big = stepText == null ? "" : stepText.trim();
         String progress = "Step " + step + " of " + total;
@@ -330,7 +403,10 @@ public final class MainActivity extends Activity {
                 .setCategory(Notification.CATEGORY_STATUS)
                 .setOngoing(true)
                 .setOnlyAlertOnce(true)
-                .setContentIntent(contentIntent);
+                .setContentIntent(contentIntent)
+                .addAction(new Notification.Action.Builder(0, "Previous", prevAction).build())
+                .addAction(new Notification.Action.Builder(0, "Pause / Resume", pauseAction).build())
+                .addAction(new Notification.Action.Builder(0, "Next", nextAction).build());
         if (!big.isEmpty()) {
             builder.setStyle(new Notification.BigTextStyle()
                     .bigText(progress + " — " + big)
@@ -540,6 +616,25 @@ public final class MainActivity extends Activity {
                 if (on) window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
                 else window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
             });
+        }
+
+        @JavascriptInterface
+        public void printRecipe() {
+            handler.post(() -> {
+                try {
+                    PrintManager manager = (PrintManager) getSystemService(Context.PRINT_SERVICE);
+                    if (manager == null || webView == null) return;
+                    PrintDocumentAdapter adapter = webView.createPrintDocumentAdapter("Mise recipe");
+                    manager.print("Mise recipe", adapter, new PrintAttributes.Builder().build());
+                } catch (Throwable ignored) {
+                    Toast.makeText(MainActivity.this, "Printing isn’t available on this device.", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+
+        @JavascriptInterface
+        public void timerChime(String kind) {
+            handler.post(() -> playTimerChime(kind));
         }
 
         @JavascriptInterface
@@ -805,6 +900,7 @@ public final class MainActivity extends Activity {
             webView = null;
         }
         stopSpeechRecognition();
+        mediaHandler = null;
         super.onDestroy();
     }
 }

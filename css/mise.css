@@ -249,6 +249,42 @@
 .rgo { color: var(--control); }
 .rrow:hover .rgo { color: var(--text); }
 
+/* ---------- print ---------- */
+@page { margin: 17mm 15mm; }
+@media print {
+  body { background: #fff !important; color: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .rail, .tabbar, #timer-dock, .tool-pop, .modal, .toast, .modal-body .limit-note { display: none !important; }
+  .shell { display: block !important; width: auto !important; }
+  .view { padding: 0 !important; background: #fff !important; }
+  .page { max-width: none !important; padding: 0 !important; }
+  .panel { background: none !important; border: none !important; box-shadow: none !important; padding: 0 !important; }
+  .detail-hero-img, .photo-credit, .mis-actions .btn, .title-actions, .crumbs .sep { display: none !important; }
+  .recipe-body, .ingredients-list, .recipe-steps ol { grid-template-columns: none !important; }
+  h1 { font-size: 22pt !important; line-height: 1.15 !important; break-after: avoid; }
+  h2 { font-size: 13pt !important; break-after: avoid; }
+  .ing-item, .cook-step-card, .ing-cols { break-inside: avoid; }
+  button, .btn, .chipbtn, .icon-round, .btn.icon { display: none !important; }
+}
+
+/* ---------- shopping list ---------- */
+.shopping-teaser { background: linear-gradient(155deg, #f7f1df 0%, var(--surface) 60%); border-color: #e4d9bd; }
+.shopping-teaser .panel-head { align-items: center; }
+.shopping-teaser h2 { font-family: var(--font-display); font-size: 22px; line-height: 26px; font-weight: 600; letter-spacing: -0.02em; }
+.list-page { display: grid; gap: 16px; }
+.sl-rows { list-style: none; margin: 0; padding: 0; display: grid; }
+.sl-row { display: grid; grid-template-columns: 30px minmax(0, 1fr) 28px; gap: 12px; align-items: center; padding: 10px 0; border-top: 1px solid var(--rule); }
+.sl-check { width: 30px; height: 30px; border-radius: 999px; display: grid; place-items: center; border: 1px solid var(--border); color: var(--muted); background: var(--surface); }
+.sl-check .i { width: 15px; height: 15px; }
+.sl-row.done .sl-check { border-color: var(--accent); color: var(--accent-ink); background: var(--accent-soft); }
+.sl-copy { min-width: 0; }
+.sl-name { display: block; font-size: var(--fs-small); color: var(--text); line-height: 19px; }
+.sl-row.done .sl-name { text-decoration: line-through; color: var(--muted); }
+.sl-qty { display: block; color: var(--muted); font-size: var(--fs-meta); line-height: 17px; font-variant-numeric: tabular-nums; }
+.sl-remove { color: var(--faint); }
+.sl-remove:hover { color: var(--negative); border-color: var(--negative); }
+.sl-footer { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+@media (max-width: 520px) { .sl-footer .btn { font-size: var(--fs-meta); } }
+
 /* first-run note under the import card (no invented history) */
 .quiet-note { display: flex; align-items: flex-start; gap: 8px; font-size: var(--fs-meta); line-height: 18px; color: var(--muted); }
 .quiet-note .i { width: 15px; height: 15px; margin-top: 1px; flex: none; }

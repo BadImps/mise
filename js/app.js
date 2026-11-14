@@ -75,6 +75,8 @@
     voiceOverride: 'mise.voice.override.v1',
     ringtone: 'mise.ringtone.v1',
     voiceMode: 'mise.voice-mode.v1',
+    shopping: 'mise.shopping.v1',
+    autoAdvance: 'mise.auto-advance.v1',
   };
 
   const store = {
@@ -382,7 +384,7 @@
     if (!recipe.yields) return 1;
     const scales = store.get(KEY.scale, {});
     const v = Number(scales[recipe.id]);
-    return v === 1.5 || v === 2 ? v : 1;
+    return [0.5, 1, 1.5, 2].includes(v) ? v : 1;
   }
 
   function setScale(recipe, v) {
@@ -436,6 +438,151 @@
   function knownImported(url) {
     if (!url) return null;
     return imported.find((r) => r.sourceUrl === url) || null;
+  }
+
+  /* ---------- shopping list ---------- */
+  function shoppingList() {
+    const list = store.get(KEY.shopping, []);
+    return Array.isArray(list) ? list : [];
+  }
+
+  function saveShoppingList(items) {
+    store.set(KEY.shopping, items);
+  }
+
+  function addToShoppingList(recipe) {
+    if (!recipe) return;
+    const existing = shoppingList();
+    const have = new Set(existing.map((it) => it.key));
+    const next = [];
+    for (const ing of recipe.ingredients) {
+      if (ing.serving) continue;
+      const key = recipe.id + ':' + ing.id;
+      if (have.has(key)) continue;
+      next.push({
+        key,
+        recipeId: recipe.id,
+        recipeName: recipe.name,
+        name: ing.item,
+        qty: P.amountText(ing, scaleFor(recipe)) || '',
+        done: false,
+      });
+    }
+    if (!next.length) {
+      announce('Those ingredients are already on your shopping list.');
+      return;
+    }
+    saveShoppingList(existing.concat(next));
+    announce(next.length + ' ingredient' + (next.length === 1 ? '' : 's') + ' added to your shopping list.');
+  }
+
+  function toggleShoppingItem(key) {
+    saveShoppingList(shoppingList().map((it) => (it.key === key ? Object.assign({}, it, { done: !it.done }) : it)));
+  }
+
+  function removeShoppingItem(key) {
+    saveShoppingList(shoppingList().filter((it) => it.key !== key));
+  }
+
+  function clearShoppingChecked() {
+    saveShoppingList(shoppingList().filter((it) => !it.done));
+  }
+
+  function clearShoppingAll() {
+    saveShoppingList([]);
+  }
+
+  function copyShoppingList() {
+    const items = shoppingList();
+    if (!items.length) {
+      announce('Your list is empty.');
+      return;
+    }
+    const grouped = new Map();
+    items.forEach((it) => {
+      if (!grouped.has(it.recipeName)) grouped.set(it.recipeName, []);
+      grouped.get(it.recipeName).push(it);
+    });
+    const lines = [];
+    lines.push('Shopping list');
+    for (const [name, list] of grouped) {
+      lines.push('');
+      lines.push(name);
+      for (const it of list) {
+        lines.push('- ' + (it.qty ? it.qty + ' ' : '') + it.name);
+      }
+    }
+    const text = lines.join('\n');
+    try {
+      const bridge = document.getElementById('clipboard-bridge');
+      if (bridge) {
+        bridge.value = text;
+        bridge.select();
+        document.execCommand('copy');
+        bridge.value = '';
+        announce('List copied.');
+        return;
+      }
+    } catch (err) { /* fall through */ }
+    try {
+      navigator.clipboard.writeText(text);
+      announce('List copied.');
+    } catch (err) {
+      announce('Could not copy. Show this page instead:', text);
+    }
+  }
+
+  function shoppingListView() {
+    const items = shoppingList();
+    const grouped = new Map();
+    items.forEach((it) => {
+      if (!grouped.has(it.recipeName)) grouped.set(it.recipeName, []);
+      grouped.get(it.recipeName).push(it);
+    });
+    const groups = Array.from(grouped.entries()).map(([name, list]) => {
+      const rows = list.map((it) => `<li class="sl-row${it.done ? ' done' : ''}">
+          <button class="btn icon sl-check" type="button" data-action="toggle-list-item" data-key="${esc(it.key)}" aria-label="${it.done ? 'Mark not bought' : 'Mark bought'}" aria-pressed="${it.done}">${icon(it.done ? 'check' : 'plus')}</button>
+          <span class="sl-copy"><span class="sl-name">${esc(it.name)}</span>${it.qty ? `<span class="sl-qty">${esc(it.qty)}</span>` : ''}</span>
+          <button class="btn icon ghost sl-remove" type="button" data-action="remove-list-item" data-key="${esc(it.key)}" aria-label="Remove from list">${icon('x')}</button>
+        </li>`).join('');
+      return `<section class="panel list-block shopping-group" aria-labelledby="sl-${P.slug(name)}">
+        <div class="panel-head"><h2 id="sl-${P.slug(name)}">${esc(name)}</h2><button class="btn ghost" type="button" data-action="add-to-list" data-id="${esc(list[0] ? list[0].recipeId : '')}">${icon('plus')}Again</button></div>
+        <ul class="sl-rows">${rows}</ul>
+      </section>`;
+    }).join('');
+    const empty = !items.length ? `<div class="home-empty">${icon('plus')}<div><b>Your list is empty.</b><p>Open any recipe and tap <i>Add to list</i> — non-serving ingredients go in, scaled to your batch.</p><a class="btn primary" href="#/library">Open the library</a></div></div>` : '';
+    const footer = items.length
+      ? `<div class="sl-footer">
+           <a class="btn ghost" href="#/library">Keep browsing</a>
+           <button class="btn" type="button" data-action="copy-list">${icon('paste')}Copy list</button>
+           <button class="btn" type="button" data-action="clear-list-checked">${icon('check')}Clear checked</button>
+           <button class="btn ghost" type="button" data-action="clear-list-all">${icon('x')}Clear list</button>
+         </div>`
+      : '';
+    return `<div class="page list-page">
+      <div class="title-row">
+        <div>
+          <p class="eyebrow">The store, without the store app</p>
+          <h1>Shopping list</h1>
+          <p class="sub">${items.length} ingredient${items.length === 1 ? '' : 's'} · ${new Set(items.map((it) => it.recipeId)).size} recipe${new Set(items.map((it) => it.recipeId)).size === 1 ? '' : 's'}</p>
+        </div>
+        <a class="btn ghost" href="#/">${icon('arrow-left')}Back</a>
+      </div>
+      ${empty}
+      ${groups}
+      ${footer}
+    </div>`;
+  }
+
+  function shoppingListTeaser() {
+    const count = shoppingList().length;
+    if (!count) return '';
+    return `<section class="panel home-note shopping-teaser">
+      <div class="panel-head">
+        <div><h2>Shopping list</h2><p class="meta">${count} ingredient${count === 1 ? '' : 's'}</p></div>
+        <a class="section-link" href="#/list">Open ${icon('arrow-right')}</a>
+      </div>
+    </section>`;
   }
 
   /* ---------- routing ---------- */
@@ -515,6 +662,9 @@
             }
           }, 60);
         }
+      } else if (route.parts[0] === 'list') {
+        view.innerHTML = shoppingListView();
+        title = 'Shopping list · Mise';
       } else if (route.parts[0] === 'library') {
         view.innerHTML = libraryView(route.params.get('tab') || 'kitchen');
         title = 'Library · Mise';
@@ -644,6 +794,7 @@
           ${recentlyCookedPanel()}
         </div>
         <aside class="home-aside">
+          ${shoppingListTeaser()}
           ${chefTeaser()}
           <section class="panel home-note" aria-labelledby="home-note-title">
             <div class="panel-head">
@@ -1937,6 +2088,8 @@
         <div class="title-actions">
           <button class="btn icon ghost fav-toggle${isFavorite(recipe.id) ? ' is-on' : ''}" type="button" data-action="toggle-favorite" data-id="${esc(recipe.id)}" aria-pressed="${isFavorite(recipe.id)}" aria-label="${isFavorite(recipe.id) ? 'Remove from' : 'Save to'} favorites">${icon('star')}</button>
           ${recipe.sourceUrl ? `<a class="btn" href="${esc(safeUrl(recipe.sourceUrl))}" target="_blank" rel="noopener noreferrer">${icon('external')}Source</a>` : ''}
+          <button class="btn" type="button" data-action="add-to-list" data-id="${esc(recipe.id)}">${icon('plus')}Add to list</button>
+          <button class="btn" type="button" data-action="print-recipe">${icon('print')}Print</button>
           <button class="btn primary" type="button" data-action="start-cook" data-id="${esc(recipe.id)}">${icon('play')}Start cooking</button>
         </div>
       </div>
@@ -2016,7 +2169,7 @@
     const scaler = recipe.yields ? `<div class="scaler">
       <span class="slabel">Batch</span>
       <div class="segmented" role="group" aria-label="Scale the batch">
-        ${[1, 1.5, 2].map((v) => `<button type="button" data-action="scale" data-scale="${v}" aria-pressed="${scale === v}">${v === 1 ? '×1' : '×' + String(v).replace('.', '.')}</button>`).join('')}
+        ${[0.5, 1, 1.5, 2].map((v) => `<button type="button" data-action="scale" data-scale="${v}" aria-pressed="${scale === v}">${v === 1 ? '×1' : '×' + String(v).replace('.', '.')}</button>`).join('')}
       </div>
     </div>` : `<span class="meta">Source gives no yield</span>`;
 
@@ -2193,6 +2346,7 @@
   let guideLastHeard = Date.now();
   let guideTimerPrompt = false; // waiting for a yes/no answer to the timer question
   let guideWaitingTimer = false; // timer owns the flow until it finishes or is cleared
+  let autoAdvance = store.get(KEY.autoAdvance, false) === true; // cook-through: auto-advance every step
 
   const synth = () => (typeof window.speechSynthesis !== 'undefined' ? window.speechSynthesis : null);
   const nativeSpeech = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.speechStart === 'function';
@@ -2213,6 +2367,8 @@
     try { return MiseNative.ttsCurrentVoice(); } catch (err) { return null; }
   };
   const nativeSetKeepScreenOn = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.setKeepScreenOn === 'function';
+  const nativePrint = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.printRecipe === 'function';
+  const nativeTimerChime = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.timerChime === 'function';
 
   // explicit per-persona voice picks from the active engine's voice list:
   // { carol: 'name' | null, sean: 'name' | null } — null means "auto"
@@ -2505,6 +2661,21 @@
     }
   }
 
+  let autoAdvanceTimer = null;
+  const AUTO_ADVANCE_MS = 9000;
+  function armAutoAdvance() {
+    clearAutoAdvanceTimer();
+    if (!autoAdvance || guideWant !== true) return;
+    autoAdvanceTimer = window.setTimeout(() => {
+      autoAdvanceTimer = null;
+      const r = session && getRecipe(session.recipeId || '');
+      if (autoAdvance && guideWant === true && r && !guideTimerPrompt) cookNext(r);
+    }, AUTO_ADVANCE_MS);
+  }
+  function clearAutoAdvanceTimer() {
+    if (autoAdvanceTimer) { window.clearTimeout(autoAdvanceTimer); autoAdvanceTimer = null; }
+  }
+
   function beginGuideListen(resetSilence) {
     if (guideWant !== true) return;
     if (resetSilence) guideLastHeard = Date.now();
@@ -2513,6 +2684,7 @@
     } else {
       guideSetStatus('Listening…', 'Say “next”, “repeat”, “start over”, “repeat last step”, “what is step 3” or “cancel”.');
     }
+    armAutoAdvance();
     if (nativeSpeech()) {
       guideListening = true;
       try {
@@ -2580,6 +2752,7 @@
 
   function guideStopListening() {
     guideListening = false;
+    clearAutoAdvanceTimer();
     if (nativeSpeech()) { try { MiseNative.speechStop(); } catch (err) { /* ignore */ } }
     if (webRecognizer) {
       try { webRecognizer.abort(); } catch (err) { /* ignore */ }
@@ -2644,6 +2817,11 @@
 
   // "what is step 4" / "what's step four" / "go to step twelve"
   const GO_TO_STEP_RE = /^(?:what is (?:the )?step|what is the step|what's (?:the )?step|what is step|go to (?:the )?step|goto (?:the )?step|step)\s+(.{1,40})$/i;
+  // "double" / "half" / "one and a half" / "x1.5" — scale the recipe by voice
+  const SCALE_UP_RE = /^(double|double it|double the recipe|twice|two times|times two|multiplied by 2|2x|×2|x2|twice as much)$/i;
+  const SCALE_HALF_RE = /^(half|halve|halve it|half it|half the recipe|each half|split in half|cut in half|one half)$/i;
+  const SCALE_1_5_RE = /^(one and a half|one point five|one half and one half|1\.5|1 5|1×5|1×1 5|×1\.5|x1\.5|x1 5|times one point five|one fifty|one five)$/i;
+  const SCALE_ONE_RE = /^(normal|regular|original|full|full batch|full size|back to normal|back to one|single|one time|1x|×1|x1)$/i;
 
   function parseGuideCommand(text) {
     const normalized = stripGuideFillers(normalizeVoice(text));
@@ -2652,6 +2830,10 @@
       const n = numberFromText(gotoMatch[1]);
       if (n != null && n >= 0) return { name: 'gotoStep', n };
     }
+    if (SCALE_UP_RE.test(normalized)) return { name: 'scale', multiplier: 2 };
+    if (SCALE_HALF_RE.test(normalized)) return { name: 'scale', multiplier: 0.5 };
+    if (SCALE_1_5_RE.test(normalized)) return { name: 'scale', multiplier: 1.5 };
+    if (SCALE_ONE_RE.test(normalized)) return { name: 'scale', multiplier: 1 };
     for (const cmd of GUIDE_COMMANDS) {
       if (cmd.re.test(normalized)) return { name: cmd.name };
     }
@@ -2691,6 +2873,7 @@
       return;
     }
     const recipe = session && getRecipe(session.recipeId);
+    clearAutoAdvanceTimer(); // user said something — let the human drive
     const cmd = command && command.name;
     // the timer's “Ready?” resolution — or any other time the timer is waiting
     if (cmd === 'timerReady') { timerReady(); return; }
@@ -2709,6 +2892,18 @@
       case 'gotoStep':
         if (recipe) guideGotoStep(recipe, Math.min(Math.max(1, command.n), recipe.steps.length));
         return;
+      case 'scale': {
+        if (recipe && recipe.yields) {
+          setScale(recipe, command.multiplier);
+          const label = command.multiplier === 2 ? 'Double the recipe' : command.multiplier === 0.5 ? 'Half the recipe' : command.multiplier === 1.5 ? 'One and a half' : 'Original size';
+          guideSetStatus('Scaled to ×' + String(command.multiplier).replace('.', '.'), label);
+          guideSay(label + '.', () => beginGuideListen(true));
+        } else if (recipe) {
+          guideSay('This record has no yield, so amounts stay as written.', () => beginGuideListen(true));
+        }
+        render();
+        return;
+      }
       case 'cancel': cancelCurrentCook(); return;
       default: break;
     }
@@ -2805,6 +3000,32 @@
     const parsed = parseSpeechPayload(payload);
     onGuideSpeechError(parsed && parsed.code ? parsed.code : 'error');
   };
+  // Lock-screen/notification media actions routed from MiseNative → CookMediaReceiver.
+  window.__miseMediaAction = (payload) => {
+    const parsed = parseSpeechPayload(payload);
+    const action = parsed && parsed.action ? String(parsed.action) : '';
+    const recipe = session && getRecipe(session.recipeId || '');
+    switch (action) {
+      case 'next': if (recipe) cookNext(recipe); return;
+      case 'prev': if (recipe) cookBack(recipe); return;
+      case 'pause-resume': {
+        if (guideWant === true) {
+          guideWant = false;
+          guideStopListening();
+          stopGuideSpeak();
+          announce('Voice guide muted.');
+        } else if (recipe) {
+          guideWant = true;
+          guideTimerPrompt = false;
+          lastSpokenKey = '';
+          announce('Voice guide on.');
+        }
+        render();
+        return;
+      }
+      default: break;
+    }
+  };
 
   function getSession(recipe, stepParam) {
     let s = store.get(KEY.session, null);
@@ -2860,6 +3081,7 @@
       <button class="chipbtn" type="button" data-action="guide-last">${icon('arrow-left')}Last step</button>
       <button class="chipbtn" type="button" data-action="cook-next">${icon('check')}Next</button>
       <button class="chipbtn" type="button" data-action="guide-listen">${icon('mic')}Listen</button>
+      <button class="chipbtn" type="button" data-action="toggle-auto-advance" aria-pressed="${autoAdvance}">${icon('reset')}${autoAdvance ? 'Cook-through on' : 'Cook-through off'}</button>
       <button class="chipbtn" type="button" data-action="start-over">${icon('reset')}Start over</button>
       <button class="chipbtn danger" type="button" data-action="cancel-cook">${icon('x')}Cancel cook</button>
     </div>`;
@@ -2904,6 +3126,7 @@
         <a class="cook-back" href="#/recipe/${esc(recipe.id)}">${icon('arrow-left')}<span>${esc(recipe.name)}</span></a>
         <span class="cook-context">${esc(recipe.source)}${recipe.author ? ' / ' + esc(recipe.author) : ''} / ${recipe.stats.steps} steps</span>
         <span class="cook-clock">${icon('clock')}<span class="cook-clock-label">Time Elapsed </span><b data-elapsed>00:00</b></span>
+        <button class="btn sm" type="button" data-action="add-to-list" data-id="${esc(recipe.id)}">${icon('plus')}List</button>
         <a class="btn sm" href="#/recipe/${esc(recipe.id)}">Exit</a>
       </div>
       <div class="cook-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${donePct}" aria-label="Steps marked done"><span style="width:${donePct}%"></span></div>
@@ -3158,6 +3381,11 @@
 
   function playRingtone(kind) {
     const key = RINGTONE_DEFS[kind] ? kind : (RINGTONE_DEFS[ringtoneChoice] ? ringtoneChoice : 'chime');
+    // native path: Web Audio is muted on Android WebView unless a user gesture is active;
+    // a timer tick is not a gesture — so the chime goes through the alarm stream instead
+    if (nativeTimerChime()) {
+      try { MiseNative.timerChime(key); return; } catch (err) { /* fall through to web audio */ }
+    }
     const def = RINGTONE_DEFS[key];
     try {
       const Ctx = window.AudioContext || window.webkitAudioContext;
@@ -3166,7 +3394,7 @@
       const ctx = ringtoneCtx;
       if (ctx.state === 'suspended') ctx.resume();
       const master = ctx.createGain();
-      master.gain.setValueAtTime(0.2, ctx.currentTime);
+      master.gain.setValueAtTime(0.4, ctx.currentTime);
       master.connect(ctx.destination);
       const t0 = ctx.currentTime + 0.03;
       for (const [freq, delay] of def.notes) {
@@ -3329,14 +3557,35 @@
     }
     dockSnoozeOpen = false;
     playRingtone(ringtoneChoice);
+    // mic OFF at expiry — never re-arm automatically; user chooses Ready or Not ready
+    guideStopListening();
     // automated flow does NOT advance yet — the user picks Ready (steps resume)
     // or Not ready (snooze 1–10 minutes) in the dock
     if (guideWaitingTimer && guideWant === true) {
-      guideSay('Time is up. Say “ready” when you are, or tap Not ready for a few more minutes.', () => beginGuideListen(true));
+      guideSay('Time is up. Tap Ready when you are, or tap Not ready for more minutes.', () => {});
     }
     renderTimerDock();
     render();
     updateTimerDigits(document.querySelector('[data-timer-display]'), '00:00');
+  }
+
+  // Print a recipe: native uses the system print dialog and sends the
+  // current page's HTML (invoices, PDFs via Google Cloud Print); the browser
+  // path uses window.print(). The print stylesheet hides interactive chrome.
+  function printRecipe() {
+    try {
+      if (nativePrint()) {
+        MiseNative.printRecipe();
+        announce('Opened the system print dialog.');
+        return;
+      }
+    } catch (err) { /* fall through to the browser path */ }
+    try {
+      announce('Sending to your printer…');
+      window.print();
+    } catch (err) {
+      announce('This device cannot print from a browser.');
+    }
   }
 
   function renderTimerDock() {
@@ -3911,9 +4160,50 @@
     </details>`;
   }
 
+  function roadmapHtml() {
+    const item = (title, body, tag) => `<li class="roadmap-item"><span class="pill soft roadmap-tag">${esc(tag)}</span><span><b>${esc(title)}.</b> ${esc(body)}</span></li>`;
+    const groups = [
+      ['Now', 'v1.10.0 — next release', 'pill pos', [
+        ['Voice serving scale', 'Say “double the recipe” or “half” in cook mode; Mise sets ×2 or ×1 without a tap, reusing the existing scale UI.', 'day'],
+        ['Per-step timer prompts', 'When a step names a duration with no active timer, Mise asks once before moving on: “start a 20 minute timer?”.', '1–2 days'],
+        ['Cook-through voice mode', 'Auto-advance after each step is marked done; lock-screen and notification controls.', '1–2 weeks'],
+        ['Shopping list v1', 'Merge selected recipes into one offline checklist; un-check after cooking. No account, no store integration.', '1–2 weeks'],
+        ['Ship-safety gates', 'Playwright smoke on import → cook → scale; APK size budget; storage-usage readout in Settings.', 'days'],
+      ]],
+      ['Next', 'v1.11.0 and after — days to weeks each', 'pill', [
+        ['Serving-scale voice', 'Cold-start voice: “double” / “halve” / “×1.5” while cooking, applied to the whole scale row.', 'day'],
+        ['Unit conversion', 'tsp ↔ ml, cup → grams for ~100 staples; bundled JSON table, no network.', 'days'],
+        ['Nutrition, publisher-provided only', 'Show kcal/P/C/F exactly as the publisher wrote them; never estimated, never fabricated.', '1–2 weeks'],
+        ['Curated substitutions', '~200 ingredient swaps, publisher-attributed; never invented when no match exists.', '1–2 weeks'],
+        ['Export / import kitchen state', 'One JSON export of imports, pantry, favorites, voice prefs via the share sheet.', 'days'],
+        ['Storage readout', 'Settings shows imports used / 800 · KB used; tap clears legacy files.', 'day'],
+      ]],
+      ['Later', 'decision points, not scheduled', 'pill warn', [
+        ['On-device Kokoro engine (opt-in)', 'APK downloads 4–36 MB engine + 91 MB ONNX; keeps Mise per-person on the tablet. Kokoro emulator test: 108 s init, PSS ≈ 510–557 MB — gate behind a measurement release.', 'Q1 2027'],
+        ['Wake word “Mise …”', 'Native sherpa-onnx keyword spotter; useful while wearing thin digits while cooking. Revisit after voice ships at quality.', 'H1 2027'],
+        ['Lock-screen MediaSession', 'Cook-through with hardware volume buttons and notification play/pause.', 'weeks'],
+        ['Community read-only registry', 'PR-moderated recipes badged “Community — not publisher-verified”, distributed with the same release pipeline.', 'months'],
+      ]],
+    ];
+    const sections = groups.map(([name, note, pillClass, rows]) => `<div class="roadmap-group">
+        <h3 class="roadmap-priority">${esc(name)}<span class="roadmap-note">${esc(note)}</span></h3>
+        <ul class="roadmap-list">${rows.map(([t, b, tag]) => item(t, b, tag)).join('')}</ul>
+      </div>`).join('');
+    return `<section class="panel roadmap-panel" aria-labelledby="settings-roadmap-title">
+      <div class="panel-head">
+        <div>
+          <h2 id="settings-roadmap-title">Roadmap</h2>
+          <p class="meta">Personal, offline-first. Only shippable, offline-safe ideas.</p>
+        </div>
+      </div>
+      ${sections}
+    </section>`;
+  }
+
   function voiceCommandsHtml() {
     const groups = [
       ['Move to the next step', ['next', 'next step', 'next instruction', 'continue', 'done', 'finished', 'complete', 'proceed', 'move on', 'on to the next', 'keep going']],
+      ['Scale the cook', ['double', 'twice', 'two times', 'half', 'halve', 'cut in half', 'one and a half', 'x1.5', 'normal', 'reset']],
       ['Hear this step again', ['repeat', 'say that again', 'say it again', 'again', 'come again', 'one more time', 'read that again', 'read it again']],
       ['Jump to any step and hear it', ['what is step 1', 'what is step 4', 'what is step twelve', 'go to step 2', 'go to step 12', 'step eight']],
       ['Hear the previous step, then the current one', ['repeat last step', 'repeat the last step', 'repeat the previous step', 'repeat last instruction', 'repeat the last instruction', 'read previous step again', 'previous step']],
@@ -4028,6 +4318,23 @@
     const webVersion = Number(window.MISE_WEB_VERSION || 0) || 0;
     const pantryCount = pantrySelection.size;
     const importCount = imported.length;
+
+    function approxStorageBytes() {
+      try {
+        let bytes = 0;
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (key && key.startsWith('mise.')) bytes += localStorage.getItem(key).length * 2;
+        }
+        return bytes;
+      } catch (err) {
+        return 0;
+      }
+    }
+    const storageUsed = approxStorageBytes();
+    const storageText = (storageUsed < 1024 * 1024)
+      ? (Math.round(storageUsed / 1024) + ' KB')
+      : (Math.round(storageUsed / 1024 / 102.4) / 10 + ' MB');
     return `<div class="page settings-page">
       <div class="title-row settings-title">
         <div>
@@ -4050,6 +4357,7 @@
             ${sourcesListHtml()}
           </section>
           ${voiceCommandsHtml()}
+          ${roadmapHtml()}
           <section class="panel research-panel" aria-labelledby="settings-research-title">
             <details class="settings-research" id="settings-research">
               <summary class="research-summary">
@@ -4110,6 +4418,7 @@
             <ul class="data-rows">
               <li><span>Imported recipes</span><b id="data-imports">${importCount}</b></li>
               <li><span>Chef pantry items</span><b id="data-pantry">${pantryCount}</b></li>
+              <li><span>Storage used</span><b id="data-storage">${esc(storageText)}</b></li>
             </ul>
             <div class="data-actions">
               <button class="btn ghost" type="button" data-action="settings-clear-pantry">Clear Chef pantry</button>
@@ -4291,6 +4600,47 @@
       });
       announce((on ? 'Saved ' : 'Removed ') + recipe.name + (on ? ' to favorites.' : ' from favorites.'));
       refreshFavoritesPanel();
+      return;
+    }
+
+    if (action === 'add-to-list') {
+      const id = target.dataset.id || '';
+      const recipe = getRecipe(id);
+      if (recipe) {
+        addToShoppingList(recipe);
+        render();
+      }
+      return;
+    }
+    if (action === 'toggle-list-item') {
+      toggleShoppingItem(target.dataset.key || '');
+      render();
+      return;
+    }
+    if (action === 'remove-list-item') {
+      removeShoppingItem(target.dataset.key || '');
+      announce('Removed from your list.');
+      render();
+      return;
+    }
+    if (action === 'clear-list-checked') {
+      clearShoppingChecked();
+      announce('Checked items cleared.');
+      render();
+      return;
+    }
+    if (action === 'clear-list-all') {
+      clearShoppingAll();
+      announce('Shopping list cleared.');
+      render();
+      return;
+    }
+    if (action === 'copy-list') {
+      copyShoppingList();
+      return;
+    }
+    if (action === 'print-recipe') {
+      printRecipe();
       return;
     }
 
@@ -4563,6 +4913,15 @@
       if (guideWant !== true) { announce('Voice guide is off. Tap the mic button to turn it on.'); return; }
       guideSetStatus('Listening…', 'Say “next”, “repeat”, “start over”, “what is step 3” or “cancel”.');
       beginGuideListen(true);
+      return;
+    }
+    if (action === 'toggle-auto-advance') {
+      autoAdvance = !autoAdvance;
+      store.set(KEY.autoAdvance, autoAdvance);
+      clearAutoAdvanceTimer();
+      if (autoAdvance && guideWant === true) armAutoAdvance();
+      announce(autoAdvance ? 'Cook-through on. Mise will advance steps on its own.' : 'Cook-through off.');
+      render();
       return;
     }
     if (action === 'cancel-cook') {

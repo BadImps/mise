@@ -40,6 +40,17 @@ jobs:
           chmod +x gradlew
           ./gradlew --no-daemon :app:lintDebug :app:assembleDebug
 
+      - name: Check the debug APK size budget
+        run: |
+          set -euo pipefail
+          SIZE=$(stat -c%s "android/app/build/outputs/apk/debug/app-debug.apk")
+          BUDGET=4000000
+          echo "Debug APK size: ${SIZE} bytes (budget: ${BUDGET})"
+          if [ "$SIZE" -gt "$BUDGET" ]; then
+            echo "Debug APK exceeds the 4 MB zero-dependency budget." >&2
+            exit 1
+          fi
+
       - name: Upload debug APK
         uses: actions/upload-artifact@v4
         with:
