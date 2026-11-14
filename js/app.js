@@ -57,8 +57,10 @@
   const GLOBAL_CENSUS = Array.isArray(GLOBAL.census) && GLOBAL.census.length ? GLOBAL.census : FALLBACK_CENSUS;
 
   /* ---------- storage ---------- */
+  const IMPORTED_CAP = 800;
   const KEY = {
-    imported: 'mise.imported.v1',
+    imported: 'mise.imported.v1', /* legacy full-recipe payload, migrated on load */
+    importedV2: 'mise.imported.v2', /* compact raw records; recipes are derived on load */
     last: 'mise.last.v1',
     session: 'mise.session.v1',
     lastcook: 'mise.lastcook.v1',
@@ -78,7 +80,10 @@
       } catch (e) { return fallback; }
     },
     set(key, value) {
-      try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) { /* private mode */ }
+      try { localStorage.setItem(key, JSON.stringify(value)); return true; } catch (e) { return false; }
+    },
+    remove(key) {
+      try { localStorage.removeItem(key); } catch (e) { /* ignore */ }
     },
   };
 
@@ -167,8 +172,53 @@
 
   /* ---------- recipes ---------- */
   const sampleCache = new Map();
-  let imported = store.get(KEY.imported, []);
-  if (!Array.isArray(imported)) imported = [];
+
+  /* Import persistence stores the compact raw record and rebuilds the full
+     recipe on load, the same way bundled samples work. The full built recipe
+     is ~7 KB each — a full Caribbean import is ~5 MB and silently exceeded the
+     origin's localStorage quota, so writes failed and the kitchen looked
+     empty. Raw records are ~2.6 KB each and derive the same recipes on load.
+     v1 payloads (full recipes) from older builds migrate once on load. */
+  function rawFromRecipe(r) {
+    return {
+      id: r.id,
+      name: r.name,
+      source: r.source,
+      sourceUrl: r.sourceUrl,
+      image: r.image || '',
+      imageCredit: r.imageCredit || '',
+      cuisine: r.cuisine || '',
+      category: r.category || '',
+      tags: r.tags || [],
+      author: r.author || '',
+      yields: r.yields != null ? r.yields : null,
+      totalMinutes: r.totalMinutes != null ? r.totalMinutes : null,
+      prepMinutes: r.prepMinutes != null ? r.prepMinutes : null,
+      cookMinutes: r.cookMinutes != null ? r.cookMinutes : null,
+      description: r.description || '',
+      ingredients: (r.ingredients || []).map((i) => i.raw || i.item),
+      instructions: (r.steps || []).map((s) => s.text),
+      kind: r.kind || 'sample',
+      importedAt: r.importedAt || null,
+    };
+  }
+
+  function loadImportedRaw() {
+    const v2 = store.get(KEY.importedV2, null);
+    if (Array.isArray(v2)) return v2;
+    const legacy = store.get(KEY.imported, []);
+    if (Array.isArray(legacy) && legacy.length) {
+      const migrated = legacy
+        .filter((r) => r && r.name && Array.isArray(r.ingredients) && Array.isArray(r.steps))
+        .map(rawFromRecipe);
+      if (store.set(KEY.importedV2, migrated)) store.remove(KEY.imported);
+      return migrated;
+    }
+    return [];
+  }
+
+  let imported = loadImportedRaw().map((raw) => P.buildRecipe(raw, { importedAt: raw.importedAt || null }));
+  let importedDirty = false;
 
   function sampleRecipe(sample) {
     if (!sampleCache.has(sample.id)) sampleCache.set(sample.id, P.recipeFromSample(sample));
@@ -344,7 +394,18 @@
     return base + '-' + i;
   }
 
-  function saveImported(recipe) {
+  function persistImported(lastRecipeId) {
+    const payload = imported.map(rawFromRecipe);
+    const ok = store.set(KEY.importedV2, payload);
+    importedDirty = false;
+    if (lastRecipeId) store.set(KEY.last, lastRecipeId);
+    chefCatalogCache = null;
+    if (!ok) announce('Your kitchen is full — the latest import was not saved. Remove some imported recipes and try again.', true);
+    return ok;
+  }
+
+  function saveImported(recipe, options = {}) {
+    const flush = options.flush !== false;
     const same = imported.findIndex((r) => r.sourceUrl && recipe.sourceUrl && r.sourceUrl === recipe.sourceUrl);
     if (same > -1) {
       recipe.id = imported[same].id;
@@ -353,11 +414,18 @@
       recipe.id = uniqueId(recipe.id);
       imported.unshift(recipe);
     }
-    if (imported.length > 400) imported = imported.slice(0, 400);
-    store.set(KEY.imported, imported);
-    store.set(KEY.last, recipe.id);
-    chefCatalogCache = null;
+    if (imported.length > IMPORTED_CAP) imported = imported.slice(0, IMPORTED_CAP);
+    if (flush) {
+      persistImported(recipe.id);
+    } else {
+      importedDirty = true;
+    }
     return recipe;
+  }
+
+  function flushImported(lastRecipeId) {
+    if (!importedDirty && !lastRecipeId) return;
+    persistImported(lastRecipeId);
   }
 
   function knownImported(url) {
@@ -396,6 +464,7 @@
   }
 
   function render() {
+    closeToolPop();
     const route = parseRoute();
     const key = route.path;
     setChrome(route);
@@ -438,7 +507,10 @@
         if (recipe) title = recipe.name + ' · Mise';
       } else if (route.parts[0] === 'cook') {
         const dismissed = store.get(KEY.cookDismissed, false);
-        const recipe = getRecipe(route.parts[1] || '') || (route.parts.length === 1 && !dismissed ? lastRecipe() : null);
+        const recipe = getRecipe(route.parts[1] || '')
+          || (route.parts.length === 1
+            ? (activeSessionRecipe() || (!dismissed ? lastRecipe() : null))
+            : null);
         if (recipe) store.set(KEY.cookDismissed, false);
         if (recipe) {
           const stepParam = parseInt(route.params.get('step') || '', 10);
@@ -473,6 +545,7 @@
     }
     syncCookClock();
     syncCookBadge();
+    syncCookNotification(activeSessionRecipe());
   }
 
   /* ---------- home ---------- */
@@ -502,7 +575,14 @@
           <p class="sub">A recipe, taken apart and put in order. Start with one, or tell the Chef what you already have.</p>
         </div>
         <div class="title-actions">
-          <a class="btn" href="#/import">${icon('import')}Import a recipe</a>
+          <form class="home-search" id="home-search-form" role="search" autocomplete="off">
+            <label class="home-search-field">
+              <span class="sr-only">Search recipes</span>
+              ${icon('search')}
+              <input class="input" id="home-q" type="search" placeholder="Search recipes" aria-label="Search recipes" autocomplete="off">
+            </label>
+            <button class="btn primary home-search-send" type="submit" aria-label="Search recipes">${icon('send')}</button>
+          </form>
         </div>
       </div>
 
@@ -1448,6 +1528,10 @@
         </span>
         <button class="btn" type="button" data-action="import-all-caribbean">${icon('import')}Import all ${total}</button>
       </div>
+      <div class="import-progress" id="import-progress-caribbean" role="status" aria-live="polite" hidden>
+        <div class="import-progress-bar"><span class="import-progress-fill" style="width:0%"></span></div>
+        <div class="import-progress-text"><span class="import-progress-count">0 of ${total}</span></div>
+      </div>
       <div class="caribbean-summary" aria-label="Caribbean collection coverage">
         <div class="fact"><div class="flabel">Curated records</div><div class="fvalue">${total}</div></div>
         <div class="fact"><div class="flabel">Places represented or inspiring</div><div class="fvalue">${places.size}</div></div>
@@ -1547,6 +1631,10 @@
         </span>
         <button class="btn" type="button" data-action="import-all-africa">${icon('import')}Import all ${total}</button>
       </div>
+      <div class="import-progress" id="import-progress-africa" role="status" aria-live="polite" hidden>
+        <div class="import-progress-bar"><span class="import-progress-fill" style="width:0%"></span></div>
+        <div class="import-progress-text"><span class="import-progress-count">0 of ${total}</span></div>
+      </div>
       <div class="caribbean-summary" aria-label="African collection coverage">
         <div class="fact"><div class="flabel">Curated records</div><div class="fvalue">${total}</div></div>
         <div class="fact"><div class="flabel">Places represented</div><div class="fvalue">${africaPlaces().size}</div></div>
@@ -1627,6 +1715,10 @@
           <a class="btn sm brand-ring" href="#/research">${icon('globe')}Research</a>
           <button class="btn" type="button" data-action="import-all-global">${icon('import')}Import all ${meals.length}</button>
         </span>
+      </div>
+      <div class="import-progress" id="import-progress-global" role="status" aria-live="polite" hidden>
+        <div class="import-progress-bar"><span class="import-progress-fill" style="width:0%"></span></div>
+        <div class="import-progress-text"><span class="import-progress-count">0 of ${meals.length}</span></div>
       </div>
       <div class="live-search" style="margin-bottom:8px">
         <label class="search">
@@ -1994,6 +2086,39 @@
   /* ---------- cook ---------- */
   let session = null;
 
+  function activeSession() {
+    const s = store.get(KEY.session, null);
+    if (!s || s.complete) return null;
+    if (s.startedAt && Date.now() - s.startedAt > 12 * 60 * 60 * 1000) return null;
+    return s;
+  }
+
+  function activeSessionRecipe() {
+    const s = activeSession();
+    return s ? getRecipe(s.recipeId) : null;
+  }
+
+  /* Ongoing notification: cooking in progress, current step, visible in the
+     status bar and shade. The payload is the recipe name, "Step X of Y" and
+     the step text. window.MiseNative only exists in the Android shell;
+     everywhere else this is a no-op. */
+  function syncCookNotification(recipe) {
+    try {
+      if (!recipe || typeof window.MiseNative === 'undefined' || typeof MiseNative.cookStep !== 'function') return;
+      const total = recipe.steps.length || 1;
+      const s = activeSession();
+      const step = Math.min(Math.max(1, s && s.recipeId === recipe.id ? s.step : 1), total);
+      const text = (recipe.steps[step - 1] && recipe.steps[step - 1].text) || '';
+      MiseNative.cookStep(String(recipe.name || 'Mise'), step, total, String(text).slice(0, 240));
+    } catch (err) { /* notifications are best-effort */ }
+  }
+
+  function clearCookNotification() {
+    try {
+      if (typeof window.MiseNative !== 'undefined' && typeof MiseNative.cookClear === 'function') MiseNative.cookClear();
+    } catch (err) { /* notifications are best-effort */ }
+  }
+
   function getSession(recipe, stepParam) {
     let s = store.get(KEY.session, null);
     const stale = s && s.startedAt && Date.now() - s.startedAt > 12 * 60 * 60 * 1000;
@@ -2018,6 +2143,7 @@
     store.set(KEY.cookDismissed, true);
     timerState = null;
     store.set(KEY.timer, null);
+    clearCookNotification();
     announce(recipe ? `Cook cancelled — ${recipe.name} discarded.` : 'Cook cleared.');
     navigate('#/cook');
   }
@@ -2049,7 +2175,7 @@
           <span class="cook-step-label">Step ${st.n}${st.section ? ` <span>/ ${esc(st.section)}</span>` : ''}</span>
           <span class="cook-step-state">${current ? 'Current step' : done ? 'Completed' : 'Go to step'}</span>
         </button>
-        <p class="cook-step-text">${esc(st.text)}</p>
+        <p class="cook-step-text">${(typeof window.MiseTools !== 'undefined' ? MiseTools.linkify(esc(st.text)) : esc(st.text))}</p>
         ${stepTimers ? `<div class="cook-timers">${stepTimers}</div>` : ''}
       </li>`;
     }).join('');
@@ -2515,6 +2641,7 @@
       store.set(KEY.session, session);
     }
     announce('Finished cooking ' + recipe.name + '.');
+    clearCookNotification();
     navigate('#/done/' + recipe.id);
   }
 
@@ -2702,63 +2829,99 @@
     if (record) importSourceRecord(record);
   }
 
-  function importAllCaribbean() {
-    const urlFor = (meal) => 'https://www.themealdb.com/meal/' + meal.idMeal;
+  /* Bulk imports write each recipe to the in-memory list only, then flush
+     storage once at the end. saveImported() re-serializes the whole kitchen
+     per call; calling it per recipe for ~700 records froze the WebView. */
+  let importRunning = false;
+
+  const urlForMeal = (meal) => 'https://www.themealdb.com/meal/' + meal.idMeal;
+  const nextTick = () => new Promise((resolve) => setTimeout(resolve, 0));
+
+  function importProgressSlot(prefix) {
+    const root = document.getElementById('import-progress-' + prefix);
+    if (!root) return null;
+    const fill = root.querySelector('.import-progress-fill');
+    const count = root.querySelector('.import-progress-count');
+    return {
+      show() { root.hidden = false; },
+      set(done, total) {
+        if (fill) fill.style.width = (total ? Math.round((done / total) * 100) : 100) + '%';
+        if (count) count.textContent = `${done} of ${total} · ${Math.max(0, total - done)} remaining`;
+      },
+    };
+  }
+
+  async function bulkImport({ prefix, meals = [], sourced = [], label }) {
+    if (importRunning) {
+      announce('An import is already running. Let it finish first.');
+      return;
+    }
+    importRunning = true;
+    const total = meals.length + sourced.length;
+    const ui = importProgressSlot(prefix);
+    if (ui) { ui.show(); ui.set(0, total); }
     let added = 0;
     let reused = 0;
-    for (const meal of (CARIBBEAN.meals || [])) {
-      if (knownImported(urlFor(meal))) { reused += 1; continue; }
-      const recipe = P.recipeFromMealDB(meal, new Date().toISOString());
-      if (!recipe || !recipe.steps.length) continue;
-      saveImported(recipe);
-      added += 1;
+    let done = 0;
+    let lastRecipeId = null;
+    for (const meal of meals) {
+      if (knownImported(urlForMeal(meal))) { reused += 1; } else {
+        const recipe = P.recipeFromMealDB(meal, new Date().toISOString());
+        if (recipe && recipe.steps.length) {
+          saveImported(recipe, { flush: false });
+          lastRecipeId = recipe.id;
+          added += 1;
+        }
+      }
+      done += 1;
+      if (ui && (done % 20 === 0 || done === total)) { ui.set(done, total); await nextTick(); }
     }
-    for (const record of CARIBBEAN_SOURCES) {
-      if (knownImported(record.sourceUrl)) { reused += 1; continue; }
-      const recipe = recipeFromSourceRecord(record);
-      if (!recipe.ingredients.length || !recipe.steps.length) continue;
-      saveImported(recipe);
-      added += 1;
+    for (const record of sourced) {
+      if (knownImported(record.sourceUrl)) { reused += 1; } else {
+        const recipe = recipeFromSourceRecord(record);
+        if (recipe && recipe.ingredients.length && recipe.steps.length) {
+          saveImported(recipe, { flush: false });
+          lastRecipeId = recipe.id;
+          added += 1;
+        }
+      }
+      done += 1;
+      if (ui && (done % 20 === 0 || done === total)) { ui.set(done, total); await nextTick(); }
     }
-    announce(added ? `Imported ${added} Caribbean recipe${added === 1 ? '' : 's'}; ${reused} ${reused === 1 ? 'was' : 'were'} already imported.` : 'All Caribbean records are already imported.');
+    flushImported(lastRecipeId);
+    if (ui) ui.set(total, total);
+    const trimmed = added > 0 && imported.length >= IMPORTED_CAP;
+    announce(added
+      ? `Imported ${added} ${label} recipe${added === 1 ? '' : 's'}; ${reused} ${reused === 1 ? 'was' : 'were'} already imported.${trimmed ? ` The kitchen keeps the newest ${IMPORTED_CAP}.` : ''}`
+      : `All ${label} records are already imported.`);
+    importRunning = false;
     render();
+  }
+
+  function importAllCaribbean() {
+    bulkImport({
+      prefix: 'caribbean',
+      meals: CARIBBEAN.meals || [],
+      sourced: CARIBBEAN_SOURCES,
+      label: 'Caribbean',
+    });
   }
 
   function importAllAfrica() {
-    const urlFor = (meal) => 'https://www.themealdb.com/meal/' + meal.idMeal;
-    let added = 0;
-    let reused = 0;
-    for (const meal of (AFRICA.meals || [])) {
-      if (knownImported(urlFor(meal))) { reused += 1; continue; }
-      const recipe = P.recipeFromMealDB(meal, new Date().toISOString());
-      if (!recipe || !recipe.steps.length) continue;
-      saveImported(recipe);
-      added += 1;
-    }
-    for (const record of AFRICA_SOURCES) {
-      if (knownImported(record.sourceUrl)) { reused += 1; continue; }
-      const recipe = recipeFromSourceRecord(record);
-      if (!recipe.ingredients.length || !recipe.steps.length) continue;
-      saveImported(recipe);
-      added += 1;
-    }
-    announce(added ? `Imported ${added} African recipe${added === 1 ? '' : 's'}; ${reused} ${reused === 1 ? 'was' : 'were'} already imported.` : 'All African records are already imported.');
-    render();
+    bulkImport({
+      prefix: 'africa',
+      meals: AFRICA.meals || [],
+      sourced: AFRICA_SOURCES,
+      label: 'African',
+    });
   }
 
   function importAllGlobal() {
-    const urlFor = (meal) => 'https://www.themealdb.com/meal/' + meal.idMeal;
-    let added = 0;
-    let reused = 0;
-    for (const meal of (GLOBAL.records || [])) {
-      if (knownImported(urlFor(meal))) { reused += 1; continue; }
-      const recipe = P.recipeFromMealDB(meal, new Date().toISOString());
-      if (!recipe || !recipe.steps.length) continue;
-      saveImported(recipe);
-      added += 1;
-    }
-    announce(added ? `Imported ${added} global recipe${added === 1 ? '' : 's'}; ${reused} ${reused === 1 ? 'was' : 'were'} already imported.` : 'All global records are already imported.');
-    render();
+    bulkImport({
+      prefix: 'global',
+      meals: GLOBAL.records || [],
+      label: 'global',
+    });
   }
 
   /* ---------- modals ---------- */
@@ -2991,6 +3154,62 @@
     }
   }
 
+  /* ---------- tool popover ---------- */
+  let toolPop = null;
+
+  function closeToolPop() {
+    if (toolPop) {
+      toolPop.remove();
+      toolPop = null;
+    }
+    document.removeEventListener('click', onToolPopOutside, true);
+    document.removeEventListener('keydown', onToolPopKey, true);
+  }
+
+  function onToolPopOutside(event) {
+    if (toolPop && toolPop.contains(event.target)) return;
+    const inToolWord = !!(event.target && event.target.closest && event.target.closest('[data-action="tool-info"]'));
+    closeToolPop();
+    if (inToolWord) return; // let the normal action reopen for the new word
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  function onToolPopKey(event) {
+    if (event.key === 'Escape') closeToolPop();
+  }
+
+  function openToolPop(key, anchor) {
+    closeToolPop();
+    const def = window.MiseTools && MiseTools.defFor ? MiseTools.defFor(key) : null;
+    if (!def) return;
+    const pop = document.createElement('div');
+    pop.className = 'tool-pop';
+    pop.setAttribute('role', 'dialog');
+    pop.setAttribute('aria-modal', 'true');
+    pop.setAttribute('aria-label', 'Tool: ' + def.name);
+    pop.innerHTML = `<button class="tool-pop-close" type="button" aria-label="Close"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6.5 6.5 11 11M17.5 6.5l-11 11"/></svg></button>
+      <div class="tool-pop-art">${def.art}</div>
+      <div class="tool-pop-copy"><b>${esc(def.name)}</b><span>${esc(def.use)}</span></div>`;
+    document.body.appendChild(pop);
+    const rect = anchor.getBoundingClientRect();
+    pop.style.visibility = 'hidden';
+    pop.style.left = '0px';
+    pop.style.top = '0px';
+    const pw = pop.offsetWidth;
+    const ph = pop.offsetHeight;
+    const left = Math.min(Math.max(12, rect.left + rect.width / 2 - pw / 2), Math.max(12, window.innerWidth - pw - 12));
+    let top = rect.bottom + 10;
+    if (top + ph > window.innerHeight - 12) top = Math.max(12, rect.top - ph - 10);
+    pop.style.left = Math.round(left) + 'px';
+    pop.style.top = Math.round(top) + 'px';
+    pop.style.visibility = 'visible';
+    pop.querySelector('.tool-pop-close').addEventListener('click', closeToolPop);
+    document.addEventListener('click', onToolPopOutside, true);
+    document.addEventListener('keydown', onToolPopKey, true);
+    toolPop = pop;
+  }
+
   /* ---------- events ---------- */
   document.addEventListener('click', (event) => {
     const target = event.target.closest('[data-action]');
@@ -2999,6 +3218,10 @@
       return;
     }
     const action = target.dataset.action;
+    if (action === 'tool-info') {
+      openToolPop(target.dataset.tool, target);
+      return;
+    }
     const route = parseRoute();
     const recipe = route.parts[1] ? getRecipe(route.parts[1]) : null;
 
@@ -3066,7 +3289,9 @@
       const count = imported.length;
       if (target.dataset.armed === 'yes') {
         imported = [];
-        store.set(KEY.imported, imported);
+        importedDirty = false;
+        store.set(KEY.importedV2, []);
+        store.remove(KEY.imported);
         chefCatalogCache = null;
         target.removeAttribute('data-armed');
         target.textContent = 'Imported recipes removed';
@@ -3305,6 +3530,17 @@
       store.set('mise.importurl.v1', url);
       input.value = url;
       importFromUrl(url);
+      return;
+    }
+    if (event.target.id === 'home-search-form') {
+      event.preventDefault();
+      const input = $('#home-q');
+      const q = (input ? input.value : '').trim();
+      libraryState.tab = 'kitchen';
+      libraryState.source = 'all';
+      libraryState.q = q;
+      navigate('#/library');
+      announce(q ? `Showing recipes matching “${q}”.` : 'Showing the kitchen.');
       return;
     }
     if (event.target.id === 'live-form') {

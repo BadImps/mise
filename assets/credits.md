@@ -87,6 +87,10 @@ publisher's wording.
 - Records with no recoverable photo (publisher card without an image, or Commons
   confidence too low) carry one of Mise's own programmatic SVG cover plates —
   original line art in the house palette, drawn by `tools/build-plates.mjs`.
+- Kitchen-tool line illustrations shown by the cook-mode tool popover are
+  original to Mise (`js/tools.js`), drawn in the house stroke style. The Android
+  status-bar pot icon (`android/app/src/main/res/drawable/ic_pot.xml`) is
+  likewise original.
 - Step photographs referenced in the Food & Wine source data are by Molly Bolton; Mise does not
   re-host them.
 

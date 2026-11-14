@@ -1,9 +1,14 @@
 package com.badimps.mise;
 
 import android.annotation.SuppressLint;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.content.pm.PackageManager;
+import android.app.PendingIntent;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DownloadManager;
+import android.app.NotificationManager;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -40,6 +45,10 @@ public final class MainActivity extends Activity {
     private static final String TAG = "Mise";
     private static final String START_URL = "https://" + WebContentStore.HOST + "/index.html";
     private static final int CHARCOAL = Color.rgb(23, 25, 27);
+    private static final String COOK_CHANNEL_ID = "mise.cooking";
+    private static final int COOK_NOTIFICATION_ID = 4271;
+    private static final String EXTRA_DESTINATION = "mise.destination";
+    private static final int REQUEST_POST_NOTIFICATIONS = 1001;
 
     private FrameLayout root;
     private WebView webView;
@@ -51,6 +60,12 @@ public final class MainActivity extends Activity {
     private BroadcastReceiver downloadReceiver;
     private final Handler handler = new Handler(Looper.getMainLooper());
     private boolean loadFailed;
+    private String pendingDestination;
+    private boolean pendingCook;
+    private String pendingCookTitle;
+    private String pendingCookText;
+    private int pendingCookStep;
+    private int pendingCookTotal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +74,8 @@ public final class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         // The decor view must exist before getInsetsController() is queried.
         configureWindow();
+        ensureCookChannel();
+        pendingDestination = destinationFrom(getIntent());
 
         root = findViewById(R.id.root);
         webView = findViewById(R.id.webview);
@@ -186,6 +203,11 @@ public final class MainActivity extends Activity {
                 // The WebView composites behind the opaque loading panel, so the
                 // first revealed frame already has the rendered recipe view.
                 revealWhenRendered(0);
+                String dest = pendingDestination;
+                if (dest != null && webView != null) {
+                    pendingDestination = null;
+                    handler.postDelayed(() -> navigateWebView(dest), 250);
+                }
             }
 
             @Override
@@ -205,6 +227,106 @@ public final class MainActivity extends Activity {
         });
 
         webView.loadUrl("about:blank");
+    }
+
+    /** Creates the low-importance channel used by the ongoing cooking notification. */
+    private void ensureCookChannel() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return;
+        NotificationManager manager = getSystemService(NotificationManager.class);
+        if (manager == null || manager.getNotificationChannel(COOK_CHANNEL_ID) != null) return;
+        NotificationChannel channel = new NotificationChannel(
+                COOK_CHANNEL_ID,
+                "Cooking in progress",
+                NotificationManager.IMPORTANCE_LOW);
+        channel.setDescription("Ongoing notification while a cook is active: the recipe and the step you are on.");
+        channel.setShowBadge(false);
+        manager.createNotificationChannel(channel);
+    }
+
+    private String destinationFrom(Intent intent) {
+        // Only the in-app deep link Mise itself puts on the notification is honoured.
+        String dest = intent != null ? intent.getStringExtra(EXTRA_DESTINATION) : null;
+        return "#/cook".equals(dest) ? dest : null;
+    }
+
+    private void navigateWebView(String hash) {
+        if (webView == null) return;
+        webView.evaluateJavascript(
+                "(function(){ try { location.hash = '" + hash + "'; } catch (e) {} })()",
+                null);
+    }
+
+    private void showCookNotification(String title, int step, int total, String stepText) {
+        if (isFinishing() || isDestroyed()) return;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
+                && checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+            pendingCook = true;
+            pendingCookTitle = title;
+            pendingCookStep = step;
+            pendingCookTotal = total;
+            pendingCookText = stepText;
+            requestPermissions(new String[]{android.Manifest.permission.POST_NOTIFICATIONS}, REQUEST_POST_NOTIFICATIONS);
+            return;
+        }
+        NotificationManager manager = getSystemService(NotificationManager.class);
+        if (manager == null) return;
+        ensureCookChannel();
+
+        Intent intent = new Intent(this, MainActivity.class);
+        // The activity is singleTop: an existing instance gets onNewIntent, a cold
+        // start routes the deep link through onCreate → onPageFinished instead.
+        intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra(EXTRA_DESTINATION, "#/cook");
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, intent,
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+
+        String safeTitle = title == null || title.trim().isEmpty() ? "Mise" : title.trim();
+        String big = stepText == null ? "" : stepText.trim();
+        String progress = "Step " + step + " of " + total;
+        Notification.Builder builder = new Notification.Builder(this, COOK_CHANNEL_ID)
+                .setSmallIcon(R.drawable.ic_pot)
+                .setContentTitle("Cooking · " + safeTitle)
+                .setContentText(progress)
+                .setCategory(Notification.CATEGORY_STATUS)
+                .setOngoing(true)
+                .setOnlyAlertOnce(true)
+                .setContentIntent(contentIntent);
+        if (!big.isEmpty()) {
+            builder.setStyle(new Notification.BigTextStyle()
+                    .bigText(progress + " — " + big)
+                    .setBigContentTitle("Cooking · " + safeTitle));
+        }
+        manager.notify(COOK_NOTIFICATION_ID, builder.build());
+    }
+
+    private void cancelCookNotification() {
+        NotificationManager manager = getSystemService(NotificationManager.class);
+        if (manager != null) manager.cancel(COOK_NOTIFICATION_ID);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == REQUEST_POST_NOTIFICATIONS
+                && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED
+                && pendingCook) {
+            showCookNotification(pendingCookTitle, pendingCookStep, pendingCookTotal, pendingCookText);
+        }
+        pendingCook = false;
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        String dest = destinationFrom(intent);
+        if (dest == null) return;
+        if (loadFailed) {
+            pendingDestination = dest;
+            loadStart();
+            return;
+        }
+        navigateWebView(dest);
     }
 
     private void loadStart() {
@@ -257,6 +379,18 @@ public final class MainActivity extends Activity {
                 info.put("app", true);
             } catch (org.json.JSONException ignored) { }
             return info.toString();
+        }
+
+        @JavascriptInterface
+        public void cookStep(String title, int step, int total, String stepText) {
+            int safeTotal = Math.max(1, total);
+            int safeStep = Math.min(Math.max(1, step), safeTotal);
+            handler.post(() -> showCookNotification(title, safeStep, safeTotal, stepText));
+        }
+
+        @JavascriptInterface
+        public void cookClear() {
+            handler.post(MainActivity.this::cancelCookNotification);
         }
 
         @JavascriptInterface
