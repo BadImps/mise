@@ -352,6 +352,16 @@ public final class MainActivity extends Activity {
         });
     }
 
+    /** Requests the microphone if needed; used before a voice cook starts. */
+    private void prepareSpeech() {
+        if (isFinishing() || isDestroyed()) return;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
+                && checkSelfPermission(android.Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            pendingSpeech = false;
+            requestPermissions(new String[]{android.Manifest.permission.RECORD_AUDIO}, REQUEST_RECORD_AUDIO);
+        }
+    }
+
     /** Starts a one-utterance speech recognizer turn; the web layer re-arms. */
     private void startSpeechRecognition() {
         if (isFinishing() || isDestroyed()) return;
@@ -477,6 +487,16 @@ public final class MainActivity extends Activity {
         @JavascriptInterface
         public void ttsStop() {
             if (miseVoice != null) miseVoice.stop();
+        }
+
+        @JavascriptInterface
+        public void ttsSetVoice(String persona) {
+            if (miseVoice != null) miseVoice.setPersona(persona);
+        }
+
+        @JavascriptInterface
+        public void prepareSpeech() {
+            handler.post(MainActivity.this::prepareSpeech);
         }
 
         @JavascriptInterface

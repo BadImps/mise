@@ -91,12 +91,12 @@ publisher's wording.
   original to Mise (`js/tools.js`), drawn in the house stroke style. The Android
   status-bar pot icon (`android/app/src/main/res/drawable/ic_pot.xml`) is
   likewise original.
-- The automated voice guide's fixed phrases — "Step 1" through "Step 40" and the
-  confirmations ("There is no previous step", "Cook cancelled", "Are you there?",
-  "Cook paused") — are synthesized once at build time with Kokoro-82M
-  (hexgrad/Kokoro-82M, Apache-2.0), voice `af_heart`, American English, speed
-  0.92; they ship as `assets/voice/*.wav` and were rendered by
-  `tools/render-voice-clips.py`. Everything else — step text and all other
+- The automated voice guide's fixed phrases ("Step 1"–"Step 40" and the two
+  confirmations — for Carol and Sean both) are synthesized once at build time
+  with Kokoro-82M (hexgrad/Kokoro-82M, Apache-2.0), voice `af_heart` (Carol)
+  and `am_michael` (Sean), American English, speed 0.92; they ship as
+  `assets/voice/carol/*.wav` and `assets/voice/sean/*.wav` and were rendered by
+  `tools/render-voice-pack.py`. Everything else — step text and all other
   fixed lines — goes through the device's own text-to-speech engine, or the
   Web Speech API in browsers. Audio never reaches a network service; Mise
   receives only the recognized words or an error code, and no recordings are

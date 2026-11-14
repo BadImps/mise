@@ -38,6 +38,8 @@ final class MiseVoice {
     private TextToSpeech tts;
     private boolean ready;
     private String pendingText;
+    /** Which named persona the web layer asked for: "carol" (female) or "sean" (male). */
+    private String persona = "carol";
 
     MiseVoice(Context context, Handler main, Reply reply) {
         this.context = context;
@@ -53,6 +55,14 @@ final class MiseVoice {
     /** Stop and drop the current utterance. Safe from any thread. */
     void stop() {
         main.post(this::stopInternal);
+    }
+
+    /** Switch persona ("carol"/"sean"); re-picks the best matching installed English voice. */
+    void setPersona(String personaName) {
+        main.post(() -> {
+            persona = "sean".equalsIgnoreCase(personaName) ? "sean" : "carol";
+            if (ready) applyVoice();
+        });
     }
 
     /** Release the engine. Safe from any thread. */
@@ -85,13 +95,7 @@ final class MiseVoice {
 
     private void configure() {
         tts.setLanguage(Locale.US);
-        Voice best = pickBestVoice();
-        if (best != null) {
-            tts.setVoice(best);
-            Log.i(TAG, "Voice selected: " + best.getName()
-                    + " (quality " + best.getQuality()
-                    + (best.isNetworkConnectionRequired() ? ", network" : ", local") + ")");
-        }
+        applyVoice();
         tts.setSpeechRate(SPEECH_RATE);
         tts.setPitch(1.0f);
         tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
@@ -110,11 +114,24 @@ final class MiseVoice {
         });
     }
 
+    /** Pick and apply the persona's best installed English voice. */
+    private void applyVoice() {
+        Voice best = pickBestVoice("carol".equals(persona));
+        if (best != null) {
+            tts.setVoice(best);
+            Log.i(TAG, "Voice selected: " + best.getName() + " for persona " + persona
+                    + " (quality " + best.getQuality()
+                    + (best.isNetworkConnectionRequired() ? ", network" : ", local") + ")");
+        }
+    }
+
     /**
      * Prefer very-high-quality English voices, then high/normal, favouring
      * local (works offline) and lower latency, with a US/GB accent preference.
+     * Persona gender is honoured when the engine exposes one; otherwise the
+     * best quality voice wins, which keeps speakers working on every device.
      */
-    private Voice pickBestVoice() {
+    private Voice pickBestVoice(boolean wantFemale) {
         Set<Voice> voices = tts.getVoices();
         if (voices == null) return null;
         Voice best = null;
@@ -132,12 +149,44 @@ final class MiseVoice {
             else if ("GB".equalsIgnoreCase(country)) score += 8;
             if (latency >= Voice.LATENCY_VERY_HIGH) score -= 40;
             else if (latency >= Voice.LATENCY_HIGH) score -= 15;
+            // Persona: strong weight for a named female/male match so the two
+            // presets differ. Unmarked voices sit in the middle.
+            boolean female = voiceLooksFemale(voice.getName());
+            boolean male = voiceLooksMale(voice.getName());
+            if (wantFemale ? female : male) score += 1000;
+            else if (!female && !male) score += 40;
             if (score > bestScore) {
                 bestScore = score;
                 best = voice;
             }
         }
         return best;
+    }
+
+    private static boolean voiceLooksFemale(String name) {
+        if (name == null) return false;
+        String n = name.toLowerCase(Locale.US);
+        return n.contains("female") || n.endsWith("-f") || n.endsWith("_f") || n.contains(" tpf")
+                || containsAny(n, "standard-c", "standard-e", "standard-f", "standard-h",
+                        "wavenet-c", "wavenet-e", "wavenet-f", "wavenet-k", "wavenet-o",
+                        "wavenet-q", "wavenet-t", "wavenet-u", "wavenet-v", "wavenet-w",
+                        "neural2-c", "neural2-e", "neural2-f", "neural2-i", "neural2-j", "neural2-o");
+    }
+
+    private static boolean voiceLooksMale(String name) {
+        if (name == null) return false;
+        String n = name.toLowerCase(Locale.US);
+        return n.contains("male") && !n.contains("female") || n.endsWith("-m") || n.contains(" tpc")
+                || containsAny(n, "standard-a", "standard-b", "standard-d", "standard-j",
+                        "wavenet-a", "wavenet-b", "wavenet-d", "wavenet-i", "wavenet-j",
+                        "neural2-a", "neural2-d", "neural2-g", "neural2-j");
+    }
+
+    private static boolean containsAny(String text, String... needles) {
+        for (String needle : needles) {
+            if (text.contains(needle)) return true;
+        }
+        return false;
     }
 
     private void speakInternal(String text) {

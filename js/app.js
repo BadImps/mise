@@ -70,6 +70,7 @@
     favorites: 'mise.favorites.v1',
     recentCooks: 'mise.recent-cooks.v1',
     cookDismissed: 'mise.cook-dismissed.v1',
+    voice: 'mise.voice.v1',
   };
 
   const store = {
@@ -2152,21 +2153,66 @@
   const synth = () => (typeof window.speechSynthesis !== 'undefined' ? window.speechSynthesis : null);
   const nativeSpeech = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.speechStart === 'function';
   const nativeVoice = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.ttsSpeak === 'function';
+  const nativeVoiceSet = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.ttsSetVoice === 'function';
+  const nativePrepare = () => typeof window.MiseNative !== 'undefined' && typeof MiseNative.prepareSpeech === 'function';
   const webSpeechCtor = () => window.SpeechRecognition || window.webkitSpeechRecognition || null;
   const STUDIO_CLIP_BASE = 'assets/voice/';
   let activeClip = null;
   let ttsAfter = null;
+  let persona = store.get(KEY.voice, 'carol') === 'sean' ? 'sean' : 'carol';
+  let webPersonaVoice = null;
+  const clipBase = () => STUDIO_CLIP_BASE + persona + '/';
+
+  const voiceIsFemale = (name) => {
+    const n = String(name || '').toLowerCase();
+    return /female/.test(n) || /(-|_)f$/.test(n) || /standard-c|standard-e|standard-f|standard-h|wavenet-c|wavenet-e|wavenet-f|wavenet-k|wavenet-o|wavenet-q|wavenet-t|wavenet-u|wavenet-v|wavenet-w|neural2-c|neural2-e|neural2-f|neural2-i|neural2-j|neural2-o/.test(n);
+  };
+  const voiceIsMale = (name) => {
+    const n = String(name || '').toLowerCase();
+    return /-?male/.test(n) || /standard-a|standard-b|standard-d|standard-j|wavenet-a|wavenet-b|wavenet-d|wavenet-i|wavenet-j|neural2-a|neural2-d|neural2-g|neural2-j/.test(n);
+  };
+  const personaVoiceScore = (v, wantFemale) => {
+    const lang = String(v.lang || '').toLowerCase();
+    if (!lang.startsWith('en')) return -1000000;
+    const female = voiceIsFemale(v.name);
+    const male = voiceIsMale(v.name);
+    let score = 0;
+    if (wantFemale ? female : male) score += 1000;
+    else if (!female && !male) score += 40;
+    if (/us/i.test(lang)) score += 12;
+    else if (/gb/i.test(lang)) score += 8;
+    if (v.localService) score += 60;
+    else score += 25;
+    return score;
+  };
+
+  function applyVoicePreference() {
+    if (nativeVoiceSet()) {
+      try { MiseNative.ttsSetVoice(persona); } catch (err) { /* ignore */ }
+    }
+    const engine = synth();
+    if (!engine) { webPersonaVoice = null; return; }
+    let voices = [];
+    try { voices = engine.getVoices() || []; } catch (err) { voices = []; }
+    const wantFemale = persona === 'carol';
+    const best = voices.reduce((top, v) => (personaVoiceScore(v, wantFemale) > (top ? personaVoiceScore(top, wantFemale) : -Infinity) ? v : top), null);
+    webPersonaVoice = best || null;
+  }
+  if (typeof window.speechSynthesis !== 'undefined' && 'onvoiceschanged' in window.speechSynthesis) {
+    window.speechSynthesis.addEventListener('voiceschanged', applyVoicePreference);
+  }
+  applyVoicePreference();
 
   function studioClipPath(text) {
     const numbered = String(text).match(/^Step (\d{1,2})$/);
     if (numbered) {
       const n = Number(numbered[1]);
-      return (n >= 1 && n <= 40) ? STUDIO_CLIP_BASE + 'step-' + n + '.wav' : null;
+      return (n >= 1 && n <= 40) ? clipBase() + 'step-' + n + '.wav' : null;
     }
-    if (text === 'There is no previous step.') return STUDIO_CLIP_BASE + 'no-previous-step.wav';
-    if (text === 'Cook cancelled.') return STUDIO_CLIP_BASE + 'cook-cancelled.wav';
-    if (text === 'Are you there?') return STUDIO_CLIP_BASE + 'are-you-there.wav';
-    if (text === 'Cook paused.') return STUDIO_CLIP_BASE + 'cook-paused.wav';
+    if (text === 'There is no previous step.') return clipBase() + 'no-previous-step.wav';
+    if (text === 'Cook cancelled.') return clipBase() + 'cook-cancelled.wav';
+    if (text === 'Are you there?') return clipBase() + 'are-you-there.wav';
+    if (text === 'Cook paused.') return clipBase() + 'cook-paused.wav';
     return null;
   }
 
@@ -2201,14 +2247,20 @@
     if (hintEl) hintEl.textContent = guideHintText;
   }
 
-  /* Speak order: a pre-rendered Kokoro clip for the fixed phrases ("Step N"
-     up to 40, and the two one-off confirmations), then the Android shell's
-     system voice with the best installed English voice picked natively, then
-     the browser speech engine everywhere else. */
+  /* Speak order: the device's own speech engine carries every line — steps,
+     confirmations, "Are you there?" — in one constant voice chosen in Settings.
+     Only a device with NO speech engine at all falls back to the pre-rendered
+     Kokoro clips for the fixed phrases, so the app never wedges silent. */
   function guideSay(text, after) {
     const clean = String(text == null ? '' : text).trim();
-    const clip = clean ? studioClipPath(clean) : null;
-    if (clip) { playStudioClip(clip, after); return; }
+    const engineOK = nativeVoice() || !!synth();
+    if (!engineOK) {
+      const clip = clean ? studioClipPath(clean) : null;
+      if (clip) { playStudioClip(clip, after); return; }
+      guideSetStatus('Voice audio is unavailable on this device.', 'Steps stay on screen — the chips below drive the guide. Updating Mise to 1.4.0+ restores audio.');
+      if (after) after();
+      return;
+    }
     if (nativeVoice()) {
       ttsAfter = after || null;
       try {
@@ -2231,6 +2283,7 @@
       utterance.pitch = 1;
       utterance.volume = 1;
       utterance.lang = navigator.language || 'en-US';
+      if (webPersonaVoice) utterance.voice = webPersonaVoice;
       utterance.onend = () => { if (after) after(); };
       utterance.onerror = () => { if (after) after(); };
       engine.speak(utterance);
@@ -2503,6 +2556,12 @@
     session.complete = false;
     store.set(KEY.session, session);
     showCookStep(recipe);
+  }
+
+  function requestMicForCook() {
+    if (nativePrepare()) {
+      try { MiseNative.prepareSpeech(); } catch (err) { /* ignore */ }
+    }
   }
 
   function guideLeave() {
@@ -2789,7 +2848,6 @@
         </div>
         <div class="title-actions">
           <button class="btn icon ghost fav-toggle${isFavorite(recipe.id) ? ' is-on' : ''}" type="button" data-action="toggle-favorite" data-id="${esc(recipe.id)}" aria-pressed="${isFavorite(recipe.id)}" aria-label="${isFavorite(recipe.id) ? 'Remove from' : 'Save to'} favorites">${icon('star')}</button>
-          <a class="btn primary" href="#/library">Back to library</a>
         </div>
       </div>
 
@@ -2802,7 +2860,9 @@
               <div class="done-name">${esc(recipe.name)}</div>
               <div class="done-src">${esc(recipe.source)}${recipe.author ? ' / ' + esc(recipe.author) : ''}${recipe.yields ? ' / serves ' + recipe.yields : ''}</div>
               <div class="done-actions">
-                <button class="btn" type="button" data-action="start-cook" data-id="${esc(recipe.id)}">${icon('reset')}Cook it again</button>
+                <a class="btn primary" href="#/">${icon('arrow-left')}Return to Kitchen</a>
+                <a class="btn" href="#/library">Return to Library ${icon('arrow-right')}</a>
+                <button class="btn ghost" type="button" data-action="start-cook" data-id="${esc(recipe.id)}">${icon('reset')}Cook it again</button>
                 <a class="btn ghost" href="#/recipe/${esc(recipe.id)}">Open the recipe</a>
               </div>
             </div>
@@ -3527,6 +3587,29 @@
     </section>`;
   }
 
+  function voicePersonaPanel() {
+    const spokenVoice = persona === 'sean' ? 'Sean' : 'Carol';
+    const card = (name, blurb, id) => `<button class="voice-card" type="button" data-action="set-voice" data-voice="${id}" aria-pressed="${persona === id}">
+        <span class="voice-avatar" aria-hidden="true">${id === 'carol' ? 'C' : 'S'}</span>
+        <span class="choice-copy"><b>${esc(name)}</b><span>${esc(blurb)}</span></span>
+        ${persona === id ? icon('check', 'voice-check') : ''}
+      </button>`;
+    return `<section class="panel voice-panel" aria-labelledby="settings-voice-title">
+      <div class="panel-head">
+        <div>
+          <h2 id="settings-voice-title">One voice</h2>
+          <p class="meta">Every spoken line — the steps, the prompts, the “Are you there?” — uses the same voice. Pick it once.</p>
+        </div>
+        <span class="pill soft">${esc(spokenVoice)}</span>
+      </div>
+      <div class="voice-cards">
+        ${card('Carol', 'Female neural voice. Default.', 'carol')}
+        ${card('Sean', 'Male neural voice. On devices with no male voice Mise falls back to its best female voice.', 'sean')}
+      </div>
+      <p class="hint">Voices come from this device’s own speech service — Google Speech Services on Android, system voices elsewhere — never the network. Mise never sends text anywhere to speak it. If a device has no speech engine at all, the guide falls back to recorded phrases for fixed lines and to buttons for the rest.</p>
+    </section>`;
+  }
+
   function settingsView() {
     const bridge = window.MiseNative || null;
     let build = null;
@@ -3551,6 +3634,7 @@
       <div class="settings-grid">
         <div class="settings-main">
           ${importCard()}
+          ${voicePersonaPanel()}
 
           <section class="panel sources-panel" id="settings-sources" aria-labelledby="settings-sources-title" tabindex="-1">
             ${sourcesListHtml()}
@@ -3990,6 +4074,14 @@
       if (recipe) openStartCook(recipe);
       return;
     }
+    if (action === 'set-voice') {
+      persona = target.dataset.voice === 'sean' ? 'sean' : 'carol';
+      store.set(KEY.voice, persona);
+      applyVoicePreference();
+      announce(persona === 'sean' ? 'Voice set to Sean.' : 'Voice set to Carol.');
+      render();
+      return;
+    }
     if (action === 'cook-choice') {
       const recipe = getRecipe(target.dataset.id || '');
       closeModal();
@@ -3998,6 +4090,7 @@
         guideWant = true;
         lastSpokenKey = '';
         guideStreak = 0;
+        requestMicForCook();
         navigate('#/cook/' + recipe.id + '?voice=1');
       } else {
         navigate('#/cook/' + recipe.id);
