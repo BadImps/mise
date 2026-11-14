@@ -28,6 +28,7 @@
     lastcook: 'mise.lastcook.v1',
     timer: 'mise.timer.v1',
     scale: 'mise.scale.v1',
+    pantry: 'mise.pantry.v1',
   };
 
   const store = {
@@ -251,6 +252,7 @@
     if (imported.length > 400) imported = imported.slice(0, 400);
     store.set(KEY.imported, imported);
     store.set(KEY.last, recipe.id);
+    chefCatalogCache = null;
     return recipe;
   }
 
@@ -276,9 +278,11 @@
 
   function setChrome(route) {
     const nav = route.parts[0] === 'library' ? 'library'
-      : route.parts[0] === 'research' ? 'research'
-        : (route.parts[0] === 'cook' || route.parts[0] === 'done') ? 'cook'
-          : route.parts[0] === 'recipe' ? 'library' : 'home';
+      : route.parts[0] === 'import' ? 'import'
+        : route.parts[0] === 'chef' ? 'chef'
+          : route.parts[0] === 'research' ? 'research'
+            : (route.parts[0] === 'cook' || route.parts[0] === 'done') ? 'cook'
+              : route.parts[0] === 'recipe' ? 'library' : 'home';
     $$('[data-nav]').forEach((a) => {
       if (a.dataset.nav === nav) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');
@@ -297,7 +301,13 @@
     try {
       if (!route.parts.length) {
         view.innerHTML = homeView();
-        title = 'Your kitchen · Mise';
+        title = 'Mise · your kitchen';
+      } else if (route.parts[0] === 'import') {
+        view.innerHTML = importView();
+        title = 'Import a recipe · Mise';
+      } else if (route.parts[0] === 'chef') {
+        view.innerHTML = chefView();
+        title = 'Ask the Chef · Mise';
       } else if (route.parts[0] === 'library') {
         view.innerHTML = libraryView(route.params.get('tab') || 'kitchen');
         title = 'Library · Mise';
@@ -325,7 +335,7 @@
         view.innerHTML = missingView('page');
       }
     } catch (err) {
-      view.innerHTML = `<div class="page"><div class="panel state-panel"><h2>Something in that view broke</h2><p>${esc(err && err.message ? err.message : 'Unknown error')}</p><div class="actions"><a class="btn primary" href="#/">Back to your kitchen</a></div></div></div>`;
+      view.innerHTML = `<div class="page"><div class="panel state-panel"><h2>Something in that view broke</h2><p>${esc(err && err.message ? err.message : 'Unknown error')}</p><div class="actions"><a class="btn primary" href="#/">Back to Mise</a></div></div></div>`;
     }
 
     document.title = title;
@@ -363,38 +373,61 @@
     const finding = `${all.length} recipes read. ${totalNamed} of ${totalChecked} listed ingredients are named in a step`
       + (gapRecipe ? `; ${gapRecipe.name} leaves ${gapRecipe.stats.missing} unnamed.` : '.');
 
-    return `<div class="page">
-      <div class="title-row">
+    return `<div class="page home-page">
+      <div class="title-row home-title">
         <div>
-          <h1>Your kitchen</h1>
-          <p class="sub">${esc(finding)}</p>
+          <p class="eyebrow">Your kitchen</p>
+          <h1>Mise</h1>
+          <p class="sub">A recipe, taken apart and put in order. Start with one, or tell the Chef what you already have.</p>
         </div>
         <div class="title-actions">
-          <button class="btn ghost" type="button" data-action="focus-import">${icon('import')}Import a recipe</button>
-          <a class="btn ghost" href="#/library">Open library ${icon('arrow-right')}</a>
+          <a class="btn" href="#/import">${icon('import')}Import a recipe</a>
         </div>
       </div>
 
-      <div class="home-grid">
-        <div class="home-main">
-          ${featured ? featuredHero(featured, recentlyOpened) : ''}
-          ${kitchenPanel(all)}
-        </div>
-        <aside class="home-side">
-          ${importCard()}
-          ${legendCard()}
+      ${featured ? featuredHero(featured, recentlyOpened) : ''}
+
+      <div class="home-lower">
+        ${kitchenPanel(all)}
+        <aside class="home-aside">
+          ${chefTeaser()}
+          <section class="panel home-note" aria-labelledby="home-note-title">
+            <div class="panel-head">
+              <h2 id="home-note-title">How Mise reads</h2>
+              <span class="meta">${all.length} recipes</span>
+            </div>
+            <p class="meta">${esc(finding)}</p>
+            <a class="section-link" href="#/library">Open the library ${icon('arrow-right')}</a>
+          </section>
         </aside>
       </div>
     </div>`;
   }
 
+  function chefTeaser() {
+    const selected = chefSelectedIds().length;
+    return `<section class="panel chef-teaser" aria-labelledby="chef-teaser-title">
+      <div class="panel-head">
+        <div class="meta-line">${icon('chef')}Offline pantry matcher</div>
+        <span class="pill soft">No account</span>
+      </div>
+      <h2 id="chef-teaser-title">Ask the Chef</h2>
+      <p class="lede">Tick the spices, proteins and sides you have. The Chef ranks recipes already in Mise by what you can cook now.</p>
+      <div class="teaser-chips" aria-hidden="true">
+        <span>Paprika</span><span>Chicken</span><span>Rice</span><span>Tomatoes</span><span>Garlic</span>
+      </div>
+      <a class="btn primary" href="#/chef">${icon('chef')}Open Ask the Chef</a>
+      <p class="teaser-foot">${selected ? `${selected} pantry item${selected === 1 ? '' : 's'} saved on this device.` : 'Your pantry stays in this browser. Nothing is sent anywhere.'}</p>
+    </section>`;
+  }
+
   function featuredHero(recipe, recentlyOpened) {
     const c = coverStats(recipe);
     const total = recipe.totalMinutes;
-    return `<section class="panel hero" aria-labelledby="hero-name">
+    return `<section class="panel hero start-tile" aria-labelledby="hero-name">
       <div class="panel-head">
-        <h2 class="sr-only" id="hero-title">Featured recipe</h2>
-        <div class="meta-line">${icon('flame')}${recentlyOpened ? 'Last opened' : 'Start here'}</div>
+        <h2 class="sr-only" id="hero-title">Start here</h2>
+        <div class="meta-line">${icon('flame')}Start here${recentlyOpened ? '<span class="dot"></span><span>last opened</span>' : ''}</div>
         <a class="section-link" href="#/library">All recipes ${icon('arrow-right')}</a>
       </div>
       <div class="hero-body">
@@ -432,7 +465,7 @@
       const c = coverStats(recipe);
       return `<a class="rrow" href="#/recipe/${esc(recipe.id)}">
         ${imgWrap(recipe.image, recipe.name, 'rthumb')}
-        <span>
+        <span class="rrow-copy">
           <span class="rname">${esc(recipe.name)}</span>
           <span class="rsub">${esc(recipe.source)} / ${esc(recipe.cuisine || recipe.category || 'No cuisine given')}</span>
         </span>
@@ -506,6 +539,490 @@
     </section>`;
   }
 
+  function importView() {
+    const all = allRecipes();
+    return `<div class="page import-page">
+      <div class="title-row">
+        <div>
+          <p class="eyebrow">Read a recipe</p>
+          <h1>Import</h1>
+          <p class="sub">Bring one published recipe into Mise. It keeps its publisher, its own ingredients and its own steps. Nothing is retyped by hand.</p>
+        </div>
+        <div class="title-actions">
+          <a class="btn ghost" href="#/">${icon('arrow-left')}Back to Mise</a>
+        </div>
+      </div>
+
+      <div class="home-grid import-grid">
+        <div class="home-main">
+          ${importCard()}
+          <section class="panel import-notes" aria-labelledby="import-notes-title">
+            <div class="panel-head">
+              <h2 id="import-notes-title">What happens next</h2>
+              <span class="meta">One page at a time</span>
+            </div>
+            <ol class="import-steps">
+              <li>
+                <span class="n">01</span>
+                <span><b>Mise reads the page's own data</b><span>It looks for the schema.org Recipe block the publisher already provides, or a page source you paste yourself.</span></span>
+              </li>
+              <li>
+                <span class="n">02</span>
+                <span><b>Every ingredient is traced to the steps</b><span>You see which ingredients the steps actually name, and which stay as a disclosed source gap.</span></span>
+              </li>
+              <li>
+                <span class="n">03</span>
+                <span><b>The recipe joins My kitchen</b><span>It is stored in this browser with its source URL. Publisher photographs are not re-hosted from captured records.</span></span>
+              </li>
+            </ol>
+          </section>
+        </div>
+        <aside class="home-side">
+          ${legendCard()}
+          <section class="panel import-source-note" aria-labelledby="import-source-title">
+            <div class="panel-head">
+              <h2 id="import-source-title">Source, not sample</h2>
+              <span class="pill soft">${all.length} here</span>
+            </div>
+            <p class="meta">Mise keeps the publisher's ingredient wording and links back to the page. Live links are read in this browser and can be blocked by a site's cross-origin rules; pasting the page source is the fallback.</p>
+            <button class="btn ghost" type="button" data-action="sources">${icon('info')}Sources, credits and limits</button>
+          </section>
+        </aside>
+      </div>
+    </div>`;
+  }
+
+  /* ---------- Ask the Chef ---------- */
+  const CHIP_DEFS = [
+    ['spices', 'Spices & herbs', [
+      ['salt', 'Salt', ['salt', 'kosher salt', 'sea salt', 'pink salt', 'table salt'], ['garlic', 'onion'], 0.25],
+      ['black-pepper', 'Black pepper', ['black pepper', 'peppercorn', 'pepper'], ['bell', 'red', 'green', 'yellow', 'cayenne', 'chilli', 'chili', 'flakes', 'white', 'sweet'], 0.3],
+      ['paprika', 'Paprika', ['paprika', 'smoked paprika', 'sweet paprika', 'pimenton'], [], 0.7],
+      ['cumin', 'Cumin', ['cumin', 'cumin seed', 'jeera'], [], 0.7],
+      ['coriander', 'Coriander', ['coriander', 'coriander seed', 'ground coriander', 'cilantro'], [], 0.8],
+      ['cinnamon', 'Cinnamon', ['cinnamon', 'cinnamon stick', 'cassia'], [], 0.7],
+      ['thyme', 'Thyme', ['thyme'], [], 0.8],
+      ['oregano', 'Oregano', ['oregano'], [], 0.7],
+      ['chilli', 'Chilli / cayenne', ['chilli', 'chili', 'chile', 'cayenne', 'cayenne pepper', 'scotch bonnet', 'jalapeno', 'habanero', 'chilli flake', 'red pepper flake', 'chilli powder'], ['bell', 'sweet'], 0.8],
+      ['curry-powder', 'Curry powder', ['curry powder', 'garam masala', 'curry masala', 'madras curry'], ['leaf', 'paste'], 0.7],
+      ['nutmeg', 'Nutmeg', ['nutmeg'], [], 0.6],
+      ['allspice', 'Allspice', ['allspice', 'pimento'], [], 0.6],
+      ['bay-leaf', 'Bay leaf', ['bay leaf'], [], 0.5],
+      ['turmeric', 'Turmeric', ['turmeric'], [], 0.6],
+      ['parsley', 'Parsley', ['parsley', 'flat leaf parsley'], [], 0.7],
+      ['basil', 'Basil', ['basil'], [], 0.8],
+      ['mint', 'Mint', ['mint'], [], 0.6],
+      ['dill', 'Dill', ['dill'], [], 0.6],
+      ['ginger', 'Ginger', ['ginger', 'ginger root'], ['ale', 'powder'], 0.7],
+      ['harissa', 'Harissa', ['harissa', 'harissa paste', 'harissa spice'], [], 0.5],
+      ['vanilla', 'Vanilla', ['vanilla', 'vanilla extract', 'vanilla essence'], [], 0.4],
+    ]],
+    ['meat', 'Meat & protein', [
+      ['chicken', 'Chicken', ['chicken'], ['stock', 'broth', 'seasoning', 'bouillon', 'sauce'], 1],
+      ['beef', 'Beef', ['beef', 'beef steak', 'ground beef', 'beef mince'], ['stock', 'broth'], 1],
+      ['pork', 'Pork', ['pork', 'pork chop', 'pork belly', 'ground pork', 'pork mince'], ['stock', 'broth'], 1],
+      ['lamb', 'Lamb', ['lamb', 'lamb chop', 'ground lamb', 'lamb mince'], ['stock', 'broth'], 0.95],
+      ['goat', 'Goat / mutton', ['goat', 'goat meat', 'mutton'], ['stock', 'broth'], 1],
+      ['fish', 'Fish', ['fish', 'salmon', 'cod', 'tuna', 'tilapia', 'snapper', 'mackerel', 'haddock', 'trout', 'kingfish', 'bass'], ['sauce', 'stock', 'broth', 'paste', 'cake', 'finger'], 1],
+      ['prawns', 'Prawns / shrimp', ['prawn', 'shrimp'], [], 1],
+      ['bacon', 'Bacon', ['bacon', 'lardon', 'pancetta'], [], 1],
+      ['sausage', 'Sausage', ['sausage', 'chorizo', 'salami', 'hot dog'], [], 0.9],
+      ['eggs', 'Eggs', ['egg'], [], 0.9],
+      ['tofu', 'Tofu', ['tofu', 'bean curd'], [], 0.8],
+      ['anchovy', 'Anchovy', ['anchovy'], [], 0.7],
+    ]],
+    ['vegetables', 'Vegetables', [
+      ['onion', 'Onions', ['onion', 'shallot'], ['spring', 'scallion', 'green onion', 'chive', 'powder'], 0.8],
+      ['spring-onion', 'Spring onions', ['spring onion', 'scallion', 'green onion'], [], 0.5],
+      ['garlic', 'Garlic', ['garlic', 'garlic clove'], ['powder', 'salt', 'sauce'], 0.8],
+      ['tomatoes', 'Tomatoes', ['tomato', 'plum tomato', 'cherry tomato', 'canned tomato', 'tinned tomato'], ['paste', 'puree', 'ketchup', 'sauce', 'soup', 'sun dried', 'juice'], 0.9],
+      ['potatoes', 'Potatoes / fries', ['potato', 'fries', 'french fries', 'chips'], ['sweet', 'chocolate'], 0.9],
+      ['carrots', 'Carrots', ['carrot'], [], 0.8],
+      ['bell-pepper', 'Bell pepper', ['bell pepper', 'red pepper', 'green pepper', 'yellow pepper', 'capsicum', 'sweet pepper'], ['black', 'cayenne', 'chilli', 'chili', 'flakes', 'ground'], 0.7],
+      ['cabbage', 'Cabbage', ['cabbage', 'red cabbage', 'white cabbage', 'savoy cabbage'], [], 0.7],
+      ['spinach', 'Spinach / greens', ['spinach', 'kale', 'callaloo', 'leafy green', 'greens'], [], 0.6],
+      ['mushrooms', 'Mushrooms', ['mushroom', 'button mushroom', 'cremini', 'portobello'], [], 0.7],
+      ['cucumber', 'Cucumber', ['cucumber'], [], 0.4],
+      ['celery', 'Celery', ['celery', 'celery stalk'], [], 0.5],
+      ['sweetcorn', 'Sweetcorn', ['sweetcorn', 'corn', 'corn kernel', 'corn on the cob'], ['meal', 'flour', 'starch'], 0.7],
+      ['peas', 'Peas', ['pea', 'green pea', 'garden pea', 'black eyed pea'], [], 0.5],
+      ['green-beans', 'Green beans', ['green bean', 'string bean', 'runner bean'], [], 0.5],
+      ['aubergine', 'Aubergine / eggplant', ['aubergine', 'eggplant', 'brinjal'], [], 0.6],
+      ['okra', 'Okra', ['okra', 'ochro'], [], 0.5],
+      ['plantain', 'Plantain', ['plantain'], [], 0.6],
+      ['pumpkin', 'Pumpkin / squash', ['pumpkin', 'squash', 'butternut'], [], 0.6],
+      ['zucchini', 'Courgette / zucchini', ['zucchini', 'courgette'], [], 0.5],
+      ['avocado', 'Avocado', ['avocado'], [], 0.5],
+      ['broccoli', 'Broccoli', ['broccoli'], [], 0.6],
+      ['lime', 'Lime', ['lime', 'lime juice', 'lime zest'], [], 0.5],
+      ['lemon', 'Lemon', ['lemon', 'lemon juice', 'lemon zest'], [], 0.5],
+    ]],
+    ['sides', 'Sides & grains', [
+      ['rice', 'Rice', ['rice', 'basmati rice', 'jasmine rice', 'long grain rice', 'white rice', 'brown rice'], ['noodle', 'flour', 'vinegar', 'wine', 'paper'], 0.9],
+      ['pasta', 'Pasta', ['pasta', 'penne', 'spaghetti', 'macaroni', 'linguine', 'fusilli', 'rigatoni', 'tagliatelle', 'fettuccine', 'lasagne', 'lasagna', 'orzo'], ['sauce'], 0.9],
+      ['noodles', 'Noodles', ['noodle', 'vermicelli', 'rice noodle', 'egg noodle', 'ramen'], [], 0.8],
+      ['bread', 'Bread', ['bread', 'baguette', 'bun', 'roll', 'pita', 'naan', 'tortilla'], [], 0.7],
+      ['flour', 'Flour', ['flour', 'all purpose flour', 'plain flour', 'self raising flour', 'whole wheat flour'], ['corn', 'rice', 'chickpea', 'almond', 'coconut', 'cassava'], 0.6],
+      ['cornmeal', 'Cornmeal / polenta', ['cornmeal', 'polenta', 'masa', 'corn meal'], [], 0.5],
+      ['couscous', 'Couscous', ['couscous'], [], 0.5],
+      ['quinoa', 'Quinoa', ['quinoa'], [], 0.4],
+      ['oats', 'Oats', ['oat', 'rolled oats'], ['milk'], 0.4],
+      ['beans', 'Beans / chickpeas', ['bean', 'kidney bean', 'black bean', 'cannellini', 'pinto', 'haricot', 'chickpea', 'garbanzo', 'black eyed pea'], ['green', 'string', 'runner', 'vanilla', 'coffee', 'cocoa'], 0.7],
+      ['lentils', 'Lentils', ['lentil', 'dal', 'dhal'], [], 0.6],
+    ]],
+    ['pantry', 'Pantry & dairy', [
+      ['olive-oil', 'Olive oil', ['olive oil', 'extra virgin olive oil'], [], 0.5],
+      ['cooking-oil', 'Cooking oil', ['vegetable oil', 'sunflower oil', 'canola oil', 'corn oil', 'groundnut oil', 'oil'], [], 0.4],
+      ['butter', 'Butter', ['butter', 'unsalted butter', 'salted butter'], ['peanut', 'cocoa', 'apple', 'bean', 'milk'], 0.7],
+      ['milk', 'Milk', ['milk', 'whole milk', 'semi skimmed milk', 'skimmed milk'], ['coconut', 'almond', 'soy', 'oat', 'condensed', 'evaporated', 'powder'], 0.7],
+      ['cream', 'Cream', ['cream', 'double cream', 'heavy cream', 'whipping cream', 'single cream', 'creme fraiche'], ['coconut', 'sour', 'ice', 'cheese'], 0.6],
+      ['yogurt', 'Yogurt', ['yogurt', 'yoghurt', 'greek yogurt', 'natural yogurt'], [], 0.5],
+      ['cheese', 'Cheese', ['cheese', 'parmesan', 'parmigiano', 'cheddar', 'mozzarella', 'feta', 'ricotta', 'mascarpone', 'gruyere', 'pecorino'], ['cream'], 0.8],
+      ['coconut-milk', 'Coconut milk', ['coconut milk', 'coconut cream'], [], 0.7],
+      ['coconut', 'Coconut', ['coconut', 'desiccated coconut', 'shredded coconut'], ['milk', 'cream', 'oil', 'water', 'sugar', 'flour'], 0.4],
+      ['peanuts', 'Peanuts / peanut butter', ['peanut', 'groundnut', 'peanut butter'], [], 0.5],
+      ['nuts', 'Nuts', ['almond', 'cashew', 'walnut', 'pecan', 'pistachio', 'hazelnut'], ['milk'], 0.5],
+      ['sugar', 'Sugar', ['sugar', 'caster sugar', 'granulated sugar', 'brown sugar', 'icing sugar', 'demerara'], [], 0.3],
+      ['honey', 'Honey', ['honey'], [], 0.5],
+      ['stock', 'Stock / broth', ['stock', 'broth', 'bouillon', 'stock cube'], [], 0.5],
+      ['soy-sauce', 'Soy sauce', ['soy sauce', 'tamari', 'light soy sauce', 'dark soy sauce'], [], 0.6],
+      ['vinegar', 'Vinegar', ['vinegar', 'white vinegar', 'cider vinegar', 'rice vinegar', 'balsamic vinegar'], [], 0.3],
+      ['tomato-paste', 'Tomato paste / puree', ['tomato paste', 'tomato puree', 'passata', 'tomato concentrate'], [], 0.5],
+      ['mustard', 'Mustard', ['mustard', 'dijon mustard', 'wholegrain mustard'], [], 0.3],
+      ['ketchup', 'Ketchup', ['ketchup', 'tomato ketchup'], [], 0.2],
+      ['mayonnaise', 'Mayonnaise', ['mayonnaise', 'mayo'], [], 0.3],
+      ['tamarind', 'Tamarind', ['tamarind', 'tamarind paste', 'tamarind concentrate'], [], 0.4],
+      ['worcestershire', 'Worcestershire sauce', ['worcestershire sauce', 'worcestershire'], [], 0.3],
+      ['raisins', 'Raisins', ['raisin', 'sultana'], [], 0.3],
+      ['baking-powder', 'Baking powder', ['baking powder'], [], 0.2],
+      ['baking-soda', 'Baking soda', ['baking soda', 'bicarbonate of soda', 'bicarb'], [], 0.2],
+      ['yeast', 'Yeast', ['yeast', 'active dry yeast', 'instant yeast'], [], 0.2],
+    ]],
+  ];
+
+  const CHEF_CATEGORIES = CHIP_DEFS.map(([id, label, items]) => ({
+    id,
+    label,
+    items: items.map(([chipId, chipLabel, aliases, exclude, weight]) => ({
+      id: chipId,
+      category: id,
+      label: chipLabel,
+      aliases,
+      exclude,
+      weight,
+      _aliases: aliases.map((alias) => P._debug.tokens(alias)),
+      _exclude: exclude.map((phrase) => P._debug.tokens(phrase)),
+    })),
+  }));
+  const CHEF_CHIPS = CHEF_CATEGORIES.flatMap((category) => category.items);
+  const CHIP_BY_ID = new Map(CHEF_CHIPS.map((chip) => [chip.id, chip]));
+
+  const savedPantry = store.get(KEY.pantry, []);
+  let pantrySelection = new Set((Array.isArray(savedPantry) ? savedPantry : []).filter((id) => CHIP_BY_ID.has(id)));
+  const chefState = { limit: 12, showAll: false };
+
+  let chefCatalogCache = null;
+  let chefCatalogSize = 0;
+
+  function chefSelectedIds() {
+    return Array.from(pantrySelection);
+  }
+
+  function savePantry() {
+    store.set(KEY.pantry, chefSelectedIds());
+  }
+
+  function buildChefCatalog() {
+    if (chefCatalogCache) return chefCatalogCache;
+    const seen = new Set();
+    const list = [];
+    const add = (recipe, opts) => {
+      if (!recipe || !recipe.ingredients.length || !recipe.steps.length) return;
+      const key = recipe.sourceUrl || opts.key;
+      if (!key || seen.has(key)) return;
+      seen.add(key);
+      const lines = recipe.ingredients
+        .filter((ing) => !ing.serving)
+        .map((ing) => ({
+          ing,
+          name: ing.matchName || ing.item || '',
+          tokens: P._debug.tokens((ing.matchName || '') + ' ' + (ing.item || '')),
+          chips: null,
+        }))
+        .filter((line) => line.tokens.length);
+      list.push(Object.assign({ key, recipe, lines }, opts));
+    };
+
+    allRecipes().forEach((recipe) => add(recipe, { importedId: recipe.id, action: '', actionId: '' }));
+
+    const addMeal = (meal) => {
+      if (!meal || !meal.idMeal) return;
+      const url = 'https://www.themealdb.com/meal/' + meal.idMeal;
+      if (knownImported(url)) return;
+      add(P.recipeFromMealDB(meal, new Date().toISOString()), {
+        key: url,
+        importedId: '',
+        action: 'import-meal',
+        actionId: String(meal.idMeal),
+      });
+    };
+    const addSource = (record, action) => {
+      if (!record || !record.sourceUrl || knownImported(record.sourceUrl)) return;
+      add(recipeFromSourceRecord(record), {
+        key: record.sourceUrl,
+        importedId: '',
+        action,
+        actionId: record.id,
+      });
+    };
+
+    (CARIBBEAN.meals || []).forEach(addMeal);
+    CARIBBEAN_SOURCES.forEach((record) => addSource(record, 'import-caribbean-source'));
+    (AFRICA.meals || []).forEach(addMeal);
+    AFRICA_SOURCES.forEach((record) => addSource(record, 'import-africa-source'));
+    (GLOBAL.records || []).forEach(addMeal);
+
+    chefCatalogCache = list;
+    chefCatalogSize = list.length;
+    return list;
+  }
+
+  function phraseInTokens(hay, phrase) {
+    if (!hay.length || !phrase.length || phrase.length > hay.length) return false;
+    for (let i = 0; i <= hay.length - phrase.length; i++) {
+      let hit = true;
+      for (let j = 0; j < phrase.length; j++) {
+        if (hay[i + j] !== phrase[j]) { hit = false; break; }
+      }
+      if (hit) return true;
+    }
+    return false;
+  }
+
+  function chipMatchesLine(line, chip) {
+    if (!line.tokens.length) return false;
+    if (chip._exclude.some((phrase) => phraseInTokens(line.tokens, phrase))) return false;
+    return chip._aliases.some((phrase) => phraseInTokens(line.tokens, phrase));
+  }
+
+  function lineChips(line) {
+    if (!line.chips) line.chips = CHEF_CHIPS.filter((chip) => chipMatchesLine(line, chip));
+    return line.chips;
+  }
+
+  function tidyIngredientName(value) {
+    const original = P.clean(String(value || ''));
+    const cleaned = original
+      .replace(/\b\d+(?:[./]\d+)?\s*(?:cm|mm|g|kg|ml|l|oz|lb|lbs|tbsp|tsp|cup|cups|clove|cloves|piece|pieces|stalk|stalks|splash|splashes|strip|strips|can|cans|tin|tins|bunch|bunches|sprig|sprigs)\b/gi, ' ')
+      .replace(/\b(?:cm|mm|piece|pieces|stalk|stalks|splash|splashes|strip|strips|raw)\b/gi, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    return cleaned || original;
+  }
+
+  function chefRankedResults() {
+    const catalog = buildChefCatalog();
+    const selected = chefSelectedIds().map((id) => CHIP_BY_ID.get(id)).filter(Boolean);
+    if (!selected.length) return { selected, results: [], catalogSize: chefCatalogSize };
+
+    const categoryWeight = { spices: 0.7, meat: 1.5, vegetables: 1.05, sides: 1.25, pantry: 0.85 };
+    const selectedMain = selected.filter((chip) => chip.category === 'meat' || chip.category === 'sides');
+    const results = [];
+    for (const item of catalog) {
+      const have = new Map();
+      const haveLines = new Set();
+      const missing = new Map();
+      for (const line of item.lines) {
+        const chips = lineChips(line);
+        if (!chips.length) continue;
+        const selectedChip = chips.find((chip) => pantrySelection.has(chip.id));
+        if (selectedChip) {
+          have.set(selectedChip.id, selectedChip);
+          haveLines.add(line.name);
+        } else {
+          missing.set(line.name, tidyIngredientName(line.name));
+        }
+      }
+      if (!have.size) continue;
+      const used = haveLines.size;
+      const missingCount = missing.size;
+      const coverage = used / Math.max(1, used + missingCount);
+      const weight = Array.from(have.values()).reduce((sum, chip) => sum + (chip.weight || 1) * (categoryWeight[chip.category] || 1), 0);
+      const mainHits = selectedMain.filter((chip) => have.has(chip.id)).length;
+      const mainBonus = selectedMain.length ? (mainHits / selectedMain.length) * 22 : 0;
+      const score = weight * 14 + used * 3 + coverage * 26 - missingCount * 2 + mainBonus;
+      results.push({
+        item,
+        have: Array.from(have.values()),
+        matchedChips: have.size,
+        used,
+        missingCount,
+        coverage,
+        score,
+        missingLabels: Array.from(new Set(Array.from(missing.values()))),
+      });
+    }
+
+    results.sort((a, b) => b.score - a.score
+      || b.matchedChips - a.matchedChips
+      || a.missingCount - b.missingCount
+      || a.item.recipe.name.localeCompare(b.item.recipe.name));
+    return { selected, results, catalogSize: chefCatalogSize };
+  }
+
+  function chefSummary(data) {
+    if (!data.selected.length) {
+      return `${data.catalogSize} published recipes are ready to check. Pick ingredients to begin.`;
+    }
+    if (!data.results.length) {
+      return `No recipe uses any of those ${data.selected.length} ingredients. Try a broader pantry.`;
+    }
+    return `${data.results.length} recipe${data.results.length === 1 ? '' : 's'} use at least one of your ${data.selected.length} ingredient${data.selected.length === 1 ? '' : 's'}. Sorted by how much of your pantry each one uses.`;
+  }
+
+  function chefCategoriesHtml() {
+    return CHEF_CATEGORIES.map((category) => `<details class="pantry-cat" open>
+      <summary><span>${esc(category.label)}</span><span class="n">${category.items.length}</span></summary>
+      <div class="pantry-chips">
+        ${category.items.map((chip) => `<button class="pantry-chip" type="button" data-action="chef-toggle" data-id="${esc(chip.id)}" aria-pressed="${pantrySelection.has(chip.id)}">${icon('check')}<span>${esc(chip.label)}</span></button>`).join('')}
+      </div>
+    </details>`).join('');
+  }
+
+  function chefResultCard(hit) {
+    const recipe = hit.item.recipe;
+    const percent = Math.round(hit.coverage * 100);
+    const label = recipe.cuisine || recipe.category || 'Source recipe';
+    const name = hit.item.importedId
+      ? `<a href="#/recipe/${esc(hit.item.importedId)}">${esc(recipe.name)}</a>`
+      : esc(recipe.name);
+    const action = hit.item.importedId
+      ? `<a class="btn sm primary" href="#/recipe/${esc(hit.item.importedId)}">Open recipe ${icon('arrow-right')}</a>`
+      : `<button class="btn sm primary" type="button" data-action="${esc(hit.item.action)}" data-id="${esc(hit.item.actionId)}">Read &amp; import ${icon('arrow-right')}</button>`;
+    const haveTags = hit.have.map((chip) => `<span class="chef-have">${icon('check')}${esc(chip.label)}</span>`).join('');
+    const shownMissing = hit.missingLabels.slice(0, 4);
+    const extraMissing = hit.missingLabels.length - shownMissing.length;
+    const missingLine = hit.missingLabels.length
+      ? `<p class="chef-missing"><b>Also needs</b> ${esc(shownMissing.join(', '))}${extraMissing ? ` and ${extraMissing} more` : ''}.</p>`
+      : `<p class="chef-missing"><b>Pantry check</b> no gaps among the items the Chef checks.</p>`;
+
+    return `<article class="chef-card">
+      ${imgWrap(recipe.image, recipe.name, 'chef-photo')}
+      <div class="chef-card-body">
+        <div class="source-line"><span class="src">${esc(recipe.source)}</span><span class="sep">/</span><span>${esc(label)}</span></div>
+        <h3>${name}</h3>
+        <div class="chef-score-line">
+          <span><b>${hit.matchedChips}</b> of yours</span>
+          <span class="sep">/</span>
+          <span>${hit.missingCount ? `${hit.missingCount} more pantry item${hit.missingCount === 1 ? '' : 's'}` : 'pantry covered'}</span>
+        </div>
+        <div class="chef-meter">
+          <span class="meter"><span style="width:${percent}%"></span></span>
+          <span>${percent}% pantry check</span>
+        </div>
+        <div class="chef-haves">${haveTags}</div>
+        ${missingLine}
+        <div class="chef-card-actions">
+          ${action}
+          ${hit.item.importedId ? '' : '<span class="meta">Adds it to My kitchen</span>'}
+        </div>
+      </div>
+    </article>`;
+  }
+
+  function chefResultsHtml(data) {
+    if (!data.selected.length) {
+      return `<div class="chef-empty">
+        <span class="chef-empty-mark" aria-hidden="true">${icon('chef')}</span>
+        <h3>Tell the Chef what you have</h3>
+        <p>Pick a few spices, a protein and a side from the pantry. The Chef will rank the ${data.catalogSize} published recipes already in Mise by what you can cook now.</p>
+      </div>`;
+    }
+    if (!data.results.length) {
+      return `<div class="chef-empty">
+        <span class="chef-empty-mark" aria-hidden="true">${icon('chef')}</span>
+        <h3>Nothing matches that pantry yet</h3>
+        <p>Try adding a staple such as rice, pasta, onions or eggs. The Chef only ranks recipes that use something you have.</p>
+      </div>`;
+    }
+    const shown = data.results.slice(0, chefState.limit);
+    return `<div class="chef-result-list">${shown.map(chefResultCard).join('')}</div>
+      ${data.results.length > shown.length
+        ? `<div class="chef-more"><button class="btn" type="button" data-action="chef-more">Show ${Math.min(12, data.results.length - shown.length)} more ${icon('arrow-right')}</button><span class="meta">${shown.length} of ${data.results.length} shown</span></div>`
+        : ''}`;
+  }
+
+  function chefView() {
+    const data = chefRankedResults();
+    const selectedCount = pantrySelection.size;
+    return `<div class="page chef-page">
+      <div class="title-row chef-title">
+        <div>
+          <p class="eyebrow">Offline pantry matcher</p>
+          <h1>Ask the Chef</h1>
+          <p class="sub">Tell it what is in your kitchen. It checks the ingredients published with every recipe already bundled in Mise, then ranks what your pantry covers best. No network call and no invented substitutions.</p>
+        </div>
+        <div class="title-actions">
+          <button class="btn ghost" type="button" data-action="chef-clear" ${selectedCount ? '' : 'disabled'}>${icon('x')}Clear pantry</button>
+        </div>
+      </div>
+
+      <div class="chef-grid">
+        <section class="panel pantry-panel" aria-labelledby="pantry-title">
+          <div class="panel-head">
+            <div>
+              <h2 id="pantry-title">What's in your kitchen?</h2>
+              <p class="meta">Tap what you have. Nothing is assumed.</p>
+            </div>
+            <span class="pill soft" id="pantry-count">${selectedCount} selected</span>
+          </div>
+          <div class="pantry-jump">
+            <span class="meta pantry-jump-hint" id="pantry-hint">${selectedCount ? 'Ready when you are.' : 'Pick a few ingredients to start.'}</span>
+            <button class="btn sm" type="button" data-action="chef-jump" ${selectedCount ? '' : 'disabled'}>See matches ${icon('arrow-right')}</button>
+          </div>
+          <div class="pantry-cats">${chefCategoriesHtml()}</div>
+          <div class="pantry-jump pantry-jump-bottom">
+            <span class="meta pantry-jump-hint">${selectedCount ? 'Ready when you are.' : 'Pick a few ingredients to start.'}</span>
+            <button class="btn sm" type="button" data-action="chef-jump" ${selectedCount ? '' : 'disabled'}>See matches ${icon('arrow-right')}</button>
+          </div>
+          <p class="pantry-note">${icon('info')}The Chef only checks this pantry list. A recipe may still need water, equipment or an ingredient the list does not cover.</p>
+        </section>
+
+        <section class="panel chef-results" id="chef-results" aria-labelledby="chef-results-title">
+          <div class="panel-head chef-results-head">
+            <div>
+              <h2 id="chef-results-title">Tonight's options</h2>
+              <p class="meta" id="chef-result-summary">${esc(chefSummary(data))}</p>
+            </div>
+            <span class="chef-offline">${icon('chef')}Offline</span>
+          </div>
+          <div id="chef-result-body">${chefResultsHtml(data)}</div>
+          <p class="chef-disclaimer">${icon('info')}<span>The Chef is a deterministic pantry matcher, not a language model. It preserves each publisher's ingredients and steps; it does not create substitutions or claim a recipe is complete.</span></p>
+        </section>
+      </div>
+    </div>`;
+  }
+
+  function syncChefChrome() {
+    const count = pantrySelection.size;
+    const countNode = $('#pantry-count');
+    if (countNode) countNode.textContent = count + ' selected';
+    $$('.pantry-jump-hint').forEach((hint) => {
+      hint.textContent = count ? 'Ready when you are.' : 'Pick a few ingredients to start.';
+    });
+    $$('[data-action="chef-clear"]').forEach((button) => { button.disabled = !count; });
+    $$('[data-action="chef-jump"]').forEach((button) => { button.disabled = !count; });
+  }
+
+  function refreshChefResults() {
+    const data = chefRankedResults();
+    const body = $('#chef-result-body');
+    if (body) body.innerHTML = chefResultsHtml(data);
+    const summary = $('#chef-result-summary');
+    if (summary) summary.textContent = chefSummary(data);
+    syncChefChrome();
+  }
+
   /* ---------- library ---------- */
   const libraryState = { tab: 'kitchen', q: '', source: 'all', status: 'idle', results: [], error: '' };
   const caribbeanState = { q: '' };
@@ -528,7 +1045,7 @@
           <p class="sub">${esc(finding)}</p>
         </div>
         <div class="title-actions">
-          <a class="btn primary" href="#/">${icon('import')}Import a recipe</a>
+          <a class="btn primary" href="#/import">${icon('import')}Import a recipe</a>
         </div>
       </div>
 
@@ -1523,7 +2040,7 @@
       <h1>${kind === 'page' ? 'That page is not here' : 'Nothing to open'}</h1>
       <p>${esc(text)}</p>
       <div class="actions">
-        <a class="btn primary" href="#/">${icon('import')}Import a recipe</a>
+        <a class="btn primary" href="#/import">${icon('import')}Import a recipe</a>
         <a class="btn" href="#/library">Open the library</a>
       </div>
     </div></div>`;
@@ -1877,6 +2394,7 @@
   function importMeal(id) {
     const meal = (libraryState.results || []).find((m) => String(m.idMeal) === String(id))
       || (CARIBBEAN.meals || []).find((m) => String(m.idMeal) === String(id))
+      || (AFRICA.meals || []).find((m) => String(m.idMeal) === String(id))
       || (GLOBAL.records || []).find((m) => String(m.idMeal) === String(id));
     if (!meal) return;
     const recipe = P.recipeFromMealDB(meal, new Date().toISOString());
@@ -2053,16 +2571,56 @@
 
     if (action === 'sources') { openSources(); return; }
     if (action === 'focus-import') {
-      const input = $('#recipe-url');
-      if (input) {
-        input.scrollIntoView({ block: 'center', behavior: 'smooth' });
-        input.focus({ preventScroll: true });
-      }
+      navigate('#/import');
+      window.setTimeout(() => {
+        const input = $('#recipe-url');
+        if (input) {
+          input.scrollIntoView({ block: 'center', behavior: 'smooth' });
+          input.focus({ preventScroll: true });
+        }
+      }, 60);
       return;
     }
     if (action === 'paste') { openPaste(target.dataset.url || ''); return; }
     if (action === 'close-modal') { closeModal(); return; }
     if (action === 'paste-parse') { parsePasted(target.dataset.url || ''); return; }
+
+    if (action === 'chef-toggle') {
+      const id = target.dataset.id || '';
+      if (!CHIP_BY_ID.has(id)) return;
+      if (pantrySelection.has(id)) pantrySelection.delete(id);
+      else pantrySelection.add(id);
+      savePantry();
+      chefState.limit = 12;
+      target.setAttribute('aria-pressed', String(pantrySelection.has(id)));
+      refreshChefResults();
+      const label = CHIP_BY_ID.get(id).label;
+      announce((pantrySelection.has(id) ? 'Added ' : 'Removed ') + label + ' from the pantry.');
+      return;
+    }
+    if (action === 'chef-clear') {
+      pantrySelection = new Set();
+      savePantry();
+      chefState.limit = 12;
+      $$('.pantry-chip').forEach((button) => button.setAttribute('aria-pressed', 'false'));
+      refreshChefResults();
+      announce('Pantry cleared.');
+      return;
+    }
+    if (action === 'chef-jump') {
+      const results = $('#chef-results');
+      if (results) {
+        results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        results.setAttribute('tabindex', '-1');
+        results.focus({ preventScroll: true });
+      }
+      return;
+    }
+    if (action === 'chef-more') {
+      chefState.limit += 12;
+      refreshChefResults();
+      return;
+    }
 
     if (action === 'library-tab') {
       libraryState.tab = ['kitchen', 'live', 'caribbean', 'africa', 'global'].includes(target.dataset.tab) ? target.dataset.tab : 'kitchen';
