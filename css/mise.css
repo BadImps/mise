@@ -108,6 +108,14 @@
 .start-tile .panel-head { margin-bottom: 16px; }
 .start-tile .meta-line { color: var(--accent-ink); font-weight: 600; }
 .start-tile .meta-line .dot { background: var(--accent); }
+.start-tile.hero-enter { animation: hero-swap 420ms var(--ease-out); }
+@keyframes hero-swap {
+  from { opacity: 0.25; transform: translateY(8px) scale(0.99); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .start-tile.hero-enter { animation: none; }
+}
 .home-lower { display: grid; grid-template-columns: minmax(0, 1fr) 392px; gap: var(--gap); align-items: start; margin-top: var(--gap); }
 .home-aside { display: grid; gap: var(--gap); min-width: 0; align-content: start; }
 .chef-teaser { background: linear-gradient(155deg, #f7f1df 0%, var(--surface) 58%); border-color: #e4d9bd; }
@@ -249,6 +257,22 @@
 .rgo { color: var(--control); }
 .rrow:hover .rgo { color: var(--text); }
 
+/* ---------- ingredients dropdown (cook page top) ---------- */
+.ingredients-drop { padding: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-panel); margin: 0 0 16px; background: var(--surface); font-size: var(--fs-small); }
+.ingredients-drop > summary { list-style: none; display: flex; align-items: center; gap: 12px; padding: 12px 16px; cursor: pointer; }
+.ingredients-drop > summary::-webkit-details-marker { display: none; }
+.ingredients-drop[open] > summary { border-bottom: 1px solid var(--rule); }
+.drop-title { display: grid; gap: 2px; min-width: 0; font-family: var(--font-display); font-weight: 600; font-size: var(--fs-small); color: var(--text); }
+.drop-title small { font-family: var(--font-body); font-weight: 400; letter-spacing: 0; color: var(--muted); font-size: var(--fs-meta); }
+.drop-counts { display: flex; gap: 10px; color: var(--muted); font-size: var(--fs-meta); margin-left: auto; }
+.ingredients-drop[open] .source-plus { transform: rotate(45deg); border-color: var(--accent); background: var(--accent-soft); }
+.drop-body { padding: 12px 12px 14px; }
+.drop-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 620px) { .drop-cols { grid-template-columns: 1fr; } }
+.drop-section h3 { margin: 0 0 8px; font-size: var(--fs-meta); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.drop-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; }
+.drop-item .check-row { padding: 6px 8px; border-radius: 8px; }
+.empty-inline { color: var(--muted); font-size: var(--fs-meta); padding: 6px 0; }
 /* ---------- print ---------- */
 @page { margin: 17mm 15mm; }
 @media print {

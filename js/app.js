@@ -42,11 +42,27 @@
   }
 
   const SAMPLES = (window.MISE_SAMPLES || []).slice();
-  const GLOBAL = window.MISE_GLOBAL || { source: 'TheMealDB', generatedAt: '', note: '', records: [] };
+  const EXPANSION = window.MISE_EXPANSION || { drinks: [], caribbean: [], meals: [] };
+  const GLOBAL = { ...(window.MISE_GLOBAL || { source: 'TheMealDB' }), records: [...(window.MISE_GLOBAL?.records || []), ...EXPANSION.meals] };
   const CARIBBEAN = window.MISE_CARIBBEAN || { source: 'TheMealDB', fetchedAt: '', areas: [], queriedAreas: [], total: 0, meals: [] };
-  const CARIBBEAN_SOURCES = window.MISE_CARIBBEAN_SOURCES || [];
+  const CARIBBEAN_SOURCES = [...(window.MISE_CARIBBEAN_SOURCES || []), ...EXPANSION.caribbean];
   const AFRICA = window.MISE_AFRICA || { source: 'TheMealDB', fetchedAt: '', areas: [], queriedAreas: [], total: 0, meals: [] };
   const AFRICA_SOURCES = window.MISE_AFRICA_SOURCES || [];
+  const DRINKS = window.MISE_DRINKS || { source: '196 flavors', generatedAt: '', records: [] };
+  const DRINKS_SOURCES = [...(Array.isArray(DRINKS.records) ? DRINKS.records : []), ...EXPANSION.drinks];
+  const PASTRY = window.MISE_PASTRY || { source: '196 flavors', generatedAt: '', records: [] };
+  const PASTRY_SOURCES = Array.isArray(PASTRY.records) ? PASTRY.records : [];
+  const REGION_COUNTRIES = {
+    caribbean: ['jamaica', 'trinidad and tobago', 'trinidad & tobago', 'guyana', 'barbados', 'bahamas', 'haiti', 'puerto rico', 'saint kitts and nevis', 'grenada', 'saint lucia', 'anguilla', 'antigua and barbuda', 'dominica', 'dominican republic', 'cuba', 'cayman islands', 'aruba', 'montserrat', 'guadeloupe', 'martinique', 'belize', 'suriname'],
+    africa: ['nigeria', 'ethiopia', 'ghana', 'kenya', 'south africa', 'morocco', 'tunisia', 'algeria', 'egypt', 'senegal', 'west africa', 'equatorial guinea', 'tanzania', 'cameroon', 'sudan', 'uganda', 'ivory coast', 'côte d’ivoire'],
+  };
+  const countryRegion = (country) => {
+    const key = String(country || '').toLowerCase().replace(/[^a-z]+/g, '');
+    for (const [region, names] of Object.entries(REGION_COUNTRIES)) {
+      if (names.some((name) => key === name.replace(/[^a-z]+/g, ''))) return region;
+    }
+    return 'global';
+  };
   const FALLBACK_CENSUS = [
     ['British', 60], ['Spanish', 48], ['Turkish', 30], ['Chinese', 27], ['Jamaican', 27], ['Polish', 27],
     ['Thai', 27], ['Vietnamese', 27], ['Canadian', 22], ['Italian', 21], ['Australian', 13], ['Algerian', 12],
@@ -57,7 +73,6 @@
   const GLOBAL_CENSUS = Array.isArray(GLOBAL.census) && GLOBAL.census.length ? GLOBAL.census : FALLBACK_CENSUS;
 
   /* ---------- storage ---------- */
-  const IMPORTED_CAP = 800;
   const KEY = {
     imported: 'mise.imported.v1', /* legacy full-recipe payload, migrated on load */
     importedV2: 'mise.imported.v2', /* compact raw records; recipes are derived on load */
@@ -162,6 +177,10 @@
     return h + ' hr' + (m ? ' ' + m + ' min' : '');
   }
 
+  function cookActionLabel(recipe) {
+    return matchesCourse(recipe.name, recipe.category, 'drinks') ? 'Start mixing' : 'Start cooking';
+  }
+
   function announce(text, assertive) {
     const node = document.getElementById(assertive ? 'alert' : 'live');
     if (!node) return;
@@ -225,6 +244,20 @@
   }
 
   let imported = loadImportedRaw().map((raw) => P.buildRecipe(raw, { importedAt: raw.importedAt || null }));
+  function correctedRecipePhoto(recipe) {
+    const reviewed = window.MISE_LEGACY_PHOTO_FIXES?.[recipe.sourceUrl];
+    if (reviewed !== undefined && /wikimedia\.org/i.test(recipe.image || '')) {
+      recipe.image = reviewed;
+      recipe.imageCredit = reviewed ? `${recipe.source} (photograph on source page)` : '';
+    }
+    if (recipe.sourceUrl === 'https://caribbeanpot.com/traditional-caribbean-pineapple-juice-2/'
+      && /\/Traditional_Caribbean_home_architecture_with_tropical_surrounding_foliage\.jpg/i.test(recipe.image || '')) {
+      recipe.image = 'https://caribbeanpot.com/wp-content/uploads/2018/05/pineapple-juice-8.jpg';
+      recipe.imageCredit = 'CaribbeanPot.com / Chris De La Rosa';
+    }
+    return recipe;
+  }
+  imported.forEach(correctedRecipePhoto);
   let importedDirty = false;
 
   function sampleRecipe(sample) {
@@ -254,6 +287,7 @@
 
   function sourceGroup(recipe) {
     if (recipe.source === 'TheMealDB') return 'TheMealDB';
+    if (recipe.source === 'TheCocktailDB') return 'TheCocktailDB';
     if (recipe.source === 'Food & Wine') return 'Food & Wine';
     if (recipe.kind === 'sample') return 'Bundled sample';
     return 'Imported';
@@ -404,15 +438,19 @@
   function persistImported(lastRecipeId) {
     const payload = imported.map(rawFromRecipe);
     const ok = store.set(KEY.importedV2, payload);
+    if (!ok && importSnapshot) imported = importSnapshot;
+    importSnapshot = null;
     importedDirty = false;
-    if (lastRecipeId) store.set(KEY.last, lastRecipeId);
+    if (ok && lastRecipeId) store.set(KEY.last, lastRecipeId);
     chefCatalogCache = null;
     if (!ok) announce('Your kitchen is full — the latest import was not saved. Remove some imported recipes and try again.', true);
     return ok;
   }
 
+  let importSnapshot = null;
   function saveImported(recipe, options = {}) {
     const flush = options.flush !== false;
+    if (!importSnapshot) importSnapshot = imported.slice();
     const same = imported.findIndex((r) => r.sourceUrl && recipe.sourceUrl && r.sourceUrl === recipe.sourceUrl);
     if (same > -1) {
       recipe.id = imported[same].id;
@@ -421,9 +459,8 @@
       recipe.id = uniqueId(recipe.id);
       imported.unshift(recipe);
     }
-    if (imported.length > IMPORTED_CAP) imported = imported.slice(0, IMPORTED_CAP);
     if (flush) {
-      persistImported(recipe.id);
+      if (!persistImported(recipe.id)) return null;
     } else {
       importedDirty = true;
     }
@@ -431,8 +468,8 @@
   }
 
   function flushImported(lastRecipeId) {
-    if (!importedDirty && !lastRecipeId) return;
-    persistImported(lastRecipeId);
+    if (!importedDirty && !lastRecipeId) return true;
+    return persistImported(lastRecipeId);
   }
 
   function knownImported(url) {
@@ -550,7 +587,7 @@
         <ul class="sl-rows">${rows}</ul>
       </section>`;
     }).join('');
-    const empty = !items.length ? `<div class="home-empty">${icon('plus')}<div><b>Your list is empty.</b><p>Open any recipe and tap <i>Add to list</i> — non-serving ingredients go in, scaled to your batch.</p><a class="btn primary" href="#/library">Open the library</a></div></div>` : '';
+    const empty = !items.length ? `<div class="home-empty">${icon('plus')}<div><b>Your list is empty.</b><p>Open any recipe and tap <i>Add to list</i> — non-serving ingredients go in, scaled to your batch.</p><a class="btn primary" href="#/library">Open All Recipes</a></div></div>` : '';
     const footer = items.length
       ? `<div class="sl-footer">
            <a class="btn ghost" href="#/library">Keep browsing</a>
@@ -601,13 +638,12 @@
   }
 
   function setChrome(route) {
-    const nav = route.parts[0] === 'library' ? 'library'
+    const nav = (route.parts[0] === 'kitchen' || route.parts[0] === 'library' || route.parts[0] === 'recipe') ? 'kitchen'
       : route.parts[0] === 'import' ? 'import'
         : route.parts[0] === 'chef' ? 'chef'
           : route.parts[0] === 'settings' ? 'settings'
             : route.parts[0] === 'research' ? 'research'
-              : (route.parts[0] === 'cook' || route.parts[0] === 'done') ? 'cook'
-                : route.parts[0] === 'recipe' ? 'library' : 'home';
+              : (route.parts[0] === 'cook' || route.parts[0] === 'done') ? 'cook' : 'home';
     $$('[data-nav]').forEach((a) => {
       if (a.dataset.nav === nav) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');
@@ -629,6 +665,7 @@
 
   function render() {
     closeToolPop();
+    stopHeroTicker();
     const route = parseRoute();
     if (route.parts[0] !== 'cook' && guideListening) {
       guideStopListening();
@@ -665,9 +702,18 @@
       } else if (route.parts[0] === 'list') {
         view.innerHTML = shoppingListView();
         title = 'Shopping list · Mise';
+      } else if (route.parts[0] === 'kitchen') {
+        const collection = route.parts[1];
+        if (collection === 'drinks' || collection === 'appetizers' || collection === 'breakfast' || collection === 'lunch' || collection === 'dinner' || collection === 'pastry') {
+          view.innerHTML = kitchenCollectionView(collection, route.params.get('tab') || 'all');
+          title = courseMeta(collection).title + ' · My Kitchen · Mise';
+        } else {
+          view.innerHTML = kitchenHubView();
+          title = 'My Kitchen · Mise';
+        }
       } else if (route.parts[0] === 'library') {
         view.innerHTML = libraryView(route.params.get('tab') || 'kitchen');
-        title = 'Library · Mise';
+        title = 'All Recipes · Mise';
       } else if (route.parts[0] === 'research') {
         view.innerHTML = researchView();
         title = 'Global research · Mise';
@@ -676,7 +722,16 @@
         view.innerHTML = recipe ? detailView(recipe) : missingView('recipe');
         if (recipe) title = recipe.name + ' · Mise';
       } else if (route.parts[0] === 'cook') {
+        // bare #/cook: if the last cook is fresh and finished, land on its done page instead of silently springing a new session
+        const finished = store.get(KEY.lastcook, null);
+        const savedSession = store.get(KEY.session, null);
         const dismissed = store.get(KEY.cookDismissed, false);
+        if (route.parts.length === 1 && !dismissed && (!savedSession || savedSession.complete) && finished && finished.recipeId && finished.finishedAt && (Date.now() - finished.finishedAt) < 12 * 60 * 60 * 1000) {
+          const dest = `#/done/` + finished.recipeId;
+          if (window.history && window.history.replaceState) window.history.replaceState(null, ``, dest);
+          navigate(dest);
+          return;
+        }
         const recipe = getRecipe(route.parts[1] || '')
           || (route.parts.length === 1
             ? (activeSessionRecipe() || (!dismissed ? lastRecipe() : null))
@@ -706,11 +761,12 @@
 
     document.title = title;
     if (route.parts[0] === 'library') {
-      if (libraryState.tab === 'kitchen') refreshLibraryRows();
+      if (libraryState.tab === 'kitchen' || libraryState.tab === 'catalogue') refreshLibraryRows();
       else if (libraryState.tab === 'caribbean') refreshCaribbeanRows();
       else if (libraryState.tab === 'africa') refreshAfricaRows();
       else if (libraryState.tab === 'global') refreshGlobalRows();
     }
+    if (!route.parts.length) startHeroTicker();
     observeTimerCard();
     renderTimerDock();
     if (key !== lastPath) {
@@ -724,6 +780,49 @@
   }
 
   /* ---------- home ---------- */
+  let heroTicker = null;
+  let heroLastId = null;
+
+  function stopHeroTicker() {
+    if (heroTicker) {
+      window.clearInterval(heroTicker);
+      heroTicker = null;
+    }
+  }
+
+  function randomHeroRecipe(all) {
+    if (!all.length) return null;
+    if (all.length === 1) return all[0];
+    let next = all[0];
+    for (let attempt = 0; attempt < 8; attempt += 1) {
+      const index = Math.floor(Math.random() * all.length);
+      next = all[index];
+      if (!heroLastId || next.id !== heroLastId) break;
+    }
+    heroLastId = next.id;
+    return next;
+  }
+
+  function swapHeroPick() {
+    const current = document.querySelector('.start-tile');
+    if (!current) { stopHeroTicker(); return; }
+    if (document.hidden || current.matches(':hover') || current.contains(document.activeElement)) return;
+    const next = randomHeroRecipe(allRecipes());
+    if (!next || next.id === current.dataset.heroId) return;
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = featuredHero(next, false);
+    const replacement = wrapper.firstElementChild;
+    if (!replacement) return;
+    replacement.classList.add('hero-enter');
+    current.replaceWith(replacement);
+  }
+
+  function startHeroTicker() {
+    stopHeroTicker();
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    heroTicker = window.setInterval(swapHeroPick, 7000);
+  }
+
   const legendDots = (n, used) => {
     const pos = (i) => (n === 1 ? 50 : (i / (n - 1)) * 100);
     const ticks = Array.from({ length: n }, (_, i) => `<span class="usage-tick" style="left:${pos(i)}%"></span>`).join('');
@@ -756,9 +855,8 @@
 
   function homeView() {
     const all = allRecipes();
-    const featured = lastRecipe();
-    const recent = storedLastRecipe();
-    const recentlyOpened = !!featured && !!recent && recent.id === featured.id;
+    const featured = randomHeroRecipe(all);
+    const recentlyOpened = false;
     const totalChecked = all.reduce((s, r) => s + r.stats.ingredients, 0);
     const totalNamed = all.reduce((s, r) => s + r.stats.named, 0);
     const gapRecipe = all.find((r) => r.stats.missing > 0);
@@ -802,7 +900,7 @@
               <span class="meta">${all.length} recipes</span>
             </div>
             <p class="meta">${esc(finding)}</p>
-            <a class="section-link" href="#/library">Open the library ${icon('arrow-right')}</a>
+            <a class="section-link" href="#/library">Open All Recipes ${icon('arrow-right')}</a>
           </section>
         </aside>
       </div>
@@ -829,11 +927,11 @@
   function featuredHero(recipe, recentlyOpened) {
     const c = coverStats(recipe);
     const total = recipe.totalMinutes;
-    return `<section class="panel hero start-tile" aria-labelledby="hero-name">
+    return `<section class="panel hero start-tile" aria-labelledby="hero-name" data-hero-id="${esc(recipe.id)}">
       <div class="panel-head">
         <h2 class="sr-only" id="hero-title">Start here</h2>
-        <div class="meta-line">${icon('flame')}Start here${recentlyOpened ? '<span class="dot"></span><span>last opened</span>' : ''}</div>
-        <a class="section-link" href="#/library">All recipes ${icon('arrow-right')}</a>
+        <div class="meta-line">${icon('flame')}Start here<span class="dot"></span><span>random pick</span></div>
+        <a class="section-link" href="#/library">All Recipes ${icon('arrow-right')}</a>
       </div>
       <div class="hero-body">
         ${imgWrap(recipe.image, recipe.name, 'hero-photo')}
@@ -857,7 +955,7 @@
             <div class="fact"><div class="flabel">Total time</div><div class="fvalue${total ? '' : ' dash'}"${total ? '' : ' title="The source gives no total time"'}>${total ? esc(minutesText(total)) : '–'}</div></div>
           </div>
           <div class="hero-actions">
-            <button class="btn primary" type="button" data-action="start-cook" data-id="${esc(recipe.id)}">${icon('play')}Start cooking</button>
+            <button class="btn primary" type="button" data-action="start-cook" data-id="${esc(recipe.id)}">${icon('play')}${esc(cookActionLabel(recipe))}</button>
             <a class="btn" href="#/recipe/${esc(recipe.id)}">See the breakdown</a>
           </div>
         </div>
@@ -945,7 +1043,7 @@
       ${rows
         ? `<div class="recipe-rows">${rows}</div>`
         : `<div class="home-empty">${icon('pot')}<div><b>Nothing cooked yet.</b> Finish a cook and Mise records it here.</div></div>`}
-      ${all.length > 6 ? `<p class="meta recent-more">and ${all.length - 6} more &mdash; see them in <a href="#/library">the library</a>.</p>` : ''}
+      ${all.length > 6 ? `<p class="meta recent-more">and ${all.length - 6} more &mdash; see them in <a href="#/library">All Recipes</a>.</p>` : ''}
     </section>`;
   }
 
@@ -969,7 +1067,7 @@
 
     return `<section class="panel list-block" aria-labelledby="kitchen-title">
       <div class="panel-head">
-        <h2 id="kitchen-title">My kitchen</h2>
+        <h2 id="kitchen-title">In your kitchen</h2>
         <a class="section-link" href="#/library">${all.length} recipes ${icon('arrow-right')}</a>
       </div>
       <div class="recipe-rows">${rows}</div>
@@ -1270,6 +1368,8 @@
     (AFRICA.meals || []).forEach(addMeal);
     AFRICA_SOURCES.forEach((record) => addSource(record, 'import-africa-source'));
     (GLOBAL.records || []).forEach(addMeal);
+    DRINKS_SOURCES.forEach(record => addSource(record, 'import-drink-source'));
+    PASTRY_SOURCES.forEach(record => addSource(record, 'import-pastry-source'));
 
     chefCatalogCache = list;
     chefCatalogSize = list.length;
@@ -1512,15 +1612,637 @@
     syncChefChrome();
   }
 
+  /* ---------- my kitchen ---------- */
+  const DRINK_NAME_RE = /\b(drinks?|beverages?|cocktails?|mocktails?|smoothies?|juice|juices|lemonade|iced tea|tea|coffee|ginger beer|beer|cider|punch|soda|milkshake|shake|mauby|sorrel|horchata|lassi|kombucha|sangria|spritzer|tonic|infusion|sawine)\b/i;
+  const DRINK_NOT_RE = /\b(braised|roasted?|chicken|beef|pork|lamb|fish|shrimp|salmon|oxtail|steak|sauce|marinade|rub|glaze|bread|cake|cookie|pie|muffin|pancake|wings|stew|curry|rice|soup|salad|dumplings?)\b/i;
+  const APPETIZER_NAME_RE = /\b(appetizers?|appetisers?|starters?|small plates?|finger food|snacks?|canap[eé]s?|hors d'oeuvres?|dips?|bruschetta|crostini|hummus|baba ganoush|guacamole|salsa|samosa|spring rolls?|wings?|nachos?|tapas|meze|tzatziki|raita|cacik|borek|burek|blini|shrimp cocktail|cheese board|olives)\b/i;
+  const APPETIZER_NOT_RE = /\b(soups?|stews?|stewed|stewing|pelau|dhal|curry crab|ackee|saltfish|dumplings?|sauces?)\b/i;
+  const BREAKFAST_NAME_RE = /\b(breakfast|brunch|pancakes?|waffles?|porridge|oatmeal|omelette|omelet|frittata|granola|cereal|french toast|eggs benedict|shakshuka|congee|biscuits? and gravy|smoothie bowl)\b/i;
+  const BREAKFAST_NOT_RE = /\b(dessert|cake|cookie|pie|muffin|pudding|ice cream|cheesecake)\b/i;
+  const LUNCH_NAME_RE = /\b(lunch|sandwich|salad|soup|wrap|taco|burrito|quesadilla|panini|frittata|bowl|ramen|pho|noodle soup)\b/i;
+  const LUNCH_NOT_RE = /\b(dessert|cake|cookie|pie|muffin|drink|beverage|cocktail|smoothie|juice|tea|coffee|ice cream|dressing|sauce)\b/i;
+  const DINNER_MAIN_CATEGORY_RE = /\b(beef|chicken|lamb|pork|goat|seafood|fish|pasta|dinner|main)\b/i;
+  const DINNER_NAME_RE = /\b(dinner|main course|penne|spaghetti|rigatoni|lasagna|pasta|penne|casserole|stew|stewed|curry|roast|roasted|braised|braise|grill|grilled|bake|baked|chili)\b/i;
+  const DINNER_NOT_RE = /\b(breakfast|dessert|cake|cookie|pie|muffin|drink|beverage|cocktail|smoothie|juice|tea|coffee|starter|side|snack|ice cream|cheesecake)\b/i;
+  const PASTRY_NAME_RE = /\b(pastry|pastries|patties?|pasties?|turnovers?|empanadas?|pastel(itos)?|filo|phyllo|puff|choux|tartlets?|tart|pie|baklava|kataifi|kanafeh|kunefe|maamoul|cornes de gazelle|cigares aux amandes|makroud|samsa|yoyos|debla|bundevara|bougatsa|galaktoboureko|strudel|feteer|burek|borek|saffran)\b/i;
+  const PASTRY_CASSEROLE_RE = /\b(macaroni|shepherd|fisherman|cottage|fish pie|three fish|minced beef|cumberland|corn pie|maize pie|breadfruit pie|yam pie|cassava pie|custard pie|flan|chutney|sauce|condiment|relish|marinade|doubles)\b/i;
+  const COURSE_TABS = ['all', 'live', 'caribbean', 'africa', 'global'];
+  const COURSE_GROUP_FILTERS = ['all', 'kitchen', 'TheMealDB', 'TheCocktailDB', 'Food & Wine', 'Bundled sample', 'Imported', 'Publisher'];
+  const DRINK_TYPE_DEFS = [
+    { id: 'punches', label: 'Punches', re: /\b(punch(es)?)\b/i },
+    { id: 'cocktails', label: 'Cocktails', re: /\b(cocktails?|ordinary drink|mocktails?|sangria|spritzer|spritz|martini|margarita|mojito|manhattan|old fashioned|daiquiri|colada|negroni|mule|sour|collins|highball|mai tai|chuflay)\b/i },
+    { id: 'smoothies', label: 'Smoothies', re: /\b(smoothies?|milkshakes?|shakes?)\b/i },
+    { id: 'sorrel', label: 'Sorrel & mauby', re: /\b(sorrel|mauby)\b/i },
+    { id: 'teas', label: 'Teas & coffees', re: /\b(teas?|coffee|chai|mocha|latte|espresso|cocoa tea|hot chocolate)\b/i },
+    { id: 'lemonades', label: 'Lemonades', re: /\blemonades?\b/i },
+    { id: 'juices', label: 'Juices', re: /\b(juice|juices|nectar|cider)\b/i },
+  ];
+  const DRINK_TYPE_FILTERS = ['all', ...DRINK_TYPE_DEFS.map((def) => def.id), 'other'];
+
+  function drinkType(name, category) {
+    const n = String(name || '');
+    const cat = String(category || '');
+    for (const def of DRINK_TYPE_DEFS) {
+      if (def.re.test(cat) || def.re.test(n)) return def.id;
+    }
+    return 'other';
+  }
+
+  function drinkTypeLabel(id) {
+    if (id === 'all') return 'All types';
+    if (id === 'other') return 'Other drinks';
+    const def = DRINK_TYPE_DEFS.find((candidate) => candidate.id === id);
+    return def ? def.label : id;
+  }
+
+  function drinkFacets(record) {
+    const name = String(record.name || '');
+    const ingredients = (record.ingredients || []).map(i => typeof i === 'string' ? i : (i.raw || i.item || '')).join(' ');
+    const spiritTests = [
+      ['rum', /\brum\b(?!\s+extract)/i], ['gin', /\bgin\b/i], ['vodka', /\bvodka\b/i],
+      ['tequila', /\b(tequila|mezcal)\b/i], ['whisky', /\b(whisk[ey]*|bourbon|scotch|rye whiskey)\b/i],
+      ['brandy', /\b(brandy|cognac|pisco)\b/i], ['wine', /\b(wine|champagne|prosecco|vermouth|sherry|port wine)\b/i],
+      ['liqueur', /\b(liqueur|triple sec|cointreau|kahlua|baileys|amaretto|campari|aperol|curacao)\b/i],
+    ];
+    const spirits = spiritTests.filter(([, re]) => re.test(ingredients)).map(([key]) => key);
+    const declared = String(record.alcoholic || '').toLowerCase();
+    let alcohol = 'unknown';
+    if (declared === 'non alcoholic' || declared === 'non-alcoholic') alcohol = 'non-alcoholic';
+    else if (declared === 'optional alcohol') alcohol = 'optional';
+    else if (declared === 'alcoholic' || spirits.length) alcohol = 'alcoholic';
+    const occasions = [];
+    if (/christmas|holiday|eggnog|coquito|ponche crema|cr[eé]mas|cola de mono|sorrel/i.test(name)) occasions.push('festive');
+    if (/hot |mulled|chocolate|cocoa|coffee|chai|toddy/i.test(name)) occasions.push('warming');
+    if (/lemonade|iced|smoothie|lassi|mojito|daiquiri|colada|punch|sangria|juice|horchata/i.test(name)) occasions.push('summer');
+    if (/punch|sangria|pitcher/i.test(name)) occasions.push('party');
+    return { alcohol, spirits, occasions };
+  }
+
+  function matchesDrinkFacets(facets, filters) {
+    const f = facets || { alcohol: 'unknown', spirits: [], occasions: [] };
+    return (!filters.alcohol || filters.alcohol === 'all' || filters.alcohol === f.alcohol)
+      && (!filters.spirit || filters.spirit === 'all' || f.spirits.includes(filters.spirit))
+      && (!filters.occasion || filters.occasion === 'all' || f.occasions.includes(filters.occasion));
+  }
+
+  function sourceRecordFor(recipe) {
+    return DRINKS_SOURCES.find(r => r.sourceUrl === recipe.sourceUrl)
+      || CARIBBEAN_SOURCES.find(r => r.sourceUrl === recipe.sourceUrl);
+  }
+
+  function drinkFacetControls() {
+    const fields = [
+      ['alcohol', 'Alcohol', [['all', 'Any'], ['alcoholic', 'Contains alcohol'], ['non-alcoholic', 'Alcohol-free (source labelled)'], ['optional', 'Optional alcohol'], ['unknown', 'Not specified']]],
+      ['spirit', 'Base', [['all', 'Any base'], ['rum', 'Rum'], ['gin', 'Gin'], ['vodka', 'Vodka'], ['tequila', 'Tequila & mezcal'], ['whisky', 'Whisky & bourbon'], ['brandy', 'Brandy & pisco'], ['wine', 'Wine'], ['liqueur', 'Liqueur']]],
+      ['occasion', 'Occasion', [['all', 'Any occasion'], ['festive', 'Christmas & festive'], ['warming', 'Warming drinks'], ['summer', 'Summer refreshers'], ['party', 'Punches & parties']]],
+    ];
+    return `<div class="drink-facets">${fields.map(([key, label, options]) => `<label class="field">${label}<select class="input" data-drink-facet="${key}">${options.map(([value, text]) => `<option value="${value}"${courseState[key] === value ? ' selected' : ''}>${text}</option>`).join('')}</select></label>`).join('')}</div>
+      <p class="live-note">Occasion picks are browsing suggestions. Alcohol-free labels come from the source; unspecified recipes stay unspecified. Check ingredients before mixing.</p>`;
+  }
+
+  const COURSE_DEFS = {
+    breakfast: {
+      title: 'Breakfast',
+      noun: 'breakfast recipe',
+      icon: 'sun',
+      kicker: 'Meal',
+      desc: 'Eggs, porridge, pancakes and morning plates from your kitchen and the bundled Caribbean, African and world catalogues.',
+      blurb: 'Eggs, porridge, pancakes and morning plates.',
+      suggestions: ['Breakfast', 'Pancakes', 'Omelette', 'Toast'],
+    },
+    lunch: {
+      title: 'Lunch',
+      noun: 'lunch recipe',
+      icon: 'bowl',
+      kicker: 'Meal',
+      desc: 'Sandwiches, salads, soups and light plates from your kitchen and the bundled Caribbean, African and world catalogues.',
+      blurb: 'Sandwiches, salads, soups and light plates.',
+      suggestions: ['Salad', 'Soup', 'Sandwich', 'Wrap'],
+    },
+    dinner: {
+      title: 'Dinner',
+      noun: 'dinner recipe',
+      icon: 'moon',
+      kicker: 'Meal',
+      desc: 'Main courses from your kitchen and the bundled catalogues: stews, curries, roasts and the big plates.',
+      blurb: 'Stews, curries, roasts and the big plates.',
+      suggestions: ['Beef', 'Chicken', 'Pasta', 'Curry'],
+    },
+    drinks: {
+      title: 'Drinks & Beverages',
+      noun: 'drink',
+      icon: 'cup',
+      kicker: 'Course',
+      desc: 'Teas, juices, punches, lemonades and other drinks from your kitchen and the bundled Caribbean, African and world catalogues.',
+      blurb: 'Teas, juices, punches, lemonades and more.',
+      suggestions: ['Tea', 'Juice', 'Smoothie', 'Cocktail'],
+    },
+    appetizers: {
+      title: 'Appetizers',
+      noun: 'appetizer',
+      icon: 'plate',
+      kicker: 'Course',
+      desc: 'Starters, dips, wings and small plates from your kitchen and the bundled Caribbean, African and world catalogues.',
+      blurb: 'Starters, dips, wings and small plates.',
+      suggestions: ['Hummus', 'Wings', 'Dip', 'Starter'],
+    },
+    pastry: {
+      title: 'Pastry',
+      noun: 'pastry recipe',
+      icon: 'pie',
+      kicker: 'Course',
+      desc: 'Pies, tarts, empanadas, turnovers and filo pastries from your kitchen and the bundled Caribbean and international catalogues, including the new recipe research.',
+      blurb: 'Pies, tarts, empanadas and filo pastries.',
+      suggestions: ['Tart', 'Empanada', 'Baklava', 'Pie'],
+    },
+  };
+  const COURSE_ORDER = ['breakfast', 'lunch', 'dinner', 'drinks', 'appetizers', 'pastry'];
+  const courseState = { course: 'drinks', tab: 'all', q: '', group: 'all', type: 'all', alcohol: 'all', spirit: 'all', occasion: 'all' };
+  const courseLiveState = { course: 'drinks', status: 'idle', q: '', results: [], error: '' };
+
+  function matchesCourse(name, category, course) {
+    if (course === 'all') return true;
+    const n = String(name || '');
+    const cat = String(category || '');
+    if (course === 'drinks') {
+      if (/\b(beverages?|drinks?|cocktails?)\b/i.test(cat)) return true;
+      return DRINK_NAME_RE.test(n) && !DRINK_NOT_RE.test(n);
+    }
+    if (course === 'appetizers') {
+      if (/\b(starters?|appetizers?|appetisers?|tapas|meze)\b/i.test(cat)) return true;
+      return APPETIZER_NAME_RE.test(n) && !APPETIZER_NOT_RE.test(n);
+    }
+    if (course === 'breakfast') {
+      if (/\b(breakfast|brunch|morning)\b/i.test(cat)) return true;
+      return BREAKFAST_NAME_RE.test(n) && !BREAKFAST_NOT_RE.test(n);
+    }
+    if (course === 'lunch') {
+      if (/\b(lunch|light)\b/i.test(cat)) return true;
+      return LUNCH_NAME_RE.test(n) && !LUNCH_NOT_RE.test(n) && !/\b(dessert|appetizer|starter|side)\b/i.test(cat);
+    }
+    if (course === 'dinner') {
+      if (/\b(dinner|main|entree|entrée)\b/i.test(cat)) return true;
+      if (/\b(breakfast|dessert|starter|appetizer|side|snack|beverage|drink)\b/i.test(cat)) return false;
+      if (DINNER_MAIN_CATEGORY_RE.test(cat)) return true;
+      return DINNER_NAME_RE.test(n) && !DINNER_NOT_RE.test(n);
+    }
+    if (course === 'pastry') {
+      if (/\b(pastry|pastries)\b/i.test(cat)) return true;
+      return PASTRY_NAME_RE.test(n) && !PASTRY_CASSEROLE_RE.test(n);
+    }
+    return false;
+  }
+
+  function courseMeta(course) {
+    return COURSE_DEFS[course] || COURSE_DEFS.drinks;
+  }
+
+  function collectionKey(name) {
+    return String(name || '').toLowerCase().replace(/\s+/g, ' ').trim();
+  }
+
+  let catalogRegionByUrlCache = null;
+  function catalogRegionByUrl() {
+    if (!catalogRegionByUrlCache) {
+      catalogRegionByUrlCache = new Map();
+      const set = (url, region) => { if (url && !catalogRegionByUrlCache.has(url)) catalogRegionByUrlCache.set(url, region); };
+      (CARIBBEAN.meals || []).forEach((meal) => set('https://www.themealdb.com/meal/' + meal.idMeal, 'caribbean'));
+      CARIBBEAN_SOURCES.forEach((record) => set(record.sourceUrl, 'caribbean'));
+      (AFRICA.meals || []).forEach((meal) => set('https://www.themealdb.com/meal/' + meal.idMeal, 'africa'));
+      AFRICA_SOURCES.forEach((record) => set(record.sourceUrl, 'africa'));
+      (GLOBAL.records || []).forEach((meal) => set('https://www.themealdb.com/meal/' + meal.idMeal, 'global'));
+      [...DRINKS_SOURCES, ...PASTRY_SOURCES].forEach(record => set(record.sourceUrl, countryRegion(record.country)));
+    }
+    return catalogRegionByUrlCache;
+  }
+
+  function itemForKitchenRecipe(recipe, course) {
+    const sub = [recipe.source, recipe.cuisine, recipe.category].filter(Boolean).join(' / ');
+    return {
+      name: recipe.name,
+      image: recipe.image,
+      sub,
+      subHtml: esc(sub),
+      href: '#/recipe/' + recipe.id,
+      group: sourceGroup(recipe),
+      region: catalogRegionByUrl().get(recipe.sourceUrl) || 'kitchen',
+      kitchen: true,
+      action: '',
+      id: '',
+      type: course === 'drinks' ? drinkType(recipe.name, sourceRecordFor(recipe)?.category || recipe.category) : '',
+      category: recipe.category,
+      facets: drinkFacets(sourceRecordFor(recipe) || recipe),
+      hay: [recipe.name, recipe.source, recipe.cuisine, recipe.category, ...(recipe.tags || [])].join(' ').toLowerCase(),
+    };
+  }
+
+  function collectionItems(course) {
+    const test = (name, category) => matchesCourse(name, category, course);
+    const items = [];
+    const seen = new Set();
+
+    const push = (item) => {
+      const key = item.sourceUrl || item.href || collectionKey(item.name);
+      if (!key || seen.has(key)) return;
+      seen.add(key);
+      items.push(item);
+    };
+
+    allRecipes().forEach((recipe) => {
+      if (!test(recipe.name, recipe.category)) return;
+      push({ ...itemForKitchenRecipe(recipe, course), sourceUrl: recipe.sourceUrl });
+    });
+
+    const pushCatalog = (name, category, image, source, url, action, id, region, group, subHtml, record) => {
+      if (!test(name, category)) return;
+      const here = knownImported(url);
+      push({
+        name,
+        sourceUrl: url,
+        category,
+        facets: drinkFacets(record || { name }),
+        image,
+        sub: source,
+        subHtml,
+        href: here ? '#/recipe/' + here.id : '',
+        group,
+        region,
+        kitchen: !!here,
+        action,
+        id,
+        type: course === 'drinks' ? drinkType(name, category) : '',
+        hay: (String(name || '') + ' ' + source + ' ' + String(category || '')).toLowerCase(),
+      });
+    };
+
+    (CARIBBEAN.meals || []).forEach((meal) => {
+      pushCatalog(meal.strMeal, meal.strCategory, meal.strMealThumb,
+        `${meal.strArea || 'Area not given'} / TheMealDB`,
+        'https://www.themealdb.com/meal/' + meal.idMeal, 'import-meal', meal.idMeal, 'caribbean', 'TheMealDB',
+        `${esc(meal.strArea || 'Area not given')} / TheMealDB / meal ${esc(meal.idMeal)}`);
+    });
+    CARIBBEAN_SOURCES.forEach((record) => {
+      const here = knownImported(record.sourceUrl);
+      pushCatalog(record.name, record.type || record.category, record.image,
+        `${record.country} / ${record.source}`,
+        record.sourceUrl, 'import-caribbean-source', record.id, 'caribbean', 'Publisher',
+        `${esc(record.country)} / ${esc(record.source)}${record.author ? ` / ${esc(record.author)}` : ''} · <a href="${esc(record.sourceUrl)}" target="_blank" rel="noopener noreferrer">Publisher page</a>`, record);
+    });
+    (AFRICA.meals || []).forEach((meal) => {
+      pushCatalog(meal.strMeal, meal.strCategory, meal.strMealThumb,
+        `${meal.strArea || 'Area not given'} / TheMealDB`,
+        'https://www.themealdb.com/meal/' + meal.idMeal, 'import-meal', meal.idMeal, 'africa', 'TheMealDB',
+        `${esc(meal.strArea || 'Area not given')} / TheMealDB / meal ${esc(meal.idMeal)}`);
+    });
+    AFRICA_SOURCES.forEach((record) => {
+      pushCatalog(record.name, record.category, record.image,
+        `${record.country} / ${record.source}`,
+        record.sourceUrl, 'import-africa-source', record.id, 'africa', 'Publisher',
+        `${esc(record.country)} / ${esc(record.source)}${record.author ? ` / ${esc(record.author)}` : ''} · <a href="${esc(record.sourceUrl)}" target="_blank" rel="noopener noreferrer">Publisher page</a>`);
+    });
+    (GLOBAL.records || []).forEach((meal) => {
+      pushCatalog(meal.strMeal, meal.strCategory, meal.strMealThumb,
+        `${meal.strArea || 'Cuisine not given'} / TheMealDB`,
+        'https://www.themealdb.com/meal/' + meal.idMeal, 'import-meal', meal.idMeal, 'global', 'TheMealDB',
+        `${esc(meal.strArea || 'Cuisine not given')} / TheMealDB / meal ${esc(meal.idMeal)}`);
+    });
+    [...DRINKS_SOURCES, ...PASTRY_SOURCES].forEach((record) => {
+      const action = record.type === 'Drinks' ? 'import-drink-source' : 'import-pastry-source';
+      pushCatalog(record.name, [record.type, record.category].filter(Boolean).join(' / '), record.image,
+        [record.country, record.source].filter(Boolean).join(' / '),
+        record.sourceUrl, action, record.id, countryRegion(record.country), record.source === 'TheCocktailDB' ? 'TheCocktailDB' : 'Publisher',
+        `${esc([record.country, record.source].filter(Boolean).join(' / '))}${record.author ? ` / ${esc(record.author)}` : ''} · <a href="${esc(record.sourceUrl)}" target="_blank" rel="noopener noreferrer">Source page</a>`, record);
+    });
+
+    return items;
+  }
+
+  function courseTabItems(items, tab) {
+    if (!COURSE_TABS.includes(tab)) tab = 'all';
+    return tab === 'all' ? items : items.filter((item) => item.region === tab);
+  }
+
+  function courseGroupMatch(item, group) {
+    if (!group || group === 'all') return true;
+    if (group === 'kitchen') return item.kitchen === true;
+    return item.group === group;
+  }
+
+  function filterCourseItems(items, course) {
+    const tab = courseState.tab;
+    const group = courseState.group;
+    const type = course === 'drinks' ? courseState.type : 'all';
+    const needle = (courseState.q || '').trim().toLowerCase();
+    return courseTabItems(items, tab).filter((item) => {
+      if (!courseGroupMatch(item, group)) return false;
+      if (type && type !== 'all' && (item.type || 'other') !== type) return false;
+      if (course === 'drinks' && !matchesDrinkFacets(item.facets, courseState)) return false;
+      if (!needle) return true;
+      return (item.hay || (item.name + ' ' + item.sub).toLowerCase()).includes(needle);
+    });
+  }
+
+  function courseRow(item) {
+    return `<div class="live-row">
+      ${imgWrap(item.image, item.name, 'live-thumb')}
+      <span>
+        <span class="live-name">${esc(item.name)}</span>
+        <span class="live-sub">${item.subHtml || esc(item.sub || '')}</span>
+      </span>
+      ${item.href
+        ? `<a class="btn sm" href="${esc(item.href)}">Open ${icon('arrow-right')}</a>`
+        : `<button class="btn sm" type="button" data-action="${esc(item.action)}" data-id="${esc(item.id)}">Read ${icon('arrow-right')}</button>`}
+    </div>`;
+  }
+
+  function courseRowsHtml(course) {
+    const items = collectionItems(course);
+    const tab = courseState.tab;
+    const group = courseState.group;
+    const type = course === 'drinks' ? courseState.type : 'all';
+    const q = courseState.q;
+    const filtered = filterCourseItems(items, course);
+    const tabTotal = courseTabItems(items, tab).length;
+    const emptyType = course === 'drinks' && type && type !== 'all' ? ` · ${esc(drinkTypeLabel(type).toLowerCase())}` : '';
+    const body = filtered.length
+      ? filtered.map(courseRow).join('')
+      : `<div class="live-empty">No match here${q ? ` for “${esc(q)}”` : ''}${group && group !== 'all' ? ` in ${esc(group === 'kitchen' ? 'your kitchen' : group)}` : ''}${emptyType}. <button class="link-action" type="button" data-action="course-clear">Clear the filters</button></div>`;
+    return { body, count: `${filtered.length} of ${tabTotal} matches` };
+  }
+
+  function refreshCourseRows() {
+    const slot = $('#course-rows');
+    if (!slot) return;
+    const { body, count } = courseRowsHtml(courseState.course);
+    slot.innerHTML = body;
+    const counter = $('#course-count');
+    if (counter) counter.textContent = count;
+  }
+
+  function courseLivePanel(meta) {
+    const s = courseLiveState;
+    const suggestions = meta.suggestions || [];
+    return `<div class="live-search">
+      <form class="search" id="course-live-form" role="search">
+        <span class="sr-only">Search TheMealDB</span>
+        ${icon('search')}
+        <input class="input" id="course-live-q" type="search" placeholder="Search TheMealDB for a ${esc(meta.noun)}" value="${esc(s.q)}" autocomplete="off" aria-label="Search TheMealDB by dish name">
+      </form>
+      <button class="btn" type="button" data-action="course-live-search">${icon('search')}Search live</button>
+    </div>
+    <div class="suggestions">
+      <span class="label">Try</span>
+      ${suggestions.map((suggestion) => `<button class="chipbtn" type="button" data-action="course-live-suggest" data-q="${esc(suggestion)}">${esc(suggestion)}</button>`).join('')}
+    </div>
+    <section class="panel table-panel" aria-label="TheMealDB results" id="course-live-results">
+      ${courseLiveResultsHtml()}
+    </section>
+    <p class="live-note">${icon('info')}Live search reads TheMealDB's public API, then keeps only results that match ${esc(meta.title.toLowerCase())}. Import one and it joins your kitchen.</p>`;
+  }
+
+  function courseLiveResultsHtml() {
+    const s = courseLiveState;
+    if (s.status === 'loading') {
+      return `<div class="loading-rows">${Array.from({ length: 3 }, () => `<div class="live-row"><span class="skeleton" style="width:56px;height:56px;border-radius:8px"></span><span class="lines" style="display:grid;gap:8px"><span class="skeleton" style="width:34%;height:12px"></span><span class="skeleton" style="width:22%;height:10px"></span></span><span class="skeleton" style="width:72px;height:32px;border-radius:8px"></span></div>`).join('')}</div>`;
+    }
+    if (s.status === 'error') {
+      return `<div class="live-empty">${esc(s.error)} <button class="link-action" type="button" data-action="course-live-search">Try again</button></div>`;
+    }
+    if (s.status === 'done' && !s.results.length) {
+      return `<div class="live-empty">TheMealDB returned nothing for “${esc(s.q)}” in ${esc((courseMeta(s.course).title || 'this shelf').toLowerCase())}. Try a shorter dish name.</div>`;
+    }
+    if (s.status === 'idle') {
+      return `<div class="live-empty">Search TheMealDB by name. Only results that match this shelf are shown; Mise reads the meal's ingredients and instructions, then caches it in your kitchen.</div>`;
+    }
+    return `<div class="live-rows">${s.results.map((meal) => {
+      const here = knownImported('https://www.themealdb.com/meal/' + meal.idMeal);
+      return `<div class="live-row">
+        ${imgWrap(meal.strMealThumb, meal.strMeal, 'live-thumb')}
+        <span>
+          <span class="live-name">${esc(meal.strMeal)}</span>
+          <span class="live-sub">${esc([meal.strArea, meal.strCategory].filter(Boolean).join(' / ') || 'No area or category')} / meal ${esc(meal.idMeal)}</span>
+        </span>
+        ${here
+          ? `<a class="btn sm" href="#/recipe/${esc(here.id)}">Open ${icon('arrow-right')}</a>`
+          : `<button class="btn sm" type="button" data-action="import-meal" data-id="${esc(meal.idMeal)}">Read ${icon('arrow-right')}</button>`}
+      </div>`;
+    }).join('')}</div>`;
+  }
+
+  function refreshCourseLiveResults() {
+    const slot = $('#course-live-results');
+    if (slot) slot.innerHTML = courseLiveResultsHtml();
+  }
+
+  async function runCourseLiveSearch() {
+    const q = (courseLiveState.q || '').trim();
+    const course = courseState.course;
+    courseLiveState.course = course;
+    if (!q) {
+      courseLiveState.status = 'error';
+      courseLiveState.error = 'Type a dish name first.';
+      refreshCourseLiveResults();
+      return;
+    }
+    courseLiveState.status = 'loading';
+    courseLiveState.results = [];
+    courseLiveState.error = '';
+    refreshCourseLiveResults();
+    try {
+      const res = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=' + encodeURIComponent(q), { cache: 'no-store' });
+      if (!res.ok) throw new Error('TheMealDB answered ' + res.status);
+      const data = await res.json();
+      const meals = Array.isArray(data.meals) ? data.meals : [];
+      courseLiveState.results = meals.filter((meal) => matchesCourse(meal.strMeal, meal.strCategory, course));
+      courseLiveState.status = 'done';
+      announce(courseLiveState.results.length + ' meals found in ' + (courseMeta(course).title || course) + ' for ' + q);
+    } catch (err) {
+      courseLiveState.status = 'error';
+      courseLiveState.error = 'TheMealDB did not answer from this network. The public API may be rate-limited; try again.';
+    }
+    refreshCourseLiveResults();
+  }
+
+  function courseHubCard(course) {
+    const meta = courseMeta(course);
+    const items = collectionItems(course);
+    const kitchenCount = items.filter((item) => item.kitchen).length;
+    return `<a class="hub-card" href="#/kitchen/${esc(course)}">
+      <span class="hub-icon">${icon(meta.icon)}</span>
+      <span class="hub-body">
+        <span class="hub-kicker">${esc(meta.kicker || 'Course')}</span>
+        <span class="hub-title">${esc(meta.title)} <span class="hub-count">${items.length}</span></span>
+        <span class="hub-desc">${kitchenCount} in your kitchen and ${items.length - kitchenCount} in the catalogues. ${esc(meta.blurb)}</span>
+      </span>
+      <span class="hub-go">${icon('arrow-right')}</span>
+    </a>`;
+  }
+
+  function kitchenHubView() {
+    const all = allRecipes();
+    const sources = new Set(all.map((recipe) => recipe.source)).size;
+    const meals = COURSE_ORDER.slice(0, 3).map(courseHubCard).join('');
+    const courses = COURSE_ORDER.slice(3).map(courseHubCard).join('');
+    return `<div class="page">
+      <div class="title-row">
+        <div>
+          <h1>My Kitchen</h1>
+          <p class="sub">Your recipes, gathered by collection, meal and course. All Recipes holds everything; Meals cover breakfast, lunch and dinner; Courses cover the drinks and to-start dishes. Counts include what is already in your kitchen plus matches waiting in the bundled catalogues.</p>
+        </div>
+        <div class="title-actions">
+          <a class="btn primary" href="#/import">${icon('import')}Import a recipe</a>
+        </div>
+      </div>
+
+      <div class="kitchen-groups">
+        <section class="hub-group" aria-labelledby="hub-collection">
+          <h2 class="hub-group-title" id="hub-collection">Collection</h2>
+          <div class="kitchen-hub collection-hub">
+            <a class="hub-card" href="#/library">
+              <span class="hub-icon">${icon('library')}</span>
+              <span class="hub-body">
+                <span class="hub-kicker">All recipes</span>
+                <span class="hub-title">All Recipes <span class="hub-count">${all.length}</span></span>
+                <span class="hub-desc">Every recipe and category in the kitchen, from breakfast to appetizers, with source, steps, timers and ingredient coverage.</span>
+              </span>
+              <span class="hub-go">${icon('arrow-right')}</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="hub-group" aria-labelledby="hub-meals">
+          <h2 class="hub-group-title" id="hub-meals">Meals</h2>
+          <div class="kitchen-hub">${meals}</div>
+        </section>
+
+        <section class="hub-group" aria-labelledby="hub-courses">
+          <h2 class="hub-group-title" id="hub-courses">Courses</h2>
+          <div class="kitchen-hub">${courses}</div>
+        </section>
+      </div>
+
+      <p class="hub-note">${icon('info')}Your kitchen holds ${all.length} recipe${all.length === 1 ? '' : 's'} from ${sources} source${sources === 1 ? '' : 's'}. Shelves pull matching recipes from the same kitchen plus the Caribbean, African and world catalogues; anything from a catalogue imports in one tap.</p>
+    </div>`;
+  }
+
+  function courseTypeChips(tabItems) {
+    const counts = { all: tabItems.length, other: tabItems.filter((item) => (item.type || 'other') === 'other').length };
+    DRINK_TYPE_DEFS.forEach((def) => { counts[def.id] = tabItems.filter((item) => item.type === def.id).length; });
+    const visible = DRINK_TYPE_FILTERS.filter((type) => type === 'all' || counts[type] > 0);
+    if (!visible.includes(courseState.type)) courseState.type = 'all';
+    return visible.map((type) => `<button class="chipbtn" type="button" data-action="course-filter-type" data-type="${esc(type)}" aria-pressed="${courseState.type === type}">${esc(drinkTypeLabel(type))} <span class="n">${counts[type]}</span></button>`).join('');
+  }
+
+  function courseFilterChips(items, tab) {
+    const tabItems = courseTabItems(items, tab);
+    const counts = {
+      all: tabItems.length,
+      kitchen: tabItems.filter((item) => item.kitchen).length,
+      TheMealDB: tabItems.filter((item) => item.group === 'TheMealDB').length,
+      TheCocktailDB: tabItems.filter((item) => item.group === 'TheCocktailDB').length,
+      'Food & Wine': tabItems.filter((item) => item.group === 'Food & Wine').length,
+      'Bundled sample': tabItems.filter((item) => item.group === 'Bundled sample').length,
+      Imported: tabItems.filter((item) => item.group === 'Imported').length,
+      Publisher: tabItems.filter((item) => item.group === 'Publisher').length,
+    };
+    const visible = COURSE_GROUP_FILTERS.filter((group) => group === 'all' || group === 'kitchen' || counts[group] > 0);
+    if (!visible.includes(courseState.group)) courseState.group = 'all';
+    return visible.map((group) => `<button class="chipbtn" type="button" data-action="course-filter" data-group="${esc(group)}" aria-pressed="${courseState.group === group}">${group === 'all' ? 'All' : (group === 'kitchen' ? 'In your kitchen' : esc(group))} <span class="n">${counts[group]}</span></button>`).join('');
+  }
+
+  function kitchenCollectionView(course, tab) {
+    const meta = courseMeta(course);
+    if (courseState.course !== course) {
+      courseState.course = course;
+      courseState.q = '';
+      courseState.group = 'all';
+      courseState.tab = 'all';
+      courseState.type = 'all';
+      courseState.alcohol = courseState.spirit = courseState.occasion = 'all';
+    } else {
+      courseState.course = course;
+    }
+    if (courseLiveState.course !== course) {
+      courseLiveState.course = course;
+      courseLiveState.status = 'idle';
+      courseLiveState.q = '';
+      courseLiveState.results = [];
+      courseLiveState.error = '';
+    }
+    const selectedTab = COURSE_TABS.includes(tab) ? tab : 'all';
+    courseState.tab = selectedTab;
+    const items = collectionItems(course);
+    const kitchenCount = items.filter((item) => item.kitchen).length;
+    const counts = {
+      all: items.length,
+      caribbean: items.filter((item) => item.region === 'caribbean').length,
+      africa: items.filter((item) => item.region === 'africa').length,
+      global: items.filter((item) => item.region === 'global').length,
+    };
+    const liveTab = selectedTab === 'live';
+    // Normalize hidden chips before computing rows, so controls and results agree.
+    const sourceChips = courseFilterChips(items, selectedTab);
+    const typeChips = course === 'drinks' ? courseTypeChips(courseTabItems(items, selectedTab)) : '';
+    const rowsData = liveTab ? null : courseRowsHtml(course);
+    const body = rowsData ? rowsData.body : '';
+    const count = rowsData ? rowsData.count : '';
+    const finding = `${kitchenCount} ${kitchenCount === 1 ? 'recipe is' : 'recipes are'} already in your kitchen${items.length - kitchenCount ? `; ${items.length - kitchenCount} more can be imported` : ''}.`;
+    const drinkTypeRow = course === 'drinks'
+      ? `<div class="drink-type-row" role="group" aria-label="Drink type" style="margin-bottom:12px"><span class="filters-label">Type</span><div class="filters">${typeChips}</div></div>${drinkFacetControls()}`
+      : '';
+    const tabContent = liveTab
+      ? courseLivePanel(meta)
+      : `<div class="library-toolbar">
+          <label class="search">
+            <span class="sr-only">Search ${esc(meta.title)}</span>
+            ${icon('search')}
+            <input class="input" id="course-search" type="search" placeholder="Search name or source" value="${esc(courseState.q)}" autocomplete="off">
+          </label>
+          <div class="filters">${sourceChips}</div>
+          <span class="result-count" id="course-count">${esc(count)}</span>
+        </div>
+        ${drinkTypeRow}
+        <section class="panel table-panel" aria-label="${esc(meta.title)} recipes">
+          <p class="collection-note">${icon('info')}Matches in this shelf. Import any catalogue record to read it in your kitchen.</p>
+          <div class="live-rows" id="course-rows">${body}</div>
+        </section>
+        <p class="live-note">${icon('link')}TheMealDB and TheCocktailDB photographs are hot-linked. Publisher recipe photographs stay with their source; none are bundled. Photos need a connection, but recipe text works offline. Read the source page for credits and context.</p>`;
+
+    return `<div class="page">
+      <div class="crumbs"><a href="#/kitchen">My Kitchen</a><span class="sep">/</span><span>${esc(meta.title)}</span></div>
+      <div class="title-row">
+        <div>
+          <h1>${esc(meta.title)}</h1>
+          <p class="sub">${esc(meta.desc)} ${finding}</p>
+        </div>
+        <div class="title-actions">
+          <a class="btn" href="#/library">${icon('library')}All Recipes</a>
+          <a class="btn primary" href="#/import">${icon('import')}Import</a>
+        </div>
+      </div>
+
+      <div class="segmented" role="group" aria-label="Recipe source" style="margin-bottom:20px">
+        <button type="button" data-action="course-tab" data-tab="all" aria-pressed="${selectedTab === 'all'}">All matches <span class="n">${counts.all}</span></button>
+        <button type="button" data-action="course-tab" data-tab="live" aria-pressed="${selectedTab === 'live'}">TheMealDB live</button>
+        <button type="button" data-action="course-tab" data-tab="caribbean" aria-pressed="${selectedTab === 'caribbean'}">Caribbean <span class="n">${counts.caribbean}</span></button>
+        <button type="button" data-action="course-tab" data-tab="africa" aria-pressed="${selectedTab === 'africa'}">Africa <span class="n">${counts.africa}</span></button>
+        <button type="button" data-action="course-tab" data-tab="global" aria-pressed="${selectedTab === 'global'}">The world <span class="n">${counts.global}</span></button>
+      </div>
+
+      ${tabContent}
+    </div>`;
+  }
+
   /* ---------- library ---------- */
-  const libraryState = { tab: 'kitchen', q: '', source: 'all', status: 'idle', results: [], error: '' };
+  const LIBRARY_COURSE_FILTERS = ['all', 'breakfast', 'lunch', 'dinner', 'drinks', 'appetizers', 'pastry'];
+  const libraryState = { tab: 'kitchen', q: '', source: 'all', category: 'all', status: 'idle', results: [], error: '' };
   const CARIBBEAN_ROW_CAP = 60;
   const caribbeanState = { q: '', expanded: false };
   const africaState = { q: '' };
   const globalState = { q: '' };
 
   function libraryView(tab) {
-    libraryState.tab = ['kitchen', 'live', 'caribbean', 'africa', 'global'].includes(tab) ? tab : libraryState.tab;
+    libraryState.tab = ['kitchen', 'catalogue', 'live', 'caribbean', 'africa', 'global'].includes(tab) ? tab : libraryState.tab;
     const all = allRecipes();
     const importedCount = imported.length;
     const caribbeanCount = (Array.isArray(CARIBBEAN.meals) ? CARIBBEAN.meals.length : 0) + CARIBBEAN_SOURCES.length;
@@ -1529,9 +2251,10 @@
     const finding = `${all.length} recipes in the kitchen${importedCount ? `, ${importedCount} imported here` : ''}. ${all.reduce((s, r) => s + r.stats.named, 0)} of ${all.reduce((s, r) => s + r.stats.ingredients, 0)} listed ingredients are named in a step.`;
 
     return `<div class="page">
+      <div class="crumbs"><a href="#/kitchen">My Kitchen</a><span class="sep">/</span><span>All Recipes</span></div>
       <div class="title-row">
         <div>
-          <h1>Library</h1>
+          <h1>All Recipes</h1>
           <p class="sub">${esc(finding)}</p>
         </div>
         <div class="title-actions">
@@ -1540,20 +2263,43 @@
       </div>
 
       <div class="segmented" role="group" aria-label="Recipe source" style="margin-bottom:20px">
-        <button type="button" data-action="library-tab" data-tab="kitchen" aria-pressed="${libraryState.tab === 'kitchen'}">My kitchen <span class="n">${all.length}</span></button>
+        <button type="button" data-action="library-tab" data-tab="kitchen" aria-pressed="${libraryState.tab === 'kitchen'}">My saved recipes <span class="n">${all.length}</span></button>
+        <button type="button" data-action="library-tab" data-tab="catalogue" aria-pressed="${libraryState.tab === 'catalogue'}">Full catalogue <span class="n">${collectionItems('all').length}</span></button>
         <button type="button" data-action="library-tab" data-tab="live" aria-pressed="${libraryState.tab === 'live'}">TheMealDB live</button>
         <button type="button" data-action="library-tab" data-tab="caribbean" aria-pressed="${libraryState.tab === 'caribbean'}">Caribbean <span class="n">${caribbeanCount}</span></button>
         <button type="button" data-action="library-tab" data-tab="africa" aria-pressed="${libraryState.tab === 'africa'}">Africa <span class="n">${africaCount}</span></button>
         <button type="button" data-action="library-tab" data-tab="global" aria-pressed="${libraryState.tab === 'global'}">The world <span class="n">${globalCount}</span></button>
       </div>
 
-      ${libraryState.tab === 'live' ? livePanel() : libraryState.tab === 'caribbean' ? caribbeanPanel() : libraryState.tab === 'africa' ? africaPanel() : libraryState.tab === 'global' ? globalPanel() : kitchenLibrary(all)}
+      ${libraryState.tab === 'catalogue' ? cataloguePanel() : libraryState.tab === 'live' ? livePanel() : libraryState.tab === 'caribbean' ? caribbeanPanel() : libraryState.tab === 'africa' ? africaPanel() : libraryState.tab === 'global' ? globalPanel() : kitchenLibrary(all)}
     </div>`;
+  }
+
+  function libraryCourseFilters(all) {
+    return `<div class="filters course-filters" role="group" aria-label="Categories">
+      ${LIBRARY_COURSE_FILTERS.map((course) => {
+        const count = course === 'all' ? all.length : all.filter((recipe) => matchesCourse(recipe.name, recipe.category, course)).length;
+        const label = course === 'all' ? 'All categories' : COURSE_DEFS[course].title;
+        return `<button class="chipbtn" type="button" data-action="filter-course" data-course="${esc(course)}" aria-pressed="${libraryState.category === course}">${esc(label)} <span class="n">${count}</span></button>`;
+      }).join('')}
+    </div>`;
+  }
+
+  function cataloguePanel() {
+    const items = collectionItems('all');
+    return `<div class="library-toolbar">
+      <label class="search"><span class="sr-only">Search full catalogue</span>${icon('search')}<input class="input" id="lib-search" type="search" placeholder="Search name, cuisine or source" value="${esc(libraryState.q)}"></label>
+      ${libraryCourseFilters(items)}
+      <span class="result-count" id="lib-count"></span>
+      </div>
+      <p class="collection-note">Browse every bundled recipe offline. Read saves a recipe to your kitchen; Open returns to a saved recipe. Different publishers’ versions are kept separately.</p>
+      <section class="panel table-panel" aria-label="Full recipe catalogue"><div class="live-rows" id="catalogue-rows"></div></section>`;
   }
 
   function kitchenLibrary(all) {
     const sources = ['all', ...Array.from(new Set(all.map(sourceGroup)))];
     const filters = sources.map((s) => `<button class="chipbtn" type="button" data-action="filter-source" data-source="${esc(s)}" aria-pressed="${libraryState.source === s}">${s === 'all' ? 'All' : esc(s)} <span class="n">${s === 'all' ? all.length : all.filter((r) => sourceGroup(r) === s).length}</span></button>`).join('');
+    const courseFilters = libraryCourseFilters(all);
 
     return `<div class="library-toolbar">
       <label class="search">
@@ -1562,6 +2308,7 @@
         <input class="input" id="lib-search" type="search" placeholder="Search name, cuisine or source" value="${esc(libraryState.q)}" autocomplete="off">
       </label>
       <div class="filters">${filters}</div>
+      ${courseFilters}
       <span class="result-count" id="lib-count"></span>
     </div>
     <section class="panel table-panel" aria-label="Recipes">
@@ -1619,8 +2366,10 @@
   function libraryRows() {
     const q = libraryState.q.trim().toLowerCase();
     const source = libraryState.source;
+    const category = libraryState.category || 'all';
     const rows = allRecipes().filter((r) => {
       if (source !== 'all' && sourceGroup(r) !== source) return false;
+      if (category !== 'all' && !matchesCourse(r.name, r.category, category)) return false;
       if (!q) return true;
       const hay = [r.name, r.source, r.cuisine, r.category, ...(r.tags || [])].join(' ').toLowerCase();
       return hay.includes(q);
@@ -1648,13 +2397,25 @@
         </span>
         <span class="rgo">${icon('arrow-right')}</span>
       </a>`;
-    }).join('') : `<div style="padding:20px 12px"><div class="live-empty">No recipe here matches “${esc(libraryState.q)}”${source !== 'all' ? ` in ${esc(source)}` : ''}. <button class="link-action" type="button" data-action="clear-library">Clear the search</button></div></div>`;
+    }).join('') : `<div style="padding:20px 12px"><div class="live-empty">No recipe here matches “${esc(libraryState.q)}”${source !== 'all' ? ` in ${esc(source)}` : ''}${category !== 'all' ? ` in ${esc(COURSE_DEFS[category].title)}` : ''}. <button class="link-action" type="button" data-action="clear-library">Clear the filters</button></div></div>`;
 
     const count = `${rows.length} of ${allRecipes().length} recipes`;
     return { body, count };
   }
 
   function refreshLibraryRows() {
+    const catalogue = $('#catalogue-rows');
+    if (catalogue) {
+      const items = collectionItems('all');
+      const needle = libraryState.q.trim().toLowerCase();
+      const filtered = items.filter(item => matchesCourse(item.name, item.category, libraryState.category)
+        && (!needle || item.hay.includes(needle)));
+      catalogue.innerHTML = filtered.length ? filtered.map(courseRow).join('')
+        : '<div class="live-empty">No matching recipes. <button class="link-action" data-action="clear-library" type="button">Clear filters</button></div>';
+      const counter = $('#lib-count');
+      if (counter) counter.textContent = `${filtered.length} of ${items.length} recipes`;
+      return;
+    }
     const slot = $('#lib-rows');
     if (!slot) return;
     const { body, count } = libraryRows();
@@ -2028,7 +2789,7 @@
               <li>Every TheMealDB meal was read from its own record; meal ids link through to the source.</li>
               <li>Publisher recipes were read from the page's schema.org Recipe data. Publisher, author and URL stay on the record; photographs are not re-hosted.</li>
               <li>Indian, Indonesian, Ethiopian, Nigerian and Brazilian area filters returned no meals at the time of audit, so those cuisines are not substituted. The African and Caribbean collections add named publisher recipes instead.</li>
-              <li>Photographs belong to TheMealDB and are hot-linked; Mise does not imply they were shot for it.</li>
+              <li>TheMealDB and TheCocktailDB photographs are hot-linked from their source; Mise does not imply they were shot for it. Offline photos fall back to an illustration.</li>
               <li>Selection favours recognition and spread, not ratings, popularity or national rank.</li>
             </ul>
           </section>
@@ -2078,7 +2839,7 @@
 
     return `<div class="page">
       <div class="crumbs">
-        <a href="#/library">Library</a><span class="sep">/</span><span>${esc(recipe.source)}</span>
+        <a href="#/library">All Recipes</a><span class="sep">/</span><span>${esc(recipe.source)}</span>
       </div>
       <div class="title-row detail-title">
         <div>
@@ -2090,7 +2851,7 @@
           ${recipe.sourceUrl ? `<a class="btn" href="${esc(safeUrl(recipe.sourceUrl))}" target="_blank" rel="noopener noreferrer">${icon('external')}Source</a>` : ''}
           <button class="btn" type="button" data-action="add-to-list" data-id="${esc(recipe.id)}">${icon('plus')}Add to list</button>
           <button class="btn" type="button" data-action="print-recipe">${icon('print')}Print</button>
-          <button class="btn primary" type="button" data-action="start-cook" data-id="${esc(recipe.id)}">${icon('play')}Start cooking</button>
+          <button class="btn primary" type="button" data-action="start-cook" data-id="${esc(recipe.id)}">${icon('play')}${esc(cookActionLabel(recipe))}</button>
         </div>
       </div>
 
@@ -2121,7 +2882,7 @@
               <div class="fact"><div class="flabel">Timer time</div><div class="fvalue">${recipe.stats.timedMinutes ? recipe.stats.timedMinutes + ' <small>min</small>' : dash}</div></div>
               <div class="fact"><div class="flabel">Total time</div><div class="fvalue${total ? '' : ' dash'}">${total ? esc(minutesText(total)) : '–'}</div></div>
             </div>
-            <p class="detail-credit">${photoCredit(recipe)}</p>
+            <p class="detail-credit">${esc(photoCredit(recipe))}</p>
           </div>
         </div>
       </section>
@@ -2143,7 +2904,7 @@
   }
 
   function photoCredit(recipe) {
-    if (recipe.imageCredit) return `Photograph: ${recipe.imageCredit}${recipe.source ? ' / ' + recipe.source : ''}.`;
+    if (recipe.imageCredit) return `Photograph: ${recipe.imageCredit}${recipe.source && !recipe.imageCredit.includes(recipe.source) ? ' / ' + recipe.source : ''}.`;
     if (recipe.source === 'TheMealDB') return 'Photograph: TheMealDB.';
     if (recipe.sourceUrl) return 'Photograph: the publisher, linked from the source page.';
     return 'No photograph in the source record.';
@@ -3137,7 +3898,8 @@
            <p class="cook-sub">All ${recipe.steps.length} steps are shown in full, in the publisher’s order. Select a step to make it current and see its ingredients and timers.</p>
            ${guideBarHtml(voice)}
            ${missNote ? `<div class="notice quiet cook-gap-note">${icon('info')}<span>${esc(missNote)}</span></div>` : ''}
-           <ol class="cook-steps">${stepList}</ol>
+                       ${ingredientsDrop(recipe, scale, items, step, checked)}
+<ol class="cook-steps">${stepList}</ol>
            <div class="cook-actions">
             <button class="btn ghost" type="button" data-action="cook-back" ${s.step === 1 ? 'disabled' : ''}>${icon('arrow-left')}Back</button>
              <button class="btn primary" type="button" data-action="cook-next">${last ? 'Finish Cooking' : 'Next Step'}${icon('arrow-right')}</button>
@@ -3147,26 +3909,8 @@
           <p class="keys"><kbd>←</kbd> <kbd>→</kbd> move between steps. <kbd>T</kbd> starts the step's first timer. <kbd>Esc</kbd> leaves.</p>
         </main>
 
-        <aside class="cook-side">
-          <section class="panel mise" data-ui="binder-page" aria-labelledby="mise-title">
-            <div class="binder-holes" data-ui="binder-punch" aria-hidden="true"><span></span><span></span><span></span></div>
-            <div class="panel-head">
-               <h2 id="mise-title">Ingredients For This Step</h2>
-              <span class="meta">${items.length} item${items.length === 1 ? '' : 's'}</span>
-            </div>
-            ${items.length ? `<div class="check-list">${items.map((ing) => {
-              const amount = P.amountText(ing, scale);
-              return `<label class="check-row" data-ui="binder-line-item">
-                <input class="check-box" type="checkbox" data-action="check-ing" data-step="${step.n}" data-ing="${esc(ing.id)}" ${checked[ing.id] ? 'checked' : ''}>
-                <span class="check-amount">${amount ? esc(amount) : '–'}</span>
-                <span class="check-name">${esc(ing.item)}${ing.note ? `<span class="ing-note">${esc(ing.note)}</span>` : ''}</span>
-              </label>`;
-            }).join('')}</div>` : `<div class="empty-inline">The source step does not name an ingredient from the list. Check the method before you start it.</div>`}
-            <p class="meta note">${scale !== 1 ? `Amounts at ×${scale}. ` : ''}Crossed-off items are kept for this cook only.</p>
-          </section>
-
+                <aside class="cook-side">
           ${cookTimerCard(recipe)}
-          ${fullMiseCard(recipe, scale)}
         </aside>
       </div>
     </div>`;
@@ -3202,22 +3946,46 @@
     </section>`;
   }
 
-  function fullMiseCard(recipe, scale) {
+  function ingredientsDrop(recipe, scale, items, step, checked) {
     const all = recipe.ingredients.filter((ing) => !ing.serving);
-    const checks = session && session.recipeId === recipe.id ? (session.all || {}) : {};
-    const rows = all.map((ing) => {
-      const amount = P.amountText(ing, scale);
-      return `<label class="full-row">
-        <input class="check-box" type="checkbox" data-action="check-mise" data-ing="${esc(ing.id)}" ${checks[ing.id] ? 'checked' : ''}>
-        <span class="check-amount">${amount ? esc(amount) : '–'}</span>
-        <span class="check-name">${esc(ing.item)}</span>
-      </label>`;
-    }).join('');
-    return `<section class="panel full-mise" aria-labelledby="full-mise-title">
-       <div class="panel-head"><h2 id="full-mise-title">All Ingredients</h2><span class="meta">${all.length} Items</span></div>
-      <div class="full-mise-list">${rows}</div>
-       <p class="meta" style="margin-top:10px">Crossed-off items stay marked throughout this cook. Serving items stay on the recipe page.</p>
-    </section>`;
+    const sessionAll = session && session.recipeId === recipe.id ? (session.all || {}) : {};
+    const doneCount = items.filter((ing) => checked[ing.id]).length;
+    const miseCount = all.filter((ing) => sessionAll[ing.id]).length;
+    const scaleNote = scale !== 1 ? `Amounts at ×${scale}. ` : '';
+    return `<details class="panel ingredients-drop">
+      <summary class="drop-summary">
+        <span class="drop-title">Ingredients<small>${items.length} for this step · ${all.length} total</small></span>
+        <span class="drop-counts"><span>${doneCount}/${items.length} in step</span><span>${miseCount}/${all.length} total</span></span>
+        <span class="source-plus" aria-hidden="true">${icon('plus')}</span>
+      </summary>
+      <div class="drop-body">
+        <div class="drop-cols">
+          <section class="drop-section" aria-label="Ingredients for this step">
+            <h3>For this step${step && step.section ? ` · ${esc(step.section)}` : ''}</h3>
+            ${items.length ? `<ul class="drop-list">${items.map((ing) => {
+              const amount = P.amountText(ing, scale);
+              return `<li class="drop-item"><label class="check-row">
+                <input class="check-box" type="checkbox" data-action="check-ing" data-step="${step.n}" data-ing="${esc(ing.id)}" ${checked[ing.id] ? 'checked' : ''}>
+                <span class="check-amount">${amount ? esc(amount) : '–'}</span>
+                <span class="check-name">${esc(ing.item)}${ing.note ? `<span class="ing-note">${esc(ing.note)}</span>` : ''}</span>
+              </label></li>`;
+            }).join('')}</ul>` : `<div class="empty-inline">The source step does not name an ingredient from the list. Check the method before you start it.</div>`}
+          </section>
+          <section class="drop-section" aria-label="All ingredients">
+            <h3>All ingredients</h3>
+            <ul class="drop-list">${all.map((ing) => {
+              const amount = P.amountText(ing, scale);
+              return `<li class="drop-item"><label class="check-row">
+                <input class="check-box" type="checkbox" data-action="check-mise" data-ing="${esc(ing.id)}" ${sessionAll[ing.id] ? 'checked' : ''}>
+                <span class="check-amount">${amount ? esc(amount) : '–'}</span>
+                <span class="check-name">${esc(ing.item)}</span>
+              </label></li>`;
+            }).join('')}</ul>
+          </section>
+        </div>
+        <p class="meta note">${esc(scaleNote)}Crossed-off items are kept for this cook only.</p>
+      </div>
+    </details>`;
   }
 
   function cookTimerCard(recipe) {
@@ -3281,7 +4049,7 @@
               <div class="done-src">${esc(recipe.source)}${recipe.author ? ' / ' + esc(recipe.author) : ''}${recipe.yields ? ' / serves ' + recipe.yields : ''}</div>
               <div class="done-actions">
                 <a class="btn primary" href="#/">${icon('arrow-left')}Return to Kitchen</a>
-                <a class="btn" href="#/library">Return to Library ${icon('arrow-right')}</a>
+                <a class="btn" href="#/library">All Recipes ${icon('arrow-right')}</a>
                 <button class="btn ghost" type="button" data-action="start-cook" data-id="${esc(recipe.id)}">${icon('reset')}Cook it again</button>
                 <a class="btn ghost" href="#/recipe/${esc(recipe.id)}">Open the recipe</a>
               </div>
@@ -3312,7 +4080,7 @@
     const next = allRecipes().filter((r) => r.id !== recipe.id).slice(0, 3);
     if (!next.length) return '';
     return `<section class="panel done-next" aria-labelledby="done-next-title">
-      <div class="panel-head"><h2 id="done-next-title">What you can cook next</h2><a class="section-link" href="#/library">All recipes ${icon('arrow-right')}</a></div>
+      <div class="panel-head"><h2 id="done-next-title">What you can cook next</h2><a class="section-link" href="#/library">All Recipes ${icon('arrow-right')}</a></div>
       <div class="recipe-rows next-list">${next.map((item) => {
         const c = coverStats(item);
         return `<a class="rrow" href="#/recipe/${esc(item.id)}">
@@ -3338,9 +4106,9 @@
       return `<div class="page"><div class="panel state-panel">
         <p class="eyebrow">Cook mode</p>
         <h1>Nothing to cook yet</h1>
-        <p>There is no recipe queued on this screen. Pick one from the library or import one, and its steps come with you. If a cook is in flight and you want to abandon it, cancel it below.</p>
+        <p>There is no recipe queued on this screen. Pick one from All Recipes or import one, and its steps come with you. If a cook is in flight and you want to abandon it, cancel it below.</p>
         <div class="actions">
-          <a class="btn primary" href="#/library">${icon('library')}Open the library</a>
+          <a class="btn primary" href="#/library">${icon('library')}Open All Recipes</a>
           <button class="btn danger" type="button" data-action="cancel-cook">${icon('x')}Cancel cook</button>
         </div>
         <a class="link-action cook-empty-import" href="#/import">Import a recipe instead ${icon('arrow-right')}</a>
@@ -3356,7 +4124,7 @@
       <p>${esc(text)}</p>
       <div class="actions">
         <a class="btn primary" href="#/import">${icon('import')}Import a recipe</a>
-        <a class="btn" href="#/library">Open the library</a>
+        <a class="btn" href="#/library">Open All Recipes</a>
       </div>
     </div></div>`;
   }
@@ -3838,7 +4606,10 @@
       const raw = await Promise.any(attempts);
       const recipe = P.buildRecipe(raw, { importedAt: new Date().toISOString() });
       if (!recipe.steps.length || !recipe.ingredients.length) throw new Error('Recipe data was incomplete');
-      saveImported(recipe);
+      if (!saveImported(recipe)) {
+        setImportStatus('Device storage is full. Your saved kitchen has not changed.', true);
+        return;
+      }
       setImportStatus('Read ' + esc(recipe.name) + ' from ' + esc(recipe.source) + '. Opening the breakdown.');
       announce('Imported ' + recipe.name);
       navigate('#/recipe/' + recipe.id);
@@ -3895,7 +4666,10 @@
       if (err) err.textContent = 'That Recipe block has no usable ingredients or steps.';
       return;
     }
-    saveImported(recipe);
+    if (!saveImported(recipe)) {
+      if (err) err.textContent = 'Device storage is full. Your saved kitchen has not changed.';
+      return;
+    }
     closeModal();
     announce('Imported ' + recipe.name);
     navigate('#/recipe/' + recipe.id);
@@ -3903,6 +4677,7 @@
 
   function importMeal(id) {
     const meal = (libraryState.results || []).find((m) => String(m.idMeal) === String(id))
+      || (courseLiveState.results || []).find((m) => String(m.idMeal) === String(id))
       || (CARIBBEAN.meals || []).find((m) => String(m.idMeal) === String(id))
       || (AFRICA.meals || []).find((m) => String(m.idMeal) === String(id))
       || (GLOBAL.records || []).find((m) => String(m.idMeal) === String(id));
@@ -3912,7 +4687,7 @@
       announce('That meal has no instructions to read.', true);
       return;
     }
-    saveImported(recipe);
+    if (!saveImported(recipe)) return;
     announce('Imported ' + recipe.name);
     navigate('#/recipe/' + recipe.id);
   }
@@ -3929,6 +4704,7 @@
       totalTime: record.totalTime,
       author: record.author,
       recipeCuisine: record.country,
+      recipeCategory: record.type || record.category || undefined,
       description: record.description || undefined,
     }, { id: record.id, url: record.sourceUrl, sourceName: record.source });
     const recipe = P.buildRecipe(raw, { importedAt: new Date().toISOString() });
@@ -3944,7 +4720,7 @@
       announce('The publisher record has no usable ingredients or instructions.', true);
       return;
     }
-    saveImported(recipe);
+    if (!saveImported(recipe)) return;
     announce('Imported ' + recipe.name + ' from ' + record.source);
     navigate('#/recipe/' + recipe.id);
   }
@@ -3956,6 +4732,16 @@
 
   function importAfricaSource(id) {
     const record = AFRICA_SOURCES.find((item) => item.id === id);
+    if (record) importSourceRecord(record);
+  }
+
+  function importDrinkSource(id) {
+    const record = DRINKS_SOURCES.find((item) => item.id === id);
+    if (record) importSourceRecord(record);
+  }
+
+  function importPastrySource(id) {
+    const record = PASTRY_SOURCES.find((item) => item.id === id);
     if (record) importSourceRecord(record);
   }
 
@@ -4018,12 +4804,18 @@
       done += 1;
       if (ui && (done % 20 === 0 || done === total)) { ui.set(done, total); await nextTick(); }
     }
-    flushImported(lastRecipeId);
+    const saved = flushImported(lastRecipeId);
     if (ui) ui.set(total, total);
-    const trimmed = added > 0 && imported.length >= IMPORTED_CAP;
-    announce(added
-      ? `Imported ${added} ${label} recipe${added === 1 ? '' : 's'}; ${reused} ${reused === 1 ? 'was' : 'were'} already imported.${trimmed ? ` The kitchen keeps the newest ${IMPORTED_CAP}.` : ''}`
-      : `All ${label} records are already imported.`);
+    if (saved) {
+      announce(added
+        ? `Imported ${added} ${label} recipe${added === 1 ? '' : 's'}; ${reused} ${reused === 1 ? 'was' : 'were'} already imported.`
+        : `All ${label} records are already imported.`);
+    } else {
+      announce(`Device storage is full — the ${label} batch was not saved. Your saved kitchen is unchanged. Remove some imports and try again.`, true);
+      importRunning = false;
+      render();
+      return;
+    }
     importRunning = false;
     render();
   }
@@ -4146,6 +4938,7 @@
       </summary>
       <div class="source-all-body">
         ${item('TheMealDB', `<p>Live search, four bundled recipes, the world collection and the African and Caribbean snapshots come from TheMealDB's public API. Each record keeps its meal id and links back to <a href="https://www.themealdb.com" target="_blank" rel="noopener noreferrer">themealdb.com</a>. TheMealDB gives no total time or yield, so Mise shows a dash rather than an estimate.</p>`)}
+        ${item('TheCocktailDB', `<p>The additional drink collection comes from <a href="https://www.thecocktaildb.com" target="_blank" rel="noopener noreferrer">TheCocktailDB</a>'s public API. Each drink links to its source page, credits its photographer when provided, and hot-links the recipe's photograph without bundling image bytes. Photographs need a connection; offline recipes show an illustration instead. Its developer key is for personal/development use, not public app-store distribution.</p>`)}
         ${item('Food &amp; Wine', `<p>Classic Beef Chili is from <a href="https://www.foodandwine.com/recipes/classic-beef-chili" target="_blank" rel="noopener noreferrer">Food &amp; Wine</a>, recipe by Robby Melvin, photograph by Caitlin Bensel. The record is the page's own schema.org Recipe data. Step photographs in that data are by Molly Bolton and are linked, not re-hosted.</p>`)}
         ${item('Chef Lola\'s Kitchen', `<p>Nigerian jollof rice, suya, egusi, moin moin, puff puff, pepper soup, efo riro, doro wat, injera, kelewele, nyama choma, mandazi and East African chapati are read from <a href="https://cheflolaskitchen.com" target="_blank" rel="noopener noreferrer">cheflolaskitchen.com</a>. Ingredients and steps keep the publisher's wording; each record links to its page.</p>`)}
         ${item('196 Flavors', `<p>Bobotie, waakye, oil down, pom, Johnny cake, Bajan salt fish cakes, locrio de pica pica, sawine, pernil asado, pelau, soup joumou, Trinidad black cake and Jamaican patty are read from <a href="https://www.196flavors.com" target="_blank" rel="noopener noreferrer">196flavors.com</a>. Mise does not re-host their photographs.</p>`)}
@@ -4176,7 +4969,7 @@
         ['Nutrition, publisher-provided only', 'Show kcal/P/C/F exactly as the publisher wrote them; never estimated, never fabricated.', '1–2 weeks'],
         ['Curated substitutions', '~200 ingredient swaps, publisher-attributed; never invented when no match exists.', '1–2 weeks'],
         ['Export / import kitchen state', 'One JSON export of imports, pantry, favorites, voice prefs via the share sheet.', 'days'],
-        ['Storage readout', 'Settings shows imports used / 800 · KB used; tap clears legacy files.', 'day'],
+        ['Storage readout', 'Settings shows saved recipes and storage used; imports never evict older recipes.', 'day'],
       ]],
       ['Later', 'decision points, not scheduled', 'pill warn', [
         ['On-device Kokoro engine (opt-in)', 'APK downloads 4–36 MB engine + 91 MB ONNX; keeps Mise per-person on the tablet. Kokoro emulator test: 108 s init, PSS ≈ 510–557 MB — gate behind a measurement release.', 'Q1 2027'],
@@ -4537,6 +5330,115 @@
     toolPop = pop;
   }
 
+  /* ---------- manual-mode touch gestures ---------- */
+
+  let touchState = null;
+  let longPressTimer = null;
+  let longPressMenu = null;
+
+  function isVoiceActive() {
+    if (typeof parseRoute !== 'function') return false;
+    const route = parseRoute();
+    return route.params.get('voice') === '1';
+  }
+
+  function dismissLongPressMenu() {
+    if (longPressMenu && longPressMenu.parentNode) longPressMenu.parentNode.removeChild(longPressMenu);
+    longPressMenu = null;
+    const backdrop = document.querySelector('.long-press-backdrop');
+    if (backdrop) backdrop.remove();
+  }
+
+  function showLongPressMenu(x, y) {
+    dismissLongPressMenu();
+    const menu = document.createElement('div');
+    menu.className = 'long-press-menu';
+    menu.setAttribute('role', 'menu');
+    menu.innerHTML =
+      '<button class="btn ghost" type="button" data-action="longpress-cancel">Cancel</button>' +
+      '<button class="btn danger" type="button" data-action="longpress-end">End cook</button>';
+    const backdrop = document.createElement('div');
+    backdrop.className = 'long-press-backdrop';
+    backdrop.addEventListener('pointerdown', () => dismissLongPressMenu());
+    document.body.appendChild(backdrop);
+    document.body.appendChild(menu);
+    const width = 220;
+    const left = Math.max(8, Math.min(window.innerWidth - width - 8, x - width / 2));
+    const top = Math.max(8, y - 78);
+    menu.style.left = left + 'px';
+    menu.style.top = top + 'px';
+    longPressMenu = menu;
+  }
+
+  function isInteractiveElement(el) {
+    if (!el || !el.closest) return true;
+    // not allowed on interactive controls; ok on plain text/image/containers
+    return !!el.closest('button, a, input, select, textarea, label, .check-box, .searchbox, .timer-dock, .cook-top, .cook-actions, .guide-bar, .guide-commands');
+  }
+
+  function touchGuard() {
+    return document.body.classList.contains('route-cook') && !isVoiceActive();
+  }
+
+  function getTouch(e) {
+    const t = e.changedTouches && e.changedTouches[0];
+    return t || (e.touches && e.touches[0]) || null;
+  }
+
+  function handleCookTouchStart(e) {
+    if (!touchGuard()) return;
+    const t = getTouch(e);
+    if (!t) return;
+    if (isInteractiveElement(e.target)) return;
+    touchState = { x: t.clientX, y: t.clientY, time: Date.now(), target: e.target };
+    const x = t.clientX, y = t.clientY;
+    longPressTimer = window.setTimeout(() => showLongPressMenu(x, y), 550);
+  }
+
+  function handleCookTouchMove(e) {
+    if (!touchState) return;
+    const t = getTouch(e);
+    if (!t) return;
+    const dx = t.clientX - touchState.x;
+    const dy = t.clientY - touchState.y;
+    if (Math.abs(dx) > 10 || Math.abs(dy) > 10) {
+      if (longPressTimer) { window.clearTimeout(longPressTimer); longPressTimer = null; }
+      dismissLongPressMenu();
+    }
+  }
+
+  function handleCookTouchEnd(e) {
+    if (longPressTimer) { window.clearTimeout(longPressTimer); longPressTimer = null; }
+    if (!touchState) return;
+    const t = getTouch(e);
+    const dx = t ? t.clientX - touchState.x : 0;
+    const dy = t ? t.clientY - touchState.y : 0;
+    const elapsed = Date.now() - touchState.time;
+    touchState = null;
+    if (Math.abs(dy) >= 45 && Math.abs(dy) > Math.abs(dx) * 0.8 && elapsed < 600) {
+      const route = parseRoute();
+      const recipe = route.parts[1] ? getRecipe(route.parts[1]) : null;
+      if (!recipe) return;
+      // flick down (finger moves down) = next step; flick up = previous step
+      if (dy > 0) {
+        if (session && session.step < recipe.steps.length) { cookNext(recipe); }
+      } else {
+        cookBack(recipe);
+      }
+    }
+  }
+
+  function handleCookTouchCancel() {
+    if (longPressTimer) { window.clearTimeout(longPressTimer); longPressTimer = null; }
+    touchState = null;
+    dismissLongPressMenu();
+  }
+
+  document.addEventListener('touchstart', handleCookTouchStart, { passive: true });
+  document.addEventListener('touchmove', handleCookTouchMove, { passive: true });
+  document.addEventListener('touchend', handleCookTouchEnd, { passive: true });
+  document.addEventListener('touchcancel', handleCookTouchCancel, { passive: true });
+
   /* ---------- events ---------- */
   document.addEventListener('click', (event) => {
     const target = event.target.closest('[data-action]');
@@ -4740,8 +5642,46 @@
       return;
     }
 
+    if (action === 'course-tab') {
+      const tab = ['all', 'live', 'caribbean', 'africa', 'global'].includes(target.dataset.tab) ? target.dataset.tab : 'all';
+      courseState.tab = tab;
+      navigate('#/kitchen/' + courseState.course + (tab === 'all' ? '' : '?tab=' + tab));
+      return;
+    }
+    if (action === 'course-filter') {
+      courseState.group = COURSE_GROUP_FILTERS.includes(target.dataset.group) ? target.dataset.group : 'all';
+      $$('.chipbtn[data-action="course-filter"]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.group === courseState.group)));
+      refreshCourseRows();
+      return;
+    }
+    if (action === 'course-filter-type') {
+      courseState.type = DRINK_TYPE_FILTERS.includes(target.dataset.type) ? target.dataset.type : 'all';
+      $$('.chipbtn[data-action="course-filter-type"]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.type === courseState.type)));
+      refreshCourseRows();
+      return;
+    }
+    if (action === 'course-clear') {
+      courseState.q = '';
+      courseState.group = 'all';
+      courseState.type = 'all';
+      courseState.alcohol = courseState.spirit = courseState.occasion = 'all';
+      render();
+      return;
+    }
+    if (action === 'course-live-suggest') {
+      courseLiveState.q = target.dataset.q || '';
+      runCourseLiveSearch();
+      return;
+    }
+    if (action === 'course-live-search') {
+      const input = $('#course-live-q');
+      if (input) courseLiveState.q = input.value;
+      runCourseLiveSearch();
+      return;
+    }
+
     if (action === 'library-tab') {
-      libraryState.tab = ['kitchen', 'live', 'caribbean', 'africa', 'global'].includes(target.dataset.tab) ? target.dataset.tab : 'kitchen';
+      libraryState.tab = ['kitchen', 'catalogue', 'live', 'caribbean', 'africa', 'global'].includes(target.dataset.tab) ? target.dataset.tab : 'kitchen';
       navigate('#/library' + (libraryState.tab === 'kitchen' ? '' : '?tab=' + libraryState.tab));
       return;
     }
@@ -4751,9 +5691,16 @@
       refreshLibraryRows();
       return;
     }
+    if (action === 'filter-course') {
+      libraryState.category = LIBRARY_COURSE_FILTERS.includes(target.dataset.course) ? target.dataset.course : 'all';
+      $$('.chipbtn[data-action="filter-course"]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.course === libraryState.category)));
+      refreshLibraryRows();
+      return;
+    }
     if (action === 'clear-library') {
       libraryState.q = '';
       libraryState.source = 'all';
+      libraryState.category = 'all';
       render();
       return;
     }
@@ -4783,6 +5730,8 @@
     if (action === 'import-meal') { importMeal(target.dataset.id); return; }
     if (action === 'import-caribbean-source') { importCaribbeanSource(target.dataset.id); return; }
     if (action === 'import-africa-source') { importAfricaSource(target.dataset.id); return; }
+    if (action === 'import-drink-source') { importDrinkSource(target.dataset.id); return; }
+    if (action === 'import-pastry-source') { importPastrySource(target.dataset.id); return; }
 
     if (action === 'scale') {
       if (!recipe) return;
@@ -4928,9 +5877,27 @@
       cancelCurrentCook();
       return;
     }
+    if (action === 'longpress-cancel') {
+      dismissLongPressMenu();
+      cancelCurrentCook();
+      return;
+    }
+    if (action === 'longpress-end') {
+      dismissLongPressMenu();
+      const routeNow = parseRoute();
+      const recipeNow = routeNow.parts[1] ? getRecipe(routeNow.parts[1]) : null;
+      if (recipeNow) finishCook(recipeNow);
+      return;
+    }
   });
 
   document.addEventListener('change', (event) => {
+    const facet = event.target.closest('[data-drink-facet]');
+    if (facet && ['alcohol', 'spirit', 'occasion'].includes(facet.dataset.drinkFacet)) {
+      courseState[facet.dataset.drinkFacet] = facet.value;
+      refreshCourseRows();
+      return;
+    }
     const voicePick = event.target.closest('[data-voice-override]');
     if (voicePick) {
       const p = voicePick.dataset.voiceOverride === 'sean' ? 'sean' : 'carol';
@@ -4967,6 +5934,13 @@
   });
 
   document.addEventListener('input', (event) => {
+    if (event.target.id === 'course-search') {
+      courseState.q = event.target.value;
+      refreshCourseRows();
+    }
+    if (event.target.id === 'course-live-q') {
+      courseLiveState.q = event.target.value;
+    }
     if (event.target.id === 'lib-search') {
       libraryState.q = event.target.value;
       refreshLibraryRows();
@@ -5013,6 +5987,13 @@
       libraryState.q = q;
       navigate('#/library');
       announce(q ? `Showing recipes matching “${q}”.` : 'Showing the kitchen.');
+      return;
+    }
+    if (event.target.id === 'course-live-form') {
+      event.preventDefault();
+      const input = $('#course-live-q');
+      if (input) courseLiveState.q = input.value;
+      runCourseLiveSearch();
       return;
     }
     if (event.target.id === 'live-form') {

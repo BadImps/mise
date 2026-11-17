@@ -1,0 +1,40 @@
+{
+  "reviewed": "2026-11-17",
+  "scope": "Personal offline-first Mise build",
+  "sources": [
+    {
+      "name": "TheCocktailDB",
+      "endpoint": "https://www.thecocktaildb.com/api/json/v1/1/",
+      "terms": "https://www.thecocktaildb.com/terms_of_use.php",
+      "documentation": "https://www.thecocktaildb.com/api.php",
+      "use": "Official API recipe records; bounded named-family searches. Retain source links.",
+      "termsNote": "Published terms permit copying/modifying API content. Free key is for development/education; public app-store release requires paid access. Third-party content has separate rights. The terms page currently contains a TheMealDB naming inconsistency.",
+      "images": "Recipe-specific API thumbnail hot-linked for personal/development use, with source/photographer credit; no image bytes bundled. strCreativeCommonsConfirmed metadata retained; do not infer redistribution permission from a No flag.",
+      "builder": "tools/build-expansion.mjs"
+    },
+    {
+      "name": "TheMealDB",
+      "endpoint": "https://www.themealdb.com/api/json/v1/1/",
+      "terms": "https://www.themealdb.com/terms_of_use.php",
+      "use": "Official API; bounded meal-family searches, deduplicated by meal ID.",
+      "termsNote": "API content copying is permitted under source terms; public app-store release requires paid access. Third-party content has separate rights.",
+      "builder": "tools/build-expansion.mjs"
+    },
+    {
+      "name": "196 flavors",
+      "discovery": "https://www.196flavors.com/category/continent/americas/caribbean/",
+      "policy": "https://www.196flavors.com/privacy-policy/",
+      "use": "Existing personal-use publisher-card acquisition pattern; public country archives and schema.org Recipe records only.",
+      "termsNote": "Copyright retained by publisher. Privacy policy is not a reuse licence; no blanket redistribution permission was established. Keep this separate from openly licensed data.",
+      "builder": "tools/build-expansion.mjs"
+    }
+  ],
+  "admission": [
+    "Require source URL, name, ingredients and instructions.",
+    "Do not invent measures, yields, time or nutrition.",
+    "Keep API alcohol classification; unknown is not alcohol-free.",
+    "Deduplicate by source URL or source ID, retaining distinct publisher versions.",
+    "Keep generated records separate from saved user recipes.",
+    "Record acquisition failures and actual country coverage."
+  ]
+}

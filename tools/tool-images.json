@@ -15,10 +15,6 @@
     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Silver_saucepan.JPG/330px-Silver_saucepan.JPG",
     "credit": "Mauro Cateb (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Silver%20saucepan.JPG"
   },
-  "spoon": {
-    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Ceramic_baking_dish_with_wooden_spoon_on_kitchen_counter_%2816967294216%29.jpg/330px-Ceramic_baking_dish_with_wooden_spoon_on_kitchen_counter_%2816967294216%29.jpg",
-    "credit": "Personal Creations (CC BY 2.0) — https://commons.wikimedia.org/wiki/File:Ceramic%20baking%20dish%20with%20wooden%20spoon%20on%20kitchen%20counter%20(16967294216).jpg"
-  },
   "slottedSpoon": {
     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Typical_slotted_spoons.JPG/330px-Typical_slotted_spoons.JPG",
     "credit": "Mfrisk (Public domain) — https://commons.wikimedia.org/wiki/File:Typical%20slotted%20spoons.JPG"
@@ -30,10 +26,6 @@
   "blender": {
     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Juice_preparation_featuring_fresh_fruits_and_a_blender_on_a_modern_kitchen_countertop_in_bright_natural_lighting.jpg/330px-Juice_preparation_featuring_fresh_fruits_and_a_blender_on_a_modern_kitchen_countertop_in_bright_natural_lighting.jpg",
     "credit": "Shixart1985 (CC BY 2.0) — https://commons.wikimedia.org/wiki/File:Juice%20preparation%20featuring%20fresh%20fruits%20and%20a%20blender%20on%20a%20modern%20kitchen%20countertop%20in%20bright%20natural%20lighting.jpg"
-  },
-  "whisk": {
-    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Whisk_Ball_02.jpg/330px-Whisk_Ball_02.jpg",
-    "credit": "Sandra Fauconnier (CC BY 4.0) — https://commons.wikimedia.org/wiki/File:Whisk%20Ball%2002.jpg"
   },
   "cleaver": {
     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Chinese_and_old_North_American_cleavers_noBG.jpg/330px-Chinese_and_old_North_American_cleavers_noBG.jpg",
@@ -48,14 +40,6 @@
     "credit": "Olaf Simons (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Four%20chef's%20knives%20and%20an%20paring%20knife.jpg"
   },
   "dutch": {
-    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Dutch_Oven_%286537405833%29.jpg/330px-Dutch_Oven_%286537405833%29.jpg",
-    "credit": "Veganbaking.net from USA (CC BY-SA 2.0) — https://commons.wikimedia.org/wiki/File:Dutch%20Oven%20(6537405833).jpg"
-  },
-  "instantpot": {
-    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Green_beans_in_a_pressure_cooker_ready_to_be_processed.jpg/330px-Green_beans_in_a_pressure_cooker_ready_to_be_processed.jpg",
-    "credit": "Gandydancer (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Green%20beans%20in%20a%20pressure%20cooker%20ready%20to%20be%20processed.jpg"
-  },
-  "dish": {
     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Dutch_Oven_%286537405833%29.jpg/330px-Dutch_Oven_%286537405833%29.jpg",
     "credit": "Veganbaking.net from USA (CC BY-SA 2.0) — https://commons.wikimedia.org/wiki/File:Dutch%20Oven%20(6537405833).jpg"
   },
@@ -83,10 +67,6 @@
     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/-2020-11-20_Sirloin_steaks_cooking_on_a_griddle_plate%2C_Trimingham%2C_Norfolk.JPG/330px--2020-11-20_Sirloin_steaks_cooking_on_a_griddle_plate%2C_Trimingham%2C_Norfolk.JPG",
     "credit": "Kolforn (Kolforn) I'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wikimedia project scope. This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original.https://creativecommons.org/licenses/by-sa/4.0CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 truetrue (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:-2020-11-20%20Sirloin%20steaks%20cooking%20on%20a%20griddle%20plate%2C%20Trimingham%2C%20Norfolk.JPG"
   },
-  "mortar": {
-    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Mortar_and_pestle_-_sand_casting%2C_bronze-2.png/330px-Mortar_and_pestle_-_sand_casting%2C_bronze-2.png",
-    "credit": "File:Mortar_and_pestle_-_sand_casting,_bronze.jpg: Hans Chr. R. derivative Work: Saibo (Δ) (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Mortar%20and%20pestle%20-%20sand%20casting%2C%20bronze-2.png"
-  },
   "sheet": {
     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Cherry_chocolate_chip_cookies_on_a_baking_sheet.jpg/330px-Cherry_chocolate_chip_cookies_on_a_baking_sheet.jpg",
     "credit": "Infrogmation of New Orleans (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Cherry%20chocolate%20chip%20cookies%20on%20a%20baking%20sheet.jpg"
@@ -110,14 +90,6 @@
   "sieve": {
     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Kitchen_sieves.jpg/330px-Kitchen_sieves.jpg",
     "credit": "Vis M (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Kitchen%20sieves.jpg"
-  },
-  "airfryer": {
-    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Hamilton_Beach_Easy_Reach_Sure-Crisp_Toaster_Oven_-_08.jpg/330px-Hamilton_Beach_Easy_Reach_Sure-Crisp_Toaster_Oven_-_08.jpg",
-    "credit": "Infrogmation of New Orleans (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Hamilton_Beach_Easy_Reach_Sure-Crisp_Toaster_Oven_-_08.jpg"
-  },
-  "board": {
-    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Banana_bread_on_cutting_board%2C_with_kitchen_jars.jpg/330px-Banana_bread_on_cutting_board%2C_with_kitchen_jars.jpg",
-    "credit": "Sean (CC BY-SA 2.0) — https://commons.wikimedia.org/wiki/File:Banana%20bread%20on%20cutting%20board%2C%20with%20kitchen%20jars.jpg"
   },
   "tongs": {
     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Kitchen-tongs.png/330px-Kitchen-tongs.png",

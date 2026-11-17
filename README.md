@@ -2,19 +2,26 @@
 
 Mise is a source-attributed recipe book with a cook mode built to be read at arm's length. It runs as a plain web app with no server dependencies and ships to Android as a native WebView wrapper for phones, foldables, and tablets.
 
-The app keeps 253 recipe records in the bundled library:
+The app keeps 1,314 recipe records in the bundled collection:
 
-- 130 world recipes across 23 cuisines
+- 277 world recipes (130 from TheMealDB's curated set plus 147 bounded meal-family search records)
 - 55 African recipes (39 from TheMealDB, 16 from publisher recipe cards)
-- 63 Caribbean recipes (27 from TheMealDB, 36 from publisher recipe cards)
+- 807 Caribbean recipes (27 from TheMealDB, 714 from publisher recipe cards, 66 new island records from 196 Flavors' public country archives, skipping pages with no usable Recipe data)
+- 133 beverages (109 from TheCocktailDB's public API, beverage research additions from 196 Flavors)
+- 37 pastry additions (Caribbean fried pies — Trini bakes, aloo pies, empanadas, pastelles — plus international hand and festival pastries from 196 Flavors and Cooking with Ria; the five Caribbean pages also ship in the Caribbean bundle and their photographs were corrected in this pass)
 - 5 bundled sample recipes
 
 Publisher recipe text is preserved as published. Missing yields, times, or units stay visibly missing rather than being guessed. See [assets/credits.md](assets/credits.md) for every source and the collection policy.
 
 ## What is in the app
 
-- **Library and World browsing** across the bundled collection, with search and cuisine filters.
+- **My Kitchen hub** with All Recipes plus grouped Meals (Breakfast, Lunch, Dinner) and Courses (Drinks & Beverages, Appetizers, Pastry) shelves, each with search and source filters across the bundled collection.
+- **All Recipes → Full catalogue** browses and searches every bundled recipe offline without importing; one tap (Read) saves a recipe for offline cooking.
+- **Drink filters** by alcohol status (as labelled by the source), base spirit and occasion, alongside the existing drink-type chips.
+- **No saved-recipe cap**: imports are never silently evicted, and a failed storage write leaves the kitchen unchanged with an error message.
+- **Alcohol-free honestly labelled**: unspecified drinks are never marked alcohol-free; occasion picks are browsing suggestions, not dietary claims.
 - **Africa and Caribbean tabs** that keep multi-source coverage visible instead of reducing a region to one database's results.
+- **Start mixing** button label for drinks; **Start cooking** otherwise.
 - **Cook mode** that shows the full instruction text, one active step at a time, with inline timers and a persistent timer dock.
 - **Local recipe storage** in `localStorage`, so imported and saved recipes survive restarts.
 - **Live TheMealDB search** for recipes outside the bundled collection.
@@ -135,8 +142,8 @@ tools/build-collections.mjs  repeatable recipe library generation
 
 The collection is deliberately multi-source. TheMealDB provides a consistent snapshot for the world and Africa collections, but a zero result in one database is not evidence that a cuisine does not exist. Publisher recipes fill those gaps and keep their own wording and attribution.
 
-Recipe photographs from publishers are not bundled or hot-linked. TheMealDB meal photographs are used with their records. Recipe text remains attributable to its original publisher; Mise does not claim ownership of it.
+All 383 recent research/acquisition records (the previous 61 beverage/pastry additions plus the new 322-record expansion) have a source photograph. TheMealDB, TheCocktailDB and 196 Flavors images are hot-linked to their published source; no third-party photo is bundled. Source/photographer attribution is retained where provided. Photos need a connection and fall back to Mise's illustration offline. Other publishers may not provide a usable photograph. Recipe text remains attributable to its original publisher; Mise does not claim ownership of it.
 
 ## Privacy
 
-Mise has no account system, analytics, or advertising SDK. The app requests network access only for live recipe search and update checks. Saved recipes and update state stay in app-private storage on the device.
+Mise has no account system, analytics, or advertising SDK. Network access is used for live recipe search, source-hosted photographs and update checks. Saved recipes and update state stay in app-private storage on the device.

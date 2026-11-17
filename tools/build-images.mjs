@@ -10,6 +10,7 @@
 */
 import fs from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const LIMIT = (() => { const i = process.argv.indexOf('--limit'); return i > -1 ? Number(process.argv[i + 1]) : Infinity; })();
@@ -22,6 +23,19 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms + Math.floor(Math.rand
 
 const BITMAP = /\.(jpe?g|png|webp|gif)$/i;
 const BAD_TITLE = /(logotype|logo|coat of arms|flag|seal|map|diagram|chart|coin|medal|stamp|cover of|advertisement|ad for|menu of|poster)/i;
+// Human-reviewed correction: a Commons search matched "Caribbean" with
+// architecture instead of the drink. The publisher's Recipe image is exact.
+const SOURCE_IMAGE_OVERRIDES = new Map([
+  ['https://caribbeanpot.com/traditional-caribbean-pineapple-juice-2/', {
+    image: 'https://caribbeanpot.com/wp-content/uploads/2018/05/pineapple-juice-8.jpg',
+    imageCredit: 'CaribbeanPot.com / Chris De La Rosa',
+  }],
+]);
+const reviewedContext = vm.createContext({ window: {} });
+vm.runInContext(fs.readFileSync(path.join(ROOT, 'js', 'legacy-photo-fixes.js'), 'utf8'), reviewedContext);
+for (const [sourceUrl, image] of Object.entries(reviewedContext.window.MISE_LEGACY_PHOTO_FIXES)) {
+  SOURCE_IMAGE_OVERRIDES.set(sourceUrl, { image, imageCredit: image ? `${new URL(sourceUrl).hostname} (photograph on source page)` : '' });
+}
 const SKIP_WORDS = new Set(['recipe', 'cooking', 'with', 'and', 'the', 'of', 'a', 'an', 'for', 'style', 'quick', 'homemade', 'authentic', 'best', 'easy', 'instant', 'pot', 'pressure', 'slow', 'cooker', 'crockpot', 'minute', 'minutes', 'mins', 'min', 'from', 'one', 'pan', 'sheet', 'batch', 'small', 'large', 'family', 'size', 'serving', 'servings', 'people', 'portions', 'vegan', 'vegetarian', 'gluten', 'free', 'keto', 'paleo', 'dairy', 'whole30']);
 
 const decodeEntities = (value) => String(value == null ? '' : value)
@@ -209,13 +223,15 @@ for (const col of collections) {
   const work = [];
   for (let i = 0; i < merged.length; i++) {
     const record = merged[i];
-    if (!FORCE && record.image) continue;
+    const override = SOURCE_IMAGE_OVERRIDES.get(record.sourceUrl);
+    if (override && record.image === override.image) continue;
+    if (!override && !FORCE && record.image) continue;
     work.push({ record, index: i });
   }
   const windowSlice = work.slice(OFFSET, OFFSET + (isFinite(LIMIT) ? LIMIT : work.length));
   const found = await workerPool(windowSlice, PAR, async ({ record, index }) => {
     report.searched++;
-    const hit = await findImage(record);
+    const hit = SOURCE_IMAGE_OVERRIDES.get(record.sourceUrl) || await findImage(record);
     if (hit) return { index, record: { ...record, image: hit.image, imageCredit: hit.imageCredit } };
     report.miss.push(record.id + ' ' + record.name);
     return null;

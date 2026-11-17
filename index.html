@@ -16,10 +16,13 @@
 <script defer src="js/africa.js"></script>
 <script defer src="js/africa-sources.js"></script>
 <script defer src="js/global.js"></script>
+<script defer src="js/additions.js"></script>
+<script defer src="js/expansion.js"></script>
 <script defer src="js/data.js"></script>
 <script defer src="js/parse.js"></script>
 <script defer src="js/tools.js"></script>
 <script defer src="js/tool-images.js"></script>
+<script defer src="js/legacy-photo-fixes.js"></script>
 <script defer src="js/app.js"></script>
 </head>
 <body>
@@ -35,6 +38,36 @@
     <symbol id="i-library" viewBox="0 0 24 24">
       <path d="M4.5 5.5A2.5 2.5 0 0 1 7 3h12.5v15.5H7a2.5 2.5 0 0 0-2.5 2.5z"/>
       <path d="M4.5 5.5v15.5M8 7.5h7.5M8 11h5.5"/>
+    </symbol>
+    <symbol id="i-kitchen" viewBox="0 0 24 24">
+      <path d="M3.75 10.25 12 3.25l8.25 7"/>
+      <path d="M5.75 8.9v11.35h12.5V8.9"/>
+      <path d="M9.5 20.25v-5.5h5v5.5"/>
+    </symbol>
+    <symbol id="i-cup" viewBox="0 0 24 24">
+      <path d="M5.5 8.25h10.25v5.5a5.125 5.125 0 0 1-10.25 0z"/>
+      <path d="M15.75 9.5h1.5a2.375 2.375 0 0 1 0 4.75h-1.5"/>
+      <path d="M4.5 20.5h12.5M8.5 5.5c0-1 .65-1.4.65-2.25M12 5.5c0-1 .65-1.4.65-2.25"/>
+    </symbol>
+    <symbol id="i-plate" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.5"/>
+      <circle cx="12" cy="12" r="4.75"/>
+    </symbol>
+    <symbol id="i-pie" viewBox="0 0 24 24">
+      <path d="M4.25 13.25a7.75 7.75 0 0 1 15.5 0"/>
+      <path d="M3 13.25h18v3.5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+      <path d="M7.25 9.25c.75-1.25 2-1.75 3.15-1.5M11.25 7.25c1.15-.35 2.35-.3 3.35.35"/>
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2.5v3.25M12 18.25v3.25M2.5 12h3.25M18.25 12h3.25M4.9 4.9l2.3 2.3M16.8 16.8l2.3 2.3M4.9 19.1l2.3-2.3M16.8 7.2l2.3-2.3"/>
+    </symbol>
+    <symbol id="i-bowl" viewBox="0 0 24 24">
+      <path d="M4.5 11.5h15a7.5 7.5 0 0 1-15 0z"/>
+      <path d="M8.75 15.5 7.5 19.5M12 15.5v4M15.25 15.5l1.25 4"/>
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24">
+      <path d="M19.5 14.5A7.75 7.75 0 0 1 9.5 4.5a7.75 7.75 0 1 0 10 10z"/>
     </symbol>
     <symbol id="i-mise" viewBox="0 0 24 24">
       <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5.25" fill="none" stroke="currentColor" stroke-width="1.5"/>
@@ -147,8 +180,8 @@
     </a>
 
     <div class="rail-nav">
-      <a class="rail-link" href="#/library" data-nav="library" aria-label="Recipe library" title="Library">
-        <svg><use href="#i-library"/></svg>
+      <a class="rail-link" href="#/kitchen" data-nav="kitchen" aria-label="My Kitchen" title="My Kitchen">
+        <svg><use href="#i-kitchen"/></svg>
       </a>
       <a class="rail-link" href="#/chef" data-nav="chef" aria-label="Ask the Chef" title="Ask the Chef">
         <svg><use href="#i-chef"/></svg>
@@ -171,7 +204,7 @@
 
 <nav class="tabbar" aria-label="Mise">
   <a href="#/" data-nav="home" aria-label="Mise home"><svg><use href="#i-mise"/></svg><span>Mise</span></a>
-  <a href="#/library" data-nav="library"><svg><use href="#i-library"/></svg><span>Library</span></a>
+  <a href="#/kitchen" data-nav="kitchen"><svg><use href="#i-kitchen"/></svg><span>My Kitchen</span></a>
   <a href="#/cook" data-nav="cook"><svg><use href="#i-pot"/></svg><span>Cook</span></a>
   <a href="#/chef" data-nav="chef" aria-label="Ask the Chef"><svg><use href="#i-chef"/></svg><span>Chef</span></a>
   <a href="#/settings" data-nav="settings" aria-label="Settings"><svg><use href="#i-gear"/></svg><span>Settings</span></a>

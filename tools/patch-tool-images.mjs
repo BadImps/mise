@@ -1,5 +1,4 @@
-// One-off: replace the six weak/wrong matches with verified ones and strip
-// API tracking params from every stored URL.
+// Reviewed replacements and removals; rerun after build-tool-images.mjs.
 import fs from 'node:fs';
 
 const file = 'tools/tool-images.json';
@@ -12,10 +11,6 @@ const REPLACEMENTS = {
   roasting: {
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Large_roasting_pan_with_rack.jpg/330px-Large_roasting_pan_with_rack.jpg',
     credit: 'OttawaAC (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Large_roasting_pan_with_rack.jpg',
-  },
-  airfryer: {
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Hamilton_Beach_Easy_Reach_Sure-Crisp_Toaster_Oven_-_08.jpg/330px-Hamilton_Beach_Easy_Reach_Sure-Crisp_Toaster_Oven_-_08.jpg',
-    credit: 'Infrogmation of New Orleans (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Hamilton_Beach_Easy_Reach_Sure-Crisp_Toaster_Oven_-_08.jpg',
   },
   peeler: {
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Couteau-econome.jpg/330px-Couteau-econome.jpg',
@@ -35,5 +30,12 @@ const REPLACEMENTS = {
   },
 };
 for (const [key, value] of Object.entries(REPLACEMENTS)) j[key] = value;
+// These photos depict a different object (or are too ambiguous to teach the
+// tool). A missing photo intentionally uses Mise's original tool line art.
+const WRONG_SUBJECT = ['dish', 'whisk', 'mortar', 'airfryer', 'instantpot', 'spoon', 'board'];
+for (const key of WRONG_SUBJECT) delete j[key];
 fs.writeFileSync(file, JSON.stringify(j, null, 2) + '\n', 'utf8');
-console.log('patched', Object.keys(REPLACEMENTS).length, 'entries;', Object.keys(j).length, 'total');
+fs.writeFileSync('js/tool-images.js',
+  '/* Mise / reviewed kitchen-tool photographs. Run tools/patch-tool-images.mjs after regeneration. */\nwindow.MISE_TOOL_IMAGES = '
+  + JSON.stringify(j, null, 2) + ';\n', 'utf8');
+console.log('patched', Object.keys(REPLACEMENTS).length, 'entries; removed', WRONG_SUBJECT.length, 'misleading photos;', Object.keys(j).length, 'total');

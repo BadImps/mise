@@ -48,15 +48,121 @@ authenticity. An “(inspired)” suffix stays on dishes the publisher presents 
   whose recipe card meets the data contract (ingredients and instructions present); one
   card with no steps stays out rather than enter as an incomplete record. Multi-card
   posts link each record to its own recipe-card anchor.
+  As of 2026-11-17, every Cooking with Ria record carries its own publisher page
+  photograph (hot-linked, never bundled), backfilled by `tools/apply-publisher-photos.mjs`
+  from each page's JSON-LD Recipe image or `og:image` — replacing earlier Wikimedia
+  search matches, many of which depicted the wrong subject. Older saved copies of those
+  false-positive photos are corrected when the app loads via `js/legacy-photo-fixes.js`.
+  One reviewed exception keeps an illustration instead of a misleading photograph
+  (the Grilled Lamb Kabobs page features a rice table-setting image). The pancake
+  record is titled "Pancakes" and shows the page's blueberry pancake stack.
+
+  The same backfill was applied to every other publisher in the bundled
+  Caribbean and African collections — That Girl Cooks Healthy, Chef Lola's Kitchen,
+  196 Flavors, CaribbeanPot.com, BBC Good Food, My Forking Life, Immaculate Bites,
+  Alica's Pepperpot and The Black Peppercorn — replacing each record's image with
+  the photograph published on its own source page (the same hot-linked,
+  never-bundled policy). TheMealDB records keep the API's recipe-specific
+  thumbnails. Pages with no usable photo keep the previous image and are listed
+  as misses rather than invented.
 - **The 272 records read from CaribbeanPot.com** (mostly Trinidadian, Jamaican and
   fusion cooking): <https://caribbeanpot.com>, by Chris De La Rosa and Sandie Markle.
   `tools/build-caribbeanpot.mjs` applies the same contract to the site's REST API.
   Six posts whose recipes publish no ingredient list anywhere — the card, the print
   view and the schema.org Recipe block — are excluded.
   Multi-card posts link each record to its own recipe-card anchor.
+  **Traditional Caribbean Pineapple Juice** uses the photograph published
+  on its [recipe page](https://caribbeanpot.com/traditional-caribbean-pineapple-juice-2/)
+  (CaribbeanPot.com / Chris De La Rosa), hot-linked rather than bundled.
+  This one reviewed exception replaces a false-positive Wikimedia search
+  result showing a house.
+- A further set of reviewed exceptions replaced Wikimedia search false
+  positives in the legacy bundle with the publisher's own page photographs
+  (hot-linked, never bundled), tracked in `js/legacy-photo-fixes.js`:
+  Trinidad Fried Bake showed a restaurant storefront; Cheesy Aloo Pie showed
+  an Indian aloo paratha; the Caribbean Empanadas record showed an Argentinian
+  empanada from a Brighton event; other reviewed records pointed at unrelated
+  subjects (a coin for sawine, a train carriage for cou cou, and more).
+  Cheesy Aloo Pie shows the page's featured basket photograph, not the
+  Recipe card's torn-open close-up.
 
 Vegan versions keep the word “vegan” in their source names. The Coquito card lists
 `½ ground cinnamon` without a unit; Mise preserves that gap instead of guessing a unit.
+
+### Beverage and pastry research additions
+
+The 24 beverage records and 37 pastry records in `js/additions.js` were read
+from their publishers' public schema.org `Recipe` data by `tools/build-additions.mjs`.
+Beverages cover aguas frescas, lassi/doogh, teas and coffees, hibiscus and
+ginger drinks, hot chocolate, Christmas eggnog-style drinks and wine-and-beer
+mixes. The pastry catalogue covers the Caribbean — Jamaican/Haitian/Trinidad
+patties, Trini fry bake (floats), aloo and cheesy aloo fried pies, Trinidad empanadas,
+currants roll, Tourment d'Amour, pastelles — and international hand and
+festival pastries (filo, tarts, samosas, banitsa, empanada gallega, pastel
+Mandi'ó, Cape Verde pastels, fatayer, sambousek, egg brick, sari burma).
+Publisher wording, times and yields are preserved as published; photographs are
+hot-linked, not bundled. A `No` creative-commons flag is **not** a licence to
+redistribute that image.
+
+The five Caribbean fried-pie additions (Trinidad fried bake, aloo pie, cheesy
+alloo pie, Trinidad empanadas, pastelles) point at the same source URLs as
+records already in the Caribbean publisher bundle; they are kept in the
+additions manifest because their names don't match the Pastry course's name
+heuristic, and the app dedupes catalogue rows by sourceUrl, so only one row
+renders. The Caribbean bundle copies of those pages had Wikimedia search
+false positives as photographs; they were corrected in this pass via
+`js/legacy-photo-fixes.js` (publisher page photographs, hot-linked).
+
+- Beverages: <https://196flavors.com/mexico-horchata/> through
+  <https://196flavors.com/mojito/>
+- Pastries: <https://196flavors.com/jamaican-patty/> through
+  <https://196flavors.com/armenia-sari-burma/>
+
+Note: two publishers' records are both titled "Empanadas" (196 Flavors'
+Colombian page and Cooking with Ria's Trinidad page); they remain distinct
+records with separate source links and photographs.
+
+The generator skips a record whose publisher page has no usable schema.org
+Recipe data instead of inventing one.
+
+### Expansion pass (2026-11-17)
+
+The records in `js/expansion.js` were generated by `tools/build-expansion.mjs`
+from three public sources, documented and reviewed in `tools/recipe-sources.json`:
+
+- **109 beverages from TheCocktailDB's public API** (test key, bounded
+  named-family searches — mojito, margarita, colada and similar — retained only
+  when the API record includes a name, ingredients and instructions). The free
+  API is intended for development/education; an app-store release would need
+  the paid key. The API's recipe-specific thumbnail is **hot-linked**, not
+  downloaded or bundled; recipe pages credit TheCocktailDB and carry any
+  supplied photographer attribution. `strCreativeCommonsConfirmed` and the
+  original photo-source URL remain on each record; a `No` value is not a
+  redistribution licence. Photograph loading requires a connection; offline
+  displays fall back to Mise's cover illustration. Alcohol status stays as the API
+  labels it — `Alcoholic` (89), `Non alcoholic` (18) and `Optional alcohol` (2)
+  are all preserved and never collapsed. Distinct publishers' versions (e.g.
+  Long Island Tea and Boston Sidecar) are distinct records and retained.
+  Source links: <https://www.thecocktaildb.com>
+- **66 Caribbean recipes from 196 Flavors' public country archives**
+  (`/category/continent/americas/caribbean/<country>/`), e.g. Haiti 17, Cuba 19,
+  Dominican Republic 12, Puerto Rico 4, plus smaller counts from Barbados, the
+  Bahamas, Grenada, Saint Lucia, Antigua and Barbuda, Dominica, Jamaica,
+  Trinidad and Tobago. Same schema.org Recipe data contract and same skip-not-
+  invent rule; five pages with no usable Recipe data were skipped
+  (`docs/recipe-acquisition-report.json`). Mise preserves these records under
+  the same personal-use, source-attribution policy as the rest of the 196
+  Flavors content — and as with the other 196 Flavors records, their copyright
+  is retained by the publisher.
+- **147 meals from TheMealDB's public API**, bounded searches in 17 everyday
+  categories (chicken, fish, lentil, chickpea, vegetable, rice, pasta, soup,
+  salad, egg, tart, pie, bread, curry, tofu, bean, potato — capped per search),
+  deduplicated against the existing bundle by meal ID.
+
+Country archive membership is a browsing association, not a claim of exclusive
+origin. Missing measures, yields and times are kept missing; nothing is filled
+in. Acquisition details are in `docs/recipe-acquisition-report.json` and
+`docs/recipe-expansion.md`.
 
 ### African publisher recipes
 
