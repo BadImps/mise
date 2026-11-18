@@ -243,6 +243,26 @@ publisher's wording.
   pans on a stove) was also replaced with a single stainless-steel pan on an
   induction hob (Jim Stonos, CC BY-SA 4.0,
   [Stainless Steel Frying Pan](https://commons.wikimedia.org/wiki/File:Stainless_Steel_Frying_Pan.jpg)).
+  Further 2026-11-18 review: Grater (Superbass, CC BY-SA 4.0,
+  [Küchenreibe 1](https://commons.wikimedia.org/wiki/File:K%C3%BCchenreibe_1.jpg)),
+  Ladle (Rajani Gairshail, CC BY-SA 4.0,
+  [Aluminium ladle](https://commons.wikimedia.org/wiki/File:Aluminium_ladle.jpg)),
+  Sieve (EvaK, CC BY-SA 2.5,
+  [Durchschlag](https://commons.wikimedia.org/wiki/File:Durchschlag.jpg)),
+  Griddle (Susan Slater, CC BY-SA 4.0,
+  [Griddle (shallow pan)](https://commons.wikimedia.org/wiki/File:Griddle_(shallow_pan).jpg)),
+  Baking sheet (Veganbaking.net from USA, CC BY-SA 2.0,
+  [Vollrath Cookie Sheet](https://commons.wikimedia.org/wiki/File:Vollrath_Cookie_Sheet_(4858589805).jpg)),
+  Wok (Chris Feldmann, CC BY 2.0 — no people,
+  [Wok 2](https://commons.wikimedia.org/wiki/File:Wok_2.jpg)),
+  Rolling pin (Fructibus, CC0,
+  [Rolling pin 2017](https://commons.wikimedia.org/wiki/File:Rolling_pin_2017.jpg)),
+  Blender (Infrogmation of New Orleans, CC BY-SA 4.0,
+  [Old blender on shelf in New Orleans kitchen](https://commons.wikimedia.org/wiki/File:Old_blender_on_shelf_in_New_Orleans_kitchen.jpg)),
+  Bowl (RLiverpool2021, CC BY-SA 4.0,
+  [Masoncash cane mixing bowl](https://commons.wikimedia.org/wiki/File:Masoncash_cane_mixing_bowl.jpg))
+  and Saucepan (RuinDig / Yuki Uchida, CC BY 4.0,
+  [WMF-Fusiontec-Mineral-Multipot 02](https://commons.wikimedia.org/wiki/File:WMF-Fusiontec-Mineral-Multipot_02.jpg)).
 - Step photographs referenced in the Food & Wine source data are by Molly Bolton; Mise does not
   re-host them.
 

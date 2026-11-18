@@ -60,6 +60,46 @@ const REPLACEMENTS = {
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Chopping_Board.jpg/330px-Chopping_Board.jpg',
     credit: 'Donovan Govan (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Chopping_Board.jpg',
   },
+  grater: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/K%C3%BCchenreibe_1.jpg/330px-K%C3%BCchenreibe_1.jpg',
+    credit: 'Superbass (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:K%C3%BCchenreibe_1.jpg',
+  },
+  ladle: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Aluminium_ladle.jpg/330px-Aluminium_ladle.jpg',
+    credit: 'Rajani Gairshail (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Aluminium_ladle.jpg',
+  },
+  sieve: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Durchschlag.jpg/330px-Durchschlag.jpg',
+    credit: 'EvaK (CC BY-SA 2.5) — https://commons.wikimedia.org/wiki/File:Durchschlag.jpg',
+  },
+  griddle: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Griddle_%28shallow_pan%29.jpg/330px-Griddle_%28shallow_pan%29.jpg',
+    credit: 'Susan Slater (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Griddle_(shallow_pan).jpg',
+  },
+  sheet: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Vollrath_Cookie_Sheet_%284858589805%29.jpg/330px-Vollrath_Cookie_Sheet_%284858589805%29.jpg',
+    credit: 'Veganbaking.net from USA (CC BY-SA 2.0) — https://commons.wikimedia.org/wiki/File:Vollrath_Cookie_Sheet_(4858589805).jpg',
+  },
+  wok: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Wok_2.jpg/330px-Wok_2.jpg',
+    credit: 'Chris Feldmann (CC BY 2.0) — https://commons.wikimedia.org/wiki/File:Wok_2.jpg',
+  },
+  rollingpin: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Rolling_pin_2017.jpg/330px-Rolling_pin_2017.jpg',
+    credit: 'Fructibus (CC0) — https://commons.wikimedia.org/wiki/File:Rolling_pin_2017.jpg',
+  },
+  blender: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Old_blender_on_shelf_in_New_Orleans_kitchen.jpg/330px-Old_blender_on_shelf_in_New_Orleans_kitchen.jpg',
+    credit: 'Infrogmation of New Orleans (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Old_blender_on_shelf_in_New_Orleans_kitchen.jpg',
+  },
+  bowl: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Masoncash_cane_mixing_bowl.jpg/330px-Masoncash_cane_mixing_bowl.jpg',
+    credit: 'RLiverpool2021 (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Masoncash_cane_mixing_bowl.jpg',
+  },
+  saucepan: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/WMF-Fusiontec-Mineral-Multipot_02.jpg/330px-WMF-Fusiontec-Mineral-Multipot_02.jpg',
+    credit: 'RuinDig / Yuki Uchida (CC BY 4.0) — https://commons.wikimedia.org/wiki/File:WMF-Fusiontec-Mineral-Multipot_02.jpg',
+  },
   cleaver: {
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Chinese_and_old_North_American_cleavers_noBG.jpg/330px-Chinese_and_old_North_American_cleavers_noBG.jpg',
     credit: "David R. Ingham (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Chinese_and_old_North_American_cleavers_noBG.jpg",
