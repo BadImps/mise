@@ -20,6 +20,14 @@ const REPLACEMENTS = {
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Griswold_cast_iron_skillet.jpg/330px-Griswold_cast_iron_skillet.jpg',
     credit: 'NMorales (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Griswold_cast_iron_skillet.jpg',
   },
+  whisk: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Whisk_%28IMG_0265%29.jpg/330px-Whisk_%28IMG_0265%29.jpg',
+    credit: 'Matti Blume (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Whisk_%28IMG_0265%29.jpg',
+  },
+  fryingPan: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Frying_Pan_2_2019-03-21.jpg/330px-Frying_Pan_2_2019-03-21.jpg',
+    credit: 'FASTILY (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Frying_Pan_2_2019-03-21.jpg',
+  },
   processor: {
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Food_Processor_2.jpg/330px-Food_Processor_2.jpg',
     credit: 'Donovan Govan (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Food_Processor_2.jpg',
@@ -32,7 +40,7 @@ const REPLACEMENTS = {
 for (const [key, value] of Object.entries(REPLACEMENTS)) j[key] = value;
 // These photos depict a different object (or are too ambiguous to teach the
 // tool). A missing photo intentionally uses Mise's original tool line art.
-const WRONG_SUBJECT = ['dish', 'whisk', 'mortar', 'airfryer', 'instantpot', 'spoon', 'board'];
+const WRONG_SUBJECT = ['dish', 'mortar', 'airfryer', 'instantpot', 'spoon', 'board'];
 for (const key of WRONG_SUBJECT) delete j[key];
 fs.writeFileSync(file, JSON.stringify(j, null, 2) + '\n', 'utf8');
 fs.writeFileSync('js/tool-images.js',

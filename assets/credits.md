@@ -217,7 +217,15 @@ publisher's wording.
   in the popover itself. `tools/build-tool-images.mjs` searches, scores and
   licenses-checks candidates; `tools/patch-tool-images.mjs` applies the
   hand-verified corrections for weak or mismatched matches. Tools with no
-  confident match keep the original line art.
+  confident match keep the original line art. Reviewed 2026-11-18: the Whisk
+  photo (Matti Blume, CC BY-SA 4.0,
+  [Whisk (IMG 0265)](https://commons.wikimedia.org/wiki/File:Whisk_(IMG_0265).jpg))
+  and the frying-pan photo (FASTILY, CC BY-SA 4.0,
+  [Frying Pan 2 2019-03-21](https://commons.wikimedia.org/wiki/File:Frying_Pan_2_2019-03-21.jpg))
+  were picked to replace misleading or food-heavy matches; the cast-iron
+  skillet photo (NMorales (WMF), CC BY-SA 4.0,
+  [Griswold cast iron skillet](https://commons.wikimedia.org/wiki/File:Griswold_cast_iron_skillet.jpg))
+  teaches the cast-iron tool specifically.
 - Step photographs referenced in the Food & Wine source data are by Molly Bolton; Mise does not
   re-host them.
 
