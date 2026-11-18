@@ -31,15 +31,14 @@ test('reviewed kitchen-tool photographs are present and licensed', () => {
     ladle: /DSC00527/,
     sieve: /Durchschlag/,
     griddle: /Electric_griddle/,
-    sheet: /Baking_tray/,
     wok: /Wok_2/,
-    rollingpin: /Rolling_pin_2017/,
-    blender: /Old_blender_on_shelf/,
+    rollingpin: /Rouleau_a_patisserie/,
+    blender: /Vitamix_Pro_750/,
     bowl: /Masoncash_cane_mixing_bowl/,
     saucepan: /WMF-Fusiontec-Mineral-Multipot_02/,
     peeler: /Peeler_02_Pengo/,
-    paring: /Miyabi_Birchwood_SG2/,
-    cleaver: /Cleaver_~23hcvlbn/,
+    cleaver: /Couperet_%C3%A0_d%C3%A9biter_les_lapins_05/,
+    knife: /Kitchen_knife_by_yashima/,
     measuringSpoons: /MeasuringSpoons/,
   };
   for (const [key, pattern] of Object.entries(TEN)) {
@@ -48,6 +47,27 @@ test('reviewed kitchen-tool photographs are present and licensed', () => {
     assert.match(photos[key].credit, /CC BY(-SA)?( 2\.0| 2\.5| 3\.0| 4\.0)?|CC0|Public domain/);
     assert.doesNotMatch(photos[key].credit, /non-?commercial|\bNC\b|no deriv|\bND\b/i);
   }
+  // Owner-supplied photographs: bundled instead of hot-linked so they work
+  // offline, and credited without pretending they came from Commons.
+  for (const key of ["sheet", "paring"]) {
+    assert.equal(photos[key].image, `assets/tool-photos/${key === "sheet" ? "baking-sheet" : "paring-knife"}.jpg`);
+    assert.match(photos[key].credit, /supplied by the owner/i);
+    assert.doesNotMatch(photos[key].credit, /commons\.wikimedia\.org|CC BY|\bNC\b|\bND\b/i);
+    const file = new URL(`../${photos[key].image}`, import.meta.url);
+    assert.ok(fs.existsSync(file), `${key} photo must exist at ${photos[key].image}`);
+    assert.ok(fs.statSync(file).size > 3000, `${key} photo looks empty`);
+  }
+  // No entry may point at a local file that is missing, and none may carry an
+  // NC/ND credit.
+  for (const [key, entry] of Object.entries(photos)) {
+    assert.ok(entry.image && entry.credit, `${key} must carry an image and a credit`);
+    assert.doesNotMatch(entry.credit, /non-?commercial|no deriv|\bNC\b|\bND\b/i, `${key} credit is not an open licence`);
+    if (!/^https:/.test(entry.image)) {
+      const file = new URL(`../${entry.image}`, import.meta.url);
+      assert.ok(fs.existsSync(file), `${key} local photo missing: ${entry.image}`);
+    }
+  }
   assert.match(patch, /whisk:/);
   assert.match(patch, /fryingPan:/);
+  assert.match(patch, /knife:/);
 });

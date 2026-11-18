@@ -615,7 +615,7 @@
 }
 .tool-pop-art svg { width: 54px; height: 54px; }
 .tool-pop-art.no-photo .tool-pop-photo { display: none; }
-.tool-pop-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.tool-pop-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; }
 .tool-pop-credit { font-size: 10.5px; line-height: 14px; color: var(--faint); }
 .tool-pop-credit a { color: inherit; text-decoration: none; }
 .tool-pop-credit a:hover { text-decoration: underline; }

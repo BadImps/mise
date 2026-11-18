@@ -214,7 +214,8 @@ publisher's wording.
 - Kitchen-tool photographs shown by the tool popover are hot-linked from
   Wikimedia Commons under each file's own license (CC-BY, CC-BY-SA, CC0 or the
   public domain — never NC/ND); the author, license and file page are credited
-  in the popover itself. `tools/build-tool-images.mjs` searches, scores and
+  in the popover itself. The only exceptions are the two owner-supplied
+  photographs documented below. `tools/build-tool-images.mjs` searches, scores and
   licenses-checks candidates; `tools/patch-tool-images.mjs` applies the
   hand-verified corrections for weak or mismatched matches. Reviewed
   2026-11-18: the Whisk
@@ -277,6 +278,31 @@ publisher's wording.
   [Cleaver #23hcvlbn](https://commons.wikimedia.org/wiki/File:Cleaver_~23hcvlbn.jpg))
   and Measuring spoons (Arkrishna, public domain,
   [MeasuringSpoons](https://commons.wikimedia.org/wiki/File:MeasuringSpoons.jpg)).
+  A third pass was made on 2026-11-18 because the seven popovers above still
+  read as poor representations; candidates were re-sourced from Commons
+  *categories* (plus German and French object terms) instead of keyword
+  search, and the owner picked one of five lettered options per tool:
+  Rolling pin (Copolycube, CC BY-SA 2.5,
+  [Rouleau a patisserie](https://commons.wikimedia.org/wiki/File:Rouleau_a_patisserie.jpg)),
+  Roasting pan (OttawaAC, CC BY-SA 3.0,
+  [Large roasting pan with rack](https://commons.wikimedia.org/wiki/File:Large_roasting_pan_with_rack.jpg) — kept),
+  Baking sheet (Lars Plougmann, CC BY-SA 2.0,
+  [Baking tray](https://commons.wikimedia.org/wiki/File:Baking_tray.jpg) — superseded),
+  Blender (SimonAdalbert / perfektegesundheit.de, CC BY 4.0,
+  [Vitamix Pro 750](https://commons.wikimedia.org/wiki/File:Vitamix_Pro_750.JPG)),
+  Cleaver (Coyau, CC BY-SA 3.0,
+  [Couperet à débiter les lapins 05](https://commons.wikimedia.org/wiki/File:Couperet_%C3%A0_d%C3%A9biter_les_lapins_05.jpg)),
+  Knife (yashima from Japan, CC BY-SA 2.0,
+  [Kitchen knife by yashima](https://commons.wikimedia.org/wiki/File:Kitchen_knife_by_yashima.jpg))
+  and Paring knife (Frank Schulenburg — superseded).
+- The Baking sheet and Paring knife popovers now show two photographs
+  **supplied by the owner**. They are not Wikimedia Commons files, carry no
+  Commons licence, and are bundled at `assets/tool-photos/baking-sheet.jpg`
+  and `assets/tool-photos/paring-knife.jpg` rather than hot-linked, so they
+  ship inside the APK and the OTA zip and work offline. They are used only
+  in this personal, non-commercial project; a public or commercial release
+  should replace them with openly licensed equivalents. Earlier credits in
+  this file for those two tools are superseded.
 - Step photographs referenced in the Food & Wine source data are by Molly Bolton; Mise does not
   re-host them.
 

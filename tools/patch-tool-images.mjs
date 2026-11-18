@@ -77,20 +77,24 @@ const REPLACEMENTS = {
     credit: 'Jonathan Kovaciny at en.wikipedia (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Electric_griddle.jpg',
   },
   sheet: {
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Baking_tray.jpg/330px-Baking_tray.jpg',
-    credit: 'Lars Plougmann (CC BY-SA 2.0) — https://commons.wikimedia.org/wiki/File:Baking_tray.jpg',
+    image: 'assets/tool-photos/baking-sheet.jpg',
+    credit: 'Supplied by the owner for personal use (not from Wikimedia Commons)',
   },
   wok: {
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Wok_2.jpg/330px-Wok_2.jpg',
     credit: 'Chris Feldmann (CC BY 2.0) — https://commons.wikimedia.org/wiki/File:Wok_2.jpg',
   },
   rollingpin: {
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Rolling_pin_2017.jpg/330px-Rolling_pin_2017.jpg',
-    credit: 'Fructibus (CC0) — https://commons.wikimedia.org/wiki/File:Rolling_pin_2017.jpg',
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Rouleau_a_patisserie.jpg/330px-Rouleau_a_patisserie.jpg',
+    credit: 'Copolycube (CC BY-SA 2.5) — https://commons.wikimedia.org/wiki/File:Rouleau_a_patisserie.jpg',
   },
   blender: {
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Old_blender_on_shelf_in_New_Orleans_kitchen.jpg/330px-Old_blender_on_shelf_in_New_Orleans_kitchen.jpg',
-    credit: 'Infrogmation of New Orleans (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Old_blender_on_shelf_in_New_Orleans_kitchen.jpg',
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Vitamix_Pro_750.JPG/330px-Vitamix_Pro_750.JPG',
+    credit: 'SimonAdalbert / perfektegesundheit.de (CC BY 4.0) — https://commons.wikimedia.org/wiki/File:Vitamix_Pro_750.JPG',
+  },
+  knife: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Kitchen_knife_by_yashima.jpg/330px-Kitchen_knife_by_yashima.jpg',
+    credit: 'yashima (CC BY-SA 2.0) — https://commons.wikimedia.org/wiki/File:Kitchen_knife_by_yashima.jpg',
   },
   bowl: {
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Masoncash_cane_mixing_bowl.jpg/330px-Masoncash_cane_mixing_bowl.jpg',
@@ -101,12 +105,12 @@ const REPLACEMENTS = {
     credit: 'RuinDig / Yuki Uchida (CC BY 4.0) — https://commons.wikimedia.org/wiki/File:WMF-Fusiontec-Mineral-Multipot_02.jpg',
   },
   cleaver: {
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Cleaver_~23hcvlbn.jpg/330px-Cleaver_~23hcvlbn.jpg',
-    credit: 'Grzegorz W. Tǫżycki (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Cleaver_~23hcvlbn.jpg',
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Couperet_%C3%A0_d%C3%A9biter_les_lapins_05.jpg/330px-Couperet_%C3%A0_d%C3%A9biter_les_lapins_05.jpg',
+    credit: 'Coyau (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Couperet_%C3%A0_d%C3%A9biter_les_lapins_05.jpg',
   },
   paring: {
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Miyabi_Birchwood_SG2_3.5-Inch_Paring_Knife_%282026%29-104A7337.jpg/330px-Miyabi_Birchwood_SG2_3.5-Inch_Paring_Knife_%282026%29-104A7337.jpg',
-    credit: 'Frank Schulenburg (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Miyabi_Birchwood_SG2_3.5-Inch_Paring_Knife_(2026)-104A7337.jpg',
+    image: 'assets/tool-photos/paring-knife.jpg',
+    credit: 'Supplied by the owner for personal use (not from Wikimedia Commons)',
   },
   measuringSpoons: {
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/MeasuringSpoons.jpg/330px-MeasuringSpoons.jpg',
@@ -117,6 +121,14 @@ for (const [key, value] of Object.entries(REPLACEMENTS)) j[key] = value;
 // The six weakest matches from the automated search (spoon, Instant Pot,
 // casserole dish, mortar and pestle, air fryer, cutting board) were reviewed
 // and replaced above on 2026-11-18 with subject-correct photographs.
+//
+// Second review round, same day: the seven tools whose popover photos were
+// rejected as poor representations (rolling pin, roasting pan, baking sheet,
+// blender, cleaver, knife, paring knife) were re-sourced from Commons
+// *categories* rather than keyword search, then the owner picked from five
+// lettered options each. The baking sheet and paring knife are the only two
+// photos that are not hot-linked: they were supplied by the owner, so they are
+// bundled from assets/tool-photos/ and stay available offline.
 const WRONG_SUBJECT = [];
 for (const key of WRONG_SUBJECT) delete j[key];
 fs.writeFileSync(file, JSON.stringify(j, null, 2) + '\n', 'utf8');
