@@ -1,6 +1,6 @@
 {
   "name": "mise",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "private": true,
   "type": "module",
   "description": "Mise — a source-attributed recipe book with an offline cook mode. Zero build step; vanilla JS.",
