@@ -32,15 +32,40 @@ const REPLACEMENTS = {
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Food_Processor_2.jpg/330px-Food_Processor_2.jpg',
     credit: 'Donovan Govan (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Food_Processor_2.jpg',
   },
+  spoon: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Lug%C3%AB_druri.jpg/330px-Lug%C3%AB_druri.jpg',
+    credit: 'Edukatori (CC BY 4.0) — https://commons.wikimedia.org/wiki/File:Lug%C3%AB_druri.jpg',
+  },
+  instantpot: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Instant_Pot_DUO60_pressure_cooker.jpg/330px-Instant_Pot_DUO60_pressure_cooker.jpg',
+    credit: 'Your Best Digs (CC BY 2.0) — https://commons.wikimedia.org/wiki/File:Instant_Pot_DUO60_pressure_cooker.jpg',
+  },
+  dish: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Emile_Henry_ceramic_casserole_dish.jpg/330px-Emile_Henry_ceramic_casserole_dish.jpg',
+    credit: 'Cullen328 (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Emile_Henry_ceramic_casserole_dish.jpg',
+  },
+  mortar: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/White-Mortar-and-Pestle.jpg/330px-White-Mortar-and-Pestle.jpg',
+    credit: 'Evan-Amos (Public domain) — https://commons.wikimedia.org/wiki/File:White-Mortar-and-Pestle.jpg',
+  },
+  airfryer: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Air_Fryer_5458.jpg/330px-Air_Fryer_5458.jpg',
+    credit: 'Ashley Pomeroy (CC BY 4.0) — https://commons.wikimedia.org/wiki/File:Air_Fryer_5458.jpg',
+  },
+  board: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Chopping_Board.jpg/330px-Chopping_Board.jpg',
+    credit: 'Donovan Govan (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Chopping_Board.jpg',
+  },
   cleaver: {
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Chinese_and_old_North_American_cleavers_noBG.jpg/330px-Chinese_and_old_North_American_cleavers_noBG.jpg',
     credit: "David R. Ingham (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Chinese_and_old_North_American_cleavers_noBG.jpg",
   },
 };
 for (const [key, value] of Object.entries(REPLACEMENTS)) j[key] = value;
-// These photos depict a different object (or are too ambiguous to teach the
-// tool). A missing photo intentionally uses Mise's original tool line art.
-const WRONG_SUBJECT = ['dish', 'mortar', 'airfryer', 'instantpot', 'spoon', 'board'];
+// The six weakest matches from the automated search (spoon, Instant Pot,
+// casserole dish, mortar and pestle, air fryer, cutting board) were reviewed
+// and replaced above on 2026-11-18 with subject-correct photographs.
+const WRONG_SUBJECT = [];
 for (const key of WRONG_SUBJECT) delete j[key];
 fs.writeFileSync(file, JSON.stringify(j, null, 2) + '\n', 'utf8');
 fs.writeFileSync('js/tool-images.js',

@@ -216,8 +216,8 @@ publisher's wording.
   public domain — never NC/ND); the author, license and file page are credited
   in the popover itself. `tools/build-tool-images.mjs` searches, scores and
   licenses-checks candidates; `tools/patch-tool-images.mjs` applies the
-  hand-verified corrections for weak or mismatched matches. Tools with no
-  confident match keep the original line art. Reviewed 2026-11-18: the Whisk
+  hand-verified corrections for weak or mismatched matches. Reviewed
+  2026-11-18: the Whisk
   photo (Matti Blume, CC BY-SA 4.0,
   [Whisk (IMG 0265)](https://commons.wikimedia.org/wiki/File:Whisk_(IMG_0265).jpg))
   and the frying-pan photo (FASTILY, CC BY-SA 4.0,
@@ -225,7 +225,20 @@ publisher's wording.
   were picked to replace misleading or food-heavy matches; the cast-iron
   skillet photo (NMorales (WMF), CC BY-SA 4.0,
   [Griswold cast iron skillet](https://commons.wikimedia.org/wiki/File:Griswold_cast_iron_skillet.jpg))
-  teaches the cast-iron tool specifically.
+  teaches the cast-iron tool specifically. The remaining six tools also gained
+  subject-correct photographs reviewed 2026-11-18: the wooden-spoon popover
+  (Edukatori, CC BY 4.0,
+  [Lugë druri](https://commons.wikimedia.org/wiki/File:Lug%C3%AB_druri.jpg)),
+  the Instant Pot popover (Your Best Digs, CC BY 2.0,
+  [Instant Pot DUO60 pressure cooker](https://commons.wikimedia.org/wiki/File:Instant_Pot_DUO60_pressure_cooker.jpg)),
+  the baking-dish popover (Cullen328, CC BY-SA 4.0,
+  [Emile Henry ceramic casserole dish](https://commons.wikimedia.org/wiki/File:Emile_Henry_ceramic_casserole_dish.jpg)),
+  the mortar-and-pestle popover (Evan-Amos, public domain,
+  [White-Mortar-and-Pestle](https://commons.wikimedia.org/wiki/File:White-Mortar-and-Pestle.jpg)),
+  the air-fryer popover (Ashley Pomeroy, CC BY 4.0,
+  [Air Fryer 5458](https://commons.wikimedia.org/wiki/File:Air_Fryer_5458.jpg))
+  and the cutting-board popover (Donovan Govan, CC BY-SA 3.0,
+  [Chopping Board](https://commons.wikimedia.org/wiki/File:Chopping_Board.jpg)).
 - Step photographs referenced in the Food & Wine source data are by Molly Bolton; Mise does not
   re-host them.
 

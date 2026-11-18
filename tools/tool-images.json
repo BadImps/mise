@@ -122,5 +122,29 @@
   "whisk": {
     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Whisk_%28IMG_0265%29.jpg/330px-Whisk_%28IMG_0265%29.jpg",
     "credit": "Matti Blume (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Whisk_%28IMG_0265%29.jpg"
+  },
+  "spoon": {
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Lug%C3%AB_druri.jpg/330px-Lug%C3%AB_druri.jpg",
+    "credit": "Edukatori (CC BY 4.0) — https://commons.wikimedia.org/wiki/File:Lug%C3%AB_druri.jpg"
+  },
+  "instantpot": {
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Instant_Pot_DUO60_pressure_cooker.jpg/330px-Instant_Pot_DUO60_pressure_cooker.jpg",
+    "credit": "Your Best Digs (CC BY 2.0) — https://commons.wikimedia.org/wiki/File:Instant_Pot_DUO60_pressure_cooker.jpg"
+  },
+  "dish": {
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Emile_Henry_ceramic_casserole_dish.jpg/330px-Emile_Henry_ceramic_casserole_dish.jpg",
+    "credit": "Cullen328 (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Emile_Henry_ceramic_casserole_dish.jpg"
+  },
+  "mortar": {
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/White-Mortar-and-Pestle.jpg/330px-White-Mortar-and-Pestle.jpg",
+    "credit": "Evan-Amos (Public domain) — https://commons.wikimedia.org/wiki/File:White-Mortar-and-Pestle.jpg"
+  },
+  "airfryer": {
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Air_Fryer_5458.jpg/330px-Air_Fryer_5458.jpg",
+    "credit": "Ashley Pomeroy (CC BY 4.0) — https://commons.wikimedia.org/wiki/File:Air_Fryer_5458.jpg"
+  },
+  "board": {
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Chopping_Board.jpg/330px-Chopping_Board.jpg",
+    "credit": "Donovan Govan (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Chopping_Board.jpg"
   }
 }
