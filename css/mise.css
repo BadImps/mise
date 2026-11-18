@@ -980,6 +980,13 @@
 }
 
 @media (max-width: 520px) {
+  .collection-hub { grid-template-columns: minmax(0, 1fr); }
+  .hub-card > *, .library-toolbar > *, .settings-grid > * { min-width: 0; }
+  .library-toolbar .search, .library-toolbar label:has(#lib-calories) { flex-basis: 100%; }
+  .library-toolbar select, .settings-grid input, .settings-grid textarea { max-width: 100%; }
+  .settings-grid .btn { max-width: 100%; height: auto; min-height: 44px; white-space: normal; }
+  .settings-grid .panel-head { flex-wrap: wrap; }
+  .timer-prompt .timer-prompt-copy { min-width: 0; }
   .hero-actions .btn { flex: 1 1 100%; }
   .segmented { max-width: 100%; flex-wrap: wrap; }
   .chef-card-actions .btn { flex: 1 1 100%; }

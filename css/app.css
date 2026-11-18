@@ -605,7 +605,19 @@ textarea.input { height: auto; min-height: 160px; padding: 10px 12px; resize: ve
 }
 
 @media (max-width: 520px) {
-  .view { padding: 14px 18px 92px; }
+  .view { min-width: 0; padding: 14px clamp(12px, 4vw, 18px) calc(92px + env(safe-area-inset-bottom)); }
+  .view .page { overflow-wrap: anywhere; }
+  .home-search-field { min-width: 0; }
+  .tabbar { grid-template-columns: repeat(5, minmax(0, 1fr)); height: auto; min-height: calc(64px + env(safe-area-inset-bottom)); }
+  .tabbar a, .tabbar button { min-width: 0; white-space: normal; text-align: center; line-height: 1.15; }
+  .tabbar a[data-nav="cook"] svg { width: 30px; height: 30px; padding: 5px; transform: none; box-shadow: none; }
+  .tabbar a[data-nav="cook"] span { margin-top: 0; }
+  body.cook-active .tabbar a[data-nav="cook"] svg { animation: none; }
+  body.cook-active .tabbar a[data-nav="cook"]::before { display: none; }
+  .timer-dock { display: grid; grid-template-columns: auto minmax(0, 1fr); }
+  .timer-dock[hidden] { display: none; }
+  .timer-dock .td-actions, .timer-dock [data-timer-duration] { grid-column: 1 / -1; }
+  body.route-cook .timer-dock { bottom: calc(12px + env(safe-area-inset-bottom)); }
   .title-row h1 { font-size: 24px; line-height: 30px; }
   .btn { height: 44px; }
   .btn.sm { height: 36px; }
