@@ -837,7 +837,42 @@
     return node ? recipeFromJsonLd(node, {}) : null;
   }
 
+  function caloriesPerServing(nutrition) {
+    const match = String(nutrition?.calories ?? '').trim()
+      .match(/^(\d+(?:\.\d+)?)\s*(?:kcal|calories?)\s*(per serving)?$/i);
+    if (!match) return null;
+    const serving = String(nutrition['serving size'] ?? '').trim();
+    if (serving ? !/^1\s+serving$/i.test(serving) : !match[2]) return null;
+    const amount = Number(match[1]);
+    return Number.isFinite(amount) ? amount : null;
+  }
+
+  // Publisher Recipe JSON-LD snapshots; each explicitly reports "1 serving".
+  const PUBLISHED_CALORIES = new Map(Object.entries({
+    'bahamian-conch-salad-recipe': '138 kcal',
+    'saltfish-and-callaloo': '206 kcal',
+    'grenadian-nutmeg-chicken-paleo': '236 kcal',
+    'green-fig-salad-vegan': '249 kcal',
+    'rice-and-peas-recipe-jamaican-style': '285 kcal',
+    'ackee-and-saltfish': '312 kcal',
+    'dominican-mangu-mashed-plantains': '316 kcal',
+    'yuca-con-mojo-cuban-style': '351 kcal',
+    'vegan-mofongo': '356 kcal',
+    'jamaican-curry-goat': '370 kcal',
+    'conkies': '479 kcal',
+    'cuban-style-picadillo': '497 kcal',
+    'jamaican-oxtail-stew': '916 kcal',
+  }).map(([slug, calories]) => [`https://thatgirlcookshealthy.com/${slug}/`, calories]));
+
+  function publishedNutrition(sourceUrl, nutrition) {
+    if (nutrition && Object.keys(nutrition).length) return nutrition;
+    const calories = PUBLISHED_CALORIES.get(sourceUrl);
+    return calories ? { calories, 'serving size': '1 serving' } : null;
+  }
+
   global.MiseParse = {
+    publishedNutrition,
+    caloriesPerServing,
     clean, slug, parseIngredient, amountText, formatNumber, buildRecipe,
     buildSteps, findTimers, timerText, durationText, parseISODuration,
     recipeFromMealDB, recipeFromSample, recipeFromJsonLd, extractFromHtml,

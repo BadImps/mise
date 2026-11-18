@@ -1948,7 +1948,8 @@
 
     allRecipes().forEach((recipe) => {
       if (!test(recipe.name, recipe.category)) return;
-      push({ ...itemForKitchenRecipe(recipe, course), sourceUrl: recipe.sourceUrl });
+      push({ ...itemForKitchenRecipe(recipe, course), sourceUrl: recipe.sourceUrl,
+        calories: P.caloriesPerServing(P.publishedNutrition(recipe.sourceUrl, recipe.nutrition)) });
     });
 
     const pushCatalog = (name, category, image, source, url, action, id, region, group, subHtml, record) => {
@@ -1959,6 +1960,7 @@
         sourceUrl: url,
         category,
         facets: drinkFacets(record || { name }),
+        calories: P.caloriesPerServing(P.publishedNutrition(url, record?.nutrition)),
         image,
         sub: source,
         subHtml,
@@ -2040,12 +2042,13 @@
     });
   }
 
-  function courseRow(item) {
+  function courseRow(item, showCalories = false) {
     return `<div class="live-row">
       ${imgWrap(item.image, item.name, 'live-thumb')}
       <span>
         <span class="live-name">${esc(item.name)}</span>
         <span class="live-sub">${item.subHtml || esc(item.sub || '')}</span>
+        ${showCalories ? `<span class="live-sub">${item.calories == null ? 'Comparable calories unavailable' : `${item.calories} kcal per publisher serving`}</span>` : ''}
       </span>
       ${item.href
         ? `<a class="btn sm" href="${esc(item.href)}">Open ${icon('arrow-right')}</a>`
@@ -2063,7 +2066,7 @@
     const tabTotal = courseTabItems(items, tab).length;
     const emptyType = course === 'drinks' && type && type !== 'all' ? ` · ${esc(drinkTypeLabel(type).toLowerCase())}` : '';
     const body = filtered.length
-      ? filtered.map(courseRow).join('')
+      ? filtered.map(item => courseRow(item)).join('')
       : `<div class="live-empty">No match here${q ? ` for “${esc(q)}”` : ''}${group && group !== 'all' ? ` in ${esc(group === 'kitchen' ? 'your kitchen' : group)}` : ''}${emptyType}. <button class="link-action" type="button" data-action="course-clear">Clear the filters</button></div>`;
     return { body, count: `${filtered.length} of ${tabTotal} matches` };
   }
@@ -2399,8 +2402,21 @@
     return `<div class="library-toolbar">
       <label class="search"><span class="sr-only">Search full catalogue</span>${icon('search')}<input class="input" id="lib-search" type="search" placeholder="Search name, cuisine or source" value="${esc(libraryState.q)}"></label>
       ${libraryCourseFilters(items)}
+      <label>Calories per serving
+        <select id="lib-calories" class="input">
+          <option value="all">All recipes</option>
+          <option value="low"${libraryState.calories === 'low' ? ' selected' : ''}>Lowest first (known only)</option>
+          <option value="high"${libraryState.calories === 'high' ? ' selected' : ''}>Highest first (known only)</option>
+        </select>
+      </label>
       <span class="result-count" id="lib-count"></span>
       </div>
+      <p class="collection-note">Only recipes with a clear publisher-provided per-serving figure can be sorted by calories. Importing a recipe with that nutrition information adds it to the comparison.</p>
+      <details class="collection-note">
+        <summary>Meal ideas for a weight-loss goal</summary>
+        <p>Look for meals you enjoy that combine vegetables or fruit, a source of protein such as beans, fish or eggs, and a fiber-rich food such as whole grains. Try a bean and vegetable stew, or fish with vegetables and brown rice.</p>
+        <p>Use calories to compare portions, not as a score for how healthy or filling a meal is. Publisher serving sizes can differ. Mise does not set calorie targets or estimate missing nutrition.</p>
+      </details>
       <p class="collection-note">Browse every bundled recipe offline. Read saves a recipe to your kitchen; Open returns to a saved recipe. Different publishers’ versions are kept separately.</p>
       <section class="panel table-panel" aria-label="Full recipe catalogue"><div class="live-rows" id="catalogue-rows"></div></section>`;
   }
@@ -2519,10 +2535,15 @@
       const needle = libraryState.q.trim().toLowerCase();
       const filtered = items.filter(item => matchesCourse(item.name, item.category, libraryState.category)
         && (!needle || item.hay.includes(needle)));
-      catalogue.innerHTML = filtered.length ? filtered.map(courseRow).join('')
-        : '<div class="live-empty">No matching recipes. <button class="link-action" data-action="clear-library" type="button">Clear filters</button></div>';
+      const order = libraryState.calories;
+      const rows = order === 'low' || order === 'high'
+        ? filtered.filter(item => item.calories != null)
+          .sort((a, b) => order === 'low' ? a.calories - b.calories : b.calories - a.calories)
+        : filtered;
+      catalogue.innerHTML = rows.length ? rows.map(item => courseRow(item, true)).join('')
+        : `<div class="live-empty">${order === 'low' || order === 'high' ? 'No matching recipes with comparable calories.' : 'No matching recipes.'} <button class="link-action" data-action="clear-library" type="button">Clear filters</button></div>`;
       const counter = $('#lib-count');
-      if (counter) counter.textContent = `${filtered.length} of ${items.length} recipes`;
+      if (counter) counter.textContent = `${rows.length} of ${items.length} recipes${rows.length < filtered.length ? ` · ${filtered.length - rows.length} without comparable calories hidden` : ''}`;
       return;
     }
     const slot = $('#lib-rows');
@@ -2988,7 +3009,6 @@
             <div class="detail-facts">
               <div class="fact"><div class="flabel">Steps</div><div class="fvalue">${recipe.stats.steps}</div></div>
               <div class="fact"><div class="flabel">Timers</div><div class="fvalue">${recipe.stats.timers}</div></div>
-              <div class="fact"><div class="flabel">Timer time</div><div class="fvalue">${recipe.stats.timedMinutes ? recipe.stats.timedMinutes + ' <small>min</small>' : dash}</div></div>
               <div class="fact"><div class="flabel">Total time</div><div class="fvalue${total ? '' : ' dash'}">${total ? esc(minutesText(total)) : '–'}</div></div>
             </div>
             <p class="detail-credit">${esc(photoCredit(recipe))}</p>
@@ -3099,7 +3119,7 @@
   }
 
   function nutritionPanel(recipe) {
-    const n = recipe.nutrition;
+    const n = P.publishedNutrition(recipe.sourceUrl, recipe.nutrition);
     if (!n || typeof n !== 'object' || !Object.keys(n).length) return '';
     const rows = Object.entries(n).map(([label, value]) => `<dt>${esc(label)}</dt><dd>${esc(value)}</dd>`).join('');
     return `<section class="panel" aria-labelledby="nutrition-title">
@@ -3129,7 +3149,7 @@
         <li><span class="dot ${c.missing ? 'warn' : 'ok'}"></span><span class="lab">Left as a source gap</span><b>${c.missing}${missing.length ? `<span class="sub">${esc(missing.join(', '))}</span>` : '<span class="sub">none</span>'}</b></li>
         <li><span class="dot note"></span><span class="lab">Serving items</span><b>${c.serving}<span class="sub">not counted</span></b></li>
         <li><span class="dot note"></span><span class="lab">Steps</span><b>${recipe.stats.steps}<span class="sub">from ${recipe.sourceBlocks} source blocks</span></b></li>
-        <li><span class="dot note"></span><span class="lab">Timers found</span><b>${recipe.stats.timers}<span class="sub">${recipe.stats.timedMinutes} min counted</span></b></li>
+        <li><span class="dot note"></span><span class="lab">Timers found</span><b>${recipe.stats.timers}</b></li>
         <li><span class="dot ${extra.length ? 'warn' : 'note'}"></span><span class="lab">Named in steps, unlisted</span><b>${extra.length || 0}${extra.length ? `<span class="sub">${esc(extra.join(', '))}</span>` : '<span class="sub">none</span>'}</b></li>
       </ul>
       ${missing.length ? `<div class="notice">${icon('info')}<span>The source lists ${esc(missing.join(', '))} but no step names ${missing.length === 1 ? 'it' : 'them'}. Mise leaves the step text alone and shows the gap here.</span></div>` : ''}
@@ -4132,6 +4152,15 @@
     </details>`;
   }
 
+  function timerDurationForm(mode, minutes = 0) {
+    return `<form class="snooze-row" data-timer-duration="${mode}">
+      <label>Hours <input class="input" type="number" name="hours" min="0" max="99" step="1" value="${Math.floor(minutes / 60)}" required></label>
+      <label>Minutes <input class="input" type="number" name="minutes" min="0" max="59" step="1" value="${minutes % 60}" required></label>
+      <button class="btn sm" type="submit">${mode === 'extend' ? 'Add time' : 'Set time'}</button>
+      <span role="status" data-duration-error></span>
+    </form>`;
+  }
+
   function cookTimerCard(recipe) {
     const t = timerState;
     if (!t) {
@@ -4155,6 +4184,10 @@
       <div class="tdisplay" data-ui="timer-bezel"><span class="timer-display-value${t.done ? ' done' : ''}" data-timer-display>${timerDigits(clock(remainingMs(t)))}</span></div>
       <div class="tlabel" data-timer-label>${esc(t.sub)} / step ${t.step}</div>
       <div class="tcontrols">${controls}</div>
+      ${t.done ? (dockSnoozeOpen ? timerDurationForm('extend') : '') : `
+        <details><summary>Change timer duration</summary>
+          ${timerDurationForm('set', Math.min(5999, Math.ceil(t.total / 60000)))}
+        </details>`}
     </section>`;
   }
 
@@ -4415,14 +4448,14 @@
 
   function snoozeTimer(min) {
     if (!timerState) return;
-    const mins = Math.min(120, Math.max(1, Number(min) || 5));
+    const mins = Math.min(5999, Math.max(1, Number(min) || 5));
     timerState = {
       id: timerState.id + ':snooze:' + Date.now(),
       recipeId: timerState.recipeId,
       recipeName: timerState.recipeName,
       step: timerState.step,
       index: timerState.index,
-      sub: mins + ' min',
+      sub: minutesText(mins),
       total: mins * 60 * 1000,
       remaining: mins * 60 * 1000,
       endsAt: Date.now() + mins * 60 * 1000,
@@ -4434,8 +4467,34 @@
     saveTimer();
     renderTimerDock();
     render();
-    announce('Not ready — timer extended by ' + mins + ' minute' + (mins === 1 ? '' : 's') + '.');
+    announce('Not ready — timer extended by ' + minutesText(mins) + '.');
   }
+
+  document.addEventListener('submit', (event) => {
+    const form = event.target;
+    const mode = form.dataset.timerDuration;
+    if (!mode) return;
+    event.preventDefault();
+    if (!timerState || (mode === 'extend') !== !!timerState.done) return;
+    const hours = form.elements.hours.valueAsNumber;
+    const minutes = form.elements.minutes.valueAsNumber;
+    const total = hours * 60 + minutes;
+    if (!Number.isInteger(hours) || hours < 0 || hours > 99
+      || !Number.isInteger(minutes) || minutes < 0 || minutes > 59 || total === 0) {
+      form.querySelector('[data-duration-error]').textContent = 'Enter a duration of at least one minute.';
+      return;
+    }
+    if (mode === 'extend') {
+      snoozeTimer(total);
+      return;
+    }
+    timerState.total = timerState.remaining = total * 60000;
+    timerState.endsAt = timerState.running ? Date.now() + timerState.total : 0;
+    timerState.sub = minutesText(total);
+    saveTimer();
+    render();
+    announce('Timer set to ' + timerState.sub + '.');
+  });
 
   function timerReady() {
     dockSnoozeOpen = false;
@@ -4545,7 +4604,8 @@
       <span class="td-actions">
         ${dockSnoozeOpen ? '' : `<button class="btn primary" type="button" data-action="timer-ready">Ready</button>`}
         ${snooze}
-      </span>`;
+      </span>
+      ${dockSnoozeOpen ? timerDurationForm('extend') : ''}`;
   }
 
   function observeTimerCard() {
@@ -5876,6 +5936,7 @@
     }
     if (action === 'clear-library') {
       libraryState.q = '';
+      libraryState.calories = 'all';
       libraryState.source = 'all';
       libraryState.category = 'all';
       render();
@@ -6122,6 +6183,10 @@
   });
 
   document.addEventListener('input', (event) => {
+    if (event.target.id === 'lib-calories') {
+      libraryState.calories = event.target.value;
+      refreshLibraryRows();
+    }
     if (event.target.id === 'course-search') {
       courseState.q = event.target.value;
       refreshCourseRows();

@@ -7,6 +7,24 @@ const context = vm.createContext({ window: {}, URL });
 vm.runInContext(fs.readFileSync(new URL('../js/parse.js', import.meta.url), 'utf8'), context);
 const P = context.window.MiseParse;
 
+test('the bundled Caribbean catalogue has publisher calories before import', () => {
+  const bundle = fs.readFileSync(new URL('../js/caribbean-sources.js', import.meta.url), 'utf8');
+  const urls = [...new Set(Array.from(bundle.matchAll(/"sourceUrl": "(https:\/\/thatgirlcookshealthy\.com\/[^"]+)"/g), m => m[1]))];
+  const values = urls.map(url => P.caloriesPerServing(P.publishedNutrition(url))).filter(value => value != null);
+  assert.equal(values.length, 13);
+  assert.ok(values.includes(138));
+  assert.ok(values.includes(916));
+  assert.equal(P.publishedNutrition('https://example.com/'), null);
+});
+
+test('calorie comparisons require a clear serving basis and a single kcal value', () => {
+  assert.equal(P.caloriesPerServing({ calories: '283 kcal', 'serving size': '1 serving' }), 283);
+  assert.equal(P.caloriesPerServing({ calories: '250 Calories per serving' }), 250);
+  assert.equal(P.caloriesPerServing({ calories: '283 kcal' }), null);
+  assert.equal(P.caloriesPerServing({ calories: '283 kcal', 'serving size': '100 g' }), null);
+  assert.equal(P.caloriesPerServing({ calories: '100–200 kcal per serving' }), null);
+});
+
 const FIXTURE = {
   '@type': 'Recipe',
   name: 'Grilled Lamb Kabobs',

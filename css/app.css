@@ -347,6 +347,7 @@ textarea.input { height: auto; min-height: 160px; padding: 10px 12px; resize: ve
 
 /* ---------- timer snooze chips ---------- */
 .snooze-row { display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+[data-timer-duration] input { width: 5rem; }
 .snooze-label { font-size: var(--fs-meta); color: var(--muted); }
 .done-clock { color: var(--accent-ink); }
 .td-state.ready-dot { color: var(--accent-ink); }

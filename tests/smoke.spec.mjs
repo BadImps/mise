@@ -15,6 +15,7 @@ test('app boots offline; recipe → list → cook flows work', async ({ page }) 
   // 1. Bundled sample recipe renders, with a publisher-style serving note.
   await page.goto('/index.html#/recipe/chili');
   await expect(page.locator('h1').first()).toBeVisible();
+  await expect(page.getByText('Timer time', { exact: true })).toHaveCount(0);
   await expect(page.locator('.ing-amount', { hasText: '2 cups' }).first()).toBeVisible();
 
   // Unit conversion renders beside the publisher's amount.
@@ -25,6 +26,14 @@ test('app boots offline; recipe → list → cook flows work', async ({ page }) 
   await expect(page.locator('.timer-prompt')).toBeVisible();
   await page.locator('[data-action="timer-prompt-dismiss"]').click();
   await expect(page.locator('.timer-prompt')).toHaveCount(0);
+  await page.locator('.route-cook [data-action="start-timer"]').first().click();
+  await page.getByText('Change timer duration', { exact: true }).click();
+  const duration = page.locator('[data-timer-duration="set"]');
+  await duration.getByLabel('Hours').fill('1');
+  await duration.getByLabel('Minutes').fill('30');
+  await duration.getByRole('button', { name: 'Set time' }).click();
+  await expect(page.locator('.timer-card [role="timer"]')).toHaveAttribute('aria-label', /^1:(?:30:00|29:\d\d)$/);
+  await page.locator('.timer-card [data-action="timer-close"]').click();
 
   // 3. Shopping list: add a bundled recipe, verify rows and grouping.
   await page.goto('/index.html#/recipe/chili');
