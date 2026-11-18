@@ -28,15 +28,19 @@ test('reviewed kitchen-tool photographs are present and licensed', () => {
   assert.match(photos.pan.credit, /CC BY-SA 4\.0/);
   const TEN = {
     grater: /K%C3%BCchenreibe_1/,
-    ladle: /Aluminium_ladle/,
+    ladle: /DSC00527/,
     sieve: /Durchschlag/,
-    griddle: /Griddle_%28shallow_pan%29/,
-    sheet: /Vollrath_Cookie_Sheet/,
+    griddle: /Electric_griddle/,
+    sheet: /Baking_tray/,
     wok: /Wok_2/,
     rollingpin: /Rolling_pin_2017/,
     blender: /Old_blender_on_shelf/,
     bowl: /Masoncash_cane_mixing_bowl/,
     saucepan: /WMF-Fusiontec-Mineral-Multipot_02/,
+    peeler: /Peeler_02_Pengo/,
+    paring: /Miyabi_Birchwood_SG2/,
+    cleaver: /Cleaver_~23hcvlbn/,
+    measuringSpoons: /MeasuringSpoons/,
   };
   for (const [key, pattern] of Object.entries(TEN)) {
     assert.ok(photos[key], `${key} must carry a photograph`);

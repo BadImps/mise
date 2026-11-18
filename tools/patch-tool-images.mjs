@@ -13,8 +13,8 @@ const REPLACEMENTS = {
     credit: 'OttawaAC (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Large_roasting_pan_with_rack.jpg',
   },
   peeler: {
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Couteau-econome.jpg/330px-Couteau-econome.jpg',
-    credit: 'Fred Klein (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Couteau-econome.jpg',
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Peeler_02_Pengo.jpg/330px-Peeler_02_Pengo.jpg',
+    credit: 'Pengo (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Peeler_02_Pengo.jpg',
   },
   pan: {
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Stainless_Steel_Frying_Pan.jpg/330px-Stainless_Steel_Frying_Pan.jpg',
@@ -65,20 +65,20 @@ const REPLACEMENTS = {
     credit: 'Superbass (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:K%C3%BCchenreibe_1.jpg',
   },
   ladle: {
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Aluminium_ladle.jpg/330px-Aluminium_ladle.jpg',
-    credit: 'Rajani Gairshail (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Aluminium_ladle.jpg',
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Ladle_%28spoon%29_-_%E0%A6%A1%E0%A6%BE%E0%A6%AC%E0%A7%81_-_DSC00527.jpg/330px-Ladle_%28spoon%29_-_%E0%A6%A1%E0%A6%BE%E0%A6%AC%E0%A7%81_-_DSC00527.jpg',
+    credit: 'Moheen (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Ladle_(spoon)_-_%E0%A6%A1%E0%A6%BE%E0%A6%AC%E0%A7%81_-_DSC00527.jpg',
   },
   sieve: {
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Durchschlag.jpg/330px-Durchschlag.jpg',
     credit: 'EvaK (CC BY-SA 2.5) — https://commons.wikimedia.org/wiki/File:Durchschlag.jpg',
   },
   griddle: {
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Griddle_%28shallow_pan%29.jpg/330px-Griddle_%28shallow_pan%29.jpg',
-    credit: 'Susan Slater (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Griddle_(shallow_pan).jpg',
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Electric_griddle.jpg/330px-Electric_griddle.jpg',
+    credit: 'Jonathan Kovaciny at en.wikipedia (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Electric_griddle.jpg',
   },
   sheet: {
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Vollrath_Cookie_Sheet_%284858589805%29.jpg/330px-Vollrath_Cookie_Sheet_%284858589805%29.jpg',
-    credit: 'Veganbaking.net from USA (CC BY-SA 2.0) — https://commons.wikimedia.org/wiki/File:Vollrath_Cookie_Sheet_(4858589805).jpg',
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Baking_tray.jpg/330px-Baking_tray.jpg',
+    credit: 'Lars Plougmann (CC BY-SA 2.0) — https://commons.wikimedia.org/wiki/File:Baking_tray.jpg',
   },
   wok: {
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Wok_2.jpg/330px-Wok_2.jpg',
@@ -101,8 +101,16 @@ const REPLACEMENTS = {
     credit: 'RuinDig / Yuki Uchida (CC BY 4.0) — https://commons.wikimedia.org/wiki/File:WMF-Fusiontec-Mineral-Multipot_02.jpg',
   },
   cleaver: {
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Chinese_and_old_North_American_cleavers_noBG.jpg/330px-Chinese_and_old_North_American_cleavers_noBG.jpg',
-    credit: "David R. Ingham (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Chinese_and_old_North_American_cleavers_noBG.jpg",
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Cleaver_~23hcvlbn.jpg/330px-Cleaver_~23hcvlbn.jpg',
+    credit: 'Grzegorz W. Tǫżycki (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Cleaver_~23hcvlbn.jpg',
+  },
+  paring: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Miyabi_Birchwood_SG2_3.5-Inch_Paring_Knife_%282026%29-104A7337.jpg/330px-Miyabi_Birchwood_SG2_3.5-Inch_Paring_Knife_%282026%29-104A7337.jpg',
+    credit: 'Frank Schulenburg (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Miyabi_Birchwood_SG2_3.5-Inch_Paring_Knife_(2026)-104A7337.jpg',
+  },
+  measuringSpoons: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/MeasuringSpoons.jpg/330px-MeasuringSpoons.jpg',
+    credit: 'Arkrishna (Public domain) — https://commons.wikimedia.org/wiki/File:MeasuringSpoons.jpg',
   },
 };
 for (const [key, value] of Object.entries(REPLACEMENTS)) j[key] = value;

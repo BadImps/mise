@@ -263,6 +263,20 @@ publisher's wording.
   [Masoncash cane mixing bowl](https://commons.wikimedia.org/wiki/File:Masoncash_cane_mixing_bowl.jpg))
   and Saucepan (RuinDig / Yuki Uchida, CC BY 4.0,
   [WMF-Fusiontec-Mineral-Multipot 02](https://commons.wikimedia.org/wiki/File:WMF-Fusiontec-Mineral-Multipot_02.jpg)).
+  A second clearer pass (2026-11-18): Baking sheet (Lars Plougmann, CC BY-SA
+  2.0, [Baking tray](https://commons.wikimedia.org/wiki/File:Baking_tray.jpg)),
+  Ladle (Moheen, CC BY-SA 4.0,
+  [Ladle (spoon) - ডাব - DSC00527](https://commons.wikimedia.org/wiki/File:Ladle_(spoon)_-_%E0%A6%A1%E0%A6%BE%E0%A6%AC%E0%A7%81_-_DSC00527.jpg)),
+  Peeler (Pengo, CC BY-SA 3.0,
+  [Peeler 02 Pengo](https://commons.wikimedia.org/wiki/File:Peeler_02_Pengo.jpg)),
+  Griddle (Jonathan Kovaciny at en.wikipedia, CC BY-SA 3.0,
+  [Electric griddle](https://commons.wikimedia.org/wiki/File:Electric_griddle.jpg)),
+  Paring knife (Frank Schulenburg, CC BY-SA 4.0,
+  [Miyabi Birchwood SG2 3.5-Inch Paring Knife](https://commons.wikimedia.org/wiki/File:Miyabi_Birchwood_SG2_3.5-Inch_Paring_Knife_(2026)-104A7337.jpg)),
+  Cleaver (Grzegorz W. Tǫżycki, CC BY-SA 4.0,
+  [Cleaver #23hcvlbn](https://commons.wikimedia.org/wiki/File:Cleaver_~23hcvlbn.jpg))
+  and Measuring spoons (Arkrishna, public domain,
+  [MeasuringSpoons](https://commons.wikimedia.org/wiki/File:MeasuringSpoons.jpg)).
 - Step photographs referenced in the Food & Wine source data are by Molly Bolton; Mise does not
   re-host them.
 
