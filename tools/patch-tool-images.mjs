@@ -16,6 +16,10 @@ const REPLACEMENTS = {
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Couteau-econome.jpg/330px-Couteau-econome.jpg',
     credit: 'Fred Klein (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Couteau-econome.jpg',
   },
+  pan: {
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Stainless_Steel_Frying_Pan.jpg/330px-Stainless_Steel_Frying_Pan.jpg',
+    credit: 'Jim Stonos (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Stainless_Steel_Frying_Pan.jpg',
+  },
   skilletCast: {
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Griswold_cast_iron_skillet.jpg/330px-Griswold_cast_iron_skillet.jpg',
     credit: 'NMorales (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Griswold_cast_iron_skillet.jpg',

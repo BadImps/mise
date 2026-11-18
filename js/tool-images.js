@@ -9,8 +9,8 @@ window.MISE_TOOL_IMAGES = {
     "credit": "ParentingPatch (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Mixing%20Bowl%20of%20Flour.JPG"
   },
   "pan": {
-    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Into_the_frying_pan.JPG/330px-Into_the_frying_pan.JPG",
-    "credit": "Drmarathe (CC BY-SA 3.0) — https://commons.wikimedia.org/wiki/File:Into%20the%20frying%20pan.JPG"
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Stainless_Steel_Frying_Pan.jpg/330px-Stainless_Steel_Frying_Pan.jpg",
+    "credit": "Jim Stonos (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Stainless_Steel_Frying_Pan.jpg"
   },
   "saucepan": {
     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Silver_saucepan.JPG/330px-Silver_saucepan.JPG",

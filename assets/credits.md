@@ -239,6 +239,10 @@ publisher's wording.
   [Air Fryer 5458](https://commons.wikimedia.org/wiki/File:Air_Fryer_5458.jpg))
   and the cutting-board popover (Donovan Govan, CC BY-SA 3.0,
   [Chopping Board](https://commons.wikimedia.org/wiki/File:Chopping_Board.jpg)).
+  The generic Pan photo (Drmarathe, CC BY-SA 3.0, Into the frying pan — two
+  pans on a stove) was also replaced with a single stainless-steel pan on an
+  induction hob (Jim Stonos, CC BY-SA 4.0,
+  [Stainless Steel Frying Pan](https://commons.wikimedia.org/wiki/File:Stainless_Steel_Frying_Pan.jpg)).
 - Step photographs referenced in the Food & Wine source data are by Molly Bolton; Mise does not
   re-host them.
 

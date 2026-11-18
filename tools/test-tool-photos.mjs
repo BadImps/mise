@@ -24,6 +24,8 @@ test('reviewed kitchen-tool photographs are present and licensed', () => {
   assert.match(photos.whisk.image, /Whisk_%28IMG_0265%29/);
   assert.match(photos.fryingPan.image, /Frying_Pan_2_2019-03-21/);
   assert.match(photos.skilletCast.image, /Griswold_cast_iron_skillet/);
+  assert.match(photos.pan.image, /Stainless_Steel_Frying_Pan/);
+  assert.match(photos.pan.credit, /CC BY-SA 4\.0/);
   assert.match(patch, /whisk:/);
   assert.match(patch, /fryingPan:/);
 });
