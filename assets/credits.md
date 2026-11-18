@@ -65,12 +65,16 @@ authenticity. An “(inspired)” suffix stays on dishes the publisher presents 
   never-bundled policy). TheMealDB records keep the API's recipe-specific
   thumbnails. Pages with no usable photo keep the previous image and are listed
   as misses rather than invented.
-- **The 272 records read from CaribbeanPot.com** (mostly Trinidadian, Jamaican and
+- **The 273 records read from CaribbeanPot.com** (mostly Trinidadian, Jamaican and
   fusion cooking): <https://caribbeanpot.com>, by Chris De La Rosa and Sandie Markle.
   `tools/build-caribbeanpot.mjs` applies the same contract to the site's REST API.
   Six posts whose recipes publish no ingredient list anywhere — the card, the print
   view and the schema.org Recipe block — are excluded.
   Multi-card posts link each record to its own recipe-card anchor.
+  **Caribbean Christmas Ham** (2026-11-18) is a hand-transcribed exception: this 2012
+  page publishes no schema.org Recipe block, so its ingredients and steps were copied
+  verbatim from the post body into the record (timings remain unknown, as unstated).
+  Its photo comes from the same page, hot-linked, never bundled.
   **Traditional Caribbean Pineapple Juice** uses the photograph published
   on its [recipe page](https://caribbeanpot.com/traditional-caribbean-pineapple-juice-2/)
   (CaribbeanPot.com / Chris De La Rosa), hot-linked rather than bundled.
