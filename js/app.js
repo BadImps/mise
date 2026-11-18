@@ -1809,7 +1809,6 @@
       title: 'Breakfast',
       noun: 'breakfast recipe',
       icon: 'sun',
-      kicker: 'Meal',
       desc: 'Eggs, porridge, pancakes and morning plates from your kitchen and the bundled Caribbean, African and world catalogues.',
       blurb: 'Eggs, porridge, pancakes and morning plates.',
       suggestions: ['Breakfast', 'Pancakes', 'Omelette', 'Toast'],
@@ -1818,7 +1817,6 @@
       title: 'Lunch',
       noun: 'lunch recipe',
       icon: 'bowl',
-      kicker: 'Meal',
       desc: 'Sandwiches, salads, soups and light plates from your kitchen and the bundled Caribbean, African and world catalogues.',
       blurb: 'Sandwiches, salads, soups and light plates.',
       suggestions: ['Salad', 'Soup', 'Sandwich', 'Wrap'],
@@ -1827,7 +1825,6 @@
       title: 'Dinner',
       noun: 'dinner recipe',
       icon: 'moon',
-      kicker: 'Meal',
       desc: 'Main courses from your kitchen and the bundled catalogues: stews, curries, roasts and the big plates.',
       blurb: 'Stews, curries, roasts and the big plates.',
       suggestions: ['Beef', 'Chicken', 'Pasta', 'Curry'],
@@ -1836,7 +1833,6 @@
       title: 'Drinks & Beverages',
       noun: 'drink',
       icon: 'cup',
-      kicker: 'Course',
       desc: 'Teas, juices, punches, lemonades and other drinks from your kitchen and the bundled Caribbean, African and world catalogues.',
       blurb: 'Teas, juices, punches, lemonades and more.',
       suggestions: ['Tea', 'Juice', 'Smoothie', 'Cocktail'],
@@ -1845,7 +1841,6 @@
       title: 'Appetizers',
       noun: 'appetizer',
       icon: 'plate',
-      kicker: 'Course',
       desc: 'Starters, dips, wings and small plates from your kitchen and the bundled Caribbean, African and world catalogues.',
       blurb: 'Starters, dips, wings and small plates.',
       suggestions: ['Hummus', 'Wings', 'Dip', 'Starter'],
@@ -1854,7 +1849,6 @@
       title: 'Pastry',
       noun: 'pastry recipe',
       icon: 'pie',
-      kicker: 'Course',
       desc: 'Pies, tarts, empanadas, turnovers and filo pastries from your kitchen and the bundled Caribbean and international catalogues, including the new recipe research.',
       blurb: 'Pies, tarts, empanadas and filo pastries.',
       suggestions: ['Tart', 'Empanada', 'Baklava', 'Pie'],
@@ -2174,7 +2168,6 @@
     return `<a class="hub-card" href="#/kitchen/${esc(course)}">
       <span class="hub-icon">${icon(meta.icon)}</span>
       <span class="hub-body">
-        <span class="hub-kicker">${esc(meta.kicker || 'Course')}</span>
         <span class="hub-title">${esc(meta.title)} <span class="hub-count">${items.length}</span></span>
         <span class="hub-desc">${kitchenCount} in your kitchen and ${items.length - kitchenCount} in the catalogues. ${esc(meta.blurb)}</span>
       </span>
