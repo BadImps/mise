@@ -74,8 +74,6 @@
 
   /* ---------- storage ---------- */
   const KEY = {
-    imported: 'mise.imported.v1', /* legacy full-recipe payload, migrated on load */
-    importedV2: 'mise.imported.v2', /* compact raw records; recipes are derived on load */
     last: 'mise.last.v1',
     session: 'mise.session.v1',
     lastcook: 'mise.lastcook.v1',
@@ -225,22 +223,17 @@
       ingredients: (r.ingredients || []).map((i) => i.raw || i.item),
       instructions: (r.steps || []).map((s) => s.text),
       kind: r.kind || 'sample',
+      nutrition: r.nutrition || null,
       importedAt: r.importedAt || null,
     };
   }
 
   function loadImportedRaw() {
-    const v2 = store.get(KEY.importedV2, null);
-    if (Array.isArray(v2)) return v2;
-    const legacy = store.get(KEY.imported, []);
-    if (Array.isArray(legacy) && legacy.length) {
-      const migrated = legacy
-        .filter((r) => r && r.name && Array.isArray(r.ingredients) && Array.isArray(r.steps))
-        .map(rawFromRecipe);
-      if (store.set(KEY.importedV2, migrated)) store.remove(KEY.imported);
-      return migrated;
-    }
-    return [];
+    // v3 envelope (js/kitchen-store.js): wraps the frozen v2 array once, keeps
+    // it on disk as a rollback path, and migrates the v1 legacy payload once.
+    if (window.MISE_KITCHEN) return window.MISE_KITCHEN.load(store, rawFromRecipe);
+    const legacy = store.get('mise.imported.v2', []);
+    return Array.isArray(legacy) ? legacy : [];
   }
 
   let imported = loadImportedRaw().map((raw) => P.buildRecipe(raw, { importedAt: raw.importedAt || null }));
@@ -436,8 +429,8 @@
   }
 
   function persistImported(lastRecipeId) {
-    const payload = imported.map(rawFromRecipe);
-    const ok = store.set(KEY.importedV2, payload);
+    const records = imported.map(rawFromRecipe);
+    const ok = window.MISE_KITCHEN ? window.MISE_KITCHEN.persist(store, records) : false;
     if (!ok && importSnapshot) imported = importSnapshot;
     importSnapshot = null;
     importedDirty = false;
@@ -475,6 +468,65 @@
   function knownImported(url) {
     if (!url) return null;
     return imported.find((r) => r.sourceUrl === url) || null;
+  }
+
+  /* ---------- kitchen export / import ---------- */
+  function kitchenExportPayload() {
+    if (!window.MISE_KITCHEN) return null;
+    return window.MISE_KITCHEN.exportKitchen(store, new Date().toISOString());
+  }
+
+  function exportKitchen() {
+    const payload = kitchenExportPayload();
+    if (!payload) { announce('This build cannot export the kitchen.', true); return; }
+    const text = JSON.stringify(payload, null, 2);
+    const stamp = new Date().toISOString().slice(0, 10);
+    const filename = 'mise-kitchen-' + stamp + '.json';
+    try {
+      const blob = new Blob([text], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(url), 2000);
+      announce('Kitchen exported as ' + filename + '.');
+      return;
+    } catch (err) { /* fall back to the clipboard */ }
+    try {
+      navigator.clipboard.writeText(text);
+      announce('Export copied to the clipboard — paste it into a file or another device.');
+    } catch (err) {
+      announce('Could not export automatically.', text);
+    }
+  }
+
+  function importKitchenFromText(text) {
+    if (!window.MISE_KITCHEN) { announce('This build cannot import the kitchen.', true); return; }
+    let obj;
+    try { obj = JSON.parse(text); } catch (err) { announce('That is not valid JSON.', true); return; }
+    let parsed;
+    try { parsed = window.MISE_KITCHEN.readKitchenExport(obj); } catch (err) { announce(err.message, true); return; }
+    const existingUrls = new Set(imported.map((r) => r.sourceUrl).filter(Boolean));
+    let added = 0;
+    let replaced = 0;
+    const failures = [];
+    for (const raw of parsed.imported) {
+      let recipe;
+      try { recipe = P.buildRecipe(raw, { importedAt: raw.importedAt || new Date().toISOString() }); }
+      catch (err) { failures.push(raw && raw.name ? raw.name : 'an unreadable record'); continue; }
+      if (recipe.sourceUrl && existingUrls.has(recipe.sourceUrl)) replaced += 1; else added += 1;
+      saveImported(recipe, { flush: false });
+    }
+    if (!persistImported(null)) {
+      announce('The export could not be saved to this device — nothing was changed.', true);
+      return;
+    }
+    for (const key of Object.keys(parsed.prefs)) store.set(key, parsed.prefs[key]);
+    announce('Kitchen restored: ' + added + ' new recipe' + (added === 1 ? '' : 's') + ', ' + replaced + ' replaced' + (failures.length ? ', ' + failures.length + ' skipped' : '') + '. Mise will reload.');
+    window.setTimeout(() => { location.reload(); }, 800);
   }
 
   /* ---------- shopping list ---------- */
@@ -529,12 +581,9 @@
     saveShoppingList([]);
   }
 
-  function copyShoppingList() {
+  const shoppingListText = () => {
     const items = shoppingList();
-    if (!items.length) {
-      announce('Your list is empty.');
-      return;
-    }
+    if (!items.length) return '';
     const grouped = new Map();
     items.forEach((it) => {
       if (!grouped.has(it.recipeName)) grouped.set(it.recipeName, []);
@@ -549,7 +598,15 @@
         lines.push('- ' + (it.qty ? it.qty + ' ' : '') + it.name);
       }
     }
-    const text = lines.join('\n');
+    return lines.join('\n');
+  };
+
+  function copyShoppingList() {
+    const text = shoppingListText();
+    if (!text) {
+      announce('Your list is empty.');
+      return;
+    }
     try {
       const bridge = document.getElementById('clipboard-bridge');
       if (bridge) {
@@ -566,6 +623,51 @@
       announce('List copied.');
     } catch (err) {
       announce('Could not copy. Show this page instead:', text);
+    }
+  }
+
+  function printShoppingList() {
+    try {
+      if (nativePrint()) {
+        MiseNative.printRecipe();
+        announce('Opened the system print dialog.');
+        return;
+      }
+    } catch (err) { /* fall through to the browser path */ }
+    try {
+      announce('Sending to your printer…');
+      window.print();
+    } catch (err) {
+      announce('This device cannot print from a browser.');
+    }
+  }
+
+  function shareShoppingList() {
+    const text = shoppingListText();
+    if (!text) {
+      announce('Your list is empty.');
+      return;
+    }
+    try {
+      if (typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
+        navigator.share({ title: 'Shopping list', text }).catch(() => { /* user dismissed */ });
+        return;
+      }
+    } catch (err) { /* fall through */ }
+    try {
+      const bridge = document.getElementById('clipboard-bridge');
+      if (bridge) {
+        bridge.value = text;
+        bridge.select();
+        document.execCommand('copy');
+        bridge.value = '';
+        announce('List copied to the clipboard.');
+        return;
+      }
+      navigator.clipboard.writeText(text);
+      announce('List copied to the clipboard.');
+    } catch (err) {
+      announce('Could not share. Your list is on screen instead.', text);
     }
   }
 
@@ -591,6 +693,8 @@
     const footer = items.length
       ? `<div class="sl-footer">
            <a class="btn ghost" href="#/library">Keep browsing</a>
+            <button class="btn" type="button" data-action="share-list">${icon('send')}Share list</button>
+            <button class="btn" type="button" data-action="print-list">${icon('print')}Print</button>
            <button class="btn" type="button" data-action="copy-list">${icon('paste')}Copy list</button>
            <button class="btn" type="button" data-action="clear-list-checked">${icon('check')}Clear checked</button>
            <button class="btn ghost" type="button" data-action="clear-list-all">${icon('x')}Clear list</button>
@@ -2893,6 +2997,7 @@
         </div>
         <aside class="detail-side">
           ${structureCard(recipe)}
+          ${nutritionPanel(recipe)}
           ${timersCard(recipe)}
           ${sourceCard(recipe)}
         </aside>
@@ -2910,6 +3015,15 @@
     return 'No photograph in the source record.';
   }
 
+  /* Amounts stay as the publisher wrote them; a Mise conversion rides beside
+     tsp/tbsp/cup/ml so the mise can be executed by volume or weight alike. */
+  function scaledWithConversion(ing, factor) {
+    const amount = P.amountText(ing, factor);
+    if (!amount || ing.qty == null || !window.MISE_CONVERT) return esc(amount);
+    const conv = window.MISE_CONVERT.conversion(ing.qty * factor, ing.unit, ing.item);
+    return conv ? esc(amount) + ' <span class="conv">' + esc(conv) + '</span>' : esc(amount);
+  }
+
   function ingredientsPanel(recipe, scale, serves) {
     const groups = ingredientGroups(recipe);
     const body = groups.map((group) => {
@@ -2919,7 +3033,7 @@
       const rows = group.items.map((ing) => {
         const amount = P.amountText(ing, scale);
         return `<div class="ing-row${ing.serving ? ' is-serve' : ''}">
-          <div class="ing-amount">${amount ? esc(amount) : '<span class="none">No measure</span>'}</div>
+          <div class="ing-amount">${amount ? scaledWithConversion(ing, scale) : '<span class="none">No measure</span>'}</div>
           <div class="ing-name">${esc(ing.item)}${ing.note ? `<span class="ing-note">${esc(ing.note)}</span>` : ''}${!ing.serving && !ing.steps.length ? `<span class="ing-note">No step names this</span>` : ''}</div>
           ${ing.serving ? '<div class="usage none"><span class="usage-steps">Serve</span></div>' : usageTrack(recipe, ing)}
         </div>`;
@@ -2976,6 +3090,20 @@
         <span class="meta">${recipe.stats.steps} steps${split ? ` / split from ${recipe.sourceBlocks} source blocks` : ''}</span>
       </div>
       <div class="step-list">${steps}</div>
+    </section>`;
+  }
+
+  function nutritionPanel(recipe) {
+    const n = recipe.nutrition;
+    if (!n || typeof n !== 'object' || !Object.keys(n).length) return '';
+    const rows = Object.entries(n).map(([label, value]) => `<dt>${esc(label)}</dt><dd>${esc(value)}</dd>`).join('');
+    return `<section class="panel" aria-labelledby="nutrition-title">
+      <div class="panel-head">
+        <h2 id="nutrition-title">Nutrition</h2>
+        <span class="meta">as published by ${esc(recipe.source)}</span>
+      </div>
+      <dl class="kv">${rows}</dl>
+      <p class="structure-foot">The publisher's figures, copied verbatim. Not estimated, never changed.</p>
     </section>`;
   }
 
@@ -3877,6 +4005,17 @@
         </button>
         <p class="cook-step-text">${(typeof window.MiseTools !== 'undefined' ? MiseTools.linkify(esc(st.text)) : esc(st.text))}</p>
         ${stepTimers ? `<div class="cook-timers">${stepTimers}</div>` : ''}
+        ${(() => {
+          if (!current || !st.timers.length) return '';
+          const active = timerState && timerState.recipeId === recipe.id && timerState.step === st.n;
+          if (active) return '';
+          if (timerPromptDismissed.has(recipe.id + ':' + st.n)) return '';
+          return `<div class="timer-prompt" role="status">
+            <span class="timer-prompt-copy">This step names ${esc(P.timerText(st.timers[0]))} — start a timer?</span>
+            <button class="btn sm primary" type="button" data-action="start-timer" data-step="${st.n}" data-timer="0">Start ${esc(P.timerText(st.timers[0]))}</button>
+            <button class="btn sm ghost" type="button" data-action="timer-prompt-dismiss" data-step="${st.n}">Not now</button>
+          </div>`;
+        })()}
       </li>`;
     }).join('');
 
@@ -3966,7 +4105,7 @@
               const amount = P.amountText(ing, scale);
               return `<li class="drop-item"><label class="check-row">
                 <input class="check-box" type="checkbox" data-action="check-ing" data-step="${step.n}" data-ing="${esc(ing.id)}" ${checked[ing.id] ? 'checked' : ''}>
-                <span class="check-amount">${amount ? esc(amount) : '–'}</span>
+                <span class="check-amount">${amount ? scaledWithConversion(ing, scale) : '–'}</span>
                 <span class="check-name">${esc(ing.item)}${ing.note ? `<span class="ing-note">${esc(ing.note)}</span>` : ''}</span>
               </label></li>`;
             }).join('')}</ul>` : `<div class="empty-inline">The source step does not name an ingredient from the list. Check the method before you start it.</div>`}
@@ -3977,7 +4116,7 @@
               const amount = P.amountText(ing, scale);
               return `<li class="drop-item"><label class="check-row">
                 <input class="check-box" type="checkbox" data-action="check-mise" data-ing="${esc(ing.id)}" ${sessionAll[ing.id] ? 'checked' : ''}>
-                <span class="check-amount">${amount ? esc(amount) : '–'}</span>
+                <span class="check-amount">${amount ? scaledWithConversion(ing, scale) : '–'}</span>
                 <span class="check-name">${esc(ing.item)}</span>
               </label></li>`;
             }).join('')}</ul>
@@ -4130,6 +4269,7 @@
   }
 
   /* ---------- timer ---------- */
+  const timerPromptDismissed = new Set();
   let timerState = store.get(KEY.timer, null);
   let timerCardObserver = null;
   let timerCardVisible = false;
@@ -5214,9 +5354,18 @@
               <li><span>Storage used</span><b id="data-storage">${esc(storageText)}</b></li>
             </ul>
             <div class="data-actions">
+              <button class="btn" type="button" data-action="export-kitchen">Export kitchen (JSON)</button>
+              <label class="btn" for="kitchen-file">Import kitchen…</label>
+              <input type="file" id="kitchen-file" accept=".json,application/json" hidden>
               <button class="btn ghost" type="button" data-action="settings-clear-pantry">Clear Chef pantry</button>
               <button class="btn ghost" type="button" data-action="settings-clear-imports">Clear imported recipes</button>
             </div>
+            <details class="kitchen-paste">
+              <summary>…or paste an export</summary>
+              <p class="meta">For the Android app: paste the JSON exported on this device or another one. No account, nothing leaves the device.</p>
+              <textarea id="kitchen-import-text" class="input" rows="4" spellcheck="false" placeholder="Paste export JSON here"></textarea>
+              <button class="btn primary" type="button" data-action="import-kitchen-text">Restore from paste</button>
+            </details>
           </section>
 
           <section class="panel about-panel" aria-labelledby="settings-about-title">
@@ -5541,11 +5690,34 @@
       copyShoppingList();
       return;
     }
+    if (action === 'share-list') {
+      shareShoppingList();
+      return;
+    }
+    if (action === 'print-list') {
+      printShoppingList();
+      return;
+    }
     if (action === 'print-recipe') {
       printRecipe();
       return;
     }
 
+    if (action === 'export-kitchen') { exportKitchen(); return; }
+    if (action === 'import-kitchen-text') {
+      const input = $('#kitchen-import-text');
+      const text = input ? input.value : '';
+      if (!text.trim()) { announce('Paste the export JSON below first.', true); return; }
+      importKitchenFromText(text);
+      return;
+    }
+    if (action === 'timer-prompt-dismiss') {
+      const route = parseRoute();
+      const recipe = getRecipe(route.parts[1] || '');
+      if (recipe) timerPromptDismissed.add(recipe.id + ':' + Number(target.dataset.step));
+      render();
+      return;
+    }
     if (action === 'settings-clear-pantry') {
       pantrySelection = new Set();
       savePantry();
@@ -5560,8 +5732,8 @@
       if (target.dataset.armed === 'yes') {
         imported = [];
         importedDirty = false;
-        store.set(KEY.importedV2, []);
-        store.remove(KEY.imported);
+        if (window.MISE_KITCHEN) window.MISE_KITCHEN.persist(store, []);
+        else { store.set('mise.imported.v2', []); store.remove('mise.imported.v1'); }
         chefCatalogCache = null;
         target.removeAttribute('data-armed');
         target.textContent = 'Imported recipes removed';
@@ -5892,6 +6064,17 @@
   });
 
   document.addEventListener('change', (event) => {
+    if (event.target.id === 'kitchen-file') {
+      const file = event.target.files && event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = () => importKitchenFromText(String(reader.result || ''));
+        reader.onerror = () => announce('Could not read that file.', true);
+        reader.readAsText(file);
+        event.target.value = '';
+      }
+      return;
+    }
     const facet = event.target.closest('[data-drink-facet]');
     if (facet && ['alcohol', 'spirit', 'occasion'].includes(facet.dataset.drinkFacet)) {
       courseState[facet.dataset.drinkFacet] = facet.value;

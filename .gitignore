@@ -22,3 +22,7 @@ dist/
 Thumbs.db
 *.swp
 .recipe-cache/
+
+# Playwright
+test-results/
+playwright-report/

@@ -4,18 +4,28 @@ import vm from 'node:vm';
 import { test } from 'node:test';
 
 const app = fs.readFileSync(new URL('../js/app.js', import.meta.url), 'utf8');
+const kitchenStore = fs.readFileSync(new URL('../js/kitchen-store.js', import.meta.url), 'utf8');
 function kitchen(writeOK = true) {
   const ctx = vm.createContext({ writeOK });
   vm.runInContext(`
-    const IMPORTED_CAP = 800;
     const KEY = { importedV2: 'imports', last: 'last' };
     let imported = Array.from({length: 800}, (_, i) => ({id: 'old-'+i, sourceUrl: 'https://example.com/'+i}));
     let importedDirty = false, chefCatalogCache = null;
     let durable = imported.slice(), messages = [];
     const rawFromRecipe = r => r;
-    const store = { set(k, v) { if (!writeOK) return false; if (k === 'imports') durable = v.slice(); return true; } };
+    const store = {
+      get(k, fb) { return fb; },
+      set(k, v) {
+        if (!writeOK) return false;
+        if (k === 'mise.imported.v3') durable = v.records.slice();
+        return true;
+      },
+      remove() {},
+    };
     const uniqueId = id => id;
     const announce = msg => messages.push(msg);
+    ${kitchenStore}
+    window = globalThis;
     ${app.slice(app.indexOf('  function persistImported('), app.indexOf('  function knownImported('))}
     globalThis.api = { saveImported, flushImported, state: () => ({ imported, durable, messages }) };
   `, ctx);

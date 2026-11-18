@@ -1,5 +1,16 @@
 # Mise — future addons and updates (research, 2026-11-14)
 
+> **Archived snapshot — superseded by v1.10.0 and v1.11.0 (2026-11-17).**
+> This document described the state as of v1.9.0 and is kept for decision
+> history. What it recommended that HAS shipped: voice serving scale,
+> shopping list v1, print, no-eviction storage, publisher photographs for the
+> bundled catalogue, full-catalogue browsing, drink filters, photo/tool-photo
+> corrections, and storage rollback. What it recommended that is NOT shipped and remains open: on-device
+> Kokoro integration, wake word, lock-screen MediaSession, substitutions,
+> unit conversion, nutrition, and the Playwright smoke gate. See
+> `docs/releases/v1.10.0.md` and `docs/releases/v1.11.0.md` for what each
+> release delivers.
+
 _Personal, non-commercial build. No sale, no accounts, no cloud required — the offline promise stays absolute. Roadmap items are ordered accordingly._
 
 Method: ECC-assisted research pass over the repository (as pushed at v1.9.0), a market/competitor scan

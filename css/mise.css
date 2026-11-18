@@ -486,6 +486,7 @@
 .ing-row:first-of-type { border-top: 0; }
 .ing-amount { font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .ing-amount .none { color: var(--faint); font-weight: 400; }
+.conv { font-weight: 400; font-size: var(--fs-meta); color: var(--muted); margin-left: 2px; }
 .ing-name { min-width: 0; }
 .ing-note { display: block; margin-top: 1px; font-size: var(--fs-meta); line-height: 17px; color: var(--muted); }
 .ing-row.is-serve .ing-name { color: var(--muted); }
@@ -1000,4 +1001,19 @@
   .cook-actions .btn { flex: 1 1 100%; }
   .cook-actions .primary { flex: 1 1 100%; }
   .legend-card .legend-list li { grid-template-columns: 96px minmax(0, 1fr); gap: 10px; }
+}
+
+/* ---------- timer prompt (cook mode) ---------- */
+.timer-prompt { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 8px; padding: 8px 10px; border: 1px dashed var(--border); border-radius: var(--radius-inner); background: var(--accent-soft); }
+.timer-prompt-copy { font-size: var(--fs-small); color: var(--text); flex: 1 1 auto; min-width: 180px; }
+.timer-prompt .btn.sm { flex: none; }
+
+/* ---------- kitchen export / paste-import ---------- */
+.kitchen-paste { margin-top: 10px; border: 1px solid var(--rule); border-radius: var(--radius-inner); padding: 10px 12px; }
+.kitchen-paste summary { cursor: pointer; font-size: var(--fs-small); }
+.kitchen-paste textarea { display: block; width: 100%; margin: 8px 0; font-family: Consolas, "Courier New", monospace; font-size: var(--fs-small); }
+.kitchen-paste .meta { margin-bottom: 0; }
+
+@media print {
+  .kitchen-paste, .sl-footer, .title-actions { display: none !important; }
 }

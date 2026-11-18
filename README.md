@@ -115,12 +115,15 @@ The release keystore lives outside this repository. Local release builds read `a
 ## Verify a build locally
 
 ```powershell
-node tools/verify-web.mjs
+node tools/verify-web.mjs   # local refs + syntax of every JS file
+npm ci                      # dev-only dependencies (Playwright for the smoke gate)
+npx playwright install chromium
+npx playwright test         # one offline smoke spec, boots the app
 cd android
 .\gradlew.bat :app:lintDebug :app:assembleDebug
 ```
 
-`tools/verify-web.mjs` checks local asset references in `index.html` and syntax-checks every JavaScript file without executing it.
+`tools/verify-web.mjs` checks local asset references in `index.html` and syntax-checks every JavaScript file without executing it. `npx playwright test` (chromium) boots the offline app and walks a bundled recipe → cook → shopping-list flow; it runs in CI on every push. The app itself has no build step — vanilla JS in `js/`, served statically.
 
 ## Repository layout
 

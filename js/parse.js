@@ -615,6 +615,29 @@
     return null;
   }
 
+  function nutritionFromJsonLd(nutrition) {
+    if (!nutrition || typeof nutrition !== 'object') return null;
+    const pick = (v) => String(v == null ? '' : v).replace(/\s+/g, ' ').trim().slice(0, 60) || null;
+    const fields = [
+      ['calories', 'calories'],
+      ['fatContent', 'fat'],
+      ['carbohydrateContent', 'carbohydrate'],
+      ['proteinContent', 'protein'],
+      ['saturatedFatContent', 'saturated fat'],
+      ['fiberContent', 'fiber'],
+      ['sugarContent', 'sugar'],
+      ['sodiumContent', 'sodium'],
+      ['cholesterolContent', 'cholesterol'],
+      ['servingSize', 'serving size'],
+    ];
+    const out = {};
+    for (const [schemaField, label] of fields) {
+      const value = pick(nutrition[schemaField]);
+      if (value) out[label] = value;
+    }
+    return Object.keys(out).length ? out : null;
+  }
+
   function recipeFromJsonLd(node, opts) {
     opts = opts || {};
     const name = clean(node.name || node.headline || 'Imported recipe');
@@ -648,6 +671,7 @@
       instructions,
       kind: 'schema',
       description: clean(node.description || '').slice(0, 240),
+      nutrition: nutritionFromJsonLd(node.nutrition),
     };
   }
 
@@ -735,6 +759,7 @@
       prepMinutes: raw.prepMinutes || null,
       cookMinutes: raw.cookMinutes || null,
       description: raw.description || '',
+      nutrition: raw.nutrition || null,
       ingredients,
       steps,
       timers,

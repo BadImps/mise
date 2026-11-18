@@ -1,0 +1,14 @@
+{
+  "name": "mise",
+  "version": "1.11.0",
+  "private": true,
+  "type": "module",
+  "description": "Mise — a source-attributed recipe book with an offline cook mode. Zero build step; vanilla JS.",
+  "scripts": {
+    "smoke": "playwright test --reporter=line",
+    "test": "node --test tools/test-*.mjs tools/verify-web.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0"
+  }
+}

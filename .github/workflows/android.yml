@@ -28,6 +28,12 @@ jobs:
       - name: Verify the web app
         run: node tools/verify-web.mjs
 
+      - name: Run the offline smoke test
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+          npx playwright test --reporter=line
+
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
